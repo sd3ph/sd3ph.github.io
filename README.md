@@ -111,10 +111,10 @@ Here are some of my papers:
 
 ---
 
-!<p align="center">
-  !<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
- ! <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=social" alt="GitHub Followers">
-!</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=social" alt="GitHub Followers">
+   
 <p align="center">
   <a href="mailto:sumandutta.snbncbs@gmail.com">
     <img src="https://img.shields.io/badge/Email-sumandutta.snbncbs%40gmail.com-blue?style=flat-square&logo=gmail" alt="Email">
