@@ -1,4 +1,4 @@
-# Dr. Suman Dutta - Research Profile
+# Suman DUTTA
 
 I am an **Active** researcher in the field of **Intelligent Living and Artificial Systems**, with a specialization in **Physics of Complex Fluids**. Driven by **Creative Research**, I focus on the intricate complex dynamics of **Soft, Glassy, Active & Adaptable Matter**, combining **Statistical Physics** and **Machine Intelligence**.
 
