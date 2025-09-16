@@ -102,12 +102,6 @@ Here are some of my papers:
 
 ---
 
-## 📞 Contact & Social
-
-*   **Email:** [sumandutta.snbncbs@gmail.com](mailto:sumandutta.snbncbs@gmail.com)
-*   **Google Scholar:** [🔗 Google Scholar](https://scholar.google.com/citations?user=j-83jp8AAAAJ) <!-- Replace with actual ID -->
-*   **GitHub:** [Github](https://github.com/sd3ph) <!-- Replace with your GitHub username -->
-*   **LinkedIn:** [🔗 LinkedIn](https://www.linkedin.com/in/sd3ph/) <!-- Replace with your LinkedIn profile URL -->
 
 ---
 
