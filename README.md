@@ -1,8 +1,8 @@
 # Dr. Suman Dutta - Research Profile
 
-![Dr. Suman Dutta](https://via.placeholder.com/250x300 "Dr. Suman Dutta") <!-- Replace with a professional photo of Dr. Dutta -->
+![Dr. Suman Dutta]([https://via.placeholder.com](https://drive.google.com/file/d/1ka_EXR87YlEDPwbjBNzyDX5_I797sBWv/view?usp=sharing)/250x300 "Dr. Suman Dutta") <!-- Replace with a professional photo of Dr. Dutta -->
 
-A dedicated researcher in the field of **Intelligent Living and Artificial Systems**, with a specialization in **Physics of Complex Fluids**. Driven by **Creative Research**, Dr. Dutta focuses on the intricate dynamics of **Soft, Glassy, Active & Adaptable Matter**, exploring areas from **Machine Learning** to **Mechanobiology** and **Emergent Intelligence**.
+I am an **Active** researcher in the field of **Intelligent Living and Artificial Systems**, with a specialization in **Physics of Complex Fluids**. Driven by **Creative Research**, I focus on the intricate complex dynamics of **Soft, Glassy, Active & Adaptable Matter**, combining **Statistical Physics** and **Machine Intelligence**.
 
 ---
 
@@ -37,15 +37,15 @@ School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
 
 ### Professional Research Experience
 *   **Post Doctoral Fellow** (01/2024 – 09/2024)
-    Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore
+    Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore (Advisor: M. Rao)
     *Funding:* Simons Foundation, DAE (GOI) Project No: RTI 4006
 
 *   **Post Doctoral Fellow** (01/2021 – 12/2023)
-    International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore
+    International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore (Advisor: C. Dasgupta)
     *Funding:* DAE (GOI) Project No: RTI 4001
 
 *   **Post Doctoral Fellow** (02/2018 – 12/2020)
-    The Institute of Mathematical Sciences, Chennai
+    The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri)
     *Funding:* CEFIPRA Project No: 5604-1
 
 ### Education
@@ -54,16 +54,15 @@ School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
     *(08/2010 - 01/2018)*
 *   **Ph.D.** (08/2012 – 01/2018)
     Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata
-    *Thesis:* Numerical Studies on the Dynamics of Soft Matter Systems
+    *Thesis:* Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
 *   **M.Sc** (08/2010 – 07/2012)
     S. N. Bose National Centre for Basic Sciences, Kolkata
-    *DGPA:* 7.92/10
 
 ---
 
 ## 📚 Scientific Portfolio (Selected Papers)
 
-Here are some of Dr. Dutta's impactful publications, showcasing the breadth and depth of his research:
+Here are some of my papers:
 
 *   **Entropic Timescales of Dynamic Heterogeneity in Supercooled Liquid**
     V. Vaibhav & S. Dutta*, *Phys. Rev. E (Lett.)*, 109, L062102 (2024)
@@ -89,14 +88,11 @@ Here are some of Dr. Dutta's impactful publications, showcasing the breadth and 
 
 ## 💡 Teaching & Mentoring
 
-Dr. Dutta is actively involved in teaching and nurturing the next generation of scientists:
-
 *   **Courses Taught:** Mathematics for Intelligent Systems, SAI Bootcamp (AI & Data Science Core).
 *   **Research Methodology:** S. N. Bose National Centre for Basic Sciences.
 *   **Mentoring Experience:**
     *   Research Intern: Agnevesh Jagdish (06/2025 onwards)
     *   Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)
-
 ---
 
 ## ✈️ Scientific/Collaborative Visits
@@ -120,11 +116,10 @@ Dr. Dutta is actively involved in teaching and nurturing the next generation of 
 
 ## 📞 Contact & Social
 
-*   **Email:** [sumandutta.snbncbs@gmail.com](mailto:sumandutta.snbncbs@gmail.com), [dutta.physics@gmail.com](mailto:dutta.physics@gmail.com)
-*   **Phone:** +0091-8001349199
-*   **Google Scholar:** [🔗 Google Scholar Profile](https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID) <!-- Replace with actual ID -->
-*   **GitHub:** [https://github.com/yourusername](https://github.com/yourusername) <!-- Replace with your GitHub username -->
-*   **LinkedIn:** [🔗 LinkedIn Profile](https://www.linkedin.com/in/yourlinkedinprofile/) <!-- Replace with your LinkedIn profile URL -->
+*   **Email:** [sumandutta.snbncbs@gmail.com](mailto:sumandutta.snbncbs@gmail.com)
+*   **Google Scholar:** [🔗 Google Scholar Profile](https://scholar.google.com/citations?user=j-83jp8AAAAJ) <!-- Replace with actual ID -->
+*   **GitHub:** [https://github.com/yourusername](https://github.com/sd3ph) <!-- Replace with your GitHub username -->
+*   **LinkedIn:** [🔗 LinkedIn Profile](https://www.linkedin.com/in/sd3ph/) <!-- Replace with your LinkedIn profile URL -->
 
 ---
 
