@@ -6,8 +6,8 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 ## 🌟 Highlights
 
-*   **PhD** on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018).
-*   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024).
+*   **PhD** on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018)
+*   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)
 ---
 
 ## 🔬 Research Interests & Competencies
@@ -79,7 +79,7 @@ Here are some of my papers:
 
 ## 💡 Teaching & Mentoring
 
-*   **Courses Taught:** Mathematics for Intelligent Systems, SAI Bootcamp (AI & Data Science Core).
+*   **Courses Taught:** Mathematics for AI, School of Artificial Intelligence, Bootcamp (AI & Data Science Core).
 *   **Research Methodology:** S. N. Bose National Centre for Basic Sciences.
 *   **Mentoring Experience:**
     *   Research Intern: A. Jagdish, A. Harish (06/2025 onwards)
