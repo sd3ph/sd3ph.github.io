@@ -22,12 +22,26 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 *   **Extensive Experience in:** Soft Condensed Matter, High Performance Computing (Molecular Simulations)
 ---
 
+## Research within the Group
+
+We leverage advanced computational simulations, harnessing the power of High-Performance Computing (HPC), alongside sophisticated statistical methods. Our aim is to develop and deploy data-driven yet inherently explainable techniques. These methods are meticulously designed to systematically investigate the intricate complex processes that drive autonomous organization and the phenomena of failure in both living and artificial systems. Our approach bridges the gap between complex data analysis and fundamental scientific understanding, ensuring our findings are not only predictive but also interpretable. 
+
+Our research endeavors delve into several key directions, offering a comprehensive exploration of complex systems:
+Molecular Information Processing: We meticulously decode how molecular systems store, manipulate, and relay information. This involves unraveling the fundamental principles that govern adaptive behaviors observed in both natural biological networks and synthetic molecular constructs. By understanding these intricate mechanisms, we aim to engineer more sophisticated and responsive artificial systems.
+
+*   **Cellular Migration and Turbulence:** We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.
+
+*   **Failure and Jamming of Amorphous Systems:** A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.[3][4]
+Predicting Vulnerability and Avalanches: We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.
+
+Autonomous and Critical Phenomena in Living and Artificial Systems: We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.
+
 ## 🎓 Professional Journey
 
 ### Present Affiliation
 **Assistant Professor (Sr. Gd.)**
 School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
-*(Since 03/2025)* [🔗 [LINK to School](https://www.amrita.edu/faculty/suman-dutta/)]
+*(Since 03/2025)*
 
 ### Professional Research Experience
 *   **Post Doctoral Fellow** (01/2024 – 09/2024)
