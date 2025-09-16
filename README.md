@@ -375,9 +375,6 @@
             <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
                 <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
             </a>
-            <a href="https://github.com/sd3ph">
-                <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-            </a>
             <a href="https://www.linkedin.com/in/sd3ph/">
                 <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
             </a>
