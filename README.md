@@ -8,7 +8,7 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 *   **PhD** on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018).
 *   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)
-*   **Academic Leaderboard:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3, Includes Paper as Corresponding Author: 8/12, in journals like *Physical Review E (Letters)* and *Europhysics Letters**
+*   **Academic Leaderboard:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3, Includes Paper as Corresponding Author: 8/12, in journals like *Physical Review E (Letters)* and *Europhysics Letters*
 ---
 
 ## 🔬 Research Interests & Competencies
@@ -111,7 +111,22 @@ Here are some of my papers:
 
 ---
 
+!<p align="center">
+  !<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+ ! <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=social" alt="GitHub Followers">
+!</p>
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-  <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=social" alt="GitHub Followers">
+  <a href="mailto:sumandutta.snbncbs@gmail.com">
+    <img src="https://img.shields.io/badge/Email-sumandutta.snbncbs%40gmail.com-blue?style=flat-square&logo=gmail" alt="Email">
+  </a>
+  <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
+    <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
+  </a>
+  <a href="https://github.com/sd3ph">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/sd3ph/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
 </p>
+
