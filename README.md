@@ -34,15 +34,12 @@ School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
 ### Professional Research Experience
 *   **Post Doctoral Fellow** (01/2024 – 09/2024)
     Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore (Advisor: M. Rao)
-    *Funding:* Simons Foundation, DAE (GOI) Project No: RTI 4006
 
 *   **Post Doctoral Fellow** (01/2021 – 12/2023)
     International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore (Advisor: C. Dasgupta)
-    *Funding:* DAE (GOI) Project No: RTI 4001
-
+    
 *   **Post Doctoral Fellow** (02/2018 – 12/2020)
-    The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri)
-    *Funding:* CEFIPRA Project No: 5604-1
+    The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)
 
 ### Education
 *   **Post B.Sc Integrated PhD Research Fellow**
