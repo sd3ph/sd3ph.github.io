@@ -48,7 +48,7 @@ School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
     Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata
     *Thesis:* Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
 *   **M.Sc** (08/2010 – 07/2012)
-    S. N. Bose National Centre for Basic Sciences, Kolkata
+    S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
 
 ---
 
