@@ -10,7 +10,7 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 *   **PhD in Numerical Studies** on the Dynamics of Soft Matter Systems.
 *   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics.
-*   **Distinguished Publication Record:** Corresponding author on 6 out of 9 publications in prestigious journals like *Physical Review E (Letters)* and *Europhysics Letters*.
+*   **Distinguished Publication Record:** Corresponding author on 8/11 publications in prestigious journals like *Physical Review E (Letters)* and *Europhysics Letters*.
 *   **Academic Recognition:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3.
 
 ---
@@ -33,7 +33,7 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 ### Present Affiliation
 **Assistant Professor (Sr. Gd.)**
 School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
-*(Since 03/2025)* [🔗 LINK to School]
+*(Since 03/2025)* [🔗 [LINK to School](https://www.amrita.edu/faculty/suman-dutta/)]
 
 ### Professional Research Experience
 *   **Post Doctoral Fellow** (01/2024 – 09/2024)
