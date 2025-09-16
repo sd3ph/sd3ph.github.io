@@ -1,7 +1,5 @@
 # Dr. Suman Dutta - Research Profile
 
-[Dr. Suman Dutta]([https://via.placeholder.com](https://drive.google.com/file/d/1ka_EXR87YlEDPwbjBNzyDX5_I797sBWv/view?usp=sharing)/250x300 "Dr. Suman Dutta") <!-- Replace with a professional photo of Dr. Dutta -->
-
 I am an **Active** researcher in the field of **Intelligent Living and Artificial Systems**, with a specialization in **Physics of Complex Fluids**. Driven by **Creative Research**, I focus on the intricate complex dynamics of **Soft, Glassy, Active & Adaptable Matter**, combining **Statistical Physics** and **Machine Intelligence**.
 
 ---
@@ -116,9 +114,9 @@ Here are some of my papers:
 ## 📞 Contact & Social
 
 *   **Email:** [sumandutta.snbncbs@gmail.com](mailto:sumandutta.snbncbs@gmail.com)
-*   **Google Scholar:** [🔗 Google Scholar Profile](https://scholar.google.com/citations?user=j-83jp8AAAAJ) <!-- Replace with actual ID -->
-*   **GitHub:** [https://github.com/yourusername](https://github.com/sd3ph) <!-- Replace with your GitHub username -->
-*   **LinkedIn:** [🔗 LinkedIn Profile](https://www.linkedin.com/in/sd3ph/) <!-- Replace with your LinkedIn profile URL -->
+*   **Google Scholar:** [🔗 Google Scholar](https://scholar.google.com/citations?user=j-83jp8AAAAJ) <!-- Replace with actual ID -->
+*   **GitHub:** [Github](https://github.com/sd3ph) <!-- Replace with your GitHub username -->
+*   **LinkedIn:** [🔗 LinkedIn](https://www.linkedin.com/in/sd3ph/) <!-- Replace with your LinkedIn profile URL -->
 
 ---
 
