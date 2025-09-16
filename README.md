@@ -12,6 +12,8 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 ## 🔬 Research Interests & Competencies
 
+## Research Expertise
+
 *   **Domain Expertise:** Intelligent Living and Artificial Systems, Physics of Complex Fluids.
 *   **Core Competencies:** Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.
 *   **Key Research Areas:**
