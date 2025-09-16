@@ -8,8 +8,7 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 *   **PhD** on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018).
 *   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)
-*   **Academic Recognition:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3, Includes Paper as Corresponding Author: 8/12, in journals like *Physical Review E (Letters)* and *Europhysics Letters*.
-
+*   **Academic Leaderboard:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3, Includes Paper as Corresponding Author: 8/12, in journals like *Physical Review E (Letters)* and *Europhysics Letters*
 ---
 
 ## 🔬 Research Interests & Competencies
@@ -88,17 +87,9 @@ Here are some of my papers:
 *   **Courses Taught:** Mathematics for Intelligent Systems, SAI Bootcamp (AI & Data Science Core).
 *   **Research Methodology:** S. N. Bose National Centre for Basic Sciences.
 *   **Mentoring Experience:**
-    *   Research Intern: Agnevesh Jagdish (06/2025 onwards)
+    *   Research Intern: A. Jagdish, A. Harish (06/2025 onwards)
     *   Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)
 ---
-
-## ✈️ Scientific/Collaborative Visits
-
-*   Indian Statistical Institute (Kolkata, India) [2025]
-*   Indian Institute of Science (Bangalore, India) [2024]
-*   Indian Institute of Science Education and Research (Bhopal, India) [2024]
-*   Laboratoire Interdisciplinaire de Physique, Université Grenoble Alpes (France) [2019, 2018]
-*   Institut für Theoretische Physik II - Soft Matter, Heinrich-Heine-Universität (Germany) [2019]
 
 ---
 
