@@ -8,10 +8,9 @@ I am an **Active** researcher in the field of **Intelligent Living and Artificia
 
 ## 🌟 Highlights
 
-*   **PhD in Numerical Studies** on the Dynamics of Soft Matter Systems.
-*   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics.
-*   **Distinguished Publication Record:** Corresponding author on 8/11 publications in prestigious journals like *Physical Review E (Letters)* and *Europhysics Letters*.
-*   **Academic Recognition:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3.
+*   **PhD** on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018).
+*   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)
+*   **Academic Recognition:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3, Includes Paper as Corresponding Author: 8/12, in journals like *Physical Review E (Letters)* and *Europhysics Letters*.
 
 ---
 
