@@ -1,80 +1,134 @@
-# 🚀 My Awesome Project
+# Dr. Suman Dutta - Research Profile
 
-![Project Logo](https://via.placeholder.com/200x100 "Project Logo") <!-- Replace with your actual logo path -->
+![Dr. Suman Dutta](https://via.placeholder.com/250x300 "Dr. Suman Dutta") <!-- Replace with a professional photo of Dr. Dutta -->
 
-My Awesome Project is a revolutionary tool designed to **[briefly explain what your project does in one compelling sentence]**. It aims to solve the problem of **[mention the core problem or need your project addresses]** by offering **[highlight the unique value proposition]**.
-
----
-
-## ✨ Key Features
-
-*   **Feature 1:** [Concise description of what this feature does and its benefit.]
-*   **Feature 2:** [Concise description of what this feature does and its benefit.]
-*   **Feature 3:** [Concise description of what this feature does and its benefit.]
-*   **Feature 4:** [And so on...]
+A dedicated researcher in the field of **Intelligent Living and Artificial Systems**, with a specialization in **Physics of Complex Fluids**. Driven by **Creative Research**, Dr. Dutta focuses on the intricate dynamics of **Soft, Glassy, Active & Adaptable Matter**, exploring areas from **Machine Learning** to **Mechanobiology** and **Emergent Intelligence**.
 
 ---
 
-## 📸 Screenshots & Demos
+## 🌟 Highlights
 
-Here's a glimpse of My Awesome Project in action:
-
-<!-- Upload your screenshots to your repo and use relative paths, or use publicly accessible URLs -->
-![Screenshot 1](https://via.placeholder.com/600x300 "User Interface Example") <!-- Replace with your screenshot path -->
-![Screenshot 2](https://via.placeholder.com/600x300 "Feature Demonstration") <!-- Replace with your screenshot path -->
-
-[Watch a Live Demo](https://your-live-demo-link.com) | [See a Video Walkthrough](https://your-video-link.com) <!-- Replace with actual links -->
+*   **PhD in Numerical Studies** on the Dynamics of Soft Matter Systems.
+*   **5+ Years of Post-PhD Research Experience** in Interdisciplinary Physics.
+*   **Distinguished Publication Record:** Corresponding author on 6 out of 9 publications in prestigious journals like *Physical Review E (Letters)* and *Europhysics Letters*.
+*   **Academic Recognition:** International publications: 12 (9 published, 3 in progress), h-index: 5, i10-index: 3.
 
 ---
 
-## ⬇️ Installation
+## 🔬 Research Interests & Competencies
 
-Follow these simple steps to get My Awesome Project running on your local machine.
-
-### Prerequisites
-
-*   Node.js (version 16.x or higher) <!-- Update with actual requirements -->
-*   npm or Yarn <!-- Specify your preferred package manager -->
-*   [Any other specific software or tools]
-
-### Steps
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/my-awesome-project.git
-    cd my-awesome-project
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    # Using npm
-    npm install
-
-    # Or using Yarn
-    yarn install
-    ```
-
-3.  **Configure environment variables (if applicable):**
-    Create a `.env` file in the root directory and add your API keys or other necessary configurations:
-    ```
-    API_KEY=your_super_secret_api_key
-    DATABASE_URL=your_database_connection_string
-    ```
-
-4.  **Build the project (if necessary):**
-    ```bash
-    npm run build
-    # or
-    yarn build
-    ```
+*   **Domain Expertise:** Intelligent Living and Artificial Systems, Physics of Complex Fluids.
+*   **Core Competencies:** Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.
+*   **Key Research Areas:**
+    *   Soft, Glassy, Active & Adaptable Matter
+    *   Physics of Flow, Glass & Living Machines
+    *   Material Failure and Molecular Information Processing
+    *   Mechanobiology, Catastrophe Science, Emergent Intelligence
+*   **Extensive Experience in:** Soft Condensed Matter, High Performance Computing (Molecular Simulations).
 
 ---
 
-## ▶️ Usage
+## 🎓 Professional Journey
 
-Once installed, you can start using My Awesome Project with the following examples.
+### Present Affiliation
+**Assistant Professor (Sr. Gd.)**
+School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore
+*(Since 03/2025)* [🔗 LINK to School]
 
-### Command Line Interface (CLI)
+### Professional Research Experience
+*   **Post Doctoral Fellow** (01/2024 – 09/2024)
+    Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore
+    *Funding:* Simons Foundation, DAE (GOI) Project No: RTI 4006
 
-To run the main command:```bash
-npx my-awesome-project [options]
+*   **Post Doctoral Fellow** (01/2021 – 12/2023)
+    International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore
+    *Funding:* DAE (GOI) Project No: RTI 4001
+
+*   **Post Doctoral Fellow** (02/2018 – 12/2020)
+    The Institute of Mathematical Sciences, Chennai
+    *Funding:* CEFIPRA Project No: 5604-1
+
+### Education
+*   **Post B.Sc Integrated PhD Research Fellow**
+    S. N. Bose National Centre for Basic Sciences, Kolkata
+    *(08/2010 - 01/2018)*
+*   **Ph.D.** (08/2012 – 01/2018)
+    Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata
+    *Thesis:* Numerical Studies on the Dynamics of Soft Matter Systems
+*   **M.Sc** (08/2010 – 07/2012)
+    S. N. Bose National Centre for Basic Sciences, Kolkata
+    *DGPA:* 7.92/10
+
+---
+
+## 📚 Scientific Portfolio (Selected Papers)
+
+Here are some of Dr. Dutta's impactful publications, showcasing the breadth and depth of his research:
+
+*   **Entropic Timescales of Dynamic Heterogeneity in Supercooled Liquid**
+    V. Vaibhav & S. Dutta*, *Phys. Rev. E (Lett.)*, 109, L062102 (2024)
+    [🔗 LINK] [⭐ Commentary]
+
+*   **Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids**
+    C. Liu, S. Dutta†, P. Chaudhuri & K. Martens, *Phys. Rev. Lett.*, 126, 138005 (2021)
+    [🔗 LINK]
+
+*   **Anomalous dynamical responses in a driven system**
+    S. Dutta* & J. Chakrabarti, *Europhys. Lett. (EPL)*, 116, 38001 (2016)
+    [🔗 LINK]
+
+*   **Crystal to liquid cross-over for active particles with inverse-square power-law interactions**
+    S. Santra, L. Touzo, C. Dasgupta, A. Dhar, S. Dutta, A. Kundu, P. Le Doussal, G. Schehr, P. Singh, *J. Stat. Mech.*, 033203 (2025)
+    [🔗 LINK]
+
+*   **Microscopic insights into dynamical heterogeneity in a lane forming colloid**
+    S. Dutta*, *Chem. Phys.*, 522, 256 (2019)
+    [🔗 LINK]
+
+---
+
+## 💡 Teaching & Mentoring
+
+Dr. Dutta is actively involved in teaching and nurturing the next generation of scientists:
+
+*   **Courses Taught:** Mathematics for Intelligent Systems, SAI Bootcamp (AI & Data Science Core).
+*   **Research Methodology:** S. N. Bose National Centre for Basic Sciences.
+*   **Mentoring Experience:**
+    *   Research Intern: Agnevesh Jagdish (06/2025 onwards)
+    *   Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)
+
+---
+
+## ✈️ Scientific/Collaborative Visits
+
+*   Indian Statistical Institute (Kolkata, India) [2025]
+*   Indian Institute of Science (Bangalore, India) [2024]
+*   Indian Institute of Science Education and Research (Bhopal, India) [2024]
+*   Laboratoire Interdisciplinaire de Physique, Université Grenoble Alpes (France) [2019, 2018]
+*   Institut für Theoretische Physik II - Soft Matter, Heinrich-Heine-Universität (Germany) [2019]
+
+---
+
+## 🏆 Awards & Recognition
+
+*   **Best Oral Presenter** at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).
+*   **Visiting Research Grant** from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).
+*   **West Bengal Merit cum Means Scholarship** (2006-2009).
+*   **National Merit Scholarship** (2004).
+
+---
+
+## 📞 Contact & Social
+
+*   **Email:** [sumandutta.snbncbs@gmail.com](mailto:sumandutta.snbncbs@gmail.com), [dutta.physics@gmail.com](mailto:dutta.physics@gmail.com)
+*   **Phone:** +0091-8001349199
+*   **Google Scholar:** [🔗 Google Scholar Profile](https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID) <!-- Replace with actual ID -->
+*   **GitHub:** [https://github.com/yourusername](https://github.com/yourusername) <!-- Replace with your GitHub username -->
+*   **LinkedIn:** [🔗 LinkedIn Profile](https://www.linkedin.com/in/yourlinkedinprofile/) <!-- Replace with your LinkedIn profile URL -->
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=social" alt="GitHub Followers">
+</p>
