@@ -273,7 +273,7 @@
 <body>
 
     <div class="navbar">
-        <h1>Welcome</h1>
+        <h1>Physics+AI</h1>
         <ul class="nav-links">
             <li><a href="#about" class="nav-link active">About Me</a></li>
             <li><a href="#research" class="nav-link">Research</a></li>
