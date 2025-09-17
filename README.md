@@ -1,31 +1,30 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suman Dutta - Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4a4a4a; /* Darker grey for primary text */
-            --secondary-color: #777; /* Lighter grey for secondary text */
-            --accent-color: #007bff; /* Standard blue for links and highlights */
-            --background-color: #f8f9fa; /* Very light grey for background */
-            --card-background: #ffffff; /* White for content cards */
-            --border-color: #e0e0e0; /* Light grey for borders */
+            --primary-color: #343a40; /* Dark grey */
+            --secondary-color: #6c757d; /* Light grey */
+            --accent-color: #007bff; /* Blue */
+            --background-color: #f8f9fa; /* Off-white */
+            --card-background: #fff;
+            --border-color: #dee2e6; /* Very light grey */
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px; /* Smaller font size */
-            line-height: 1.7;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px; /* Even smaller font size */
+            line-height: 1.6;
             margin: 0;
             padding: 20px;
             background-color: var(--background-color);
             color: var(--primary-color);
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align to top */
             min-height: 100vh;
         }
 
@@ -33,64 +32,64 @@
             max-width: 800px;
             width: 100%;
             background-color: var(--card-background);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px; /* Slightly less padding */
+            border-radius: 6px; /* Softer corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Subtler shadow */
             border: 1px solid var(--border-color);
         }
 
         h1, h2, h3 {
-            font-family: 'Merriweather', serif;
-            color: #333;
+            font-family: 'Roboto Slab', serif;
+            color: var(--primary-color);
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Slightly less margin */
         }
 
         h1 {
             text-align: center;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            color: #222;
+            font-size: 1.8em; /* Smaller main title */
+            margin-bottom: 8px; /* Less margin */
+            color: #212529;
         }
 
         h2 {
-            font-size: 1.6em;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 8px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            color: #333;
+            font-size: 1.4em; /* Smaller section title */
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 6px; /* Less padding */
+            margin-top: 25px; /* Less margin */
+            margin-bottom: 16px; /* Less margin */
+            color: #343a40;
         }
 
         h3 {
-            font-size: 1.3em;
-            color: #444;
-            margin-top: 20px;
-            margin-bottom: 15px;
+            font-size: 1.1em; /* Smaller subtitle */
+            color: #495057;
+            margin-top: 18px; /* Less margin */
+            margin-bottom: 12px; /* Less margin */
         }
 
         strong {
-            color: #4a4a4a; /* Slightly darker for emphasis */
+            color: #343a40; /* Darker emphasis */
             font-weight: 500;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Less margin */
         }
 
         ul {
             list-style: disc;
-            margin-left: 25px;
+            margin-left: 20px;
             padding-left: 0;
         }
 
         li {
-            margin-bottom: 12px;
-            padding-left: 5px;
+            margin-bottom: 8px; /* Less margin */
+            padding-left: 3px; /* Less padding */
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 25px; /* Less margin */
         }
 
         .paper-title {
@@ -100,12 +99,12 @@
 
         .affiliation {
             font-weight: 600;
-            color: #333;
+            color: #343a40;
         }
 
         .date {
             color: var(--secondary-color);
-            font-size: 0.9em;
+            font-size: 0.85em; /* Even smaller date */
         }
 
         a {
@@ -122,19 +121,19 @@
         .profile-header {
             display: flex;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px; /* Less margin */
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            padding-bottom: 15px; /* Less padding */
         }
 
         .profile-picture {
-            width: 100px;
-            height: 100px;
+            width: 80px; /* Smaller profile picture */
+            height: 80px; /* Smaller profile picture */
             border-radius: 50%;
-            margin-right: 25px;
+            margin-right: 20px;
             object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.15); /* Subtler shadow */
         }
 
         .header-text {
@@ -144,51 +143,51 @@
         .header-text h1 {
             margin-bottom: 0;
             text-align: left;
+            font-size: 1.6em; /* Smaller header title */
         }
 
         .header-text p {
-            font-size: 1.1em;
+            font-size: 0.95em; /* Smaller header subtitle */
             color: var(--secondary-color);
-            margin-top: 5px;
+            margin-top: 3px; /* Less margin */
         }
 
         .social-links {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 25px; /* Less margin */
+            padding-top: 15px; /* Less padding */
             border-top: 1px solid var(--border-color);
         }
 
         .social-links a {
-            margin: 0 12px;
+            margin: 0 8px; /* Less margin */
             display: inline-block;
         }
 
         .social-links img {
-            height: 28px; /* Slightly larger badges */
+            height: 24px; /* Smaller badges */
             vertical-align: middle;
             transition: transform 0.2s ease;
         }
 
         .social-links a:hover img {
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         hr {
             border: 0;
             height: 1px;
             background: var(--border-color);
-            margin: 40px 0;
+            margin: 30px 0; /* Less margin */
         }
-
-        /* Specific styling for the provided badges */
         .badge-container {
             text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
         .badge-container img {
-            margin: 0 5px;
+            margin: 0 4px;
+            height: 20px; /* Smaller badges */
         }
     </style>
 </head>
@@ -197,7 +196,7 @@
     <div class="container">
 
         <div class="profile-header">
-            <img src="https://via.placeholder.com/150/cccccc/ffffff?text=SP" alt="Profile Picture" class="profile-picture">
+            <img src="https://source.unsplash.com/150x150/?portrait" alt="Profile Picture" class="profile-picture">
             <div class="header-text">
                 <h1>Suman Dutta</h1>
                 <p>Researcher | Intelligent Living & Artificial Systems</p>
@@ -365,6 +364,7 @@
 
         <div class="badge-container">
             <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+            <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
         </div>
 
         <div class="social-links">
@@ -373,6 +373,9 @@
             </a>
             <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
                 <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
+            </a>
+            <a href="https://github.com/sd3ph">
+                <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
             </a>
             <a href="https://www.linkedin.com/in/sd3ph/">
                 <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
