@@ -18,8 +18,8 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 9px; /* Very small font size */
-            line-height: 1.2;
+            font-size: 12px; /* Very small font size */
+            line-height: 1.7;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
