@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 12px; /* Very small font size */
+            font-size: 10px; /* Very small font size */
             line-height: 1.7;
             margin: 0;
             padding: 0;
