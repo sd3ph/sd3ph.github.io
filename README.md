@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +19,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 10px; /* Very small font size */
+            font-size: 12px; /* Very small font size */
             line-height: 1.7;
             margin: 0;
             padding: 0;
@@ -463,3 +464,44 @@
                 </a>
                 <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
                     <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
+                </a>
+                <a href="https://github.com/sd3ph">
+                    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/sd3ph/">
+                    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pageContents = document.querySelectorAll('.page-content');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove 'active' class from all links and content
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pageContents.forEach(content => content.classList.remove('active'));
+
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+
+                // Show the corresponding content
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).classList.add('active');
+            });
+        });
+
+        // Set the initial active link based on URL fragment or default to #about
+        const currentHash = window.location.hash || '#about';
+        document.querySelector(`.nav-link[href="${currentHash}"]`).classList.add('active');
+        document.querySelector(currentHash).classList.add('active');
+    </script>
+
+</body>
+</html>
