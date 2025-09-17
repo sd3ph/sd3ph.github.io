@@ -3,137 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suman Dutta - Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <title>Suman Dutta - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #343a40; /* Dark grey */
-            --secondary-color: #6c757d; /* Light grey */
-            --accent-color: #007bff; /* Blue */
-            --background-color: #f8f9fa; /* Off-white */
-            --card-background: #fff;
-            --border-color: #dee2e6; /* Very light grey */
+            --primary-color: #2c3e50; /* Deep blue-grey */
+            --secondary-color: #7f8c8d; /* Muted grey */
+            --accent-color: #e74c3c; /* Reddish-orange */
+            --background-color: #ecf0f1; /* Light grey */
+            --card-background: #ffffff;
+            --border-color: #bdc3c7; /* Medium grey */
+            --nav-hover-bg: #34495e; /* Darker blue-grey for hover */
+            --nav-active-bg: #e74c3c; /* Accent color for active nav */
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 13px; /* Even smaller font size */
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px; /* Very small font size */
+            line-height: 1.7;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: var(--background-color);
             color: var(--primary-color);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         .container {
-            max-width: 800px;
+            max-width: 960px;
             width: 100%;
             background-color: var(--card-background);
-            padding: 25px; /* Slightly less padding */
-            border-radius: 6px; /* Softer corners */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Subtler shadow */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--border-color);
+            overflow: hidden; /* To contain floated elements */
         }
 
-        h1, h2, h3 {
-            font-family: 'Roboto Slab', serif;
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 12px; /* Slightly less margin */
+        /* Navigation */
+        .navbar {
+            background-color: var(--nav-hover-bg);
+            padding: 15px 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-color);
+            box-sizing: border-box;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 1.8em; /* Smaller main title */
-            margin-bottom: 8px; /* Less margin */
-            color: #212529;
+        .navbar h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #fff;
+            margin: 0;
+            flex-grow: 1; /* Takes available space */
+            text-align: left;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+            font-size: 0.9em;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .nav-links a.active {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Page Content Styling */
+        .page-content {
+            padding: 30px;
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
-            font-size: 1.4em; /* Smaller section title */
-            border-bottom: 1px solid var(--accent-color);
-            padding-bottom: 6px; /* Less padding */
-            margin-top: 25px; /* Less margin */
-            margin-bottom: 16px; /* Less margin */
-            color: #343a40;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
         }
 
         h3 {
-            font-size: 1.1em; /* Smaller subtitle */
-            color: #495057;
-            margin-top: 18px; /* Less margin */
-            margin-bottom: 12px; /* Less margin */
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-top: 20px;
+            margin-bottom: 12px;
         }
 
         strong {
-            color: #343a40; /* Darker emphasis */
-            font-weight: 500;
+            color: var(--primary-color);
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 12px; /* Less margin */
+            margin-bottom: 12px;
         }
 
         ul {
             list-style: disc;
-            margin-left: 20px;
+            margin-left: 25px;
             padding-left: 0;
         }
 
         li {
-            margin-bottom: 8px; /* Less margin */
-            padding-left: 3px; /* Less padding */
-        }
-
-        .section {
-            margin-bottom: 25px; /* Less margin */
-        }
-
-        .paper-title {
-            font-style: italic;
-            color: var(--primary-color);
-        }
-
-        .affiliation {
-            font-weight: 600;
-            color: #343a40;
-        }
-
-        .date {
-            color: var(--secondary-color);
-            font-size: 0.85em; /* Even smaller date */
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-            text-decoration: underline;
+            margin-bottom: 10px;
+            padding-left: 5px;
         }
 
         .profile-header {
             display: flex;
             align-items: center;
-            margin-bottom: 25px; /* Less margin */
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px; /* Less padding */
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
         }
 
         .profile-picture {
-            width: 80px; /* Smaller profile picture */
-            height: 80px; /* Smaller profile picture */
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             margin-right: 20px;
             object-fit: cover;
-            border: 2px solid var(--accent-color);
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.15); /* Subtler shadow */
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .header-text {
@@ -141,248 +176,307 @@
         }
 
         .header-text h1 {
-            margin-bottom: 0;
-            text-align: left;
-            font-size: 1.6em; /* Smaller header title */
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 4px;
+            color: var(--primary-color);
         }
 
         .header-text p {
-            font-size: 0.95em; /* Smaller header subtitle */
+            font-size: 0.9em;
             color: var(--secondary-color);
-            margin-top: 3px; /* Less margin */
+            font-style: italic;
         }
 
         .social-links {
             text-align: center;
-            margin-top: 25px; /* Less margin */
-            padding-top: 15px; /* Less padding */
-            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
         }
 
         .social-links a {
-            margin: 0 8px; /* Less margin */
+            margin: 0 10px;
             display: inline-block;
         }
 
         .social-links img {
-            height: 24px; /* Smaller badges */
+            height: 26px;
             vertical-align: middle;
             transition: transform 0.2s ease;
         }
 
         .social-links a:hover img {
-            transform: translateY(-1px);
+            transform: translateY(-2px) scale(1.05);
         }
 
         hr {
             border: 0;
             height: 1px;
             background: var(--border-color);
-            margin: 30px 0; /* Less margin */
+            margin: 35px 0;
         }
+
         .badge-container {
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-bottom: 20px;
         }
         .badge-container img {
-            margin: 0 4px;
-            height: 20px; /* Smaller badges */
+            margin: 0 5px;
+            height: 22px;
         }
+
+        /* Specific for Research Section */
+        .research-area-item {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+            background-color: #fdfdfd;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 0 4px 4px 0;
+        }
+        .research-area-item strong {
+            color: var(--primary-color);
+        }
+
+        /* Creative Theme Adjustments */
+        .profile-header, .section {
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(189, 195, 199, 0.3); /* Lighter border */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .container {
+            background: none; /* Remove card background for the overall container */
+            box-shadow: none;
+            border: none;
+        }
+        .page-content {
+            background-color: transparent;
+            padding: 0; /* Remove padding from page content as it's now in sections */
+        }
+        .page-content.active {
+            padding: 30px; /* Add padding back when active */
+        }
+        h2 {
+            text-align: left; /* Align section titles left */
+        }
+        .profile-header h1, .profile-header p {
+            color: var(--primary-color);
+        }
+
     </style>
 </head>
 <body>
 
+    <div class="navbar">
+        <h1>Welcome</h1>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link active">About Me</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#teaching" class="nav-link">Teaching</a></li>
+            <li><a href="#misc" class="nav-link">Misc</a></li>
+        </ul>
+    </div>
+
     <div class="container">
 
-        <div class="profile-header">
-            <img src="https://source.unsplash.com/150x150/?portrait" alt="Profile Picture" class="profile-picture">
-            <div class="header-text">
-                <h1>Suman Dutta</h1>
-                <p>Researcher | Intelligent Living & Artificial Systems</p>
+        <div id="about" class="page-content active">
+            <div class="profile-header">
+                <img src="https://source.unsplash.com/150x150/?engineer,developer" alt="Profile Picture" class="profile-picture">
+                <div class="header-text">
+                    <h1>Suman Dutta</h1>
+                    <p>Researcher | Intelligent Living & Artificial Systems</p>
+                </div>
+            </div>
+
+            <h2>About Me</h2>
+            <p>
+                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong>Physics of Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>.
+            </p>
+
+            <div class="section">
+                <h3>🌟 Highlights</h3>
+                <ul>
+                    <li><strong>PhD</strong> on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018)</li>
+                    <li><strong>5+ Years of Post-PhD Research Experience</strong> in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>🎓 Professional Journey</h3>
+                <h4>Present Affiliation</h4>
+                <p>
+                    <span class="affiliation">Assistant Professor (Sr. Gd.)</span><br>
+                    School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
+                    <span class="date">(Since 03/2025)</span>
+                </p>
+
+                <h4>Professional Research Experience</h4>
+                <ul>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>
+                        Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore (Advisor: M. Rao)
+                    </li>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br>
+                        International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore (Advisor: C. Dasgupta)
+                    </li>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br>
+                        The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)
+                    </li>
+                </ul>
+
+                <h4>Education</h4>
+                <ul>
+                    <li>
+                        <strong>Post B.Sc Integrated PhD Research Fellow</strong><br>
+                        S. N. Bose National Centre for Basic Sciences, Kolkata<br>
+                        <span class="date">(08/2010 - 01/2018)</span>
+                    </li>
+                    <li>
+                        <strong>Ph.D.</strong> (08/2012 – 01/2018)<br>
+                        Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata<br>
+                        <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
+                    </li>
+                    <li>
+                        <strong>M.Sc</strong> (08/2010 – 07/2012)<br>
+                        S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <p>
-            I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong>Physics of Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>.
-        </p>
-
-        <hr>
-
-        <div class="section">
-            <h2>🌟 Highlights</h2>
-            <ul>
-                <li><strong>PhD</strong> on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018)</li>
-                <li><strong>5+ Years of Post-PhD Research Experience</strong> in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="section">
+        <div id="research" class="page-content">
             <h2>🔬 Research Interests & Competencies</h2>
-            <h3>Research Expertise</h3>
-            <ul>
-                <li><strong>Domain Expertise:</strong> Intelligent Living and Artificial Systems, Physics of Complex Fluids.</li>
-                <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
-                <li><strong>Key Research Areas:</strong>
-                    <ul>
-                        <li>Soft, Glassy, Active & Adaptable Matter</li>
-                        <li>Physics of Flow, Glass & Living Machines</li>
-                        <li>Material Failure and Molecular Information Processing</li>
-                        <li>Mechanobiology, Catastrophe Science, Emergent Intelligence</li>
-                    </ul>
-                </li>
-                <li><strong>Extensive Experience in:</strong> Soft Condensed Matter, High Performance Computing (Molecular Simulations)</li>
-            </ul>
+            <div class="section">
+                <h3>Research Expertise</h3>
+                <ul>
+                    <li><strong>Domain Expertise:</strong> Intelligent Living and Artificial Systems, Physics of Complex Fluids.</li>
+                    <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Key Research Areas</h3>
+                <ul>
+                    <li class="research-area-item"><strong>Soft, Glassy, Active & Adaptable Matter</strong></li>
+                    <li class="research-area-item"><strong>Physics of Flow, Glass & Living Machines</strong></li>
+                    <li class="research-area-item"><strong>Material Failure and Molecular Information Processing</strong></li>
+                    <li class="research-area-item"><strong>Mechanobiology, Catastrophe Science, Emergent Intelligence</strong></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Extensive Experience in</h3>
+                <ul>
+                    <li>Soft Condensed Matter</li>
+                    <li>High Performance Computing (Molecular Simulations)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Research within the Group</h3>
+                <p>
+                    We perform extensive computer simulations, harnessing the power of High-Performance Computing (HPC), alongside statistical methods. Our aim is to develop and deploy data-driven yet inherently explainable techniques. These methods are meticulously designed to systematically investigate the intricate complex processes that drive autonomous organization and the phenomena of failure in both living and artificial systems. Our approach bridges the gap between complex data analysis and fundamental scientific understanding, ensuring our findings are not only predictive but also interpretable.
+                </p>
+                <p>
+                    Our research endeavors delve into several key directions, offering a comprehensive exploration of complex systems:
+                </p>
+                <ul>
+                    <li><strong>Molecular Information Processing:</strong> We meticulously decode how molecular systems store, manipulate, and relay information. This involves unraveling the fundamental principles that govern adaptive behaviors observed in both natural biological networks and synthetic molecular constructs. By understanding these intricate mechanisms, we aim to engineer more sophisticated and responsive artificial systems.</li>
+                    <li><strong>Cellular Migration and Turbulence:</strong> We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.</li>
+                    <li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
+                    <li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
+                    <li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Research within the Group</h2>
-            <p>
-                We perform extensive computer simulations, harnessing the power of High-Performance Computing (HPC), alongside statistical methods. Our aim is to develop and deploy data-driven yet inherently explainable techniques. These methods are meticulously designed to systematically investigate the intricate complex processes that drive autonomous organization and the phenomena of failure in both living and artificial systems. Our approach bridges the gap between complex data analysis and fundamental scientific understanding, ensuring our findings are not only predictive but also interpretable.
-            </p>
-            <p>
-                Our research endeavors delve into several key directions, offering a comprehensive exploration of complex systems:
-            </p>
-            <ul>
-                <li><strong>Molecular Information Processing:</strong> We meticulously decode how molecular systems store, manipulate, and relay information. This involves unraveling the fundamental principles that govern adaptive behaviors observed in both natural biological networks and synthetic molecular constructs. By understanding these intricate mechanisms, we aim to engineer more sophisticated and responsive artificial systems.</li>
-                <li><strong>Cellular Migration and Turbulence:</strong> We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.</li>
-                <li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
-                <li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
-                <li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="section">
-            <h2>🎓 Professional Journey</h2>
-            <h3>Present Affiliation</h3>
-            <p>
-                <span class="affiliation">Assistant Professor (Sr. Gd.)</span><br>
-                School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
-                <span class="date">(Since 03/2025)</span>
-            </p>
-
-            <h3>Professional Research Experience</h3>
-            <ul>
-                <li>
-                    <strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>
-                    Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore (Advisor: M. Rao)
-                </li>
-                <li>
-                    <strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br>
-                    International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore (Advisor: C. Dasgupta)
-                </li>
-                <li>
-                    <strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br>
-                    The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)
-                </li>
-            </ul>
-
-            <h3>Education</h3>
-            <ul>
-                <li>
-                    <strong>Post B.Sc Integrated PhD Research Fellow</strong><br>
-                    S. N. Bose National Centre for Basic Sciences, Kolkata<br>
-                    <span class="date">(08/2010 - 01/2018)</span>
-                </li>
-                <li>
-                    <strong>Ph.D.</strong> (08/2012 – 01/2018)<br>
-                    Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata<br>
-                    <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
-                </li>
-                <li>
-                    <strong>M.Sc</strong> (08/2010 – 07/2012)<br>
-                    S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
-                </li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="section">
-            <h2>📚 Scientific Portfolio (Selected Papers)</h2>
-            <p>Here are some of my papers:</p>
-            <ul>
-                <li>
-                    <span class="paper-title">Entropic Timescales of Dynamic Heterogeneity in Supercooled Liquid</span><br>
-                    V. Vaibhav & S. Dutta*, <em>Phys. Rev. E (Lett.)</em>, 109, L062102 (2024)<br>
-                    <a href="#">[🔗 LINK]</a> <a href="#">[⭐ Commentary]</a>
-                </li>
-                <li>
-                    <span class="paper-title">Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</span><br>
-                    C. Liu, S. Dutta†, P. Chaudhuri & K. Martens, <em>Phys. Rev. Lett.</em>, 126, 138005 (2021)<br>
-                    <a href="#">[🔗 LINK]</a>
-                </li>
-                <li>
-                    <span class="paper-title">Anomalous dynamical responses in a driven system</span><br>
-                    S. Dutta* & J. Chakrabarti, <em>Europhys. Lett. (EPL)</em>, 116, 38001 (2016)<br>
-                    <a href="#">[🔗 LINK]</a>
-                </li>
-                <li>
-                    <span class="paper-title">Crystal to liquid cross-over for active particles with inverse-square power-law interactions</span><br>
-                    S. Santra, L. Touzo, C. Dasgupta, A. Dhar, S. Dutta, A. Kundu, P. Le Doussal, G. Schehr, P. Singh, <em>J. Stat. Mech.</em>, 033203 (2025)<br>
-                    <a href="#">[🔗 LINK]</a>
-                </li>
-                <li>
-                    <span class="paper-title">Microscopic insights into dynamical heterogeneity in a lane forming colloid</span><br>
-                    S. Dutta*, <em>Chem. Phys.</em>, 522, 256 (2019)<br>
-                    <a href="#">[🔗 LINK]</a>
-                </li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="section">
+        <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
-            <ul>
-                <li><strong>Courses Taught:</strong> Mathematics for AI, School of Artificial Intelligence, Bootcamp (AI & Data Science Core).</li>
-                <li><strong>Research Methodology:</strong> S. N. Bose National Centre for Basic Sciences.</li>
-                <li><strong>Mentoring Experience:</strong>
-                    <ul>
-                        <li>Research Intern: A. Jagdish, A. Harish (06/2025 onwards)</li>
-                        <li>Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="section">
+                <h3>Courses Taught</h3>
+                <ul>
+                    <li>Mathematics for AI, School of Artificial Intelligence, Bootcamp (AI & Data Science Core).</li>
+                    <li>Research Methodology: S. N. Bose National Centre for Basic Sciences.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Mentoring Experience</h3>
+                <ul>
+                    <li>Research Intern: A. Jagdish, A. Harish (06/2025 onwards)</li>
+                    <li>Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)</li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="section">
+        <div id="misc" class="page-content">
             <h2>🏆 Awards & Recognition</h2>
-            <ul>
-                <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
-                <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
-                <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
-                <li><strong>National Merit Scholarship</strong> (2004).</li>
-            </ul>
-        </div>
+            <div class="section">
+                <ul>
+                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
+                    <li><strong>National Merit Scholarship</strong> (2004).</li>
+                </ul>
+            </div>
 
-        <div class="badge-container">
-            <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-            <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
-        </div>
+            <div class="badge-container">
+                <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+                <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
+            </div>
 
-        <div class="social-links">
-            <a href="mailto:sumandutta.snbncbs@gmail.com">
-                <img src="https://img.shields.io/badge/Email-sumandutta.snbncbs%40gmail.com-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
-            </a>
-            <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
-                <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
-            </a>
-            <a href="https://github.com/sd3ph">
-                <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/sd3ph/">
-                <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-            </a>
+            <div class="social-links">
+                <a href="mailto:sumandutta.snbncbs@gmail.com">
+                    <img src="https://img.shields.io/badge/Email-sumandutta.snbncbs%40gmail.com-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+                </a>
+                <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
+                    <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
+                </a>
+                <a href="https://github.com/sd3ph">
+                    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/sd3ph/">
+                    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+                </a>
+            </div>
         </div>
 
     </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pageContents = document.querySelectorAll('.page-content');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove 'active' class from all links and content
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pageContents.forEach(content => content.classList.remove('active'));
+
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+
+                // Show the corresponding content
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).classList.add('active');
+            });
+        });
+
+        // Set the initial active link based on URL fragment or default to #about
+        const currentHash = window.location.hash || '#about';
+        document.querySelector(`.nav-link[href="${currentHash}"]`).classList.add('active');
+        document.querySelector(currentHash).classList.add('active');
+    </script>
 
 </body>
 </html>
