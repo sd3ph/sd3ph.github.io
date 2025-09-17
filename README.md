@@ -312,8 +312,8 @@
         <div id="about" class="page-content active">
     <div class="profile-header">
         <div class="header-text">
-            <h1>Suman Dutta</h1>
-            <p>Researcher | Intelligent Living & Artificial Systems</p>
+            <h1>Hello World!</h1>
+            <p>Welcome to PAI lab!</p>
         </div>
     </div>
 </div>
