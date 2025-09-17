@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,12 +56,17 @@
             box-sizing: border-box;
         }
 
+        .navbar-title-container { /* New container for title and potential logo */
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
         .navbar h1 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8em;
             color: #fff;
             margin: 0;
-            flex-grow: 1; /* Takes available space */
             text-align: left;
         }
 
@@ -268,12 +274,32 @@
             color: var(--primary-color);
         }
 
+        /* Styling for the header that contains "Physics+AI" */
+        .site-title-header {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--nav-hover-bg);
+            border-bottom: 3px solid var(--accent-color);
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .site-title-header .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #fff;
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <h1>Physics+AI</h1>
+    <div class="site-title-header">
+        <div class="title">Physics+AI</div>
         <ul class="nav-links">
             <li><a href="#about" class="nav-link active">About Me</a></li>
             <li><a href="#research" class="nav-link">Research</a></li>
@@ -438,44 +464,3 @@
                 </a>
                 <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
                     <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
-                </a>
-                <a href="https://github.com/sd3ph">
-                    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/sd3ph/">
-                    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        const navLinks = document.querySelectorAll('.nav-link');
-        const pageContents = document.querySelectorAll('.page-content');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                // Remove 'active' class from all links and content
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                pageContents.forEach(content => content.classList.remove('active'));
-
-                // Add 'active' class to the clicked link
-                this.classList.add('active');
-
-                // Show the corresponding content
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).classList.add('active');
-            });
-        });
-
-        // Set the initial active link based on URL fragment or default to #about
-        const currentHash = window.location.hash || '#about';
-        document.querySelector(`.nav-link[href="${currentHash}"]`).classList.add('active');
-        document.querySelector(currentHash).classList.add('active');
-    </script>
-
-</body>
-</html>
