@@ -311,7 +311,7 @@
 
         <div id="about" class="page-content active">
             <div class="profile-header">
-                <img src="https://source.unsplash.com/150x150/?engineer,developer" alt="Profile Picture" class="profile-picture">
+                <img src="https://source.unsplash.com/150x150/?abstract,ai,art" alt="Profile Picture" class="profile-picture">
                 <div class="header-text">
                     <h1>Suman Dutta</h1>
                     <p>Researcher | Intelligent Living & Artificial Systems</p>
@@ -320,7 +320,7 @@
 
             <h2>About Me</h2>
             <p>
-                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong> Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>.
+                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong> Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, and pioneering the development of <strong>Generative Physical Intelligence</strong> to model and generate novel system behaviors.
             </p>
 
             <div class="section">
@@ -417,6 +417,7 @@
                     <li><strong>Cellular Migration and Turbulence:</strong> We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.</li>
                     <li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
                     <li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
+                    <li><strong>Generative Physical Intelligence:</strong> We are pioneering the development of novel generative models that are deeply integrated with the fundamental laws of physics. This research aims to create AI systems capable of not only predicting but also generating physically plausible dynamics and structures. By teaching models the principles of statistical mechanics and emergent phenomena, we seek to build intelligent agents that can autonomously discover new materials, understand system failures, and generate innovative solutions to complex physical challenges.</li>
                     <li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
                 </ul>
             </div>
@@ -447,6 +448,7 @@
                 <ul>
                     <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
                     <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
                     <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
                     <li><strong>National Merit Scholarship</strong> (2004).</li>
                 </ul>
