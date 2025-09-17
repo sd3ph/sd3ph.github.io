@@ -320,7 +320,7 @@
 
             <h2>About Me</h2>
             <p>
-                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong>Physics of Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>.
+                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong> Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the intricate complex dynamics of <strong>Soft, Glassy, Active & Adaptable Matter</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>.
             </p>
 
             <div class="section">
@@ -436,7 +436,7 @@
                 <h3>Mentoring Experience</h3>
                 <ul>
                     <li>Research Intern: A. Jagdish, A. Harish (06/2025 onwards)</li>
-                    <li>Masters Thesis Co-supervision: Understanding Non-Newtonian Materials (since 08/2025)</li>
+                    <li>Masters Thesis Co-supervision: Magnus Olsen, Understanding Non-Newtonian Materials (Supervisor: R. Cabriolu, Norwegian University of Science and Technology (since 08/2025)</li>
                 </ul>
             </div>
         </div>
