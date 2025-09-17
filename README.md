@@ -151,7 +151,6 @@
             color: var(--secondary-color);
             margin-top: 3px; /* Less margin */
         }
-
         .social-links {
             text-align: center;
             margin-top: 25px; /* Less margin */
