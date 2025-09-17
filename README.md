@@ -311,7 +311,6 @@
 
         <div id="about" class="page-content active">
     <div class="profile-header">
-        <img src="https://drive.google.com/uc?export=view&id=1ka_EXR87YlEDPwbjBNzyDX5_I797sBWv" alt="Profile Picture" class="profile-picture">
         <div class="header-text">
             <h1>Suman Dutta</h1>
             <p>Researcher | Intelligent Living & Artificial Systems</p>
