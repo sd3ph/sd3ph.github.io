@@ -311,7 +311,6 @@
 
         <div id="about" class="page-content active">
             <div class="profile-header">
-                <img src="https://source.unsplash.com/150x150/?abstract,ai,art" alt="Profile Picture" class="profile-picture">
                 <div class="header-text">
                     <h1>Suman Dutta</h1>
                     <p>Researcher | Intelligent Living & Artificial Systems</p>
