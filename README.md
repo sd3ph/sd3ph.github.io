@@ -453,6 +453,14 @@
                 </ul>
             </div>
 
+            <div class="section">
+                <h3>Research Collaborators</h3>
+                <ul>
+                    <li>Professor, Jaydeb Chakrabarti (SNBNCBS)</li>
+                    <li>Pinaki Chaudhuri (IMSc)</li>
+                </ul>
+            </div>
+
             <div class="badge-container">
                 <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
                 <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
