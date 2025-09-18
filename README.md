@@ -293,6 +293,26 @@
             text-align: left;
         }
 
+        /* Collaborator Section Styles */
+        .collaborator-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .collaborator-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+        
+        .collaborator-info {
+            line-height: 1.5;
+        }
+
     </style>
 </head>
 <body>
@@ -453,12 +473,22 @@
                 </ul>
             </div>
 
+            <h2>🤝 Research Collaborators</h2>
             <div class="section">
-                <h3>Research Collaborators</h3>
-                <ul>
-                    <li>Professor, Jaydeb Chakrabarti (SNBNCBS)</li>
-                    <li>Pinaki Chaudhuri (IMSc)</li>
-                </ul>
+                 <div class="collaborator-item">
+                    <img src="jaydeb.jpg" alt="Profile picture of Professor Jaydeb Chakrabarti" class="collaborator-pic">
+                    <div class="collaborator-info">
+                        <strong>Professor, Jaydeb Chakrabarti</strong><br>
+                        (SNBNCBS)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <img src="pinaki.jpg" alt="Profile picture of Pinaki Chaudhuri" class="collaborator-pic">
+                    <div class="collaborator-info">
+                        <strong>Pinaki Chaudhuri</strong><br>
+                        (IMSc)
+                    </div>
+                </div>
             </div>
 
             <div class="badge-container">
