@@ -467,25 +467,26 @@
                  <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Jaydeb Chakrabarti</strong><br>
-                        (Senior Professor, Physics of Complex System, S N Bose National Centre for Basic Sciences)
+                        (Senior Professor, Physics of Complex System, S N Bose National Centre for Basic Sciences, Kolkata, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Pinaki Chaudhuri</strong><br>
-                        (Professor, Physics Group, IMSc)
+                        (Professor, Physics Group, IMSc, Chennai, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 1</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Kirsten Martens</strong><br>
+                        (CNRS Researcher, Interdisciplinary Laboratory of Physics (LIPHy), University of Grenoble Alpes, Grenoble, FR)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 2</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Chandan Dasgupta</strong><br>
+                        (Honorary Professor, Indian Institute of Sciences, Bengaluru, IND)
+                        (Simons Visiting Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
