@@ -462,6 +462,24 @@
         </div>
 
         <div id="misc" class="page-content">
+            <h2>🤝 Research Collaborators</h2>
+            <div class="section">
+                 <div class="collaborator-item">
+                    <img src="https://via.placeholder.com/60" alt="Collaborator logo" class="collaborator-pic">
+                    <div class="collaborator-info">
+                        <strong>Professor, Jaydeb Chakrabarti</strong><br>
+                        (SNBNCBS)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <img src="https://via.placeholder.com/60" alt="Collaborator logo" class="collaborator-pic">
+                    <div class="collaborator-info">
+                        <strong>Pinaki Chaudhuri</strong><br>
+                        (IMSc)
+                    </div>
+                </div>
+            </div>
+
             <h2>🏆 Awards & Recognition</h2>
             <div class="section">
                 <ul>
@@ -471,24 +489,6 @@
                     <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
                     <li><strong>National Merit Scholarship</strong> (2004).</li>
                 </ul>
-            </div>
-
-            <h2>🤝 Research Collaborators</h2>
-            <div class="section">
-                 <div class="collaborator-item">
-                    <img src="jaydeb.jpg" alt="Profile picture of Professor Jaydeb Chakrabarti" class="collaborator-pic">
-                    <div class="collaborator-info">
-                        <strong>Professor, Jaydeb Chakrabarti</strong><br>
-                        (SNBNCBS)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <img src="pinaki.jpg" alt="Profile picture of Pinaki Chaudhuri" class="collaborator-pic">
-                    <div class="collaborator-info">
-                        <strong>Pinaki Chaudhuri</strong><br>
-                        (IMSc)
-                    </div>
-                </div>
             </div>
 
             <div class="badge-container">
