@@ -476,6 +476,78 @@
                         (Professor, Physics Group, IMSc)
                     </div>
                 </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 1</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 2</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 3</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 4</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 5</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 6</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 7</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 8</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 9</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 10</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 11</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Collaborator 12</strong><br>
+                        (Position, Affiliation 1, affiliation 2... and so on)
+                    </div>
+                </div>
             </div>
 
             <h2>🏆 Awards & Recognition</h2>
