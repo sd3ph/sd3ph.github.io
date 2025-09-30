@@ -465,14 +465,12 @@
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
                  <div class="collaborator-item">
-                    <img src="https://via.placeholder.com/60" alt="Collaborator logo" class="collaborator-pic">
                     <div class="collaborator-info">
                         <strong>Professor, Jaydeb Chakrabarti</strong><br>
                         (SNBNCBS)
                     </div>
                 </div>
                 <div class="collaborator-item">
-                    <img src="https://via.placeholder.com/60" alt="Collaborator logo" class="collaborator-pic">
                     <div class="collaborator-info">
                         <strong>Pinaki Chaudhuri</strong><br>
                         (IMSc)
@@ -498,7 +496,7 @@
 
             <div class="social-links">
                 <a href="mailto:sumandutta.snbncbs@gmail.com">
-                    <img src="https://img.shields.io/badge/Email-sumandutta.snbncbs%40gmail.com-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+                    <img src="https://img.shields.io/badge/Email-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
                 </a>
                 <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
                     <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
