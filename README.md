@@ -447,7 +447,8 @@
             <div class="section">
                 <h3>Courses Taught</h3>
                 <ul>
-                    <li>Mathematics for AI, School of Artificial Intelligence, Bootcamp (AI & Data Science Core).</li>
+                    <li>Mathematics for Intelligent Systems, 23MAT106, First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025)
+                    <li>Mathematics for AI, School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Bootcamp (AI & Data Science Core) .</li>
                     <li>Research Methodology: S. N. Bose National Centre for Basic Sciences.</li>
                 </ul>
             </div>
