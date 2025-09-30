@@ -485,20 +485,19 @@
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Chandan Dasgupta</strong><br>
-                        (Honorary Professor, Indian Institute of Sciences, Bengaluru, IND)
-                        (Simons Visiting Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
+                        (Honorary Professor, Indian Institute of Sciences, Bengaluru, IND; Simons Visiting Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 3</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Abhishek Dhar</strong><br>
+                        (Senior Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 4</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Anupam Kundu</strong><br>
+                        (Associate Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
