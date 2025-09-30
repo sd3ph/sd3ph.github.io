@@ -473,7 +473,7 @@
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Pinaki Chaudhuri</strong><br>
-                        (Professor, Physics Group, IMSc, Chennai, IND)
+                        (Professor, Physics Group, The Institute of Mathematical Sciences, Chennai, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
