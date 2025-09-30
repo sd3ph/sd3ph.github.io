@@ -466,14 +466,14 @@
             <div class="section">
                  <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Professor, Jaydeb Chakrabarti</strong><br>
-                        (SNBNCBS)
+                        <strong>Jaydeb Chakrabarti</strong><br>
+                        (Senior Professor, Physics of Complex System, S N Bose National Centre for Basic Sciences)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Pinaki Chaudhuri</strong><br>
-                        (IMSc)
+                        (Professor, Physics Group, IMSc)
                     </div>
                 </div>
             </div>
