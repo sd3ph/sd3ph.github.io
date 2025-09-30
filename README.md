@@ -502,14 +502,14 @@
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 5</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Madan Rao</strong><br>
+                        (Senior Professor, Simons Centre for the Study of Living Machines, National Centre for Biological Sciences -TIFR, Bengaluru, IND)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 6</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Vinay Vaibhav</strong><br>
+                        (Post Doctoral Fellow, University of Goettingen, GER)
                     </div>
                 </div>
                 <div class="collaborator-item">
