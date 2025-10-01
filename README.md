@@ -339,7 +339,7 @@
 
             <h2>About Me</h2>
             <p>
-                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with a aim to develop strategies for <strong>Generative Physical Systems</strong>.
+                I am an <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with a aim to develop strategies for <strong>Generative Physical Systems</strong>.
             </p>
 
             <div class="section">
@@ -515,38 +515,26 @@
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 7</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Soumyakanti Bose</strong><br>
+                        (Post Doctoral Fellow, University of Seol, KR)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Collaborator 8</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        (Post Doctoral Fellow, University of Luxembourg, LU)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 9</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Raffaela Cabriolu</strong><br>
+                        (Associate Professor, Norwegian University of Science and Technology, NO)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 10</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Collaborator 11</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Collaborator 12</strong><br>
-                        (Position, Affiliation 1, affiliation 2... and so on)
+                        <strong>Rahul Dandekar</strong><br>
+                        (Post Doctoral Fellow, IPhT Sacley, Paris, FR)
                     </div>
                 </div>
             </div>
