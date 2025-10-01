@@ -320,16 +320,19 @@
     <div class="site-title-header">
         <div class="title">Physics+AI</div>
         <ul class="nav-links">
-            <li><a href="#about" class="nav-link active">About Me</a></li>
+            <!-- Updated Navigation Order -->
+            <li><a href="#highlight" class="nav-link active">Highlight</a></li>
             <li><a href="#research" class="nav-link">Research</a></li>
             <li><a href="#teaching" class="nav-link">Teaching</a></li>
+            <li><a href="#about" class="nav-link">About Me</a></li>
             <li><a href="#misc" class="nav-link">Misc</a></li>
         </ul>
     </div>
 
     <div class="container">
 
-        <div id="about" class="page-content active">
+        <!-- 1. Highlight Page (New First Page) -->
+        <div id="highlight" class="page-content active">
             <div class="profile-header">
                 <div class="header-text">
                     <h1>Suman Dutta</h1>
@@ -337,7 +340,7 @@
                 </div>
             </div>
 
-            <h2>About Me</h2>
+            <h2> Overview</h2>
             <p>
                 I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.
             </p>
@@ -349,52 +352,9 @@
                     <li><strong>5+ Years of Post-PhD Research Experience</strong> in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)</li>
                 </ul>
             </div>
-
-            <div class="section">
-                <h3>🎓 Professional Journey</h3>
-                <h4>Present Affiliation</h4>
-                <p>
-                    <span class="affiliation">Assistant Professor (Sr. Gd.)</span><br>
-                    School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
-                    <span class="date">(Since 03/2025)</span>
-                </p>
-
-                <h4>Professional Research Experience</h4>
-                <ul>
-                    <li>
-                        <strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>
-                        Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)
-                    </li>
-                    <li>
-                        <strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br>
-                        International Centre for Theoretical Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: C. Dasgupta)
-                    </li>
-                    <li>
-                        <strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br>
-                        The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)
-                    </li>
-                </ul>
-
-                <h4>Education</h4>
-                <ul>
-                    <li>
-                        <strong>Post B.Sc Integrated PhD Research Fellow</strong><br>
-                        S. N. Bose National Centre for Basic Sciences, Kolkata<br>
-                        <span class="date">(08/2010 - 01/2018)</span>
-                    </li>
-                    <li>
-                        <strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br>
-                        Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata (Degree awarded by University of Calcutta) <br>
-                        <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
-                    </li>
-                    <li>
-                        <strong>M.Sc in Physical Sciences</strong> (08/2010 – 07/2012)<br>
-                        S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
-                    </li>
-                </ul>
-            </div>
         </div>
 
+        <!-- 2. Research Page -->
         <div id="research" class="page-content">
             <h2>🔬 Research Interests & Competencies</h2>
             <div class="section">
@@ -442,6 +402,7 @@
             </div>
         </div>
 
+        <!-- 3. Teaching Page -->
         <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
             <div class="section">
@@ -462,6 +423,78 @@
             </div>
         </div>
 
+        <!-- 4. About Me Page (Moved and Modified) -->
+        <div id="about" class="page-content">
+            <h2>About Me</h2>
+            <div class="section">
+                <h3>🎓 Professional Journey</h3>
+                <h4>Present Affiliation</h4>
+                <p>
+                    <span class="affiliation">Assistant Professor (Sr. Gd.)</span><br>
+                    School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
+                    <span class="date">(Since 03/2025)</span>
+                </p>
+
+                <h4>Professional Research Experience</h4>
+                <ul>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>
+                        Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)
+                    </li>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br>
+                        International Centre for Theoretical Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: C. Dasgupta)
+                    </li>
+                    <li>
+                        <strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br>
+                        The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)
+                    </li>
+                </ul>
+
+                <h4>Education</h4>
+                <ul>
+                    <li>
+                        <strong>Post B.Sc Integrated PhD Research Fellow</strong><br>
+                        S. N. Bose National Centre for Basic Sciences, Kolkata<br>
+                        <span class="date">(08/2010 - 01/2018)</span>
+                    </li>
+                    <li>
+                        <strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br>
+                        Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata (Degree awarded by University of Calcutta) <br>
+                        <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
+                    </li>
+                    <li>
+                        <strong>M.Sc in Physical Sciences</strong> (08/2010 – 07/2012)<br>
+                        S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Links moved here -->
+            <h2>📫 Connect</h2>
+            <div class="section" style="text-align: center;">
+                <div class="social-links" style="border-top: none; margin-top: 0; padding-top: 0;">
+                    <a href="mailto:sumandutta.snbncbs@gmail.com">
+                        <img src="https://img.shields.io/badge/Email-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
+                        <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
+                    </a>
+                    <a href="https://github.com/sd3ph">
+                        <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sd3ph/">
+                        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+                    <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Misc Page (Modified) -->
         <div id="misc" class="page-content">
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
@@ -549,26 +582,7 @@
                     <li><strong>National Merit Scholarship</strong> (2004).</li>
                 </ul>
             </div>
-
-            <div class="badge-container">
-                <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-                <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
-            </div>
-
-            <div class="social-links">
-                <a href="mailto:sumandutta.snbncbs@gmail.com">
-                    <img src="https://img.shields.io/badge/Email-red?style=flat-square&logo=gmail&logoColor=white" alt="Email">
-                </a>
-                <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ">
-                    <img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar">
-                </a>
-                <a href="https://github.com/sd3ph">
-                    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/sd3ph/">
-                    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-                </a>
-            </div>
+            <!-- Social Links and Badges removed from here -->
         </div>
 
     </div>
@@ -594,8 +608,8 @@
             });
         });
 
-        // Set the initial active link based on URL fragment or default to #about
-        const currentHash = window.location.hash || '#about';
+        // Set the initial active link based on URL fragment or default to #highlight
+        const currentHash = window.location.hash || '#highlight';
         document.querySelector(`.nav-link[href="${currentHash}"]`).classList.add('active');
         document.querySelector(currentHash).classList.add('active');
     </script>
