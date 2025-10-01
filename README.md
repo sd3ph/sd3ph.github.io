@@ -468,13 +468,13 @@
                  <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Jaydeb Chakrabarti</strong><br>
-                        (Senior Professor, Physics of Complex System, S N Bose National Centre for Basic Sciences, Kolkata, IND)
+                        (Senior Professor, Physics of Complex System, S N Bose National Centre for Basic Sciences, Kolkata, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Pinaki Chaudhuri</strong><br>
-                        (Professor, Physics Group, The Institute of Mathematical Sciences, Chennai, IND)
+                        (Professor, Physics Group, The Institute of Mathematical Sciences, Chennai, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
@@ -486,25 +486,25 @@
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Chandan Dasgupta</strong><br>
-                        (Honorary Professor, Indian Institute of Sciences, Bengaluru, IND; Simons Visiting Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
+                        (Honorary Professor, Indian Institute of Sciences, Bengaluru, IN; Simons Visiting Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Abhishek Dhar</strong><br>
-                        (Senior Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
+                        (Senior Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Anupam Kundu</strong><br>
-                        (Associate Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IND)
+                        (Associate Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Madan Rao</strong><br>
-                        (Senior Professor, Simons Centre for the Study of Living Machines, National Centre for Biological Sciences -TIFR, Bengaluru, IND)
+                        (Senior Professor, Simons Centre for the Study of Living Machines, National Centre for Biological Sciences -TIFR, Bengaluru, IN)
                     </div>
                 </div>
                 <div class="collaborator-item">
