@@ -571,6 +571,12 @@
                         <strong>Rahul Dandekar</strong><br>
                         (Post Doctoral Fellow, IPhT Sacley, Paris, FR)
                     </div>
+                     </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Tamoghna Kanti Das</strong><br>
+                        (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)
+                    </div>
                 </div>
             </div>
 
