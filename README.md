@@ -363,11 +363,11 @@
                 <ul>
                     <li>
                         <strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>
-                        Simons Centre for the Study of Living Machines, NCBS-TIFR, Bangalore (Advisor: M. Rao)
+                        Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)
                     </li>
                     <li>
                         <strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br>
-                        International Centre for Theoretical Sciences (ICTS-TIFR), Bangalore (Advisor: C. Dasgupta)
+                        International Centre for Theoretical Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: C. Dasgupta)
                     </li>
                     <li>
                         <strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br>
