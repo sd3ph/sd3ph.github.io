@@ -521,7 +521,7 @@
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Collaborator 8</strong><br>
+                        <strong>Soubhick Das</strong><br>
                         (Post Doctoral Fellow, University of Luxembourg, LU)
                     </div>
                 </div>
