@@ -383,12 +383,12 @@
                         <span class="date">(08/2010 - 01/2018)</span>
                     </li>
                     <li>
-                        <strong>Ph.D.</strong> (08/2012 – 01/2018)<br>
+                        <strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br>
                         Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata<br>
                         <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
                     </li>
                     <li>
-                        <strong>M.Sc</strong> (08/2010 – 07/2012)<br>
+                        <strong>M.Sc in Physical Sciences</strong> (08/2010 – 07/2012)<br>
                         S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)
                     </li>
                 </ul>
