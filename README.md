@@ -456,7 +456,7 @@
             <div class="section">
                 <h3>Mentoring Experience</h3>
                 <ul>
-                    <li>Research Intern: A. Jagdish, A. Harish (06/2025 onwards)</li>
+                    <li>Research Intern: A. Jagdish, A. Harish, A. Venkatraman (06/2025 onwards)</li>
                     <li>Masters Thesis Co-supervision: Magnus Olsen, Understanding Non-Newtonian Materials (Supervisor: R. Cabriolu, Norwegian University of Science and Technology (since 08/2025)</li>
                 </ul>
             </div>
