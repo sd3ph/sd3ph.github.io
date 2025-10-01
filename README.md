@@ -384,7 +384,7 @@
                     </li>
                     <li>
                         <strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br>
-                        Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata<br>
+                        Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata (Degree awarded by University of Calcutta) <br>
                         <em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)
                     </li>
                     <li>
