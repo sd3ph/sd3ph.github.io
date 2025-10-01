@@ -339,7 +339,7 @@
 
             <h2>About Me</h2>
             <p>
-                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong> Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I focus on the complex dynamics of <strong>Natural Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, to develop <strong>Generative Physical Systems</strong>.
+                I am an <strong>Active</strong> researcher in the field of <strong>Intelligent Living and Artificial Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, to develop <strong>Generative Physical Systems</strong>.
             </p>
 
             <div class="section">
