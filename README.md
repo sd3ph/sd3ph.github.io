@@ -331,7 +331,7 @@
 
     <div class="container">
 
-        <!-- 1. Highlight Page (New First Page) -->
+        <!-- 1. Highlight Page (Modified) -->
         <div id="highlight" class="page-content active">
             <div class="profile-header">
                 <div class="header-text">
@@ -348,8 +348,10 @@
             <div class="section">
                 <h3>🌟 Highlights</h3>
                 <ul>
-                    <li><strong>PhD</strong> on Numerical Studies on the Dynamics of Soft Matter Systems (S. N. Bose National Centre for Basic Sciences, 2018)</li>
-                    <li><strong>5+ Years of Post-PhD Research Experience</strong> in Interdisciplinary Physics, at IMSc (2018-2020), ICTS-TIFR (2021-23) and NCBS-TIFR (2024)</li>
+                    <!-- Modified Content -->
+                    <li><strong>Research Interests:</strong> Investigating the dynamics of natural and artificial complex systems, with a focus on out-of-equilibrium soft, glassy, and active matter.</li>
+                    <li><strong>Physics at the Interface of AI:</strong> Pioneering 'Generative Physical Intelligence' by integrating fundamental physical laws into novel AI models. This involves using high-performance computing and explainable AI to decode molecular information processing, predict material failure, and understand emergent behaviors in living and artificial systems.</li>
+                    <li><strong>Teaching and Mentoring:</strong> Engaged in teaching courses such as Mathematics for AI and Intelligent Systems, and mentoring research interns and graduate students.</li>
                 </ul>
             </div>
         </div>
