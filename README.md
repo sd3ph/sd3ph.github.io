@@ -330,7 +330,6 @@
     </div>
 
     <div class="container">
-
         <!-- 1. Highlight Page (Modified) -->
         <div id="highlight" class="page-content active">
             <div class="profile-header">
