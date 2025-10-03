@@ -272,7 +272,7 @@
         .profile-header h1, .profile-header p {
             color: var(--primary-color);
         }
-
+ 
         /* Styling for the header that contains "Physics+AI" */
         .site-title-header {
             display: flex;
