@@ -595,12 +595,11 @@
 
                 <h4>Visiting Researcher Experience</h4>
                 <ul>
-                    <li>Fluvial Mechanics Laboratory Indian Statistical Institute (Kolkata, India) [2025]</li>
-                    <li>Department of Physics Indian Institute of Science (Bangalore, India) [2024]</li>
-                    <li>Department of Physics Indian Institute of Science Education and Research (Bhopal, India) [2024]</li>
-                    <li>Laboratoire Interdisciplinaire de Physique Universit´e Grenoble Alpes (Grenoble, France) [2019]</li>
-                    <li>Institut f¨ur Theoretische Physik II - Soft Matter Heinrich-Heine-Universit¨at (D¨usseldorf, Germany) [2019]</li>
-                    <li>Laboratoire Interdisciplinaire de Physique Universit´e Grenoble Alpes (Grenoble, France)</li>
+                    <li>Fluvial Mechanics Laboratory Indian Statistical Institute (Kolkata, IN) </li>
+                    <li>Department of Physics Indian Institute of Science (Bangalore, IN) </li>
+                    <li>Department of Physics Indian Institute of Science Education and Research (Bhopal, IN) </li>
+                    <li>Laboratoire Interdisciplinaire de Physique Universit´e Grenoble Alpes (Grenoble, FR) </li>
+                    <li>Institut f¨ur Theoretische Physik II - Soft Matter Heinrich-Heine-Universit¨at (D¨usseldorf, DE) </li>
                 </ul>
 
                 <h4>Education</h4>
@@ -695,7 +694,7 @@
                 <div class="collaborator-item">
                     <div class="collaborator-info">
                         <strong>Vinay Vaibhav</strong><br>
-                        (Post Doctoral Fellow, University of Goettingen, GER)
+                        (Post Doctoral Fellow, University of Goettingen, DE)
                     </div>
                 </div>
                 <div class="collaborator-item">
