@@ -469,11 +469,11 @@
                         <div class="opportunity">Postdoctoral Fellowships</div>
                     </div>
             
-                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when brilliant people connect.</p>
+                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when generative minds connect.</p>
             
                     <div class="call-to-action">
                         <h2>Ready to answer the call?</h2>
-                        <p>We want to hear from you. Share your vision and your journey with us.<br>Email your one-page CV, a compelling Statement of Purpose (SOP), and a link to your webpage to:</p>
+                        <p>We want to hear from you. Share your vision and your journey with us.<br>Email your one-page CV, a compelling SOP about your future plans :</p>
                         <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">EMAIL</a>
                     </div>
             
