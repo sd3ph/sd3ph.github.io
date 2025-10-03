@@ -333,7 +333,7 @@
         <!-- 1. Highlight Page (Modified) -->
         <div id="highlight" class="page-content active">
             <div class="profile-header">
-                <img src="Image_PPic.PNG" alt="Profile Picture" class="profile-picture">
+                <img src="Image_PPic.png" alt="Profile Picture" class="profile-picture">
                 <div class="header-text">
                     <h1>Suman Dutta</h1>
                     <p>Researcher | Intelligent Living & Artificial Systems</p>
