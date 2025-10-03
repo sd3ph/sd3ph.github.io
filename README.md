@@ -473,7 +473,7 @@
             
                     <div class="call-to-action">
                         <h2>Ready to answer the call?</h2>
-                        <p>We want to hear from you: your vision and plans with us.<br>Email your one-page CV, an well supported SOP</p>
+                        <p>We want to hear from you: your vision and plans with us.<br>Email your one-page CV, a well supported SOP</p>
                         <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">Submit</a>
                     </div>
             
