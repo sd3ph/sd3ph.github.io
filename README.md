@@ -332,6 +332,7 @@
     <div class="container">
         <!-- 1. Highlight Page (Modified) -->
         <div id="highlight" class="page-content active">
+            <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
             <div class="profile-header">
                 <img src="Image_PPic.png" alt="Profile Picture" class="profile-picture">
                 <div class="header-text">
@@ -358,7 +359,6 @@
 
         <!-- 2. Research Page -->
         <div id="research" class="page-content">
-            <img src="cover1.png" alt="Research cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
             <h2>🔬 Research Interests & Competencies</h2>
             <div class="section">
                 <h3>Research Expertise</h3>
