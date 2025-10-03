@@ -457,24 +457,24 @@
             <div class="section">
                 <h2>JOIN US</h2>
                 <div class="advertisement">
-                    <h1>Join Us to Innovate</h1>
-                    <p> We are seeking creative minds to join our dynamic ecosystem of innovation. This is more than an opportunity; it's a call to co-create the future.</p>
+                    <h1>Join the Vanguard of Innovation</h1>
+                    <p>Are you a trailblazer? A visionary? A relentless pursuer of knowledge and impact? We are seeking brilliant minds to join our dynamic ecosystem of innovation. This is more than an opportunity; it's a call to co-create the future.</p>
             
-                    <p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we may have plans for you. We are actively seeking passionate individuals for:</p>
+                    <p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
             
                     <div class="opportunities">
                         <div class="opportunity">Collaborative Projects</div>
-                        <div class="opportunity">Internship Opportunities</div>
+                        <div class="opportunity">Co-working Opportunities</div>
                         <div class="opportunity">PhD Positions</div>
                         <div class="opportunity">Postdoctoral Fellowships</div>
                     </div>
             
-                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when generative minds connect.</p>
+                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when brilliant people connect.</p>
             
                     <div class="call-to-action">
                         <h2>Ready to answer the call?</h2>
-                        <p>We want to hear from you. Share your vision and your journey with us.<br>Email your one-page CV, a compelling SOP about your future plans :</p>
-                        <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">EMAIL</a>
+                        <p>We want to hear from you. Share your vision and your journey with us.<br>Email your one-page CV, a compelling Statement of Purpose (SOP), and a link to your webpage to:</p>
+                        <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">sumandutta.avvcb@gmail.com</a>
                     </div>
             
                     <p class="footer-text">Let's build the future together.</p>
