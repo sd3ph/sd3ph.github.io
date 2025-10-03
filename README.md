@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suman Dutta - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2c3e50; /* Deep blue-grey */
@@ -313,6 +313,101 @@
             line-height: 1.5;
         }
 
+        /* --- JOIN US ADVERTISEMENT STYLES --- */
+        .advertisement {
+            font-family: 'Montserrat', sans-serif; /* Use a different font for the ad */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto; /* Center the ad block */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .advertisement:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .advertisement h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: white; /* Override other h1 styles */
+            border-bottom: none; /* Override section h2 styles */
+            text-align: center; /* Override section h2 styles */
+        }
+
+        .advertisement p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .opportunities {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .opportunity {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.95em;
+            transition: background-color 0.3s ease;
+        }
+
+        .opportunity:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .call-to-action {
+            margin-top: 40px;
+        }
+
+        .call-to-action h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: white; /* Override */
+            border-bottom: none; /* Override */
+            text-align: center; /* Override */
+        }
+
+        .email-link {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #667eea;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-link:hover {
+            background-color: #f0f2ff;
+            color: #5a6edc;
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 1em;
+            font-style: italic;
+        }
+        /* --- END OF ADVERTISEMENT STYLES --- */
+
     </style>
 </head>
 <body>
@@ -355,6 +450,41 @@
                     <li><strong>Teaching and Mentoring:</strong> Engaged in teaching courses such as Mathematics for AI and Intelligent Systems, and mentoring research interns and graduate students.</li>
                 </ul>
             </div>
+
+            <!-- ====================================================== -->
+            <!-- ================ NEW JOIN US SECTION ================= -->
+            <!-- ====================================================== -->
+            <div class="section">
+                <h2>JOIN US</h2>
+                <div class="advertisement">
+                    <h1>Join the Vanguard of Innovation</h1>
+                    <p>Are you a trailblazer? A visionary? A relentless pursuer of knowledge and impact? We are seeking brilliant minds to join our dynamic ecosystem of innovation. This is more than an opportunity; it's a call to co-create the future.</p>
+            
+                    <p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
+            
+                    <div class="opportunities">
+                        <div class="opportunity">Collaborative Projects</div>
+                        <div class="opportunity">Co-working Opportunities</div>
+                        <div class="opportunity">PhD Positions</div>
+                        <div class="opportunity">Postdoctoral Fellowships</div>
+                    </div>
+            
+                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when brilliant people connect.</p>
+            
+                    <div class="call-to-action">
+                        <h2>Ready to answer the call?</h2>
+                        <p>We want to hear from you. Share your vision and your journey with us.<br>Email your one-page CV, a compelling Statement of Purpose (SOP), and a link to your webpage to:</p>
+                        <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">sumandutta.avvcb@gmail.com</a>
+                    </div>
+            
+                    <p class="footer-text">Let's build the future together.</p>
+                </div>
+                <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+             <!-- ====================================================== -->
+            <!-- ================ END OF JOIN US SECTION ============== -->
+            <!-- ====================================================== -->
+
         </div>
 
         <!-- 2. Research Page -->
