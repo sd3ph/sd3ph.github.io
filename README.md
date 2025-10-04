@@ -893,8 +893,8 @@
                     <div class="timeline-item">
                         <h3 class="timeline-month">May – June 2025</h3>
                          <div class="timeline-content">
-                            <strong>Research Visit to ISI-Kolkata</strong>
-                             <p>Dr. Dutta engaged in a research visit to the Fluvial Mechanics Laboratory at the Indian Statistical Institute (ISI), Kolkata.</p>
+                            <strong>May 28: Research Visit to ISI-Kolkata</strong>
+                             <p>Suman made a research visit to the Fluvial Mechanics Laboratory at the Indian Statistical Institute (ISI), Kolkata.</p>
                         </div>
                     </div>
                      <!-- March 2025 -->
