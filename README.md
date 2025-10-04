@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -426,24 +427,19 @@
             <!-- Updated Navigation Order -->
             <li><a href="#highlight" class="nav-link active">Highlight</a></li>
             <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#publication" class="nav-link">Publication</a></li>
             <li><a href="#teaching" class="nav-link">Teaching</a></li>
             <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#latest" class="nav-link">Latest</a></li>
             <li><a href="#misc" class="nav-link">Misc</a></li>
         </ul>
     </div>
 
     <div class="container">
-        <!-- 1. Highlight Page (Modified) -->
+        <!-- 1. Highlight Page -->
         <div id="highlight" class="page-content active">
             <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
-            <div class="profile-header">
-                <img src="Image_PPic.png" alt="Profile Picture" class="profile-picture">
-                <div class="header-text">
-                    <h1>Suman Dutta</h1>
-                    <p>Researcher | Intelligent Living & Artificial Systems</p>
-                </div>
-            </div>
-
+            
             <h2> Overview</h2>
             <p>
                 I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.
@@ -452,21 +448,17 @@
             <div class="section">
                 <h3>🌟 Highlights</h3>
                 <ul>
-                    <!-- Modified Content -->
                     <li><strong>Research Interests:</strong> Investigating the dynamics of natural and artificial complex systems, with a focus on out-of-equilibrium soft, glassy, and active matter.</li>
                     <li><strong>Physics at the Interface of AI:</strong> Pioneering 'Generative Physical Intelligence' by integrating fundamental physical laws into novel AI models. This involves using high-performance computing and explainable AI to decode molecular information processing, predict material failure, and understand emergent behaviors in living and artificial systems.</li>
                     <li><strong>Teaching and Mentoring:</strong> Engaged in teaching courses such as Mathematics for AI and Intelligent Systems, and mentoring research interns and graduate students.</li>
                 </ul>
             </div>
 
-            <!-- ====================================================== -->
-            <!-- ================ NEW JOIN US SECTION ================= -->
-            <!-- ====================================================== -->
             <div class="section">
                 <h2>🌟 Join Us </h2>
                 <div class="advertisement">
                     <h1>Join Us to Innovate</h1>
-                    <p> We are seeking generative minds to join our team of innovation to co-create the future.</p>
+                    <p> We are seeking creative indivisuals to join our lab to co-create the future.</p>
             
                     <p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
             
@@ -477,7 +469,7 @@
                         <div class="opportunity">Postdoctoral Fellowships</div>
                     </div>
             
-                    <p>This is your chance to work on projects that matter, surrounded by a community dedicated to pushing the boundaries of what's possible. We believe in the power of diverse perspectives and the magic that happens when generative minds connect.</p>
+                    <p>Find your chance to work on projects that matter, surrounded by a team to pushing the boundaries of what's possible. We believe in the power of diversity and the magic that happens when generative minds connect.</p>
             
                     <div class="call-to-action">
                         <h2>Ready to answer the call?</h2>
@@ -489,10 +481,6 @@
                 </div>
                 <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             </div>
-             <!-- ====================================================== -->
-            <!-- ================ END OF JOIN US SECTION ============== -->
-            <!-- ====================================================== -->
-
         </div>
 
         <!-- 2. Research Page -->
@@ -543,6 +531,14 @@
             </div>
         </div>
 
+        <!-- NEW: Publication Page -->
+        <div id="publication" class="page-content">
+            <h2>📚 Publications</h2>
+            <div class="section">
+                <p>Publication list is coming soon...</p>
+            </div>
+        </div>
+
         <!-- 3. Teaching Page -->
         <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
@@ -565,9 +561,19 @@
             </div>
         </div>
 
-        <!-- 4. About Me Page (Moved and Modified) -->
+        <!-- 4. About Me Page -->
         <div id="about" class="page-content">
             <h2>About Me</h2>
+            
+            <!-- COPIED PANEL -->
+            <div class="profile-header section">
+                <img src="Image_PPic.png" alt="Profile Picture" class="profile-picture">
+                <div class="header-text">
+                    <h1>Suman Dutta</h1>
+                    <p>Researcher | Intelligent Living & Artificial Systems</p>
+                </div>
+            </div>
+
             <div class="section">
                 <h3>🎓 Professional Journey</h3>
                 <h4>Present Affiliation</h4>
@@ -621,7 +627,6 @@
                 </ul>
             </div>
 
-            <!-- Social Links moved here -->
             <h2>📫 Connect</h2>
             <div class="section" style="text-align: center;">
                 <div class="social-links" style="border-top: none; margin-top: 0; padding-top: 0;">
@@ -645,7 +650,15 @@
             </div>
         </div>
 
-        <!-- 5. Misc Page (Modified) -->
+        <!-- NEW: Latest Page -->
+        <div id="latest" class="page-content">
+            <h2>✨ Latest News</h2>
+            <div class="section">
+                <p>Latest updates coming soon...</p>
+            </div>
+        </div>
+
+        <!-- 5. Misc Page -->
         <div id="misc" class="page-content">
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
@@ -739,7 +752,6 @@
                     <li><strong>National Merit Scholarship</strong> (2004).</li>
                 </ul>
             </div>
-            <!-- Social Links and Badges removed from here -->
         </div>
 
     </div>
@@ -767,8 +779,16 @@
 
         // Set the initial active link based on URL fragment or default to #highlight
         const currentHash = window.location.hash || '#highlight';
-        document.querySelector(`.nav-link[href="${currentHash}"]`).classList.add('active');
-        document.querySelector(currentHash).classList.add('active');
+        const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
+        const activeContent = document.querySelector(currentHash);
+
+        if (activeLink && activeContent) {
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            pageContents.forEach(content => content.classList.remove('active'));
+            activeLink.classList.add('active');
+            activeContent.classList.add('active');
+        }
+
     </script>
 
 </body>
