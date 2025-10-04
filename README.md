@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -312,12 +313,12 @@
             line-height: 1.5;
         }
 
-        /* --- JOIN US ADVERTISEMENT STYLES (SMALLER FONTS) --- */
+        /* --- JOIN US ADVERTISEMENT STYLES --- */
         .advertisement {
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px; /* Reduced padding */
+            padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -333,7 +334,7 @@
 
         .advertisement h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2em; /* Reduced font size */
+            font-size: 2.2em;
             margin-bottom: 20px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
@@ -343,7 +344,7 @@
         }
 
         .advertisement p {
-            font-size: 1.0em; /* Reduced font size */
+            font-size: 1.0em;
             line-height: 1.7;
             margin-bottom: 20px;
         }
@@ -358,9 +359,9 @@
 
         .opportunity {
             background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px; /* Reduced padding */
+            padding: 10px 20px;
             border-radius: 30px;
-            font-size: 0.85em; /* Reduced font size */
+            font-size: 0.85em;
             transition: background-color 0.3s ease;
         }
 
@@ -374,7 +375,7 @@
 
         .call-to-action h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.5em; /* Reduced font size */
+            font-size: 1.5em;
             margin-bottom: 15px;
             color: white; 
             border-bottom: none; 
@@ -385,11 +386,11 @@
             display: inline-block;
             background-color: #ffffff;
             color: #667eea;
-            padding: 12px 30px; /* Reduced padding */
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.0em; /* Reduced font size */
+            font-size: 1.0em;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -402,10 +403,39 @@
 
         .footer-text {
             margin-top: 30px;
-            font-size: 0.9em; /* Reduced font size */
+            font-size: 0.9em;
             font-style: italic;
         }
         /* --- END OF ADVERTISEMENT STYLES --- */
+
+        /* --- Publication Section Styles --- */
+        .publication-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .publication-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .publication-item .citation {
+            font-size: 1.1em; /* Slightly larger font for the main citation */
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .publication-item p {
+            margin-bottom: 5px; /* Tighter spacing within an item */
+            line-height: 1.6;
+        }
+        .publication-item a {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .publication-item a:hover {
+            text-decoration: underline;
+        }
+
 
     </style>
 </head>
@@ -531,9 +561,117 @@
         <div id="publication" class="page-content">
             <h2>📚 Publications</h2>
             <div class="section">
-                <p>Publication list is coming soon...</p>
+                
+                <div class="publication-item">
+                    <p class="citation">
+                        J. Chakrabarti & <u>S. Dutta</u>, <em>Analytical form of forces in hydrophobic collapse</em>, Chem. Phys. Lett., 620, <strong>109</strong> (2015) [<a href="https://www.sciencedirect.com/science/article/pii/S0009261414010483" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1016/j.cplett.2014.12.025</p>
+                    <p><strong>Significance:</strong> We derive an analytical form of the effective interaction forces responsible for hydrophobic collapse.</p>
+                    <p><strong>Contribution:</strong> <u>Second author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>* & J. Chakrabarti, <em>Anomalous dynamical responses in a driven system</em>, Europhys. Lett., <strong>116</strong>, 38001 (2016) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/38001/meta" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1209/0295-5075/116/38001</p>
+                    <p><strong>Significance:</strong> Reported existence of <em>Brownian-yet-Non Gaussian</em> diffusion in a driven system.</p>
+                    <p><strong>Contribution:</strong> <u>First author</u></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>* & J. Chakrabarti, <em>Transient dynamical responses of a charged binary colloid in an electric field</em>, Soft Matter, <strong>14</strong>, 4477 (2018) [<a href="https://pubs.rsc.org/en/content/articlehtml/2018/sm/c7sm02552a" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1039/C7SM02552A</p>
+                    <p><strong>Significance:</strong> Transient dynamical and structural response of binary charged colloidal system to constant electric field.</p>
+                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>*, <em>Microscopic insights into dynamical heterogeneity in a lane forming colloid</em>, Chem. Phys., <strong>522</strong>, 256 (2019) [<a href="https://www.sciencedirect.com/science/article/pii/S0301010418311510" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1016/j.chemphys.2019.03.009</p>
+                    <p><strong>Significance:</strong> Interpreted dynamical heterogeneity in a lane forming system in terms of partial structures of slow and fast moving clusters.</p>
+                    <p><strong>Contribution:</strong> <u>Solo author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        R. Dandekar, S. Bose & <u>S. Dutta</u>*, <em>Non-Gaussian information of heterogeneity in soft matter</em>, Europhys. Lett., <strong>131</strong>, 18002 (2020) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/131/18002/meta" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1209/0295-5075/131/18002</p>
+                    <p><strong>Significance:</strong> Devised an information-theoretic quantification of non-Gaussianity and used it to investigate dynamic heterogeneity in soft matter systems.</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>* & J. Chakrabarti, <em>Length-scales of dynamic heterogeneity in a driven binary colloid</em>, Phys. Chem. Chem. Phys., <strong>22</strong>, 17731 (2020) [<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02703k/unauth" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1039/D0CP02703K</p>
+                    <p><strong>Significance:</strong> Identified the length-scales and persistence of intermittent structures to explain emergence of dynamic heterogeneity in a model non-equilibrium system.</p>
+                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        C. Liu, <u>S. Dutta</u>, P. Chaudhuri & K. Martens, <em>Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</em>, Phys. Rev. Lett., <strong>126</strong>, 138005 (2021) [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.138005" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1103/PhysRevLett.126.138005</p>
+                    <p><strong>Significance:</strong> Using coarse-grained microscopic inputs, our framework based on elasto-plastic theories reasonably predicts failure in classes of amorphous glasses under constant strain-rate and imposed stress.</p>
+                    <p><strong>Contribution:</strong> <u>Joint first author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>, K. Martens & P. Chaudhuri, <em>Creep response of athermal amorphous solids under imposed shear stress</em>, arXiv:2303.04718 (2023) [<a href="https://arxiv.org/abs/2303.04718" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.48550/arXiv.2303.04718</p>
+                    <p><strong>Significance:</strong> Using extensive molecular simulations, we probe how annealing history determines mechanical response of amorphous glasses of different material origin under athermal creep.</p>
+                    <p><strong>Contribution:</strong> <u>First author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        V. Vaibhav & <u>S. Dutta</u>*, <em>Entropic timescales of Dynamic Heterogeneity in Supercooled Liquid</em>, Phys. Rev. E (Lett.), <strong>109</strong>, L062102 (2024) [<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.L062102" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1103/PhysRevE.109.L062102</p>
+                    <p><strong>Significance:</strong> We establish robustness of information-theoretic measure over the conventional moment based relationship, in detection of dynamic heterogeneity in supercooled liquid.</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        S. Santra, L. Touzo, C. Dasgupta, A. Dhar, <u>S. Dutta</u>, A. Kundu, P. Le Doussal, G. Schehr & P. Singh, <em>Crystal to liquid cross-over in the active Calogero-Moser model</em>, J. Stat. Mech. 033203 (2025) [<a href="https://iopscience.iop.org/article/10.1088/1742-5468/adbb5d" target="_blank" rel="noopener noreferrer">LINK</a>]
+                    </p>
+                    <p><strong>DOI:</strong> 10.1088/1742-5468/adbb5d</p>
+                    <p><strong>Significance:</strong> We uncover a new non-equilibrium crossover in a trapped system of active particles: from crystal states to actively melted solid.</p>
+                    <p><strong>Contribution:</strong> <u>Contributing author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, To be published in Ann. Phys. (Berlin) (2025)
+                    </p>
+                    <p><strong>Significance:</strong> We report universal appearance of persistent heterogeneous dynamics in equilibrium to non-equilibrium glassy systems.</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
+
+                <div class="publication-item">
+                    <p class="citation">
+                        <u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376
+                    </p>
+                    <p><strong>DOI:</strong> 10.48550/arXiv.2509.00376</p>
+                    <p><strong>Significance:</strong> We discover new state of extreme active matter, with unusual liquid state properties and jamming dynamics.</p>
+                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+
             </div>
         </div>
+
 
         <!-- 3. Teaching Page -->
         <div id="teaching" class="page-content">
@@ -778,8 +916,13 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
-                // Update URL hash
-                window.location.hash = targetId;
+                // Update URL hash without causing a page jump
+                if(history.pushState) {
+                    history.pushState(null, null, targetId);
+                }
+                else {
+                    location.hash = targetId;
+                }
                 switchTab(targetId);
             });
         });
@@ -794,7 +937,7 @@
         window.addEventListener('DOMContentLoaded', handlePageLoad);
         
         // Handle hash changes (e.g., back/forward buttons)
-        window.addEventListener('hashchange', handlePageLoad);
+        window.addEventListener('popstate', handlePageLoad);
 
     </script>
 
