@@ -834,7 +834,6 @@
                 </div>
                 <div class="badge-container">
                     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-                    <img src="https://img.shields.io/github/followers/sd3ph?label=Followers&style=social" alt="GitHub Followers">
                 </div>
             </div>
         </div>
