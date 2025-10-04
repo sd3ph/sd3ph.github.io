@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -435,6 +436,62 @@
             text-decoration: underline;
         }
 
+        /* --- Timeline Styles for Latest News --- */
+        .timeline {
+            position: relative;
+            padding-left: 20px; 
+            border-left: 2px solid var(--accent-color);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 2px solid white;
+            z-index: 1;
+        }
+        .timeline-month {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .timeline-content {
+            background-color: #fdfdfd;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        .timeline-content p {
+            margin: 0;
+        }
+        .timeline-content strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-size: 1.05em;
+        }
+        .timeline-content a {
+             color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .timeline-content a:hover {
+            text-decoration: underline;
+        }
 
     </style>
 </head>
@@ -551,7 +608,7 @@
                     <li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
                     <li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
                     <li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
-                    <li><strong>Generative Physical Intelligence:</strong> We are pioneering the development of novel generative models that are deeply integrated with the fundamental laws of physics. This research aims to create AI systems capable of not only predicting but also generating physically plausible dynamics and structures. By teaching models the principles of statistical mechanics and emergent phenomena, we seek to build intelligent agents that can autonomously discover new materials, understand system failures, and generate innovative solutions to complex physical challenges.</li>
+                    <li><strong>Generative Physical Intelligence:</strong> We are pioneering the development of novel generative models that are deeply integrated with the fundamental laws of physics. This research aims to create AI systems capable of not only predicting but also generating physically plausible dynamics and structures. By teaching models the principles of statistical mechanics and emergent phenomena, we seek to build intelligent agents that can autonomously discover new materials, understand system failures, and generate innovative solutions to a complex physical challenges.</li>
                 </ul>
             </div>
         </div>
@@ -783,11 +840,72 @@
             </div>
         </div>
 
-        <!-- NEW: Latest Page -->
+        <!-- UPDATED: Latest Page -->
         <div id="latest" class="page-content">
             <h2>✨ Latest News</h2>
             <div class="section">
-                <p>Latest updates coming soon...</p>
+                <div class="timeline">
+                    <!-- September 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">September 2025</h3>
+                        <div class="timeline-content" style="margin-bottom: 15px;">
+                            <strong>September 24: Archit Selected for ICTS-TIFR Program</strong>
+                            <p>Archit has been selected for on-campus participation in the "SPATIAL ORGANIZATION OF BIOLOGICAL FUNCTIONS" program at ICTS-TIFR, scheduled for October 20-25. He will also present a poster on his work, "Learning Micro-Flocking Dynamics in Living Machines by Hybrid Machine Intelligence."</p>
+                        </div>
+                        <div class="timeline-content" style="margin-bottom: 15px;">
+                            <strong>September 22: Agnevesh’s Research Tenure Extended</strong>
+                            <p>We are pleased to announce that Agnevesh's research tenure has been extended for an additional three months following a positive recommendation from a review panel, which included Dr. Sachin Kumar S, Dr. Palmani D (School of AI), Dr. Subhajit Paul (University of Delhi), and Prof. Sreekanth V (School of Physical Sciences).</p>
+                        </div>
+                         <div class="timeline-content" style="margin-bottom: 15px;">
+                            <strong>September 15: ANRF Grant Proposal Advances</strong>
+                            <p>Our grant proposal, titled "Learning Order-Disorder by Machine Intelligence," has been successfully accepted for technical evaluation by the Amrita-NORDFORSK (ANRF) grant committee.</p>
+                        </div>
+                    </div>
+                    <!-- August 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">August 2025</h3>
+                        <div class="timeline-content" style="margin-bottom: 15px;">
+                            <strong>August 30: New Preprint on Dense Persistent Active Fluids</strong>
+                            <p>Our latest preprint, "Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids," is now available on arXiv. This collaborative work was conducted with senior faculty from The Institute of Mathematical Sciences (Chennai), ICTS-TIFR, and NCBS-TIFR (Bangalore). The paper can be accessed at: <a href="https://arxiv.org/abs/2509.00376" target="_blank">arXiv:2509.00376</a>.</p>
+                        </div>
+                        <div class="timeline-content">
+                            <strong>August 4-15: Agnevesh Participates in ICTS-TIFR Flagship School</strong>
+                            <p>Congratulations to our student collaborator, Agnevesh, for his selection to participate in the prestigious flagship school "DATA SCIENCE: PROBABILISTIC AND OPTIMIZATION METHODS II," held online by ICTS-TIFR.</p>
+                        </div>
+                    </div>
+                    <!-- July 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">July 2025</h3>
+                         <div class="timeline-content">
+                            <strong>July 12: Archit to Present at ICAMGT – 2025</strong>
+                            <p>Congratulations to our student collaborator, Archit, whose research on "Machine Learning Material Heterogeneity at Micro-scale" has been accepted for an oral presentation at the International Conference on Advanced Materials and Green Technology (ICAMGT – 2025), hosted at Amrita Vishwa Vidyapeetham from July 24-26.</p>
+                        </div>
+                    </div>
+                     <!-- June 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">June 2025</h3>
+                         <div class="timeline-content">
+                            <strong>June 2: Manuscript Submitted to Annalen der Physik</strong>
+                            <p>A new manuscript titled "Persistently Non-Gaussian Metastable Liquids" was submitted to *Annalen der Physik*. This research is a collaborative effort with Dr. Vinay Vaibhav of the University of Goettingen, Germany, and Dr. Tamoghna Kanti Das from WPI-NanoLSI, Kanazawa University, Japan.</p>
+                        </div>
+                    </div>
+                     <!-- May-June 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">May – June 2025</h3>
+                         <div class="timeline-content">
+                            <strong>Research Visit to ISI-Kolkata</strong>
+                             <p>Dr. Dutta engaged in a research visit to the Fluvial Mechanics Laboratory at the Indian Statistical Institute (ISI), Kolkata.</p>
+                        </div>
+                    </div>
+                     <!-- March 2025 -->
+                    <div class="timeline-item">
+                        <h3 class="timeline-month">March 2025</h3>
+                         <div class="timeline-content">
+                            <strong>March 24: Joined Amrita Vishwa Vidyapeetham</strong>
+                            <p>Dr. Suman Dutta commenced his appointment as Assistant Professor at the School of AI, Amrita Vishwa Vidyapeetham, Coimbatore.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
