@@ -849,8 +849,8 @@
                     <div class="timeline-item">
                         <h3 class="timeline-month">September 2025</h3>
                         <div class="timeline-content" style="margin-bottom: 15px;">
-                            <strong>September 24: Archit Selected for ICTS-TIFR Program</strong>
-                            <p>Archit has been selected for on-campus participation in the "SPATIAL ORGANIZATION OF BIOLOGICAL FUNCTIONS" program at ICTS-TIFR, scheduled for October 20-25. He will also present a poster on his work, "Learning Micro-Flocking Dynamics in Living Machines by Hybrid Machine Intelligence."</p>
+                            <strong>September 24: Archit Selected for the flagship Biophysical Meeting at ICTS-TIFR Program</strong>
+                            <p>Archit has been selected for on-campus participation in the flagship- international meeting "Spatial Organization of Biological Functions", organized by the Biophysical Society, at ICTS-TIFR, scheduled for October 20-25. He will also present a poster on his work, "Learning Micro-Flocking Dynamics in Living Machines by Hybrid Machine Intelligence."</p>
                         </div>
                         <div class="timeline-content" style="margin-bottom: 15px;">
                             <strong>September 22: Agnevesh’s Research Tenure Extended</strong>
@@ -858,7 +858,7 @@
                         </div>
                          <div class="timeline-content" style="margin-bottom: 15px;">
                             <strong>September 15: ANRF Grant Proposal Advances</strong>
-                            <p>Our grant proposal, titled "Learning Order-Disorder by Machine Intelligence," has been successfully accepted for technical evaluation by the Amrita-NORDFORSK (ANRF) grant committee.</p>
+                            <p>Our grant proposal, titled "Learning Order-Disorder by Machine Intelligence," has been successfully accepted for technical evaluation.</p>
                         </div>
                     </div>
                     <!-- August 2025 -->
@@ -870,7 +870,7 @@
                         </div>
                         <div class="timeline-content">
                             <strong>August 4-15: Agnevesh Participates in ICTS-TIFR Flagship School</strong>
-                            <p>Congratulations to our student collaborator, Agnevesh, for his selection to participate in the prestigious flagship school "DATA SCIENCE: PROBABILISTIC AND OPTIMIZATION METHODS II," held online by ICTS-TIFR.</p>
+                            <p>Congratulations to our intern, Agnevesh, for his selection to participate in the prestigious flagship school "Data Science: Probabilistic and Optimization Methods II", held online by ICTS-TIFR.</p>
                         </div>
                     </div>
                     <!-- July 2025 -->
