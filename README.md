@@ -509,7 +509,7 @@
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
                 <li><a href="#misc" class="nav-link">Misc</a></li>
             </ul>
