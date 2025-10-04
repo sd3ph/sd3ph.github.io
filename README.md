@@ -853,7 +853,7 @@
                         </div>
                         <div class="timeline-content" style="margin-bottom: 15px;">
                             <strong>September 22: Agnevesh’s Research Tenure Extended</strong>
-                            <p>We are pleased to announce that Agnevesh's research tenure has been extended for an additional three months following a positive recommendation from a review panel, which included Dr. Sachin Kumar S, Dr. Palmani D (School of AI), Dr. Subhajit Paul (University of Delhi), and Prof. Sreekanth V (School of Physical Sciences).</p>
+                            <p>We are pleased to announce that Agnevesh's research tenure has been extended for an additional three months following a positive recommendation from a review panel, which included senior faculty members from the School of AI and School of Physical Sciences, Amrita Vishwa Vidyapeetham and external panelist from University of Delhi.</p>
                         </div>
                          <div class="timeline-content" style="margin-bottom: 15px;">
                             <strong>September 15: ANRF Grant Proposal Advances</strong>
@@ -901,7 +901,7 @@
                         <h3 class="timeline-month">March 2025</h3>
                          <div class="timeline-content">
                             <strong>March 24: Joined Amrita Vishwa Vidyapeetham</strong>
-                            <p>Dr. Suman Dutta commenced his appointment as Assistant Professor at the School of AI, Amrita Vishwa Vidyapeetham, Coimbatore.</p>
+                            <p>Dr. Suman Dutta commenced his appointment as Assistant Professor (Sr. Gd.) at the School of AI, Amrita Vishwa Vidyapeetham, Coimbatore.</p>
                         </div>
                     </div>
                 </div>
