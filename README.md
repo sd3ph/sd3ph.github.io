@@ -511,7 +511,7 @@
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
-                <li><a href="#misc" class="nav-link">Misc</a></li>
+                <li><a href="#miscellaneous" class="nav-link">miscellaneous</a></li>
             </ul>
         </nav>
     </header>
@@ -907,8 +907,8 @@
             </div>
         </div>
 
-        <!-- 5. Misc Page -->
-        <div id="misc" class="page-content">
+        <!-- 5. miscellaneous Page -->
+        <div id="miscellaneous" class="page-content">
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
                  <div class="collaborator-item">
