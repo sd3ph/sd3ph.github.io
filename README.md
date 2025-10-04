@@ -44,41 +44,49 @@
             overflow: hidden; /* To contain floated elements */
         }
 
-        /* Navigation */
-        .navbar {
-            background-color: var(--nav-hover-bg);
-            padding: 15px 30px;
+        /* --- MODIFIED NAVIGATION STYLES --- */
+        /* Main header container */
+        .main-header {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 3px solid var(--accent-color);
+            background-color: var(--nav-hover-bg);
             box-sizing: border-box;
         }
 
-        .navbar-title-container { /* New container for title and potential logo */
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
+        /* Top row: Title */
+        .site-title-header {
+            padding: 15px 30px;
+            box-sizing: border-box;
         }
 
-        .navbar h1 {
+        .site-title-header .title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+            font-size: 2.2em; /* Increased title font size */
             color: #fff;
             margin: 0;
             text-align: left;
         }
-
+        
+        /* Bottom row: Navigation Links Bar */
+        .navbar {
+            display: flex;
+            justify-content: center; /* Center the links container */
+            align-items: center;
+            padding: 10px 30px;
+            border-bottom: 3px solid var(--accent-color);
+            box-sizing: border-box;
+        }
+        
         .nav-links {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+            justify-content: center;
         }
 
         .nav-links li {
-            margin-left: 25px;
+            margin: 5px 15px; /* Add vertical margin for wrapping */
             font-size: 0.9em;
         }
 
@@ -91,6 +99,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
+            white-space: nowrap; /* Prevent link text from breaking */
         }
 
         .nav-links a:hover {
@@ -102,6 +111,8 @@
             background-color: var(--accent-color);
             color: #fff;
         }
+        /* --- END OF MODIFIED NAVIGATION --- */
+
 
         /* Page Content Styling */
         .page-content {
@@ -282,26 +293,6 @@
             color: var(--primary-color);
         }
 
-        /* Styling for the header that contains "Physics+AI" */
-        .site-title-header {
-            display: flex;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: var(--nav-hover-bg);
-            border-bottom: 3px solid var(--accent-color);
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        .site-title-header .title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #fff;
-            margin: 0;
-            flex-grow: 1;
-            text-align: left;
-        }
-
         /* Collaborator Section Styles */
         .collaborator-item {
             display: flex;
@@ -421,19 +412,25 @@
 </head>
 <body>
 
-    <div class="site-title-header">
-        <div class="title">Physics+AI</div>
-        <ul class="nav-links">
-            <!-- Updated Navigation Order -->
-            <li><a href="#highlight" class="nav-link active">Highlight</a></li>
-            <li><a href="#research" class="nav-link">Research</a></li>
-            <li><a href="#publication" class="nav-link">Publication</a></li>
-            <li><a href="#teaching" class="nav-link">Teaching</a></li>
-            <li><a href="#about" class="nav-link">About Me</a></li>
-            <li><a href="#latest" class="nav-link">Latest</a></li>
-            <li><a href="#misc" class="nav-link">Misc</a></li>
-        </ul>
-    </div>
+    <!-- MODIFIED HEADER FOR TWO-ROW LAYOUT -->
+    <header class="main-header">
+        <!-- Top Row: Title -->
+        <div class="site-title-header">
+            <div class="title">Physics+AI</div>
+        </div>
+        <!-- Bottom Row: Navigation Links -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#highlight" class="nav-link active">Highlight</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publication" class="nav-link">Publication</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#latest" class="nav-link">Latest</a></li>
+                <li><a href="#misc" class="nav-link">Misc</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
         <!-- 1. Highlight Page -->
@@ -760,34 +757,45 @@
         const navLinks = document.querySelectorAll('.nav-link');
         const pageContents = document.querySelectorAll('.page-content');
 
+        function switchTab(targetId) {
+            // Remove 'active' class from all links and content
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            pageContents.forEach(content => content.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Show the corresponding content
+            const activeContent = document.querySelector(targetId);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        }
+
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-
-                // Remove 'active' class from all links and content
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                pageContents.forEach(content => content.classList.remove('active'));
-
-                // Add 'active' class to the clicked link
-                this.classList.add('active');
-
-                // Show the corresponding content
                 const targetId = this.getAttribute('href');
-                document.querySelector(targetId).classList.add('active');
+                // Update URL hash
+                window.location.hash = targetId;
+                switchTab(targetId);
             });
         });
 
-        // Set the initial active link based on URL fragment or default to #highlight
-        const currentHash = window.location.hash || '#highlight';
-        const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
-        const activeContent = document.querySelector(currentHash);
-
-        if (activeLink && activeContent) {
-            navLinks.forEach(nav => nav.classList.remove('active'));
-            pageContents.forEach(content => content.classList.remove('active'));
-            activeLink.classList.add('active');
-            activeContent.classList.add('active');
+        // Function to handle initial page load and hash changes
+        function handlePageLoad() {
+            const currentHash = window.location.hash || '#highlight';
+            switchTab(currentHash);
         }
+
+        // Handle initial page load
+        window.addEventListener('DOMContentLoaded', handlePageLoad);
+        
+        // Handle hash changes (e.g., back/forward buttons)
+        window.addEventListener('hashchange', handlePageLoad);
 
     </script>
 
