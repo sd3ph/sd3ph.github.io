@@ -889,7 +889,7 @@
                             <p>A new manuscript titled "Persistently Non-Gaussian Metastable Liquids" was submitted to *Annalen der Physik*. This research is a collaborative effort with Dr. Vinay Vaibhav of the University of Goettingen, Germany, and Dr. Tamoghna Kanti Das from WPI-NanoLSI, Kanazawa University, Japan.</p>
                         </div>
                     </div>
-                     <!-- May-June 2025 -->
+                     <!-- May 2025 -->
                     <div class="timeline-item">
                         <h3 class="timeline-month">May – June 2025</h3>
                          <div class="timeline-content">
