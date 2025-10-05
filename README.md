@@ -915,7 +915,7 @@ A central theme of our research is the manipulation and control of self-organize
         </div>
 
         <!-- 5. miscellaneous Page -->
-        <div id="miscellaneous" class="page-content">
+        <div id="misc" class="page-content">
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
                  <div class="collaborator-item">
