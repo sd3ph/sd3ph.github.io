@@ -521,9 +521,12 @@
         <div id="highlight" class="page-content active">
             <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
             
-            <h2> Overview</h2>
-            <p>
-                I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.
+            <h2> Team iLab</h2>
+            <p> Our research group is committed to deciphering the complex dynamics of systems away from equilibrium, a pursuit that spans the realms of biological physics, materials science, and artificial intelligence. We deploy the foundational principles of statistical and soft matter physics to construct a cohesive understanding of emergent behaviors in these multifaceted systems. 
+            A significant portion of our work is dedicated to the reverse engineering of biological tissues. By studying the collective behavior of cells, we aim to understand and ultimately replicate the processes of tissue regeneration and morphogenesis. This involves creating sophisticated computational models to unravel the intricate interplay of mechanical and molecular pathways that guide cellular self-organization and turbulence.
+            In parallel, we investigate the fundamental mechanics of disordered solids, such as glasses and granular materials, with a particular focus on predicting and understanding material failure. The inherent disorder in these systems presents a formidable challenge in forecasting points of weakness and catastrophic failure.
+A central theme of our research is the manipulation and control of self-organized matter. We explore the principles governing the spontaneous assembly of colloidal and other artificial systems to engineer novel materials with bespoke properties. This research paves the way for innovations in areas ranging from advanced coatings to responsive materials.
+            Integrating cutting-edge computational techniques is paramount to our approach. We employ Deep Learning to accelerate the discovery and design of new materials, predict robust material criticality with high degree of explainability, and model complex biological phenomena. By making the reasoning behind AI-driven predictions more transparent, we not only build trust in our models but also gain deeper, more fundamental insights into the complex systems we study. Our research thrives on a close, interdisciplinary collaboration with experimentalists and theorists, fostering a dynamic environment for groundbreaking scientific discovery.
             </p>
 
             <div class="section">
