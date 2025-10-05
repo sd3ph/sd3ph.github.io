@@ -5,7 +5,7 @@
     <title>iLab - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
+        :root { 
             --primary-color: #2c3e50; /* Deep blue-grey */
             --secondary-color: #7f8c8d; /* Muted grey */
             --accent-color: #e74c3c; /* Reddish-orange */
@@ -752,7 +752,7 @@
 
         <!-- 4. About Me Page -->
         <div id="about" class="page-content">
-            <h2>About Me</h2>
+            <h2>Group Leader</h2>
             
             <!-- COPIED PANEL -->
             <div class="profile-header section">
@@ -762,6 +762,11 @@
                     <p>Researcher | Intelligent Living & Artificial Systems</p>
                 </div>
             </div>
+
+             <h2> About Me</h2>
+            <p>
+                I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. Driven by <strong>Creative Research</strong>, I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.
+            </p>
 
             <div class="section">
                 <h3>🎓 Professional Journey</h3>
