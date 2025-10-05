@@ -505,13 +505,12 @@
         <!-- Bottom Row: Navigation Links -->
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#highlight" class="nav-link active">Highlight</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
-                <li><a href="#miscellaneous" class="nav-link">miscellaneous</a></li>
+                <li><a href="#misc" class="nav-link">misc</a></li>
             </ul>
         </nav>
     </header>
@@ -522,7 +521,7 @@
             <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
             
             <h2> Hello World !</h2>
-            <p> </li> Our research group is committed to deciphering the complex dynamics of systems away from equilibrium, a pursuit that spans the realms of biological physics, materials science, and artificial intelligence. We deploy the foundational principles of statistical and soft matter physics to construct a cohesive understanding of emergent behaviors in these multifaceted systems. </li>
+            <p> Our research group is committed to deciphering the complex dynamics of systems away from equilibrium, a pursuit that spans the realms of biological physics, materials science, and artificial intelligence. We deploy the foundational principles of statistical and soft matter physics to construct a cohesive understanding of emergent behaviors in these multifaceted systems. </li>
             <li>A significant portion of our work is dedicated to the reverse engineering of biological tissues. By studying the collective behavior of cells, we aim to understand and ultimately replicate the processes of tissue regeneration and morphogenesis. This involves creating sophisticated computational models to unravel the intricate interplay of mechanical and molecular pathways that guide cellular self-organization and turbulence. </li>
             <li>In parallel, we investigate the fundamental mechanics of disordered solids, such as glasses and granular materials, with a particular focus on predicting and understanding material failure. The inherent disorder in these systems presents a formidable challenge in forecasting points of weakness and catastrophic failure.
 A central theme of our research is the manipulation and control of self-organized matter. We explore the principles governing the spontaneous assembly of colloidal and other artificial systems to engineer novel materials with bespoke properties. This research paves the way for innovations in areas ranging from advanced coatings to responsive materials.</li>
