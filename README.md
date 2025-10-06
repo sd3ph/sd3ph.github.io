@@ -572,7 +572,7 @@ A central theme of our research is the manipulation and control of self-organize
             <div class="section">
                 <h3>Research Expertise</h3>
                 <ul>
-                    <li><strong>Domain Expertise:</strong> Intelligent Living and Artificial Systems, Physics of Complex Fluids.</li>
+                    <li><strong>Domain Expertise:</strong> Collective Intelligence in Living and Artificial Systems, Physics of Complex Fluids, Soft Condensed Matter. </li>
                     <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
                 </ul>
             </div>
