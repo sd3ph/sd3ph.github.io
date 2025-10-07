@@ -569,7 +569,7 @@ A central theme of our research is the manipulation and control of self-organize
         <!-- 2. Research Page -->
         <div id="research" class="page-content">
          <!-- The container holds both images and enforces the 32:9 aspect ratio -->
-<div class="gif-container-32-9">
+<div class="gif-container-32-9"> 
   <img src="Intro.gif" alt="First highlight cover image">
   <img src="Intro2.gif" alt="Second highlight cover image">
 </div>
