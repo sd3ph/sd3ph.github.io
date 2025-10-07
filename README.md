@@ -568,6 +568,7 @@ A central theme of our research is the manipulation and control of self-organize
 
         <!-- 2. Research Page -->
         <div id="research" class="page-content">
+         <img src="Intro.gif" alt="Highlight cover image" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
             <h2>🔬 Research Interests & Competencies</h2>
             <div class="section">
                 <h3>Research Expertise</h3>
