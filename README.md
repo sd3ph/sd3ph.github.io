@@ -568,11 +568,7 @@ A central theme of our research is the manipulation and control of self-organize
 
         <!-- 2. Research Page -->
         <div id="research" class="page-content">
-         <!-- The container holds both images and enforces the 32:9 aspect ratio -->
-<div style="display: flex; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px; border-radius: 6px;">
-  <img src="Intro.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
-  <img src="Intro2.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
-</div>
+<!-- Here to put Video -->
             <h2>🔬 Research Interests & Competencies</h2>
             <div class="section">
                 <h3>Research Expertise</h3>
@@ -581,7 +577,11 @@ A central theme of our research is the manipulation and control of self-organize
                     <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
                 </ul>
             </div>
-
+  <!-- The container holds both images and enforces the 32:9 aspect ratio -->
+<div style="display: flex; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px; border-radius: 6px;">
+  <img src="Intro.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
+  <img src="Intro2.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
+</div>
             <div class="section">
                 <h3>Key Research Areas</h3>
                 <ul>
