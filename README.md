@@ -784,6 +784,7 @@
                 <p>
                     <span class="affiliation">Faculty Member, School of AI</span><br>
                     School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
+                    Joint Coordinator (Academic), BTech (AI-Quantum Technology)
                     <span class="date">(Since 03/2025)</span>
                 </p>
 
