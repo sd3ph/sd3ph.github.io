@@ -782,7 +782,7 @@
                 <h3>🎓 Professional Journey</h3>
                 <h4>Present Affiliation</h4>
                 <p>
-                    <span class="affiliation">Assistant Professor (Sr. Gd.)</span><br>
+                    <span class="affiliation">Faculty Member, School of AI</span><br>
                     School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore<br>
                     <span class="date">(Since 03/2025)</span>
                 </p>
