@@ -510,13 +510,39 @@
             justify-content: center;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease;
         }
 
         #chatbot-bubble:hover {
             transform: scale(1.1);
             background-color: #d35400; /* Darker accent color */
         }
+        
+        #chatbot-bubble .icon-open, #chatbot-bubble .icon-close {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            position: absolute;
+        }
+
+        #chatbot-bubble .icon-close {
+            transform: rotate(-90deg) scale(0.5);
+            opacity: 0;
+        }
+
+        #chatbot-widget.open #chatbot-bubble {
+            background-color: var(--primary-color);
+            border-radius: 15px;
+        }
+
+        #chatbot-widget.open #chatbot-bubble .icon-open {
+            transform: rotate(90deg) scale(0.5);
+            opacity: 0;
+        }
+
+        #chatbot-widget.open #chatbot-bubble .icon-close {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+        }
+
 
         #chatbot-iframe-container {
             position: absolute;
@@ -573,6 +599,8 @@
         <!-- Bottom Row: Navigation Links -->
         <nav class="navbar">
             <ul class="nav-links">
+                <!-- FIXED: Added Home link and set it as active by default -->
+                <li><a href="#highlight" class="nav-link active">Home</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
@@ -1021,4 +1049,153 @@
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Abhishek Dh
+                        <strong>Abhishek Dhar</strong><br>
+                        (Senior Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Anupam Kundu</strong><br>
+                        (Associate Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Madan Rao</strong><br>
+                        (Senior Professor, Simons Centre for the Study of Living Machines, National Centre for Biological Sciences -TIFR, Bengaluru, IN)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Vinay Vaibhav</strong><br>
+                        (Post Doctoral Fellow, University of Goettingen, DE)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Soumyakanti Bose</strong><br>
+                        (Post Doctoral Fellow, University of Seol, KR)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Soubhick Das</strong><br>
+                        (Post Doctoral Fellow, University of Luxembourg, LU)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Raffaela Cabriolu</strong><br>
+                        (Associate Professor, Norwegian University of Science and Technology, NO)
+                    </div>
+                </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Rahul Dandekar</strong><br>
+                        (Post Doctoral Fellow, IPhT Sacley, Paris, FR)
+                    </div>
+                     </div>
+                <div class="collaborator-item">
+                    <div class="collaborator-info">
+                        <strong>Tamoghna Kanti Das</strong><br>
+                        (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)
+                    </div>
+                </div>
+            </div>
+
+            <h2>🏆 Awards & Recognition</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+                    <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
+                    <li><strong>National Merit Scholarship</strong> (2004).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-bubble">
+            <div class="icon-open">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+            </div>
+            <div class="icon-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </div>
+        </div>
+        <div id="chatbot-iframe-container">
+            <iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+    <script>
+        // FIXED: Wrapped all JS in one DOMContentLoaded listener for safety
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Navigation Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+
+            function switchTab(targetId) {
+                // Remove 'active' class from all links and content
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pageContents.forEach(content => content.classList.remove('active'));
+
+                // Add 'active' class to the clicked link
+                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+
+                // Show the corresponding content
+                const activeContent = document.querySelector(targetId);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (window.location.hash !== targetId) {
+                        if(history.pushState) {
+                            history.pushState(null, null, targetId);
+                        } else {
+                            window.location.hash = targetId;
+                        }
+                    }
+                    switchTab(targetId);
+                });
+            });
+
+            function handleHashChange() {
+                const currentHash = window.location.hash || '#highlight';
+                switchTab(currentHash);
+            }
+
+            // Handle back/forward browser button navigation
+            window.addEventListener('popstate', handleHashChange);
+
+            // Handle initial page load
+            handleHashChange();
+
+            // --- Chatbot Logic ---
+            const chatbotBubble = document.getElementById('chatbot-bubble');
+            const chatbotWidget = document.getElementById('chatbot-widget');
+            
+            if (chatbotBubble && chatbotWidget) {
+                chatbotBubble.addEventListener('click', () => {
+                    chatbotWidget.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
