@@ -957,14 +957,51 @@
              </div>
         </div>
 
-        <!-- NEW: Lab Products Page -->
+        <!-- UPDATED: Lab Products Page -->
         <div id="products" class="page-content">
-            <h2>🧪 Lab Products</h2>
+            <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
+            
             <div class="section">
-                <h3>Our Innovations</h3>
-                <p>This section will showcase the software, models, open-source code, and other tangible products developed from our research.</p>
-                <p>We believe in open science and aim to share our tools to help accelerate discovery in the wider community. Stay tuned for updates!</p>
-                <img src="https://via.placeholder.com/800x300.png?text=Coming+Soon" alt="Coming Soon Graphic" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
+                <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
+                
+                <h4>🔹 Team</h4>
+                <ul>
+                    <li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+                    <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
+                    <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
+                </ul>
+
+                <h4>🔹 Brief Abstract</h4>
+                <p>Aadri is a conversational AI chatbot designed to present academic profiles interactively. Built using Google Gemini API and RAG architecture, it transforms static CVs into dynamic, query-driven experiences. It ensures accuracy, engagement, and personalization in academic self-presentation.</p>
+
+                <h4>🔹 Colloquial Abstract</h4>
+                <p>Think of Aadri as a smart assistant that talks about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
+                
+                <h4>🔹 Purpose</h4>
+                <ul>
+                    <li>To make academic profiles interactive, accessible, and engaging.</li>
+                    <li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
+                    <li>To set a new standard for how academics present themselves digitally.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3><span style="vertical-align: middle;">📝</span> AtoGRAD: OMR Solutions for Class-based Tests</h3>
+                <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
+
+                <h4>🔹 Team</h4>
+                <p>To be announced.</p>
+                
+                <h4>🔹 Abstract</h4>
+                <p>Details about the technology and application will be available shortly.</p>
+
+                <h4>🔹 Purpose</h4>
+                <ul>
+                    <li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
+                    <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
+                    <li>To offer instant analytics and performance reports for students and instructors.</li>
+                </ul>
             </div>
         </div>
 
