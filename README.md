@@ -962,13 +962,12 @@
             <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
             
             <div class="section">
-                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
-                <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
+                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: An Intelligent Conversational AI for Customary Academic Profiles (v2.0)</h3>
                 
                 <h4>🔹 Team</h4>
                 <ul>
-                    <li><strong>Lead Developer:</strong> Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
-                    <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
+                    <li><strong>Lead Developer:</strong> Suman Dutta</li>
+                    <li><strong>Quality Testing:</strong> Selva Vignesh V, Rithvik K, Raghuraman V, Madhan S, Anirudh, Vipin S, N Manoj Kumar, Harshith KV, KCS Reddy, V Ashwin Krishna, R Gagan Chowdary, BLHS Reddy, M Sharma, A Sheshank Royal, Dhruv, CSH Reddy, M. Venkat, B. Jayan, K. Bhanuprakash, Nethaaji S, Kanish Visyanth C, K Adarsh, JK Kavipranidan, Danush M, Gurucharan, Revanth S, Athul V RR, B Surya Charan Tej, Abinav, Kirithik B, KVSP Praneeth, Kamalesh, Sidharth M, S. Sujitkumar, M. Hemanth Kumar, V Amruth Chowdary [Students of BTech AID (Core), School of AI, Amrita Vishwa Vidyapeetham]</li>
                     <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
                 </ul>
 
@@ -976,7 +975,7 @@
                 <p>To be updated soon</p>
 
                 <h4>🔹 Abstract</h4>
-                <p>Think of Aadri as a smart assistant that talks about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
+                <p>Aadri as a smart assistant explains about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
                 
                 <h4>🔹 Purpose</h4>
                 <ul>
@@ -992,8 +991,8 @@
 
                 <h4>🔹 Team</h4>
                  <ul>
-                    <li><strong>Lead Developer:</strong> Agnevesh Jagdish, Intern, School of AI, Amrita Vishwa Vidyapeetham</li>
-                    <li><strong>Quality Testing:</strong> A. Jagdish</li>
+                    <li><strong>Lead Developer:</strong> Agnevesh Jagdish</li>
+                    <li><strong>Quality Testing:</strong> Agnevesh Jagdish</li>
                     <li><strong>Consultants & Reviewers:</strong> Souvick Das, University of Luxembourg</li>
                 </ul>
                 
