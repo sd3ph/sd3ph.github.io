@@ -967,15 +967,15 @@
                 
                 <h4>🔹 Team</h4>
                 <ul>
-                    <li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+                    <li><strong>Lead Developer:</strong> Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
                     <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
                     <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
                 </ul>
 
-                <h4>🔹 Brief Abstract</h4>
-                <p>Aadri is a conversational AI chatbot designed to present academic profiles interactively. Built using Google Gemini API and RAG architecture, it transforms static CVs into dynamic, query-driven experiences. It ensures accuracy, engagement, and personalization in academic self-presentation.</p>
+                <h4>🔹 White Paper</h4>
+                <p>To be updated soon</p>
 
-                <h4>🔹 Colloquial Abstract</h4>
+                <h4>🔹 Abstract</h4>
                 <p>Think of Aadri as a smart assistant that talks about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
                 
                 <h4>🔹 Purpose</h4>
@@ -991,7 +991,11 @@
                 <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
 
                 <h4>🔹 Team</h4>
-                <p>To be announced.</p>
+                 <ul>
+                    <li><strong>Lead Developer:</strong> Agnevesh Jagdish, Intern, School of AI, Amrita Vishwa Vidyapeetham</li>
+                    <li><strong>Quality Testing:</strong> A. Jagdish</li>
+                    <li><strong>Consultants & Reviewers:</strong> Souvick Das, University of Luxembourg</li>
+                </ul>
                 
                 <h4>🔹 Abstract</h4>
                 <p>Details about the technology and application will be available shortly.</p>
