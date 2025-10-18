@@ -492,6 +492,74 @@
             text-decoration: underline;
         }
 
+        /* --- Chatbot Widget Styles --- */
+        #chatbot-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        #chatbot-bubble {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        #chatbot-bubble:hover {
+            transform: scale(1.1);
+            background-color: #d35400; /* Darker accent color */
+        }
+
+        #chatbot-iframe-container {
+            position: absolute;
+            bottom: 80px; /* Position above the bubble */
+            right: 0;
+            width: 350px;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95) translateY(10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+            transform-origin: bottom right;
+        }
+
+        #chatbot-widget.open #chatbot-iframe-container {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+        }
+
+        #chatbot-iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive styles for chatbot */
+        @media (max-width: 480px) {
+            #chatbot-iframe-container {
+                width: calc(100vw - 40px);
+                height: 70vh;
+                bottom: 75px;
+                right: -10px;
+            }
+            #chatbot-widget {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -953,124 +1021,4 @@
                 </div>
                 <div class="collaborator-item">
                     <div class="collaborator-info">
-                        <strong>Abhishek Dhar</strong><br>
-                        (Senior Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Anupam Kundu</strong><br>
-                        (Associate Professor, International Centre for Theoretical Sciences -TIFR, Bengaluru, IN)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Madan Rao</strong><br>
-                        (Senior Professor, Simons Centre for the Study of Living Machines, National Centre for Biological Sciences -TIFR, Bengaluru, IN)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Vinay Vaibhav</strong><br>
-                        (Post Doctoral Fellow, University of Goettingen, DE)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Soumyakanti Bose</strong><br>
-                        (Post Doctoral Fellow, University of Seol, KR)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Soubhick Das</strong><br>
-                        (Post Doctoral Fellow, University of Luxembourg, LU)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Raffaela Cabriolu</strong><br>
-                        (Associate Professor, Norwegian University of Science and Technology, NO)
-                    </div>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Rahul Dandekar</strong><br>
-                        (Post Doctoral Fellow, IPhT Sacley, Paris, FR)
-                    </div>
-                     </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-info">
-                        <strong>Tamoghna Kanti Das</strong><br>
-                        (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)
-                    </div>
-                </div>
-            </div>
-
-            <h2>🏆 Awards & Recognition</h2>
-            <div class="section">
-                <ul>
-                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
-                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
-                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
-                    <li><strong>West Bengal Merit cum Means Scholarship</strong> (2006-2009).</li>
-                    <li><strong>National Merit Scholarship</strong> (2004).</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        const navLinks = document.querySelectorAll('.nav-link');
-        const pageContents = document.querySelectorAll('.page-content');
-
-        function switchTab(targetId) {
-            // Remove 'active' class from all links and content
-            navLinks.forEach(nav => nav.classList.remove('active'));
-            pageContents.forEach(content => content.classList.remove('active'));
-
-            // Add 'active' class to the clicked link
-            const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-
-            // Show the corresponding content
-            const activeContent = document.querySelector(targetId);
-            if (activeContent) {
-                activeContent.classList.add('active');
-            }
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                // Update URL hash without causing a page jump
-                if(history.pushState) {
-                    history.pushState(null, null, targetId);
-                }
-                else {
-                    location.hash = targetId;
-                }
-                switchTab(targetId);
-            });
-        });
-
-        // Function to handle initial page load and hash changes
-        function handlePageLoad() {
-            const currentHash = window.location.hash || '#highlight';
-            switchTab(currentHash);
-        }
-
-        // Handle initial page load
-        window.addEventListener('DOMContentLoaded', handlePageLoad);
-        
-        // Handle hash changes (e.g., back/forward buttons)
-        window.addEventListener('popstate', handlePageLoad);
-
-    </script>
-
-</body>
-</html>
+                        <strong>Abhishek Dh
