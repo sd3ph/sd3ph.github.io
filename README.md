@@ -655,6 +655,7 @@
                 <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#misc" class="nav-link">misc</a></li>
             </ul>
         </nav>
