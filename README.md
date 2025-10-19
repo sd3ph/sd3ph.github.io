@@ -283,6 +283,7 @@
             padding: 0; /* Remove padding from page content as it's now in sections */
         }
         .page-content.active {
+            display: block; /* BUG FIX: This property was missing */
             padding: 30px; /* Add padding back when active */
         }
         h2 {
