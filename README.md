@@ -853,7 +853,7 @@
             <div class="section">
                 <h3>🎓 Professional Journey</h3>
                 <h4>Present Affiliation</h4>
-                <p><strong>Faculty Member, Department of Artificial Intelligence</strong><br>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br>Joint Coordinator (Academic), B.Tech Programme (AI-Quantum Technology) <span class="date">(Since 03/2025)</span></p>
+                <p><strong>Assistant Professor (Sr. Gd.), Department of Artificial Intelligence</strong>Joint Coordinator (Academic), B.Tech Programme (AI-Quantum Technology), School of AI<span class="date">(Since 03/2025)<br>Amrita Vishwa Vidyapeetham, Coimbatore HQ<br></span></p>
                 <h4>Professional Research Experience</h4>
                 <ul>
                     <li><strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)</li>
