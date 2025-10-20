@@ -995,4 +995,163 @@
                  <ul>
                     <li><strong>Lead Developer:</strong> Agnevesh Jagdish</li>
                     <li><strong>Quality Testing:</strong> Agnevesh Jagdish</li>
-                    <li><strong>Consul
+                    <li><strong>Consultants & Reviewers:</strong> Souvick Das, University of Luxembourg</li>
+                </ul>
+                
+                <h4>🔹 Abstract</h4>
+                <p>Details about the technology and application will be available shortly.</p>
+
+                <h4>🔹 Purpose</h4>
+                <ul>
+                    <li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
+                    <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
+                    <li>To offer instant analytics and performance reports for students and instructors.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- miscellaneous Page -->
+        <div id="misc" class="page-content">
+            <h2>🤝 Research Collaborators</h2>
+            <div class="section">
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Jaydeb Chakrabarti</strong><br>(Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Pinaki Chaudhuri</strong><br>(Professor, The Institute of Mathematical Sciences, Chennai, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Kirsten Martens</strong><br>(CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Chandan Dasgupta</strong><br>(Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Madan Rao</strong><br>(Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
+            </div>
+
+            <h2>🏆 Awards & Recognition</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+                    <li><strong>National Merit Scholarship</strong> (2004).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-bubble">
+            <div class="icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+            <div class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></div>
+        </div>
+        <div id="chatbot-iframe-container"><iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe></div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // --- CONFIGURATION ---
+            const CLASSROOM_PASSCODE = 'TestClassAmrita23mat106';
+
+            // --- DOM Elements ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+            const chatbotBubble = document.getElementById('chatbot-bubble');
+            const chatbotWidget = document.getElementById('chatbot-widget');
+            const passwordForm = document.getElementById('password-form');
+            const passwordInput = document.getElementById('passcode-input');
+            const passwordErrorMsg = document.getElementById('password-error-message');
+            const classroomPrompt = document.getElementById('password-prompt-container');
+            const classroomContent = document.getElementById('classroom-content');
+
+            // --- Navigation Logic ---
+            function switchTab(targetId) {
+                // Deactivate all links and hide all content pages first
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pageContents.forEach(content => content.classList.remove('active'));
+
+                // Activate the new link
+                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+
+                // Display the corresponding content page
+                const activeContent = document.querySelector(targetId);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+                
+                // Special check for the classroom page to handle password prompt
+                if(targetId === '#classroom') {
+                    checkClassroomAccess();
+                }
+            }
+
+            // Add click event listeners to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // This is crucial: it prevents the default anchor jump
+                    const targetId = this.getAttribute('href');
+                    
+                    // Update the URL hash for history (back/forward buttons) and bookmarking
+                    if (window.location.hash !== targetId) {
+                        history.pushState(null, null, targetId);
+                    }
+                    
+                    // Call the function to switch the visible content
+                    switchTab(targetId);
+                });
+            });
+
+            // --- Handle Browser Back/Forward Buttons and Initial Load ---
+            function handleURLChange() {
+                // On load or on back/forward, read the hash and show the correct page
+                const currentHash = window.location.hash || '#highlight'; // Default to #highlight
+                switchTab(currentHash);
+            }
+
+            // Listen for when the user clicks the back or forward buttons
+            window.addEventListener('popstate', handleURLChange);
+            
+            // Set the correct page when the site is first loaded
+            handleURLChange(); 
+
+            // --- Classroom Passcode Logic ---
+            function checkClassroomAccess() {
+                if (sessionStorage.getItem('classroomAccessGranted') === 'true') {
+                    classroomPrompt.style.display = 'none';
+                    classroomContent.classList.remove('hidden');
+                } else {
+                    classroomPrompt.style.display = 'block';
+                    classroomContent.classList.add('hidden');
+                }
+            }
+            
+            if (passwordForm) {
+                passwordForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (passwordInput.value.trim() === CLASSROOM_PASSCODE) {
+                        sessionStorage.setItem('classroomAccessGranted', 'true');
+                        passwordErrorMsg.textContent = '';
+                        passwordInput.value = '';
+                        checkClassroomAccess(); // Re-run check to show content
+                    } else {
+                        passwordErrorMsg.textContent = 'Incorrect passcode. Please try again.';
+                        passwordInput.value = '';
+                    }
+                });
+            }
+
+
+            // --- Chatbot Logic ---
+            if (chatbotBubble && chatbotWidget) {
+                chatbotBubble.addEventListener('click', () => {
+                    chatbotWidget.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
