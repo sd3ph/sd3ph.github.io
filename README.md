@@ -283,7 +283,6 @@
             padding: 0; /* Remove padding from page content as it's now in sections */
         }
         .page-content.active {
-            display: block; 
             padding: 30px; /* Add padding back when active */
         }
         h2 {
@@ -653,9 +652,9 @@
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
+                <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#misc" class="nav-link">misc</a></li>
             </ul>
         </nav>
@@ -853,7 +852,7 @@
             <div class="section">
                 <h3>🎓 Professional Journey</h3>
                 <h4>Present Affiliation</h4>
-                <p><strong>Assistant Professor (Sr. Gd.), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br>
+                <p><strong>Faculty Member, Department of Artificial Intelligence</strong><br>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br>Joint Coordinator (Academic), B.Tech Programme (AI-Quantum Technology) <span class="date">(Since 03/2025)</span></p>
                 <h4>Professional Research Experience</h4>
                 <ul>
                     <li><strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)</li>
@@ -963,20 +962,21 @@
             <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
             
             <div class="section">
-                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: An Intelligent Conversational AI for Customary Academic Profiles (v2.0)</h3>
+                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
+                <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
                 
                 <h4>🔹 Team</h4>
                 <ul>
-                    <li><strong>Lead Developer:</strong> Suman Dutta</li>
-                    <li><strong>Quality Testing:</strong> Selva Vignesh V, Rithvik K, Raghuraman V, Madhan S, Anirudh, Vipin S, N Manoj Kumar, Harshith KV, KCS Reddy, V Ashwin Krishna, R Gagan Chowdary, BLHS Reddy, M Sharma, A Sheshank Royal, Dhruv, CSH Reddy, M. Venkat, B. Jayan, K. Bhanuprakash, Nethaaji S, Kanish Visyanth C, K Adarsh, JK Kavipranidan, Danush M, Gurucharan, Revanth S, Athul V RR, B Surya Charan Tej, Abinav, Kirithik B, KVSP Praneeth, Kamalesh, Sidharth M, S. Sujitkumar, M. Hemanth Kumar, V Amruth Chowdary [Students of BTech AID (Core), School of AI, Amrita Vishwa Vidyapeetham]</li>
+                    <li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+                    <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
                     <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
                 </ul>
 
-                <h4>🔹 White Paper</h4>
-                <p>To be updated soon</p>
+                <h4>🔹 Brief Abstract</h4>
+                <p>Aadri is a conversational AI chatbot designed to present academic profiles interactively. Built using Google Gemini API and RAG architecture, it transforms static CVs into dynamic, query-driven experiences. It ensures accuracy, engagement, and personalization in academic self-presentation.</p>
 
-                <h4>🔹 Abstract</h4>
-                <p>Aadri as a smart assistant explains about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
+                <h4>🔹 Colloquial Abstract</h4>
+                <p>Think of Aadri as a smart assistant that talks about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
                 
                 <h4>🔹 Purpose</h4>
                 <ul>
@@ -991,11 +991,7 @@
                 <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
 
                 <h4>🔹 Team</h4>
-                 <ul>
-                    <li><strong>Lead Developer:</strong> Agnevesh Jagdish</li>
-                    <li><strong>Quality Testing:</strong> Agnevesh Jagdish</li>
-                    <li><strong>Consultants & Reviewers:</strong> Souvick Das, University of Luxembourg</li>
-                </ul>
+                <p>To be announced.</p>
                 
                 <h4>🔹 Abstract</h4>
                 <p>Details about the technology and application will be available shortly.</p>
@@ -1046,19 +1042,17 @@
         <div id="chatbot-iframe-container"><iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe></div>
     </div>
 
+
     <script>
-        // Wait for the entire HTML document to be loaded and parsed
         window.addEventListener('DOMContentLoaded', () => {
             
             // --- CONFIGURATION ---
+            // Easily change the classroom passcode here
             const CLASSROOM_PASSCODE = 'TestClassAmrita23mat106';
 
-            // --- DOM Element Selection ---
-            // Select ALL navigation links and ALL page content sections
+            // --- DOM Elements ---
             const navLinks = document.querySelectorAll('.nav-link');
             const pageContents = document.querySelectorAll('.page-content');
-            
-            // Other elements
             const chatbotBubble = document.getElementById('chatbot-bubble');
             const chatbotWidget = document.getElementById('chatbot-widget');
             const passwordForm = document.getElementById('password-form');
@@ -1067,61 +1061,41 @@
             const classroomPrompt = document.getElementById('password-prompt-container');
             const classroomContent = document.getElementById('classroom-content');
 
-            // --- Core Navigation Function ---
-            // This function handles switching the visible page
+            // --- Navigation Logic ---
             function switchTab(targetId) {
-                // First, remove 'active' from all links and content to reset the state
                 navLinks.forEach(nav => nav.classList.remove('active'));
                 pageContents.forEach(content => content.classList.remove('active'));
 
-                // Find the specific link that was clicked using its href attribute
                 const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active'); // Highlight the active navigation link
-                }
+                if (activeLink) activeLink.classList.add('active');
 
-                // Find the corresponding content div using its ID
                 const activeContent = document.querySelector(targetId);
-                if (activeContent) {
-                    activeContent.classList.add('active'); // Display the correct page content
-                }
+                if (activeContent) activeContent.classList.add('active');
                 
-                // Special handling for the classroom page to check for password
+                // Special check for classroom page
                 if(targetId === '#classroom') {
                     checkClassroomAccess();
                 }
             }
 
-            // --- Event Listener Attachment ---
-            // Loop through every navigation link and attach a click event listener
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault(); // IMPORTANT: Prevents the browser's default jump behavior
+                    e.preventDefault();
                     const targetId = this.getAttribute('href');
-                    
-                    // Update the URL in the browser's address bar for bookmarking and history
                     if (window.location.hash !== targetId) {
-                        history.pushState(null, null, targetId);
+                        history.pushState ? history.pushState(null, null, targetId) : window.location.hash = targetId;
                     }
-                    
-                    // Call the main function to perform the switch
                     switchTab(targetId);
                 });
             });
 
-            // --- Browser History and Initial Page Load Handling ---
-            // This function checks the URL hash and loads the correct page
-            function handleURLChange() {
-                // If the URL has a hash (e.g., #research), use it. Otherwise, default to #highlight.
+            function handleHashChange() {
                 const currentHash = window.location.hash || '#highlight';
                 switchTab(currentHash);
             }
 
-            // Add a listener for the 'popstate' event, which fires when the user clicks back/forward
-            window.addEventListener('popstate', handleURLChange);
-            
-            // Call the handler once on initial page load to show the correct content
-            handleURLChange(); 
+            window.addEventListener('popstate', handleHashChange);
+            handleHashChange(); // Initial page load
 
             // --- Classroom Passcode Logic ---
             function checkClassroomAccess() {
@@ -1141,13 +1115,14 @@
                         sessionStorage.setItem('classroomAccessGranted', 'true');
                         passwordErrorMsg.textContent = '';
                         passwordInput.value = '';
-                        checkClassroomAccess(); // Re-run the check to hide prompt and show content
+                        checkClassroomAccess();
                     } else {
                         passwordErrorMsg.textContent = 'Incorrect passcode. Please try again.';
                         passwordInput.value = '';
                     }
                 });
             }
+
 
             // --- Chatbot Logic ---
             if (chatbotBubble && chatbotWidget) {
