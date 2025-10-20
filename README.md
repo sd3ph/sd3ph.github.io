@@ -653,7 +653,6 @@
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
-                <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -1048,14 +1047,18 @@
     </div>
 
     <script>
+        // Wait for the entire HTML document to be loaded and parsed
         window.addEventListener('DOMContentLoaded', () => {
             
             // --- CONFIGURATION ---
             const CLASSROOM_PASSCODE = 'TestClassAmrita23mat106';
 
-            // --- DOM Elements ---
+            // --- DOM Element Selection ---
+            // Select ALL navigation links and ALL page content sections
             const navLinks = document.querySelectorAll('.nav-link');
             const pageContents = document.querySelectorAll('.page-content');
+            
+            // Other elements
             const chatbotBubble = document.getElementById('chatbot-bubble');
             const chatbotWidget = document.getElementById('chatbot-widget');
             const passwordForm = document.getElementById('password-form');
@@ -1064,57 +1067,60 @@
             const classroomPrompt = document.getElementById('password-prompt-container');
             const classroomContent = document.getElementById('classroom-content');
 
-            // --- Navigation Logic ---
+            // --- Core Navigation Function ---
+            // This function handles switching the visible page
             function switchTab(targetId) {
-                // Deactivate all links and hide all content pages first
+                // First, remove 'active' from all links and content to reset the state
                 navLinks.forEach(nav => nav.classList.remove('active'));
                 pageContents.forEach(content => content.classList.remove('active'));
 
-                // Activate the new link
+                // Find the specific link that was clicked using its href attribute
                 const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
                 if (activeLink) {
-                    activeLink.classList.add('active');
+                    activeLink.classList.add('active'); // Highlight the active navigation link
                 }
 
-                // Display the corresponding content page
+                // Find the corresponding content div using its ID
                 const activeContent = document.querySelector(targetId);
                 if (activeContent) {
-                    activeContent.classList.add('active');
+                    activeContent.classList.add('active'); // Display the correct page content
                 }
                 
-                // Special check for the classroom page to handle password prompt
+                // Special handling for the classroom page to check for password
                 if(targetId === '#classroom') {
                     checkClassroomAccess();
                 }
             }
 
-            // Add click event listeners to all navigation links
+            // --- Event Listener Attachment ---
+            // Loop through every navigation link and attach a click event listener
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault(); // This is crucial: it prevents the default anchor jump
+                    e.preventDefault(); // IMPORTANT: Prevents the browser's default jump behavior
                     const targetId = this.getAttribute('href');
                     
-                    // Update the URL hash for history (back/forward buttons) and bookmarking
+                    // Update the URL in the browser's address bar for bookmarking and history
                     if (window.location.hash !== targetId) {
                         history.pushState(null, null, targetId);
                     }
                     
-                    // Call the function to switch the visible content
+                    // Call the main function to perform the switch
                     switchTab(targetId);
                 });
             });
 
-            // --- Handle Browser Back/Forward Buttons and Initial Load ---
+            // --- Browser History and Initial Page Load Handling ---
+            // This function checks the URL hash and loads the correct page
             function handleURLChange() {
-                // On load or on back/forward, read the hash and show the correct page
-                const currentHash = window.location.hash || '#highlight'; // Default to #highlight
+                // If the URL has a hash (e.g., #research), use it. Otherwise, default to #highlight.
+                const currentHash = window.location.hash || '#highlight';
                 switchTab(currentHash);
             }
 
-            // Listen for when the user clicks the back or forward buttons
+            // Add a listener for the 'popstate' event, which fires when the user clicks back/forward
             window.addEventListener('popstate', handleURLChange);
             
-            // Set the correct page when the site is first loaded
+            // Call the handler once on initial page load to show the correct content
             handleURLChange(); 
 
             // --- Classroom Passcode Logic ---
@@ -1135,14 +1141,13 @@
                         sessionStorage.setItem('classroomAccessGranted', 'true');
                         passwordErrorMsg.textContent = '';
                         passwordInput.value = '';
-                        checkClassroomAccess(); // Re-run check to show content
+                        checkClassroomAccess(); // Re-run the check to hide prompt and show content
                     } else {
                         passwordErrorMsg.textContent = 'Incorrect passcode. Please try again.';
                         passwordInput.value = '';
                     }
                 });
             }
-
 
             // --- Chatbot Logic ---
             if (chatbotBubble && chatbotWidget) {
