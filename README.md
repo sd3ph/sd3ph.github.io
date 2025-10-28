@@ -651,6 +651,7 @@
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li> 
                 <li><a href="#latest" class="nav-link">Latest</a></li>
                 <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
