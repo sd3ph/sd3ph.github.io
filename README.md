@@ -926,10 +926,22 @@
                     </ul>
                 </div>
                 
-                <div class="section">
-                    <h3>Syllabus</h3>
-                    <p>To be added.</p>
-                </div>
+               <div class="section">
+    <h3>Syllabus</h3>
+    <dl>
+        <dt>Unit 1</dt>
+        <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
+        
+        <dt>Unit 2</dt>
+        <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
+
+        <dt>Unit 3</dt>
+        <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+
+        <dt>Unit 4</dt>
+        <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
+    </dl>
+</div>
                 
                 <div class="section">
                     <h3>Lecture Notes</h3>
