@@ -1107,15 +1107,6 @@
         <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
     </dl>
 </div>
-                
-                <div class="section">
-                    <h3>Lecture Notes</h3>
-                    <ul>
-                        <li><a href="#">Lecture 1: Introduction to LA for AI (PDF)</a> - (https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing))</li>
-                        <li><a href="#">Lecture 2: Linear Algebra Basics (PDF)</a> - (Example link)</li>
-                        <!-- Add more lecture notes here -->
-                    </ul>
-                </div>
 
                 <div class="section">
                     <h3>Lecture Notes</h3>
