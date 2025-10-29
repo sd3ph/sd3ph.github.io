@@ -1118,14 +1118,6 @@
                         <!-- Add more assignments here -->
                     </ul>
                 </div>
-
-                <div class="section">
-                    <h3>Python Codes & Notebooks</h3>
-                    <ul>
-                        <li><a href="#">Notebook for Linear Algebra Visualization (ipynb)</a> - (Example link)</li>
-                        <!-- Add more code links here -->
-                    </ul>
-                </div>
              </div>
         </div>
 
