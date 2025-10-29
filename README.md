@@ -1091,7 +1091,7 @@
 </div>
                <!-- ADDED NOW -- !>
                 
-               <div class="section">
+    <div class="section">
     <h3>Syllabus</h3>
     <dl>
         <dt>Unit 1</dt>
@@ -1111,8 +1111,8 @@
                 <div class="section">
                     <h3>Lecture Notes</h3>
                     <ul>
-                        <li><a href="#">Week 1: Introduction to Calculus (PDF)</a> - (Example link)</li>
-                        <li><a href="#">Week 2: Linear Algebra Basics (PDF)</a> - (Example link)</li>
+                        <li><a href="#">Lecture 1: Introduction to LA for AI (PDF)</a> - (https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing))</li>
+                        <li><a href="#">Lecture 2: Linear Algebra Basics (PDF)</a> - (Example link)</li>
                         <!-- Add more lecture notes here -->
                     </ul>
                 </div>
