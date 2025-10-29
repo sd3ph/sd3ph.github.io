@@ -1182,7 +1182,7 @@
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
-            </div>
+            
 
             <h2>🏆 Awards & Recognition</h2>
             <div class="section">
@@ -1195,7 +1195,7 @@
             </div>
         </div>
 
-    !</div>
+
 
     <!-- Chatbot Widget -->
     <div id="chatbot-widget">
