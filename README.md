@@ -1118,9 +1118,10 @@
                 </div>
 
                 <div class="section">
-                    <h3>Assignments</h3>
+                    <h3>Lecture Notes</h3>
                     <ul>
-                        <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Assignment 1 (Due: DD/MM/YYYY)</a> - (Leacture 01)</li>
+                        <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Introduction to Linear Algebra for AI (06/08/2025)</a> - (L 01)</li>
+                        <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Pseudoinverse in Action: Left and Right Inverses (06/08/2025)</a> - (L 02)</li>
                         <!-- Add more assignments here -->
                     </ul>
                 </div>
