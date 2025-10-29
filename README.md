@@ -933,7 +933,7 @@
 
     <!-- Sub-headers for the course details -->
     <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
-    <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - Dr. Suman Dutta</p>
+    <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
 
     <!-- Outer container to simulate the tcolorbox border -->
     <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
