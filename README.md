@@ -921,9 +921,14 @@
                     <h3>Course Details</h3>
                     <ul>
                         <li><strong>Class:</strong> BTech AID</li>
-                        <li><strong>Semester:</strong> 1</li>
+                        <li><strong>Semester:</strong> Fall, 2025 </li>
                         <li><strong>Course Code:</strong> 23MAT106</li>
                     </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Schedule</h3>
+                    <p>To be added.</p>
                 </div>
                 
                <div class="section">
