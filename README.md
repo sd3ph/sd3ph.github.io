@@ -1121,7 +1121,9 @@
                     <h3>Lecture Notes</h3>
                     <ul>
                         <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Introduction to Linear Algebra for AI (06/08/2025)</a> - (L 01)</li>
-                        <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Pseudoinverse in Action: Left and Right Inverses (06/08/2025)</a> - (L 02)</li>
+                        <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (L 02)</li>
+                        <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxrR/view?usp=sharing">Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (L 03)</li>
+                        <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Complex Data Processing (13/08/2025)</a> - (L 04)</li>
                         <!-- Add more assignments here -->
                     </ul>
                 </div>
