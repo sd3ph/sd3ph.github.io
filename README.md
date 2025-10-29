@@ -1120,7 +1120,7 @@
                 <div class="section">
                     <h3>Assignments</h3>
                     <ul>
-                        <li><a href="#">Assignment 1 (Due: DD/MM/YYYY)</a> - (Example link)</li>
+                        <li><a href="#">Assignment 1 (Due: DD/MM/YYYY)</a> - (https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing)</li>
                         <!-- Add more assignments here -->
                     </ul>
                 </div>
