@@ -1195,7 +1195,7 @@
             </div>
         </div>
 
-    </div>
+    !</div>
 
     <!-- Chatbot Widget -->
     <div id="chatbot-widget">
