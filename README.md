@@ -926,187 +926,185 @@
                     </ul>
                 </div>
 
-               <!-- ADDED NOW -- !>
-               <div class="section">
-    <!-- Updated the header to reflect the content -->
-    <h3>Combined Weekly Schedule</h3> 
+                <div class="section">
+                    <!-- Updated the header to reflect the content -->
+                    <h3>Combined Weekly Schedule</h3> 
 
-    <!-- Sub-headers for the course details -->
-    <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
-    <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
+                    <!-- Sub-headers for the course details -->
+                    <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
+                    <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
 
-    <!-- Outer container to simulate the tcolorbox border -->
-    <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
+                    <!-- Outer container to simulate the tcolorbox border -->
+                    <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
 
-        <!-- Main Schedule Table -->
-        <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
-            <thead>
-                <tr style="background-color: #F2F2F2;">
-                    <!-- Table Headers (thead) -->
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
-                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Row 1: 08:00 - 08:50 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-                <!-- Row 2: 08:50 - 09:40 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section A -->
-                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                    </td>
-                </tr>
-                <!-- Row 3: 09:40 - 10:30 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section B -->
-                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section A -->
-                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section B -->
-                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-                <!-- Row 4: 10:30 - 10:45 (Break) -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
-                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
-                </tr>
-                <!-- Row 5: 10:45 - 11:35 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-                <!-- Row 6: 11:35 - 12:25 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section B -->
-                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                    </td>
-                </tr>
-                <!-- Row 7: 12:25 - 01:15 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section A -->
-                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Project (Sec B) -->
-                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec B)</span>
-                    </td>
-                </tr>
-                <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
-                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
-                </tr>
-                <!-- Row 9: 02:05 - 03:45 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section B (Lab) -->
-                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Section A (Lab) -->
-                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-                <!-- Row 10: 03:45 - 04:35 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;">
-                        <!-- Project (Sec A) -->
-                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec A)</span>
-                    </td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-                <!-- Row 11: 04:35 - 06:15 -->
-                <tr>
-                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                </tr>
-            </tbody>
-        </table>
+                        <!-- Main Schedule Table -->
+                        <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
+                            <thead>
+                                <tr style="background-color: #F2F2F2;">
+                                    <!-- Table Headers (thead) -->
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
+                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1: 08:00 - 08:50 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                                <!-- Row 2: 08:50 - 09:40 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section A -->
+                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                    </td>
+                                </tr>
+                                <!-- Row 3: 09:40 - 10:30 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section B -->
+                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section A -->
+                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section B -->
+                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                                <!-- Row 4: 10:30 - 10:45 (Break) -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
+                                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
+                                </tr>
+                                <!-- Row 5: 10:45 - 11:35 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                                <!-- Row 6: 11:35 - 12:25 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section B -->
+                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                    </td>
+                                </tr>
+                                <!-- Row 7: 12:25 - 01:15 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section A -->
+                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Project (Sec B) -->
+                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec B)</span>
+                                    </td>
+                                </tr>
+                                <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
+                                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
+                                </tr>
+                                <!-- Row 9: 02:05 - 03:45 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section B (Lab) -->
+                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Section A (Lab) -->
+                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                                <!-- Row 10: 03:45 - 04:35 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;">
+                                        <!-- Project (Sec A) -->
+                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec A)</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                                <!-- Row 11: 04:35 - 06:15 -->
+                                <tr>
+                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-        <!-- Legend (Key) -->
-        <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
-            <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
-                <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                Section A, LH 310
-            </div>
-            <div style="display: inline-block; font-size: 0.9em;">
-                <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                Section B, LH 314
-            </div>
-        </div>
-    </div>
-</div>
-               <!-- ADDED NOW -- !>
+                        <!-- Legend (Key) -->
+                        <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
+                            <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
+                                <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
+                                Section A, LH 310
+                            </div>
+                            <div style="display: inline-block; font-size: 0.9em;">
+                                <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
+                                Section B, LH 314
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-    <div class="section">
-    <h3>Syllabus</h3>
-    <dl>
-        <dt>Unit 1</dt>
-        <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
-        
-        <dt>Unit 2</dt>
-        <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
+                <div class="section">
+                    <h3>Syllabus</h3>
+                    <dl>
+                        <dt>Unit 1</dt>
+                        <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
+                        
+                        <dt>Unit 2</dt>
+                        <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
 
-        <dt>Unit 3</dt>
-        <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+                        <dt>Unit 3</dt>
+                        <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
 
-        <dt>Unit 4</dt>
-        <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
-    </dl>
-</div>
+                        <dt>Unit 4</dt>
+                        <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
+                    </dl>
+                </div>
 
                 <div class="section">
                     <h3>Lecture Notes</h3>
@@ -1182,7 +1180,7 @@
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
-            
+            </div> <!-- CORRECTED: Added missing closing </div> for the first section -->
 
             <h2>🏆 Awards & Recognition</h2>
             <div class="section">
@@ -1212,7 +1210,7 @@
             
             // --- CONFIGURATION ---
             // Easily change the classroom passcode here
-            const CLASSROOM_PASSCODE = 'TestClassAmrita23mat106';
+            const CLASSROOM_PASSCODE = '23MAT106'; // UPDATED PASSCODE
 
             // --- DOM Elements ---
             const navLinks = document.querySelectorAll('.nav-link');
