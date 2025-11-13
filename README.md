@@ -1135,7 +1135,7 @@
                 </ul>
 
                 <h4>🔹 Project Synopsis</h4>
-                <p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini API and Retrieval-Augmented Generation (RAG) architecture, it transforms static Curriculum Vitae (CVs) into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
+                <p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini engine and Retrieval-Augmented Generation (RAG) architecture, it transforms static information base into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
 
                 <h4>🔹 Colloquial Abstract</h4>
                 <p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
