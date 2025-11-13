@@ -1146,6 +1146,8 @@
                     <li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
                     <li>To set a new standard for how academics present themselves digitally.</li>
                 </ul>
+                 <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
+    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://sd3ph.github.io/#publication" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
             </div>
 
             <div class="section">
@@ -1164,8 +1166,6 @@
                     <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
                     <li>To offer instant analytics and performance reports for students and instructors.</li>
                 </ul>
-                <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
-    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://sd3ph.github.io/#publication" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
             </div>
         </div>
 
