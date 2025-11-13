@@ -1134,11 +1134,11 @@
                     <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
                 </ul>
 
-                <h4>🔹 Brief Abstract</h4>
-                <p>Aadri is a conversational AI chatbot designed to present academic profiles interactively. Built using Google Gemini API and RAG architecture, it transforms static CVs into dynamic, query-driven experiences. It ensures accuracy, engagement, and personalization in academic self-presentation.</p>
+                <h4>🔹 Project Synopsis</h4>
+                <p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini API and Retrieval-Augmented Generation (RAG) architecture, it transforms static Curriculum Vitae (CVs) into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
 
                 <h4>🔹 Colloquial Abstract</h4>
-                <p>Think of Aadri as a smart assistant that talks about your academic work like a well-informed friend. Instead of scrolling through a boring CV, you just ask questions and Aadri gives you clear, friendly answers. It’s like having a personal guide to your research, teaching, and achievements.</p>
+                <p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
                 
                 <h4>🔹 Purpose</h4>
                 <ul>
@@ -1164,6 +1164,8 @@
                     <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
                     <li>To offer instant analytics and performance reports for students and instructors.</li>
                 </ul>
+                <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
+    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://sd3ph.github.io/#publication" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
             </div>
         </div>
 
