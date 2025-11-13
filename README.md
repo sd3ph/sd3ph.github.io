@@ -804,7 +804,7 @@
                     <p><strong>Contribution:</strong> <u>Contributing author</u></p>
                 </div>
                 <div class="publication-item">
-                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, arXiv:2511.07951 (2025) [<a href="https://arxiv.org/abs/2511.07951" target="_blank" rel="noopener noreferrer">LINK</a>]</p></p>
+                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, arXiv:2511.07951 (2025) [<a href="https://arxiv.org/abs/2511.07951" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
                     <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
                 </div>
                 <div class="publication-item">
