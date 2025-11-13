@@ -804,11 +804,11 @@
                     <p><strong>Contribution:</strong> <u>Contributing author</u></p>
                 </div>
                 <div class="publication-item">
-                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, To be published in Ann. Phys. (Berlin) (2025)</p>
+                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, arXiv:2511.07951 (2025) [<a href="https://arxiv.org/abs/2511.07951" target="_blank" rel="noopener noreferrer">LINK</a>]</p></p>
                     <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
                 </div>
                 <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376</p>
+                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025)  [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p>
                     <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
                 </div>
             </div>
