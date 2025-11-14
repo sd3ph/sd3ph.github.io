@@ -759,46 +759,12 @@
             </div>
         </div>
 
-        <!-- NEW: Publication Page -->
+        <!-- UPDATED: Publication Page - Grouped by Year -->
         <div id="publication" class="page-content">
             <h2>📚 Publications</h2>
             <div class="section">
-                <div class="publication-item">
-                    <p class="citation">J. Chakrabarti & <u>S. Dutta</u>, <em>Analytical form of forces in hydrophobic collapse</em>, Chem. Phys. Lett., 620, <strong>109</strong> (2015) [<a href="https://www.sciencedirect.com/science/article/pii/S0009261414010483" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Second author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Anomalous dynamical responses in a driven system</em>, Europhys. Lett., <strong>116</strong>, 38001 (2016) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/38001/meta" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>First author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Transient dynamical responses of a charged binary colloid in an electric field</em>, Soft Matter, <strong>14</strong>, 4477 (2018) [<a href="https://pubs.rsc.org/en/content/articlehtml/2018/sm/c7sm02552a" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>*, <em>Microscopic insights into dynamical heterogeneity in a lane forming colloid</em>, Chem. Phys., <strong>522</strong>, 256 (2019) [<a href="https://www.sciencedirect.com/science/article/pii/S0301010418311510" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Solo author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation">R. Dandekar, S. Bose & <u>S. Dutta</u>*, <em>Non-Gaussian information of heterogeneity in soft matter</em>, Europhys. Lett., <strong>131</strong>, 18002 (2020) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/131/18002/meta" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Length-scales of dynamic heterogeneity in a driven binary colloid</em>, Phys. Chem. Chem. Phys., <strong>22</strong>, 17731 (2020) [<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02703k/unauth" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation">C. Liu, <u>S. Dutta</u>, P. Chaudhuri & K. Martens, <em>Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</em>, Phys. Rev. Lett., <strong>126</strong>, 138005 (2021) [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.138005" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Joint first author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>, K. Martens & P. Chaudhuri, <em>Creep response of athermal amorphous solids under imposed shear stress</em>, arXiv:2303.04718 (2023) [<a href="https://arxiv.org/abs/2303.04718" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>First author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation">V. Vaibhav & <u>S. Dutta</u>*, <em>Entropic timescales of Dynamic Heterogeneity in Supercooled Liquid</em>, Phys. Rev. E (Lett.), <strong>109</strong>, L062102 (2024) [<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.L062102" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
-                </div>
+                
+                <h3>2025</h3>
                 <div class="publication-item">
                     <p class="citation">S. Santra, L. Touzo, C. Dasgupta, A. Dhar, <u>S. Dutta</u>, A. Kundu, P. Le Doussal, G. Schehr & P. Singh, <em>Crystal to liquid cross-over in the active Calogero-Moser model</em>, J. Stat. Mech. 033203 (2025) [<a href="https://iopscience.iop.org/article/10.1088/1742-5468/adbb5d" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
                     <p><strong>Contribution:</strong> <u>Contributing author</u></p>
@@ -808,8 +774,60 @@
                     <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
                 </div>
                 <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025)  [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p></p>
+                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025)  [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p>
                     <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+                
+                <h3>2024</h3>
+                <div class="publication-item">
+                    <p class="citation">V. Vaibhav & <u>S. Dutta</u>*, <em>Entropic timescales of Dynamic Heterogeneity in Supercooled Liquid</em>, Phys. Rev. E (Lett.), <strong>109</strong>, L062102 (2024) [<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.L062102" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
+
+                <h3>2023</h3>
+                <div class="publication-item">
+                    <p class="citation"><u>S. Dutta</u>, K. Martens & P. Chaudhuri, <em>Creep response of athermal amorphous solids under imposed shear stress</em>, arXiv:2303.04718 (2023) [<a href="https://arxiv.org/abs/2303.04718" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>First author</u></p>
+                </div>
+                
+                <h3>2021</h3>
+                <div class="publication-item">
+                    <p class="citation">C. Liu, <u>S. Dutta</u>, P. Chaudhuri & K. Martens, <em>Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</em>, Phys. Rev. Lett., <strong>126</strong>, 138005 (2021) [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.138005" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Joint first author</u></p>
+                </div>
+
+                <h3>2020</h3>
+                <div class="publication-item">
+                    <p class="citation">R. Dandekar, S. Bose & <u>S. Dutta</u>*, <em>Non-Gaussian information of heterogeneity in soft matter</em>, Europhys. Lett., <strong>131</strong>, 18002 (2020) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/131/18002/meta" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
+                <div class="publication-item">
+                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Length-scales of dynamic heterogeneity in a driven binary colloid</em>, Phys. Chem. Chem. Phys., <strong>22</strong>, 17731 (2020) [<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02703k/unauth" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+
+                <h3>2019</h3>
+                <div class="publication-item">
+                    <p class="citation"><u>S. Dutta</u>*, <em>Microscopic insights into dynamical heterogeneity in a lane forming colloid</em>, Chem. Phys., <strong>522</strong>, 256 (2019) [<a href="https://www.sciencedirect.com/science/article/pii/S0301010418311510" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Solo author</u></p>
+                </div>
+
+                <h3>2018</h3>
+                <div class="publication-item">
+                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Transient dynamical responses of a charged binary colloid in an electric field</em>, Soft Matter, <strong>14</strong>, 4477 (2018) [<a href="https://pubs.rsc.org/en/content/articlehtml/2018/sm/c7sm02552a" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+                </div>
+
+                <h3>2016</h3>
+                <div class="publication-item">
+                    <p class="citation"><u>S. Dutta</u>* & J. Chakrabarti, <em>Anomalous dynamical responses in a driven system</em>, Europhys. Lett., <strong>116</strong>, 38001 (2016) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/38001/meta" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>First author</u></p>
+                </div>
+
+                <h3>2015</h3>
+                <div class="publication-item">
+                    <p class="citation">J. Chakrabarti & <u>S. Dutta</u>, <em>Analytical form of forces in hydrophobic collapse</em>, Chem. Phys. Lett., 620, <strong>109</strong> (2015) [<a href="https://www.sciencedirect.com/science/article/pii/S0009261414010483" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Second author</u></p>
                 </div>
             </div>
         </div>
@@ -1091,231 +1109,3 @@
                 
                 <div class="section">
                     <h3>Syllabus</h3>
-                    <dl>
-                        <dt>Unit 1</dt>
-                        <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
-                        
-                        <dt>Unit 2</dt>
-                        <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
-
-                        <dt>Unit 3</dt>
-                        <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
-
-                        <dt>Unit 4</dt>
-                        <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
-                    </dl>
-                </div>
-
-                <div class="section">
-                    <h3>Lecture Notes</h3>
-                    <ul>
-                                               <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Lecture 01: Introduction to Linear Algebra for AI (06/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxrR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
-                       <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
-                      <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
->Lecture 07-10: The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (LH 310/314)</li>
-                      <li><a href="https://drive.google.com/file/d/1e-HACLlvHJHZ_1aINgLtkEISnR5vxU-C/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8/10/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">Lecture 16: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
-                          <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(11/10/2025)</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025))</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025))</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025))</a> - (LH 310/314)</li>
-                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
-                             <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025))</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
-                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
-                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
-                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025))</a> - (LH 15/16)</li>
-                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>       
-                    </ul>
-                    <h4>Summary</h4>
-                    <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li> 
-                    <ul>
-                    
-                </div>
-             </div>
-        </div>
-
-        <!-- UPDATED: Lab Products Page -->
-        <div id="products" class="page-content">
-            <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
-            
-            <div class="section">
-                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
-                <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
-                
-                <h4>🔹 Team</h4>
-                <ul>
-                    <li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
-                    <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
-                    <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
-                </ul>
-
-                <h4>🔹 Project Synopsis</h4>
-                <p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini engine and Retrieval-Augmented Generation (RAG) architecture, it transforms static information base into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
-
-                <h4>🔹 Colloquial Abstract</h4>
-                <p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
-                
-                <h4>🔹 Purpose</h4>
-                <ul>
-                    <li>To make academic profiles interactive, accessible, and engaging.</li>
-                    <li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
-                    <li>To set a new standard for how academics present themselves digitally.</li>
-                </ul>
-                 <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
-    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://aadri-chatbot-v-2-0-released-version-774248093245.us-west1.run.app" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
-            </div>
-
-            <div class="section">
-                <h3><span style="vertical-align: middle;">📝</span> AtoGRAD: OMR Solutions for Class-based Tests</h3>
-                <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
-
-                <h4>🔹 Team</h4>
-                <p>To be announced.</p>
-                
-                <h4>🔹 Abstract</h4>
-                <p>Details about the technology and application will be available shortly.</p>
-
-                <h4>🔹 Purpose</h4>
-                <ul>
-                    <li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
-                    <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
-                    <li>To offer instant analytics and performance reports for students and instructors.</li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!-- miscellaneous Page -->
-        <div id="misc" class="page-content">
-            <h2>🤝 Research Collaborators</h2>
-            <div class="section">
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Jaydeb Chakrabarti</strong><br>(Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Pinaki Chaudhuri</strong><br>(Professor, The Institute of Mathematical Sciences, Chennai, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Kirsten Martens</strong><br>(CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Chandan Dasgupta</strong><br>(Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Madan Rao</strong><br>(Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
-            </div> <!-- CORRECTED: Added missing closing </div> for the first section -->
-
-            <h2>🏆 Awards & Recognition</h2>
-            <div class="section">
-                <ul>
-                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
-                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
-                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
-                    <li><strong>National Merit Scholarship</strong> (2004).</li>
-                </ul>
-            </div>
-        </div>
-
-
-
-    <!-- Chatbot Widget -->
-    <div id="chatbot-widget">
-        <div id="chatbot-bubble">
-            <div class="icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
-            <div class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></div>
-        </div>
-        <div id="chatbot-iframe-container"><iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe></div>
-    </div>
-
-
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            
-            // --- CONFIGURATION ---
-            // Easily change the classroom passcode here
-            const CLASSROOM_PASSCODE = '23MAT106'; // UPDATED PASSCODE
-
-            // --- DOM Elements ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageContents = document.querySelectorAll('.page-content');
-            const chatbotBubble = document.getElementById('chatbot-bubble');
-            const chatbotWidget = document.getElementById('chatbot-widget');
-            const passwordForm = document.getElementById('password-form');
-            const passwordInput = document.getElementById('passcode-input');
-            const passwordErrorMsg = document.getElementById('password-error-message');
-            const classroomPrompt = document.getElementById('password-prompt-container');
-            const classroomContent = document.getElementById('classroom-content');
-
-            // --- Navigation Logic ---
-            function switchTab(targetId) {
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                pageContents.forEach(content => content.classList.remove('active'));
-
-                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-                if (activeLink) activeLink.classList.add('active');
-
-                const activeContent = document.querySelector(targetId);
-                if (activeContent) activeContent.classList.add('active');
-                
-                // Special check for classroom page
-                if(targetId === '#classroom') {
-                    checkClassroomAccess();
-                }
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (window.location.hash !== targetId) {
-                        history.pushState ? history.pushState(null, null, targetId) : window.location.hash = targetId;
-                    }
-                    switchTab(targetId);
-                });
-            });
-
-            function handleHashChange() {
-                const currentHash = window.location.hash || '#highlight';
-                switchTab(currentHash);
-            }
-
-            window.addEventListener('popstate', handleHashChange);
-            handleHashChange(); // Initial page load
-
-            // --- Classroom Passcode Logic ---
-            function checkClassroomAccess() {
-                if (sessionStorage.getItem('classroomAccessGranted') === 'true') {
-                    classroomPrompt.style.display = 'none';
-                    classroomContent.classList.remove('hidden');
-                } else {
-                    classroomPrompt.style.display = 'block';
-                    classroomContent.classList.add('hidden');
-                }
-            }
-            
-            if (passwordForm) {
-                passwordForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    if (passwordInput.value.trim() === CLASSROOM_PASSCODE) {
-                        sessionStorage.setItem('classroomAccessGranted', 'true');
-                        passwordErrorMsg.textContent = '';
-                        passwordInput.value = '';
-                        checkClassroomAccess();
-                    } else {
-                        passwordErrorMsg.textContent = 'Incorrect passcode. Please try again.';
-                        passwordInput.value = '';
-                    }
-                });
-            }
-
-
-            // --- Chatbot Logic ---
-            if (chatbotBubble && chatbotWidget) {
-                chatbotBubble.addEventListener('click', () => {
-                    chatbotWidget.classList.toggle('open');
-                });
-            }
-        });
-    </script>
-
-</body>
-</html>
