@@ -1121,15 +1121,15 @@
                           <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Impulse Response and Convolution(11/10/2025)</a> - (L 13-15)</li>
                          <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">The Runge-Kutta Method(17/09/2025))</a> - (L 16)</li>
                          <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Modeling Falling Objects, Satellites, and Planetary Motion (3,4/10/2025))</a> - (L 16-17)</li>
-                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">ode(6/10/2025))</a> - (L 18)</li>
-                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">rlc circuit(8/10/2025))</a> - (L 19)</li>
-                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">ode python with scifi(8/10/2025)</a> - (L 20-21)</li>
-                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">probality and random variables(24/10/2025)</a> - (L 23-26)</li>
-                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">building ai model(5/11/2025)</a> - (H-1)</li>
-                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">non linear quadratic regression(6/11/2025)</a> - (H-2)</li>
-                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">polynomial regression(7/11/2025))</a> - (H-3)</li>
-                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing"> crdecomposition(11/11/2025)</a> - (H-4)</li>
-                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">svd(12/11/2025)</a> - (H-5)</li>
+                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Ordinary Differential Equations (6/10/2025))</a> - (L 18)</li>
+                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Complex RLC Circuit Analysis (8/10/2025))</a> - (L 19)</li>
+                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (L 20-21)</li>
+                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Probability and Random Variables (24/10/2025)</a> - (L 23-26)</li>
+                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (H-1)</li>
+                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (H-2)</li>
+                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025))</a> - (H-3)</li>
+                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (H-4)</li>
+                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (H-5)</li>
                                    <li><a
                         <!-- Add more assignments here -->
                     </ul>
