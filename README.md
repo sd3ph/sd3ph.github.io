@@ -1135,4 +1135,201 @@
                       <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
 >Lecture 07-10: The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (LH 310/314)</li>
                       <li><a href="https://drive.google.com/file/d/1e-HACLlvHJHZ_1aINgLtkEISnR5vxU-C/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8/10/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">Lecture 16: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</l
+                        <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">Lecture 16: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
+                          <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(11/10/2025)</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025))</a> - (LH 310/314)</li>
+                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025))</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025))</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
+                             <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025))</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
+                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
+                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
+                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025))</a> - (LH 15/16)</li>
+                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
+                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>       
+                    </ul>
+                </div>
+             </div>
+        </div>
+
+        <!-- UPDATED: Lab Products Page -->
+        <div id="products" class="page-content">
+            <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
+            
+            <div class="section">
+                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
+                <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
+                
+                <h4>🔹 Team</h4>
+                <ul>
+                    <li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+                    <li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
+                    <li><strong>Consultants & Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
+                </ul>
+
+                <h4>🔹 Project Synopsis</h4>
+                <p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini engine and Retrieval-Augmented Generation (RAG) architecture, it transforms static information base into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
+
+                <h4>🔹 Colloquial Abstract</h4>
+                <p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
+                
+                <h4>🔹 Purpose</h4>
+                <ul>
+                    <li>To make academic profiles interactive, accessible, and engaging.</li>
+                    <li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
+                    <li>To set a new standard for how academics present themselves digitally.</li>
+                </ul>
+                 <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
+    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://aadri-chatbot-v-2-0-released-version-774248093245.us-west1.run.app" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
+            </div>
+
+            <div class="section">
+                <h3><span style="vertical-align: middle;">📝</span> AtoGRAD: OMR Solutions for Class-based Tests</h3>
+                <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
+
+                <h4>🔹 Team</h4>
+                <p>To be announced.</p>
+                
+                <h4>🔹 Abstract</h4>
+                <p>Details about the technology and application will be available shortly.</p>
+
+                <h4>🔹 Purpose</h4>
+                <ul>
+                    <li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
+                    <li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
+                    <li>To offer instant analytics and performance reports for students and instructors.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- miscellaneous Page -->
+        <div id="misc" class="page-content">
+            <h2>🤝 Research Collaborators</h2>
+            <div class="section">
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Jaydeb Chakrabarti</strong><br>(Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Pinaki Chaudhuri</strong><br>(Professor, The Institute of Mathematical Sciences, Chennai, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Kirsten Martens</strong><br>(CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Chandan Dasgupta</strong><br>(Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Madan Rao</strong><br>(Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
+            </div>
+
+            <h2>🏆 Awards & Recognition</h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+                    <li><strong>National Merit Scholarship</strong> (2004).</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-bubble">
+            <div class="icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+            <div class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></div>
+        </div>
+        <div id="chatbot-iframe-container"><iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe></div>
+    </div>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // --- CONFIGURATION ---
+            // Easily change the classroom passcode here
+            const CLASSROOM_PASSCODE = '23MAT106'; // UPDATED PASSCODE
+
+            // --- DOM Elements ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+            const chatbotBubble = document.getElementById('chatbot-bubble');
+            const chatbotWidget = document.getElementById('chatbot-widget');
+            const passwordForm = document.getElementById('password-form');
+            const passwordInput = document.getElementById('passcode-input');
+            const passwordErrorMsg = document.getElementById('password-error-message');
+            const classroomPrompt = document.getElementById('password-prompt-container');
+            const classroomContent = document.getElementById('classroom-content');
+
+            // --- Navigation Logic ---
+            function switchTab(targetId) {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pageContents.forEach(content => content.classList.remove('active'));
+
+                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+                if (activeLink) activeLink.classList.add('active');
+
+                const activeContent = document.querySelector(targetId);
+                if (activeContent) activeContent.classList.add('active');
+                
+                // Special check for classroom page
+                if(targetId === '#classroom') {
+                    checkClassroomAccess();
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (window.location.hash !== targetId) {
+                        history.pushState ? history.pushState(null, null, targetId) : window.location.hash = targetId;
+                    }
+                    switchTab(targetId);
+                });
+            });
+
+            function handleHashChange() {
+                const currentHash = window.location.hash || '#highlight';
+                switchTab(currentHash);
+            }
+
+            window.addEventListener('popstate', handleHashChange);
+            handleHashChange(); // Initial page load
+
+            // --- Classroom Passcode Logic ---
+            function checkClassroomAccess() {
+                if (sessionStorage.getItem('classroomAccessGranted') === 'true') {
+                    classroomPrompt.style.display = 'none';
+                    classroomContent.classList.remove('hidden');
+                } else {
+                    classroomPrompt.style.display = 'block';
+                    classroomContent.classList.add('hidden');
+                }
+            }
+            
+            if (passwordForm) {
+                passwordForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (passwordInput.value.trim() === CLASSROOM_PASSCODE) {
+                        sessionStorage.setItem('classroomAccessGranted', 'true');
+                        passwordErrorMsg.textContent = '';
+                        passwordInput.value = '';
+                        checkClassroomAccess();
+                    } else {
+                        passwordErrorMsg.textContent = 'Incorrect passcode. Please try again.';
+                        passwordInput.value = '';
+                    }
+                });
+            }
+
+
+            // --- Chatbot Logic ---
+            if (chatbotBubble && chatbotWidget) {
+                chatbotBubble.addEventListener('click', () => {
+                    chatbotWidget.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
