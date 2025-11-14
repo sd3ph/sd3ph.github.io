@@ -1119,11 +1119,11 @@
                       <li><a href="https://drive.google.com/file/d/1e-HACLlvHJHZ_1aINgLtkEISnR5vxU-C/view?usp=sharing">Introduction to Ordinary Differential Equations (8/10/2025)</a> - (L 11-12)</li>
                         <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">An Introduction to Python for Linear Algebra(17/09/2025)</a> - (L 16)</li>
                           <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Impulse Response and Convolution(11/10/2025)</a> - (L 13-15)</li>
-                         <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">The Runge-Kutta Method(17/09/2025))</a> - (L 16)</li>
-                         <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Modeling Falling Objects, Satellites, and Planetary Motion (3,4/10/2025))</a> - (L 16-17)</li>
+                           <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025))</a> - (L 16-17)</li>
                         <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Ordinary Differential Equations (6/10/2025))</a> - (L 18)</li>
                            <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Complex RLC Circuit Analysis (8/10/2025))</a> - (L 19)</li>
                             <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (L 20-21)</li>
+                             <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Numerical Solution of ODEs (11/10/2025))</a> - (L 22)</li>
                            <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Probability and Random Variables (24/10/2025)</a> - (L 23-26)</li>
                                <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (H-1)</li>
                                 <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (H-2)</li>
