@@ -1115,7 +1115,7 @@
                         <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Complex Data Processing (13/08/2025)</a> - (L 04)</li>
                        <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (L 05-06)</li>
                       <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
->The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (L 07)</li>
+>The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (L 07-10)</li>
                       <li><a href="https://drive.google.com/file/d/1e-HACLlvHJHZ_1aINgLtkEISnR5vxU-C/view?usp=sharing">Introduction to Ordinary Differential Equations (8/10/2025)</a> - (L 11-12)</li>
                         <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">An Introduction to Python for Linear Algebra(17/09/2025)</a> - (L 16)</li>
                           <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Impulse Response and Convolution(11/10/2025)</a> - (L 13-15)</li>
