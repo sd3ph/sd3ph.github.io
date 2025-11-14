@@ -1109,10 +1109,28 @@
                 <div class="section">
                     <h3>Lecture Notes</h3>
                     <ul>
-                        <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Introduction to Linear Algebra for AI (06/08/2025)</a> - (L 01)</li>
+                                               <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Introduction to Linear Algebra for AI (06/08/2025)</a> - (L 01)</li>
                         <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (L 02)</li>
                         <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxrR/view?usp=sharing">Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (L 03)</li>
                         <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Complex Data Processing (13/08/2025)</a> - (L 04)</li>
+                       <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">advanced optimization(18/8/2025)</a> - (L 05-06)</li>
+                      <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
+>Introduction to LLM (21/08/20255)</a> - (L 07)</li>
+                      <li><a href="https://drive.google.com/file/d/1e-HACLlvHJHZ_1aINgLtkEISnR5vxU-C/view?usp=sharing">Introduction to Ordinary Differential Equations (8/10/2025)</a> - (L 11-12)</li>
+                        <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharin">phyton for ai(17/09/2025)</a> - (L 16)</li>
+                          <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">runge-kutta method(11/10/2025)</a> - (L 13-15)</li>
+                         <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">RK2(17/09/2025))</a> - (L 16)</li>
+                         <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">ode satellites(3,4/10/2025))</a> - (L 16-17)</li>
+                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">ode(6/10/2025))</a> - (L 18)</li>
+                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">rlc circuit(8/10/2025))</a> - (L 19)</li>
+                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">ode python with scifi(8/10/2025)</a> - (L 20-21)</li>
+                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">probality and random variables(24/10/2025)</a> - (L 23-26)</li>
+                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">building ai model(5/11/2025)</a> - (H-1)</li>
+                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">non linear quadratic regression(6/11/2025)</a> - (H-2)</li>
+                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">polynomial regression(7/11/2025))</a> - (H-3)</li>
+                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing"> crdecomposition(11/11/2025)</a> - (H-4)</li>
+                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">svd(12/11/2025)</a> - (H-5)</li>
+                                   <li><a
                         <!-- Add more assignments here -->
                     </ul>
                 </div>
