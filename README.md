@@ -712,6 +712,21 @@
                 </div>
                 <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             </div>
+
+            <!-- ADDED: Page View Analytics Window -->
+            <div class="section" style="text-align: center; margin-top: 20px; margin-bottom: 0;">
+                <h3>📊 Page Analytics</h3>
+                <div style="display: inline-block; padding: 20px; background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <!-- Visual Hit Counter -->
+                    <a href="https://www.hitwebcounter.com" target="_blank">
+                        <img src="https://hitwebcounter.com/counter/counter.php?page=17152025&style=0007&nbdigits=6&type=page&initCount=120" title="Free Counter" Alt="web counter"   border="0" />
+                    </a>
+                    <p style="margin: 15px 0 0 0; font-size: 0.85em; color: var(--secondary-color); line-height: 1.4;">
+                        <strong>Total Visits</strong><br>
+                        Tracking Global Engagement
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- 2. Research Page -->
