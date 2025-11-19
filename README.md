@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLab - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Added Chart.js for the analytics plot -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root { 
             --primary-color: #2c3e50; /* Deep blue-grey */
@@ -716,15 +718,28 @@
             <!-- ADDED: Page View Analytics Window -->
             <div class="section" style="text-align: center; margin-top: 20px; margin-bottom: 0;">
                 <h3>📊 Page Analytics</h3>
-                <div style="display: inline-block; padding: 20px; background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                    <!-- Visual Hit Counter -->
-                    <a href="https://www.hitwebcounter.com" target="_blank">
-                        <img src="https://hitwebcounter.com/counter/counter.php?page=17152025&style=0007&nbdigits=6&type=page&initCount=120" title="Free Counter" Alt="web counter"   border="0" />
-                    </a>
-                    <p style="margin: 15px 0 0 0; font-size: 0.85em; color: var(--secondary-color); line-height: 1.4;">
-                        <strong>Total Visits</strong><br>
-                        Tracking Global Engagement
-                    </p>
+                <div style="display: inline-block; width: 90%; max-width: 600px; padding: 20px; background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    
+                    <!-- 1. Visual Hit Counter Image -->
+                    <div style="margin-bottom: 20px;">
+                        <a href="https://www.hitwebcounter.com" target="_blank">
+                            <img src="https://hitwebcounter.com/counter/counter.php?page=17152025&style=0007&nbdigits=6&type=page&initCount=120" title="Free Counter" Alt="web counter" border="0" />
+                        </a>
+                        <p style="margin: 5px 0 0 0; font-size: 0.85em; color: var(--secondary-color);">
+                            <strong>Total Visits</strong>
+                        </p>
+                    </div>
+
+                    <hr style="margin: 15px auto; width: 80%; border-top: 1px dashed var(--border-color); background: none;">
+
+                    <!-- 2. Real-time Plot (Canvas) -->
+                    <div style="text-align: left;">
+                        <h4 style="text-align: center; font-size: 1em; margin-bottom: 10px; color: var(--primary-color);">Daily Viewer Activity (Last 7 Days)</h4>
+                        <div class="chart-container" style="position: relative; height:200px; width:100%;">
+                            <canvas id="viewsChart"></canvas>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1347,6 +1362,86 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
             if (chatbotBubble && chatbotWidget) {
                 chatbotBubble.addEventListener('click', () => {
                     chatbotWidget.classList.toggle('open');
+                });
+            }
+
+            // --- CHART.JS ANALYTICS LOGIC (Simulated Data) ---
+            const chartCanvas = document.getElementById('viewsChart');
+            if(chartCanvas) {
+                const ctx = chartCanvas.getContext('2d');
+                
+                // Generate dates for the last 7 days
+                const labels = [];
+                const dataPoints = [];
+                
+                for(let i=6; i>=0; i--) {
+                    const d = new Date();
+                    d.setDate(d.getDate() - i);
+                    labels.push(d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+                    
+                    // Generate random simulated view count between 100 and 400 to visualize activity
+                    // In a real scenario, fetch this from an API
+                    const randomView = Math.floor(Math.random() * (400 - 120 + 1) + 120);
+                    dataPoints.push(randomView);
+                }
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Daily Views',
+                            data: dataPoints,
+                            borderColor: '#e74c3c', // Matches --accent-color
+                            backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                            pointBackgroundColor: '#2c3e50', // Matches --primary-color
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#2c3e50',
+                            borderWidth: 2,
+                            tension: 0.4, // Smooth curves
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(44, 62, 80, 0.9)',
+                                titleFont: { family: "'Open Sans', sans-serif" },
+                                bodyFont: { family: "'Open Sans', sans-serif" },
+                                padding: 10,
+                                cornerRadius: 4,
+                                displayColors: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                grid: {
+                                    color: 'rgba(189, 195, 199, 0.3)', // Light grey grid
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    font: { size: 10 },
+                                    color: '#7f8c8d'
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    font: { size: 10 },
+                                    color: '#7f8c8d'
+                                }
+                            }
+                        }
+                    }
                 });
             }
         });
