@@ -1164,7 +1164,7 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                 <div class="section">
                     <h3>Topical Project</h3>
                     <ul>
-                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing">Project: Obtaining Computer Glassy States by Instantaneous Quench </a> - (Deadline: 5 DCec, 2025)</li>
+                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing">Project: Obtaining Computer Glassy States by Instantaneous Quench </a> - (Deadline: 5 Dec, 2025)</li>
                         <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing"> Review Guidelines and Submission Format</a> - (To be Updates soon)</li>
                     </ul>
                 </div>
