@@ -1155,8 +1155,8 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                                    <li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
                                    <li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
                                    <li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27-28: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27-28: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+                                   <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+                                   <li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
                                    
                     </ul>
                 </div>
@@ -1172,8 +1172,8 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                 <div class="section">
                     <h3>Assignments</h3>
                     <ul>
-                        <li><a href="#">Assignment 1: Vector Spaces and Linear Dependence</a> - (Due: 30/08/2025)</li>
-                        <li><a href="#">Assignment 2: Differential Equations and Modeling</a> - (Due: 15/10/2025)</li>
+                        <li><a href="https://drive.google.com/file/d/1rkGgMks5BO0PGgv5f-wHzubaMnZHBIxF/view?usp=sharing">Assignment 1: Linear Algebra and ML </a> - (Due: 18/08/2025)</li>
+                        <li><a href="https://drive.google.com/file/d/1yReUaF3pPoDgymTmBLUbRtqrZP40dzlW/view?usp=sharing">Assignment 2: Differential Equations and Modeling</a> - (Due: 11/10/2025)</li>
                     </ul>
                 </div>
              </div>
