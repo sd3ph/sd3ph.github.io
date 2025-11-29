@@ -1160,6 +1160,22 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                                    
                     </ul>
                 </div>
+
+                <div class="section">
+                    <h3>Topical Project</h3>
+                    <ul>
+                        <li><a href="#">Sample Project: Simulation of Complex Systems (Description)</a> - (Deadline: 15/12/2025)</li>
+                        <li><a href="#">Project Guidelines and Submission Format</a> - (PDF)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Assignments</h3>
+                    <ul>
+                        <li><a href="#">Assignment 1: Vector Spaces and Linear Dependence</a> - (Due: 30/08/2025)</li>
+                        <li><a href="#">Assignment 2: Differential Equations and Modeling</a> - (Due: 15/10/2025)</li>
+                    </ul>
+                </div>
              </div>
         </div>
 
