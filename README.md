@@ -689,7 +689,7 @@
                 <h2>🌟 Join Us </h2>
                 <div class="advertisement">
                     <h1>Join Us to Innovate</h1>
-                    <p> We are seeking creative indivisuals to join our lab to co-create the future.</p>
+                    <p> We are seeking creative individuals to join our lab to co-create the future.</p>
            
                     <p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
            
@@ -1165,7 +1165,7 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                     <h3>Topical Project</h3>
                     <ul>
                         <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing">Project: Obtaining Computer Glassy States by Instantaneous Quench </a> - (Deadline: 5 Dec, 2025)</li>
-                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing"> Review Guidelines and Submission Format</a> - (To be Updates soon)</li>
+                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing"> Review Guidelines and Submission Format</a> - (To be Updated soon)</li>
                     </ul>
                 </div>
 
