@@ -1029,6 +1029,7 @@
                                 <p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
                                 <p><strong>Subject:</strong> Linear Algebra, ODEs, Probability, Quantum Computing</p>
                                 <p><strong>Credit:</strong> 4 </p>
+                                <p><strong>Timeline: 6 Aug - 5 Dec, 2025</strong> 4 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
                             </div>
                             <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
