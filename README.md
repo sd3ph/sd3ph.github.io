@@ -1027,7 +1027,7 @@
                             <div>
                                 <h4>Mathematics for Intelligent Systems - I</h4>
                                 <p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
-                                <p><strong>Subject:</strong> Linear Algebra, ODEs, Probability</p>
+                                <p><strong>Subject:</strong> Linear Algebra, ODEs, Probability, Quantum Computing</p>
                                 <p><strong>Credit:</strong> 4 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
                             </div>
