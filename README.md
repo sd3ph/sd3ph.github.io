@@ -633,6 +633,82 @@
             display: none;
         }
 
+        /* --- New Course Dashboard Styles --- */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .course-card {
+            background-color: #f9f9f9;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+        .course-card h4 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.3em;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .course-card p {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .course-card .course-code {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .course-card .semester-tag {
+            background-color: var(--nav-hover-bg);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .back-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .back-btn:hover {
+            background-color: var(--primary-color);
+        }
+        .back-btn svg {
+            margin-right: 5px;
+            fill: currentColor;
+        }
+        .course-detail-view {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+        .course-detail-view.active {
+            display: block;
+        }
 
     </style>
 </head>
@@ -912,7 +988,7 @@
     <h3 class="timeline-month">November 2025</h3>
     <div class="timeline-content" style="margin-bottom: 15px;">
         <strong>November 14: EuroHPC Benchmark Access Awarded for LUMI Clusters</strong>
-        <p>We are pleased to announce that a computing grant for EuroHPC Benchmark Access has been awarded for the LUMI clusters, currently ranked as the 9th fastest supercomputer in the world. This grant provides 2,000 Node Hours, with R. Cabriolu serving as Principal Investigator (PI) and Suman as Co-Principal Investigator (Co-PI).</p></div>
+        <p>We are pleased to announce that a computing grant for EuroHPC Benchmark Access has been awarded for the LUMI clusters, currently ranked as the 9th fastest supercomputer in the world. This grant provides computing for 2000 Node-Hours, with R. Cabriolu serving as Principal Investigator (PI) and Suman as Co-Principal Investigator (Co-PI).</p></div>
 </div>
                     <div class="timeline-item"><h3 class="timeline-month">September 2025</h3><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 24: Archit Selected for the flagship Biophysical Meeting at ICTS-TIFR Program</strong><p>Archit has been selected for on-campus participation in the flagship- international meeting "Spatial Organization of Biological Functions", organized by the Biophysical Society, at ICTS-TIFR, scheduled for October 20-25. He will also present a poster on his work, "Learning Micro-Flocking Dynamics in Living Machines by Hybrid Machine Intelligence."</p></div><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 22: Agnevesh’s Research Tenure Extended</strong><p>We are pleased to announce that Agnevesh's research tenure has been extended for an additional three months following a positive recommendation from a review panel.</p></div><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 15: ANRF Grant Proposal Advances</strong><p>Our grant proposal, titled "Learning Order-Disorder by Machine Intelligence," has been successfully accepted for technical evaluation.</p></div></div>
                     <div class="timeline-item"><h3 class="timeline-month">August 2025</h3><div class="timeline-content" style="margin-bottom: 15px;"><strong>August 30: New Preprint on Dense Persistent Active Fluids</strong><p>Our latest preprint, "Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids," is now available on arXiv. This collaborative work can be accessed at: <a href="https://arxiv.org/abs/2509.00376" target="_blank">arXiv:2509.00376</a>.</p></div><div class="timeline-content"><strong>August 4-15: Agnevesh Participates in ICTS-TIFR Flagship School</strong><p>Congratulations to our intern, Agnevesh, for his selection to participate in the prestigious flagship school "Data Science: Probabilistic and Optimization Methods II", held online by ICTS-TIFR.</p></div></div>
@@ -941,247 +1017,335 @@
              
              <!-- This container holds the protected content, hidden by default -->
              <div id="classroom-content" class="hidden">
-                <div class="section">
-                    <h3>Course Details</h3>
-                    <ul>
-                        <li><strong>Class:</strong> BTech AID</li>
-                        <li><strong>Semester:</strong> Fall, 2025 </li>
-                        <li><strong>Course Code:</strong> 23MAT106</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <!-- Updated the header to reflect the content -->
-                    <h3>Combined Weekly Schedule</h3>
-
-                    <!-- Sub-headers for the course details -->
-                    <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
-                    <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
-
-                    <!-- Outer container to simulate the tcolorbox border -->
-                    <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
-
-                        <!-- Main Schedule Table -->
-                        <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
-                            <thead>
-                                <tr style="background-color: #F2F2F2;">
-                                    <!-- Table Headers (thead) -->
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
-                                    <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Row 1: 08:00 - 08:50 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                                <!-- Row 2: 08:50 - 09:40 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section A -->
-                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                    </td>
-                                </tr>
-                                <!-- Row 3: 09:40 - 10:30 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section B -->
-                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section A -->
-                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section B -->
-                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                                <!-- Row 4: 10:30 - 10:45 (Break) -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
-                                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
-                                </tr>
-                                <!-- Row 5: 10:45 - 11:35 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                                <!-- Row 6: 11:35 - 12:25 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section B -->
-                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                    </td>
-                                </tr>
-                                <!-- Row 7: 12:25 - 01:15 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section A -->
-                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Project (Sec B) -->
-                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec B)</span>
-                                    </td>
-                                </tr>
-                                <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
-                                    <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
-                                </tr>
-                                <!-- Row 9: 02:05 - 03:45 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section B (Lab) -->
-                                        <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Section A (Lab) -->
-                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                                <!-- Row 10: 03:45 - 04:35 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;">
-                                        <!-- Project (Sec A) -->
-                                        <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec A)</span>
-                                    </td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                                <!-- Row 11: 04:35 - 06:15 -->
-                                <tr>
-                                    <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Legend (Key) -->
-                        <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
-                            <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
-                                <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                Section A, LH 310
+                
+                <!-- DASHBOARD VIEW -->
+                <div id="classroom-dashboard">
+                    <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em;">Welcome to the Live Class Room. Select a course below to view details.</p>
+                    <div class="course-grid">
+                        <!-- Card 1: 23MAT106 -->
+                        <div class="course-card" onclick="openCourse('course-mat106')">
+                            <div>
+                                <h4>Mathematics for Intelligent Systems - I</h4>
+                                <p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
+                                <p><strong>Subject:</strong> Linear Algebra, ODEs, Probability</p>
+                                <p><strong>Students:</strong> BTech AID</p>
                             </div>
-                            <div style="display: inline-block; font-size: 0.9em;">
-                                <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                Section B, LH 314
+                            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
+                                Click to view Schedule, Syllabus & Notes &rarr;
+                            </div>
+                        </div>
+
+                        <!-- Card 2: 23CHY115 -->
+                        <div class="course-card" onclick="openCourse('course-chy115')">
+                            <div>
+                                <h4>Material Informatics</h4>
+                                <p><span class="course-code">23CHY115</span> <span class="semester-tag">Fall 2025</span></p>
+                                <p><strong>Subject:</strong> AI in Material Science</p>
+                                <p><strong>Students:</strong> BTech AID</p>
+                            </div>
+                            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
+                                Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
                     </div>
                 </div>
-               
-                <div class="section">
-                    <h3>Syllabus</h3>
-                    <dl>
-                        <dt>Unit 1</dt>
-                        <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
-                       
-                        <dt>Unit 2</dt>
-                        <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
 
-                        <dt>Unit 3</dt>
-                        <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+                <!-- DETAILED VIEW: 23MAT106 -->
+                <div id="course-mat106" class="course-detail-view">
+                    <button class="back-btn" onclick="closeCourse()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back to Dashboard
+                    </button>
+                    
+                    <div class="section">
+                        <h3>Course Details</h3>
+                        <ul>
+                            <li><strong>Class:</strong> BTech AID</li>
+                            <li><strong>Semester:</strong> Fall, 2025 </li>
+                            <li><strong>Course Code:</strong> 23MAT106</li>
+                        </ul>
+                    </div>
 
-                        <dt>Unit 4</dt>
-                        <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
-                    </dl>
+                    <div class="section">
+                        <!-- Updated the header to reflect the content -->
+                        <h3>Combined Weekly Schedule</h3>
+
+                        <!-- Sub-headers for the course details -->
+                        <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
+
+                        <!-- Outer container to simulate the tcolorbox border -->
+                        <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
+
+                            <!-- Main Schedule Table -->
+                            <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
+                                <thead>
+                                    <tr style="background-color: #F2F2F2;">
+                                        <!-- Table Headers (thead) -->
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
+                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Row 1: 08:00 - 08:50 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                    <!-- Row 2: 08:50 - 09:40 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section A -->
+                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 3: 09:40 - 10:30 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section B -->
+                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section A -->
+                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section B -->
+                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                    <!-- Row 4: 10:30 - 10:45 (Break) -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
+                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
+                                    </tr>
+                                    <!-- Row 5: 10:45 - 11:35 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                    <!-- Row 6: 11:35 - 12:25 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section B -->
+                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 7: 12:25 - 01:15 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section A -->
+                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Project (Sec B) -->
+                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec B)</span>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
+                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
+                                    </tr>
+                                    <!-- Row 9: 02:05 - 03:45 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section B (Lab) -->
+                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Section A (Lab) -->
+                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                    <!-- Row 10: 03:45 - 04:35 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;">
+                                            <!-- Project (Sec A) -->
+                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec A)</span>
+                                        </td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                    <!-- Row 11: 04:35 - 06:15 -->
+                                    <tr>
+                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Legend (Key) -->
+                            <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
+                                <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
+                                    <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
+                                    Section A, LH 310
+                                </div>
+                                <div style="display: inline-block; font-size: 0.9em;">
+                                    <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
+                                    Section B, LH 314
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="section">
+                        <h3>Syllabus</h3>
+                        <dl>
+                            <dt>Unit 1</dt>
+                            <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
+                           
+                            <dt>Unit 2</dt>
+                            <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
+
+                            <dt>Unit 3</dt>
+                            <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+
+                            <dt>Unit 4</dt>
+                            <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
+                        </dl>
+                    </div>
+
+                    <div class="section">
+                        <h3>Lecture Notes</h3>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Lecture 01: Introduction to Linear Algebra for AI (06/08/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxrR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
+                          <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
+    >Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing"
+    >Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/20255)</a> - (LH 310/314)</li>
+                          <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharin">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
+                           <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
+                          <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?
+    usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
+                               <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025)</a> - (LH 310/314)</li>
+                               <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025)</a> - (LH 310/314)</li>
+                                <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
+                                 <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025)</a> - (LH 310/314)</li>
+                               <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
+                                   <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
+                                    <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
+                                        <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025)</a> - (LH 15/16)</li>
+                                      <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+                                       <li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
+                                       
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Topical Project</h3>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing">Project: Obtaining Computer Glassy States by Instantaneous Quench </a> - (Deadline: 5 Dec, 2025)</li>
+                            <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing"> Review Guidelines and Submission Format</a> - (To be Updated soon)</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Assignments</h3>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1rkGgMks5BO0PGgv5f-wHzubaMnZHBIxF/view?usp=sharing">Assignment 1: Linear Algebra and ML </a> - (Due: 18/08/2025)</li>
+                            <li><a href="https://drive.google.com/file/d/1yReUaF3pPoDgymTmBLUbRtqrZP40dzlW/view?usp=sharing">Assignment 2: Differential Equations and Modeling</a> - (Due: 11/10/2025)</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="section">
-                    <h3>Lecture Notes</h3>
-                    <ul>
-                        <li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Lecture 01: Introduction to Linear Algebra for AI (06/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxrR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
-                       <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
-                      <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
->Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/20255)</a> - (LH 310/314)</li>
-                       <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing"
->Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/20255)</a> - (LH 310/314)</li>
-                      <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharin">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
-                       <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
-                      <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?
-usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025))</a> - (LH 310/314)</li>
-                        <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025))</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025))</a> - (LH 310/314)</li>
-                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
-                             <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025))</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
-                               <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
-                                <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
-                                    <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025))</a> - (LH 15/16)</li>
-                                  <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
-                                   <li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
-                                   
-                    </ul>
+                <!-- DETAILED VIEW: 23CHY115 -->
+                <div id="course-chy115" class="course-detail-view">
+                    <button class="back-btn" onclick="closeCourse()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back to Dashboard
+                    </button>
+
+                    <div class="section">
+                        <h3>Course Details</h3>
+                        <ul>
+                            <li><strong>Class:</strong> BTech AID</li>
+                            <li><strong>Semester:</strong> Fall, 2025 </li>
+                            <li><strong>Course Code:</strong> 23CHY115</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Combined Weekly Schedule</h3>
+                        <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
+                        <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto; background-color: #fdfdfd; text-align: center;">
+                            <p style="font-style: italic; color: #7f8c8d; padding: 20px;">To be updated soon</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Syllabus</h3>
+                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Lecture Notes</h3>
+                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Topical Project</h3>
+                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Assignments</h3>
+                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                    </div>
                 </div>
 
-                <div class="section">
-                    <h3>Topical Project</h3>
-                    <ul>
-                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing">Project: Obtaining Computer Glassy States by Instantaneous Quench </a> - (Deadline: 5 Dec, 2025)</li>
-                        <li><a href="https://drive.google.com/file/d/1IOj-HEMt-HTjfKBQ2hVYEeZsmK0qXuQg/view?usp=sharing"> Review Guidelines and Submission Format</a> - (To be Updated soon)</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h3>Assignments</h3>
-                    <ul>
-                        <li><a href="https://drive.google.com/file/d/1rkGgMks5BO0PGgv5f-wHzubaMnZHBIxF/view?usp=sharing">Assignment 1: Linear Algebra and ML </a> - (Due: 18/08/2025)</li>
-                        <li><a href="https://drive.google.com/file/d/1yReUaF3pPoDgymTmBLUbRtqrZP40dzlW/view?usp=sharing">Assignment 2: Differential Equations and Modeling</a> - (Due: 11/10/2025)</li>
-                    </ul>
-                </div>
              </div>
         </div>
 
@@ -1332,6 +1496,8 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                 if (sessionStorage.getItem('classroomAccessGranted') === 'true') {
                     classroomPrompt.style.display = 'none';
                     classroomContent.classList.remove('hidden');
+                    // Reset views: Show dashboard, hide details
+                    closeCourse(); 
                 } else {
                     classroomPrompt.style.display = 'block';
                     classroomContent.classList.add('hidden');
@@ -1361,6 +1527,29 @@ usp=sharin">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)
                 });
             }
         });
+
+        // --- Live Classroom Dashboard Logic ---
+        function openCourse(courseId) {
+            // Hide Dashboard
+            document.getElementById('classroom-dashboard').style.display = 'none';
+            // Hide all detail views
+            const views = document.querySelectorAll('.course-detail-view');
+            views.forEach(view => view.classList.remove('active'));
+            // Show selected course
+            const target = document.getElementById(courseId);
+            if(target) target.classList.add('active');
+            // Scroll to top of container
+            document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function closeCourse() {
+            // Hide all detail views
+            const views = document.querySelectorAll('.course-detail-view');
+            views.forEach(view => view.classList.remove('active'));
+            // Show Dashboard
+            const dashboard = document.getElementById('classroom-dashboard');
+            if(dashboard) dashboard.style.display = 'block';
+        }
     </script>
 
 </body>
