@@ -761,7 +761,7 @@
             <div class="pre-container-inner">
                 <div class="pre-header">
                     <h1>⚛️ Physics Research Explorer</h1>
-                    <p>Generate innovative research ideas using Google Gemini 1.5 Flash</p>
+                    <p>Generate innovative research ideas using Google Gemini 1.5 Pro</p>
                 </div>
                 <div class="pre-research-builder">
                     <div class="pre-physics-core"><p>✨ <strong>Physics as the Foundation</strong></p></div>
@@ -968,8 +968,8 @@
         async function callGeminiAPI(topics, query, apiKey) {
             const prompt = `Act as a physics research assistant. Generate 4 innovative research ideas that combine Physics with: ${topics.join(', ')}. ${query ? `Focus specificially on: ${query}.` : ''} Return ONLY a JSON array with objects having fields: title, description, domains, impact (High/Medium/Low).`;
             
-            // Updated to Gemini 1.5 Flash
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+            // Updated to Gemini 1.5 Pro to fix the "Flash not found" error
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${apiKey}`;
             
             const response = await fetch(url, {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
