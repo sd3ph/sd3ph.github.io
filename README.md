@@ -492,100 +492,23 @@
             text-decoration: underline;
         }
 
-        /* --- Chatbot Widget Styles (Retained for CSS consistency, though widget is removed) --- */
-        #chatbot-widget {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 1000;
-        }
-
-        #chatbot-bubble {
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease;
-        }
-
-        #chatbot-bubble:hover {
-            transform: scale(1.1);
-            background-color: #d35400; /* Darker accent color */
-        }
-       
-        #chatbot-bubble .icon-open, #chatbot-bubble .icon-close {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            position: absolute;
-        }
-
-        #chatbot-bubble .icon-close {
-            transform: rotate(-90deg) scale(0.5);
-            opacity: 0;
-        }
-
-        #chatbot-widget.open #chatbot-bubble {
-            background-color: var(--primary-color);
-            border-radius: 15px;
-        }
-
-        #chatbot-widget.open #chatbot-bubble .icon-open {
-            transform: rotate(90deg) scale(0.5);
-            opacity: 0;
-        }
-
-        #chatbot-widget.open #chatbot-bubble .icon-close {
-            transform: rotate(0deg) scale(1);
-            opacity: 1;
-        }
-
-
-        #chatbot-iframe-container {
-            position: absolute;
-            bottom: 80px; /* Position above the bubble */
-            right: 0;
-            width: 350px;
-            height: 500px;
-            border-radius: 15px;
+        /* --- Playground / Embedded Chatbot Styles --- */
+        .playground-container {
+            width: 100%;
+            height: 75vh; /* Take up significant vertical space */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-            transform: scale(0.95) translateY(10px);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-            transform-origin: bottom right;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        #chatbot-widget.open #chatbot-iframe-container {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1) translateY(0);
-        }
-
-        #chatbot-iframe-container iframe {
+        
+        .playground-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-       
-        /* Responsive styles for chatbot */
-        @media (max-width: 480px) {
-            #chatbot-iframe-container {
-                width: calc(100vw - 40px);
-                height: 70vh;
-                bottom: 75px;
-                right: -10px;
-            }
-            #chatbot-widget {
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-       
+
         /* --- Live Class Room Styles --- */
         .password-prompt-container {
             text-align: center;
@@ -729,11 +652,11 @@
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
+                <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
-                <!-- ADDED PLAYGROUND LINK -->
-                <li><a href="#playground" class="nav-link">PLAYGROUND</a></li>
                 <li><a href="#misc" class="nav-link">misc</a></li>
+                <li><a href="#playground" class="nav-link">Playground</a></li>
             </ul>
         </nav>
     </header>
@@ -1403,18 +1326,6 @@
             </div>
         </div>
 
-        <!-- NEW: Playground Page -->
-        <div id="playground" class="page-content">
-            <h2><span style="vertical-align: middle;">🎮</span> Aadri 2.0 Playground</h2>
-            <div class="section">
-                <p>Welcome to the Playground. Use the conversational interface below to query and interact with Aadri 2.0.</p>
-                
-                <!-- Container for the embedded chatbot -->
-                <div style="width: 100%; height: 75vh; border: 1px solid #bdc3c7; border-radius: 8px; overflow: hidden; background-color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0" style="width: 100%; height: 100%; border: none;"></iframe>
-                </div>
-            </div>
-        </div>
 
         <!-- miscellaneous Page -->
         <div id="misc" class="page-content">
@@ -1440,6 +1351,18 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- NEW: Playground Page (Chatbot moved here) -->
+        <div id="playground" class="page-content">
+            <h2><span style="vertical-align: middle;">🎮</span> Aadri 2.0 Playground</h2>
+            <div class="section">
+                <p>Welcome to the Playground. Use the conversational interface below to query and interact with Aadri 2.0.</p>
+                <div class="playground-container">
+                    <iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
@@ -1451,7 +1374,6 @@
             // --- DOM Elements ---
             const navLinks = document.querySelectorAll('.nav-link');
             const pageContents = document.querySelectorAll('.page-content');
-            // Removed floating chatbot references
             const passwordForm = document.getElementById('password-form');
             const passwordInput = document.getElementById('passcode-input');
             const passwordErrorMsg = document.getElementById('password-error-message');
@@ -1541,9 +1463,9 @@
             // Hide all detail views
             const views = document.querySelectorAll('.course-detail-view');
             views.forEach(view => view.classList.remove('active'));
-            // Show Das​hboard
+            // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
-            if(dashboard) da​shboard.style.display = '​block';
+            if(dashboard) dashboard.style.display = '​block';
         }
     </script>
 
