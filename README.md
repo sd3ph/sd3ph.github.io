@@ -1,4 +1,4 @@
-​<html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -492,100 +492,23 @@
             text-decoration: underline;
         }
 
-        /* --- Chatbot Widget Styles --- */
-        #chatbot-widget {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 1000;
-        }
-
-        #chatbot-bubble {
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease;
-        }
-
-        #chatbot-bubble:hover {
-            transform: scale(1.1);
-            background-color: #d35400; /* Darker accent color */
-        }
-       
-        #chatbot-bubble .icon-open, #chatbot-bubble .icon-close {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            position: absolute;
-        }
-
-        #chatbot-bubble .icon-close {
-            transform: rotate(-90deg) scale(0.5);
-            opacity: 0;
-        }
-
-        #chatbot-widget.open #chatbot-bubble {
-            background-color: var(--primary-color);
-            border-radius: 15px;
-        }
-
-        #chatbot-widget.open #chatbot-bubble .icon-open {
-            transform: rotate(90deg) scale(0.5);
-            opacity: 0;
-        }
-
-        #chatbot-widget.open #chatbot-bubble .icon-close {
-            transform: rotate(0deg) scale(1);
-            opacity: 1;
-        }
-
-
-        #chatbot-iframe-container {
-            position: absolute;
-            bottom: 80px; /* Position above the bubble */
-            right: 0;
-            width: 350px;
-            height: 500px;
-            border-radius: 15px;
+        /* --- Playground / Embedded Chatbot Styles --- */
+        .playground-container {
+            width: 100%;
+            height: 75vh; /* Take up significant vertical space */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-            transform: scale(0.95) translateY(10px);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-            transform-origin: bottom right;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        #chatbot-widget.open #chatbot-iframe-container {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1) translateY(0);
-        }
-
-        #chatbot-iframe-container iframe {
+        
+        .playground-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-       
-        /* Responsive styles for chatbot */
-        @media (max-width: 480px) {
-            #chatbot-iframe-container {
-                width: calc(100vw - 40px);
-                height: 70vh;
-                bottom: 75px;
-                right: -10px;
-            }
-            #chatbot-widget {
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-       
+
         /* --- Live Class Room Styles --- */
         .password-prompt-container {
             text-align: center;
@@ -733,6 +656,7 @@
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
                 <li><a href="#misc" class="nav-link">misc</a></li>
+                <li><a href="#playground" class="nav-link">Playground</a></li>
             </ul>
         </nav>
     </header>
@@ -1427,17 +1351,17 @@
                 </ul>
             </div>
         </div>
-
-
-
-    <!-- Chatbot Widget -->
-    <div id="chatbot-widget">
-        <div id="chatbot-bubble">
-            <div class="icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
-            <div class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></div>
+        
+        <!-- NEW: Playground Page (Chatbot moved here) -->
+        <div id="playground" class="page-content">
+            <h2><span style="vertical-align: middle;">🎮</span> Aadri 2.0 Playground</h2>
+            <div class="section">
+                <p>Welcome to the Playground. Use the conversational interface below to query and interact with Aadri 2.0.</p>
+                <div class="playground-container">
+                    <iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe>
+                </div>
+            </div>
         </div>
-        <div id="chatbot-iframe-container"><iframe src="https://aadri-chatbot-v-2-0-774248093245.us-west1.run.app/" frameborder="0"></iframe></div>
-    </div>
 
 
     <script>
@@ -1450,8 +1374,6 @@
             // --- DOM Elements ---
             const navLinks = document.querySelectorAll('.nav-link');
             const pageContents = document.querySelectorAll('.page-content');
-            const chatbotBubble = document.getElementById('chatbot-bubble');
-            const chatbotWidget = document.getElementById('chatbot-widget');
             const passwordForm = document.getElementById('password-form');
             const passwordInput = document.getElementById('passcode-input');
             const passwordErrorMsg = document.getElementById('password-error-message');
@@ -1521,14 +1443,6 @@
                     }
                 });
             }
-
-
-            // --- Chatbot Logic ---
-            if (chatbotBubble && chatbotWidget) {
-                chatbotBubble.addEventListener('click', () => {
-                    chatbotWidget.classList.toggle('open');
-                });
-            }
         });
 
         // --- Live Classroom Dashboard Logic ---
@@ -1551,7 +1465,7 @@
             views.forEach(view => view.classList.remove('active'));
             // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
-            if(dashboard) da​shboard.style.display = '​block';
+            if(dashboard) dashboard.style.display = '​block';
         }
     </script>
 
