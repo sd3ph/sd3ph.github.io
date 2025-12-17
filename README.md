@@ -1,4 +1,4 @@
-<html lang="en">
+​<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1551,7 +1551,7 @@
             views.forEach(view => view.classList.remove('active'));
             // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
-            if(dashboard) dashboard.style.display = '​block';
+            if(dashboard) da​shboard.style.display = '​block';
         }
     </script>
 
