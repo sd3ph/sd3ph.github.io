@@ -1459,13 +1459,13 @@
             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
         }
 
-        function closeCourse() {
+       function closeCourse() {
             // Hide all detail views
             const views = document.querySelectorAll('.course-detail-view');
             views.forEach(view => view.classList.remove('active'));
             // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
-            if(dashboard) dashboard.style.display = '​block';
+            if(dashboard) dashboard.style.display = 'block';
         }
     </script>
 
