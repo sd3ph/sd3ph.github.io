@@ -1329,8 +1329,8 @@
                 <h3><span style="vertical-align: middle;">🩺</span> MedScriptAI: Intelligent Medical Documentation</h3>
                 <h4>MedScriptAI – Automated Clinical Scripting and Analysis Engine</h4>
 
-                <h4>🔹 Team</h4>
-                <p>To be announced.</p>
+                <h4>🔹 Developer Team</h4>
+                <p>S. Dutta </p>
 
                 <h4>🔹 Project Synopsis</h4>
                 <p>MedScriptAI utilizes advanced natural language processing to transcribe and analyze clinical interactions. By automating documentation, it allows healthcare professionals to focus more on patient care and less on administrative tasks.</p>
