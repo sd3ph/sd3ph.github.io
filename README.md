@@ -1304,7 +1304,7 @@
                     <li>To set a new standard for how academics present themselves digitally.</li>
                 </ul>
                  <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
-    <p>Evaluate the application's real-time conversational capabilities on the go: <a href="https://aadri-chatbot-v-2-0-released-version-774248093245.us-west1.run.app" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">Test Aadri 2.0 Live</a></p>
+    <p>Evaluate the application's real-time conversational capabilities on the go, in the playground subpage. Read the: <a href="https://drive.google.com/file/d/1wTpjT0-jby8hUuf01bEL8L08Mx2ihmwp/view?usp=sharing" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">White Paper</a></p>
             </div>
 
             <div class="section">
