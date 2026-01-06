@@ -968,7 +968,8 @@
                                 <p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
                                 <p><strong>Subject:</strong> AI in Material Science</p>
                                 <p><strong>Credit:</strong> 3 </p>
-                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, Second Semester</p>
+                                <p><strong>Timeline:</strong> Since 5 Jan 2026 </p>
+                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
                             </div>
                             <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
                                 Click to view Schedule, Syllabus & Notes &rarr;
