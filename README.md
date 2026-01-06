@@ -725,8 +725,8 @@
                 </ul>
             </div>
             <div style="display: flex; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px; border-radius: 6px;">
-                <img src="Intro.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
-                <img src="Intro2.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
+                <img src="cavitation.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
+                <img src="mips.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
             </div>
             <div class="section">
                 <h3>Key Research Areas</h3>
