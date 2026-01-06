@@ -839,8 +839,8 @@
             <div class="section">
                 <h3>Courses Taught</h3>
                 <ul>
-                    <li>Mathematics for Intelligent Systems, 23MAT106, First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025) .</li>
-                    <li>Mathematics for AI, School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Bootcamp (AI & Data Science Core) .</li>
+                    <li>Material Informatics, 23CHY115, Second Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Spring, 2026) .</li>
+                    <li>thematics for Intelligent Systems, 23MAT106, First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025) .</li>
                     <li>Research Methodology: S. N. Bose National Centre for Basic Sciences.</li>
                 </ul>
             </div>
@@ -1413,7 +1413,11 @@
 
                     <div class="section">
                         <h3>Lecture Notes</h3>
-                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/10rcKnWqmk5Hy0MSTJqXo8-H74M2xk72T/view?usp=sharing">Lecture 01-03: Overview of Material Informatics (05-09/01/2026)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1cZaj16h_Sk6r1eZzc-ZFUbtcTkD7J-z2/view?usp=sharing">Lecture S1: Generative Prediction using Koopman Theory (06/01/2026)</a> - (LH 15/16)</li>       
+                                          
+                        </ul>
                     </div>
 
                     <div class="section">
@@ -1423,7 +1427,10 @@
 
                     <div class="section">
                         <h3>Assignments</h3>
-                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                         <ul>
+                            <li><a href="https://drive.google.com/file/d/1DHuBZ-bzmekvveB4S0OiRT2LBufMDDvi/view?usp=sharing">Assignment 01: Due Date 31/01/2026 </a> - (LH 15/16)</li>     
+                                          
+                        </ul>
                     </div>
                 </div>
 
