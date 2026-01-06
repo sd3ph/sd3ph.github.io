@@ -965,7 +965,7 @@
                         <div class="course-card" onclick="openCourse('course-chy115')">
                             <div>
                                 <h4>Material Informatics</h4>
-                                <p><span class="course-code">23CHY115</span> <span class="semester-tag">Fall 2025</span></p>
+                                <p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
                                 <p><strong>Subject:</strong> AI in Material Science</p>
                                 <p><strong>Credit:</strong> 3 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, Second Semester</p>
