@@ -509,7 +509,7 @@
             border: none;
         }
 
-        /* --- Live Class Room Styles --- */
+        /* --- Live Class Room & Teaching Dashboard Styles --- */
         .password-prompt-container {
             text-align: center;
             padding: 40px 20px;
@@ -556,7 +556,7 @@
             display: none;
         }
 
-        /* --- New Course Dashboard Styles --- */
+        /* --- New Course/Teaching Dashboard Styles --- */
         .course-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -573,6 +573,23 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .course-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover::after {
+            transform: scaleX(1);
         }
         .course-card:hover {
             transform: translateY(-5px);
@@ -625,11 +642,40 @@
             margin-right: 5px;
             fill: currentColor;
         }
-        .course-detail-view {
+        .course-detail-view, .teaching-detail-view {
             display: none;
             animation: fadeIn 0.4s ease-out;
         }
-        .course-detail-view.active {
+        .course-detail-view.active, .teaching-detail-view.active {
+            display: block;
+        }
+
+        /* --- Outreach Styles --- */
+        .outreach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .outreach-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+        .outreach-card:hover {
+            transform: translateY(-5px);
+        }
+        .outreach-card h4 {
+            color: var(--primary-color);
+            border-bottom: none;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        .outreach-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
             display: block;
         }
 
@@ -651,6 +697,7 @@
                 <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#outreach" class="nav-link">Outreach</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
                 <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
@@ -759,7 +806,7 @@
             </div>
         </div>
 
-        <!-- UPDATED: Publication Page - Grouped by Year -->
+        <!-- Publication Page -->
         <div id="publication" class="page-content">
             <h2>📚 Publications</h2>
             <div class="section">
@@ -833,25 +880,122 @@
         </div>
 
 
-        <!-- 3. Teaching Page -->
+        <!-- 3. Teaching Page (REDESIGNED) -->
         <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
-            <div class="section">
-                <h3>Courses Taught</h3>
-                <ul>
-                    <li>Material Informatics, 23CHY115, Second Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Spring, 2026) .</li>
-                    <li>thematics for Intelligent Systems, 23MAT106, First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025) .</li>
-                    <li>Research Methodology: S. N. Bose National Centre for Basic Sciences.</li>
-                </ul>
+           
+            <!-- TEACHING DASHBOARD -->
+            <div id="teaching-dashboard">
+                <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: var(--secondary-color);">
+                    Explore our academic engagements, mentoring programs, and pedagogical philosophy.
+                </p>
+               
+                <div class="course-grid">
+                    <!-- Card 1: Academic Courses -->
+                    <div class="course-card" onclick="openTeachingSection('teaching-courses')">
+                        <div>
+                            <h4><span style="vertical-align: middle;">👨‍🏫</span> Academic Courses</h4>
+                            <p><strong>Focus:</strong> AI, Mathematics & Material Science</p>
+                            <p>Courses delivered at Amrita Vishwa Vidyapeetham and guest lectures.</p>
+                            <ul style="margin-top:10px; font-size: 0.9em; color: var(--secondary-color);">
+                                <li>Material Informatics</li>
+                                <li>Math for Intelligent Systems</li>
+                                <li>Research Methodology</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                            View Course List &rarr;
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Mentoring -->
+                    <div class="course-card" onclick="openTeachingSection('teaching-mentoring')">
+                        <div>
+                            <h4><span style="vertical-align: middle;">🤝</span> Mentoring & Supervision</h4>
+                            <p><strong>Role:</strong> Advisor & Co-Supervisor</p>
+                            <p>Guiding research interns, Masters thesis students, and student collaborators.</p>
+                            <div style="margin-top:10px;">
+                                <span class="semester-tag" style="background-color: var(--primary-color);">Interns</span>
+                                <span class="semester-tag" style="background-color: var(--primary-color);">Thesis</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                            View Student Profiles &rarr;
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Philosophy -->
+                    <div class="course-card" onclick="openTeachingSection('teaching-philosophy')">
+                        <div>
+                            <h4><span style="vertical-align: middle;">🧠</span> Teaching Philosophy</h4>
+                            <p><strong>Approach:</strong> Interactive & Generative</p>
+                            <p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
+                        </div>
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                            Read Methodology &rarr;
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="section">
-                <h3>Mentoring Experience</h3>
-                <ul>
-                    <li>Research Intern: A. Jagdish, School of Physical Sciences, Amrita Vishwa Vidyapeetham (06/2025 onwards)</li>
-                    <li>Student Collaborators: A. Harish, A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham  (06/2025 onwards)</li>
-                    <li>Masters Thesis Co-supervision: Magnus Olsen, Understanding Non-Newtonian Materials (Supervisor: R. Cabriolu, Norwegian University of Science and Technology (since 08/2025)</li>
-                </ul>
+            <!-- DETAILED VIEW: ACADEMIC COURSES -->
+            <div id="teaching-courses" class="teaching-detail-view">
+                <button class="back-btn" onclick="closeTeachingSection()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    Back to Dashboard
+                </button>
+                <div class="section">
+                    <h3>Courses Taught</h3>
+                    <ul>
+                        <li><strong>Material Informatics (23CHY115)</strong><br>
+                        Second Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Spring, 2026).</li>
+                        <li><strong>Mathematics for Intelligent Systems (23MAT106)</strong><br>
+                        First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025).</li>
+                        <li><strong>Research Methodology</strong><br>
+                        S. N. Bose National Centre for Basic Sciences (Guest/Visiting Faculty).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DETAILED VIEW: MENTORING -->
+            <div id="teaching-mentoring" class="teaching-detail-view">
+                <button class="back-btn" onclick="closeTeachingSection()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    Back to Dashboard
+                </button>
+                <div class="section">
+                    <h3>Research Supervision</h3>
+                    <div class="research-area-item">
+                        <strong>Research Interns</strong>
+                        <p>A. Jagdish, School of Physical Sciences, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+                    </div>
+                    <div class="research-area-item">
+                        <strong>Student Collaborators</strong>
+                        <p>A. Harish, A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+                    </div>
+                    <div class="research-area-item">
+                        <strong>Masters Thesis Co-supervision</strong>
+                        <p>Magnus Olsen, <em>Understanding Non-Newtonian Materials</em> <br> (Supervisor: R. Cabriolu, Norwegian University of Science and Technology, since 08/2025)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETAILED VIEW: PHILOSOPHY -->
+            <div id="teaching-philosophy" class="teaching-detail-view">
+                <button class="back-btn" onclick="closeTeachingSection()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    Back to Dashboard
+                </button>
+                <div class="section">
+                    <h3>My Teaching Philosophy</h3>
+                    <p>My approach to teaching is grounded in the belief that the interface between Physics and Artificial Intelligence provides a unique playground for intuitive understanding. I emphasize:</p>
+                    <ul>
+                        <li><strong>Active Learning:</strong> Moving beyond lectures to include live coding sessions, simulation workshops, and "playground" style problem solving.</li>
+                        <li><strong>Interdisciplinary Thinking:</strong> Encouraging students to see the mathematical structures common to both quantum mechanics and machine learning.</li>
+                        <li><strong>Project-Based Assessment:</strong> Evaluating understanding through the creation of tangible models and tools (like our Lab Products) rather than just rote memorization.</li>
+                    </ul>
+                    <p><em>"Education is not the learning of facts, but the training of the mind to think." - Albert Einstein</em></p>
+                </div>
             </div>
         </div>
 
@@ -902,6 +1046,57 @@
                 </div>
             </div>
         </div>
+
+        <!-- NEW OUTREACH PAGE -->
+        <div id="outreach" class="page-content">
+            <h2><span style="vertical-align: middle;">📢</span> Outreach & Community</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Engaging with the scientific community and the public to demystify Physics and AI.</p>
+           
+            <div class="outreach-grid">
+                <!-- Outreach Item 1 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🗣️</span>
+                    <h4>Invited Talks</h4>
+                    <p>Delivering lectures at premier institutes to foster collaboration and knowledge exchange.</p>
+                    <ul style="font-size: 0.9em; color: var(--secondary-color);">
+                        <li>IISc Bangalore (2024)</li>
+                        <li>IIT Madras (2023)</li>
+                        <li>SN Bose Centre (2022)</li>
+                    </ul>
+                </div>
+               
+                <!-- Outreach Item 2 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🛠️</span>
+                    <h4>Workshops</h4>
+                    <p>Organizing hands-on sessions on High-Performance Computing and Molecular Dynamics.</p>
+                    <p style="font-size: 0.9em;"><em>"From Atoms to Algorithms" - Summer School Coordinator</em></p>
+                </div>
+
+                <!-- Outreach Item 3 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🌍</span>
+                    <h4>Science Popularization</h4>
+                    <p>Writing blogs and participating in open-house events to explain complex systems to high-school students.</p>
+                </div>
+               
+                <!-- Outreach Item 4 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🏆</span>
+                    <h4>Competitions</h4>
+                    <p>Mentoring student teams for Hackathons and AI-based Physics challenges.</p>
+                </div>
+            </div>
+           
+            <div class="section" style="margin-top: 30px;">
+                <h3>Featured Engagement</h3>
+                <div class="research-area-item">
+                    <strong>EuroHPC Summit 2025</strong>
+                    <p>Participated in the panel discussion on "The Future of AI in Scientific Computing" representing the perspectives of soft matter physics.</p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Latest News Page -->
         <div id="latest" class="page-content">
@@ -1442,7 +1637,7 @@
              </div>
         </div>
 
-        <!-- UPDATED: Lab Products Page -->
+        <!-- Lab Products Page -->
         <div id="products" class="page-content">
             <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
            
@@ -1579,6 +1774,11 @@
                 if(targetId === '#classroom') {
                     checkClassroomAccess();
                 }
+
+                // Reset teaching dashboard state when navigating away/to
+                if(targetId === '#teaching') {
+                    closeTeachingSection();
+                }
             }
 
             navLinks.forEach(link => {
@@ -1650,6 +1850,29 @@
             // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
             if(dashboard) dashboard.style.display = 'block';
+        }
+
+        // --- Teaching Page Dashboard Logic (Separated from Classroom) ---
+        function openTeachingSection(sectionId) {
+            // Hide Dashboard
+            document.getElementById('teaching-dashboard').style.display = 'none';
+            // Hide all detail views
+            const views = document.querySelectorAll('.teaching-detail-view');
+            views.forEach(view => view.classList.remove('active'));
+            // Show selected section
+            const target = document.getElementById(sectionId);
+            if(target) target.classList.add('active');
+             // Scroll to top of container
+             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function closeTeachingSection() {
+             // Hide all detail views
+             const views = document.querySelectorAll('.teaching-detail-view');
+             views.forEach(view => view.classList.remove('active'));
+             // Show Dashboard
+             const dashboard = document.getElementById('teaching-dashboard');
+             if(dashboard) dashboard.style.display = 'block';
         }
     </script>
 
