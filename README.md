@@ -947,12 +947,47 @@
                 <div class="section">
                     <h3>Courses Taught</h3>
                     <ul>
-                        <li><strong>Material Informatics (23CHY115)</strong><br>
-                        Second Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Spring, 2026).</li>
-                        <li><strong>Mathematics for Intelligent Systems (23MAT106)</strong><br>
-                        First Semester, B. Tech (AI and Data Science Core), School of Artificial Intelligence, Amrita Vishwa Vidyapeetham (Fall, 2025).</li>
-                        <li><strong>Research Methodology</strong><br>
-                        S. N. Bose National Centre for Basic Sciences (Guest/Visiting Faculty).</li>
+                        <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Course Code (Credit)</th>
+            <th>Session</th>
+            <th>Students</th>
+            <th>TLP Feedback (No.)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>B.Tech..2025.R.AID.1.23MAT106 (4)</td>
+            <td>2025-26 Odd</td>
+            <td>65</td>
+            <td>90.81 (46/65)</td>
+        </tr>
+        <tr>
+            <td>B.Tech..2025.R.AID.2.23MAT106 (4)</td>
+            <td>2025-26 Odd</td>
+            <td>66</td>
+            <td>95.41 (45/66)</td>
+        </tr>
+    </tbody>
+</table>
                     </ul>
                 </div>
             </div>
@@ -1056,7 +1091,7 @@
                 <!-- Outreach Item 1 -->
                 <div class="outreach-card">
                     <span class="outreach-icon">🗣️</span>
-                    <h4>Invited Talks</h4>
+                    <h4>Talks</h4>
                     <p>Delivering lectures at premier institutes to foster collaboration and knowledge exchange.</p>
                     <ul style="font-size: 0.9em; color: var(--secondary-color);">
                         <li>IISc Bangalore (2024)</li>
