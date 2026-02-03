@@ -970,7 +970,7 @@
         <tr>
             <th>Course Code</th>
             <th>Credit</th>
-            <th>Contact Hrs</th>
+            <th>Hrs/Week</th>
             <th>Session</th>
             <th>Students</th>
             <th>TLP-Feedback</th>
