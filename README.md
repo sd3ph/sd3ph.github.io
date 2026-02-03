@@ -967,7 +967,8 @@
 <table>
     <thead>
         <tr>
-            <th>Course Code (Credit)</th>
+            <th>Course Code</th>
+            <th>Credit</th>
             <th>Session</th>
             <th>Students</th>
             <th>TLP Feedback (No.)</th>
@@ -975,13 +976,15 @@
     </thead>
     <tbody>
         <tr>
-            <td>B.Tech..2025.R.AID.1.23MAT106 (4)</td>
+            <td>B.Tech..2025.R.AID.1.23MAT106</td>
+            <td>4</td>
             <td>2025-26 Odd</td>
             <td>65</td>
             <td>90.81 (46/65)</td>
         </tr>
         <tr>
-            <td>B.Tech..2025.R.AID.2.23MAT106 (4)</td>
+            <td>B.Tech..2025.R.AID.2.23MAT106</td>
+            <td>4</td>
             <td>2025-26 Odd</td>
             <td>66</td>
             <td>95.41 (45/66)</td>
