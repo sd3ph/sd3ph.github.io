@@ -896,11 +896,12 @@
                         <div>
                             <h4><span style="vertical-align: middle;">👨‍🏫</span> Academic Courses</h4>
                             <p><strong>Focus:</strong> AI, Mathematics & Material Science</p>
-                            <p>Courses delivered at Amrita Vishwa Vidyapeetham and guest lectures.</p>
+                            <p>Courses delivered at Amrita Vishwa Vidyapeetham and S. N. Bose National Centre for Basic Sciences.</p>
                             <ul style="margin-top:10px; font-size: 0.9em; color: var(--secondary-color);">
-                                <li>Material Informatics</li>
-                                <li>Math for Intelligent Systems</li>
-                                <li>Research Methodology</li>
+                                <li>Introduction to Material Informatics (23CHY115)</li>
+                                <li>Mathematics for Intelligent Systems-I (23MAT106)</li>
+                                <li>Research Methodology (PHY501)
+                                </li>
                             </ul>
                         </div>
                         <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
