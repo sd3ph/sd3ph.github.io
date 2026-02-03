@@ -1147,19 +1147,8 @@
                 <div class="research-area-item">
                     <strong>Human+AI Collaboration</strong>
                     <p>In a fusion of logic and creativity, we conducted
-an experimental initiative in the Autumn of 2025, challeng
-ing first-year students to move beyond the mechanics of AI
-to the artistry of generation. The resulting anthology com
-piles 115 distinct narratives, representing a massive coordi
-nation of human imagination amplified by Large Language
-Models. This collection showcases a remarkable spectrum
-of themes, refracting a single premise into genres ranging
-from the futuristic sci-fi of The Neural Vault and ZeroTrace
-to the philosophical introspection of synthetic intelligence.
-Demonstrating how artificial tools can yield storytelling,
-wepresent the book: "Tales from the Hidden Layers — An
-Anthology of Neural Symphonies" (115 Stories from 115
-Student coauthors from BTech AID S1 batch, 748 Pages).</p>
+an experimental initiative in the Autumn of 2025, challenging first-year BTech(AID) students to move beyond the mechanics of AI to the artistry of generation. The resulting anthology compiles 115 distinct narratives, representing a massive coordination of human imagination amplified by Large Language Models. This collection showcases a remarkable spectrum of themes, refracting a single premise into genres ranging from the futuristic sci-fi of The Neural Vault and ZeroTrace
+to the philosophical introspection of synthetic intelligence. Demonstrating how artificial tools can yield storytelling, we present the book: "Tales from the Hidden Layers — An Anthology of Neural Symphonies" (115 Stories from 115 Student coauthors from BTech AID S1 batch, 748 Pages).</p>
                 </div>
             </div>
         </div>
