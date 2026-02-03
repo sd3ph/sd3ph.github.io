@@ -964,6 +964,7 @@
         background-color: #f2f2f2;
     }
 </style>
+1. Mathematics for Intelligent Systems - I [B.Tech(AID-2025), 2 Sections]; 10 Contact Hours + Project Hours
 <table>
     <thead>
         <tr>
