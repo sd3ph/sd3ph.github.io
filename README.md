@@ -1137,7 +1137,6 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🌍</span>
                     <h4>Science Popularization</h4>
-                    <p>Writing blogs and participating in open-house events to explain complex systems to high-school students.</p>
                 </div>
                
                 <!-- Outreach Item 4 -->
