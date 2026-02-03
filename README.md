@@ -1136,14 +1136,14 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🌍</span>
                     <h4>Science Popularization</h4>
-                    <p>October 31, 2025 -- Story writing by human-machine collaboration </p>
+                    <p>October 31, 2025 -- Story writing by human-machine collaboration. Participation: 115 Students </p>
                 </div>
                
                 <!-- Outreach Item 4 -->
                 <div class="outreach-card">
                     <span class="outreach-icon">🏆</span>
                     <h4>Competitions</h4>
-                    <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future" </p>
+                    <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
                 </div>
             </div>
            
