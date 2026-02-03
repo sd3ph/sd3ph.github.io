@@ -964,21 +964,38 @@
         background-color: #f2f2f2;
     }
 </style>
-1. Mathematics for Intelligent Systems - I [B.Tech(AID-2025), 2 Sections]; 10 Contact Hours + Project Hours
 <table>
     <thead>
         <tr>
             <th>Course Code</th>
             <th>Credit</th>
+            <th>Contact Hrs</th>
             <th>Session</th>
             <th>Students</th>
-            <th>TLP Feedback Score</th>
+            <th>TLP-Feedback</th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <td>B.Tech..2025.R.AID.1.23CHY115</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2025-26 Even</td>
+            <td>65</td>
+            <td>Ongoing</td>
+        </tr>
+        <tr>
+            <td>B.Tech..2025.R.AID.2.23CHY115</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2025-26 Even</td>
+            <td>66</td>
+            <td>Ongoing</td>
+        </tr>
+        <tr>
             <td>B.Tech..2025.R.AID.1.23MAT106</td>
             <td>4</td>
+            <td>5</td>
             <td>2025-26 Odd</td>
             <td>65</td>
             <td>90.81%</td>
@@ -986,6 +1003,7 @@
         <tr>
             <td>B.Tech..2025.R.AID.2.23MAT106</td>
             <td>4</td>
+            <td>5</td>
             <td>2025-26 Odd</td>
             <td>66</td>
             <td>95.41%</td>
