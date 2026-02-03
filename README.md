@@ -971,7 +971,7 @@
             <th>Credit</th>
             <th>Session</th>
             <th>Students</th>
-            <th>TLP Feedback (No.)</th>
+            <th>TLP Feedback Score</th>
         </tr>
     </thead>
     <tbody>
@@ -980,14 +980,14 @@
             <td>4</td>
             <td>2025-26 Odd</td>
             <td>65</td>
-            <td>90.81 (46/65)</td>
+            <td>90.81%</td>
         </tr>
         <tr>
             <td>B.Tech..2025.R.AID.2.23MAT106</td>
             <td>4</td>
             <td>2025-26 Odd</td>
             <td>66</td>
-            <td>95.41 (45/66)</td>
+            <td>95.41%</td>
         </tr>
     </tbody>
 </table>
