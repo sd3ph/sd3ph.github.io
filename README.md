@@ -1029,7 +1029,9 @@
                     </div>
                     <div class="research-area-item">
                         <strong>Student Collaborators</strong>
-                        <p>A. Harish, A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+                        <p>A. Harish, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+                        <p>A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+                        <p>P. S. Mrudula, Department of AI, Amrita Vishwa Vidyapeetham (11/2025 onwards)</p>
                     </div>
                     <div class="research-area-item">
                         <strong>Masters Thesis Co-supervision</strong>
