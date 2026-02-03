@@ -1117,11 +1117,11 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🗣️</span>
                     <h4>Talks</h4>
-                    <p>Delivering lectures at premier institutes to foster collaboration and knowledge exchange.</p>
+                    <p>Delivering talks at premier institutes.</p>
                     <ul style="font-size: 0.9em; color: var(--secondary-color);">
-                        <li>IISc Bangalore (2024)</li>
-                        <li>IIT Madras (2023)</li>
-                        <li>SN Bose Centre (2022)</li>
+                        <li>International: 3+ </li>
+                        <li>National: 10+ </li>
+                        <li>Total: 23+ </li>
                     </ul>
                 </div>
                
@@ -1129,21 +1129,21 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🛠️</span>
                     <h4>Workshops</h4>
-                    <p>Organizing hands-on sessions on High-Performance Computing and Molecular Dynamics.</p>
-                    <p style="font-size: 0.9em;"><em>"From Atoms to Algorithms" - Summer School Coordinator</em></p>
+                    <p>To be updated</p>
                 </div>
 
                 <!-- Outreach Item 3 -->
                 <div class="outreach-card">
                     <span class="outreach-icon">🌍</span>
                     <h4>Science Popularization</h4>
+                    <p>October 31, 2025 -- Story writing by human-machine collaboration </p>
                 </div>
                
                 <!-- Outreach Item 4 -->
                 <div class="outreach-card">
                     <span class="outreach-icon">🏆</span>
                     <h4>Competitions</h4>
-                    <p>Held on August 28–29, 2025, the Class Hackathon challenged 1st-year BTech AID students to draft "AI for Greener Future" reports using GenAI within 50 minutes. The event successfully demonstrated their ability to translate abstract mathematical theories into concrete, high-tech agricultural solutions. </p>
+                    <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future" </p>
                 </div>
             </div>
            
