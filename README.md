@@ -1144,7 +1144,7 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🏆</span>
                     <h4>Competitions</h4>
-                    <p>Mentoring student teams for Hackathons and AI-based Physics challenges.</p>
+                    <p>Held on August 28–29, 2025, the Class Hackathon challenged 1st-year BTech AID students to draft "AI for Greener Future" reports using GenAI within 50 minutes. The event successfully demonstrated their ability to translate abstract mathematical theories into concrete, high-tech agricultural solutions. </p>
                 </div>
             </div>
            
