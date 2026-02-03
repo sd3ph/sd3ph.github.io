@@ -1145,6 +1145,21 @@
                     <h4>Competitions</h4>
                     <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
                 </div>
+
+                  <!-- Outreach Item 5 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🏆</span>
+                    <h4>Conference</h4>
+                    <p> To be Updated </p>
+                </div>
+
+                 <!-- Outreach Item 6 -->
+                <div class="outreach-card">
+                    <span class="outreach-icon">🏆</span>
+                    <h4>Summer School</h4>
+                    <p> To be Updated</p>
+                </div>
+                
             </div>
            
             <div class="section" style="margin-top: 30px;">
