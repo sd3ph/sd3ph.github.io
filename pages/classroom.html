@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Class Room</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="page-content container">
+    <h2>🧑‍🏫 Live Class Room</h2>
+    <div id="password-prompt-container" class="password-prompt-container">
+      <h3>🔒 Access Restricted</h3>
+      <p>Please enter the passcode to view course materials.</p>
+      <form id="password-form" class="password-form">
+        <input type="password" id="passcode-input" placeholder="Enter passcode" required>
+        <button type="submit">Unlock</button>
+      </form>
+      <p id="password-error-message" class="password-error-message"></p>
+    </div>
+
+    <div id="classroom-content">
+      <div id="classroom-dashboard">
+        <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em;">Welcome to the Live Class Room. Select a course below to view details.</p>
+        <div class="course-grid">
+          <div class="course-card">
+            <div>
+              <h4>Mathematics for Intelligent Systems - I</h4>
+              <p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
+              <p><strong>Subject:</strong> Linear Algebra, ODEs, Probability, Quantum Computing</p>
+              <p><strong>Credit:</strong> 4 </p>
+            </div>
+            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">Click to view Schedule, Syllabus & Notes →</div>
+          </div>
+          <div class="course-card">
+            <div>
+              <h4>Material Informatics</h4>
+              <p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
+              <p><strong>Subject:</strong> AI in Material Science</p>
+              <p><strong>Credit:</strong> 3 </p>
+            </div>
+            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">Click to view Schedule, Syllabus & Notes →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
