@@ -1684,9 +1684,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                             <li><a href="https://drive.google.com/file/d/1x02_HxmbctBWNH9JE-QyohEowLdpwCw6/view?usp=sharing">Lecture 27: Tutorial: Material Discovery with AI </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 26-30: Material Discovery by AI </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1lmd9snw_9iXnuwFd-jeRUOTeB5SqjVov/view?usp=sharing">Lecture 31: Vibrational Dynamics, Normal Mode Analysis (NMA) and Data-Driven Modeling </a> - (LH 15/16)</li>
-
-
-             
+                            <li><a href="https://drive.google.com/file/d/1znn-zVH3Ciy3cJJHQO3Tiuo-i4yUdGIt/view?usp=sharing">Lecture 32-34: Ethical Considerations, Limitations, and Future Directions </a> - (LH 15/16)</li>             
                                           
                         </ul>
                     </div>
