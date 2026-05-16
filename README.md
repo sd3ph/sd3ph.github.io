@@ -810,15 +810,15 @@
         <div id="publication" class="page-content">
             <h2>📚 Publications</h2>
             <div class="section">
-               
+                 <h3>2026</h3>
+               <div class="publication-item">
+                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, Ann. Phys. (Berlin) 538 (4), e00247(2026) [<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.202500247" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
+                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+                </div>
                 <h3>2025</h3>
                 <div class="publication-item">
                     <p class="citation">S. Santra, L. Touzo, C. Dasgupta, A. Dhar, <u>S. Dutta</u>, A. Kundu, P. Le Doussal, G. Schehr & P. Singh, <em>Crystal to liquid cross-over in the active Calogero-Moser model</em>, J. Stat. Mech. 033203 (2025) [<a href="https://iopscience.iop.org/article/10.1088/1742-5468/adbb5d" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
                     <p><strong>Contribution:</strong> <u>Contributing author</u></p>
-                </div>
-                <div class="publication-item">
-                    <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, arXiv:2511.07951 (2025) [<a href="https://arxiv.org/abs/2511.07951" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
-                    <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
                 </div>
                 <div class="publication-item">
                     <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025)  [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p>
