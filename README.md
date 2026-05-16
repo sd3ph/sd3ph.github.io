@@ -1161,6 +1161,24 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
     <h2>✨ Latest News</h2>
     <div class="section">
         <div class="timeline">
+
+         <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience, Chennai </strong>
+                </div>
+            </div>
+
+         <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Archit Harish joined the Institute of Mathematical Sciences, Chennai </strong>
+                </div>
+            </div>
+
+        <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Completed Project: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (2025-2026) (PI: Abhijit A., CoPI:  Sai N Sundarakrishna, T. Subeesh and S. Dutta </strong>
+                </div>
+            </div>
             
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
@@ -1182,7 +1200,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>24: Archit selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+                    <strong>Archit Harish selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
                 </div>
             </div>
 
