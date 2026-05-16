@@ -1465,7 +1465,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                     <div class="section">
                         <h3>Topical Project</h3>
                         <ul>
-                            <li><a href="https://drive.google.com/file/d/1kfk44ClGk1CHYdp4oH3HK4MVGU5g_oYK/view?usp=drive_link"> Summary of Topical Projects </a> - (Deadline: 5 Dec, 2025)</li>
+                            <li><a href="https://drive.google.com/file/d/1kfk44ClGk1CHYdp4oH3HK4MVGU5g_oYK/view?usp=drive_link"> Summary of Topical Projects </a> </li>
                         
                         </ul>
                     </div>
