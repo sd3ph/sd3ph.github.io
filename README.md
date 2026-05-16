@@ -1130,7 +1130,7 @@
                     <span class="outreach-icon">🌍</span>
                     <h4>Science Popularization</h4>
                     <p>October 31, 2025 -- Story writing by human-machine collaboration. Participation: 115 Students </p>
-                    <p>February 6, 2025 -- International Mini-Workshop -- 125 Minutes (Online). Participation: 106 </p>
+                    <p>February 6, 2026 -- International Mini-Workshop -- 125 Minutes (Online). Participation: 106 </p>
                 </div>
                
                 <!-- Outreach Item 4 -->
