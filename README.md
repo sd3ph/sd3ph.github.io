@@ -1157,25 +1157,23 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
 
         <!-- Latest News Page -->
-       <div id="latest" class="page-content">
+     <div id="latest" class="page-content">
     <h2>✨ Latest News</h2>
     <div class="section">
-
-     <div class="timeline">
+        <div class="timeline">
+            
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
                 </div>
             </div>
 
-    <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong>International Mini-Workshop was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta)</strong>
                 </div>
             </div>
     
-        <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
@@ -1205,7 +1203,10 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                     <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
                 </div>
             </div>
-        </div>
+
+        </div> <!-- Close the one and only timeline div here -->
+    </div> <!-- Close section -->
+</div> <!-- Close page-content -->
         
         <!-- NEW: Live Class Room Page -->
         <div id="classroom" class="page-content">
