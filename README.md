@@ -1159,22 +1159,53 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
         <div id="latest" class="page-content">
             <h2>✨ Latest News</h2>
             <div class="section">
-                <div class="timeline">
-                    <div class="timeline-item">
-    <h3 class="timeline-month">November 2025</h3>
-    <div class="timeline-content" style="margin-bottom: 15px;">
-        <strong>November 14: EuroHPC Benchmark Access Awarded for LUMI Clusters</strong>
-        <p>We are pleased to announce that a computing grant for EuroHPC Benchmark Access has been awarded for the LUMI clusters, currently ranked as the 9th fastest supercomputer in the world. This grant provides computing for 2000 Node-Hours, with R. Cabriolu serving as Principal Investigator (PI) and Suman as Co-Principal Investigator (Co-PI).</p></div>
-</div>
-                    <div class="timeline-item"><h3 class="timeline-month">September 2025</h3><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 24: Archit Selected for the flagship Biophysical Meeting at ICTS-TIFR Program</strong><p>Archit has been selected for on-campus participation in the flagship- international meeting "Spatial Organization of Biological Functions", organized by the Biophysical Society, at ICTS-TIFR, scheduled for October 20-25. He will also present a poster on his work, "Learning Micro-Flocking Dynamics in Living Machines by Hybrid Machine Intelligence."</p></div><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 22: Agnevesh’s Research Tenure Extended</strong><p>We are pleased to announce that Agnevesh's research tenure has been extended for an additional three months following a positive recommendation from a review panel.</p></div><div class="timeline-content" style="margin-bottom: 15px;"><strong>September 15: ANRF Grant Proposal Advances</strong><p>Our grant proposal, titled "Learning Order-Disorder by Machine Intelligence," has been successfully accepted for technical evaluation.</p></div></div>
-                    <div class="timeline-item"><h3 class="timeline-month">August 2025</h3><div class="timeline-content" style="margin-bottom: 15px;"><strong>August 30: New Preprint on Dense Persistent Active Fluids</strong><p>Our latest preprint, "Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids," is now available on arXiv. This collaborative work can be accessed at: <a href="https://arxiv.org/abs/2509.00376" target="_blank">arXiv:2509.00376</a>.</p></div><div class="timeline-content"><strong>August 4-15: Agnevesh Participates in ICTS-TIFR Flagship School</strong><p>Congratulations to our intern, Agnevesh, for his selection to participate in the prestigious flagship school "Data Science: Probabilistic and Optimization Methods II", held online by ICTS-TIFR.</p></div></div>
-                    <div class="timeline-item"><h3 class="timeline-month">July 2025</h3><div class="timeline-content"><strong>July 12: Archit to Present at ICAMGT – 2025</strong><p>Congratulations to our student collaborator, Archit, whose research on "Machine Learning Material Heterogeneity at Micro-scale" has been accepted for an oral presentation at the International Conference on Advanced Materials and Green Technology (ICAMGT – 2025).</p></div></div>
-                    <div class="timeline-item"><h3 class="timeline-month">June 2025</h3><div class="timeline-content"><strong>June 2: Manuscript Submitted to Annalen der Physik</strong><p>A new manuscript titled "Persistently Non-Gaussian Metastable Liquids" was submitted to *Annalen der Physik*.</p></div></div>
-                    <div class="timeline-item"><h3 class="timeline-month">May – June 2025</h3><div class="timeline-content"><strong>May 28: Research Visit to ISI-Kolkata</strong><p>Suman made a research visit to the Fluvial Mechanics Laboratory at the Indian Statistical Institute (ISI), Kolkata.</p></div></div>
-                    <div class="timeline-item"><h3 class="timeline-month">March 2025</h3><div class="timeline-content"><strong>March 24: Joined Amrita Vishwa Vidyapeetham</strong><p>Dr. Suman Dutta commenced his appointment as Assistant Professor (Sr. Gd.) at the School of AI, Amrita Vishwa Vidyapeetham, Coimbatore.</p></div></div>
-                </div>
-            </div>
+               <div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>14: EuroHPC Benchmark Access awarded for LUMI clusters.</strong>
         </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>24: Archit selected for the flagship Biophysical Meeting at ICTS-TIFR.</strong>
+        </div>
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>22: Agnevesh’s research tenure extended following a positive review.</strong>
+        </div>
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>15: ANRF grant proposal "Learning Order-Disorder by Machine Intelligence" accepted for technical evaluation.</strong>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>30: New preprint on "Dense Persistent Active Fluids" published on arXiv.</strong>
+        </div>
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>4-15: Agnevesh participated in the ICTS-TIFR flagship school on Data Science.</strong>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>12: Archit accepted for an oral presentation at ICAMGT – 2025.</strong>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>2: Manuscript "Persistently Non-Gaussian Metastable Liquids" submitted to Annalen der Physik.</strong>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>28: Suman conducted a research visit to the Fluvial Mechanics Laboratory at ISI-Kolkata.</strong>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-content" style="margin-bottom: 15px;">
+            <strong>24: Dr. Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor.</strong>
+        </div>
+    </div>
+</div>
+            
        
         <!-- NEW: Live Class Room Page -->
         <div id="classroom" class="page-content">
