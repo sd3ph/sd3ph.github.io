@@ -1157,41 +1157,49 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
 
         <!-- Latest News Page -->
-        <div id="latest" class="page-content">
-            <h2>✨ Latest News</h2>
-            <div class="section">
-               <div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>24: Archit selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
-    </div>
-        </div>
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong> Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
-        </div>
-    </div>
-   <div class="timeline-item">
-        <div class="t.meline-content" style="margin-bottom: 15px;">
-            <strong>2: Manuscript "Persistently Non-Gaussian Metastable Liquids" submitted to Annalen der Physik.</strong>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
+       <div id="latest" class="page-content">
+    <h2>✨ Latest News</h2>
+    <div class="section">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>24: Archit selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <!-- Fixed typo from t.meline to timeline -->
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>2: Manuscript "Persistently Non-Gaussian Metastable Liquids" submitted to Annalen der Physik.</strong>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-            
        
         <!-- NEW: Live Class Room Page -->
         <div id="classroom" class="page-content">
