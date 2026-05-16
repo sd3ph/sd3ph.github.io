@@ -1206,9 +1206,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                 </div>
             </div>
         </div>
-    </div>
-</div>
-       
+        
         <!-- NEW: Live Class Room Page -->
         <div id="classroom" class="page-content">
              <h2><span style="vertical-align: middle;">🧑‍🏫</span> Live Class Room</h2>
