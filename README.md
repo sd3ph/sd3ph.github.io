@@ -1117,11 +1117,11 @@
                 <div class="outreach-card">
                     <span class="outreach-icon">🗣️</span>
                     <h4>Talks</h4>
-                    <p>Delivering talks at premier institutes.</p>
+                    <p>Talks/Presentations</p>
                     <ul style="font-size: 0.9em; color: var(--secondary-color);">
                         <li>International: 3+ </li>
                         <li>National: 10+ </li>
-                        <li>Total: 23+ </li>
+                        <li>Total: 26+ </li>
                     </ul>
                 </div>
             
@@ -1130,6 +1130,7 @@
                     <span class="outreach-icon">🌍</span>
                     <h4>Science Popularization</h4>
                     <p>October 31, 2025 -- Story writing by human-machine collaboration. Participation: 115 Students </p>
+                    <p>February 6, 2025 -- International Mini-Workshop -- 125 Minutes (Online). Participation: 106 </p>
                 </div>
                
                 <!-- Outreach Item 4 -->
