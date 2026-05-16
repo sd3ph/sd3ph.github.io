@@ -1138,6 +1138,7 @@
                     <span class="outreach-icon">🏆</span>
                     <h4>Competitions</h4>
                     <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
+                    <p>March 20, 2026-- Class hackathon -II. Participation: 9 Groups (Each consisting of 4-6 Members) </p>
                 </div>
 
                 
@@ -1162,46 +1163,31 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                <div class="timeline">
     <div class="timeline-item">
         <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>14: EuroHPC Benchmark Access awarded for LUMI clusters.</strong>
+            <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
         </div>
     </div>
     <div class="timeline-item">
         <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>24: Archit selected for the flagship Biophysical Meeting at ICTS-TIFR.</strong>
+            <strong>24: Archit selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+    </div>
         </div>
         <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>22: Agnevesh’s research tenure extended following a positive review.</strong>
-        </div>
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>15: ANRF grant proposal "Learning Order-Disorder by Machine Intelligence" accepted for technical evaluation.</strong>
+            <strong> Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
         </div>
     </div>
     <div class="timeline-item">
         <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>30: New preprint on "Dense Persistent Active Fluids" published on arXiv.</strong>
-        </div>
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>4-15: Agnevesh participated in the ICTS-TIFR flagship school on Data Science.</strong>
+            <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
         </div>
     </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>12: Archit accepted for an oral presentation at ICAMGT – 2025.</strong>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
+   <div class="timeline-item">
+        <div class="t.meline-content" style="margin-bottom: 15px;">
             <strong>2: Manuscript "Persistently Non-Gaussian Metastable Liquids" submitted to Annalen der Physik.</strong>
         </div>
     </div>
     <div class="timeline-item">
         <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>28: Suman conducted a research visit to the Fluvial Mechanics Laboratory at ISI-Kolkata.</strong>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-content" style="margin-bottom: 15px;">
-            <strong>24: Dr. Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor.</strong>
+            <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
         </div>
     </div>
 </div>
