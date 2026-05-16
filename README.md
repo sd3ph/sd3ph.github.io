@@ -1215,11 +1215,11 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                         <!-- Card 2: 23CHY115 -->
                         <div class="course-card" onclick="openCourse('course-chy115')">
                             <div>
-                                <h4>Material Informatics</h4>
+                                <h4>Introduction to Material Informatics</h4>
                                 <p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
                                 <p><strong>Subject:</strong> AI in Material Science</p>
                                 <p><strong>Credit:</strong> 3 </p>
-                                <p><strong>Timeline:</strong> Since 5 Jan 2026 </p>
+                                <p><strong>Timeline:</strong> 5 Jan - 4 May, 2026 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
                             </div>
                             <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
