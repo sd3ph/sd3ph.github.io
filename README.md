@@ -1160,6 +1160,21 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
        <div id="latest" class="page-content">
     <h2>✨ Latest News</h2>
     <div class="section">
+
+     <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
+                </div>
+            </div>
+
+    <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>International Mini-Workshop was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta)</strong>
+                </div>
+            </div>
+    
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
@@ -1182,13 +1197,6 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <!-- Fixed typo from t.meline to timeline -->
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>2: Manuscript "Persistently Non-Gaussian Metastable Liquids" submitted to Annalen der Physik.</strong>
                 </div>
             </div>
 
