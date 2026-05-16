@@ -1164,7 +1164,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
          <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience, Chennai </strong>
+                    <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
                 </div>
             </div>
 
@@ -1189,6 +1189,12 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong>International Mini-Workshop was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta)</strong>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Suman delivered a talk at the Institute of Mathematical Sciences, Chennai: Persistently Non-Gaussian Metastable Fluids </strong>
                 </div>
             </div>
     
