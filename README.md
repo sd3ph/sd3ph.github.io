@@ -1691,7 +1691,9 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
                     <div class="section">
                         <h3>Topical Project</h3>
-                        <p style="font-style: italic; padding-left: 20px;">To be updated soon</p>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/13OLMqsd1L7j0Fj4esVj72-NellyJjNn9/view?usp=sharing"> Summary of Project Review</a> </li>
+                        </ul>
                     </div>
 
                     <div class="section">
