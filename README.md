@@ -1188,7 +1188,13 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
             <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>International Mini-Workshop was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta)</strong>
+                    <strong>Oral presentation in International Mini-Workshop - 125 Minutes: Optimal Diet Plannar, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha and A. Sheshank Royal </strong>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong>International Mini-Workshop - 125 Minutes was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta). </strong>
                 </div>
             </div>
 
