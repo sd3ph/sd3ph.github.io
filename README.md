@@ -1867,9 +1867,9 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
         
         <!-- NEW: Playground Page (Chatbot moved here) -->
         <div id="playground" class="page-content">
-            <h2><span style="vertical-align: middle;">🎮</span> Aadri 2.0 Playground</h2>
+            <h2><span style="vertical-align: middle;">🎮</span> Swarm Intelligence</h2>
             <div class="section">
-                <p>Welcome to the Playground. Use the artifact to navigate intelligent swarms with a target. Ref. Harish Kumaar S, S. Sri Raghav Vatsan, D. Jayesh, Prithve KC and S. Dutta (Ongoing)</p>
+                <p>Unleash the swarm. Take control of the neural cluster and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
                 <div class="playground-container">
                     <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
                 </div>
