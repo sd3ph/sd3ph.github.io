@@ -1869,7 +1869,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
         <div id="playground" class="page-content">
             <h2><span style="vertical-align: middle;">🎮</span> Aadri 2.0 Playground</h2>
             <div class="section">
-                <p>Welcome to the Playground. Use the conversational interface below to query and interact with Aadri 2.0.</p>
+                <p>Welcome to the Playground. Use the artifact to navigate intelligent swarms with a target. Ref. Harish Kumaar S, S. Sri Raghav Vatsan, D. Jayesh, Prithve KC and S. Dutta (Ongoing)</p>
                 <div class="playground-container">
                     <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
                 </div>
