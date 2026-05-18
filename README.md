@@ -1869,7 +1869,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
         <div id="playground" class="page-content">
             <h2><span style="vertical-align: middle;">🎮</span> Swarm Intelligence</h2>
             <div class="section">
-                <p>Unleash the swarm. Take control of the neural cluster and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
+                <p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
                 <div class="playground-container">
                     <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
                 </div>
