@@ -1,0 +1,305 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+#wrap{display:flex;flex-direction:column;gap:0;width:100%;min-height:600px}
+canvas{display:block;width:100%;background:#080810;border-radius:var(--border-radius-lg) var(--border-radius-lg) 0 0}
+#panel{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-top:none;border-radius:0 0 var(--border-radius-lg) var(--border-radius-lg);padding:14px 18px}
+#panel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 24px}
+.ctrl{display:flex;align-items:center;gap:8px}
+.ctrl label{font-size:12px;color:var(--color-text-secondary);min-width:78px;white-space:nowrap}
+.ctrl input[type=range]{flex:1;height:3px;accent-color:#7777ee}
+.ctrl .val{font-size:12px;color:var(--color-text-primary);min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
+#topbar{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+#topbar h2{font-size:13px;font-weight:500;color:var(--color-text-secondary);flex:1;letter-spacing:.04em}
+#stats{font-size:11px;color:var(--color-text-tertiary);font-variant-numeric:tabular-nums}
+.pill{font-size:11px;padding:2px 8px;border-radius:999px;border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);background:var(--color-background-primary);cursor:pointer;user-select:none}
+.pill:hover{background:var(--color-background-tertiary)}
+.pill.active{background:#1a1a3a;color:#aaaaff;border-color:#4444aa}
+#section-labels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 24px;margin-bottom:2px}
+.sec-label{font-size:10px;color:var(--color-text-tertiary);letter-spacing:.06em;text-transform:uppercase;padding-left:86px}
+</style>
+
+<div id="wrap">
+<canvas id="c" height="360"></canvas>
+<div id="panel">
+  <div id="topbar">
+    <h2>Boids · LJ interactions · Periodic BC</h2>
+    <span id="stats">—</span>
+    <button class="pill active" id="btn-play" onclick="togglePlay()">⏸ pause</button>
+    <button class="pill" onclick="respawn()">↺ reset</button>
+  </div>
+  <div id="section-labels">
+    <div class="sec-label">Reynolds rules</div>
+    <div class="sec-label">Lennard-Jones</div>
+    <div class="sec-label">Simulation</div>
+  </div>
+  <div id="panel-grid">
+    <div class="ctrl"><label>w separation</label><input type="range" id="ws" min="0" max="4" step="0.1" value="0.8"><span class="val" id="ws-v">0.8</span></div>
+    <div class="ctrl"><label>w boid–boid LJ</label><input type="range" id="wbb" min="0" max="4" step="0.1" value="1.2"><span class="val" id="wbb-v">1.2</span></div>
+    <div class="ctrl"><label>N boids</label><input type="range" id="nb" min="10" max="150" step="5" value="60"><span class="val" id="nb-v">60</span></div>
+    <div class="ctrl"><label>w alignment</label><input type="range" id="wa" min="0" max="4" step="0.1" value="1.0"><span class="val" id="wa-v">1.0</span></div>
+    <div class="ctrl"><label>w obs LJ</label><input type="range" id="wo" min="0" max="6" step="0.1" value="3.0"><span class="val" id="wo-v">3.0</span></div>
+    <div class="ctrl"><label>max speed</label><input type="range" id="sp" min="0.3" max="3" step="0.1" value="1.4"><span class="val" id="sp-v">1.4</span></div>
+    <div class="ctrl"><label>w cohesion</label><input type="range" id="wc" min="0" max="4" step="0.1" value="1.0"><span class="val" id="wc-v">1.0</span></div>
+    <div class="ctrl"><label>LJ bb σ</label><input type="range" id="sbb" min="1" max="8" step="0.1" value="3.5"><span class="val" id="sbb-v">3.5</span></div>
+    <div class="ctrl"><label>vision radius</label><input type="range" id="vr" min="5" max="30" step="1" value="14"><span class="val" id="vr-v">14</span></div>
+    <div class="ctrl"><label>w goal</label><input type="range" id="wl" min="0" max="3" step="0.1" value="0.9"><span class="val" id="wl-v">0.9</span></div>
+    <div class="ctrl"><label>LJ obs σ</label><input type="range" id="sos" min="1" max="6" step="0.1" value="2.8"><span class="val" id="sos-v">2.8</span></div>
+    <div class="ctrl"><label>trail length</label><input type="range" id="tl" min="0" max="40" step="1" value="18"><span class="val" id="tl-v">18</span></div>
+  </div>
+</div>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 680, H = 360;
+canvas.width = W; canvas.height = H;
+
+let paused = false;
+let frame = 0;
+let trail = [];
+let goal_trail = [];
+
+function get(id){ return parseFloat(document.getElementById(id).value); }
+function bind(id){
+  const el = document.getElementById(id);
+  el.oninput = () => {
+    document.getElementById(id+'-v').textContent = parseFloat(el.value).toFixed(1);
+    if(id==='nb') respawn();
+  };
+}
+['ws','wa','wc','wl','wo','wbb','sbb','sos','nb','sp','vr','tl'].forEach(bind);
+
+const OBSTACLES = [{x:W*0.23,y:H*0.28,r:22},{x:W*0.70,y:H*0.62,r:26},{x:W*0.50,y:H*0.18,r:18},{x:W*0.42,y:H*0.72,r:20}];
+
+let pos, vel, N;
+function respawn(){
+  N = Math.round(get('nb'));
+  pos = new Float32Array(N*2);
+  vel = new Float32Array(N*2);
+  for(let i=0;i<N;i++){
+    pos[i*2]   = Math.random()*W;
+    pos[i*2+1] = Math.random()*H;
+    const a = Math.random()*Math.PI*2, sp = 0.5+Math.random();
+    vel[i*2]   = Math.cos(a)*sp;
+    vel[i*2+1] = Math.sin(a)*sp;
+  }
+  trail=[]; goal_trail=[];
+}
+respawn();
+
+let gx = W*0.5, gy = H*0.5, gvx = 0.4, gvy = 0.3;
+let _t = 0;
+
+function ljScalar(r, eps, sigma, rmin){
+  r = Math.max(r, rmin||0.5);
+  const sr3 = (sigma/r)**3, sr6=sr3*sr3, sr12=sr6*sr6;
+  return (4*eps/r)*(12*sr12 - 6*sr6);
+}
+
+function pbc(dx, L){ dx -= L*Math.round(dx/L); return dx; }
+
+function stepGoal(){
+  const tx = W*0.5 + W*0.30*Math.cos(0.010*_t);
+  const ty = H*0.5 + H*0.28*Math.sin(0.007*_t);
+  let dtx=pbc(tx-gx,W), dty=pbc(ty-gy,H);
+  const dw = Math.sqrt(dtx*dtx+dty*dty)+1e-6;
+  const att = Math.min(dw*0.05, 0.3);
+  let frx=dtx/dw*att, fry=dty/dw*att;
+
+  for(const o of OBSTACLES){
+    const odx=pbc(gx-o.x,W), ody=pbc(gy-o.y,H);
+    const dc=Math.sqrt(odx*odx+ody*ody), ds=Math.max(dc-o.r,0.1);
+    if(ds<H*0.22){
+      const f=ljScalar(ds,2.5,3.0,0.2), hx=odx/(dc+1e-8), hy=ody/(dc+1e-8);
+      frx+=f*hx; fry+=f*hy;
+    }
+  }
+  gvx += frx*0.15; gvy += fry*0.15;
+  const gs=Math.sqrt(gvx*gvx+gvy*gvy);
+  if(gs>0.55){gvx*=0.55/gs;gvy*=0.55/gs;}
+  gx=(gx+gvx+W)%W; gy=(gy+gvy+H)%H;
+}
+
+function step(){
+  const maxSp = get('sp'), maxF=0.22;
+  const WS=get('ws'),WA=get('wa'),WC=get('wc'),WL=get('wl'),WO=get('wo'),WBB=get('wbb');
+  const VISRPX = get('vr')*W/100;
+  const SEPRPX = VISRPX*0.35;
+  const SBB=get('sbb')*W/100, SOS=get('sos')*W/100;
+  const LJ_BB_CUT=SBB*3.5, LJ_OBS_CUT=SOS*4;
+
+  _t++;
+  stepGoal();
+  goal_trail.push([gx,gy]);
+  if(goal_trail.length>45) goal_trail.shift();
+
+  const ax = new Float32Array(N), ay = new Float32Array(N);
+
+  for(let i=0;i<N;i++){
+    const ix=pos[i*2], iy=pos[i*2+1];
+    const ivx=vel[i*2], ivy=vel[i*2+1];
+    let sepx=0,sepy=0,sepn=0;
+    let alix=0,aliy=0;
+    let cohx=0,cohy=0,visn=0;
+    let bbx=0,bby=0;
+
+    for(let j=0;j<N;j++){
+      if(i===j) continue;
+      let dx=pbc(ix-pos[j*2],W), dy=pbc(iy-pos[j*2+1],H);
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<VISRPX){
+        const hx=dx/(d+1e-8), hy=dy/(d+1e-8);
+        if(d<SEPRPX){ sepx+=hx/(d+1e-8); sepy+=hy/(d+1e-8); sepn++; }
+        alix+=vel[j*2]; aliy+=vel[j*2+1];
+        cohx-=dx; cohy-=dy; visn++;
+        if(d<LJ_BB_CUT){
+          const f=ljScalar(d,0.6,SBB,0.5);
+          bbx+=f*hx; bby+=f*hy;
+        }
+      }
+    }
+    const cn=Math.max(visn,1);
+    const sn=Math.max(sepn,1);
+    const Fsx=sepx/sn, Fsy=sepy/sn;
+    const Fsl=Math.sqrt(Fsx*Fsx+Fsy*Fsy)||1;
+    let fsx=Fsx/Fsl, fsy=Fsy/Fsl;
+
+    const avx=alix/cn-ivx, avy=aliy/cn-ivy;
+    const al=Math.sqrt(avx*avx+avy*avy)||1;
+    const fax=avx/al, fay=avy/al;
+
+    const cl=Math.sqrt(cohx*cohx+cohy*cohy)||1;
+    const fcx=cohx/cl, fcy=cohy/cl;
+
+    const tgx=pbc(gx-ix,W), tgy=pbc(gy-iy,H);
+    const tgl=Math.sqrt(tgx*tgx+tgy*tgy)||1;
+    const flx=tgx/tgl, fly=tgy/tgl;
+
+    let obsx=0,obsy=0;
+    for(const o of OBSTACLES){
+      const odx=pbc(ix-o.x*W/W,W), ody=pbc(iy-o.y,H);
+      const dc=Math.sqrt(odx*odx+ody*ody), ds=Math.max(dc-o.r,0.1);
+      if(ds<LJ_OBS_CUT){
+        const f=ljScalar(ds,1.5,SOS,0.2);
+        obsx+=f*odx/(dc+1e-8); obsy+=f*ody/(dc+1e-8);
+      }
+    }
+    const bbL=Math.sqrt(bbx*bbx+bby*bby);
+    if(bbL>6){bbx=bbx/bbL*6;bby=bby/bbL*6;}
+    const oL=Math.sqrt(obsx*obsx+obsy*obsy);
+    if(oL>6){obsx=obsx/oL*6;obsy=obsy/oL*6;}
+
+    let acx=WS*fsx+WA*fax+WC*fcx+WL*flx+WO*obsx+WBB*bbx;
+    let acy=WS*fsy+WA*fay+WC*fcy+WL*fly+WO*obsy+WBB*bby;
+    const aL=Math.sqrt(acx*acx+acy*acy);
+    if(aL>maxF){acx=acx/aL*maxF;acy=acy/aL*maxF;}
+    ax[i]=acx; ay[i]=acy;
+  }
+
+  trail.push(new Float32Array(pos));
+  const tlen=Math.round(get('tl'));
+  while(trail.length>tlen) trail.shift();
+
+  let sumSp=0;
+  for(let i=0;i<N;i++){
+    vel[i*2]+=ax[i]; vel[i*2+1]+=ay[i];
+    const vs=Math.sqrt(vel[i*2]**2+vel[i*2+1]**2);
+    if(vs>maxSp){vel[i*2]=vel[i*2]/vs*maxSp;vel[i*2+1]=vel[i*2+1]/vs*maxSp;}
+    pos[i*2]=(pos[i*2]+vel[i*2]+W)%W;
+    pos[i*2+1]=(pos[i*2+1]+vel[i*2+1]+H)%H;
+    sumSp+=Math.sqrt(vel[i*2]**2+vel[i*2+1]**2);
+  }
+  document.getElementById('stats').textContent=
+    `N=${N}  v̄=${(sumSp/N).toFixed(2)}  frame=${frame}`;
+  frame++;
+}
+
+function draw(){
+  ctx.fillStyle='rgba(8,8,16,0.30)';
+  ctx.fillRect(0,0,W,H);
+
+  for(const o of OBSTACLES){
+    ctx.beginPath(); ctx.arc(o.x,o.y,o.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(180,30,60,0.18)'; ctx.fill();
+    ctx.strokeStyle='#cc2244'; ctx.lineWidth=1; ctx.stroke();
+    const sos=get('sos')*W/100*4;
+    ctx.beginPath(); ctx.arc(o.x,o.y,o.r+sos,0,Math.PI*2);
+    ctx.strokeStyle='rgba(80,10,30,0.4)'; ctx.lineWidth=0.5;
+    ctx.setLineDash([3,4]); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='rgba(255,80,120,0.6)';
+    ctx.font='bold 9px var(--font-sans)';
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('LJ',o.x,o.y);
+  }
+
+  if(goal_trail.length>1){
+    ctx.beginPath();
+    ctx.moveTo(goal_trail[0][0],goal_trail[0][1]);
+    for(let i=1;i<goal_trail.length;i++) ctx.lineTo(goal_trail[i][0],goal_trail[i][1]);
+    ctx.strokeStyle='rgba(140,110,0,0.35)'; ctx.lineWidth=1.2; ctx.stroke();
+  }
+  ctx.beginPath(); ctx.arc(gx,gy,10,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,238,68,0.4)'; ctx.lineWidth=0.8;
+  ctx.setLineDash([3,3]); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#ffee44'; ctx.font='14px var(--font-sans)';
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('★',gx,gy);
+
+  if(trail.length>1){
+    for(let i=0;i<N;i++){
+      ctx.beginPath();
+      ctx.moveTo(trail[0][i*2],trail[0][i*2+1]);
+      for(let t=1;t<trail.length;t++) ctx.lineTo(trail[t][i*2],trail[t][i*2+1]);
+      ctx.strokeStyle='rgba(60,60,160,0.18)'; ctx.lineWidth=0.8; ctx.stroke();
+    }
+  }
+
+  const SBBpx=get('sbb')*W/100, BBCUT=SBBpx*3.5;
+  for(let i=0;i<N;i++){
+    const ix=pos[i*2], iy=pos[i*2+1];
+    let pe=0;
+    for(let j=0;j<N;j++){
+      if(i===j) continue;
+      const dx=pbc(ix-pos[j*2],W), dy=pbc(iy-pos[j*2+1],H);
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<BBCUT){
+        const sr3=(SBBpx/d)**3, sr6=sr3*sr3;
+        pe+=4*0.6*(sr6*sr6-sr6);
+      }
+    }
+    const t01=Math.min(Math.max(pe/3,0),1);
+    const r=Math.round(t01*180), g=Math.round(140+t01*55*(1-t01)*4), b=Math.round(255*(1-t01));
+    const angle=Math.atan2(vel[i*2+1],vel[i*2]);
+    const s=5;
+    ctx.save();
+    ctx.translate(ix,iy);
+    ctx.rotate(angle);
+    ctx.beginPath();
+    ctx.moveTo(s*1.8,0);
+    ctx.lineTo(-s,s*0.65);
+    ctx.lineTo(-s*0.35,0);
+    ctx.lineTo(-s,-s*0.65);
+    ctx.closePath();
+    ctx.fillStyle=`rgb(${r},${g},${b})`;
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+function togglePlay(){
+  paused=!paused;
+  document.getElementById('btn-play').textContent=paused?'▶ play':'⏸ pause';
+  if(!paused) loop();
+}
+
+let raf;
+function loop(){
+  if(paused) return;
+  step(); draw();
+  raf=requestAnimationFrame(loop);
+}
+loop();
+</script>
