@@ -1871,7 +1871,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             <div class="section">
                 <p>Welcome to the Playground. Use the conversational interface below to query and interact with Aadri 2.0.</p>
                 <div class="playground-container">
-                    <iframe src="https://aadri-chatbot-v-2-0-released-version-774248093245.us-west1.run.app/" frameborder="0"></iframe>
+                    <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
