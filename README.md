@@ -1871,7 +1871,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             <div class="section">
                 <p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
                 <div class="playground-container">
-                    <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
+                    <iframe src="https://claude.ai/public/artifacts/4e1f7c01-8ea5-48a4-ba39-b63b10b6dc64" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
