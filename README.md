@@ -990,7 +990,7 @@
             <td>3</td>
             <td>4</td>
             <td>2025-26 Even</td>
-            <td>66</td>
+            <td>64</td>
             <td>91.06%</td>
         </tr>
         <tr>
