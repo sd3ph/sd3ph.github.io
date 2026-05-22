@@ -983,7 +983,7 @@
             <td>4</td>
             <td>2025-26 Even</td>
             <td>65</td>
-            <td>Ongoing</td>
+            <td>91.06%</td>
         </tr>
         <tr>
             <td>B.Tech..2025.R.AID.2.23CHY115</td>
@@ -991,7 +991,7 @@
             <td>4</td>
             <td>2025-26 Even</td>
             <td>66</td>
-            <td>Ongoing</td>
+            <td>94.39%</td>
         </tr>
         <tr>
             <td>B.Tech..2025.R.AID.1.23MAT106</td>
