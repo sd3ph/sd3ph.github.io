@@ -991,7 +991,7 @@
             <td>3+3</td>
             <td>4+4</td>
             <td>2025-26 Even</td>
-            <td>64</td>
+            <td>64+65</td>
             <td>92.92%</td>
         </tr>
         <tr>
@@ -1853,6 +1853,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
                  <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
+                 <div class="collaborator-item"><div class="collaborator-info"><strong>AM Parvez Biswas</strong><br>(Solution Architect - Enterprise Systems, Data & Integration, Tata Consultancy Services, IN)</div></div>
             </div>
 
             <h2>🏆 Awards & Recognition</h2>
