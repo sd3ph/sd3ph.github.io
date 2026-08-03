@@ -1030,9 +1030,362 @@
                         <strong>Masters Thesis Co-supervision</strong>
                         <p>Magnus Olsen, <em>Understanding Non-Newtonian Materials</em> <br> (Supervisor: R. Cabriolu, Norwegian University of Science and Technology, since 08/2025)</p>
                     </div>
+                    <div class="research-area-item">
+                        <strong>Supervision: Topical Projects</strong>
+                        <div style="overflow-x: auto; margin-top: 15px;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9em;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #ddd; background-color: #f8f9fa;">
+                                        <th style="padding: 10px; border: 1px solid #ddd;">Subject Code</th>
+                                        <th style="padding: 10px; border: 1px solid #ddd;">Names</th>
+                                        <th style="padding: 10px; border: 1px solid #ddd;">Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 23CHY115 Projects -->
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Adithya R, Ashwin Krishna V, Madhan S, Nawin K.G</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Prediction of Molecular Solubility</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Mahalakshmi R, Venugopalan G, Ram Eswar P, Selva Vignesh V</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Semantic RAG with Specialized Embeddings</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">A. Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Bio-Match: Implant Material Recommender</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Manvith, M. Venkat Naidu, S. Manoj Chowdary, B. Nakul</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Earthquake Probability & Early Warning Analysis</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Rithvik, Venkat, Abhishek, Grishmanth</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Forecasting Stress-Strain with Koopman</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Rithvik Arulprakash, Harshith K. V, Vijayamurughan S, Vipin Sudhakar</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Driven Dynamics in Active Glass</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Suthasrinitha K.G, Asmitha T, Moushika S, Mirudhunya V</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Governing Equations of Chaotic Systems</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">J. Harini, A. Harsha Sree, B. Pavani, P. Prasad</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Identifying Metastable States with HAVOK</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith, K. Swami, M. Pranavi, N. Manoj</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">The Sandpile Model (BTW)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">N.V. Varshitha, A. Jahnavi, T. Varshini, B. Sai Prasanna</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Polymer Property Prediction Simulator</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">V.R. Yasswant, Abishek S, Y. Sanmukha Sai, U. Sudheer</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Convex Hull for Alloy</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Hari Priya, Maha Sri, Neha, Prathibaa</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">SINDy - Discovering Physics from Data</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Moorthy Neeraj, Mortha Sathwik, Surya Charan Teja, Pavan Kalyan S.V, Dhanush</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones System for Glass Formation</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Sharvesh S. P, B. gurucharan, P. A. Bhavesh Jayan, Hashwin M</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">The Butterfly Paradox: Chaos in MD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Ocean Waves Dynamics</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Based Material Recommendation System</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">D. Durga Prasad Reddy, Mukesh Reddy, G. Yaswanth Reddy, K. Praneeth, Jasmitha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Failure Prediction in Amorphous Solids</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">S. Sujitkumar, M. Hemanthkumar, H. Abinavkumaran, P.V. RithikRaj</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Molecular Phase Dynamics using Koopman DMD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Kirithik B, Sankardas K.K, V. Amruth, Vishnu Prasad P</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Discontinuous Molecular Dynamics</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Adharsh K, Anu R, Sidharth M, Vethavarsini A</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Rare Event Acceleration with Koopman-GNN</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Akshara Sree R, Anirudh S Nair, Iniyaa Muthuselvan, Shashank Kannan</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">The Battery Oracle</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Harish Kumaar S, S. Sri Raghav Vatsan, Dhruv Jayesh, Prithve KC</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Predicting Swarm Dynamics</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Kanish Visyanth C, Kavipranidan J.T, Navaneet K.V, Nethaaji S</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Radiation Damage Prediction</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Revanth S, G Kamalesh, Jaswanth S, Elango Megabala G</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Graph Neural Networks for Molecules</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">K. Gayathri, P. Sri Harshini, M. Deekshitha, A. Gnana Amrutha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Based Inverse Material Selector</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Rohith Meka, Kode Karrthik, Naram Divya Akhil, T. Yashwant</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Microstructure Evolution Prediction</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Meenakshi Bijoy, Neelanjana J Anil, Aryananda M, Ghadige Rithika</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Learning Swarm Behaviour</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">U. Raghu Nandan, S. Akshaya, Nikitha, Likhit K</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">De-noising MD Data via Hankel SVD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">M. Harsha, M. Anudeep Reddy, P. Nihal Reddy, P. Naren</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Bayesian Optimization for Alloy Design</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">C. Sai Hardhik Reddy, R. Gagan Chowdhury, K. Charan Saatvikh Reddy, T. Sri Sai</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Deformation in Copper Crystals</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Srikar, Sumanth, Sai Sushanth, Sai Sathwik</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Perovskite Solar Cells</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Neha Saravanan, Y. Pranavi Reddy, T. Sai Varshitha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Predicting Particle Mobility in Active Matter</td>
+                                    </tr>
+
+                                    <!-- 23MAT106 Projects -->
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Adithya R, Sai Prasanna B, Anudeep Reddy</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Stochastic Gradient Descent-Image Brightness Optimizer</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Abisheik S, Ashwin Krishna V, Nakul Sharvan B, Nawin K.G</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Interior Point Method for Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Raghuraman V, Vipin Sudhakar, Harshith KV, Rithvik Arul Prakash</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Optimization Using Sequential Quadratic Programming</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Harish Kumaar S, Prabakar, Venkat D, Prithve K C</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Minimizing 2-D Lennard-Jones System via Broyden’s Good Method</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">V R Yasswant, S. Sri Raghav Vatsan, Selva Vignesh V, Madhan S</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Augmented Lagrangian Method for Constrained Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Manvith Sharma, P. Grishmanth, P. Naren, S. Manoj</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Broyden’s Bad Method for Energy Minimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Sri Harshini, K. Gayathri, M. Deekshitha, Meenakshi Bijoy</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Movie Recommendation System</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">S Jaswant, Revanth S, Elango Megabala G, G Kamalesh</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Steepest Descent Algorithm</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Rohith Meka, Naram Divya Akhil, B. Sai Srikar, Danush Mani Yerramsetti</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Movie Recommendation Using SVD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">P.S. Sathwik, V.S. Amruth Chowdary, Kirithik B, Sankar Das K.K</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Computational Search for Glassy States using Conjugate Gradient</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">SV Pavan Kalyan, Neeraj M, C. Jasmitha, S. Akshaya, G. Rithika</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Audio Compression using SVD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Energy Minimization of 2D Particle System via L-BFGS</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Mortha Sathwik, Surya Charan Tej B, AryaNanda M, Neelanjana J Anil</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Computer Glassy States via Newton-Raphson Method</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">T.V.S.S Phanindra Guptha, M. Vittal, K. Nanda Kishore, Athul V.R</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones Potential via Nelder-Mead</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Y. Pranavi Reddy, Neha Saravanan, T. Sai Varshitha Reddy, K.B Nikitha Krishna</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Optimization of Lennard-Jones via PSO</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Nethaaji S, Navaneet KV, Kavipranidan JT, Kanish Visyanth C</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Computer Glassy States through Simulated Annealing</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Prasad Reddy, Sai Praneeth, Mukesh Reddy, Yaswanth Reddy</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Adopted Basis Newton-Raphson Method</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Kode Karrthik, Kella Likhith, T. Yaswanth Sai Vedadri, U. Raghu Nandan</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States by Instantaneous Quench (FIRE Algorithm)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">H. Abinavkumaran, S. Sujitkumar, M. Hemanthkumar, P.V. RithikRaj</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Stable Particle Arrangement via Barzilai-Borwein Method</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Vishnu Prasad, N Sai Sushanth Reddy, Hari Sumanth, Gnana Amrutha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States via Instant Quenching</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith Hari Sainath Reddy, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Powell’s Method for Energy Minimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Moushika S, Iniyaa Muthuselvan, Alamuru Harsha Sree, Akshara Sree R</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Levenberg-Marquardt Algorithm for Glass Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Suthasrinitha K G, Mirudhunya V, Asmitha T, Ram Eswar P</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">RMS Propagation Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Pavani B, Maha Sri N, Neha S, Varshini T</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Basin Hopping Algorithm</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Ala Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Smart Diet Planner</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Powell’s Method of Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">K. Charan Saatvikh Reddy, R. Gagan Chowdary, C. Sai Hardhik Reddy, M. Venkat Naidu</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Adagrad Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Dhruv Jayesh Kansagara, Nihal Reddy P, T. Sri Sai, Y. Sanmukha Sai</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">BFGS with Trust Region</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">J. Harini, Prathibaa, Mahalakshmi</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Image Compression using SVD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Aadharsh, Anu R, Sidharth M, Vethavarsini A</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States via Instantaneous Quench (TNM)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Smart Diet Planner (Revised)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Madhan Senthil Kumar, Selva Vignesh V, S. Sri Raghav Vatsan, V.R. Yasswant</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Augmented Lagrangian Method (ALM)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sai Prasanna Anjaneyulu, M. Annudeep Reddy, R. Adithya</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Image Enhancement Using SGD</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Mukesh Reddy, D. Durga Prasad Reddy, Yaswanth Reddy, K. Sai Praneeth</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones via Adopted Basis Newton-Raphson</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">Anirudh S Nair, Shashank Kannan, Vijayamurughan S, G. Venugopalan</td>
+                                        <td style="padding: 8px; border: 1px solid #ddd;">The Math Behind PageRank</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <!-- DETAILED VIEW: PHILOSOPHY -->
             <div id="teaching-philosophy" class="teaching-detail-view">
                 <button class="back-btn" onclick="closeTeachingSection()">
