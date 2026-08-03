@@ -898,6 +898,7 @@
                             <p><strong>Focus:</strong> AI, Mathematics & Material Science</p>
                             <p>Courses delivered at Amrita Vishwa Vidyapeetham and S. N. Bose National Centre for Basic Sciences.</p>
                             <ul style="margin-top:10px; font-size: 0.9em; color: var(--secondary-color);">
+                                <li>Mathematics for Intelligent Systems-III (23MAT204)</li>
                                 <li>Introduction to Material Informatics (23CHY115)</li>
                                 <li>Mathematics for Intelligent Systems-I (23MAT106)</li>
                                 <li>Research Methodology (PHY501)
@@ -978,7 +979,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science)</td>
+            <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science, Semester-III)</td>
             <td>3+3</td>
             <td>4+4</td>
             <td>2026-27 Odd</td>
@@ -986,28 +987,20 @@
             <td>Ongoing</td>
         </tr>
         <tr>
-            <td>B.Tech..2025.R.AID.2.23CHY115</td>
-            <td>3</td>
-            <td>4</td>
+            <td>Introduction to Material Informatics (B.Tech in AI & Data Science, Semester-II)</td>
+            <td>3+3</td>
+            <td>4+4</td>
             <td>2025-26 Even</td>
             <td>64</td>
-            <td>91.06%</td>
+            <td>92.92%</td>
         </tr>
         <tr>
-            <td>B.Tech..2025.R.AID.1.23MAT106</td>
-            <td>4</td>
-            <td>5</td>
+            <td>Mathematics for Intelligent System - I (B.Tech in AI & Data Science, Semester-I)</td>
+            <td>4+4</td>
+            <td>5+5</td>
             <td>2025-26 Odd</td>
-            <td>65</td>
-            <td>90.81%</td>
-        </tr>
-        <tr>
-            <td>B.Tech..2025.R.AID.2.23MAT106</td>
-            <td>4</td>
-            <td>5</td>
-            <td>2025-26 Odd</td>
-            <td>66</td>
-            <td>95.41%</td>
+            <td>65+66</td>
+            <td>93.11%</td>
         </tr>
     </tbody>
 </table>
