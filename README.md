@@ -978,12 +978,12 @@
     </thead>
     <tbody>
         <tr>
-            <td>B.Tech..2025.R.AID.1.23CHY115</td>
-            <td>3</td>
-            <td>4</td>
-            <td>2025-26 Even</td>
-            <td>65</td>
-            <td>94.39%</td>
+            <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science)</td>
+            <td>3+3</td>
+            <td>4+4</td>
+            <td>2026-27 Odd</td>
+            <td>65+66</td>
+            <td>Ongoing</td>
         </tr>
         <tr>
             <td>B.Tech..2025.R.AID.2.23CHY115</td>
@@ -1162,6 +1162,12 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
     <h2>✨ Latest News</h2>
     <div class="section">
         <div class="timeline">
+
+         <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
+                </div>
+            </div>
 
          <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
