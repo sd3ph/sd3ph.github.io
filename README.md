@@ -1422,7 +1422,7 @@
                 <h3>🎓 Professional Journey</h3>
                 <h4>Present Affiliation</h4>
                 <p><strong>Gemini Certified Faculty</strong><br>(2026-2028)<br></p>
-                <p><strong>Faculty Member, Department of Artificial Intelligence</strong><br>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br></p>
+                <p><strong>Assistant Professor (Sr. Gr.), Department of Artificial Intelligence</strong><br>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br></p>
                 <h4>Professional Research Experience</h4>
                 <ul>
                     <li><strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br>Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)</li>
