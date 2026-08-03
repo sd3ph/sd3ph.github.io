@@ -1859,6 +1859,8 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             <h2>🏆 Awards & Recognition</h2>
             <div class="section">
                 <ul>
+                     <li><strong>Project Awarded: EUROHPC-Joint Undertaking Benchmark Access (2025-2026) (PI: Raffaela Cabriolu, CoPI: S. Dutta) (2025-2026).</li>
+                     <li><strong>Project Awarded: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta (2025-2026).</li>
                     <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
                     <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
                     <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
