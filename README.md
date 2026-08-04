@@ -6,14 +6,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50; /* Deep blue-grey */
-            --secondary-color: #7f8c8d; /* Muted grey */
-            --accent-color: #e74c3c; /* Reddish-orange */
-            --background-color: #ecf0f1; /* Light grey */
+            --primary-color: #1a252f; /* Deep blue-grey */
+            --secondary-color: #576574; /* Muted grey */
+            --accent-color: #ff4757; /* Accent */
             --card-background: #ffffff;
-            --border-color: #bdc3c7; /* Medium grey */
-            --nav-hover-bg: #34495e; /* Darker blue-grey for hover */
-            --nav-active-bg: #e74c3c; /* Accent color for active nav */
+            --border-color: #dcdde1;
         }
 
         body {
@@ -22,7 +19,8 @@
             line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            background-attachment: fixed;
             color: var(--primary-color);
             display: flex;
             flex-direction: column;
@@ -34,21 +32,24 @@
         .container {
             max-width: 960px;
             width: 100%;
-            background-color: var(--card-background);
+            background: rgba(255, 255, 255, 0.95);
             margin-top: 20px;
             margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             overflow: hidden; /* To contain floated elements */
+            backdrop-filter: blur(5px);
         }
 
         /* --- MODIFIED NAVIGATION STYLES --- */
         /* Main header container */
         .main-header {
             width: 100%;
-            background-color: var(--nav-hover-bg);
+            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
             box-sizing: border-box;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, #ff7e5f, #feb47b, #8E2DE2, #00B4DB) 1;
         }
 
         /* Top row: Title */
@@ -60,9 +61,12 @@
         .site-title-header .title {
             font-family: 'Playfair Display', serif;
             font-size: 2.2em; /* Increased title font size */
-            color: #fff;
+            background: linear-gradient(90deg, #ffffff, #a8ff78);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin: 0;
             text-align: left;
+            font-weight: 700;
         }
        
         /* Bottom row: Navigation Links Bar */
@@ -71,8 +75,8 @@
             justify-content: center; /* Center the links container */
             align-items: center;
             padding: 10px 30px;
-            border-bottom: 3px solid var(--accent-color);
             box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.2);
         }
        
         .nav-links {
@@ -85,7 +89,7 @@
         }
 
         .nav-links li {
-            margin: 5px 15px; /* Add vertical margin for wrapping */
+            margin: 5px 10px; /* Add vertical margin for wrapping */
             font-size: 0.9em;
         }
 
@@ -94,21 +98,25 @@
             text-decoration: none;
             font-weight: 600;
             padding: 8px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 20px;
+            transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             white-space: nowrap; /* Prevent link text from breaking */
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .nav-links a:hover {
-            background-color: var(--accent-color);
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
             color: #fff;
+            box-shadow: 0 4px 12px rgba(255, 65, 108, 0.4);
         }
 
         .nav-links a.active {
-            background-color: var(--accent-color);
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
             color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
         }
         /* --- END OF MODIFIED NAVIGATION --- */
 
@@ -118,6 +126,7 @@
             padding: 30px;
             display: none; /* Hidden by default */
             animation: fadeIn 0.5s ease-out;
+            border-radius: 8px;
         }
 
         .page-content.active {
@@ -132,12 +141,10 @@
         h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.7em;
-            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 8px;
             margin-top: 0;
             margin-bottom: 20px;
-            color: var(--primary-color);
-            text-align: center;
+            text-align: left;
         }
 
         h3 {
@@ -181,7 +188,6 @@
             align-items: center;
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px dashed var(--border-color);
         }
 
         .profile-picture {
@@ -190,8 +196,8 @@
             border-radius: 50%;
             margin-right: 20px;
             object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #667eea;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .header-text {
@@ -215,7 +221,6 @@
             text-align: center;
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px dashed var(--border-color);
         }
 
         .social-links a {
@@ -236,7 +241,7 @@
         hr {
             border: 0;
             height: 1px;
-            background: var(--border-color);
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
             margin: 35px 0;
         }
 
@@ -253,12 +258,11 @@
         /* Specific for Research Section */
         .research-area-item {
             margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 3px solid var(--accent-color);
-            background-color: #fdfdfd;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border-radius: 0 4px 4px 0;
+            padding-left: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 0 8px 8px 0;
+            background: rgba(255, 255, 255, 0.6);
         }
         .research-area-item strong {
             color: var(--primary-color);
@@ -266,12 +270,11 @@
 
         /* Creative Theme Adjustments */
         .profile-header, .section {
-            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
             padding: 20px;
-            border-radius: 6px;
+            border-radius: 10px;
             margin-bottom: 20px;
-            border: 1px solid rgba(189, 195, 199, 0.3); /* Lighter border */
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255,255,255,0.6);
         }
         .container {
             background: none; /* Remove card background for the overall container */
@@ -284,9 +287,6 @@
         }
         .page-content.active {
             padding: 30px; /* Add padding back when active */
-        }
-        h2 {
-            text-align: left; /* Align section titles left */
         }
         .profile-header h1, .profile-header p {
             color: var(--primary-color);
@@ -319,7 +319,7 @@
             color: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             text-align: center;
             max-width: 800px;
             margin: 20px auto;
@@ -357,15 +357,16 @@
         }
 
         .opportunity {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 10px 20px;
             border-radius: 30px;
             font-size: 0.85em;
             transition: background-color 0.3s ease;
+            backdrop-filter: blur(5px);
         }
 
         .opportunity:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .call-to-action {
@@ -383,7 +384,7 @@
 
         .email-link {
             display: inline-block;
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
             color: #667eea;
             padding: 12px 30px;
             border-radius: 50px;
@@ -395,7 +396,7 @@
         }
 
         .email-link:hover {
-            background-color: #f0f2ff;
+            background: #ffffff;
             color: #5a6edc;
             transform: scale(1.05);
         }
@@ -411,7 +412,7 @@
         .publication-item {
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px dashed var(--border-color);
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
         }
         .publication-item:last-child {
             border-bottom: none;
@@ -427,7 +428,7 @@
             line-height: 1.6;
         }
         .publication-item a {
-            color: var(--accent-color);
+            color: #11998e;
             font-weight: bold;
             text-decoration: none;
         }
@@ -439,7 +440,7 @@
         .timeline {
             position: relative;
             padding-left: 20px;
-            border-left: 2px solid var(--accent-color);
+            border-left: 3px solid #654ea3;
         }
         .timeline-item {
             position: relative;
@@ -456,7 +457,7 @@
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background-color: var(--accent-color);
+            background: linear-gradient(135deg, #654ea3, #eaafc8);
             border: 2px solid white;
             z-index: 1;
         }
@@ -469,10 +470,11 @@
             text-transform: uppercase;
         }
         .timeline-content {
-            background-color: #fdfdfd;
+            background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
             padding: 15px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            border: 1px solid rgba(101, 78, 163, 0.15);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
         }
         .timeline-content p {
             margin: 0;
@@ -484,7 +486,7 @@
             font-size: 1.05em;
         }
         .timeline-content a {
-             color: var(--accent-color);
+            color: #654ea3;
             font-weight: bold;
             text-decoration: none;
         }
@@ -514,8 +516,8 @@
             text-align: center;
             padding: 40px 20px;
             border: 1px dashed var(--border-color);
-            border-radius: 8px;
-            background-color: #fdfdfd;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0fcfc 100%);
         }
         .password-prompt-container h3 {
             margin-top: 0;
@@ -536,19 +538,19 @@
         .password-form button {
             padding: 10px 20px;
             border: none;
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #0DA699 0%, #12D8C9 100%);
             color: white;
             font-weight: bold;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: opacity 0.2s;
         }
         .password-form button:hover {
-            background-color: var(--nav-hover-bg);
+            opacity: 0.9;
         }
         .password-error-message {
             margin-top: 15px;
-            color: var(--accent-color);
+            color: #e74c3c;
             font-weight: bold;
             height: 1.2em; /* Reserve space to prevent layout shift */
         }
@@ -564,9 +566,7 @@
             margin-top: 20px;
         }
         .course-card {
-            background-color: #f9f9f9;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 20px;
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
@@ -575,6 +575,8 @@
             justify-content: space-between;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         .course-card::after {
             content: '';
@@ -583,7 +585,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background-color: var(--accent-color);
+            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -594,14 +596,12 @@
         .course-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-color: var(--accent-color);
         }
         .course-card h4 {
             margin-top: 0;
-            color: var(--accent-color);
             font-size: 1.3em;
             font-family: 'Playfair Display', serif;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
@@ -614,7 +614,7 @@
             color: var(--primary-color);
         }
         .course-card .semester-tag {
-            background-color: var(--nav-hover-bg);
+            background: linear-gradient(135deg, #141e30, #243b55);
             color: white;
             padding: 2px 8px;
             border-radius: 4px;
@@ -623,20 +623,21 @@
             margin-left: 5px;
         }
         .back-btn {
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, #576574 0%, #2f3542 100%);
             color: white;
             border: none;
             padding: 8px 15px;
-            border-radius: 4px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
             margin-bottom: 20px;
-            transition: background-color 0.3s;
+            transition: opacity 0.3s;
             display: inline-flex;
             align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
         .back-btn:hover {
-            background-color: var(--primary-color);
+            opacity: 0.9;
         }
         .back-btn svg {
             margin-right: 5px;
@@ -657,11 +658,11 @@
             gap: 20px;
         }
         .outreach-card {
-            background: white;
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 4px solid #ff7e5f;
             transition: transform 0.3s;
         }
         .outreach-card:hover {
@@ -677,6 +678,193 @@
             font-size: 2em;
             margin-bottom: 10px;
             display: block;
+        }
+
+        /* --- PAGE-SPECIFIC GRADIENT STYLES --- */
+
+        /* 1. HIGHLIGHT (HOME) - Deep Royal Blue / Indigo Theme */
+        #highlight {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6edfd 100%);
+        }
+        #highlight h2 {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #2a5298;
+        }
+        #highlight .section {
+            background: linear-gradient(135deg, #ffffff 0%, #eef3fc 100%);
+            border-left: 5px solid #2a5298;
+        }
+
+        /* 2. RESEARCH - Coral Sunset / Crimson Flame Theme */
+        #research {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+        }
+        #research h2 {
+            background: linear-gradient(90deg, #e52d27, #b31217);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #e52d27;
+        }
+        #research .section {
+            background: linear-gradient(135deg, #ffffff 0%, #fde8e8 100%);
+            border-left: 5px solid #e52d27;
+        }
+        #research .research-area-item {
+            border-left: 3px solid #e52d27;
+            background: rgba(229, 45, 39, 0.05);
+        }
+
+        /* 3. PUBLICATION - Emerald Jade / Mint Green Theme */
+        #publication {
+            background: linear-gradient(135deg, #f0fbf5 0%, #e2f7eb 100%);
+        }
+        #publication h2 {
+            background: linear-gradient(90deg, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #059669;
+        }
+        #publication .section {
+            background: linear-gradient(135deg, #ffffff 0%, #e1f9eb 100%);
+            border-left: 5px solid #059669;
+        }
+
+        /* 4. TEACHING - Cyber Purple / Violet Dusk Theme */
+        #teaching {
+            background: linear-gradient(135deg, #f8f0fc 0%, #f1e3fa 100%);
+        }
+        #teaching h2 {
+            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #8E2DE2;
+        }
+        #teaching .section {
+            background: linear-gradient(135deg, #ffffff 0%, #f3e5fa 100%);
+            border-left: 5px solid #8E2DE2;
+        }
+        #teaching .course-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f6ebfc 100%);
+        }
+        #teaching .course-card h4 {
+            color: #8E2DE2;
+        }
+
+        /* 5. ABOUT - Teal Ocean / Cyan Horizon Theme */
+        #about {
+            background: linear-gradient(135deg, #eef9fb 0%, #e0f2f7 100%);
+        }
+        #about h2 {
+            background: linear-gradient(90deg, #0083B0, #00B4DB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #0083B0;
+        }
+        #about .section {
+            background: linear-gradient(135deg, #ffffff 0%, #e2f4f8 100%);
+            border-left: 5px solid #0083B0;
+        }
+
+        /* 6. OUTREACH - Warm Mango / Amber Peach Theme */
+        #outreach {
+            background: linear-gradient(135deg, #fff8f0 0%, #ffeedd 100%);
+        }
+        #outreach h2 {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #ff7e5f;
+        }
+        #outreach .section {
+            background: linear-gradient(135deg, #ffffff 0%, #ffe9e0 100%);
+            border-left: 5px solid #ff7e5f;
+        }
+        #outreach .outreach-card {
+            background: linear-gradient(135deg, #ffffff 0%, #ffebe3 100%);
+            border-top: 4px solid #ff7e5f;
+        }
+
+        /* 7. LATEST - Midnight Amethyst / Aurora Lavender Theme */
+        #latest {
+            background: linear-gradient(135deg, #f6f3ff 0%, #ede8ff 100%);
+        }
+        #latest h2 {
+            background: linear-gradient(90deg, #654ea3, #eaafc8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #654ea3;
+        }
+        #latest .section {
+            background: linear-gradient(135deg, #ffffff 0%, #ede7ff 100%);
+            border-left: 5px solid #654ea3;
+        }
+
+        /* 8. LIVE CLASSROOM - Turquoise Aqua / Mint Breeze Theme */
+        #classroom {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+        }
+        #classroom h2 {
+            background: linear-gradient(90deg, #0DA699, #12D8C9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #0DA699;
+        }
+        #classroom .section {
+            background: linear-gradient(135deg, #ffffff 0%, #e6fffa 100%);
+            border-left: 5px solid #0DA699;
+        }
+        #classroom .course-card {
+            background: linear-gradient(135deg, #ffffff 0%, #e6fcf5 100%);
+        }
+        #classroom .course-card h4 {
+            color: #0DA699;
+        }
+
+        /* 9. LAB PRODUCTS - Berry Magenta / Electric Rose Theme */
+        #products {
+            background: linear-gradient(135deg, #fcf0f8 0%, #f8e1f3 100%);
+        }
+        #products h2 {
+            background: linear-gradient(90deg, #B224EF, #7579FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #B224EF;
+        }
+        #products .section {
+            background: linear-gradient(135deg, #ffffff 0%, #f7e2f4 100%);
+            border-left: 5px solid #B224EF;
+        }
+
+        /* 10. MISC - Cosmic Charcoal / Steel Blue Theme */
+        #misc {
+            background: linear-gradient(135deg, #f2f5f9 0%, #e4eaf2 100%);
+        }
+        #misc h2 {
+            background: linear-gradient(90deg, #373B44, #4286f4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #4286f4;
+        }
+        #misc .section {
+            background: linear-gradient(135deg, #ffffff 0%, #e2e9f5 100%);
+            border-left: 5px solid #4286f4;
+        }
+
+        /* 11. PLAYGROUND - Deep Space Slate / Electric Cyan Theme */
+        #playground {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        }
+        #playground h2 {
+            background: linear-gradient(90deg, #112233, #335577);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 3px solid #112233;
+        }
+        #playground .section {
+            background: linear-gradient(135deg, #ffffff 0%, #e1e9f0 100%);
+            border-left: 5px solid #112233;
         }
 
     </style>
@@ -905,7 +1093,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
                             View Course List &rarr;
                         </div>
                     </div>
@@ -921,7 +1109,7 @@
                                 <span class="semester-tag" style="background-color: var(--primary-color);">Thesis</span>
                             </div>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
                             View Student Profiles &rarr;
                         </div>
                     </div>
@@ -933,7 +1121,7 @@
                             <p><strong>Approach:</strong> Interactive & Generative</p>
                             <p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-color); font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
                             Read Methodology &rarr;
                         </div>
                     </div>
@@ -1623,7 +1811,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                                 <p><strong>Timeline:</strong> 6 Aug - 5 Dec, 2025 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
                             </div>
-                            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
+                            <div style="margin-top: 15px; font-style: italic; color: #0DA699;">
                                 Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
@@ -1638,7 +1826,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                                 <p><strong>Timeline:</strong> 5 Jan - 4 May, 2026 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
                             </div>
-                            <div style="margin-top: 15px; font-style: italic; color: var(--secondary-color);">
+                            <div style="margin-top: 15px; font-style: italic; color: #0DA699;">
                                 Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
