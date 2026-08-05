@@ -1071,7 +1071,12 @@
         <!-- 3. Teaching Page (REDESIGNED) -->
     <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
-                
+                <div class="playground-container">
+                 <h2><span style="vertical-align: middle;"> </span> Glimpses </h2>    
+                 <div class="section">
+                <p> Moments from My Classes </p>
+                    <iframe src="slideshow.html" frameborder="0"></iframe>
+                </div>
             </div>
            
             <!-- TEACHING DASHBOARD -->
