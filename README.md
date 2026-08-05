@@ -1122,7 +1122,8 @@
                             View Student Profiles &rarr;
                         </div>
                     </div>
-
+               
+            </div>
                  
 
             <!-- DETAILED VIEW: ACADEMIC COURSES -->
