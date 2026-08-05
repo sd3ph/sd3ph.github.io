@@ -1071,12 +1071,21 @@
         <!-- 3. Teaching Page (REDESIGNED) -->
         <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
+
+            <h2><span style="vertical-align: middle;"> </span> STEM Education</h2>            <div class="section">
+                <p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
+                <div class="playground-container">
+                    <iframe src="slideshow.htm" frameborder="0"></iframe>
+                </div>
+            </div>
            
             <!-- TEACHING DASHBOARD -->
             <div id="teaching-dashboard">
                 <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: var(--secondary-color);">
                     Explore our academic engagements, mentoring programs, and pedagogical philosophy.
                 </p>
+
+                
                
                 <div class="course-grid">
                     <!-- Card 1: Academic Courses -->
