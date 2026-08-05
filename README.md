@@ -1071,9 +1071,6 @@
         <!-- 3. Teaching Page (REDESIGNED) -->
         <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
-
-            <h2><span style="vertical-align: middle;"> </span> STEM Education</h2>            <div class="section">
-                <p> Moments from My Classes </p>
                 <div class="playground-container">
                     <iframe src="slideshow.html" frameborder="0"></iframe>
                 </div>
