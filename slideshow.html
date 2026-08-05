@@ -17,13 +17,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             overflow: hidden;
         }
 
         .slideshow-container {
-            width: 1536px;
-            height: 672px;
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16 / 7; /* Automatically scales height based on width */
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
@@ -89,14 +90,14 @@
         /* Modern UI Indicator */
         .indicator {
             position: absolute;
-            bottom: 30px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(17, 24, 39, 0.75);
             backdrop-filter: blur(8px);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 11px;
             letter-spacing: 1px;
             color: #9ca3af;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -137,7 +138,7 @@
         <img src="pages/1.jpg" alt="Slide 1">
     </div>
 
-    <div class="indicator">DYNAMIC DUAL DISPLAY (FIG FOLDER)</div>
+    <div class="indicator">DYNAMIC DUAL DISPLAY</div>
 </div>
 
 <script>
@@ -149,30 +150,20 @@
     let currentIndex2 = 1;
     const totalImages = panel1Images.length;
 
-    // Array of random transition effects
     const effects = [
-        (img, dir) => { // Zoom & Fade
-            img.style.transform = dir === 'in' ? 'scale(1.15) rotate(1deg)' : 'scale(0.95)';
-        },
-        (img, dir) => { // Slide & Blur
-            img.style.transform = dir === 'in' ? 'translateY(0) scale(1.03)' : 'translateY(-30px) scale(1.03)';
-        },
-        (img, dir) => { // Lateral Shift
-            img.style.transform = dir === 'in' ? 'translateX(0) scale(1.03)' : 'translateX(40px) scale(1.03)';
-        }
+        (img, dir) => { img.style.transform = dir === 'in' ? 'scale(1.15) rotate(1deg)' : 'scale(0.95)'; },
+        (img, dir) => { img.style.transform = dir === 'in' ? 'translateY(0) scale(1.03)' : 'translateY(-30px) scale(1.03)'; },
+        (img, dir) => { img.style.transform = dir === 'in' ? 'translateX(0) scale(1.03)' : 'translateX(40px) scale(1.03)'; }
     ];
 
     function changeSlides() {
-        // Trigger Flash Effect
         flashOverlay.classList.remove('trigger-flash');
-        void flashOverlay.offsetWidth; // trigger reflow
+        void flashOverlay.offsetWidth; 
         flashOverlay.classList.add('trigger-flash');
 
-        // Remove active class from current
         panel1Images[currentIndex1].classList.remove('active');
         panel2Images[currentIndex2].classList.remove('active');
 
-        // Pick random next indices independently
         let nextIndex1, nextIndex2;
         do {
             nextIndex1 = Math.floor(Math.random() * totalImages);
@@ -182,7 +173,6 @@
         currentIndex1 = nextIndex1;
         currentIndex2 = nextIndex2;
 
-        // Apply random transition style
         const randomEffect = effects[Math.floor(Math.random() * effects.length)];
         
         panel1Images[currentIndex1].style.transition = 'all 1.2s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -191,12 +181,10 @@
         randomEffect(panel1Images[currentIndex1], 'in');
         randomEffect(panel2Images[currentIndex2], 'in');
 
-        // Set active
         panel1Images[currentIndex1].classList.add('active');
         panel2Images[currentIndex2].classList.add('active');
     }
 
-    // Change slides every 3.5 seconds
     setInterval(changeSlides, 3500);
 </script>
 
