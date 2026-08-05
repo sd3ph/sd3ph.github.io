@@ -1066,7 +1066,7 @@
                 </div>
             </div>
         </div>
-
+ 
 
         <!-- 3. Teaching Page (REDESIGNED) -->
         <div id="teaching" class="page-content">
