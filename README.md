@@ -1123,19 +1123,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Philosophy -->
-                    <div class="course-card" onclick="openTeachingSection('teaching-philosophy')">
-                        <div>
-                            <h4><span style="vertical-align: middle;">🧠</span> Teaching Philosophy</h4>
-                            <p><strong>Approach:</strong> Interactive & Generative</p>
-                            <p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
-                        </div>
-                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
-                            Read Methodology &rarr;
-                        </div>
-                    </div>
-                </div>
-            </div>
+                 
 
             <!-- DETAILED VIEW: ACADEMIC COURSES -->
             <div id="teaching-courses" class="teaching-detail-view">
