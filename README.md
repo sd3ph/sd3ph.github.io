@@ -1712,6 +1712,12 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                 </div>
             </div>
 
+             <div class="timeline-item">
+                <div class="timeline-content" style="margin-bottom: 15px;">
+                    <strong> Suman delivered a talk at the Department of Physics of Complex Systems, S. N. Bose National Centre for Basic Sciences, Kolkata: Persistently Non-Gaussian Metastable Fluids </strong>
+                </div>
+            </div>
+
          <div class="timeline-item">
                 <div class="timeline-content" style="margin-bottom: 15px;">
                     <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
