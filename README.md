@@ -1,870 +1,692 @@
+Here is the complete, modernized code for your portfolio website.
+
+The main structure and all existing JavaScript functionality have been strictly
+preserved, while the design has been completely overhauled with a modern
+glassmorphic dark-mode aesthetic, typography (Space Grotesk & Plus Jakarta
+Sans), ambient neon glow accents, and smooth interactive micro-animations.
+
+--- START OF FILE Paste August 06, 2026 - 10:45AM ---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLab - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Modern Typography Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-color: #1a252f; /* Deep blue-grey */
-            --secondary-color: #576574; /* Muted grey */
-            --accent-color: #ff4757; /* Accent */
-            --card-background: #ffffff;
-            --border-color: #dcdde1;
+            --bg-base: #090d16;
+            --bg-surface: rgba(18, 26, 41, 0.65);
+            --bg-card: rgba(23, 33, 53, 0.5);
+            --border-glow: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(120, 119, 198, 0.4);
+            
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+
+            --accent-cyan: #00f2fe;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+
+            --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --gradient-purple: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            --gradient-rose: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 12px; /* Very small font size */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
             line-height: 1.7;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(at 15% 15%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 85% 20%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 80%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
             background-attachment: fixed;
-            color: var(--primary-color);
+            color: var(--text-primary);
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 960px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            overflow: hidden; /* To contain floated elements */
-            backdrop-filter: blur(5px);
-        }
-
-        /* --- MODIFIED NAVIGATION STYLES --- */
-        /* Main header container */
+        /* --- HEADER & NAVIGATION STYLES --- */
         .main-header {
-            width: 100%;
-            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
-            box-sizing: border-box;
-            border-bottom: 3px solid transparent;
-            border-image: linear-gradient(90deg, #ff7e5f, #feb47b, #8E2DE2, #00B4DB) 1;
+            position: sticky;
+            top: 15px;
+            z-index: 1000;
+            width: 95%;
+            max-width: 1080px;
+            margin: 15px auto;
+            background: rgba(13, 20, 33, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        /* Top row: Title */
         .site-title-header {
-            padding: 15px 30px;
-            box-sizing: border-box;
+            padding: 18px 30px 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .site-title-header .title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em; /* Increased title font size */
-            background: linear-gradient(90deg, #ffffff, #a8ff78);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2em;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 0;
-            text-align: left;
             font-weight: 700;
+            letter-spacing: -0.5px;
+            position: relative;
         }
-       
-        /* Bottom row: Navigation Links Bar */
+
+        .site-title-header .title::after {
+            content: '';
+            position: absolute;
+            right: -12px;
+            bottom: 6px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
         .navbar {
             display: flex;
-            justify-content: center; /* Center the links container */
+            justify-content: center;
             align-items: center;
-            padding: 10px 30px;
-            box-sizing: border-box;
-            background: rgba(0, 0, 0, 0.2);
+            padding: 8px 15px 12px 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-       
+
         .nav-links {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+            flex-wrap: wrap;
             justify-content: center;
+            gap: 6px;
         }
 
         .nav-links li {
-            margin: 5px 10px; /* Add vertical margin for wrapping */
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
         .nav-links a {
-            color: #fff;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 600;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap; /* Prevent link text from breaking */
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 7px 16px;
+            border-radius: 12px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            white-space: nowrap;
+            background: transparent;
+            border: 1px solid transparent;
+            display: inline-block;
         }
 
         .nav-links a:hover {
-            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
             color: #fff;
-            box-shadow: 0 4px 12px rgba(255, 65, 108, 0.4);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
         }
 
         .nav-links a.active {
-            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
             color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
         }
-        /* --- END OF MODIFIED NAVIGATION --- */
 
+        /* --- CONTAINER & CONTENT STYLING --- */
+        .container {
+            max-width: 1080px;
+            width: 95%;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
 
-        /* Page Content Styling */
         .page-content {
-            padding: 30px;
-            display: none; /* Hidden by default */
-            animation: fadeIn 0.5s ease-out;
-            border-radius: 8px;
+            display: none;
+            animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .page-content.active {
             display: block;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.7em;
-            padding-bottom: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8em;
             margin-top: 0;
-            margin-bottom: 20px;
-            text-align: left;
+            margin-bottom: 24px;
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 12px;
         }
 
         h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.3em;
-            color: var(--primary-color);
-            margin-top: 20px;
-            margin-bottom: 12px;
+            color: var(--accent-cyan);
+            margin-top: 24px;
+            margin-bottom: 14px;
+            font-weight: 600;
         }
-       
+
         h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.1em;
-            color: var(--primary-color);
+            color: var(--text-primary);
             margin-top: 18px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         strong {
-            color: var(--primary-color);
+            color: #fff;
             font-weight: 600;
         }
 
         p {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            color: var(--text-secondary);
         }
 
         ul {
-            list-style: disc;
-            margin-left: 25px;
+            list-style: none;
             padding-left: 0;
+            margin-bottom: 20px;
         }
 
         li {
-            margin-bottom: 10px;
-            padding-left: 5px;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
         }
 
+        li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-family: monospace;
+        }
+
+        /* Glassmorphism Section Card */
+        .section {
+            background: var(--bg-surface);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.3s ease;
+        }
+
+        .section:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Profile Header */
         .profile-header {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            gap: 25px;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .profile-picture {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin-right: 20px;
             object-fit: cover;
-            border: 3px solid #667eea;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .header-text {
-            flex-grow: 1;
+            border: 2px solid var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
         }
 
         .header-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            margin-bottom: 4px;
-            color: var(--primary-color);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2em;
+            margin: 0 0 6px 0;
+            color: #fff;
+            letter-spacing: -0.5px;
         }
 
         .header-text p {
-            font-size: 0.9em;
-            color: var(--secondary-color);
-            font-style: italic;
+            font-size: 1em;
+            color: var(--accent-cyan);
+            margin: 0;
+            font-weight: 500;
         }
 
+        /* Social Links */
         .social-links {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .social-links a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .social-links img {
-            height: 26px;
-            vertical-align: middle;
-            transition: transform 0.2s ease;
+        .social-links a img {
+            height: 28px;
+            border-radius: 6px;
+            transition: transform 0.2s ease, filter 0.2s ease;
         }
 
         .social-links a:hover img {
-            transform: translateY(-2px) scale(1.05);
+            transform: translateY(-3px);
+            filter: brightness(1.2);
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-            margin: 35px 0;
-        }
-
-        .badge-container {
-            text-align: center;
-            margin-top: 25px;
-            margin-bottom: 20px;
-        }
-        .badge-container img {
-            margin: 0 5px;
-            height: 22px;
-        }
-
-        /* Specific for Research Section */
+        /* Research Items */
         .research-area-item {
-            margin-bottom: 15px;
-            padding-left: 12px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            border-radius: 0 8px 8px 0;
-            background: rgba(255, 255, 255, 0.6);
-        }
-        .research-area-item strong {
-            color: var(--primary-color);
-        }
-
-        /* Creative Theme Adjustments */
-        .profile-header, .section {
-            padding: 20px;
+            margin-bottom: 12px;
+            padding: 12px 18px;
             border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid rgba(255,255,255,0.6);
-        }
-        .container {
-            background: none; /* Remove card background for the overall container */
-            box-shadow: none;
-            border: none;
-        }
-        .page-content {
-            background-color: transparent;
-            padding: 0; /* Remove padding from page content as it's now in sections */
-        }
-        .page-content.active {
-            padding: 30px; /* Add padding back when active */
-        }
-        .profile-header h1, .profile-header p {
-            color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--accent-cyan);
+            transition: transform 0.2s ease, background 0.2s ease;
         }
 
-        /* Collaborator Section Styles */
-        .collaborator-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+        .research-area-item:hover {
+            transform: translateX(4px);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .collaborator-pic {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-            border: 2px solid var(--accent-color);
-        }
-       
-        .collaborator-info {
-            line-height: 1.5;
-        }
-
-        /* --- JOIN US ADVERTISEMENT STYLES --- */
+        /* --- JOIN US ADVERTISEMENT --- */
         .advertisement {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #fff;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.15);
             text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .advertisement:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
         }
 
         .advertisement h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 2.2em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            color: white;
-            border-bottom: none;
-            text-align: center;
-        }
-
-        .advertisement p {
-            font-size: 1.0em;
-            line-height: 1.7;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .opportunities {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin: 30px 0;
+            gap: 12px;
+            margin: 25px 0;
         }
 
         .opportunity {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 18px;
             border-radius: 30px;
-            font-size: 0.85em;
-            transition: background-color 0.3s ease;
-            backdrop-filter: blur(5px);
+            font-size: 0.9em;
+            color: #e2e8f0;
+            transition: all 0.2s ease;
         }
 
         .opportunity:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .call-to-action {
-            margin-top: 30px;
-        }
-
-        .call-to-action h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: white;
-            border-bottom: none;
-            text-align: center;
+            background: rgba(139, 92, 246, 0.3);
+            transform: translateY(-2px);
         }
 
         .email-link {
             display: inline-block;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
-            color: #667eea;
-            padding: 12px 30px;
-            border-radius: 50px;
+            background: var(--gradient-primary);
+            color: #090d16;
+            padding: 12px 32px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.0em;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+            margin-top: 15px;
         }
 
         .email-link:hover {
-            background: #ffffff;
-            color: #5a6edc;
             transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
         }
 
-        .footer-text {
-            margin-top: 30px;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-        /* --- END OF ADVERTISEMENT STYLES --- */
-
-        /* --- Publication Section Styles --- */
+        /* --- PUBLICATIONS --- */
         .publication-item {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
         }
-        .publication-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+
+        .publication-item:hover {
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(255, 255, 255, 0.04);
         }
+
         .publication-item .citation {
-            font-size: 1.1em; /* Slightly larger font for the main citation */
+            font-size: 1.05em;
             line-height: 1.6;
             margin-bottom: 8px;
-        }
-        .publication-item p {
-            margin-bottom: 5px; /* Tighter spacing within an item */
-            line-height: 1.6;
-        }
-        .publication-item a {
-            color: #11998e;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .publication-item a:hover {
-            text-decoration: underline;
+            color: var(--text-primary);
         }
 
-        /* --- Timeline Styles for Latest News --- */
+        .publication-item a {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 2px 8px;
+            background: rgba(0, 242, 254, 0.1);
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+
+        .publication-item a:hover {
+            background: rgba(0, 242, 254, 0.25);
+        }
+
+        /* --- TIMELINE / LATEST NEWS --- */
         .timeline {
             position: relative;
-            padding-left: 20px;
-            border-left: 3px solid #654ea3;
+            padding-left: 25px;
+            border-left: 2px solid rgba(139, 92, 246, 0.3);
         }
+
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
+
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -28px;
-            top: 5px;
-            width: 14px;
-            height: 14px;
+            left: -31px;
+            top: 15px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #654ea3, #eaafc8);
-            border: 2px solid white;
-            z-index: 1;
+            background: var(--accent-purple);
+            border: 2px solid var(--bg-base);
+            box-shadow: 0 0 10px var(--accent-purple);
         }
-        .timeline-month {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.2em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
+
         .timeline-content {
-            background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid rgba(101, 78, 163, 0.15);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
-        }
-        .timeline-content p {
-            margin: 0;
-        }
-        .timeline-content strong {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--primary-color);
-            font-size: 1.05em;
-        }
-        .timeline-content a {
-            color: #654ea3;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .timeline-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Playground / Embedded Chatbot Styles --- */
-        .playground-container {
-            width: 100%;
-            height: 75vh; /* Take up significant vertical space */
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        .playground-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* --- Live Class Room & Teaching Dashboard Styles --- */
-        .password-prompt-container {
-            text-align: center;
-            padding: 40px 20px;
-            border: 1px dashed var(--border-color);
+            background: var(--bg-card);
+            padding: 16px 20px;
             border-radius: 12px;
-            background: linear-gradient(135deg, #ffffff 0%, #f0fcfc 100%);
-        }
-        .password-prompt-container h3 {
-            margin-top: 0;
-        }
-        .password-form {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .password-form input {
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 1.1em;
-            width: 250px;
-        }
-        .password-form button {
-            padding: 10px 20px;
-            border: none;
-            background: linear-gradient(135deg, #0DA699 0%, #12D8C9 100%);
-            color: white;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .password-form button:hover {
-            opacity: 0.9;
-        }
-        .password-error-message {
-            margin-top: 15px;
-            color: #e74c3c;
-            font-weight: bold;
-            height: 1.2em; /* Reserve space to prevent layout shift */
-        }
-        #classroom-content.hidden {
-            display: none;
+            border: 1px solid var(--border-glow);
         }
 
-        /* --- New Course/Teaching Dashboard Styles --- */
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .course-card {
-            border-radius: 10px;
-            padding: 20px;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-        .course-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-        .course-card:hover::after {
-            transform: scaleX(1);
-        }
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .course-card h4 {
-            margin-top: 0;
-            font-size: 1.3em;
-            font-family: 'Playfair Display', serif;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .course-card p {
-            margin-bottom: 8px;
+        .timeline-content strong {
+            color: var(--text-primary);
             font-size: 0.95em;
         }
-        .course-card .course-code {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        .course-card .semester-tag {
-            background: linear-gradient(135deg, #141e30, #243b55);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-        .back-btn {
-            background: linear-gradient(135deg, #576574 0%, #2f3542 100%);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 20px;
-            transition: opacity 0.3s;
-            display: inline-flex;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-        }
-        .back-btn:hover {
-            opacity: 0.9;
-        }
-        .back-btn svg {
-            margin-right: 5px;
-            fill: currentColor;
-        }
-        .course-detail-view, .teaching-detail-view {
-            display: none;
-            animation: fadeIn 0.4s ease-out;
-        }
-        .course-detail-view.active, .teaching-detail-view.active {
-            display: block;
-        }
 
-        /* --- Outreach Styles --- */
-        .outreach-grid {
+        /* --- COURSE & TEACHING DASHBOARD CARDS --- */
+        .course-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
-        .outreach-card {
-            background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-top: 4px solid #ff7e5f;
-            transition: transform 0.3s;
+
+        .course-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--border-glow);
+            position: relative;
+            overflow: hidden;
         }
-        .outreach-card:hover {
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .course-card:hover {
             transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
-        .outreach-card h4 {
-            color: var(--primary-color);
-            border-bottom: none;
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-card h4 {
             margin-top: 0;
-            font-weight: 700;
+            font-size: 1.2em;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
         }
+
+        .semester-tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-3px);
+        }
+
+        /* --- OUTREACH CARDS --- */
+        .outreach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .outreach-card {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            border-top: 3px solid var(--accent-amber);
+            transition: transform 0.3s ease;
+        }
+
+        .outreach-card:hover {
+            transform: translateY(-4px);
+        }
+
         .outreach-icon {
             font-size: 2em;
             margin-bottom: 10px;
             display: block;
         }
 
-        /* --- PAGE-SPECIFIC GRADIENT STYLES --- */
-
-        /* 1. HIGHLIGHT (HOME) - Deep Royal Blue / Indigo Theme */
-        #highlight {
-            background: linear-gradient(135deg, #f0f4ff 0%, #e6edfd 100%);
-        }
-        #highlight h2 {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #2a5298;
-        }
-        #highlight .section {
-            background: linear-gradient(135deg, #ffffff 0%, #eef3fc 100%);
-            border-left: 5px solid #2a5298;
+        /* --- PLAYGROUND & SLIDESHOW IFRAMES --- */
+        .playground-container {
+            width: 100%;
+            height: 75vh;
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
-        /* 2. RESEARCH - Coral Sunset / Crimson Flame Theme */
-        #research {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
-        }
-        #research h2 {
-            background: linear-gradient(90deg, #e52d27, #b31217);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #e52d27;
-        }
-        #research .section {
-            background: linear-gradient(135deg, #ffffff 0%, #fde8e8 100%);
-            border-left: 5px solid #e52d27;
-        }
-        #research .research-area-item {
-            border-left: 3px solid #e52d27;
-            background: rgba(229, 45, 39, 0.05);
+        .playground-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
-        /* 3. PUBLICATION - Emerald Jade / Mint Green Theme */
-        #publication {
-            background: linear-gradient(135deg, #f0fbf5 0%, #e2f7eb 100%);
-        }
-        #publication h2 {
-            background: linear-gradient(90deg, #059669, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #059669;
-        }
-        #publication .section {
-            background: linear-gradient(135deg, #ffffff 0%, #e1f9eb 100%);
-            border-left: 5px solid #059669;
+        /* --- CLASSROOM LOCK PROMPT --- */
+        .password-prompt-container {
+            text-align: center;
+            padding: 50px 20px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            background: var(--bg-surface);
+            max-width: 500px;
+            margin: 40px auto;
         }
 
-        /* 4. TEACHING - Cyber Purple / Violet Dusk Theme */
-        #teaching {
-            background: linear-gradient(135deg, #f8f0fc 0%, #f1e3fa 100%);
-        }
-        #teaching h2 {
-            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #8E2DE2;
-        }
-        #teaching .section {
-            background: linear-gradient(135deg, #ffffff 0%, #f3e5fa 100%);
-            border-left: 5px solid #8E2DE2;
-        }
-        #teaching .course-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f6ebfc 100%);
-        }
-        #teaching .course-card h4 {
-            color: #8E2DE2;
+        .password-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        /* 5. ABOUT - Teal Ocean / Cyan Horizon Theme */
-        #about {
-            background: linear-gradient(135deg, #eef9fb 0%, #e0f2f7 100%);
-        }
-        #about h2 {
-            background: linear-gradient(90deg, #0083B0, #00B4DB);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #0083B0;
-        }
-        #about .section {
-            background: linear-gradient(135deg, #ffffff 0%, #e2f4f8 100%);
-            border-left: 5px solid #0083B0;
+        .password-form input {
+            padding: 10px 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            outline: none;
         }
 
-        /* 6. OUTREACH - Warm Mango / Amber Peach Theme */
-        #outreach {
-            background: linear-gradient(135deg, #fff8f0 0%, #ffeedd 100%);
-        }
-        #outreach h2 {
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #ff7e5f;
-        }
-        #outreach .section {
-            background: linear-gradient(135deg, #ffffff 0%, #ffe9e0 100%);
-            border-left: 5px solid #ff7e5f;
-        }
-        #outreach .outreach-card {
-            background: linear-gradient(135deg, #ffffff 0%, #ffebe3 100%);
-            border-top: 4px solid #ff7e5f;
+        .password-form input:focus {
+            border-color: var(--accent-cyan);
         }
 
-        /* 7. LATEST - Midnight Amethyst / Aurora Lavender Theme */
-        #latest {
-            background: linear-gradient(135deg, #f6f3ff 0%, #ede8ff 100%);
-        }
-        #latest h2 {
-            background: linear-gradient(90deg, #654ea3, #eaafc8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #654ea3;
-        }
-        #latest .section {
-            background: linear-gradient(135deg, #ffffff 0%, #ede7ff 100%);
-            border-left: 5px solid #654ea3;
+        .password-form button {
+            padding: 10px 24px;
+            border: none;
+            background: var(--gradient-primary);
+            color: #000;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
         }
 
-        /* 8. LIVE CLASSROOM - Turquoise Aqua / Mint Breeze Theme */
-        #classroom {
-            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
-        }
-        #classroom h2 {
-            background: linear-gradient(90deg, #0DA699, #12D8C9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #0DA699;
-        }
-        #classroom .section {
-            background: linear-gradient(135deg, #ffffff 0%, #e6fffa 100%);
-            border-left: 5px solid #0DA699;
-        }
-        #classroom .course-card {
-            background: linear-gradient(135deg, #ffffff 0%, #e6fcf5 100%);
-        }
-        #classroom .course-card h4 {
-            color: #0DA699;
+        .password-form button:hover {
+            opacity: 0.9;
         }
 
-        /* 9. LAB PRODUCTS - Berry Magenta / Electric Rose Theme */
-        #products {
-            background: linear-gradient(135deg, #fcf0f8 0%, #f8e1f3 100%);
-        }
-        #products h2 {
-            background: linear-gradient(90deg, #B224EF, #7579FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #B224EF;
-        }
-        #products .section {
-            background: linear-gradient(135deg, #ffffff 0%, #f7e2f4 100%);
-            border-left: 5px solid #B224EF;
+        .password-error-message {
+            margin-top: 15px;
+            color: #ef4444;
+            font-weight: 600;
         }
 
-        /* 10. MISC - Cosmic Charcoal / Steel Blue Theme */
-        #misc {
-            background: linear-gradient(135deg, #f2f5f9 0%, #e4eaf2 100%);
-        }
-        #misc h2 {
-            background: linear-gradient(90deg, #373B44, #4286f4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #4286f4;
-        }
-        #misc .section {
-            background: linear-gradient(135deg, #ffffff 0%, #e2e9f5 100%);
-            border-left: 5px solid #4286f4;
+        /* --- TABLES MODERNIZATION --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9em;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
-        /* 11. PLAYGROUND - Deep Space Slate / Electric Cyan Theme */
-        #playground {
-            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
         }
-        #playground h2 {
-            background: linear-gradient(90deg, #112233, #335577);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 3px solid #112233;
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
         }
-        #playground .section {
-            background: linear-gradient(135deg, #ffffff 0%, #e1e9f0 100%);
-            border-left: 5px solid #112233;
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        /* Hidden Utility */
+        #classroom-content.hidden {
+            display: none;
+        }
+        .course-detail-view, .teaching-detail-view {
+            display: none;
+            animation: slideUpFade 0.4s ease-out;
+        }
+        .course-detail-view.active, .teaching-detail-view.active {
+            display: block;
         }
 
     </style>
@@ -887,7 +709,6 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#outreach" class="nav-link">Outreach</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
-                <!-- NEW PAGES ADDED HERE -->
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
                 <li><a href="#misc" class="nav-link">misc</a></li>
@@ -899,7 +720,7 @@
     <div class="container">
         <!-- 1. Highlight Page -->
         <div id="highlight" class="page-content active">
-            <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 6px;">
+            <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 24px; border-radius: 16px; border: 1px solid var(--border-glow);">
            
             <h2> Hello World !</h2>
             <p>We are a group of creative researchers exploring physics at the interface of artificial intelligence, working in a deeply collaborative and interdisciplinary setting. Our goal is to understand complex systems and to see how modern computational approaches, especially deep learning, can contribute to solutions for societal good. Our main research interests include:</p>
@@ -907,7 +728,7 @@
                 <li><b>Collective Intelligence in Natural and Artificial Systems:</b> How do large groups of individual agents—be they birds in a flock, cells in a tissue, or robots in a swarm—coordinate to achieve complex, group-level goals? We explore the physical principles behind this emergent intelligence, studying how local rules and interactions give rise to sophisticated collective behaviors in both living and engineered systems.</li>
                 <li><b>Physics of Living Matter:</b> We view biological tissues as a form of active matter. We study the collective migration and self-organization of cells to better understand fundamental processes like wound healing, tissue development, and morphogenesis. By creating computational models that capture the interplay between cellular forces and signaling, we hope to contribute insights that could one day aid in regenerative medicine.</li>
                 <li><b>Mechanics of Disordered Materials:</b> Materials like glasses and granular packings lack a perfect crystal structure, which makes predicting their behavior, particularly failure, a difficult challenge. We investigate the fundamental mechanics of these systems, applying machine learning techniques to identify subtle structural precursors to failure. Our goal is to contribute to a more predictive science of materials, which is essential for designing more resilient and safer structures.</li>
-                <li><b>AI as a Tool for Scientific Discovery:</b> A common thread through all our research is the use of deep learning not just for prediction, but as a tool for gaining fundamental insight. We are committed to developing simple models by machine intelligence (MI).  We aim to uncover the underlying physical principles our models have learned, helping us to formulate new hypotheses and deepen our understanding of the complex natural systems we study.</li>
+                <li><b>AI as a Tool for Scientific Discovery:</b> A common thread through all our research is the use of deep learning not just for prediction, but as a tool for gaining fundamental insight. We are committed to developing simple models by machine intelligence (MI). We aim to uncover the underlying physical principles our models have learned, helping us to formulate new hypotheses and deepen our understanding of the complex natural systems we study.</li>
             </ul>
             <p>We thrive on a close partnership with experimentalists and other theorists, creating a dynamic environment for learning and discovery.</p>
 
@@ -938,14 +759,14 @@
                     <p>Find your chance to work on projects that matter, surrounded by a team to pushing the boundaries of what's possible. We believe in the power of diversity and the magic that happens when generative minds connect.</p>
            
                     <div class="call-to-action">
-                        <h2>Ready to answer the call?</h2>
+                        <h2 style="justify-content: center; border: none;">Ready to answer the call?</h2>
                         <p>We want to hear from you: your vision and plans with us.<br>Email your one-page CV, a well supported SOP</p>
                         <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">Submit</a>
                     </div>
            
-                    <p class="footer-text">Let's build the future together.</p>
+                    <p style="margin-top: 30px; font-style: italic; font-size: 0.9em;">Let's build the future together.</p>
                 </div>
-                <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 12px; border: 1px solid var(--border-glow);">
             </div>
         </div>
 
@@ -959,9 +780,9 @@
                     <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
                 </ul>
             </div>
-            <div style="display: flex; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px; border-radius: 6px;">
-                <img src="cavitation.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
-                <img src="mips.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover;">
+            <div style="display: flex; gap: 15px; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px;">
+                <img src="cavitation.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);">
+                <img src="mips.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);">
             </div>
             <div class="section">
                 <h3>Key Research Areas</h3>
@@ -998,8 +819,8 @@
         <div id="publication" class="page-content">
             <h2>📚 Publications</h2>
             <div class="section">
-                 <h3>2026</h3>
-               <div class="publication-item">
+                <h3>2026</h3>
+                <div class="publication-item">
                     <p class="citation">V. Vaibhav, T. Das & <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, Ann. Phys. (Berlin) 538 (4), e00247(2026) [<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.202500247" target="_blank" rel="noopener noreferrer">LINK</a>]</p>
                     <p><strong>Contribution:</strong> <u>Corresponding author</u></p>
                 </div>
@@ -1009,7 +830,7 @@
                     <p><strong>Contribution:</strong> <u>Contributing author</u></p>
                 </div>
                 <div class="publication-item">
-                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025)  [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p>
+                    <p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao & C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025) [<a href="https://arxiv.org/abs/2509.00376" target="_blank" rel="noopener noreferrer">LINK</a>] </p>
                     <p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
                 </div>
                
@@ -1066,10 +887,9 @@
                 </div>
             </div>
         </div>
- 
 
-        <!-- 3. Teaching Page (REDESIGNED) -->
-    <div id="teaching" class="page-content">
+        <!-- 3. Teaching Page -->
+        <div id="teaching" class="page-content">
             <h2>💡 Teaching & Mentoring</h2>
             <div class="section">
                 <h3>Glimpses</h3>
@@ -1081,28 +901,25 @@
            
             <!-- TEACHING DASHBOARD -->
             <div id="teaching-dashboard">
-                <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: var(--secondary-color);">
+                <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: var(--text-secondary);">
                     Explore our academic engagements, mentoring programs, and pedagogical philosophy.
                 </p>
 
-                
-               
                 <div class="course-grid">
                     <!-- Card 1: Academic Courses -->
                     <div class="course-card" onclick="openTeachingSection('teaching-courses')">
                         <div>
-                            <h4><span style="vertical-align: middle;">👨‍🏫</span> Academic Courses</h4>
+                            <h4>👨‍🏫 Academic Courses</h4>
                             <p><strong>Focus:</strong> AI, Mathematics & Material Science</p>
                             <p>Courses delivered at Amrita Vishwa Vidyapeetham and S. N. Bose National Centre for Basic Sciences.</p>
-                            <ul style="margin-top:10px; font-size: 0.9em; color: var(--secondary-color);">
+                            <ul style="margin-top:10px; font-size: 0.9em; color: var(--text-secondary);">
                                 <li>Mathematics for Intelligent Systems-III (23MAT204)</li>
                                 <li>Introduction to Material Informatics (23CHY115)</li>
                                 <li>Mathematics for Intelligent Systems-I (23MAT106)</li>
-                                <li>Research Methodology (PHY501)
-                                </li>
+                                <li>Research Methodology (PHY501)</li>
                             </ul>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
                             View Course List &rarr;
                         </div>
                     </div>
@@ -1110,105 +927,86 @@
                     <!-- Card 2: Mentoring -->
                     <div class="course-card" onclick="openTeachingSection('teaching-mentoring')">
                         <div>
-                            <h4><span style="vertical-align: middle;">🤝</span> Mentoring & Supervision</h4>
+                            <h4>🤝 Mentoring & Supervision</h4>
                             <p><strong>Role:</strong> Advisor & Co-Supervisor</p>
                             <p>Guiding research interns, Masters thesis students, and student collaborators.</p>
                             <div style="margin-top:10px;">
-                                <span class="semester-tag" style="background-color: var(--primary-color);">Interns</span>
-                                <span class="semester-tag" style="background-color: var(--primary-color);">Thesis</span>
+                                <span class="semester-tag">Interns</span>
+                                <span class="semester-tag">Thesis</span>
                             </div>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
                             View Student Profiles &rarr;
                         </div>
                     </div>
-                <!-- Card 3: Philosophy -->
+
+                    <!-- Card 3: Philosophy -->
                     <div class="course-card" onclick="openTeachingSection('teaching-philosophy')">
                         <div>
-                            <h4><span style="vertical-align: middle;">🧠</span> Teaching Philosophy</h4>
+                            <h4>🧠 Teaching Philosophy</h4>
                             <p><strong>Approach:</strong> Interactive & Generative</p>
                             <p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
                         </div>
-                        <div style="margin-top: 15px; font-style: italic; color: #8E2DE2; font-weight: bold;">
+                        <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
                             Read Methodology &rarr;
                         </div>
                     </div>
                 </div>
             </div>
-                 
 
             <!-- DETAILED VIEW: ACADEMIC COURSES -->
             <div id="teaching-courses" class="teaching-detail-view">
                 <button class="back-btn" onclick="closeTeachingSection()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     Back to Dashboard
                 </button>
                 <div class="section">
                     <h3>Courses Taught</h3>
-                    <ul>
-                        <style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-</style>
-<table>
-    <thead>
-        <tr>
-            <th>Course Code</th>
-            <th>Credit</th>
-            <th>Hrs/Week</th>
-            <th>Session</th>
-            <th>Students</th>
-            <th>TLP-Feedback</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science, Semester-III)</td>
-            <td>3+3</td>
-            <td>4+4</td>
-            <td>2026-27 Odd</td>
-            <td>65+66</td>
-            <td>Ongoing</td>
-        </tr>
-        <tr>
-            <td>Introduction to Material Informatics (B.Tech in AI & Data Science, Semester-II)</td>
-            <td>3+3</td>
-            <td>4+4</td>
-            <td>2025-26 Even</td>
-            <td>64+65</td>
-            <td>92.92%</td>
-        </tr>
-        <tr>
-            <td>Mathematics for Intelligent System - I (B.Tech in AI & Data Science, Semester-I)</td>
-            <td>4+4</td>
-            <td>5+5</td>
-            <td>2025-26 Odd</td>
-            <td>65+66</td>
-            <td>93.11%</td>
-        </tr>
-    </tbody>
-</table>
-                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Credit</th>
+                                <th>Hrs/Week</th>
+                                <th>Session</th>
+                                <th>Students</th>
+                                <th>TLP-Feedback</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science, Semester-III)</td>
+                                <td>3+3</td>
+                                <td>4+4</td>
+                                <td>2026-27 Odd</td>
+                                <td>65+66</td>
+                                <td>Ongoing</td>
+                            </tr>
+                            <tr>
+                                <td>Introduction to Material Informatics (B.Tech in AI & Data Science, Semester-II)</td>
+                                <td>3+3</td>
+                                <td>4+4</td>
+                                <td>2025-26 Even</td>
+                                <td>64+65</td>
+                                <td>92.92%</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics for Intelligent System - I (B.Tech in AI & Data Science, Semester-I)</td>
+                                <td>4+4</td>
+                                <td>5+5</td>
+                                <td>2025-26 Odd</td>
+                                <td>65+66</td>
+                                <td>93.11%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <!-- DETAILED VIEW: MENTORING -->
             <div id="teaching-mentoring" class="teaching-detail-view">
                 <button class="back-btn" onclick="closeTeachingSection()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     Back to Dashboard
                 </button>
                 <div class="section">
@@ -1230,352 +1028,352 @@
                     <div class="research-area-item">
                         <strong>Supervision: Topical Projects</strong>
                         <div style="overflow-x: auto; margin-top: 15px;">
-                            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9em;">
+                            <table>
                                 <thead>
-                                    <tr style="border-bottom: 2px solid #ddd; background-color: #f8f9fa;">
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Subject Code</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Names</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Title</th>
+                                    <tr>
+                                        <th>Subject Code</th>
+                                        <th>Names</th>
+                                        <th>Title</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!-- 23CHY115 Projects -->
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Adithya R, Ashwin Krishna V, Madhan S, Nawin K.G</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Prediction of Molecular Solubility</td>
+                                        <td>23CHY115</td>
+                                        <td>Adithya R, Ashwin Krishna V, Madhan S, Nawin K.G</td>
+                                        <td>Prediction of Molecular Solubility</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Mahalakshmi R, Venugopalan G, Ram Eswar P, Selva Vignesh V</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Semantic RAG with Specialized Embeddings</td>
+                                        <td>23CHY115</td>
+                                        <td>Mahalakshmi R, Venugopalan G, Ram Eswar P, Selva Vignesh V</td>
+                                        <td>Semantic RAG with Specialized Embeddings</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">A. Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Bio-Match: Implant Material Recommender</td>
+                                        <td>23CHY115</td>
+                                        <td>A. Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+                                        <td>Bio-Match: Implant Material Recommender</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Manvith, M. Venkat Naidu, S. Manoj Chowdary, B. Nakul</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Earthquake Probability & Early Warning Analysis</td>
+                                        <td>23CHY115</td>
+                                        <td>P. Manvith, M. Venkat Naidu, S. Manoj Chowdary, B. Nakul</td>
+                                        <td>Earthquake Probability & Early Warning Analysis</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Rithvik, Venkat, Abhishek, Grishmanth</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Forecasting Stress-Strain with Koopman</td>
+                                        <td>23CHY115</td>
+                                        <td>Rithvik, Venkat, Abhishek, Grishmanth</td>
+                                        <td>Forecasting Stress-Strain with Koopman</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Rithvik Arulprakash, Harshith K. V, Vijayamurughan S, Vipin Sudhakar</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Driven Dynamics in Active Glass</td>
+                                        <td>23CHY115</td>
+                                        <td>Rithvik Arulprakash, Harshith K. V, Vijayamurughan S, Vipin Sudhakar</td>
+                                        <td>AI-Driven Dynamics in Active Glass</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Suthasrinitha K.G, Asmitha T, Moushika S, Mirudhunya V</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Governing Equations of Chaotic Systems</td>
+                                        <td>23CHY115</td>
+                                        <td>Suthasrinitha K.G, Asmitha T, Moushika S, Mirudhunya V</td>
+                                        <td>Governing Equations of Chaotic Systems</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">J. Harini, A. Harsha Sree, B. Pavani, P. Prasad</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Identifying Metastable States with HAVOK</td>
+                                        <td>23CHY115</td>
+                                        <td>J. Harini, A. Harsha Sree, B. Pavani, P. Prasad</td>
+                                        <td>Identifying Metastable States with HAVOK</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith, K. Swami, M. Pranavi, N. Manoj</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">The Sandpile Model (BTW)</td>
+                                        <td>23CHY115</td>
+                                        <td>B. Lalith, K. Swami, M. Pranavi, N. Manoj</td>
+                                        <td>The Sandpile Model (BTW)</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">N.V. Varshitha, A. Jahnavi, T. Varshini, B. Sai Prasanna</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Polymer Property Prediction Simulator</td>
+                                        <td>23CHY115</td>
+                                        <td>N.V. Varshitha, A. Jahnavi, T. Varshini, B. Sai Prasanna</td>
+                                        <td>Polymer Property Prediction Simulator</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">V.R. Yasswant, Abishek S, Y. Sanmukha Sai, U. Sudheer</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Convex Hull for Alloy</td>
+                                        <td>23CHY115</td>
+                                        <td>V.R. Yasswant, Abishek S, Y. Sanmukha Sai, U. Sudheer</td>
+                                        <td>Convex Hull for Alloy</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Hari Priya, Maha Sri, Neha, Prathibaa</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">SINDy - Discovering Physics from Data</td>
+                                        <td>23CHY115</td>
+                                        <td>Hari Priya, Maha Sri, Neha, Prathibaa</td>
+                                        <td>SINDy - Discovering Physics from Data</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Moorthy Neeraj, Mortha Sathwik, Surya Charan Teja, Pavan Kalyan S.V, Dhanush</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones System for Glass Formation</td>
+                                        <td>23CHY115</td>
+                                        <td>Moorthy Neeraj, Mortha Sathwik, Surya Charan Teja, Pavan Kalyan S.V, Dhanush</td>
+                                        <td>Lennard-Jones System for Glass Formation</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Sharvesh S. P, B. gurucharan, P. A. Bhavesh Jayan, Hashwin M</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">The Butterfly Paradox: Chaos in MD</td>
+                                        <td>23CHY115</td>
+                                        <td>Sharvesh S. P, B. gurucharan, P. A. Bhavesh Jayan, Hashwin M</td>
+                                        <td>The Butterfly Paradox: Chaos in MD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Ocean Waves Dynamics</td>
+                                        <td>23CHY115</td>
+                                        <td>T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
+                                        <td>Ocean Waves Dynamics</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Based Material Recommendation System</td>
+                                        <td>23CHY115</td>
+                                        <td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+                                        <td>AI-Based Material Recommendation System</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">D. Durga Prasad Reddy, Mukesh Reddy, G. Yaswanth Reddy, K. Praneeth, Jasmitha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Failure Prediction in Amorphous Solids</td>
+                                        <td>23CHY115</td>
+                                        <td>D. Durga Prasad Reddy, Mukesh Reddy, G. Yaswanth Reddy, K. Praneeth, Jasmitha</td>
+                                        <td>Failure Prediction in Amorphous Solids</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">S. Sujitkumar, M. Hemanthkumar, H. Abinavkumaran, P.V. RithikRaj</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Molecular Phase Dynamics using Koopman DMD</td>
+                                        <td>23CHY115</td>
+                                        <td>S. Sujitkumar, M. Hemanthkumar, H. Abinavkumaran, P.V. RithikRaj</td>
+                                        <td>Molecular Phase Dynamics using Koopman DMD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Kirithik B, Sankardas K.K, V. Amruth, Vishnu Prasad P</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Discontinuous Molecular Dynamics</td>
+                                        <td>23CHY115</td>
+                                        <td>Kirithik B, Sankardas K.K, V. Amruth, Vishnu Prasad P</td>
+                                        <td>Discontinuous Molecular Dynamics</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Adharsh K, Anu R, Sidharth M, Vethavarsini A</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Rare Event Acceleration with Koopman-GNN</td>
+                                        <td>23CHY115</td>
+                                        <td>Adharsh K, Anu R, Sidharth M, Vethavarsini A</td>
+                                        <td>Rare Event Acceleration with Koopman-GNN</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Akshara Sree R, Anirudh S Nair, Iniyaa Muthuselvan, Shashank Kannan</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">The Battery Oracle</td>
+                                        <td>23CHY115</td>
+                                        <td>Akshara Sree R, Anirudh S Nair, Iniyaa Muthuselvan, Shashank Kannan</td>
+                                        <td>The Battery Oracle</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Harish Kumaar S, S. Sri Raghav Vatsan, Dhruv Jayesh, Prithve KC</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Predicting Swarm Dynamics</td>
+                                        <td>23CHY115</td>
+                                        <td>Harish Kumaar S, S. Sri Raghav Vatsan, Dhruv Jayesh, Prithve KC</td>
+                                        <td>Predicting Swarm Dynamics</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Kanish Visyanth C, Kavipranidan J.T, Navaneet K.V, Nethaaji S</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Radiation Damage Prediction</td>
+                                        <td>23CHY115</td>
+                                        <td>Kanish Visyanth C, Kavipranidan J.T, Navaneet K.V, Nethaaji S</td>
+                                        <td>Radiation Damage Prediction</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Revanth S, G Kamalesh, Jaswanth S, Elango Megabala G</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Graph Neural Networks for Molecules</td>
+                                        <td>23CHY115</td>
+                                        <td>Revanth S, G Kamalesh, Jaswanth S, Elango Megabala G</td>
+                                        <td>Graph Neural Networks for Molecules</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">K. Gayathri, P. Sri Harshini, M. Deekshitha, A. Gnana Amrutha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">AI-Based Inverse Material Selector</td>
+                                        <td>23CHY115</td>
+                                        <td>K. Gayathri, P. Sri Harshini, M. Deekshitha, A. Gnana Amrutha</td>
+                                        <td>AI-Based Inverse Material Selector</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Rohith Meka, Kode Karrthik, Naram Divya Akhil, T. Yashwant</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Microstructure Evolution Prediction</td>
+                                        <td>23CHY115</td>
+                                        <td>Rohith Meka, Kode Karrthik, Naram Divya Akhil, T. Yashwant</td>
+                                        <td>Microstructure Evolution Prediction</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Meenakshi Bijoy, Neelanjana J Anil, Aryananda M, Ghadige Rithika</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Learning Swarm Behaviour</td>
+                                        <td>23CHY115</td>
+                                        <td>Meenakshi Bijoy, Neelanjana J Anil, Aryananda M, Ghadige Rithika</td>
+                                        <td>Learning Swarm Behaviour</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">U. Raghu Nandan, S. Akshaya, Nikitha, Likhit K</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">De-noising MD Data via Hankel SVD</td>
+                                        <td>23CHY115</td>
+                                        <td>U. Raghu Nandan, S. Akshaya, Nikitha, Likhit K</td>
+                                        <td>De-noising MD Data via Hankel SVD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">M. Harsha, M. Anudeep Reddy, P. Nihal Reddy, P. Naren</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Bayesian Optimization for Alloy Design</td>
+                                        <td>23CHY115</td>
+                                        <td>M. Harsha, M. Anudeep Reddy, P. Nihal Reddy, P. Naren</td>
+                                        <td>Bayesian Optimization for Alloy Design</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">C. Sai Hardhik Reddy, R. Gagan Chowdhury, K. Charan Saatvikh Reddy, T. Sri Sai</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Deformation in Copper Crystals</td>
+                                        <td>23CHY115</td>
+                                        <td>C. Sai Hardhik Reddy, R. Gagan Chowdhury, K. Charan Saatvikh Reddy, T. Sri Sai</td>
+                                        <td>Deformation in Copper Crystals</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Srikar, Sumanth, Sai Sushanth, Sai Sathwik</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Perovskite Solar Cells</td>
+                                        <td>23CHY115</td>
+                                        <td>Srikar, Sumanth, Sai Sushanth, Sai Sathwik</td>
+                                        <td>Perovskite Solar Cells</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23CHY115</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Neha Saravanan, Y. Pranavi Reddy, T. Sai Varshitha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Predicting Particle Mobility in Active Matter</td>
+                                        <td>23CHY115</td>
+                                        <td>Neha Saravanan, Y. Pranavi Reddy, T. Sai Varshitha</td>
+                                        <td>Predicting Particle Mobility in Active Matter</td>
                                     </tr>
 
                                     <!-- 23MAT106 Projects -->
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Adithya R, Sai Prasanna B, Anudeep Reddy</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Stochastic Gradient Descent-Image Brightness Optimizer</td>
+                                        <td>23MAT106</td>
+                                        <td>Adithya R, Sai Prasanna B, Anudeep Reddy</td>
+                                        <td>Stochastic Gradient Descent-Image Brightness Optimizer</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Abisheik S, Ashwin Krishna V, Nakul Sharvan B, Nawin K.G</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Interior Point Method for Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>Abisheik S, Ashwin Krishna V, Nakul Sharvan B, Nawin K.G</td>
+                                        <td>Interior Point Method for Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Raghuraman V, Vipin Sudhakar, Harshith KV, Rithvik Arul Prakash</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Optimization Using Sequential Quadratic Programming</td>
+                                        <td>23MAT106</td>
+                                        <td>Raghuraman V, Vipin Sudhakar, Harshith KV, Rithvik Arul Prakash</td>
+                                        <td>Optimization Using Sequential Quadratic Programming</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Harish Kumaar S, Prabakar, Venkat D, Prithve K C</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Minimizing 2-D Lennard-Jones System via Broyden’s Good Method</td>
+                                        <td>23MAT106</td>
+                                        <td>Harish Kumaar S, Prabakar, Venkat D, Prithve K C</td>
+                                        <td>Minimizing 2-D Lennard-Jones System via Broyden’s Good Method</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">V R Yasswant, S. Sri Raghav Vatsan, Selva Vignesh V, Madhan S</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Augmented Lagrangian Method for Constrained Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>V R Yasswant, S. Sri Raghav Vatsan, Selva Vignesh V, Madhan S</td>
+                                        <td>Augmented Lagrangian Method for Constrained Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Manvith Sharma, P. Grishmanth, P. Naren, S. Manoj</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Broyden’s Bad Method for Energy Minimization</td>
+                                        <td>23MAT106</td>
+                                        <td>P. Manvith Sharma, P. Grishmanth, P. Naren, S. Manoj</td>
+                                        <td>Broyden’s Bad Method for Energy Minimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">P. Sri Harshini, K. Gayathri, M. Deekshitha, Meenakshi Bijoy</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Movie Recommendation System</td>
+                                        <td>23MAT106</td>
+                                        <td>P. Sri Harshini, K. Gayathri, M. Deekshitha, Meenakshi Bijoy</td>
+                                        <td>Movie Recommendation System</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">S Jaswant, Revanth S, Elango Megabala G, G Kamalesh</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Steepest Descent Algorithm</td>
+                                        <td>23MAT106</td>
+                                        <td>S Jaswant, Revanth S, Elango Megabala G, G Kamalesh</td>
+                                        <td>Steepest Descent Algorithm</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Rohith Meka, Naram Divya Akhil, B. Sai Srikar, Danush Mani Yerramsetti</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Movie Recommendation Using SVD</td>
+                                        <td>23MAT106</td>
+                                        <td>Rohith Meka, Naram Divya Akhil, B. Sai Srikar, Danush Mani Yerramsetti</td>
+                                        <td>Movie Recommendation Using SVD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">P.S. Sathwik, V.S. Amruth Chowdary, Kirithik B, Sankar Das K.K</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Computational Search for Glassy States using Conjugate Gradient</td>
+                                        <td>23MAT106</td>
+                                        <td>P.S. Sathwik, V.S. Amruth Chowdary, Kirithik B, Sankar Das K.K</td>
+                                        <td>Computational Search for Glassy States using Conjugate Gradient</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">SV Pavan Kalyan, Neeraj M, C. Jasmitha, S. Akshaya, G. Rithika</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Audio Compression using SVD</td>
+                                        <td>23MAT106</td>
+                                        <td>SV Pavan Kalyan, Neeraj M, C. Jasmitha, S. Akshaya, G. Rithika</td>
+                                        <td>Audio Compression using SVD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Energy Minimization of 2D Particle System via L-BFGS</td>
+                                        <td>23MAT106</td>
+                                        <td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+                                        <td>Energy Minimization of 2D Particle System via L-BFGS</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Mortha Sathwik, Surya Charan Tej B, AryaNanda M, Neelanjana J Anil</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Computer Glassy States via Newton-Raphson Method</td>
+                                        <td>23MAT106</td>
+                                        <td>Mortha Sathwik, Surya Charan Tej B, AryaNanda M, Neelanjana J Anil</td>
+                                        <td>Computer Glassy States via Newton-Raphson Method</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">T.V.S.S Phanindra Guptha, M. Vittal, K. Nanda Kishore, Athul V.R</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones Potential via Nelder-Mead</td>
+                                        <td>23MAT106</td>
+                                        <td>T.V.S.S Phanindra Guptha, M. Vittal, K. Nanda Kishore, Athul V.R</td>
+                                        <td>Lennard-Jones Potential via Nelder-Mead</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Y. Pranavi Reddy, Neha Saravanan, T. Sai Varshitha Reddy, K.B Nikitha Krishna</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Optimization of Lennard-Jones via PSO</td>
+                                        <td>23MAT106</td>
+                                        <td>Y. Pranavi Reddy, Neha Saravanan, T. Sai Varshitha Reddy, K.B Nikitha Krishna</td>
+                                        <td>Optimization of Lennard-Jones via PSO</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Nethaaji S, Navaneet KV, Kavipranidan JT, Kanish Visyanth C</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Computer Glassy States through Simulated Annealing</td>
+                                        <td>23MAT106</td>
+                                        <td>Nethaaji S, Navaneet KV, Kavipranidan JT, Kanish Visyanth C</td>
+                                        <td>Computer Glassy States through Simulated Annealing</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Prasad Reddy, Sai Praneeth, Mukesh Reddy, Yaswanth Reddy</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Adopted Basis Newton-Raphson Method</td>
+                                        <td>23MAT106</td>
+                                        <td>Prasad Reddy, Sai Praneeth, Mukesh Reddy, Yaswanth Reddy</td>
+                                        <td>Adopted Basis Newton-Raphson Method</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Kode Karrthik, Kella Likhith, T. Yaswanth Sai Vedadri, U. Raghu Nandan</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States by Instantaneous Quench (FIRE Algorithm)</td>
+                                        <td>23MAT106</td>
+                                        <td>Kode Karrthik, Kella Likhith, T. Yaswanth Sai Vedadri, U. Raghu Nandan</td>
+                                        <td>Glassy States by Instantaneous Quench (FIRE Algorithm)</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">H. Abinavkumaran, S. Sujitkumar, M. Hemanthkumar, P.V. RithikRaj</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Stable Particle Arrangement via Barzilai-Borwein Method</td>
+                                        <td>23MAT106</td>
+                                        <td>H. Abinavkumaran, S. Sujitkumar, M. Hemanthkumar, P.V. RithikRaj</td>
+                                        <td>Stable Particle Arrangement via Barzilai-Borwein Method</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Vishnu Prasad, N Sai Sushanth Reddy, Hari Sumanth, Gnana Amrutha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States via Instant Quenching</td>
+                                        <td>23MAT106</td>
+                                        <td>Vishnu Prasad, N Sai Sushanth Reddy, Hari Sumanth, Gnana Amrutha</td>
+                                        <td>Glassy States via Instant Quenching</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith Hari Sainath Reddy, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Powell’s Method for Energy Minimization</td>
+                                        <td>23MAT106</td>
+                                        <td>B. Lalith Hari Sainath Reddy, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+                                        <td>Powell’s Method for Energy Minimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Moushika S, Iniyaa Muthuselvan, Alamuru Harsha Sree, Akshara Sree R</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Levenberg-Marquardt Algorithm for Glass Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>Moushika S, Iniyaa Muthuselvan, Alamuru Harsha Sree, Akshara Sree R</td>
+                                        <td>Levenberg-Marquardt Algorithm for Glass Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Suthasrinitha K G, Mirudhunya V, Asmitha T, Ram Eswar P</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">RMS Propagation Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>Suthasrinitha K G, Mirudhunya V, Asmitha T, Ram Eswar P</td>
+                                        <td>RMS Propagation Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Pavani B, Maha Sri N, Neha S, Varshini T</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Basin Hopping Algorithm</td>
+                                        <td>23MAT106</td>
+                                        <td>Pavani B, Maha Sri N, Neha S, Varshini T</td>
+                                        <td>Basin Hopping Algorithm</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Ala Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Smart Diet Planner</td>
+                                        <td>23MAT106</td>
+                                        <td>Ala Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+                                        <td>Smart Diet Planner</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Lalith, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Powell’s Method of Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>B. Lalith, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+                                        <td>Powell’s Method of Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">K. Charan Saatvikh Reddy, R. Gagan Chowdary, C. Sai Hardhik Reddy, M. Venkat Naidu</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Adagrad Optimization</td>
+                                        <td>23MAT106</td>
+                                        <td>K. Charan Saatvikh Reddy, R. Gagan Chowdary, C. Sai Hardhik Reddy, M. Venkat Naidu</td>
+                                        <td>Adagrad Optimization</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Dhruv Jayesh Kansagara, Nihal Reddy P, T. Sri Sai, Y. Sanmukha Sai</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">BFGS with Trust Region</td>
+                                        <td>23MAT106</td>
+                                        <td>Dhruv Jayesh Kansagara, Nihal Reddy P, T. Sri Sai, Y. Sanmukha Sai</td>
+                                        <td>BFGS with Trust Region</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">J. Harini, Prathibaa, Mahalakshmi</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Image Compression using SVD</td>
+                                        <td>23MAT106</td>
+                                        <td>J. Harini, Prathibaa, Mahalakshmi</td>
+                                        <td>Image Compression using SVD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Aadharsh, Anu R, Sidharth M, Vethavarsini A</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Glassy States via Instantaneous Quench (TNM)</td>
+                                        <td>23MAT106</td>
+                                        <td>Aadharsh, Anu R, Sidharth M, Vethavarsini A</td>
+                                        <td>Glassy States via Instantaneous Quench (TNM)</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Smart Diet Planner (Revised)</td>
+                                        <td>23MAT106</td>
+                                        <td>M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal</td>
+                                        <td>Smart Diet Planner (Revised)</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Madhan Senthil Kumar, Selva Vignesh V, S. Sri Raghav Vatsan, V.R. Yasswant</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Augmented Lagrangian Method (ALM)</td>
+                                        <td>23MAT106</td>
+                                        <td>Madhan Senthil Kumar, Selva Vignesh V, S. Sri Raghav Vatsan, V.R. Yasswant</td>
+                                        <td>Augmented Lagrangian Method (ALM)</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">B. Sai Prasanna Anjaneyulu, M. Annudeep Reddy, R. Adithya</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Image Enhancement Using SGD</td>
+                                        <td>23MAT106</td>
+                                        <td>B. Sai Prasanna Anjaneyulu, M. Annudeep Reddy, R. Adithya</td>
+                                        <td>Image Enhancement Using SGD</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Mukesh Reddy, D. Durga Prasad Reddy, Yaswanth Reddy, K. Sai Praneeth</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Lennard-Jones via Adopted Basis Newton-Raphson</td>
+                                        <td>23MAT106</td>
+                                        <td>Mukesh Reddy, D. Durga Prasad Reddy, Yaswanth Reddy, K. Sai Praneeth</td>
+                                        <td>Lennard-Jones via Adopted Basis Newton-Raphson</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">23MAT106</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">Anirudh S Nair, Shashank Kannan, Vijayamurughan S, G. Venugopalan</td>
-                                        <td style="padding: 8px; border: 1px solid #ddd;">The Math Behind PageRank</td>
+                                        <td>23MAT106</td>
+                                        <td>Anirudh S Nair, Shashank Kannan, Vijayamurughan S, G. Venugopalan</td>
+                                        <td>The Math Behind PageRank</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1583,10 +1381,11 @@
                     </div>
                 </div>
             </div>
+
             <!-- DETAILED VIEW: PHILOSOPHY -->
             <div id="teaching-philosophy" class="teaching-detail-view">
                 <button class="back-btn" onclick="closeTeachingSection()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     Back to Dashboard
                 </button>
                 <div class="section">
@@ -1613,7 +1412,7 @@
                 </div>
             </div>
 
-             <h2> About Me</h2>
+            <h2> About Me</h2>
             <p>I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong>, <strong>High Performance Computing </strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.</p>
             <div class="section">
                 <h3>🎓 Professional Journey</h3>
@@ -1631,8 +1430,8 @@
                     <li>Fluvial Mechanics Laboratory Indian Statistical Institute (Kolkata, IN) </li>
                     <li>Department of Physics Indian Institute of Science (Bangalore, IN) </li>
                     <li>Department of Physics Indian Institute of Science Education and Research (Bhopal, IN) </li>
-                    <li>Laboratoire Interdisciplinaire de Physique Universit´e Grenoble Alpes (Grenoble, FR) </li>
-                    <li>Institut f¨ur Theoretische Physik II - Soft Matter Heinrich-Heine-Universit¨at (D¨usseldorf, DE) </li>
+                    <li>Laboratoire Interdisciplinaire de Physique Université Grenoble Alpes (Grenoble, FR) </li>
+                    <li>Institut für Theoretische Physik II - Soft Matter Heinrich-Heine-Universität (Düsseldorf, DE) </li>
                 </ul>
                 <h4>Education</h4>
                 <ul>
@@ -1642,7 +1441,7 @@
             </div>
             <h2>📫 Connect</h2>
             <div class="section" style="text-align: center;">
-                <div class="social-links" style="border-top: none; margin-top: 0; padding-top: 0;">
+                <div class="social-links">
                     <a href="mailto:sumandutta.snbncbs@gmail.com"><img src="https://img.shields.io/badge/Email-red?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
                     <a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
                     <a href="https://github.com/sd3ph"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
@@ -1653,7 +1452,7 @@
 
         <!-- NEW OUTREACH PAGE -->
         <div id="outreach" class="page-content">
-            <h2><span style="vertical-align: middle;">📢</span> Outreach & Community</h2>
+            <h2>📢 Outreach & Community</h2>
             <p style="text-align: center; margin-bottom: 25px;">Engaging with the scientific community and the public to demystify Physics and AI.</p>
            
             <div class="outreach-grid">
@@ -1662,7 +1461,7 @@
                     <span class="outreach-icon">🗣️</span>
                     <h4>Talks</h4>
                     <p>Talks/Presentations</p>
-                    <ul style="font-size: 0.9em; color: var(--secondary-color);">
+                    <ul style="font-size: 0.9em;">
                         <li>International: 3+ </li>
                         <li>National: 10+ </li>
                         <li>Total: 26+ </li>
@@ -1684,121 +1483,116 @@
                     <p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
                     <p>March 20, 2026-- Class hackathon -II. Participation: 9 Groups (Each consisting of 4-6 Members) </p>
                 </div>
-
-                
             </div>
            
             <div class="section" style="margin-top: 30px;">
                 <h3>Milestones</h3>
                 <div class="research-area-item">
                     <strong>Human+AI Collaboration</strong>
-                    <p>In a fusion of logic and creativity, we conducted
-an experimental initiative in the Autumn of 2025, challenging first-year BTech(AID) students to move beyond the mechanics of AI to the artistry of generation. The resulting anthology compiles 115 distinct narratives, representing a massive coordination of human imagination amplified by Large Language Models. This collection showcases a remarkable spectrum of themes, refracting a single premise into genres ranging from the futuristic sci-fi of The Neural Vault and ZeroTrace
-to the philosophical introspection of synthetic intelligence. Demonstrating how artificial tools can yield storytelling, we present the book: "Tales from the Hidden Layers — An Anthology of Neural Symphonies" (115 Stories from 115 Student coauthors from BTech AID S1 batch, 748 Pages).</p>
+                    <p>In a fusion of logic and creativity, we conducted an experimental initiative in the Autumn of 2025, challenging first-year BTech(AID) students to move beyond the mechanics of AI to the artistry of generation. The resulting anthology compiles 115 distinct narratives, representing a massive coordination of human imagination amplified by Large Language Models. This collection showcases a remarkable spectrum of themes, refracting a single premise into genres ranging from the futuristic sci-fi of The Neural Vault and ZeroTrace to the philosophical introspection of synthetic intelligence. Demonstrating how artificial tools can yield storytelling, we present the book: "Tales from the Hidden Layers — An Anthology of Neural Symphonies" (115 Stories from 115 Student coauthors from BTech AID S1 batch, 748 Pages).</p>
                 </div>
             </div>
         </div>
 
-
         <!-- Latest News Page -->
-     <div id="latest" class="page-content">
-    <h2>✨ Latest News</h2>
-    <div class="section">
-        <div class="timeline">
+        <div id="latest" class="page-content">
+            <h2>✨ Latest News</h2>
+            <div class="section">
+                <div class="timeline">
 
-         <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
+                        </div>
+                    </div>
 
-             <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Suman delivered a talk at the Department of Physics of Complex Systems, S. N. Bose National Centre for Basic Sciences, Kolkata: Persistently Non-Gaussian Metastable Fluids </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Suman delivered a talk at the Department of Physics of Complex Systems, S. N. Bose National Centre for Basic Sciences, Kolkata: Persistently Non-Gaussian Metastable Fluids </strong>
+                        </div>
+                    </div>
 
-         <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
+                        </div>
+                    </div>
 
-         <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Archit Harish joined the Institute of Mathematical Sciences, Chennai </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Archit Harish joined the Institute of Mathematical Sciences, Chennai </strong>
+                        </div>
+                    </div>
 
-        <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Completed Project: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (2025-2026) (PI: Abhijit A., CoPI:  Sai N Sundarakrishna, T. Subeesh and S. Dutta </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Completed Project: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (2025-2026) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta </strong>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Oral presentation in International Mini-Workshop - 125 Minutes: Optimal Diet Plannar, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha and A. Sheshank Royal </strong>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>International Mini-Workshop - 125 Minutes was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta). </strong>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Suman delivered a talk at the Institute of Mathematical Sciences, Chennai: Persistently Non-Gaussian Metastable Fluids </strong>
+                        </div>
+                    </div>
             
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Archit Harish selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+                        </div>
+                    </div>
 
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Oral presentation in International Mini-Workshop - 125 Minutes: Optimal Diet Plannar, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha and A. Sheshank Royal </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
+                        </div>
+                    </div>
 
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>International Mini-Workshop - 125 Minutes was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta). </strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
+                        </div>
+                    </div>
 
-             <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong> Suman delivered a talk at the Institute of Mathematical Sciences, Chennai: Persistently Non-Gaussian Metastable Fluids </strong>
-                </div>
-            </div>
-    
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Archit Harish selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
+                        </div>
+                    </div>
 
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
                 </div>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content" style="margin-bottom: 15px;">
-                    <strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
-                </div>
-            </div>
-
-        </div> <!-- Close the one and only timeline div here -->
-    </div> <!-- Close section -->
-</div> <!-- Close page-content -->
+        </div>
         
         <!-- NEW: Live Class Room Page -->
         <div id="classroom" class="page-content">
-             <h2><span style="vertical-align: middle;">🧑‍🏫</span> Live Class Room</h2>
+             <h2>🧑‍🏫 Live Class Room</h2>
              
-             <!-- This container holds the password prompt -->
+             <!-- Password Prompt Container -->
              <div id="password-prompt-container" class="password-prompt-container">
                  <h3>🔒 Access Restricted</h3>
                  <p>Please enter the passcode to view course materials.</p>
@@ -1809,7 +1603,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                  <p id="password-error-message" class="password-error-message"></p>
              </div>
              
-             <!-- This container holds the protected content, hidden by default -->
+             <!-- Protected Content -->
              <div id="classroom-content" class="hidden">
                
                 <!-- DASHBOARD VIEW -->
@@ -1826,7 +1620,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                                 <p><strong>Timeline:</strong> 6 Aug - 5 Dec, 2025 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
                             </div>
-                            <div style="margin-top: 15px; font-style: italic; color: #0DA699;">
+                            <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
                                 Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
@@ -1841,7 +1635,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                                 <p><strong>Timeline:</strong> 5 Jan - 4 May, 2026 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
                             </div>
-                            <div style="margin-top: 15px; font-style: italic; color: #0DA699;">
+                            <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
                                 Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
@@ -1851,7 +1645,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                 <!-- DETAILED VIEW: 23MAT106 -->
                 <div id="course-mat106" class="course-detail-view">
                     <button class="back-btn" onclick="closeCourse()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                         Back to Dashboard
                     </button>
                    
@@ -1865,181 +1659,93 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                     </div>
 
                     <div class="section">
-                        <!-- Updated the header to reflect the content -->
                         <h3>Combined Weekly Schedule</h3>
+                        <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.1em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
 
-                        <!-- Sub-headers for the course details -->
-                        <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
-                        <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
-
-                        <!-- Outer container to simulate the tcolorbox border -->
-                        <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
-
-                            <!-- Main Schedule Table -->
-                            <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
+                        <div style="border: 1px solid var(--border-glow); padding: 15px; border-radius: 12px; margin: 20px 0; overflow-x: auto; background: rgba(0,0,0,0.2);">
+                            <table style="width: 100%; border-collapse: collapse; text-align: center;">
                                 <thead>
-                                    <tr style="background-color: #F2F2F2;">
-                                        <!-- Table Headers (thead) -->
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
+                                    <tr>
+                                        <th>Time Slot</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Row 1: 08:00 - 08:50 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">08:00 - 08:50</td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
-                                    <!-- Row 2: 08:50 - 09:40 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
+                                        <td style="font-weight: bold;">08:50 - 09:40</td>
+                                        <td></td><td></td><td></td><td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
                                     </tr>
-                                    <!-- Row 3: 09:40 - 10:30 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">09:40 - 10:30</td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
                                     </tr>
-                                    <!-- Row 4: 10:30 - 10:45 (Break) -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
-                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
+                                        <td style="font-weight: bold;">10:30 - 10:45</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
                                     </tr>
-                                    <!-- Row 5: 10:45 - 11:35 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">10:45 - 11:35</td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
-                                    <!-- Row 6: 11:35 - 12:25 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
+                                        <td style="font-weight: bold;">11:35 - 12:25</td>
+                                        <td></td><td></td><td></td><td></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
                                     </tr>
-                                    <!-- Row 7: 12:25 - 01:15 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Project (Sec B) -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec B)</span>
-                                        </td>
+                                        <td style="font-weight: bold;">12:25 - 01:15</td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td><td></td><td></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Project (Sec B)</span></td>
                                     </tr>
-                                    <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
-                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
+                                        <td style="font-weight: bold;">01:15 - 02:05</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
                                     </tr>
-                                    <!-- Row 9: 02:05 - 03:45 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section B (Lab) -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Section A (Lab) -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">02:05 - 03:45</td>
+                                        <td></td><td></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td><span class="semester-tag">Section A (Lab)</span></td>
+                                        <td></td>
                                     </tr>
-                                    <!-- Row 10: 03:45 - 04:35 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Project (Sec A) -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Project (Sec A)</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    </tr>
-                                    <!-- Row 11: 04:35 - 06:15 -->
-                                    <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">03:45 - 04:35</td>
+                                        <td><span class="semester-tag">Project (Sec A)</span></td>
+                                        <td></td><td></td><td></td><td></td>
                                     </tr>
                                 </tbody>
                             </table>
-
-                            <!-- Legend (Key) -->
-                            <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
-                                <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
-                                    <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                    Section A, LH 310
-                                </div>
-                                <div style="display: inline-block; font-size: 0.9em;">
-                                    <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                    Section B, LH 314
-                                </div>
-                            </div>
                         </div>
                     </div>
                    
                     <div class="section">
                         <h3>Syllabus</h3>
                         <dl>
-                            <dt>Unit 1</dt>
+                            <dt><strong>Unit 1</strong></dt>
                             <dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
                            
-                            <dt>Unit 2</dt>
+                            <dt><strong>Unit 2</strong></dt>
                             <dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
 
-                            <dt>Unit 3</dt>
+                            <dt><strong>Unit 3</strong></dt>
                             <dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
 
-                            <dt>Unit 4</dt>
+                            <dt><strong>Unit 4</strong></dt>
                             <dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
                         </dl>
                     </div>
@@ -2051,33 +1757,29 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                             <li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
                             <li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
                             <li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
-                          <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing"
-    >Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/2025)</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing"
-    >Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/2025)</a> - (LH 310/314)</li>
-                          <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
-                           <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
-                          <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?
-    usp=sharing">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
-                               <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing">Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharing">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025)</a> - (LH 310/314)</li>
                             <li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025)</a> - (LH 310/314)</li>
-                               <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025)</a> - (LH 310/314)</li>
-                                <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
-                                 <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025)</a> - (LH 310/314)</li>
-                               <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
-                                   <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
-                                    <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
-                                        <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025)</a> - (LH 15/16)</li>
-                                      <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
-                                       <li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
-                                       
+                            <li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
+                            <li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
                         </ul>
                     </div>
 
@@ -2085,7 +1787,6 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                         <h3>Topical Project</h3>
                         <ul>
                             <li><a href="https://drive.google.com/file/d/1kfk44ClGk1CHYdp4oH3HK4MVGU5g_oYK/view?usp=drive_link"> Summary of Topical Projects </a> </li>
-                        
                         </ul>
                     </div>
 
@@ -2101,7 +1802,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                 <!-- DETAILED VIEW: 23CHY115 -->
                 <div id="course-chy115" class="course-detail-view">
                     <button class="back-btn" onclick="closeCourse()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                         Back to Dashboard
                     </button>
 
@@ -2116,168 +1817,91 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
                     <div class="section">
                         <h3>Combined Weekly Schedule</h3>
-                        <p style="font-weight: bold; font-family: sans-serif; margin-bottom: 5px;">BTech (AID)</p>
-                        <p style="font-size: 1.1em; font-style: italic; font-family: sans-serif; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
-                        <div style="border: 1px solid #4D4D4D; padding: 15px; border-radius: 3px; margin: 20px 0; overflow-x: auto;">
-                            <!-- Main Schedule Table (COPIED FROM 23MAT106 AND UPDATED) -->
-                            <table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.1em; font-style: italic; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
+
+                        <div style="border: 1px solid var(--border-glow); padding: 15px; border-radius: 12px; margin: 20px 0; overflow-x: auto; background: rgba(0,0,0,0.2);">
+                            <table style="width: 100%; border-collapse: collapse; text-align: center;">
                                 <thead>
-                                    <tr style="background-color: #F2F2F2;">
-                                        <!-- Table Headers (thead) -->
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Time Slot</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Monday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Tuesday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Wednesday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Thursday</th>
-                                        <th style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Friday</th>
+                                    <tr>
+                                        <th>Time Slot</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Row 1: 08:00 - 08:50 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:00 - 08:50</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">08:00 - 08:50</td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
-                                    <!-- Row 2: 08:50 - 09:40 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">08:50 - 09:40</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Fri A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
+                                        <td style="font-weight: bold;">08:50 - 09:40</td>
+                                        <td></td><td></td><td></td><td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
                                     </tr>
-                                    <!-- Row 3: 09:40 - 10:30 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">09:40 - 10:30</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Mon B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Wed A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Thu B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">09:40 - 10:30</td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
                                     </tr>
-                                    <!-- Row 4: 10:30 - 10:45 (Break) -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:30 - 10:45</td>
-                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Break</td>
+                                        <td style="font-weight: bold;">10:30 - 10:45</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
                                     </tr>
-                                    <!-- Row 5: 10:45 - 11:35 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">10:45 - 11:35</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">10:45 - 11:35</td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
-                                    <!-- Row 6: 11:35 - 12:25 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">11:35 - 12:25</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Fri B -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B</span>
-                                        </td>
+                                        <td style="font-weight: bold;">11:35 - 12:25</td>
+                                        <td></td><td></td><td></td><td></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
                                     </tr>
-                                    <!-- Row 7: 12:25 - 01:15 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">12:25 - 01:15</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Mon A -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">12:25 - 01:15</td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td><td></td><td></td><td></td>
                                     </tr>
-                                    <!-- Row 8: 01:15 - 02:05 (Lunch Break) -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">01:15 - 02:05</td>
-                                        <td colspan="5" style="background-color: #e0e0e0; font-style: italic; padding: 10px; border: 1px solid #ccc;">Lunch Break</td>
+                                        <td style="font-weight: bold;">01:15 - 02:05</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
                                     </tr>
-                                    <!-- Row 9: 02:05 - 03:45 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">02:05 - 03:45</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Wed B (Lab) -->
-                                            <span style="background-color: #FDEDEC; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section B (Lab)</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">02:05 - 03:45</td>
+                                        <td></td><td></td>
+                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td></td><td></td>
                                     </tr>
-                                    <!-- Row 10: 03:45 - 04:35 -->
                                     <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">03:45 - 04:35</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;">
-                                            <!-- Thu A (Lab) -->
-                                            <span style="background-color: #D6EAF8; padding: 5px 10px; border-radius: 2px; display: inline-block;">Section A (Lab)</span>
-                                        </td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                    </tr>
-                                    <!-- Row 11: 04:35 - 06:15 -->
-                                    <tr>
-                                        <td style="font-weight: bold; padding: 10px; border: 1px solid #ccc;">04:35 - 06:15</td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
-                                        <td style="padding: 10px; border: 1px solid #ccc;"></td>
+                                        <td style="font-weight: bold;">03:45 - 04:35</td>
+                                        <td></td><td></td><td></td>
+                                        <td><span class="semester-tag">Section A (Lab)</span></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
-
-                            <!-- Legend (Key) -->
-                            <div style="margin-top: 25px; text-align: center; font-family: sans-serif; line-height: 1.5;">
-                                <div style="display: inline-block; margin-right: 30px; font-size: 0.9em;">
-                                    <span style="background-color: #D6EAF8; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                    Section A, LH 310
-                                </div>
-                                <div style="display: inline-block; font-size: 0.9em;">
-                                    <span style="background-color: #FDEDEC; display: inline-block; width: 25px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle;"></span>
-                                    Section B, LH 314
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <div class="section">
                         <h3>Syllabus</h3>
                         <dl>
-                            <dt>Unit 1</dt>
+                            <dt><strong>Unit 1</strong></dt>
                             <dd>Introduction to material science – structure, properties, and process spaces - process-structure-property linkages – foundation of material informatics – introduction to molecular mechanism and force field – quantification of dynamics properties of polymers (monte carlo simulation, molecular dynamics simulation, normal mode analysis) – electronics structure of atoms (Gaussian, Gauss view, density functional theory)</dd>
                            
-                            <dt>Unit 2</dt>
+                            <dt><strong>Unit 2</strong></dt>
                             <dd>Quantification and screening of materials properties - property prediction and optimization using AI - materials design and discovery using AI – how to handle small, spared, and low-quality dataset using AI.</dd>
 
-                            <dt>Unit 3</dt>
+                            <dt><strong>Unit 3</strong></dt>
                             <dd>Materials failure and sustainability analysis – new material and inverse materials design concept – solve inverse design using AI – enhance speed, efficacy and cost-effectiveness of material using AI - basic concept of quantum computing in material informatics.</dd>
 
-                            <dt>Unit 4</dt>
+                            <dt><strong>Unit 4</strong></dt>
                             <dd>Case studies of materials informatics (use of AI) in different fields (e.g. energy, aerospace, biomedical, etc.) - ethical considerations and limitations of materials informatics - future directions and challenges in materials informatics.</dd>
                         </dl>
                     </div>
@@ -2285,7 +1909,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                     <div class="section">
                         <h3>Lecture Notes</h3>
                         <ul>
-                           <li><a href="https://drive.google.com/file/d/10rcKnWqmk5Hy0MSTJqXo8-H74M2xk72T/view?usp=sharing">Lecture 01-03: Overview of Material Informatics </a> - (LH 15/16)</li>
+                            <li><a href="https://drive.google.com/file/d/10rcKnWqmk5Hy0MSTJqXo8-H74M2xk72T/view?usp=sharing">Lecture 01-03: Overview of Material Informatics </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1cZaj16h_Sk6r1eZzc-ZFUbtcTkD7J-z2/view?usp=sharing">Lecture S1: Generative Prediction using Koopman Theory </a> - (LH 15/16)</li>  
                             <li><a href="https://drive.google.com/file/d/1hfJNXZGG6GfeTdLZS3ALU6GrzoUQhBdy/view?usp=sharing">Lecture 4-5: Koopman Operator & Simple DMD </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1lz4Ddp6zURVGcWDvydx6Za-LBiv1wt7c/view?usp=sharing">Lecture 6-7: Koopman Prediction in Material Informatics </a> - (LH 15/16)</li>
@@ -2304,8 +1928,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                             <li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 26-30: Material Discovery by AI </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1lmd9snw_9iXnuwFd-jeRUOTeB5SqjVov/view?usp=sharing">Lecture 31: Vibrational Dynamics, Normal Mode Analysis (NMA) and Data-Driven Modeling </a> - (LH 15/16)</li>
                             <li><a href="https://drive.google.com/file/d/1znn-zVH3Ciy3cJJHQO3Tiuo-i4yUdGIt/view?usp=sharing">Lecture 32-34: Ethical Considerations, Limitations, and Future Directions </a> - (LH 15/16)</li>    
-                             <li><a href="https://drive.google.com/file/d/1Is5xz_s14I5ROZDtmghbUwJOtNb5wAZT/view?usp=sharing">Extensive Summary</a> - (LH 15/16)</li>
-                                          
+                            <li><a href="https://drive.google.com/file/d/1Is5xz_s14I5ROZDtmghbUwJOtNb5wAZT/view?usp=sharing">Extensive Summary</a> - (LH 15/16)</li>
                         </ul>
                     </div>
 
@@ -2318,9 +1941,8 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
                     <div class="section">
                         <h3>Assignments</h3>
-                         <ul>
+                        <ul>
                             <li><a href="https://drive.google.com/file/d/1DHuBZ-bzmekvveB4S0OiRT2LBufMDDvi/view?usp=sharing">Assignment 01: Due Date 31/01/2026 </a> - (LH 15/16)</li>     
-                                          
                         </ul>
                     </div>
                 </div>
@@ -2330,10 +1952,10 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
         <!-- Lab Products Page -->
         <div id="products" class="page-content">
-            <h2><span style="vertical-align: middle;">🧪</span> Lab Products</h2>
+            <h2>🧪 Lab Products</h2>
            
             <div class="section">
-                <h3><span style="vertical-align: middle;">🤖</span> Aadri 2.0: Conversational AI for Customary Profiles</h3>
+                <h3>🤖 Aadri 2.0: Conversational AI for Customary Profiles</h3>
                 <h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
                
                 <h4>🔹 Team</h4>
@@ -2355,12 +1977,12 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
                     <li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
                     <li>To set a new standard for how academics present themselves digitally.</li>
                 </ul>
-                 <h4>🔹 Mobile Demonstration <span style="vertical-align: middle;">📱</span></h4>
-    <p>Evaluate the application's real-time conversational capabilities on the go, in the playground subpage. Read the: <a href="https://drive.google.com/file/d/1wTpjT0-jby8hUuf01bEL8L08Mx2ihmwp/view?usp=sharing" style="text-decoration: none; color: #007BFF; font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 2px;">White Paper</a></p>
+                <h4>🔹 Mobile Demonstration 📱</h4>
+                <p>Evaluate the application's real-time conversational capabilities on the go, in the playground subpage. Read the: <a href="https://drive.google.com/file/d/1wTpjT0-jby8hUuf01bEL8L08Mx2ihmwp/view?usp=sharing" style="text-decoration: none; color: var(--accent-cyan); font-weight: bold; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 2px;">White Paper</a></p>
             </div>
 
             <div class="section">
-                <h3><span style="vertical-align: middle;">📝</span> AtoGRAD: OMR Solutions for Class-based Tests</h3>
+                <h3>📝 AtoGRAD: OMR Solutions for Class-based Tests</h3>
                 <p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
 
                 <h4>🔹 Team</h4>
@@ -2378,7 +2000,7 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             </div>
 
             <div class="section">
-                <h3><span style="vertical-align: middle;">🩺</span> MedScriptAI: Intelligent Medical Documentation</h3>
+                <h3>🩺 MedScriptAI: Intelligent Medical Documentation</h3>
                 <h4>MedScriptAI – Automated Clinical Scripting and Analysis Engine</h4>
 
                 <h4>🔹 Team</h4>
@@ -2396,53 +2018,52 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
             </div>
         </div>
 
-
         <!-- miscellaneous Page -->
         <div id="misc" class="page-content">
             <h2>🤝 Research Collaborators</h2>
             <div class="section">
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Jaydeb Chakrabarti</strong><br>(Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Pinaki Chaudhuri</strong><br>(Professor, The Institute of Mathematical Sciences, Chennai, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Kirsten Martens</strong><br>(CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Chandan Dasgupta</strong><br>(Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Madan Rao</strong><br>(Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Vinay Vaibhav</strong><br>(Post Doctoral Fellow, University of Goettingen, DE)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Raffaela Cabriolu</strong><br>(Associate Professor, Norwegian University of Science and Technology, NO)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>Tamoghna Kanti Das</strong><br>(Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div></div>
-                 <div class="collaborator-item"><div class="collaborator-info"><strong>AM Parvez Biswas</strong><br>(Solution Architect - Enterprise Systems, Data & Integration, Tata Consultancy Services, IN)</div></div>
+                <div class="research-area-item"><strong>Jaydeb Chakrabarti</strong> (Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div>
+                <div class="research-area-item"><strong>Pinaki Chaudhuri</strong> (Professor, The Institute of Mathematical Sciences, Chennai, IN)</div>
+                <div class="research-area-item"><strong>Kirsten Martens</strong> (CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div>
+                <div class="research-area-item"><strong>Chandan Dasgupta</strong> (Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div>
+                <div class="research-area-item"><strong>Madan Rao</strong> (Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div>
+                <div class="research-area-item"><strong>Vinay Vaibhav</strong> (Post Doctoral Fellow, University of Goettingen, DE)</div>
+                <div class="research-area-item"><strong>Raffaela Cabriolu</strong> (Associate Professor, Norwegian University of Science and Technology, NO)</div>
+                <div class="research-area-item"><strong>Tamoghna Kanti Das</strong> (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div>
+                <div class="research-area-item"><strong>AM Parvez Biswas</strong> (Solution Architect - Enterprise Systems, Data & Integration, Tata Consultancy Services, IN)</div>
             </div>
 
             <h2>🏆 Awards & Recognition</h2>
-           <div class="section">
-    <ul>
-        <li><strong>Project Awarded: EUROHPC-Joint Undertaking Benchmark Access</strong> (2025-2026) (PI: Raffaela Cabriolu, CoPI: S. Dutta).</li>
-        <li><strong>Project Awarded: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis</strong> (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta) (2025-2026).</li>
-        <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
-        <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
-        <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
-        <li><strong>National Merit Scholarship</strong> (2004).</li>
-    </ul>
-</div>
+            <div class="section">
+                <ul>
+                    <li><strong>Project Awarded: EUROHPC-Joint Undertaking Benchmark Access</strong> (2025-2026) (PI: Raffaela Cabriolu, CoPI: S. Dutta).</li>
+                    <li><strong>Project Awarded: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis</strong> (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate & Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta) (2025-2026).</li>
+                    <li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+                    <li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+                    <li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+                    <li><strong>National Merit Scholarship</strong> (2004).</li>
+                </ul>
+            </div>
         </div>
         
         <!-- NEW: Playground Page (Chatbot moved here) -->
         <div id="playground" class="page-content">
-            <h2><span style="vertical-align: middle;">🎮</span> Swarm Intelligence</h2>
+            <h2>🎮 Swarm Intelligence</h2>
             <div class="section">
-                <p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M,  M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
+                <p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M, M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
                 <div class="playground-container">
                     <iframe src="boids_lj_interactive.html" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
 
+    </div>
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
            
             // --- CONFIGURATION ---
-            // Easily change the classroom passcode here
-            const CLASSROOM_PASSCODE = '23MAT106'; // UPDATED PASSCODE
+            const CLASSROOM_PASSCODE = '23MAT106';
 
             // --- DOM Elements ---
             const navLinks = document.querySelectorAll('.nav-link');
@@ -2525,48 +2146,36 @@ to the philosophical introspection of synthetic intelligence. Demonstrating how 
 
         // --- Live Classroom Dashboard Logic ---
         function openCourse(courseId) {
-            // Hide Dashboard
             document.getElementById('classroom-dashboard').style.display = 'none';
-            // Hide all detail views
             const views = document.querySelectorAll('.course-detail-view');
             views.forEach(view => view.classList.remove('active'));
-            // Show selected course
             const target = document.getElementById(courseId);
             if(target) target.classList.add('active');
-            // Scroll to top of container
             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
         }
 
-       function closeCourse() {
-            // Hide all detail views
+        function closeCourse() {
             const views = document.querySelectorAll('.course-detail-view');
             views.forEach(view => view.classList.remove('active'));
-            // Show Dashboard
             const dashboard = document.getElementById('classroom-dashboard');
             if(dashboard) dashboard.style.display = 'block';
         }
 
-        // --- Teaching Page Dashboard Logic (Separated from Classroom) ---
+        // --- Teaching Page Dashboard Logic ---
         function openTeachingSection(sectionId) {
-            // Hide Dashboard
             document.getElementById('teaching-dashboard').style.display = 'none';
-            // Hide all detail views
             const views = document.querySelectorAll('.teaching-detail-view');
             views.forEach(view => view.classList.remove('active'));
-            // Show selected section
             const target = document.getElementById(sectionId);
             if(target) target.classList.add('active');
-             // Scroll to top of container
-             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
+            document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
         }
 
         function closeTeachingSection() {
-             // Hide all detail views
-             const views = document.querySelectorAll('.teaching-detail-view');
-             views.forEach(view => view.classList.remove('active'));
-             // Show Dashboard
-             const dashboard = document.getElementById('teaching-dashboard');
-             if(dashboard) dashboard.style.display = 'block';
+            const views = document.querySelectorAll('.teaching-detail-view');
+            views.forEach(view => view.classList.remove('active'));
+            const dashboard = document.getElementById('teaching-dashboard');
+            if(dashboard) dashboard.style.display = 'block';
         }
     </script>
 
