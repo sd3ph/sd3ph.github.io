@@ -110,10 +110,12 @@
         }
 
         .site-title-header {
-            padding: 14px 24px 10px 24px;
+            padding: 12px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .site-title-header .title {
@@ -124,6 +126,7 @@
             font-weight: 700;
             letter-spacing: -0.5px;
             position: relative;
+            flex-shrink: 0;
         }
 
         .site-title-header .title::after {
@@ -136,6 +139,51 @@
             background: var(--accent-cyan);
             border-radius: 50%;
             box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        /* Top Row Main Navigation Buttons */
+        .top-nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav-links li {
+            font-size: 0.88em;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .top-nav-links li::before {
+            content: none;
+        }
+
+        .top-nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 12px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            display: inline-block;
+        }
+
+        .top-nav-links a:hover {
+            color: var(--heading-color);
+            border-color: var(--border-hover);
+        }
+
+        .top-nav-links a.active {
+            background: var(--badge-bg);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 0 12px rgba(0, 242, 254, 0.15);
         }
 
         /* Theme Switcher Button */
@@ -153,6 +201,7 @@
             font-size: 0.85em;
             font-weight: 600;
             transition: all 0.25s ease;
+            flex-shrink: 0;
         }
 
         .theme-toggle-btn:hover {
@@ -168,11 +217,11 @@
             border-top: 1px solid var(--border-glow);
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
         }
 
         .navbar::-webkit-scrollbar {
-            display: none; /* Safari and Chrome */
+            display: none;
         }
 
         .nav-links {
@@ -187,6 +236,12 @@
         .nav-links li {
             font-size: 0.85em;
             flex-shrink: 0;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .nav-links li::before {
+            content: none;
         }
 
         .nav-links a {
@@ -708,7 +763,7 @@
             border-collapse: collapse;
             font-size: 0.88em;
             background: var(--bg-card);
-            min-width: 550px; /* Ensures table remains legible on small mobile screens */
+            min-width: 550px;
         }
 
         th, td {
@@ -755,11 +810,19 @@
             }
 
             .site-title-header {
-                padding: 12px 16px 8px 16px;
+                padding: 12px 16px;
+                justify-content: space-between;
             }
 
             .site-title-header .title {
                 font-size: 1.5em;
+            }
+
+            .top-nav-links {
+                width: 100%;
+                order: 3;
+                justify-content: center;
+                margin-top: 6px;
             }
 
             .container {
@@ -809,8 +872,8 @@
         }
 
         @media (max-width: 480px) {
-            .nav-links a {
-                padding: 6px 12px;
+            .nav-links a, .top-nav-links a {
+                padding: 6px 10px;
                 font-size: 0.8em;
             }
 
@@ -834,22 +897,24 @@
 
     <!-- MAIN HEADER -->
     <header class="main-header">
-        <!-- Top Row: Title and Theme Switcher Button -->
+        <!-- Top Row: Title, Main Nav Buttons, and Theme Switcher Button -->
         <div class="site-title-header">
             <div class="title">Physics+AI</div>
+            <ul class="top-nav-links">
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publication" class="nav-link">Publication</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
             <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
                 <span id="theme-toggle-icon">🌙</span>
                 <span id="theme-toggle-text">Dark</span>
             </button>
         </div>
-        <!-- Bottom Row: Navigation Links -->
+        <!-- Bottom Row: Other Navigation Links -->
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#highlight" class="nav-link active">Home</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#publication" class="nav-link">Publication</a></li>
                 <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#outreach" class="nav-link">Outreach</a></li>
                 <li><a href="#latest" class="nav-link">Latest</a></li>
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
@@ -2251,12 +2316,11 @@
                 navLinks.forEach(nav => nav.classList.remove('active'));
                 pageContents.forEach(content => content.classList.remove('active'));
 
-                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                    // Scroll navbar item into view on mobile
-                    activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                }
+                const activeLinks = document.querySelectorAll(`.nav-link[href="${targetId}"]`);
+                activeLinks.forEach(link => {
+                    link.classList.add('active');
+                    link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                });
 
                 const activeContent = document.querySelector(targetId);
                 if (activeContent) activeContent.classList.add('active');
