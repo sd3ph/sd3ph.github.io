@@ -1,7 +1,7 @@
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>iLab - Portfolio</title>
     <!-- Modern Typography Imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,16 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        :root {
+        /* --- COLOR THEME VARIABLES --- */
+        [data-theme="dark"] {
             --bg-base: #090d16;
-            --bg-surface: rgba(18, 26, 41, 0.65);
-            --bg-card: rgba(23, 33, 53, 0.5);
+            --bg-surface: rgba(18, 26, 41, 0.7);
+            --bg-card: rgba(23, 33, 53, 0.55);
+            --bg-input: rgba(0, 0, 0, 0.3);
             --border-glow: rgba(255, 255, 255, 0.1);
-            --border-hover: rgba(120, 119, 198, 0.4);
+            --border-hover: rgba(0, 242, 254, 0.4);
             
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
+            --heading-color: #ffffff;
 
             --accent-cyan: #00f2fe;
             --accent-blue: #3b82f6;
@@ -29,8 +32,38 @@
 
             --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             --gradient-purple: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
-            --gradient-rose: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
-            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+            --gradient-ad: linear-gradient(135deg, rgba(30, 27, 75, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+            --shadow-elevation: 0 20px 40px rgba(0, 0, 0, 0.5);
+            --badge-bg: rgba(59, 130, 246, 0.2);
+            --table-header-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme="light"] {
+            --bg-base: #f8fafc;
+            --bg-surface: rgba(255, 255, 255, 0.85);
+            --bg-card: rgba(241, 245, 249, 0.8);
+            --bg-input: rgba(255, 255, 255, 0.9);
+            --border-glow: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(37, 99, 235, 0.4);
+            
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --heading-color: #0f172a;
+
+            --accent-cyan: #0284c7;
+            --accent-blue: #2563eb;
+            --accent-purple: #7c3aed;
+            --accent-pink: #db2777;
+            --accent-emerald: #059669;
+            --accent-amber: #d97706;
+
+            --gradient-primary: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+            --gradient-ad: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            --shadow-elevation: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --badge-bg: rgba(37, 99, 235, 0.1);
+            --table-header-bg: rgba(0, 0, 0, 0.04);
         }
 
         * {
@@ -45,9 +78,9 @@
             padding: 0;
             background-color: var(--bg-base);
             background-image: 
-                radial-gradient(at 15% 15%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 85% 20%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 50% 80%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+                radial-gradient(at 15% 15%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 85% 20%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 80%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
             background-attachment: fixed;
             color: var(--text-primary);
             display: flex;
@@ -55,28 +88,29 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* --- HEADER & NAVIGATION STYLES --- */
+        /* --- HEADER & NAVIGATION --- */
         .main-header {
             position: sticky;
-            top: 15px;
+            top: 12px;
             z-index: 1000;
             width: 95%;
             max-width: 1080px;
-            margin: 15px auto;
-            background: rgba(13, 20, 33, 0.75);
+            margin: 12px auto;
+            background: var(--bg-surface);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--border-glow);
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-elevation);
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .site-title-header {
-            padding: 18px 30px 10px 30px;
+            padding: 14px 24px 10px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -84,10 +118,8 @@
 
         .site-title-header .title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2em;
-            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.8em;
+            color: var(--heading-color);
             margin: 0;
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -97,7 +129,7 @@
         .site-title-header .title::after {
             content: '';
             position: absolute;
-            right: -12px;
+            right: -10px;
             bottom: 6px;
             width: 6px;
             height: 6px;
@@ -106,12 +138,41 @@
             box-shadow: 0 0 10px var(--accent-cyan);
         }
 
+        /* Theme Switcher Button */
+        .theme-toggle-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-1px);
+        }
+
         .navbar {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 8px 15px 12px 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid var(--border-glow);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
         }
 
         .nav-links {
@@ -119,13 +180,13 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 6px;
+            white-space: nowrap;
         }
 
         .nav-links li {
             font-size: 0.85em;
+            flex-shrink: 0;
         }
 
         .nav-links a {
@@ -135,24 +196,22 @@
             padding: 7px 16px;
             border-radius: 12px;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            white-space: nowrap;
             background: transparent;
             border: 1px solid transparent;
             display: inline-block;
         }
 
         .nav-links a:hover {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-1px);
+            color: var(--heading-color);
+            background: var(--bg-card);
+            border-color: var(--border-glow);
         }
 
         .nav-links a.active {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
-            color: #fff;
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
+            background: var(--badge-bg);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 0 12px rgba(0, 242, 254, 0.15);
         }
 
         /* --- CONTAINER & CONTENT STYLING --- */
@@ -173,44 +232,44 @@
         }
 
         @keyframes slideUpFade {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.8em;
+            font-size: 1.7em;
             margin-top: 0;
-            margin-bottom: 24px;
-            color: #fff;
+            margin-bottom: 20px;
+            color: var(--heading-color);
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 10px;
         }
 
         h3 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3em;
+            font-size: 1.25em;
             color: var(--accent-cyan);
-            margin-top: 24px;
-            margin-bottom: 14px;
+            margin-top: 20px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         h4 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1em;
+            font-size: 1.05em;
             color: var(--text-primary);
-            margin-top: 18px;
-            margin-bottom: 10px;
+            margin-top: 16px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
         strong {
-            color: #fff;
+            color: var(--heading-color);
             font-weight: 600;
         }
 
@@ -228,7 +287,7 @@
         li {
             position: relative;
             padding-left: 20px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: var(--text-secondary);
         }
 
@@ -247,44 +306,45 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border-glow);
             border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-elevation);
             transition: border-color 0.3s ease;
         }
 
         .section:hover {
-            border-color: rgba(255, 255, 255, 0.18);
+            border-color: var(--border-hover);
         }
 
         /* Profile Header */
         .profile-header {
             display: flex;
             align-items: center;
-            gap: 25px;
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            gap: 20px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glow);
         }
 
         .profile-picture {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-cyan);
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+            flex-shrink: 0;
         }
 
         .header-text h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2em;
-            margin: 0 0 6px 0;
-            color: #fff;
+            font-size: 2em;
+            margin: 0 0 4px 0;
+            color: var(--heading-color);
             letter-spacing: -0.5px;
         }
 
         .header-text p {
-            font-size: 1em;
+            font-size: 0.95em;
             color: var(--accent-cyan);
             margin: 0;
             font-weight: 500;
@@ -294,51 +354,49 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .social-links a img {
-            height: 28px;
+            height: 26px;
             border-radius: 6px;
-            transition: transform 0.2s ease, filter 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .social-links a:hover img {
-            transform: translateY(-3px);
-            filter: brightness(1.2);
+            transform: translateY(-2px);
         }
 
         /* Research Items */
         .research-area-item {
             margin-bottom: 12px;
-            padding: 12px 18px;
+            padding: 12px 16px;
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.03);
+            background: var(--bg-card);
             border-left: 3px solid var(--accent-cyan);
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .research-area-item:hover {
             transform: translateX(4px);
-            background: rgba(255, 255, 255, 0.05);
         }
 
         /* --- JOIN US ADVERTISEMENT --- */
         .advertisement {
-            background: linear-gradient(135deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            color: #fff;
-            padding: 40px;
+            background: var(--gradient-ad);
+            border: 1px solid var(--border-glow);
+            color: var(--text-primary);
+            padding: 30px 20px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.15);
+            box-shadow: var(--shadow-elevation);
             text-align: center;
             margin: 20px 0;
         }
 
         .advertisement h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2em;
+            font-size: 2em;
             margin-bottom: 15px;
             background: var(--gradient-purple);
             -webkit-background-clip: text;
@@ -349,63 +407,62 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 25px 0;
+            gap: 10px;
+            margin: 20px 0;
         }
 
         .opportunity {
-            background: rgba(139, 92, 246, 0.15);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            padding: 8px 18px;
+            background: var(--badge-bg);
+            border: 1px solid var(--border-glow);
+            padding: 8px 16px;
             border-radius: 30px;
-            font-size: 0.9em;
-            color: #e2e8f0;
+            font-size: 0.85em;
+            color: var(--text-primary);
             transition: all 0.2s ease;
         }
 
         .opportunity:hover {
-            background: rgba(139, 92, 246, 0.3);
+            border-color: var(--accent-cyan);
             transform: translateY(-2px);
         }
 
         .email-link {
             display: inline-block;
             background: var(--gradient-primary);
-            color: #090d16;
-            padding: 12px 32px;
+            color: #ffffff;
+            padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1em;
+            font-size: 0.95em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
             margin-top: 15px;
         }
 
         .email-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
         }
 
         /* --- PUBLICATIONS --- */
         .publication-item {
-            margin-bottom: 20px;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.02);
+            margin-bottom: 16px;
+            padding: 14px 18px;
+            background: var(--bg-card);
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glow);
             transition: all 0.2s ease;
         }
 
         .publication-item:hover {
-            border-color: rgba(0, 242, 254, 0.3);
-            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--accent-cyan);
         }
 
         .publication-item .citation {
-            font-size: 1.05em;
+            font-size: 1em;
             line-height: 1.6;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--text-primary);
         }
 
@@ -413,44 +470,38 @@
             color: var(--accent-cyan);
             font-weight: 600;
             text-decoration: none;
-            padding: 2px 8px;
-            background: rgba(0, 242, 254, 0.1);
+            padding: 2px 6px;
+            background: var(--badge-bg);
             border-radius: 4px;
-            transition: background 0.2s ease;
-        }
-
-        .publication-item a:hover {
-            background: rgba(0, 242, 254, 0.25);
         }
 
         /* --- TIMELINE / LATEST NEWS --- */
         .timeline {
             position: relative;
-            padding-left: 25px;
-            border-left: 2px solid rgba(139, 92, 246, 0.3);
+            padding-left: 20px;
+            border-left: 2px solid var(--border-glow);
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -31px;
-            top: 15px;
+            left: -26px;
+            top: 14px;
             width: 10px;
             height: 10px;
             border-radius: 50%;
             background: var(--accent-purple);
             border: 2px solid var(--bg-base);
-            box-shadow: 0 0 10px var(--accent-purple);
         }
 
         .timeline-content {
             background: var(--bg-card);
-            padding: 16px 20px;
+            padding: 14px 18px;
             border-radius: 12px;
             border: 1px solid var(--border-glow);
         }
@@ -464,16 +515,16 @@
         .course-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 16px;
+            margin-top: 16px;
         }
 
         .course-card {
             background: var(--bg-card);
             border-radius: 16px;
-            padding: 24px;
+            padding: 20px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -495,9 +546,9 @@
         }
 
         .course-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 242, 254, 0.4);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px);
+            border-color: var(--accent-cyan);
+            box-shadow: var(--shadow-elevation);
         }
 
         .course-card:hover::before {
@@ -506,16 +557,16 @@
 
         .course-card h4 {
             margin-top: 0;
-            font-size: 1.2em;
-            color: #fff;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 10px;
+            font-size: 1.15em;
+            color: var(--heading-color);
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 8px;
         }
 
         .semester-tag {
-            background: rgba(59, 130, 246, 0.2);
+            background: var(--badge-bg);
             color: var(--accent-cyan);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            border: 1px solid var(--border-glow);
             padding: 2px 8px;
             border-radius: 6px;
             font-size: 0.75em;
@@ -523,14 +574,14 @@
         }
 
         .back-btn {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 8px 18px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-glow);
+            padding: 8px 16px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
@@ -538,45 +589,46 @@
         }
 
         .back-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-cyan);
             transform: translateX(-3px);
         }
 
         /* --- OUTREACH CARDS --- */
         .outreach-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
         }
 
         .outreach-card {
             background: var(--bg-card);
-            padding: 24px;
+            padding: 20px;
             border-radius: 16px;
             border: 1px solid var(--border-glow);
             border-top: 3px solid var(--accent-amber);
-            transition: transform 0.3s ease;
+            transition: transform 0.25s ease;
         }
 
         .outreach-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
         }
 
         .outreach-icon {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            margin-bottom: 8px;
             display: block;
         }
 
         /* --- PLAYGROUND & SLIDESHOW IFRAMES --- */
         .playground-container {
             width: 100%;
-            height: 75vh;
+            height: 70vh;
+            min-height: 400px;
             border: 1px solid var(--border-glow);
             border-radius: 16px;
             overflow: hidden;
             background-color: #000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            box-shadow: var(--shadow-elevation);
         }
 
         .playground-container iframe {
@@ -588,29 +640,32 @@
         /* --- CLASSROOM LOCK PROMPT --- */
         .password-prompt-container {
             text-align: center;
-            padding: 50px 20px;
-            border: 1px dashed rgba(255, 255, 255, 0.2);
+            padding: 40px 20px;
+            border: 1px dashed var(--border-glow);
             border-radius: 20px;
             background: var(--bg-surface);
-            max-width: 500px;
-            margin: 40px auto;
+            max-width: 480px;
+            margin: 30px auto;
         }
 
         .password-form {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 8px;
+            margin-top: 18px;
+            flex-wrap: wrap;
         }
 
         .password-form input {
-            padding: 10px 16px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px 14px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-glow);
             border-radius: 8px;
-            color: #fff;
-            font-size: 1em;
+            color: var(--text-primary);
+            font-size: 0.95em;
             outline: none;
+            flex-grow: 1;
+            max-width: 260px;
         }
 
         .password-form input:focus {
@@ -618,10 +673,10 @@
         }
 
         .password-form button {
-            padding: 10px 24px;
+            padding: 10px 20px;
             border: none;
             background: var(--gradient-primary);
-            color: #000;
+            color: #ffffff;
             font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
@@ -633,32 +688,39 @@
         }
 
         .password-error-message {
-            margin-top: 15px;
+            margin-top: 12px;
             color: #ef4444;
             font-weight: 600;
         }
 
-        /* --- TABLES MODERNIZATION --- */
+        /* --- TABLE STYLING --- */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 12px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glow);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.9em;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
+            font-size: 0.88em;
+            background: var(--bg-card);
+            min-width: 550px; /* Ensures table remains legible on small mobile screens */
         }
 
         th, td {
-            padding: 12px 15px;
+            padding: 10px 12px;
             text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid var(--border-glow);
             color: var(--text-secondary);
         }
 
         th {
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
+            background: var(--table-header-bg);
+            color: var(--heading-color);
             font-weight: 600;
             font-family: 'Space Grotesk', sans-serif;
         }
@@ -680,15 +742,105 @@
             display: block;
         }
 
+        /* --- RESPONSIVE BREAKPOINTS (MOBILE & TABLET) --- */
+        @media (max-width: 768px) {
+            body {
+                font-size: 13.5px;
+            }
+
+            .main-header {
+                width: 92%;
+                margin: 10px auto;
+                border-radius: 16px;
+            }
+
+            .site-title-header {
+                padding: 12px 16px 8px 16px;
+            }
+
+            .site-title-header .title {
+                font-size: 1.5em;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .section {
+                padding: 18px;
+                border-radius: 14px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .profile-picture {
+                width: 80px;
+                height: 80px;
+            }
+
+            .header-text h1 {
+                font-size: 1.6em;
+            }
+
+            .advertisement {
+                padding: 24px 16px;
+            }
+
+            .advertisement h1 {
+                font-size: 1.6em;
+            }
+
+            .research-gifs {
+                flex-direction: column !important;
+            }
+
+            .research-gifs img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .playground-container {
+                height: 55vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links a {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.15em;
+            }
+
+            .email-link {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- MODIFIED HEADER FOR TWO-ROW LAYOUT -->
+    <!-- MAIN HEADER -->
     <header class="main-header">
-        <!-- Top Row: Title -->
+        <!-- Top Row: Title and Theme Switcher Button -->
         <div class="site-title-header">
             <div class="title">Physics+AI</div>
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                <span id="theme-toggle-icon">🌙</span>
+                <span id="theme-toggle-text">Dark</span>
+            </button>
         </div>
         <!-- Bottom Row: Navigation Links -->
         <nav class="navbar">
@@ -711,7 +863,7 @@
     <div class="container">
         <!-- 1. Highlight Page -->
         <div id="highlight" class="page-content active">
-            <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 24px; border-radius: 16px; border: 1px solid var(--border-glow);">
+            <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 14px; border: 1px solid var(--border-glow);">
            
             <h2> Hello World !</h2>
             <p>We are a group of creative researchers exploring physics at the interface of artificial intelligence, working in a deeply collaborative and interdisciplinary setting. Our goal is to understand complex systems and to see how modern computational approaches, especially deep learning, can contribute to solutions for societal good. Our main research interests include:</p>
@@ -755,9 +907,9 @@
                         <a href="mailto:sumandutta.avvcb@gmail.com" class="email-link">Submit</a>
                     </div>
            
-                    <p style="margin-top: 30px; font-style: italic; font-size: 0.9em;">Let's build the future together.</p>
+                    <p style="margin-top: 25px; font-style: italic; font-size: 0.9em;">Let's build the future together.</p>
                 </div>
-                <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 20px; border-radius: 12px; border: 1px solid var(--border-glow);">
+                <img src="joinus.png" alt="Join Us Graphic" style="width: 100%; margin-top: 15px; border-radius: 12px; border: 1px solid var(--border-glow);">
             </div>
         </div>
 
@@ -771,7 +923,7 @@
                     <li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
                 </ul>
             </div>
-            <div style="display: flex; gap: 15px; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px;">
+            <div class="research-gifs" style="display: flex; gap: 15px; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px;">
                 <img src="cavitation.gif" alt="First highlight cover image" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);">
                 <img src="mips.gif" alt="Second highlight cover image" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);">
             </div>
@@ -892,7 +1044,7 @@
            
             <!-- TEACHING DASHBOARD -->
             <div id="teaching-dashboard">
-                <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: var(--text-secondary);">
+                <p style="text-align: center; margin-bottom: 20px; font-size: 1.05em; color: var(--text-secondary);">
                     Explore our academic engagements, mentoring programs, and pedagogical philosophy.
                 </p>
 
@@ -953,44 +1105,46 @@
                 </button>
                 <div class="section">
                     <h3>Courses Taught</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Course Code</th>
-                                <th>Credit</th>
-                                <th>Hrs/Week</th>
-                                <th>Session</th>
-                                <th>Students</th>
-                                <th>TLP-Feedback</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science, Semester-III)</td>
-                                <td>3+3</td>
-                                <td>4+4</td>
-                                <td>2026-27 Odd</td>
-                                <td>65+66</td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <td>Introduction to Material Informatics (B.Tech in AI & Data Science, Semester-II)</td>
-                                <td>3+3</td>
-                                <td>4+4</td>
-                                <td>2025-26 Even</td>
-                                <td>64+65</td>
-                                <td>92.92%</td>
-                            </tr>
-                            <tr>
-                                <td>Mathematics for Intelligent System - I (B.Tech in AI & Data Science, Semester-I)</td>
-                                <td>4+4</td>
-                                <td>5+5</td>
-                                <td>2025-26 Odd</td>
-                                <td>65+66</td>
-                                <td>93.11%</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course Code</th>
+                                    <th>Credit</th>
+                                    <th>Hrs/Week</th>
+                                    <th>Session</th>
+                                    <th>Students</th>
+                                    <th>TLP-Feedback</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mathematics for Intelligent System - III (B.Tech in AI & Data Science, Semester-III)</td>
+                                    <td>3+3</td>
+                                    <td>4+4</td>
+                                    <td>2026-27 Odd</td>
+                                    <td>65+66</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Introduction to Material Informatics (B.Tech in AI & Data Science, Semester-II)</td>
+                                    <td>3+3</td>
+                                    <td>4+4</td>
+                                    <td>2025-26 Even</td>
+                                    <td>64+65</td>
+                                    <td>92.92%</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics for Intelligent System - I (B.Tech in AI & Data Science, Semester-I)</td>
+                                    <td>4+4</td>
+                                    <td>5+5</td>
+                                    <td>2025-26 Odd</td>
+                                    <td>65+66</td>
+                                    <td>93.11%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -1018,7 +1172,7 @@
                     </div>
                     <div class="research-area-item">
                         <strong>Supervision: Topical Projects</strong>
-                        <div style="overflow-x: auto; margin-top: 15px;">
+                        <div class="table-responsive">
                             <table>
                                 <thead>
                                     <tr>
@@ -1599,7 +1753,7 @@
                
                 <!-- DASHBOARD VIEW -->
                 <div id="classroom-dashboard">
-                    <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em;">Welcome to the Live Class Room. Select a course below to view details.</p>
+                    <p style="text-align: center; margin-bottom: 25px; font-size: 1.05em;">Welcome to the Live Class Room. Select a course below to view details.</p>
                     <div class="course-grid">
                         <!-- Card 1: 23MAT106 -->
                         <div class="course-card" onclick="openCourse('course-mat106')">
@@ -1652,10 +1806,10 @@
                     <div class="section">
                         <h3>Combined Weekly Schedule</h3>
                         <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
-                        <p style="font-size: 1.1em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
+                        <p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
 
-                        <div style="border: 1px solid var(--border-glow); padding: 15px; border-radius: 12px; margin: 20px 0; overflow-x: auto; background: rgba(0,0,0,0.2);">
-                            <table style="width: 100%; border-collapse: collapse; text-align: center;">
+                        <div class="table-responsive">
+                            <table style="text-align: center;">
                                 <thead>
                                     <tr>
                                         <th>Time Slot</th>
@@ -1678,10 +1832,10 @@
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">09:40 - 10:30</td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                         <td></td>
                                         <td><span class="semester-tag">Section A</span></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -1695,13 +1849,13 @@
                                     <tr>
                                         <td style="font-weight: bold;">11:35 - 12:25</td>
                                         <td></td><td></td><td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">12:25 - 01:15</td>
                                         <td><span class="semester-tag">Section A</span></td>
                                         <td></td><td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Project (Sec B)</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Project (Sec B)</span></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">01:15 - 02:05</td>
@@ -1710,7 +1864,7 @@
                                     <tr>
                                         <td style="font-weight: bold;">02:05 - 03:45</td>
                                         <td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
                                         <td><span class="semester-tag">Section A (Lab)</span></td>
                                         <td></td>
                                     </tr>
@@ -1809,10 +1963,10 @@
                     <div class="section">
                         <h3>Combined Weekly Schedule</h3>
                         <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
-                        <p style="font-size: 1.1em; font-style: italic; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
+                        <p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
 
-                        <div style="border: 1px solid var(--border-glow); padding: 15px; border-radius: 12px; margin: 20px 0; overflow-x: auto; background: rgba(0,0,0,0.2);">
-                            <table style="width: 100%; border-collapse: collapse; text-align: center;">
+                        <div class="table-responsive">
+                            <table style="text-align: center;">
                                 <thead>
                                     <tr>
                                         <th>Time Slot</th>
@@ -1835,10 +1989,10 @@
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">09:40 - 10:30</td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                         <td></td>
                                         <td><span class="semester-tag">Section A</span></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -1852,7 +2006,7 @@
                                     <tr>
                                         <td style="font-weight: bold;">11:35 - 12:25</td>
                                         <td></td><td></td><td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">12:25 - 01:15</td>
@@ -1866,7 +2020,7 @@
                                     <tr>
                                         <td style="font-weight: bold;">02:05 - 03:45</td>
                                         <td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: rgba(236,72,153,0.3); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
                                         <td></td><td></td>
                                     </tr>
                                     <tr>
@@ -2065,13 +2219,44 @@
             const classroomPrompt = document.getElementById('password-prompt-container');
             const classroomContent = document.getElementById('classroom-content');
 
+            // --- Theme Switcher Logic ---
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-toggle-icon');
+            const themeText = document.getElementById('theme-toggle-text');
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                if (theme === 'dark') {
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark';
+                } else {
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light';
+                }
+                localStorage.setItem('theme', theme);
+            }
+
+            // Detect system theme or stored theme
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            applyTheme(savedTheme);
+
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+
             // --- Navigation Logic ---
             function switchTab(targetId) {
                 navLinks.forEach(nav => nav.classList.remove('active'));
                 pageContents.forEach(content => content.classList.remove('active'));
 
                 const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-                if (activeLink) activeLink.classList.add('active');
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                    // Scroll navbar item into view on mobile
+                    activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
 
                 const activeContent = document.querySelector(targetId);
                 if (activeContent) activeContent.classList.add('active');
@@ -2111,7 +2296,6 @@
                 if (sessionStorage.getItem('classroomAccessGranted') === 'true') {
                     classroomPrompt.style.display = 'none';
                     classroomContent.classList.remove('hidden');
-                    // Reset views: Show dashboard, hide details
                     closeCourse();
                 } else {
                     classroomPrompt.style.display = 'block';
@@ -2161,7 +2345,7 @@
             if(target) target.classList.add('active');
             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
         }
- 
+
         function closeTeachingSection() {
             const views = document.querySelectorAll('.teaching-detail-view');
             views.forEach(view => view.classList.remove('active'));
