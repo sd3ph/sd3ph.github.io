@@ -2161,7 +2161,7 @@
             if(target) target.classList.add('active');
             document.querySelector('.container').scrollIntoView({behavior: 'smooth'});
         }
-
+ 
         function closeTeachingSection() {
             const views = document.querySelectorAll('.teaching-detail-view');
             views.forEach(view => view.classList.remove('active'));
