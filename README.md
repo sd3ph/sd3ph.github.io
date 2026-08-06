@@ -1,12 +1,3 @@
-Here is the complete, modernized code for your portfolio website.
-
-The main structure and all existing JavaScript functionality have been strictly
-preserved, while the design has been completely overhauled with a modern
-glassmorphic dark-mode aesthetic, typography (Space Grotesk & Plus Jakarta
-Sans), ambient neon glow accents, and smooth interactive micro-animations.
-
---- START OF FILE Paste August 06, 2026 - 10:45AM ---
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
