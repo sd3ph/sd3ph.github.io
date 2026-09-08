@@ -1710,6 +1710,13 @@
             <div class="section">
                 <div class="timeline">
 
+                <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Magnus Olsen submitted his Master's thesis titled 'Molecular dynamics simulations of
+non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Natural Sciences, Norwegian University of Science and Technology (Supervisor: R. Cabriolu, Co-supervisor: Suman Dutta) </strong>
+                        </div>
+                    </div>
+
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
