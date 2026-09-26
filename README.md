@@ -1712,8 +1712,14 @@
 
                 <div class="timeline-item">
                         <div class="timeline-content">
+                            <strong> Poster on AI-driven Material Discovery platform - GenMatX by Revanth S, G Kamalesh, P S Sugatha, Sudip K Batabyal & Suman Dutta, at the National Conference on Quality and Safety of Biosimilars, organized by IPC & C-CAMP (Sept 10-11, 2026). </strong>
+                        </div>
+                    </div>
+
+                <div class="timeline-item">
+                        <div class="timeline-content">
                             <strong> Magnus Olsen submitted his Master's thesis titled 'Molecular dynamics simulations of
-non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Natural Sciences, Norwegian University of Science and Technology (Supervisor: R. Cabriolu, Co-supervisor: Suman Dutta) </strong>
+non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Natural Sciences, Norwegian University of Science and Technology (Supervisor: R. Cabriolu, Co-supervisor: Suman Dutta) (Sept 07, 2026) </strong>
                         </div>
                     </div>
 
