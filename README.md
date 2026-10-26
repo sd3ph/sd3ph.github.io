@@ -1320,7 +1320,7 @@
                                     </tr>
                                     <tr>
                                         <td>23CHY115</td>
-                                        <td>T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
+                                        <td>T.V.S.SS Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
                                         <td>Ocean Waves Dynamics</td>
                                     </tr>
                                     <tr>
@@ -1862,6 +1862,36 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                                 Click to view Schedule, Syllabus & Notes &rarr;
                             </div>
                         </div>
+
+                        <!-- Card 3: 23MAT204 -->
+                        <div class="course-card" onclick="openCourse('course-mat204')">
+                            <div>
+                                <h4>Mathematics for Intelligent Systems - III</h4>
+                                <p><span class="course-code">23MAT204</span> <span class="semester-tag">Fall 2026</span></p>
+                                <p><strong>Subject:</strong> Advanced Optimization, Multivariate Calculus, Vector Spaces</p>
+                                <p><strong>Credit:</strong> 3 </p>
+                                <p><strong>Timeline:</strong> 5 Aug - 4 Dec, 2026 </p>
+                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Third Semester</p>
+                            </div>
+                            <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus & Notes &rarr;
+                            </div>
+                        </div>
+
+                        <!-- Card 4: 23MAT304 -->
+                        <div class="course-card" onclick="openCourse('course-mat304')">
+                            <div>
+                                <h4>Mathematics for Intelligent Systems - IV</h4>
+                                <p><span class="course-code">23MAT304</span> <span class="semester-tag">Spring 2027</span></p>
+                                <p><strong>Subject:</strong> Random Processes, Advanced Probability, Statistical Inference</p>
+                                <p><strong>Credit:</strong> 3 </p>
+                                <p><strong>Timeline:</strong> 6 Jan - 5 May, 2027 </p>
+                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 130 Students) Second Year, Fourth Semester</p>
+                            </div>
+                            <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus & Notes &rarr;
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -2167,6 +2197,230 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                         <ul>
                             <li><a href="https://drive.google.com/file/d/1DHuBZ-bzmekvveB4S0OiRT2LBufMDDvi/view?usp=sharing">Assignment 01: Due Date 31/01/2026 </a> - (LH 15/16)</li>     
                         </ul>
+                    </div>
+                </div>
+
+                <!-- DETAILED VIEW: 23MAT204 -->
+                <div id="course-mat204" class="course-detail-view">
+                    <button class="back-btn" onclick="closeCourse()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back to Dashboard
+                    </button>
+
+                    <div class="section">
+                        <h3>Course Details</h3>
+                        <ul>
+                            <li><strong>Class:</strong> BTech AID</li>
+                            <li><strong>Semester:</strong> Fall, 2026 </li>
+                            <li><strong>Course Code:</strong> 23MAT204</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Combined Weekly Schedule</h3>
+                        <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - III - 23MAT204, School of AI, Amrita Vishwa Vidyapeetham</p>
+
+                        <div class="table-responsive">
+                            <table style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th>Time Slot</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight: bold;">08:50 - 09:40</td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">09:40 - 10:30</td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">10:30 - 10:45</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">11:35 - 12:25</td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">01:15 - 02:05</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">02:05 - 03:45</td>
+                                        <td><span class="semester-tag">Section A (Lab)</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Syllabus</h3>
+                        <dl>
+                            <dt><strong>Unit 1</strong></dt>
+                            <dd>Multivariate Calculus and Differential Forms - Gradients, Directional Derivatives, Hessian Matrix, Taylor expansions in multiple dimensions, Constrained and Unconstrained Optimization, Method of Lagrange Multipliers.</dd>
+
+                            <dt><strong>Unit 2</strong></dt>
+                            <dd>Numerical Optimization Algorithms - Gradient Descent, Stochastic Gradient Descent (SGD), Momentum, RMSProp, Adam, Newton and Quasi-Newton methods (BFGS, L-BFGS), Convex Optimization concepts.</dd>
+
+                            <dt><strong>Unit 3</strong></dt>
+                            <dd>Vector Spaces and Transformations - Inner product spaces, Hilbert spaces, Dual spaces, Tensor algebra basics, Orthogonal projections, Gram-Schmidt orthogonalization, QR decomposition and spectral theory.</dd>
+
+                            <dt><strong>Unit 4</strong></dt>
+                            <dd>Applications to Machine Intelligence - High-dimensional data geometry, Manifold learning basics, Dimensionality reduction (PCA, t-SNE), Optimization loss landscapes in deep neural networks.</dd>
+                        </dl>
+                    </div>
+
+                    <div class="section">
+                        <h3>Lecture Notes</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Lecture materials and notes will be uploaded concurrently with the session schedule.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Topical Project</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Assignments</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
+                    </div>
+                </div>
+
+                <!-- DETAILED VIEW: 23MAT304 -->
+                <div id="course-mat304" class="course-detail-view">
+                    <button class="back-btn" onclick="closeCourse()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back to Dashboard
+                    </button>
+
+                    <div class="section">
+                        <h3>Course Details</h3>
+                        <ul>
+                            <li><strong>Class:</strong> BTech AID</li>
+                            <li><strong>Semester:</strong> Spring, 2027 </li>
+                            <li><strong>Course Code:</strong> 23MAT304</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Combined Weekly Schedule</h3>
+                        <p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+                        <p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - IV - 23MAT304, School of AI, Amrita Vishwa Vidyapeetham</p>
+
+                        <div class="table-responsive">
+                            <table style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th>Time Slot</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight: bold;">08:50 - 09:40</td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">09:40 - 10:30</td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">10:30 - 10:45</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">11:35 - 12:25</td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">01:15 - 02:05</td>
+                                        <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">02:05 - 03:45</td>
+                                        <td></td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A (Lab)</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Syllabus</h3>
+                        <dl>
+                            <dt><strong>Unit 1</strong></dt>
+                            <dd>Advanced Probability Theory - Joint, conditional, and marginal distributions, Multivariate Gaussian distributions, Transformations of random variables, Characteristic functions, Moments and cumulants.</dd>
+
+                            <dt><strong>Unit 2</strong></dt>
+                            <dd>Stochastic Processes & Random Walks - Discrete and continuous-time Markov chains, Transition probability matrices, Chapman-Kolmogorov equations, Stationary distributions, Ergodicity, Poisson processes, Brownian motion.</dd>
+
+                            <dt><strong>Unit 3</strong></dt>
+                            <dd>Statistical Inference & Estimation - Maximum Likelihood Estimation (MLE), Maximum A Posteriori (MAP), Bayesian inference, Expectation-Maximization (EM) algorithm, Hypothesis testing, Confidence intervals, Information theory measures (Entropy, KL divergence).</dd>
+
+                            <dt><strong>Unit 4</strong></dt>
+                            <dd>Probabilistic Modeling in AI - Markov Decision Processes (MDPs), Hidden Markov Models (HMMs), Markov Chain Monte Carlo (MCMC), Metropolis-Hastings and Gibbs sampling, Generative probabilistic models.</dd>
+                        </dl>
+                    </div>
+
+                    <div class="section">
+                        <h3>Lecture Notes</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Lecture materials and notes will be uploaded concurrently with the session schedule.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Topical Project</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Assignments</h3>
+                        <p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
                     </div>
                 </div>
 
