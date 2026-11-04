@@ -579,7 +579,7 @@ body { overflow-wrap: anywhere; }
                 <li><a href="#latest" class="nav-link">Latest</a></li>
                 <li><a href="#classroom" class="nav-link">Live Class Room</a></li>
                 <li><a href="#products" class="nav-link">Lab Products</a></li>
-                <li><a href="#misc" class="nav-link">misc</a></li>
+                <li><a href="#misc" class="nav-link">Misc</a></li>
                 <li><a href="#playground" class="nav-link">Playground</a></li>
             </ul>
         </nav>
@@ -2178,6 +2178,10 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                 <div class="research-area-item"><strong>Raffaela Cabriolu</strong> (Associate Professor, Norwegian University of Science and Technology, NO)</div>
                 <div class="research-area-item"><strong>Tamoghna Kanti Das</strong> (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div>
                 <div class="research-area-item"><strong>AM Parvez Biswas</strong> (Solution Architect - Enterprise Systems, Data & Integration, Tata Consultancy Services, IN)</div>
+                 <div class="research-area-item"><strong>Souvick Das</strong> (Post Doctoral Fellow, University of Luxembourg, LU)</div>
+                 <div class="research-area-item"><strong> Nivedita Pavithran </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+                 <div class="research-area-item"><strong> Chakravarthy S Maddipati </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+                 <div class="research-area-item"><strong> Sudip Kumar Batabyal </strong> (Professor, Amrita Vishwa Vidyapeetham, IN)</div>
             </div>
 
             <h2>🏆 Awards & Recognition</h2>
