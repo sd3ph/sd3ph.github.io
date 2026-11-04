@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 <html lang="en" data-theme="quantum">
 <head>
     <meta charset="UTF-8">
@@ -481,7 +485,7 @@ button{font-size:.82rem}
         <div id="highlight" class="page-content active">
             <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 14px; border: 1px solid var(--border-glow);">
            
-            <h2>Lab 360° | The Nexus of Vision, Creation & Impact</h2>
+            <h2>Lab 360° | The Nexus of Data-driven Creativity</h2>
 <p>Welcome to <b>Lab 360°</b>—a crucible of innovation where abstract contemplation is transmuted into purposeful action, and action into world-shaping realities. Embracing an omnidirectional perspective, we traverse the physical continuum from the quantum choreography of molecular assemblies to the subterranean fury of seismic faults, and from automated kinematic systems to predictive climate modeling. We are driven by a relentless thirst for data-fueled discovery, translating high-dimensional entropy into elegant mathematical models that power next-generation healthcare, molecular intelligence, and sustainable societal enterprise.</p>
 <ul>
     <li><b>Omnidirectional Data Exploration:</b> Dissolving conventional academic silos, our researchers synthesize insights across disparate domains—from the precision mechanics of athletic motion to continental-scale environmental rhythms—extracting harmony from complex data streams.</li>
@@ -491,7 +495,7 @@ button{font-size:.82rem}
 </ul>
 <p>Though we are new, Lab 360° is guided by an ambitious mandate: to empower a cadre of forward-looking thinkers equipped to craft the technological paradigms of tomorrow.</p>
 
-<h2>Lab 360° | Decoding the Architecture of Complexity</h2>
+<h2>Lab 360° has a heart of Physics</h2>
 <p>Positioned at the luminous crossroads of non-equilibrium physics and machine intelligence, we uncover the universal principles that govern intricate, multi-scale systems. We approach artificial intelligence not merely as an engine for empirical prediction, but as an epistemic prism—a tool to reveal the latent mathematical harmonies of the cosmos. Our central research thrusts comprise:</p>
 <ul>
     <li><b>Collective Intelligence in Natural and Synthetic Swarms:</b> How do autonomous entities—from avian murmurations and cellular monolayers to coordinated robotic swarms—manifest collective genius from minimal local rules? We investigate the physical principles of emergence to engineer resilient, self-organizing synthetic systems.</li>
