@@ -1271,15 +1271,25 @@
         <div id="highlight" class="page-content active">
             <img src="cover1.png" alt="Highlight cover image" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; margin-bottom: 20px; border-radius: 14px; border: 1px solid var(--border-glow);">
            
-            <h2> Hello World !</h2>
-            <p>We are a group of creative researchers exploring physics at the interface of artificial intelligence, working in a deeply collaborative and interdisciplinary setting. Our goal is to understand complex systems and to see how modern computational approaches, especially deep learning, can contribute to solutions for societal good. Our main research interests include:</p>
-            <ul>
-                <li><b>Collective Intelligence in Natural and Artificial Systems:</b> How do large groups of individual agents—be they birds in a flock, cells in a tissue, or robots in a swarm—coordinate to achieve complex, group-level goals? We explore the physical principles behind this emergent intelligence, studying how local rules and interactions give rise to sophisticated collective behaviors in both living and engineered systems.</li>
-                <li><b>Physics of Living Matter:</b> We view biological tissues as a form of active matter. We study the collective migration and self-organization of cells to better understand fundamental processes like wound healing, tissue development, and morphogenesis. By creating computational models that capture the interplay between cellular forces and signaling, we hope to contribute insights that could one day aid in regenerative medicine.</li>
-                <li><b>Mechanics of Disordered Materials:</b> Materials like glasses and granular packings lack a perfect crystal structure, which makes predicting their behavior, particularly failure, a difficult challenge. We investigate the fundamental mechanics of these systems, applying machine learning techniques to identify subtle structural precursors to failure. Our goal is to contribute to a more predictive science of materials, which is essential for designing more resilient and safer structures.</li>
-                <li><b>AI as a Tool for Scientific Discovery:</b> A common thread through all our research is the use of deep learning not just for prediction, but as a tool for gaining fundamental insight. We are committed to developing simple models by machine intelligence (MI). We aim to uncover the underlying physical principles our models have learned, helping us to formulate new hypotheses and deepen our understanding of the complex natural systems we study.</li>
-            </ul>
-            <p>We thrive on a close partnership with experimentalists and other theorists, creating a dynamic environment for learning and discovery.</p>
+            <h2>Lab 360° | The Nexus of Vision, Creation & Impact</h2>
+<p>Welcome to <b>Lab 360°</b>—a crucible of innovation where abstract contemplation is transmuted into purposeful action, and action into world-shaping realities. Embracing an omnidirectional perspective, we traverse the physical continuum from the quantum choreography of molecular assemblies to the subterranean fury of seismic faults, and from automated kinematic systems to predictive climate modeling. We are driven by a relentless thirst for data-fueled discovery, translating high-dimensional entropy into elegant mathematical models that power next-generation healthcare, molecular intelligence, and sustainable societal enterprise.</p>
+<ul>
+    <li><b>Omnidirectional Data Exploration:</b> Dissolving conventional academic silos, our researchers synthesize insights across disparate domains—from the precision mechanics of athletic motion to continental-scale environmental rhythms—extracting harmony from complex data streams.</li>
+    <li><b>Molecular Intelligence & Clinical Horizons:</b> Orchestrating deep learning with biophysical intuition, we decode the architecture of macromolecular interactions, catalyzing breakthroughs in targeted therapeutics and precision diagnostics.</li>
+    <li><b>Planetary Dynamics & Structural Resilience:</b> Fusing fundamental physics with machine intelligence to anticipate catastrophic structural shifts and geodynamic hazards, fortifying communities against nature’s most extreme events.</li>
+    <li><b>Deep Tech for Humanitarian Enterprise:</b> We treat discovery not merely as an intellectual pursuit, but as a moral imperative—incubating agile, socially conscious ventures that transform laboratory breakthroughs into enduring global value.</li>
+</ul>
+<p>Though we are new, Lab 360° is guided by an ambitious mandate: to empower a cadre of forward-looking thinkers equipped to craft the technological paradigms of tomorrow.</p>
+
+<h2>Lab 360° | Decoding the Architecture of Complexity</h2>
+<p>Positioned at the luminous crossroads of non-equilibrium physics and machine intelligence, we uncover the universal principles that govern intricate, multi-scale systems. We approach artificial intelligence not merely as an engine for empirical prediction, but as an epistemic prism—a tool to reveal the latent mathematical harmonies of the cosmos. Our central research thrusts comprise:</p>
+<ul>
+    <li><b>Collective Intelligence in Natural and Synthetic Swarms:</b> How do autonomous entities—from avian murmurations and cellular monolayers to coordinated robotic swarms—manifest collective genius from minimal local rules? We investigate the physical principles of emergence to engineer resilient, self-organizing synthetic systems.</li>
+    <li><b>Physics of Living Matter & Morphogenesis:</b> Viewing biological assemblies through the lens of active matter, we illuminate the biomechanical forces orchestrating tissue repair, pattern formation, and embryonic growth, charting new possibilities for regenerative bioengineering.</li>
+    <li><b>Mechanics of Disordered & Amorphous Solids:</b> Defying crystalline predictability, glasses and granular media conceal subtle preludes to catastrophic failure. We develop physics-informed algorithms capable of detecting the structural precursors to rupture, pioneering the design of ultra-durable, damage-tolerant materials.</li>
+    <li><b>Interpretable Machine Intelligence for Fundamental Discovery:</b> Transcending opaque black-box models, our neural architectures are sculpted to distill sparse, transparent governing equations directly from raw observation, revealing fundamental physical laws that ignite bold scientific hypotheses.</li>
+</ul>
+<p>Flourishing at the vibrant intersection of theoretical elegance and experimental craftsmanship, we cultivate an intellectual commons where fearless curiosity gives rise to enduring innovation.</p>
 
             <div class="section">
                 <h3>🌟 Highlights</h3>
