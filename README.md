@@ -1382,7 +1382,7 @@ body { overflow-wrap: anywhere; }
 
                 <div class="timeline-item">
                         <div class="timeline-content">
-                            <strong> Suman presented work titled "Inverse Learning Complex Systems" - by Moushika S, Ashmitha T, V Vaibhav & Suman Dutta, at the Statistical Mechanics Meeting - Kolkata coorganised by IISER-KOlkata, S. N. Bose National Centre for Basic Sciences, Bose Institute & Indian Association for the Cultivation of Science (Oct 13-15, 2026). </strong>
+                            <strong> Suman presented work titled "Inverse Learning Complex Systems" - by Moushika S, Ashmitha T, V Vaibhav & Suman Dutta, at the Statistical Mechanics Meeting - Kolkata coorganised by IISER-Kolkata, S. N. Bose National Centre for Basic Sciences, Bose Institute & Indian Association for the Cultivation of Science (Oct 13-15, 2026). </strong>
                         </div>
                     </div>
 
