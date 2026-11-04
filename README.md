@@ -1378,7 +1378,20 @@ body { overflow-wrap: anywhere; }
         <div id="latest" class="page-content">
             <h2>✨ Latest News</h2>
             <div class="section">
-                <div class="timeline">
+                <div class="timeline">,
+
+                <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Suman presented work titled "Inverse Learning Complex Systems" - by Moushika S, Ashmitha T, V Vaibhav & Suman Dutta, at the Statistical Mechanics Meeting - Kolkata coorganised by IISER-KOlkata, S. N. Bose National Centre for Basic Sciences, Bose Institute & Indian Association for the Cultivation of Science (Oct 13-15, 2026). </strong>
+                        </div>
+                    </div>
+
+                <div class="timeline-item">
+                        <div class="timeline-content">
+                            <strong> Suman presented work titled "An Adaptive AI Assisted Framework for Personalized Indian Nutrition" - by M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal, B. Surya. Tej, M. Neeraj
+Dr Chakravarthy S Maddipati, Dr Br Nivedita Pavithran & Suman Dutta, at the 58th Conference of Nutrition Society of India, at Avinashilingam Institute for Home Science and Higher Education for Women (Oct 8-9, 2026). </strong>
+                        </div>
+                    </div>
 
                 <div class="timeline-item">
                         <div class="timeline-content">
