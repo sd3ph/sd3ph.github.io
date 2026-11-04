@@ -411,6 +411,115 @@ button{font-size:.82rem}
 @media(max-width:800px){body{font-size:13.5px}.install-app-btn{min-height:34px;padding:0 10px}.install-label{display:none}.site-title-header .title{font-size:1.25rem}}
 @media(max-width:520px){p,li{font-size:.86rem}.section{padding:15px}.install-app-btn{width:34px;padding:0}.site-title-header{gap:8px}}
 
+    
+/* Responsive alignment and layout refinements */
+html { scroll-padding-top: 155px; }
+body { overflow-wrap: anywhere; }
+.main-header { width: min(1220px, calc(100% - 32px)); }
+.site-title-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 14px;
+}
+.top-nav-links { justify-content: center; flex-wrap: wrap; min-width: 0; }
+.theme-switcher-wrapper, .install-app-btn { justify-self: end; }
+.navbar { justify-content: center; min-width: 0; }
+.nav-links { flex-wrap: nowrap; }
+.container { width: min(1120px, calc(100% - 40px)); }
+#highlight { text-align: left; }
+#highlight > img:first-child {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  margin: 0 0 clamp(22px, 3vw, 34px) !important;
+}
+#highlight > h2,
+#highlight > p,
+#highlight > ul,
+#highlight > .section { width: 100%; }
+#highlight > h2 { text-align: left; }
+#highlight > p,
+#highlight > ul { max-width: 92ch; }
+#highlight > p { margin: 0 0 17px; line-height: 1.78; }
+#highlight > ul { margin: 0 0 20px; padding: 0; }
+#highlight > ul > li {
+  padding-left: 21px;
+  margin: 0 0 12px;
+  line-height: 1.72;
+  text-align: left;
+}
+#highlight .section { text-align: left; }
+#highlight .section p,
+#highlight .section ul { max-width: 92ch; }
+#highlight .advertisement { text-align: center; }
+#highlight .advertisement p { margin-left: auto; margin-right: auto; }
+#highlight .opportunities { justify-content: center; }
+#highlight .call-to-action { text-align: center; }
+#highlight .call-to-action h2 { text-align: center; }
+.install-app-btn { flex-shrink: 0; min-width: 42px; }
+.install-app-btn .install-label { display: inline; }
+#install-status {
+  display: none;
+  margin: 8px 0 0;
+  padding: 10px 13px;
+  border: 1px solid var(--border-highlight);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: .84rem;
+  line-height: 1.55;
+}
+#install-status.show { display: block; }
+@media (max-width: 900px) {
+  .site-title-header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+  .top-nav-links { grid-column: 1 / -1; grid-row: 2; }
+  .theme-switcher-wrapper { grid-column: 2; grid-row: 1; }
+  .install-app-btn { grid-column: 3; grid-row: 1; }
+  .site-title-header .title { grid-column: 1; grid-row: 1; }
+  .navbar { justify-content: flex-start; }
+  .nav-links { justify-content: flex-start; }
+  .container { width: min(100% - 30px, 1120px); }
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 185px; }
+  .main-header { width: calc(100% - 16px); top: 4px; margin: 4px auto 15px; }
+  .site-title-header { padding: 10px; gap: 8px; }
+  .site-title-header .title { font-size: 1.15rem; }
+  .site-title-header .title:before { width: 21px; height: 21px; border-radius: 7px; }
+  .top-nav-links { gap: 2px; }
+  .top-nav-links a { padding: 6px 8px; font-size: .75rem; }
+  .theme-toggle-btn { padding: 7px 8px; gap: 5px; font-size: .72rem; }
+  .install-app-btn { width: auto; min-width: 38px; min-height: 36px; padding: 0 10px; }
+  .install-app-btn .install-label { display: inline; }
+  .navbar { padding: 6px 8px; }
+  .nav-links a { padding: 7px 9px; font-size: .75rem; }
+  .container { width: calc(100% - 24px); margin-bottom: 45px; }
+  #highlight > img:first-child { aspect-ratio: 16 / 9; border-radius: 13px; }
+  #highlight > h2:first-of-type { font-size: clamp(1.8rem, 8vw, 2.35rem); }
+  #highlight > p { font-size: .91rem; line-height: 1.72; }
+  #highlight > ul > li { font-size: .88rem; line-height: 1.65; }
+  #highlight .section { padding: 16px; }
+  .section { min-width: 0; }
+  .course-grid, .outreach-grid { grid-template-columns: minmax(0, 1fr); }
+  .playground-container { min-height: 300px; }
+}
+@media (max-width: 380px) {
+  .site-title-header { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .site-title-header .title { font-size: 1.02rem; }
+  #theme-toggle-text { display: none; }
+  .install-app-btn .install-label { display: none; }
+  .top-nav-links a { padding-inline: 6px; font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-content { animation: none; }
+}
+
     </style>
 </head>
 <body>
@@ -2285,40 +2394,94 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
 
 
 <script>
-// Progressive Web App installation. Install appears when the browser supports it.
+/* Progressive Web App installation: Chromium prompt + clear iOS/unsupported guidance. */
 (() => {
   const installButton = document.getElementById('install-app');
   if (!installButton) return;
-  let installPrompt = null;
-  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  if (isStandalone) {
+
+  let deferredInstallPrompt = null;
+  const status = document.createElement('p');
+  status.id = 'install-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  installButton.insertAdjacentElement('afterend', status);
+
+  const isStandalone = () =>
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true;
+
+  const isIOS = () => /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+  const isSecureContextForInstall = () =>
+    window.isSecureContext || location.hostname === 'localhost' ||
+    location.hostname === '127.0.0.1';
+
+  const showStatus = (message) => {
+    status.textContent = message;
+    status.classList.add('show');
+  };
+
+  if (isStandalone()) {
     installButton.hidden = true;
   } else {
     installButton.hidden = false;
-    installButton.addEventListener('click', async () => {
-      if (installPrompt) {
-        installPrompt.prompt();
-        await installPrompt.userChoice;
-        installPrompt = null;
-        installButton.hidden = true;
-        return;
-      }
-      const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-      const message = isIOS
-        ? 'To install: tap Share, then choose “Add to Home Screen”.'
-        : 'To install this website, open the browser menu and choose “Install app” or “Add to Home screen”. If that option is missing, open this site over HTTPS.';
-      alert(message);
-    });
   }
+
   window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    installPrompt = event;
-    installButton.hidden = false;
-    installButton.querySelector('.install-label').textContent = 'Install';
+    deferredInstallPrompt = event;
+    installButton.hidden = isStandalone();
+    const label = installButton.querySelector('.install-label');
+    if (label) label.textContent = 'Install';
+    status.classList.remove('show');
   });
-  window.addEventListener('appinstalled', () => { installButton.hidden = true; installPrompt = null; });
-  if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+
+  installButton.addEventListener('click', async () => {
+    if (isStandalone()) {
+      installButton.hidden = true;
+      return;
+    }
+
+    if (!isSecureContextForInstall()) {
+      showStatus('Installation requires a secure HTTPS connection. Please open this website using its HTTPS address.');
+      return;
+    }
+
+    if (deferredInstallPrompt) {
+      const promptEvent = deferredInstallPrompt;
+      deferredInstallPrompt = null;
+      try {
+        await promptEvent.prompt();
+        const choice = await promptEvent.userChoice;
+        if (choice && choice.outcome === 'accepted') {
+          showStatus('Installation started. You can open the app from your home screen or apps list.');
+        } else {
+          showStatus('Installation was cancelled. You can install this website later from your browser menu.');
+        }
+      } catch (error) {
+        showStatus('The browser could not start installation. Please use the browser menu and choose “Install app” or “Add to Home screen”.');
+      }
+      return;
+    }
+
+    if (isIOS()) {
+      showStatus('To install on iPhone or iPad: tap the Share button in Safari, then choose “Add to Home Screen”.');
+    } else {
+      showStatus('To install this website, open your browser menu and choose “Install app” or “Add to Home screen”. If this option is unavailable, check that the site is served over HTTPS and has a valid web app manifest.');
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    installButton.hidden = true;
+    deferredInstallPrompt = null;
+    showStatus('App installed successfully.');
+  });
+
+  if ('serviceWorker' in navigator && isSecureContextForInstall()) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').catch((error) => {
+        console.warn('Service worker registration failed:', error);
+      });
+    });
   }
 })();
 </script>
