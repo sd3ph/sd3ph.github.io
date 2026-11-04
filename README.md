@@ -1,7 +1,3 @@
----
-layout: null
----
-
 <html lang="en" data-theme="quantum">
 <head>
     <meta charset="UTF-8">
