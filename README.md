@@ -1,14 +1,22 @@
-# iLab — Physics + AI Portfolio
+# Lab 360° — Physics + AI
 
-Source files for **https://sd3ph.github.io/**.
+GitHub Pages website: https://sd3ph.github.io/
 
-- `index.html` is the live GitHub Pages homepage.
-- `.nojekyll` disables Jekyll processing so the static homepage is served directly.
-- `slideshow.html` is embedded in the Teaching section and uses the 47 photographs in `pages/`.
-- `boids_lj_interactive.html` is embedded in the Playground section.
-- `pages/` contains the standalone information pages and slideshow photographs.
-- `assets/` contains CSS and JavaScript used by the standalone pages.
-- Root images and GIFs are used by the portfolio and its supporting pages.
+## Edit the website
+- `index.html` — master HTML shell (global header, navigation and footer).
+- `assets/js/master.js` — master controller: page loading, navigation, classroom access and PWA install.
+- `assets/css/master.css` — global theme, layout and responsive styling.
+- `sections/*.html` — individual page content. Edit only the relevant file to update a section.
 
-## Deployment
-Commit the repository contents to the `main` branch. Configure GitHub Pages to deploy from the root (`/(root)`) of that branch.
+## Sections
+`highlight`, `research`, `publication`, `about`, `teaching`, `outreach`, `latest`,
+`classroom`, `products`, `misc`, and `playground`.
+
+## Media and supporting pages
+- `pages/1.jpg` … `pages/47.jpg` are retained for `slideshow.html`.
+- `slideshow.html` and `boids_lj_interactive.html` are retained.
+- Root images/GIFs and `assets/` resources are retained.
+- `legacy-pages/` contains the previous standalone HTML pages as a backup; the modular homepage uses only `sections/*.html`.
+
+## Deploy
+Upload the repository contents to the root of the `main` branch. Keep `.nojekyll` in the repository root and configure GitHub Pages to deploy from `/(root)`.

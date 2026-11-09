@@ -1,12 +1,12 @@
 {
-  "name": "iLab - Physics+AI Portfolio",
-  "short_name": "iLab",
+  "name": "Lab 360° - Physics+AI",
+  "short_name": "Lab 360°",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#080d18",
   "theme_color": "#080d18",
-  "description": "Physics + AI research, teaching, publications and lab projects.",
+  "description": "Lab 360° — research at the intersection of physics, artificial intelligence and complex systems.",
   "icons": [
     {
       "src": "icons/icon-192.png",

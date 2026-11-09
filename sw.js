@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ilab-portfolio-v1';
+const CACHE_NAME = 'lab360-portfolio-v3';
 const CORE_ASSETS = ['./', './index.html', './slideshow.html', './boids_lj_interactive.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))))); self.clients.claim(); });
