@@ -1966,16 +1966,16 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                         <h3>Syllabus</h3>
                         <dl>
                             <dt><strong>Unit 1</strong></dt>
-                            <dd>Multivariate Calculus and Differential Forms - Gradients, Directional Derivatives, Hessian Matrix, Taylor expansions in multiple dimensions, Constrained and Unconstrained Optimization, Method of Lagrange Multipliers.</dd>
+                            <dd>Direct methods for convex functions - sparsity inducing penalty functions- Constrained Convex Optimization problems - Krylov subspace -Conjugate gradient method - formulating problems as LP and QP - Lagrangian multiplier method-KKT conditions - support vector machines- solving by packages (CVXOPT) - Introduction to RKS - Introduction to DMD-Tensor and HoSVD- Linear algebra for AI.</dd>
 
                             <dt><strong>Unit 2</strong></dt>
-                            <dd>Numerical Optimization Algorithms - Gradient Descent, Stochastic Gradient Descent (SGD), Momentum, RMSProp, Adam, Newton and Quasi-Newton methods (BFGS, L-BFGS), Convex Optimization concepts.</dd>
+                            <dd>Introduction to PDEs - Formulation and numerical solution methods (Finite difference and Fourier) for PDEs in Physics and Engineering- Computational experiments using Matlab/Excel/Simulink.</dd>
 
                             <dt><strong>Unit 3</strong></dt>
-                            <dd>Vector Spaces and Transformations - Inner product spaces, Hilbert spaces, Dual spaces, Tensor algebra basics, Orthogonal projections, Gram-Schmidt orthogonalization, QR decomposition and spectral theory.</dd>
+                            <dd>Multivariate Gaussian and weighted least squares - Markov chains - Markov decision Process </dd>
 
                             <dt><strong>Unit 4</strong></dt>
-                            <dd>Applications to Machine Intelligence - High-dimensional data geometry, Manifold learning basics, Dimensionality reduction (PCA, t-SNE), Optimization loss landscapes in deep neural networks.</dd>
+                            <dd>Introduction to quantum computing-Bells inequality-Quantum gates</dd>
                         </dl>
                     </div>
 
