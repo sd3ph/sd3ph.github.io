@@ -1553,7 +1553,7 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                                 <p><span class="course-code">23MAT204</span> <span class="semester-tag">Fall 2026</span></p>
                                 <p><strong>Subject:</strong> Advanced Optimization, Multivariate Calculus, Vector Spaces</p>
                                 <p><strong>Credit:</strong> 3 </p>
-                                <p><strong>Timeline:</strong> 5 Aug - 4 Dec, 2026 </p>
+                                <p><strong>Timeline:</strong> 15 July - 30 Nov, 2026 </p>
                                 <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Third Semester</p>
                             </div>
                             <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
@@ -1570,15 +1570,15 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                             </div>
                         </div>
 
-                        <!-- Card 4: 23MAT304 -->
-                        <div class="course-card" onclick="openCourse('course-mat304')">
+                        <!-- Card 4: 23MAT214 -->
+                        <div class="course-card" onclick="openCourse('course-mat314')">
                             <div>
                                 <h4>Mathematics for Intelligent Systems - IV</h4>
-                                <p><span class="course-code">23MAT304</span> <span class="semester-tag">Spring 2027</span></p>
+                                <p><span class="course-code">23MAT214</span> <span class="semester-tag">Spring 2027</span></p>
                                 <p><strong>Subject:</strong> Random Processes, Advanced Probability, Statistical Inference</p>
                                 <p><strong>Credit:</strong> 3 </p>
-                                <p><strong>Timeline:</strong> 6 Jan - 5 May, 2027 </p>
-                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 130 Students) Second Year, Fourth Semester</p>
+                                <p><strong>Timeline:</strong> 20 Nov, 2026 - 26 April, 2027 </p>
+                                <p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Fourth Semester</p>
                             </div>
                             <div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
                                 Click to view Schedule, Syllabus & Notes &rarr;
