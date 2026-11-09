@@ -1980,9 +1980,44 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                     </div>
 
                     <div class="section">
-                        <h3>Lecture Notes</h3>
-                        <p style="font-style: italic; color: var(--text-muted);">Lecture materials and notes will be uploaded concurrently with the session schedule.</p>
-                    </div>
+    <h3>Lecture Notes</h3>
+
+    <p style="font-style: italic; color: var(--text-muted);">
+        Lecture materials and notes will be uploaded concurrently with the session schedule.
+    </p>
+
+    <ul>
+        <li><a href="https://drive.google.com/file/d/1EwogTaFt1xZVnn0F5ViFsdDrhAy-Z_si/view?usp=drive_link">Lecture 01–04: Revision Lectures (16/07/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1jctIVBS-wtMVfnak4N-NsIZhkYFSlvO7/view?usp=drive_link">Lecture 05–07: Convexity and Derivatives in Multivariable Space — Gradients, Jacobians, and Hessians</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1b1s9-iJJV5DzEm1I5XM53A4_TqdYW8ol/view?usp=drive_link">Lecture 08–10: Introduction to Convex Optimization — Applications in AI</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/14j82gOLLanHIJiCT05aXygfujhRC3Dfi/view?usp=drive_link">Lecture 10b: The Method of Lagrange Multipliers</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1zGw-iGAGiykFh2iBI4zcj1LJ7AqViz7g/view?usp=drive_link">Lecture 11–13: Sparsity, Constraints, and Smart Search Methods</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1owY3q7knQ_mTrE6K5zQHpRKvmwAyX2ka/view?usp=drive_link">Lecture 14–15: The Conjugate Gradient Method</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1nLnM5vGfJTQQQD0EuVGQBX2D3A8TeK2H/view?usp=drive_link">Lecture 16–17: Classical and Stochastic Optimization Algorithms (04/08/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1stwpuUI90J834yh1-lkXL2vKY3jFBXYN/view?usp=drive_link">Lecture 18: Why Support Vector Machines? — The Maximum Margin Principle (09/11/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1bClgNZc1M5Nem0LNVQw6sRSTH_w2nUcq/view?usp=drive_link">Lecture 19–20: Predicting Student Pass/Fail Using SVM and Pseudoinverse</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1DiuiZxEs901s02BZ3rPAvXEwzmlZnGEX/view?usp=drive_link">Lecture 21–25: Introduction to Partial Differential Equations in Engineering and Physics (05/09/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1da3pM5BnLSqZCbzQZIrCMGEzXFETzx3H/view?usp=drive_link">Lecture 22: Four Easy First-Order Homogeneous PDEs — Separation of Variables</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1A1lxsGCwUdJjZtyWICE9772PQ_CXcoPs/view?usp=drive_link">Lecture 27: Solving PDEs with SymPy (21/09/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1BDi3Ck8p0S9DX8TNQj8HzV4Wjc-sDh8Y/view?usp=drive_link">Lecture 29–30: Solving and Discovering PDEs — Fourier Transform, FDM, and PINNs (05/10/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1v1S7qb9bS1IvymN6IlolKxtfZR6XWPQC/view?usp=drive_link">Lecture 31–32: Engineering Foundations of Machine Learning (05/10/2026)</a> - (LH 115/116)</li>
+
+        <li><a href="https://drive.google.com/file/d/1VNK5-s_vWhYCOEtVnVR42vbd4RbEPMdU/view?usp=drive_link">Lecture 34–36: Foundations of Quantum Computing — Qubits, Quantum Gates, and Bell’s Inequality</a> - (LH 115/116)</li>
+    </ul>
+</div>
 
                     <div class="section">
                         <h3>Topical Project</h3>
