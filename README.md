@@ -1561,6 +1561,15 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                             </div>
                         </div>
 
+                        <!-- Card: 25AID434 -->
+                        <div class="course-card">
+                            <div>
+                                <h4>Linear Algebra and Quantum Gates</h4>
+                                <p><span class="course-code">25AID434</span></p>
+                                <p><strong>Subject:</strong> Linear Algebra and Quantum Gates</p>
+                            </div>
+                        </div>
+
                         <!-- Card 4: 23MAT304 -->
                         <div class="course-card" onclick="openCourse('course-mat304')">
                             <div>
@@ -1618,16 +1627,15 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">08:50 - 09:40</td>
-                                        <td></td><td></td><td></td><td></td>
                                         <td><span class="semester-tag">Section A</span></td>
+                                        <td></td><td></td><td></td><td></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">09:40 - 10:30</td>
+                                        <td></td><td></td>
                                         <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
                                         <td></td>
                                         <td><span class="semester-tag">Section A</span></td>
-                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
-                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">10:30 - 10:45</td>
@@ -1644,25 +1652,32 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">12:25 - 01:15</td>
-                                        <td><span class="semester-tag">Section A</span></td>
-                                        <td></td><td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Project (Sec B)</span></td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">01:15 - 02:05</td>
                                         <td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
                                     </tr>
                                     <tr>
-                                        <td style="font-weight: bold;">02:05 - 03:45</td>
-                                        <td></td><td></td>
-                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
-                                        <td><span class="semester-tag">Section A (Lab)</span></td>
-                                        <td></td>
+                                        <td style="font-weight: bold;">02:05 - 02:55</td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td></td><td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">02:55 - 03:45</td>
+                                        <td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td><td></td><td></td>
                                     </tr>
                                     <tr>
                                         <td style="font-weight: bold;">03:45 - 04:35</td>
-                                        <td><span class="semester-tag">Project (Sec A)</span></td>
-                                        <td></td><td></td><td></td><td></td>
+                                        <td></td>
+                                        <td><span class="semester-tag">Section A</span></td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">04:35 - 06:15</td>
+                                        <td></td><td></td><td></td><td></td><td></td>
                                     </tr>
                                 </tbody>
                             </table>
