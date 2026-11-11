@@ -205,13 +205,15 @@ tr:hover td{background:rgba(255,255,255,.025)}
 }
 
 
-/* Lab 360° hero computer-vision applet — scoped to the overview panel */
-.vision-lab{margin:0 0 28px;padding:clamp(16px,2.8vw,28px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(18,36,58,.96),rgba(7,17,31,.98));box-shadow:var(--shadow)}
-.vision-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{margin:7px 0 9px;padding:0;border:0;font-size:clamp(1.45rem,3vw,2.15rem)}.vision-heading p{max-width:680px;margin:0}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.15em;color:var(--accent-2)}
+
+/* Lab 360° hero science-bubble game — scoped to the overview panel */
+.vision-lab{margin:0 0 28px;padding:clamp(16px,2.8vw,28px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(18,36,58,.97),rgba(7,17,31,.99));box-shadow:var(--shadow)}
+.vision-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{margin:7px 0 9px;padding:0;border:0;font-size:clamp(1.45rem,3vw,2.15rem)}.vision-heading p{max-width:720px;margin:0}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.15em;color:var(--accent-2)}
 .vision-chip{flex:none;padding:7px 10px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:var(--accent);font:9px "Space Mono",monospace;letter-spacing:.08em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-.vision-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.85fr);gap:16px}.vision-view{position:relative;min-height:300px;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#030912}.vision-view video,.vision-view canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.vision-view canvas{pointer-events:none}.vision-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--muted);text-align:center}.vision-placeholder small{color:var(--subtle)}.vision-crosshair{font-size:42px;color:var(--accent-2)}.vision-live-tag{position:absolute;top:12px;left:12px;padding:5px 8px;border-radius:6px;background:rgba(3,9,18,.78);color:var(--muted);font:9px "Space Mono",monospace;letter-spacing:.1em}
-.vision-controls{display:flex;flex-direction:column;gap:11px;min-width:0}.vision-actions{display:flex;flex-wrap:wrap;gap:7px}.vision-btn{padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel-2);color:var(--ink);font-size:.78rem;font-weight:700;cursor:pointer}.vision-btn:disabled{opacity:.38;cursor:not-allowed}.vision-btn.vision-primary{background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b;border:0}.vision-status{min-height:40px;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.025);color:var(--muted);font-size:.76rem}.vision-results{display:flex;flex-wrap:wrap;gap:7px;min-height:32px;align-content:flex-start}.vision-result{padding:5px 8px;border:1px solid rgba(93,224,207,.22);border-radius:7px;background:rgba(93,224,207,.07);color:var(--accent-2);font-size:.72rem}.vision-muted{color:var(--subtle);font-size:.76rem}.vision-segment{margin-top:auto;padding:12px;border:1px solid rgba(184,243,107,.18);border-radius:11px;background:rgba(184,243,107,.045)}.vision-segment strong{font-size:.82rem}.vision-segment p{margin:5px 0 9px;font-size:.72rem;line-height:1.55}.vision-sam-link{display:inline-block;color:var(--accent);font-size:.76rem;font-weight:700;text-decoration:none}.vision-sam-link:hover{text-decoration:underline}.vision-download{color:var(--accent-2);font-size:.76rem;font-weight:700}.vision-footnote{margin-top:13px;color:var(--subtle);font-size:.68rem;line-height:1.5}
+.vision-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.85fr);gap:16px}.vision-view{position:relative;min-height:300px;aspect-ratio:16/10;overflow:hidden;border:1px solid rgba(93,224,207,.24);border-radius:15px;background:radial-gradient(ellipse at 50% 45%,#102c43 0%,#061322 62%,#020812 100%)}.vision-view video,.vision-view canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.vision-view canvas{pointer-events:none}.vision-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;color:var(--muted);text-align:center}.vision-placeholder small{max-width:300px;color:var(--subtle);line-height:1.6}.vision-crosshair{font-size:42px;color:var(--accent-2)}.vision-live-tag{position:absolute;top:12px;left:12px;padding:5px 8px;border-radius:6px;background:rgba(3,9,18,.78);color:var(--muted);font:9px "Space Mono",monospace;letter-spacing:.1em}
+.vision-controls{display:flex;flex-direction:column;gap:11px;min-width:0}.vision-actions{display:flex;flex-wrap:wrap;gap:7px}.vision-btn{padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel-2);color:var(--ink);font-size:.78rem;font-weight:700;cursor:pointer}.vision-btn:disabled{opacity:.38;cursor:not-allowed}.vision-btn.vision-primary{background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b;border:0}.vision-status{min-height:48px;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.025);color:var(--muted);font-size:.76rem;line-height:1.55}.vision-scoreline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid rgba(184,243,107,.2);border-radius:10px;background:rgba(184,243,107,.055)}.vision-scoreline span{color:var(--muted);font-size:.72rem}.vision-scoreline strong{color:var(--accent);font:700 1.35rem "Space Mono",monospace}.vision-topic{min-height:112px;padding:13px;border:1px solid rgba(93,224,207,.2);border-radius:11px;background:rgba(93,224,207,.045)}.vision-topic small{display:block;margin-bottom:6px;color:var(--accent-2);font:9px "Space Mono",monospace;letter-spacing:.12em}.vision-topic strong{display:block;font-size:.94rem;line-height:1.35}.vision-topic p{margin:6px 0 0;color:var(--muted);font-size:.74rem;line-height:1.5}.vision-howto{margin:0;color:var(--subtle);font-size:.72rem;line-height:1.6}.vision-footnote{margin-top:13px;color:var(--subtle);font-size:.68rem;line-height:1.5}
 @media(max-width:760px){.vision-workspace{grid-template-columns:1fr}.vision-view{min-height:220px;aspect-ratio:4/3}.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}}
+
 
 </style>
 </head>
@@ -909,36 +911,42 @@ tr:hover td{background:rgba(255,255,255,.025)}
 <template id="section-template-highlight">
 <h1>Lab 360°: Physics, Artificial Intelligence &amp; Data Science Research</h1>
 <p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and learning initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We combine fundamental physics, artificial intelligence, machine learning and data science to investigate complex natural and artificial systems through computational and data-driven approaches.</p>
-<section class="vision-lab" id="vision-lab" aria-label="Browser-based computer vision laboratory">
+<section class="vision-lab" id="vision-lab" aria-label="Lab 360 interactive science bubble challenge">
   <div class="vision-heading">
-    <div><span class="vision-eyebrow">LAB 360° / LIVE COMPUTER VISION</span><h2>See the world through AI</h2>
-    <p>Use your camera to detect everyday objects directly in your browser. Capture a frame and explore object segmentation with MobileSAM.</p></div>
-    <span class="vision-chip"><i></i> ON-DEVICE DEMO</span>
+    <div>
+      <span class="vision-eyebrow">LAB 360° / THE SCIENCE SPARK</span>
+      <h2>Pop a bubble. Spark an idea.</h2>
+      <p>Step into the Lab 360° challenge. Follow a floating bubble, pinch it with your fingers, and discover a fascinating question from the natural world. Which question would you love to explore with AI?</p>
+    </div>
+    <span class="vision-chip"><i></i> PLAY · EXPLORE · IMAGINE</span>
   </div>
   <div class="vision-workspace">
     <div class="vision-view">
-      <video id="vision-video" autoplay playsinline muted aria-label="Live camera preview"></video>
+      <video id="vision-video" autoplay playsinline muted aria-label="Live camera view for the hand gesture game"></video>
       <canvas id="vision-overlay" aria-hidden="true"></canvas>
-      <div class="vision-placeholder" id="vision-placeholder"><span class="vision-crosshair">⌖</span><strong>Camera preview</strong><small>Allow camera access to begin</small></div>
-      <span class="vision-live-tag" id="vision-live-tag">CAMERA OFF</span>
+      <div class="vision-placeholder" id="vision-placeholder">
+        <span class="vision-crosshair">✧</span>
+        <strong>Your science bubbles are waiting</strong>
+        <small>Start the game, allow camera access, then bring one hand into view. Pinch your thumb and index finger on a bubble to pop it.</small>
+      </div>
+      <span class="vision-live-tag" id="vision-live-tag">GAME READY</span>
     </div>
     <div class="vision-controls">
       <div class="vision-actions">
-        <button type="button" class="vision-btn vision-primary" id="vision-start">Start camera</button>
-        <button type="button" class="vision-btn" id="vision-capture" disabled>Capture frame</button>
-        <button type="button" class="vision-btn" id="vision-detect" disabled>Identify objects</button>
+        <button type="button" class="vision-btn vision-primary" id="vision-start">Start the game</button>
+        <button type="button" class="vision-btn" id="vision-flip" disabled>Switch camera</button>
       </div>
-      <div class="vision-status" id="vision-status" role="status" aria-live="polite">Ready. Camera access is requested only when you press Start camera.</div>
-      <div class="vision-results" id="vision-results"><span class="vision-muted">Detected objects will appear here.</span></div>
-      <div class="vision-segment">
-        <div><strong>Want to isolate an object?</strong><p>MobileSAM segments the object you select; it does not assign object names. Capture an image, then open the browser-based MobileSAM tool and upload the saved frame.</p></div>
-        <a class="vision-sam-link" href="https://akbartus.github.io/MobileSAM-in-the-Browser/" target="_blank" rel="noopener">Open MobileSAM ↗</a>
+      <div class="vision-scoreline"><span>SCIENCE SPARKS COLLECTED</span><strong id="vision-score">0</strong></div>
+      <div class="vision-topic" aria-live="polite">
+        <small id="vision-topic-label">YOUR NEXT BIG QUESTION</small>
+        <strong id="vision-topic-title">Can AI help us understand the secrets of nature?</strong>
+        <p id="vision-topic-desc">Burst a bubble to reveal a fresh idea from physics, biology, climate, space and beyond.</p>
       </div>
-      <canvas id="vision-snapshot" hidden></canvas>
-      <a id="vision-download" class="vision-download" hidden download="lab360-camera-frame.png">Download captured frame</a>
+      <div class="vision-status" id="vision-status" role="status" aria-live="polite">Ready when you are. Camera access begins only when you press Start the game.</div>
+      <p class="vision-howto"><strong>How to play:</strong> Hold your hand up to the camera. Move your index fingertip onto the glowing bubble, then gently pinch your thumb and index finger together. Each pop reveals a new science question.</p>
     </div>
   </div>
-  <div class="vision-footnote">Object detection runs in your browser using TensorFlow.js COCO-SSD (MobileNet). Camera frames are not uploaded to Lab 360° servers. MobileSAM opens as a separate browser demo.</div>
+  <div class="vision-footnote">A playful invitation to turn curiosity into discovery. Your camera feed is used in this browser session and is not sent to Lab 360° servers.</div>
 </section>
 <h2>Lab 360° | The Nexus of Data-driven Creativity</h2>
 <p>Welcome to <b>Lab 360°</b>—a crucible of innovation where abstract contemplation is transmuted into purposeful action, and action into world-shaping realities. Embracing an omnidirectional perspective, we traverse the physical continuum from the quantum choreography of molecular assemblies to the subterranean fury of seismic faults, and from automated kinematic systems to predictive climate modeling. We are driven by a relentless thirst for data-fueled discovery, translating high-dimensional entropy into elegant mathematical models that power next-generation healthcare, molecular intelligence, and sustainable societal enterprise.</p>
@@ -1909,95 +1917,273 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
     });
   }
 
-  // Browser-only vision demo. COCO-SSD detects and labels common objects;
-  // MobileSAM is linked separately for promptable object segmentation.
+  // Lab 360° science-bubble game. Hand landmarks are processed in the browser.
   let visionStream = null;
-  let visionModelPromise = null;
+  let visionHands = null;
+  let visionAnimationFrame = null;
+  let visionFacingMode = 'environment';
+  let visionHandPoint = null;
+  let visionPinching = false;
+  let visionLastBurst = 0;
+  let visionScore = 0;
+  let visionBubble = null;
+  let visionGameActive = false;
+  let visionLastVideoTime = -1;
+  let visionHandsBusy = false;
+
+  const scienceTopics = [
+    {title:'Can AI predict an earthquake?',desc:'Could patterns hidden in seismic waves help us understand when the Earth is ready to move?',tag:'EARTH & SEISMOLOGY'},
+    {title:'How do cells make decisions?',desc:'Can machine learning reveal the rules behind the remarkable behaviour of living cells?',tag:'BIOLOGY & COMPLEXITY'},
+    {title:'Can we forecast a monsoon?',desc:'What can clouds, oceans and decades of climate data tell us about tomorrow’s rain?',tag:'CLIMATE & WEATHER'},
+    {title:'What makes a material intelligent?',desc:'Can AI discover materials that adapt, respond and change with their surroundings?',tag:'MATERIALS & DESIGN'},
+    {title:'Are there hidden patterns in the stars?',desc:'Can algorithms find unusual planets and cosmic signals in a sky full of data?',tag:'ASTRONOMY & SPACE'},
+    {title:'Can AI help protect biodiversity?',desc:'Could images and soundscapes reveal which species share, shape and sustain an ecosystem?',tag:'ECOLOGY & CONSERVATION'},
+    {title:'Why do fluids suddenly become turbulent?',desc:'Can data-driven physics uncover the hidden structure of swirling flows?',tag:'FLUIDS & PHYSICS'},
+    {title:'Can we grow food with less water?',desc:'How might AI help plants thrive while using every drop more wisely?',tag:'AGRICULTURE & SUSTAINABILITY'},
+    {title:'How does the brain learn?',desc:'Can computational models help us understand memory, adaptation and intelligence?',tag:'NEUROSCIENCE & AI'},
+    {title:'Can we spot disease earlier?',desc:'Could subtle patterns in medical data help clinicians see warning signs sooner?',tag:'HEALTH & AI'},
+    {title:'What happens inside a black hole?',desc:'How can mathematics and computation help us explore the universe’s biggest mysteries?',tag:'COSMOS & GRAVITY'},
+    {title:'Can AI make cities cooler?',desc:'Can urban data help design greener streets and more comfortable neighbourhoods?',tag:'CITIES & ENVIRONMENT'}
+  ];
+
   function stopVisionCamera() {
+    visionGameActive = false;
+    if (visionAnimationFrame) cancelAnimationFrame(visionAnimationFrame);
+    visionAnimationFrame = null;
+    visionHandPoint = null;
+    visionHandsBusy = false;
     if (visionStream) visionStream.getTracks().forEach(track => track.stop());
     visionStream = null;
+    if (visionHands) {
+      try { visionHands.close(); } catch (_) {}
+      visionHands = null;
+    }
   }
+
   function loadVisionScript(src) {
     return new Promise((resolve, reject) => {
       const existing = [...document.scripts].find(script => script.src === src);
-      if (existing) { if (existing.dataset.loaded === 'true') resolve(); else { existing.addEventListener('load', resolve, {once:true}); existing.addEventListener('error', reject, {once:true}); } return; }
-      const script = document.createElement('script'); script.src = src; script.async = true;
+      if (existing) {
+        if (existing.dataset.loaded === 'true') resolve();
+        else { existing.addEventListener('load', resolve, {once:true}); existing.addEventListener('error', reject, {once:true}); }
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
       script.onload = () => { script.dataset.loaded = 'true'; resolve(); };
-      script.onerror = () => reject(new Error('Could not load the browser vision library. Check your internet connection.'));
+      script.onerror = () => reject(new Error('The hand-play experience could not load. Please check your internet connection and try again.'));
       document.head.appendChild(script);
     });
   }
-  async function getVisionModel(status) {
-    if (!visionModelPromise) visionModelPromise = (async () => {
-      status.textContent = 'Loading the lightweight COCO-SSD model into this browser…';
-      await loadVisionScript('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js');
-      await loadVisionScript('https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js');
-      return await cocoSsd.load({base: 'mobilenet_v2'});
-    })();
-    try { return await visionModelPromise; } catch (error) { visionModelPromise = null; throw error; }
-  }
+
   function initialiseVisionApplet() {
     const video = document.getElementById('vision-video');
     const overlay = document.getElementById('vision-overlay');
     const start = document.getElementById('vision-start');
-    const capture = document.getElementById('vision-capture');
-    const detect = document.getElementById('vision-detect');
+    const flip = document.getElementById('vision-flip');
     const status = document.getElementById('vision-status');
     const placeholder = document.getElementById('vision-placeholder');
     const liveTag = document.getElementById('vision-live-tag');
-    const results = document.getElementById('vision-results');
-    const snapshot = document.getElementById('vision-snapshot');
-    const download = document.getElementById('vision-download');
+    const scoreNode = document.getElementById('vision-score');
+    const topicLabel = document.getElementById('vision-topic-label');
+    const topicTitle = document.getElementById('vision-topic-title');
+    const topicDesc = document.getElementById('vision-topic-desc');
     if (!video || !overlay || !start) return;
+
     const ctx = overlay.getContext('2d');
-    const fitOverlay = () => {
+    let bubbleIndex = -1;
+    let previousFrame = -1;
+
+    function fitOverlay() {
       if (!video.videoWidth || !video.videoHeight) return;
-      overlay.width = video.videoWidth; overlay.height = video.videoHeight;
-      ctx.clearRect(0, 0, overlay.width, overlay.height);
-    };
+      if (overlay.width !== video.videoWidth || overlay.height !== video.videoHeight) {
+        overlay.width = video.videoWidth;
+        overlay.height = video.videoHeight;
+      }
+    }
+
+    function nextBubble() {
+      let next = Math.floor(Math.random() * scienceTopics.length);
+      if (scienceTopics.length > 1 && next === bubbleIndex) next = (next + 1) % scienceTopics.length;
+      bubbleIndex = next;
+      const topic = scienceTopics[next];
+      visionBubble = {
+        x: overlay.width * (0.28 + Math.random() * 0.44),
+        y: overlay.height * (0.30 + Math.random() * 0.40),
+        radius: Math.max(48, Math.min(overlay.width, overlay.height) * 0.105),
+        phase: Math.random() * Math.PI * 2,
+        topic
+      };
+      topicLabel.textContent = 'A QUESTION TO EXPLORE · ' + topic.tag;
+      topicTitle.textContent = topic.title;
+      topicDesc.textContent = topic.desc;
+    }
+
+    function burstBubble() {
+      if (!visionBubble) return;
+      const now = performance.now();
+      if (now - visionLastBurst < 850) return;
+      visionLastBurst = now;
+      visionScore += 1;
+      scoreNode.textContent = String(visionScore);
+      status.textContent = 'Pop! One more science spark collected. Find the next glowing bubble.';
+      nextBubble();
+    }
+
+    function drawBubble(now) {
+      if (!visionBubble || !overlay.width) return;
+      const b = visionBubble;
+      const driftX = Math.sin(now / 850 + b.phase) * b.radius * 0.12;
+      const driftY = Math.cos(now / 1050 + b.phase) * b.radius * 0.10;
+      const x = b.x + driftX, y = b.y + driftY, r = b.radius;
+      const glow = ctx.createRadialGradient(x-r*.25,y-r*.35,r*.08,x,y,r*1.18);
+      glow.addColorStop(0,'rgba(213,255,255,.95)');
+      glow.addColorStop(.22,'rgba(93,224,207,.52)');
+      glow.addColorStop(.72,'rgba(72,150,220,.18)');
+      glow.addColorStop(1,'rgba(72,150,220,.015)');
+      ctx.save();
+      ctx.shadowColor = 'rgba(93,224,207,.7)';
+      ctx.shadowBlur = 25;
+      ctx.fillStyle = glow;
+      ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.lineWidth = Math.max(2, r*.035);
+      ctx.strokeStyle = 'rgba(204,255,248,.9)';
+      ctx.stroke();
+      ctx.beginPath(); ctx.arc(x-r*.28,y-r*.30,r*.17,0,Math.PI*2);
+      ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.fill();
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#f4ffff';
+      ctx.font = `700 ${Math.max(11,Math.min(17,r*.24))}px system-ui,sans-serif`;
+      const words = b.topic.tag.split(' ');
+      const shortTag = words.length > 2 ? words.slice(0,2).join(' ') : b.topic.tag;
+      ctx.fillText(shortTag, x, y+r*.08, r*1.55);
+      ctx.font = `600 ${Math.max(9,Math.min(12,r*.17))}px system-ui,sans-serif`;
+      ctx.fillStyle = 'rgba(235,255,255,.88)';
+      ctx.fillText('PINCH TO POP', x, y+r*.38, r*1.55);
+      ctx.restore();
+      b.drawX = x; b.drawY = y;
+    }
+
+    function onHandResults(results) {
+      const landmarks = results.multiHandLandmarks && results.multiHandLandmarks[0];
+      if (!landmarks) { visionHandPoint = null; visionPinching = false; return; }
+      const indexTip = landmarks[8], thumbTip = landmarks[4];
+      visionHandPoint = {x:indexTip.x*overlay.width, y:indexTip.y*overlay.height};
+      const pinchDistance = Math.hypot((indexTip.x-thumbTip.x),(indexTip.y-thumbTip.y));
+      const pinchingNow = pinchDistance < 0.055;
+      if (pinchingNow && !visionPinching && visionBubble) {
+        const b = visionBubble;
+        const dx = visionHandPoint.x - (b.drawX ?? b.x);
+        const dy = visionHandPoint.y - (b.drawY ?? b.y);
+        if (Math.hypot(dx,dy) < b.radius * 1.18) burstBubble();
+      }
+      visionPinching = pinchingNow;
+    }
+
+    async function startCamera() {
+      if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access needs a secure HTTPS page and a supported browser.');
+      stopVisionCamera();
+      status.textContent = 'Opening your camera…';
+      visionStream = await navigator.mediaDevices.getUserMedia({
+        video:{facingMode:{ideal:visionFacingMode},width:{ideal:960},height:{ideal:720}},
+        audio:false
+      });
+      video.srcObject = visionStream;
+      const mirrorPreview = visionFacingMode === 'user';
+      video.style.transform = mirrorPreview ? 'scaleX(-1)' : 'none';
+      overlay.style.transform = mirrorPreview ? 'scaleX(-1)' : 'none';
+      await video.play();
+      fitOverlay();
+      placeholder.hidden = true;
+      liveTag.textContent = visionFacingMode === 'user' ? 'FRONT CAMERA · LIVE' : 'REAR CAMERA · LIVE';
+      start.textContent = 'Stop game';
+      flip.disabled = false;
+      status.textContent = 'Camera is ready. Loading your hand-play experience…';
+
+      await loadVisionScript('https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.js');
+      visionHands = new Hands({locateFile:(file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/${file}`});
+      visionHands.setOptions({
+        maxNumHands:1,
+        modelComplexity:0,
+        minDetectionConfidence:0.62,
+        minTrackingConfidence:0.58
+      });
+      visionHands.onResults(onHandResults);
+      visionGameActive = true;
+      visionScore = 0;
+      scoreNode.textContent = '0';
+      visionPinching = false;
+      visionLastVideoTime = -1;
+      nextBubble();
+      status.textContent = 'You’re in! Move your fingertip onto the bubble and pinch thumb + index finger to pop it.';
+      liveTag.textContent = 'SCIENCE BUBBLES · LIVE';
+
+      const animate = async (now) => {
+        if (!visionGameActive || !visionStream) return;
+        fitOverlay();
+        ctx.clearRect(0,0,overlay.width,overlay.height);
+        drawBubble(now);
+        if (visionHandPoint) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(visionHandPoint.x,visionHandPoint.y,Math.max(8,overlay.width*.012),0,Math.PI*2);
+          ctx.fillStyle = visionPinching ? '#b8f36b' : '#ffffff';
+          ctx.shadowColor = '#5de0cf'; ctx.shadowBlur = 16; ctx.fill();
+          ctx.restore();
+        }
+        if (video.readyState >= 2 && video.currentTime !== previousFrame && !visionHandsBusy) {
+          previousFrame = video.currentTime;
+          visionHandsBusy = true;
+          try { await visionHands.send({image:video}); } catch (_) {}
+          visionHandsBusy = false;
+        }
+        visionAnimationFrame = requestAnimationFrame(animate);
+      };
+      visionAnimationFrame = requestAnimationFrame(animate);
+    }
+
     start.addEventListener('click', async () => {
-      try {
-        if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access requires HTTPS and a browser that supports camera input.');
-        if (visionStream) { stopVisionCamera(); video.srcObject = null; start.textContent = 'Start camera'; capture.disabled = true; detect.disabled = true; placeholder.hidden = false; liveTag.textContent = 'CAMERA OFF'; ctx.clearRect(0,0,overlay.width,overlay.height); status.textContent = 'Camera stopped.'; return; }
-        status.textContent = 'Requesting camera permission…';
-        visionStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1280},height:{ideal:720}},audio:false});
-        video.srcObject = visionStream; await video.play();
-        fitOverlay(); placeholder.hidden = true; liveTag.textContent = 'LIVE CAMERA';
-        start.textContent = 'Stop camera'; capture.disabled = false; detect.disabled = false;
-        status.textContent = 'Camera ready. Select Identify objects to run the model.';
-      } catch (error) { status.textContent = error.message || 'Unable to start camera. Check browser permissions.'; stopVisionCamera(); }
+      if (visionStream) {
+        stopVisionCamera();
+        video.srcObject = null;
+        start.textContent = 'Start the game';
+        flip.disabled = true;
+        placeholder.hidden = false;
+        liveTag.textContent = 'GAME READY';
+        ctx.clearRect(0,0,overlay.width,overlay.height);
+        status.textContent = 'Game paused. Start again whenever curiosity calls.';
+        return;
+      }
+      start.disabled = true;
+      try { await startCamera(); }
+      catch (error) {
+        stopVisionCamera();
+        video.srcObject = null;
+        start.textContent = 'Start the game';
+        flip.disabled = true;
+        status.textContent = error.message || 'Could not start the game. Please check camera permission and try again.';
+      } finally { start.disabled = false; }
     });
+
+    flip.addEventListener('click', async () => {
+      if (!visionStream) return;
+      visionFacingMode = visionFacingMode === 'environment' ? 'user' : 'environment';
+      start.disabled = true; flip.disabled = true;
+      try { await startCamera(); }
+      catch (error) {
+        stopVisionCamera();
+        video.srcObject = null;
+        start.textContent = 'Start the game';
+        placeholder.hidden = false;
+        liveTag.textContent = 'GAME READY';
+        status.textContent = error.message || 'Could not switch cameras. Please restart the game.';
+      } finally { start.disabled = false; flip.disabled = !visionStream; }
+    });
+
     video.addEventListener('loadedmetadata', fitOverlay);
-    capture.addEventListener('click', () => {
-      if (!video.videoWidth) return;
-      snapshot.width = video.videoWidth; snapshot.height = video.videoHeight;
-      snapshot.getContext('2d').drawImage(video,0,0,snapshot.width,snapshot.height);
-      snapshot.toBlob(blob => { if (!blob) return; const url = URL.createObjectURL(blob); if (download.dataset.url) URL.revokeObjectURL(download.dataset.url); download.dataset.url = url; download.href = url; download.hidden = false; status.textContent = 'Frame captured. Download it to use the separate MobileSAM segmenter.'; },'image/png');
-    });
-    detect.addEventListener('click', async () => {
-      if (!visionStream || !video.videoWidth) return;
-      detect.disabled = true; results.innerHTML = '<span class="vision-muted">Analysing frame…</span>';
-      try {
-        const model = await getVisionModel(status);
-        const predictions = await model.detect(video, 20, 0.45);
-        fitOverlay(); ctx.clearRect(0,0,overlay.width,overlay.height);
-        results.innerHTML = '';
-        if (!predictions.length) { results.innerHTML = '<span class="vision-muted">No common objects detected. Try moving closer or improving the lighting.</span>'; status.textContent = 'Analysis complete. No objects detected.'; return; }
-        predictions.forEach(prediction => {
-          const [x,y,w,h] = prediction.bbox;
-          ctx.lineWidth = Math.max(2, overlay.width / 500); ctx.strokeStyle = '#b8f36b'; ctx.fillStyle = 'rgba(184,243,107,.10)';
-          ctx.fillRect(x,y,w,h); ctx.strokeRect(x,y,w,h);
-          const label = `${prediction.class} ${(prediction.score*100).toFixed(0)}%`;
-          ctx.font = `bold ${Math.max(13, overlay.width/65)}px sans-serif`;
-          const textWidth = ctx.measureText(label).width; const labelHeight = Math.max(22, overlay.width/38);
-          ctx.fillStyle = '#b8f36b'; ctx.fillRect(x,Math.max(0,y-labelHeight),textWidth+12,labelHeight);
-          ctx.fillStyle = '#09111f'; ctx.fillText(label,x+6,Math.max(15,y-6));
-          const chip = document.createElement('span'); chip.className = 'vision-result'; chip.textContent = label; results.appendChild(chip);
-        });
-        status.textContent = `Found ${predictions.length} object${predictions.length===1?'':'s'}. Inference completed in your browser.`;
-      } catch (error) { results.innerHTML = '<span class="vision-muted">Detection could not run. Please retry.</span>'; status.textContent = error.message || 'Vision model error.'; }
-      finally { detect.disabled = false; }
-    });
+    nextBubble();
   }
 
   function initialiseClassroom() {
