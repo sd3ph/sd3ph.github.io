@@ -1,0 +1,2117 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09111f">
+  <meta name="description" content="Lab 360° is an interdisciplinary Physics, Artificial Intelligence and Data Science research group at Amrita Vishwa Vidyapeetham, Coimbatore. Explore computational physics, machine learning, complex systems, materials informatics and data-driven scientific discovery.">
+  <meta name="keywords" content="Physics and AI research lab, Physics and Data Science lab, Artificial Intelligence research India, computational physics, data-driven physics, machine learning for physics, physics-informed machine learning, complex systems, statistical physics, soft matter physics, materials informatics, scientific machine learning, Amrita Vishwa Vidyapeetham">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="google-site-verification" content="OsgxjynQ4a4xbpkEOQ-KIJRmMp-A5dGNAFjkcqMCgWg">
+  <meta name="author" content="Lab 360°">
+  <link rel="canonical" href="https://sd3ph.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Lab 360°">
+  <meta property="og:url" content="https://sd3ph.github.io/">
+  <meta property="og:title" content="Lab 360° | Physics, Artificial Intelligence & Data Science Research">
+  <meta property="og:description" content="Interdisciplinary research connecting physics, AI and data science at Amrita Vishwa Vidyapeetham, Coimbatore. Computational physics, machine learning, complex systems and materials informatics.">
+  <meta property="og:image" content="https://sd3ph.github.io/cover1.png">
+  <meta property="og:image:alt" content="Lab 360° — Physics, Artificial Intelligence and Data Science research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lab 360° | Physics + AI + Data Science">
+  <meta name="twitter:description" content="Research at the intersection of physics, artificial intelligence, data science and complex systems.">
+  <meta name="twitter:image" content="https://sd3ph.github.io/cover1.png">
+  <title>Lab 360° | Physics, Artificial Intelligence & Data Science Research</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sd3ph.github.io/#website",
+        "url": "https://sd3ph.github.io/",
+        "name": "Lab 360°",
+        "description": "Interdisciplinary Physics, Artificial Intelligence and Data Science research, education and scientific innovation.",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "ResearchOrganization",
+        "@id": "https://sd3ph.github.io/#lab",
+        "name": "Lab 360° — Physics + AI",
+        "alternateName": ["Lab 360", "Physics + AI Lab"],
+        "url": "https://sd3ph.github.io/",
+        "description": "An interdisciplinary research and learning initiative connecting physics, artificial intelligence, data science and complex systems.",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Amrita Vishwa Vidyapeetham",
+          "url": "https://www.amrita.edu/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Coimbatore",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": [
+          "Physics and artificial intelligence",
+          "Data science for physical systems",
+          "Computational physics",
+          "Statistical physics",
+          "Complex systems",
+          "Machine learning",
+          "Physics-informed machine learning",
+          "Scientific machine learning",
+          "Soft matter and active matter",
+          "Materials informatics",
+          "Molecular dynamics",
+          "Dynamical systems and time-series analysis",
+          "High-performance computing"
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+/* Lab 360° / modular design system — edit this file to change the global look */
+:root{
+  color-scheme:dark;
+  --bg:#08111f;--panel:#0e1b2d;--panel-2:#13243a;--panel-3:#192e47;
+  --ink:#edf4f7;--muted:#a5b7c7;--subtle:#71869a;
+  --line:rgba(190,220,230,.14);--accent:#b8f36b;--accent-2:#5de0cf;
+  --glow:rgba(184,243,107,.13);--radius:22px;
+  --shadow:0 22px 65px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;min-height:100vh;background:
+  radial-gradient(ellipse at 8% 5%,rgba(93,224,207,.10),transparent 34rem),
+  radial-gradient(ellipse at 92% 18%,rgba(184,243,107,.08),transparent 32rem),var(--bg);
+  color:var(--ink);font:15px/1.72 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent-2);text-underline-offset:3px}
+button,input{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:#101b17}
+.ambient{position:fixed;z-index:-1;width:380px;height:380px;border-radius:50%;filter:blur(110px);opacity:.13;pointer-events:none}
+.ambient-one{background:#50d8c6;top:8%;left:-220px}.ambient-two{background:#b8f36b;right:-230px;top:48%}
+.site-header{position:sticky;top:12px;z-index:50;width:min(1240px,calc(100% - 36px));margin:12px auto 38px;
+  background:rgba(12,25,42,.82);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);backdrop-filter:blur(22px);padding:14px 18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:190px}
+.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#10201b;font:800 1.65rem/1 "Manrope";box-shadow:0 8px 25px rgba(93,224,207,.18)}
+.brand-mark span{color:#fff}.brand-copy{display:flex;flex-direction:column;line-height:1.2}
+.brand-copy strong{font:800 1.05rem "Manrope";letter-spacing:-.04em}.brand-copy strong span{color:var(--accent)}
+.brand-copy small{margin-top:4px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.08em;text-transform:uppercase}
+.primary-nav{position:absolute;left:50%;top:20px;transform:translateX(-50%);display:flex;gap:7px}
+.primary-nav a,.secondary-nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:.83rem;font-weight:700;white-space:nowrap;transition:.2s}
+.primary-nav a:hover,.secondary-nav a:hover,.nav-link.active{background:var(--glow);color:var(--accent);box-shadow:inset 0 0 0 1px rgba(184,243,107,.15)}
+.header-actions{display:flex;align-items:center;gap:12px;position:absolute;right:18px;top:18px}
+.status-chip{color:var(--muted);font-size:.72rem;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.status-chip i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.install-button{border:1px solid rgba(184,243,107,.28);background:var(--glow);color:var(--accent);padding:8px 12px;border-radius:10px;font-size:.78rem;font-weight:700;cursor:pointer}
+.install-button:hover{background:rgba(184,243,107,.2)}
+#install-status{display:none;position:absolute;right:0;top:42px;width:240px;padding:10px 12px;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:.75rem}
+#install-status.show{display:block}
+.secondary-nav{display:flex;align-items:center;justify-content:center;gap:4px;border-top:1px solid var(--line);margin-top:14px;padding:9px 0 10px;overflow-x:auto;scrollbar-width:none}
+.secondary-nav::-webkit-scrollbar{display:none}
+.menu-toggle{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+.site-main{width:min(1120px,calc(100% - 42px));margin:0 auto}
+.page-kicker{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 22px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.17em;text-align:center}
+.kicker-line{width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--accent-2))}
+.kicker-line:last-child{transform:rotate(180deg)}
+#page-host{min-height:55vh;transition:opacity .18s}
+#page-host.is-loading{opacity:.45}
+.page-content{animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.loading-state,.load-error{min-height:35vh;display:grid;place-content:center;text-align:center;color:var(--muted)}
+.loader{width:34px;height:34px;margin:auto;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.22;letter-spacing:-.045em;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.8rem)}h2{font-size:clamp(1.5rem,3.2vw,2.35rem);margin:0 0 20px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+h3{font-size:1.28rem;color:var(--accent);margin:28px 0 13px}h4{font-size:1.05rem;margin:16px 0 9px}
+p{color:var(--muted);margin:0 0 15px}strong,b{color:var(--ink);font-weight:700}
+ul,ol{padding-left:22px;margin:0 0 20px}li{color:var(--muted);padding-left:4px;margin:0 0 9px}li::marker{color:var(--accent)}
+img{max-width:100%;height:auto;border-radius:14px}
+.page-content>img:first-child{display:block;width:100%;max-height:390px;object-fit:cover;border:1px solid var(--line);margin:0 0 28px}
+.section,.research-area-item,.publication-item,.timeline-content,.advertisement,.course-card,.outreach-card,.collaborator-item{
+  background:linear-gradient(145deg,rgba(18,36,58,.94),rgba(12,26,44,.92));border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:0 12px 35px rgba(0,0,0,.12)}
+.section{padding:clamp(18px,3vw,28px);margin:18px 0}
+.section:hover,.publication-item:hover,.course-card:hover,.outreach-card:hover{border-color:rgba(93,224,207,.34)}
+.research-area-item,.publication-item,.timeline-content{padding:16px 19px;margin:0 0 13px}
+.research-area-item{border-left:3px solid var(--accent-2)}
+.publication-item .citation{color:var(--ink);font-size:.96rem;line-height:1.7}
+.publication-item a{display:inline-block;padding:3px 8px;border-radius:6px;background:rgba(93,224,207,.1);text-decoration:none;font-size:.82rem;font-weight:700}
+.timeline{border-left:1px solid rgba(93,224,207,.35);padding-left:22px;margin-left:7px}
+.timeline-item{position:relative;margin-bottom:18px}.timeline-item:before{content:"";position:absolute;left:-28px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}
+.advertisement{padding:clamp(22px,4vw,38px);text-align:center;background:radial-gradient(ellipse at top right,rgba(184,243,107,.13),transparent 60%),var(--panel)}
+.advertisement h1{color:var(--accent);font-size:clamp(1.7rem,4vw,2.7rem)}
+.opportunities,.social-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.opportunity,.semester-tag,.course-code{display:inline-block;padding:5px 11px;border-radius:30px;background:var(--glow);border:1px solid rgba(184,243,107,.2);color:var(--accent);font-size:.8rem;font-weight:700}
+.email-link{display:inline-flex;padding:11px 22px;border-radius:11px;background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b!important;text-decoration:none;font-weight:800}
+.course-grid,.outreach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:15px;margin-top:17px}
+.course-card,.outreach-card{padding:20px;transition:transform .2s,border-color .2s;cursor:pointer}
+.course-card:hover,.outreach-card:hover{transform:translateY(-3px)}
+.course-card h4{margin-top:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.outreach-card{border-top:3px solid var(--accent)}
+.outreach-icon{font-size:1.8rem;display:block;margin-bottom:8px}
+.back-btn{display:inline-flex;align-items:center;gap:7px;margin:0 0 18px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);color:var(--ink);cursor:pointer}
+.course-detail-view,.teaching-detail-view{display:none;animation:rise .25s ease}
+.course-detail-view.active,.teaching-detail-view.active{display:block}
+.playground-container{width:100%;height:70vh;min-height:420px;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#05070b}
+.playground-container iframe{width:100%;height:100%;border:0}
+.password-prompt-container{max-width:500px;margin:32px auto;padding:30px 22px;text-align:center;background:var(--panel);border:1px dashed rgba(184,243,107,.35);border-radius:18px}
+.password-form{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}
+.password-form input{width:min(270px,100%);padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:#091525;color:var(--ink)}
+.password-form button{padding:10px 18px;border:0;border-radius:9px;background:var(--accent);color:#10201b;font-weight:800;cursor:pointer}
+.password-error-message{margin-top:12px;color:#ff8b8b;font-weight:700}
+#classroom-content.hidden{display:none}
+#password-prompt-container[hidden]{display:none}
+.table-responsive{width:100%;overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;min-width:550px;border-collapse:collapse;background:var(--panel-2);font-size:.9rem}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);color:var(--muted)}
+th{background:rgba(255,255,255,.04);color:var(--ink);font-family:"Manrope"}
+tr:hover td{background:rgba(255,255,255,.025)}
+.profile-header{display:flex;align-items:center;gap:22px}.profile-picture{width:100px;height:100px;object-fit:cover;border-radius:50%;border:2px solid var(--accent)}
+.header-text h1{font-size:2rem;margin:0 0 5px}.header-text p{color:var(--accent);margin:0}
+.social-links a img{height:27px;border-radius:7px}
+.playground-container iframe{display:block}
+.site-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:55px;padding:22px 0 30px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.04em}
+.site-footer a{color:var(--accent-2);text-decoration:none}
+[hidden]{display:none!important}
+@media(max-width:900px){
+ .site-header{padding:12px 14px 0}.primary-nav{position:static;transform:none;margin-left:auto;margin-right:190px}
+ .header-actions{top:15px;right:14px}.status-chip{display:none}
+ .secondary-nav{justify-content:flex-start}
+}
+@media(max-width:680px){
+ .site-header{top:6px;width:calc(100% - 18px);margin:6px auto 25px;border-radius:15px}
+ .brand-mark{width:38px;height:38px}.brand-copy strong{font-size:.96rem}
+ .primary-nav{display:none}.header-actions{top:13px;right:12px}.menu-toggle{display:block}
+ .install-button{padding:7px 9px}.secondary-nav{display:none;flex-wrap:wrap;justify-content:flex-start;white-space:normal;overflow:visible;padding:10px 0}
+ .secondary-nav.open{display:flex}.secondary-nav a{font-size:.78rem;padding:7px 9px}
+ .site-main{width:calc(100% - 28px)}.page-kicker{font-size:8px;letter-spacing:.11em}
+ .section{padding:17px;margin:13px 0;border-radius:16px}
+ .profile-header{align-items:flex-start}.profile-picture{width:72px;height:72px}
+ .site-footer{font-size:9px;justify-content:center;text-align:center}
+ .playground-container{height:65vh;min-height:360px}
+}
+
+
+/* Lab 360° hero computer-vision applet — scoped to the overview panel */
+.vision-lab{margin:0 0 28px;padding:clamp(16px,2.8vw,28px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(18,36,58,.96),rgba(7,17,31,.98));box-shadow:var(--shadow)}
+.vision-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{margin:7px 0 9px;padding:0;border:0;font-size:clamp(1.45rem,3vw,2.15rem)}.vision-heading p{max-width:680px;margin:0}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.15em;color:var(--accent-2)}
+.vision-chip{flex:none;padding:7px 10px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:var(--accent);font:9px "Space Mono",monospace;letter-spacing:.08em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.vision-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.85fr);gap:16px}.vision-view{position:relative;min-height:300px;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#030912}.vision-view video,.vision-view canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.vision-view canvas{pointer-events:none}.vision-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--muted);text-align:center}.vision-placeholder small{color:var(--subtle)}.vision-crosshair{font-size:42px;color:var(--accent-2)}.vision-live-tag{position:absolute;top:12px;left:12px;padding:5px 8px;border-radius:6px;background:rgba(3,9,18,.78);color:var(--muted);font:9px "Space Mono",monospace;letter-spacing:.1em}
+.vision-controls{display:flex;flex-direction:column;gap:11px;min-width:0}.vision-actions{display:flex;flex-wrap:wrap;gap:7px}.vision-btn{padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel-2);color:var(--ink);font-size:.78rem;font-weight:700;cursor:pointer}.vision-btn:disabled{opacity:.38;cursor:not-allowed}.vision-btn.vision-primary{background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b;border:0}.vision-status{min-height:40px;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.025);color:var(--muted);font-size:.76rem}.vision-results{display:flex;flex-wrap:wrap;gap:7px;min-height:32px;align-content:flex-start}.vision-result{padding:5px 8px;border:1px solid rgba(93,224,207,.22);border-radius:7px;background:rgba(93,224,207,.07);color:var(--accent-2);font-size:.72rem}.vision-muted{color:var(--subtle);font-size:.76rem}.vision-segment{margin-top:auto;padding:12px;border:1px solid rgba(184,243,107,.18);border-radius:11px;background:rgba(184,243,107,.045)}.vision-segment strong{font-size:.82rem}.vision-segment p{margin:5px 0 9px;font-size:.72rem;line-height:1.55}.vision-sam-link{display:inline-block;color:var(--accent);font-size:.76rem;font-weight:700;text-decoration:none}.vision-sam-link:hover{text-decoration:underline}.vision-download{color:var(--accent-2);font-size:.76rem;font-weight:700}.vision-footnote{margin-top:13px;color:var(--subtle);font-size:.68rem;line-height:1.5}
+@media(max-width:760px){.vision-workspace{grid-template-columns:1fr}.vision-view{min-height:220px;aspect-ratio:4/3}.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}}
+
+</style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#highlight" aria-label="Lab 360° home">
+      <span class="brand-mark">360<span>°</span></span>
+      <span class="brand-copy"><strong>Physics<span>+</span>AI</strong><small>PHYSICS · AI · COMPLEX SYSTEMS</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#publication" class="nav-link">Publications</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="status-chip"><i></i> Exploring the complex</span>
+      <button id="install-app" class="install-button" type="button"><span aria-hidden="true">↓</span> <span class="install-label">Install</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+    <nav class="secondary-nav" id="secondary-nav" aria-label="Site sections">
+      <a href="#highlight" class="nav-link">Overview</a>
+      <a href="#teaching" class="nav-link">Teaching</a>
+      <a href="#outreach" class="nav-link">Outreach</a>
+      <a href="#latest" class="nav-link">Latest</a>
+      <a href="#classroom" class="nav-link">Live Classroom</a>
+      <a href="#products" class="nav-link">Lab Products</a>
+      <a href="#misc" class="nav-link">People & Awards</a>
+      <a href="#playground" class="nav-link">Playground</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <div class="page-kicker"><span class="kicker-line"></span><span id="page-kicker-label">LAB 360° / OVERVIEW</span><span class="kicker-line"></span></div>
+    <div id="page-host" aria-live="polite">
+      <article class="page-content page-highlight">
+        <h1>Lab 360°: Physics, Artificial Intelligence &amp; Data Science Research</h1>
+        <p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and learning initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. It connects fundamental physics, artificial intelligence, machine learning and data science to understand and model complex natural and artificial systems.</p>
+        <p>Research themes include computational and statistical physics, non-equilibrium and soft matter, complex systems, data-driven modelling, scientific machine learning, materials informatics, molecular dynamics, interpretable AI and high-performance computing. The site also shares research directions, publications, teaching resources, projects and opportunities for collaboration.</p>
+        <p>Explore the <a href="#research">research areas</a>, <a href="#publication">publications</a>, <a href="#teaching">teaching resources</a> and <a href="#outreach">outreach activities</a>.</p>
+      </article>
+    </div>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Lab 360° · Physics + AI</span>
+      <span>Curiosity → Models → Discovery</span>
+      <a href="#highlight">Back to top ↑</a>
+    </footer>
+  </main>
+
+<!-- Embedded page sections: avoids path/fetch deployment failures -->
+<template id="section-template-about">
+<h2>Group Leader</h2>
+<div class="profile-header section">
+<img alt="Profile Picture" class="profile-picture" src="Image_PPic.png"/>
+<div class="header-text">
+<h1>Suman Dutta</h1>
+<p>Researcher | Intelligent Living &amp; Artificial Systems</p>
+</div>
+</div>
+<h2> About Me</h2>
+<p>I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong>, <strong>High Performance Computing </strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.</p>
+<div class="section">
+<h3>🎓 Professional Journey</h3>
+<h4>Present Affiliation</h4>
+<p><strong>Gemini Certified Faculty</strong><br/>(2026-2028)<br/></p>
+<p><strong>Assistant Professor (Sr. Gr.), Department of Artificial Intelligence</strong><br/>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br/></p>
+<h4>Professional Research Experience</h4>
+<ul>
+<li><strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br/>Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)</li>
+<li><strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br/>International Centre for Theoretical Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: C. Dasgupta)</li>
+<li><strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br/>The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)</li>
+</ul>
+<h4>Visiting Researcher Experience</h4>
+<ul>
+<li>Fluvial Mechanics Laboratory Indian Statistical Institute (Kolkata, IN) </li>
+<li>Department of Physics Indian Institute of Science (Bangalore, IN) </li>
+<li>Department of Physics Indian Institute of Science Education and Research (Bhopal, IN) </li>
+<li>Laboratoire Interdisciplinaire de Physique Université Grenoble Alpes (Grenoble, FR) </li>
+<li>Institut für Theoretische Physik II - Soft Matter Heinrich-Heine-Universität (Düsseldorf, DE) </li>
+</ul>
+<h4>Education</h4>
+<ul>
+<li><strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br/>Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata (Degree awarded by University of Calcutta) <br/><em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)</li>
+<li><strong>M.Sc in Physical Sciences</strong> (08/2010 – 07/2012)<br/>S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)</li>
+</ul>
+</div>
+<h2>📫 Connect</h2>
+<div class="section" style="text-align: center;">
+<div class="social-links">
+<a href="mailto:sumandutta.snbncbs@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-red?style=flat-square&amp;logo=gmail&amp;logoColor=white"/></a>
+<a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&amp;logo=google-scholar&amp;logoColor=white"/></a>
+<a href="https://github.com/sd3ph"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/sd3ph/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&amp;logo=linkedin&amp;logoColor=white"/></a>
+</div>
+</div>
+
+</template>
+<template id="section-template-classroom">
+<h2>🧑‍🏫 Live Class Room</h2>
+ Password Prompt Container 
+<div class="password-prompt-container" id="password-prompt-container">
+<h3>🔒 Access Restricted</h3>
+<p>Please enter the passcode to view course materials.</p>
+<form class="password-form" id="password-form">
+<input id="passcode-input" placeholder="Enter passcode" required="" type="password"/>
+<button type="submit">Unlock</button>
+</form>
+<p class="password-error-message" id="password-error-message"></p>
+</div>
+ Protected Content 
+<div class="hidden" id="classroom-content">
+<!-- DASHBOARD VIEW -->
+<div id="classroom-dashboard">
+<p style="text-align: center; margin-bottom: 25px; font-size: 1.05em;">Welcome to the Live Class Room. Select a course below to view details.</p>
+<div class="course-grid">
+<!-- Card 1: 23MAT106 -->
+<div class="course-card" onclick="openCourse('course-mat106')">
+<div>
+<h4>Mathematics for Intelligent Systems - I</h4>
+<p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
+<p><strong>Subject:</strong> Linear Algebra, ODEs, Probability, Quantum Computing</p>
+<p><strong>Credit:</strong> 4 </p>
+<p><strong>Timeline:</strong> 6 Aug - 5 Dec, 2025 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card 2: 23CHY115 -->
+<div class="course-card" onclick="openCourse('course-chy115')">
+<div>
+<h4>Introduction to Material Informatics</h4>
+<p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
+<p><strong>Subject:</strong> AI in Material Science</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 5 Jan - 4 May, 2026 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card 3: 23MAT204 -->
+<div class="course-card" onclick="openCourse('course-mat204')">
+<div>
+<h4>Mathematics for Intelligent Systems - III</h4>
+<p><span class="course-code">23MAT204</span> <span class="semester-tag">Fall 2026</span></p>
+<p><strong>Subject:</strong> Advanced Optimization, Multivariate Calculus, Vector Spaces</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 15 July - 30 Nov, 2026 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Third Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card: 25AID434 -->
+<div class="course-card">
+<div>
+<h4>Linear Algebra and Quantum Gates</h4>
+<p><span class="course-code">25AID434</span></p>
+<p><strong>Subject:</strong> Linear Algebra and Quantum Gates</p>
+</div>
+</div>
+<!-- Card 4: 23MAT214 -->
+<div class="course-card" onclick="openCourse('course-mat314')">
+<div>
+<h4>Mathematics for Intelligent Systems - IV</h4>
+<p><span class="course-code">23MAT214</span> <span class="semester-tag">Spring 2027</span></p>
+<p><strong>Subject:</strong> Random Processes, Advanced Probability, Statistical Inference</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 20 Nov, 2026 - 26 April, 2027 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Fourth Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT106 -->
+<div class="course-detail-view" id="course-mat106">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2025 </li>
+<li><strong>Course Code:</strong> 23MAT106</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:00 - 08:50</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:45 - 11:35</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">12:25 - 01:15</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 02:55</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:55 - 03:45</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">03:45 - 04:35</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">04:35 - 06:15</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Lecture 01: Introduction to Linear Algebra for AI (06/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing">Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharing">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1kfk44ClGk1CHYdp4oH3HK4MVGU5g_oYK/view?usp=drive_link"> Summary of Topical Projects </a> </li>
+</ul>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1rkGgMks5BO0PGgv5f-wHzubaMnZHBIxF/view?usp=sharing">Assignment 1: Linear Algebra and ML </a> - (Due: 18/08/2025)</li>
+<li><a href="https://drive.google.com/file/d/1yReUaF3pPoDgymTmBLUbRtqrZP40dzlW/view?usp=sharing">Assignment 2: Differential Equations and Modeling</a> - (Due: 11/10/2025)</li>
+</ul>
+</div>
+</div>
+<!-- DETAILED VIEW: 23CHY115 -->
+<div class="course-detail-view" id="course-chy115">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2025 </li>
+<li><strong>Course Code:</strong> 23CHY115</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:00 - 08:50</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:45 - 11:35</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">12:25 - 01:15</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">03:45 - 04:35</td>
+<td></td><td></td><td></td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Introduction to material science – structure, properties, and process spaces - process-structure-property linkages – foundation of material informatics – introduction to molecular mechanism and force field – quantification of dynamics properties of polymers (monte carlo simulation, molecular dynamics simulation, normal mode analysis) – electronics structure of atoms (Gaussian, Gauss view, density functional theory)</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Quantification and screening of materials properties - property prediction and optimization using AI - materials design and discovery using AI – how to handle small, spared, and low-quality dataset using AI.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Materials failure and sustainability analysis – new material and inverse materials design concept – solve inverse design using AI – enhance speed, efficacy and cost-effectiveness of material using AI - basic concept of quantum computing in material informatics.</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Case studies of materials informatics (use of AI) in different fields (e.g. energy, aerospace, biomedical, etc.) - ethical considerations and limitations of materials informatics - future directions and challenges in materials informatics.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/10rcKnWqmk5Hy0MSTJqXo8-H74M2xk72T/view?usp=sharing">Lecture 01-03: Overview of Material Informatics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1cZaj16h_Sk6r1eZzc-ZFUbtcTkD7J-z2/view?usp=sharing">Lecture S1: Generative Prediction using Koopman Theory </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1hfJNXZGG6GfeTdLZS3ALU6GrzoUQhBdy/view?usp=sharing">Lecture 4-5: Koopman Operator &amp; Simple DMD </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1lz4Ddp6zURVGcWDvydx6Za-LBiv1wt7c/view?usp=sharing">Lecture 6-7: Koopman Prediction in Material Informatics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1uW-H33hAH_Th4Y_Ejim6yngpuo9gq43a/view?usp=sharing">Lecture 8: Single Variable Time-Series Prediction (Hankel-DMD) </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1zUQ6BYGaNtxK2LeCS5pzdL0czc-1aZHG/view?usp=sharing">Lecture S2: Data-Driven Model Engineering </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1zUQ6BYGaNtxK2LeCS5pzdL0czc-1aZHG/view?usp=drive_link">DMD Slides: Data-Driven Model Engineering </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/10btQz3_e2ZYVLppxqe5Zqhg0wxUBOAZY/view?usp=drive_link">Lecture 9-10: Analytical Data-Driven Koopman </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1I54B2QkDEIKDU_1Vk8Or9NcVrmtz-gaw/view?usp=drive_link">Lecture 11-12: Introduction to Molecular Dynamics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1hnKFxWve7AYl4j8dOCd-JzC-rZAyxlYu/view?usp=drive_link">Lecture 13: Basic Molecular Dynamics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1t1njTsSTpOiqRU6bVZCJHe98pCBcKfsM/view?usp=drive_link">Lecture 14-15: Catastrophic Algorithms in Materials BTW Sandpile vs. CBO Earthquake Model </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1BSzk1M6NML5LYN_KgRYH-GUJco4YDLPv/view?usp=sharing">Lecture 14-18: Catastrophic Algorithms in Materials BTW Sandpile vs. CBO Earthquake Model </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1X1Cv0vV0pIWJsyU0P-M8dduBeOsBiz-I/view?usp=sharing">Lecture 22: Massively Parallel Material Simulations LAMMPS and OVITO </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 24: Agent-Based Simulations using LAMMPS </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1SXG6P7WjXRF_BbrG1r8ix1ya77g1PmKw/view?usp=sharing">Lecture 26: Post Processing LAMMPS data </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1x02_HxmbctBWNH9JE-QyohEowLdpwCw6/view?usp=sharing">Lecture 27: Tutorial: Material Discovery with AI </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 26-30: Material Discovery by AI </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1lmd9snw_9iXnuwFd-jeRUOTeB5SqjVov/view?usp=sharing">Lecture 31: Vibrational Dynamics, Normal Mode Analysis (NMA) and Data-Driven Modeling </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1znn-zVH3Ciy3cJJHQO3Tiuo-i4yUdGIt/view?usp=sharing">Lecture 32-34: Ethical Considerations, Limitations, and Future Directions </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1Is5xz_s14I5ROZDtmghbUwJOtNb5wAZT/view?usp=sharing">Extensive Summary</a> - (LH 15/16)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/13OLMqsd1L7j0Fj4esVj72-NellyJjNn9/view?usp=sharing"> Summary of Project Review</a> </li>
+</ul>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1DHuBZ-bzmekvveB4S0OiRT2LBufMDDvi/view?usp=sharing">Assignment 01: Due Date 31/01/2026 </a> - (LH 15/16)</li>
+</ul>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT204 -->
+<div class="course-detail-view" id="course-mat204">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2026 </li>
+<li><strong>Course Code:</strong> 23MAT204</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - III - 23MAT204, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Direct methods for convex functions - sparsity inducing penalty functions- Constrained Convex Optimization problems - Krylov subspace -Conjugate gradient method - formulating problems as LP and QP - Lagrangian multiplier method-KKT conditions - support vector machines- solving by packages (CVXOPT) - Introduction to RKS - Introduction to DMD-Tensor and HoSVD- Linear algebra for AI.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Introduction to PDEs - Formulation and numerical solution methods (Finite difference and Fourier) for PDEs in Physics and Engineering- Computational experiments using Matlab/Excel/Simulink.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Multivariate Gaussian and weighted least squares - Markov chains - Markov decision Process </dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Introduction to quantum computing-Bells inequality-Quantum gates</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<p style="font-style: italic; color: var(--text-muted);">
+        Lecture materials and notes will be uploaded concurrently with the session schedule.
+    </p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1EwogTaFt1xZVnn0F5ViFsdDrhAy-Z_si/view?usp=drive_link">Lecture 01–04: Revision Lectures (16/07/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1jctIVBS-wtMVfnak4N-NsIZhkYFSlvO7/view?usp=drive_link">Lecture 05–07: Convexity and Derivatives in Multivariable Space — Gradients, Jacobians, and Hessians</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1b1s9-iJJV5DzEm1I5XM53A4_TqdYW8ol/view?usp=drive_link">Lecture 08–10: Introduction to Convex Optimization — Applications in AI</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/14j82gOLLanHIJiCT05aXygfujhRC3Dfi/view?usp=drive_link">Lecture 10b: The Method of Lagrange Multipliers</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1zGw-iGAGiykFh2iBI4zcj1LJ7AqViz7g/view?usp=drive_link">Lecture 11–13: Sparsity, Constraints, and Smart Search Methods</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1owY3q7knQ_mTrE6K5zQHpRKvmwAyX2ka/view?usp=drive_link">Lecture 14–15: The Conjugate Gradient Method</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1nLnM5vGfJTQQQD0EuVGQBX2D3A8TeK2H/view?usp=drive_link">Lecture 16–17: Classical and Stochastic Optimization Algorithms (04/08/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1stwpuUI90J834yh1-lkXL2vKY3jFBXYN/view?usp=drive_link">Lecture 18: Why Support Vector Machines? — The Maximum Margin Principle (09/11/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1bClgNZc1M5Nem0LNVQw6sRSTH_w2nUcq/view?usp=drive_link">Lecture 19–20: Predicting Student Pass/Fail Using SVM and Pseudoinverse</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1DiuiZxEs901s02BZ3rPAvXEwzmlZnGEX/view?usp=drive_link">Lecture 21–25: Introduction to Partial Differential Equations in Engineering and Physics (05/09/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1da3pM5BnLSqZCbzQZIrCMGEzXFETzx3H/view?usp=drive_link">Lecture 22: Four Easy First-Order Homogeneous PDEs — Separation of Variables</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1A1lxsGCwUdJjZtyWICE9772PQ_CXcoPs/view?usp=drive_link">Lecture 27: Solving PDEs with SymPy (21/09/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1BDi3Ck8p0S9DX8TNQj8HzV4Wjc-sDh8Y/view?usp=drive_link">Lecture 29–30: Solving and Discovering PDEs — Fourier Transform, FDM, and PINNs (05/10/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1v1S7qb9bS1IvymN6IlolKxtfZR6XWPQC/view?usp=drive_link">Lecture 31–32: Engineering Foundations of Machine Learning (05/10/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1VNK5-s_vWhYCOEtVnVR42vbd4RbEPMdU/view?usp=drive_link">Lecture 34–36: Foundations of Quantum Computing — Qubits, Quantum Gates, and Bell’s Inequality</a> - (LH 115/116)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT304 -->
+<div class="course-detail-view" id="course-mat304">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Spring, 2027 </li>
+<li><strong>Course Code:</strong> 23MAT304</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - IV - 23MAT304, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Advanced Probability Theory - Joint, conditional, and marginal distributions, Multivariate Gaussian distributions, Transformations of random variables, Characteristic functions, Moments and cumulants.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Stochastic Processes &amp; Random Walks - Discrete and continuous-time Markov chains, Transition probability matrices, Chapman-Kolmogorov equations, Stationary distributions, Ergodicity, Poisson processes, Brownian motion.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Statistical Inference &amp; Estimation - Maximum Likelihood Estimation (MLE), Maximum A Posteriori (MAP), Bayesian inference, Expectation-Maximization (EM) algorithm, Hypothesis testing, Confidence intervals, Information theory measures (Entropy, KL divergence).</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Probabilistic Modeling in AI - Markov Decision Processes (MDPs), Hidden Markov Models (HMMs), Markov Chain Monte Carlo (MCMC), Metropolis-Hastings and Gibbs sampling, Generative probabilistic models.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<p style="font-style: italic; color: var(--text-muted);">Lecture materials and notes will be uploaded concurrently with the session schedule.</p>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
+</div>
+</div>
+</div>
+
+</template>
+<template id="section-template-highlight">
+<h1>Lab 360°: Physics, Artificial Intelligence &amp; Data Science Research</h1>
+<p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and learning initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We combine fundamental physics, artificial intelligence, machine learning and data science to investigate complex natural and artificial systems through computational and data-driven approaches.</p>
+<section class="vision-lab" id="vision-lab" aria-label="Browser-based computer vision laboratory">
+  <div class="vision-heading">
+    <div><span class="vision-eyebrow">LAB 360° / LIVE COMPUTER VISION</span><h2>See the world through AI</h2>
+    <p>Use your camera to detect everyday objects directly in your browser. Capture a frame and explore object segmentation with MobileSAM.</p></div>
+    <span class="vision-chip"><i></i> ON-DEVICE DEMO</span>
+  </div>
+  <div class="vision-workspace">
+    <div class="vision-view">
+      <video id="vision-video" autoplay playsinline muted aria-label="Live camera preview"></video>
+      <canvas id="vision-overlay" aria-hidden="true"></canvas>
+      <div class="vision-placeholder" id="vision-placeholder"><span class="vision-crosshair">⌖</span><strong>Camera preview</strong><small>Allow camera access to begin</small></div>
+      <span class="vision-live-tag" id="vision-live-tag">CAMERA OFF</span>
+    </div>
+    <div class="vision-controls">
+      <div class="vision-actions">
+        <button type="button" class="vision-btn vision-primary" id="vision-start">Start camera</button>
+        <button type="button" class="vision-btn" id="vision-capture" disabled>Capture frame</button>
+        <button type="button" class="vision-btn" id="vision-detect" disabled>Identify objects</button>
+      </div>
+      <div class="vision-status" id="vision-status" role="status" aria-live="polite">Ready. Camera access is requested only when you press Start camera.</div>
+      <div class="vision-results" id="vision-results"><span class="vision-muted">Detected objects will appear here.</span></div>
+      <div class="vision-segment">
+        <div><strong>Want to isolate an object?</strong><p>MobileSAM segments the object you select; it does not assign object names. Capture an image, then open the browser-based MobileSAM tool and upload the saved frame.</p></div>
+        <a class="vision-sam-link" href="https://akbartus.github.io/MobileSAM-in-the-Browser/" target="_blank" rel="noopener">Open MobileSAM ↗</a>
+      </div>
+      <canvas id="vision-snapshot" hidden></canvas>
+      <a id="vision-download" class="vision-download" hidden download="lab360-camera-frame.png">Download captured frame</a>
+    </div>
+  </div>
+  <div class="vision-footnote">Object detection runs in your browser using TensorFlow.js COCO-SSD (MobileNet). Camera frames are not uploaded to Lab 360° servers. MobileSAM opens as a separate browser demo.</div>
+</section>
+<h2>Lab 360° | The Nexus of Data-driven Creativity</h2>
+<p>Welcome to <b>Lab 360°</b>—a crucible of innovation where abstract contemplation is transmuted into purposeful action, and action into world-shaping realities. Embracing an omnidirectional perspective, we traverse the physical continuum from the quantum choreography of molecular assemblies to the subterranean fury of seismic faults, and from automated kinematic systems to predictive climate modeling. We are driven by a relentless thirst for data-fueled discovery, translating high-dimensional entropy into elegant mathematical models that power next-generation healthcare, molecular intelligence, and sustainable societal enterprise.</p>
+<ul>
+<li><b>Omnidirectional Data Exploration:</b> Dissolving conventional academic silos, our researchers synthesize insights across disparate domains—from the precision mechanics of athletic motion to continental-scale environmental rhythms—extracting harmony from complex data streams.</li>
+<li><b>Molecular Intelligence &amp; Clinical Horizons:</b> Orchestrating deep learning with biophysical intuition, we decode the architecture of macromolecular interactions, catalyzing breakthroughs in targeted therapeutics and precision diagnostics.</li>
+<li><b>Planetary Dynamics &amp; Structural Resilience:</b> Fusing fundamental physics with machine intelligence to anticipate catastrophic structural shifts and geodynamic hazards, fortifying communities against nature’s most extreme events.</li>
+<li><b>Deep Tech for Humanitarian Enterprise:</b> We treat discovery not merely as an intellectual pursuit, but as a moral imperative—incubating agile, socially conscious ventures that transform laboratory breakthroughs into enduring global value.</li>
+</ul>
+<p>Though we are new, Lab 360° is guided by an ambitious mandate: to empower a cadre of forward-looking thinkers equipped to craft the technological paradigms of tomorrow.</p>
+<h2>Lab 360° has a heart of Physics</h2>
+<p>Positioned at the luminous crossroads of non-equilibrium physics and machine intelligence, we uncover the universal principles that govern intricate, multi-scale systems. We approach artificial intelligence not merely as an engine for empirical prediction, but as an epistemic prism—a tool to reveal the latent mathematical harmonies of the cosmos. Our central research thrusts comprise:</p>
+<ul>
+<li><b>Collective Intelligence in Natural and Synthetic Swarms:</b> How do autonomous entities—from avian murmurations and cellular monolayers to coordinated robotic swarms—manifest collective genius from minimal local rules? We investigate the physical principles of emergence to engineer resilient, self-organizing synthetic systems.</li>
+<li><b>Physics of Living Matter &amp; Morphogenesis:</b> Viewing biological assemblies through the lens of active matter, we illuminate the biomechanical forces orchestrating tissue repair, pattern formation, and embryonic growth, charting new possibilities for regenerative bioengineering.</li>
+<li><b>Mechanics of Disordered &amp; Amorphous Solids:</b> Defying crystalline predictability, glasses and granular media conceal subtle preludes to catastrophic failure. We develop physics-informed algorithms capable of detecting the structural precursors to rupture, pioneering the design of ultra-durable, damage-tolerant materials.</li>
+<li><b>Interpretable Machine Intelligence for Fundamental Discovery:</b> Transcending opaque black-box models, our neural architectures are sculpted to distill sparse, transparent governing equations directly from raw observation, revealing fundamental physical laws that ignite bold scientific hypotheses.</li>
+</ul>
+<p>Flourishing at the vibrant intersection of theoretical elegance and experimental craftsmanship, we cultivate an intellectual commons where fearless curiosity gives rise to enduring innovation.</p>
+<div class="section">
+<h3>🌟 Highlights</h3>
+<ul>
+<li><strong>Research Interests:</strong> Investigating the dynamics of natural and artificial complex systems, with a focus on out-of-equilibrium soft, glassy, and active matter.</li>
+<li><strong>Physics at the Interface of AI:</strong> By training models from physical systems, we integrate fundamental physical laws into novel AI models. This involves using high-performance computing and explainable AI to decode molecular information processing, predict material failure, and attempts to understand emergent behaviors in living and artificial systems.</li>
+<li><strong>Teaching and Mentoring:</strong> Engaged in teaching courses such as Mathematics for AI and Intelligent Systems, and mentoring research interns and graduate students.</li>
+</ul>
+</div>
+<div class="section">
+<h2>🌟 Join Us </h2>
+<div class="advertisement">
+<h1>Join Us to Innovate</h1>
+<p> We are seeking creative individuals to join our lab to co-create the future.</p>
+<p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
+<div class="opportunities">
+<div class="opportunity">Collaborative Projects</div>
+<div class="opportunity">Internship Opportunities</div>
+<div class="opportunity">PhD Positions</div>
+<div class="opportunity">Postdoctoral Fellowships</div>
+</div>
+<p>Find your chance to work on projects that matter, surrounded by a team to pushing the boundaries of what's possible. We believe in the power of diversity and the magic that happens when generative minds connect.</p>
+<div class="call-to-action">
+<h2 style="justify-content: center; border: none;">Ready to answer the call?</h2>
+<p>We want to hear from you: your vision and plans with us.<br/>Email your one-page CV, a well supported SOP</p>
+<a class="email-link" href="mailto:sumandutta.avvcb@gmail.com">Submit</a>
+</div>
+<p style="margin-top: 25px; font-style: italic; font-size: 0.9em;">Let's build the future together.</p>
+</div>
+<img alt="Join Us Graphic" src="joinus.png" style="width: 100%; margin-top: 15px; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+</div>
+
+</template>
+<template id="section-template-latest">
+<h2>✨ Latest News</h2>
+<div class="section">
+<div class="timeline">,
+
+                <div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman presented work titled "Inverse Learning Complex Systems" - by Moushika S, Ashmitha T, V Vaibhav &amp; Suman Dutta, at the Statistical Mechanics Meeting - Kolkata coorganised by IISER-Kolkata, S. N. Bose National Centre for Basic Sciences, Bose Institute &amp; Indian Association for the Cultivation of Science (Oct 13-15, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman presented work titled "An Adaptive AI Assisted Framework for Personalized Indian Nutrition" - by M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal, B. Surya. Tej, M. Neeraj
+Dr Chakravarthy S Maddipati, Dr Br Nivedita Pavithran &amp; Suman Dutta, at the 58th Conference of Nutrition Society of India, at Avinashilingam Institute for Home Science and Higher Education for Women (Oct 8-9, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Poster on AI-driven Material Discovery platform - GenMatX by Revanth S, G Kamalesh, P S Sugatha, Sudip K Batabyal &amp; Suman Dutta, at the National Conference on Quality and Safety of Biosimilars, organized by IPC &amp; C-CAMP (Sept 10-11, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Magnus Olsen submitted his Master's thesis titled 'Molecular dynamics simulations of
+non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Natural Sciences, Norwegian University of Science and Technology (Supervisor: R. Cabriolu, Co-supervisor: Suman Dutta) (Sept 07, 2026) </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman delivered a talk at the Department of Physics of Complex Systems, S. N. Bose National Centre for Basic Sciences, Kolkata: Persistently Non-Gaussian Metastable Fluids </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Archit Harish joined the Institute of Mathematical Sciences, Chennai </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Completed Project: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate &amp; Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (2025-2026) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Oral presentation in International Mini-Workshop - 125 Minutes: Optimal Diet Plannar, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha and A. Sheshank Royal </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>International Mini-Workshop - 125 Minutes was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman delivered a talk at the Institute of Mathematical Sciences, Chennai: Persistently Non-Gaussian Metastable Fluids </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Archit Harish selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
+</div>
+</div>
+</div>
+</div>
+
+</template>
+<template id="section-template-misc">
+<h2>🤝 Research Collaborators</h2>
+<div class="section">
+<div class="research-area-item"><strong>Jaydeb Chakrabarti</strong> (Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div>
+<div class="research-area-item"><strong>Pinaki Chaudhuri</strong> (Professor, The Institute of Mathematical Sciences, Chennai, IN)</div>
+<div class="research-area-item"><strong>Kirsten Martens</strong> (CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div>
+<div class="research-area-item"><strong>Chandan Dasgupta</strong> (Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div>
+<div class="research-area-item"><strong>Madan Rao</strong> (Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div>
+<div class="research-area-item"><strong>Vinay Vaibhav</strong> (Post Doctoral Fellow, University of Goettingen, DE)</div>
+<div class="research-area-item"><strong>Raffaela Cabriolu</strong> (Associate Professor, Norwegian University of Science and Technology, NO)</div>
+<div class="research-area-item"><strong>Tamoghna Kanti Das</strong> (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div>
+<div class="research-area-item"><strong>AM Parvez Biswas</strong> (Solution Architect - Enterprise Systems, Data &amp; Integration, Tata Consultancy Services, IN)</div>
+<div class="research-area-item"><strong>Souvick Das</strong> (Post Doctoral Fellow, University of Luxembourg, LU)</div>
+<div class="research-area-item"><strong> Nivedita Pavithran </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+<div class="research-area-item"><strong> Chakravarthy S Maddipati </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+<div class="research-area-item"><strong> Sudip Kumar Batabyal </strong> (Professor, Amrita Vishwa Vidyapeetham, IN)</div>
+</div>
+<h2>🏆 Awards &amp; Recognition</h2>
+<div class="section">
+<ul>
+<li><strong>Project Awarded: EUROHPC-Joint Undertaking Benchmark Access</strong> (2025-2026) (PI: Raffaela Cabriolu, CoPI: S. Dutta).</li>
+<li><strong>Project Awarded: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis</strong> (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate &amp; Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta) (2025-2026).</li>
+<li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+<li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+<li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+<li><strong>National Merit Scholarship</strong> (2004).</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-outreach">
+<h2>📢 Outreach &amp; Community</h2>
+<p style="text-align: center; margin-bottom: 25px;">Engaging with the scientific community and the public to demystify Physics and AI.</p>
+<div class="outreach-grid">
+<!-- Outreach Item 1 -->
+<div class="outreach-card">
+<span class="outreach-icon">🗣️</span>
+<h4>Talks</h4>
+<p>Talks/Presentations</p>
+<ul style="font-size: 0.9em;">
+<li>International: 3+ </li>
+<li>National: 10+ </li>
+<li>Total: 26+ </li>
+</ul>
+</div>
+<!-- Outreach Item 3 -->
+<div class="outreach-card">
+<span class="outreach-icon">🌍</span>
+<h4>Science Popularization</h4>
+<p>October 31, 2025 -- Story writing by human-machine collaboration. Participation: 115 Students </p>
+<p>February 6, 2026 -- International Mini-Workshop -- 125 Minutes (Online). Participation: 106 </p>
+</div>
+<!-- Outreach Item 4 -->
+<div class="outreach-card">
+<span class="outreach-icon">🏆</span>
+<h4>Competitions</h4>
+<p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
+<p>March 20, 2026-- Class hackathon -II. Participation: 9 Groups (Each consisting of 4-6 Members) </p>
+</div>
+</div>
+<div class="section" style="margin-top: 30px;">
+<h3>Milestones</h3>
+<div class="research-area-item">
+<strong>Human+AI Collaboration</strong>
+<p>In a fusion of logic and creativity, we conducted an experimental initiative in the Autumn of 2025, challenging first-year BTech(AID) students to move beyond the mechanics of AI to the artistry of generation. The resulting anthology compiles 115 distinct narratives, representing a massive coordination of human imagination amplified by Large Language Models. This collection showcases a remarkable spectrum of themes, refracting a single premise into genres ranging from the futuristic sci-fi of The Neural Vault and ZeroTrace to the philosophical introspection of synthetic intelligence. Demonstrating how artificial tools can yield storytelling, we present the book: "Tales from the Hidden Layers — An Anthology of Neural Symphonies" (115 Stories from 115 Student coauthors from BTech AID S1 batch, 748 Pages).</p>
+</div>
+</div>
+
+</template>
+<template id="section-template-playground">
+<h2>🎮 Swarm Intelligence</h2>
+<div class="section">
+<p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M, M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
+<div class="playground-container">
+<iframe frameborder="0" src="boids_lj_interactive.html"></iframe>
+</div>
+</div>
+
+</template>
+<template id="section-template-products">
+<h2>🧪 Lab Products</h2>
+<div class="section">
+<h3>🤖 Aadri 2.0: Conversational AI for Customary Profiles</h3>
+<h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
+<h4>🔹 Team</h4>
+<ul>
+<li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+<li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
+<li><strong>Consultants &amp; Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
+</ul>
+<h4>🔹 Project Synopsis</h4>
+<p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini engine and Retrieval-Augmented Generation (RAG) architecture, it transforms static information base into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
+<h4>🔹 Colloquial Abstract</h4>
+<p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To make academic profiles interactive, accessible, and engaging.</li>
+<li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
+<li>To set a new standard for how academics present themselves digitally.</li>
+</ul>
+<h4>🔹 Mobile Demonstration 📱</h4>
+<p>Evaluate the application's real-time conversational capabilities on the go, in the playground subpage. Read the: <a href="https://drive.google.com/file/d/1wTpjT0-jby8hUuf01bEL8L08Mx2ihmwp/view?usp=sharing" style="text-decoration: none; color: var(--accent-cyan); font-weight: bold; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 2px;">White Paper</a></p>
+</div>
+<div class="section">
+<h3>📝 AtoGRAD: OMR Solutions for Class-based Tests</h3>
+<p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
+<h4>🔹 Team</h4>
+<p>To be announced.</p>
+<h4>🔹 Abstract</h4>
+<p>Details about the technology and application will be available shortly.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
+<li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
+<li>To offer instant analytics and performance reports for students and instructors.</li>
+</ul>
+</div>
+<div class="section">
+<h3>🩺 MedScriptAI: Intelligent Medical Documentation</h3>
+<h4>MedScriptAI – Automated Clinical Scripting and Analysis Engine</h4>
+<h4>🔹 Team</h4>
+<p>To be announced.</p>
+<h4>🔹 Project Synopsis</h4>
+<p>MedScriptAI utilizes advanced natural language processing to transcribe and analyze clinical interactions. By automating documentation, it allows healthcare professionals to focus more on patient care and less on administrative tasks.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To reduce clinician burnout by automating electronic health record (EHR) entries.</li>
+<li>To ensure high accuracy in medical transcription and prescription generation.</li>
+<li>To provide real-time clinical decision support based on patient history.</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-publication">
+<h2>📚 Publications</h2>
+<div class="section">
+<h3>2026</h3>
+<div class="publication-item">
+<p class="citation">V. Vaibhav, T. Das &amp; <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, Ann. Phys. (Berlin) 538 (4), e00247(2026) [<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.202500247" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<h3>2025</h3>
+<div class="publication-item">
+<p class="citation">S. Santra, L. Touzo, C. Dasgupta, A. Dhar, <u>S. Dutta</u>, A. Kundu, P. Le Doussal, G. Schehr &amp; P. Singh, <em>Crystal to liquid cross-over in the active Calogero-Moser model</em>, J. Stat. Mech. 033203 (2025) [<a href="https://iopscience.iop.org/article/10.1088/1742-5468/adbb5d" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Contributing author</u></p>
+</div>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao &amp; C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025) [<a href="https://arxiv.org/abs/2509.00376" rel="noopener noreferrer" target="_blank">LINK</a>] </p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2024</h3>
+<div class="publication-item">
+<p class="citation">V. Vaibhav &amp; <u>S. Dutta</u>*, <em>Entropic timescales of Dynamic Heterogeneity in Supercooled Liquid</em>, Phys. Rev. E (Lett.), <strong>109</strong>, L062102 (2024) [<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.L062102" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<h3>2023</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>, K. Martens &amp; P. Chaudhuri, <em>Creep response of athermal amorphous solids under imposed shear stress</em>, arXiv:2303.04718 (2023) [<a href="https://arxiv.org/abs/2303.04718" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First author</u></p>
+</div>
+<h3>2021</h3>
+<div class="publication-item">
+<p class="citation">C. Liu, <u>S. Dutta</u>, P. Chaudhuri &amp; K. Martens, <em>Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</em>, Phys. Rev. Lett., <strong>126</strong>, 138005 (2021) [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.138005" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Joint first author</u></p>
+</div>
+<h3>2020</h3>
+<div class="publication-item">
+<p class="citation">R. Dandekar, S. Bose &amp; <u>S. Dutta</u>*, <em>Non-Gaussian information of heterogeneity in soft matter</em>, Europhys. Lett., <strong>131</strong>, 18002 (2020) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/131/18002/meta" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Length-scales of dynamic heterogeneity in a driven binary colloid</em>, Phys. Chem. Chem. Phys., <strong>22</strong>, 17731 (2020) [<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02703k/unauth" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2019</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>*, <em>Microscopic insights into dynamical heterogeneity in a lane forming colloid</em>, Chem. Phys., <strong>522</strong>, 256 (2019) [<a href="https://www.sciencedirect.com/science/article/pii/S0301010418311510" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Solo author</u></p>
+</div>
+<h3>2018</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Transient dynamical responses of a charged binary colloid in an electric field</em>, Soft Matter, <strong>14</strong>, 4477 (2018) [<a href="https://pubs.rsc.org/en/content/articlehtml/2018/sm/c7sm02552a" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2016</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Anomalous dynamical responses in a driven system</em>, Europhys. Lett., <strong>116</strong>, 38001 (2016) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/38001/meta" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First author</u></p>
+</div>
+<h3>2015</h3>
+<div class="publication-item">
+<p class="citation">J. Chakrabarti &amp; <u>S. Dutta</u>, <em>Analytical form of forces in hydrophobic collapse</em>, Chem. Phys. Lett., 620, <strong>109</strong> (2015) [<a href="https://www.sciencedirect.com/science/article/pii/S0009261414010483" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Second author</u></p>
+</div>
+</div>
+
+</template>
+<template id="section-template-research">
+<h2>🔬 Research Interests &amp; Competencies</h2>
+<div class="section">
+<h3>Research Expertise</h3>
+<ul>
+<li><strong>Domain Expertise:</strong> Collective Intelligence in Living and Artificial Systems, Physics of Complex Fluids, Soft Condensed Matter. </li>
+<li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
+</ul>
+</div>
+<div class="research-gifs" style="display: flex; gap: 15px; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px;">
+<img alt="First highlight cover image" src="cavitation.gif" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+<img alt="Second highlight cover image" src="mips.gif" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+</div>
+<div class="section">
+<h3>Key Research Areas</h3>
+<ul>
+<li class="research-area-item"><strong>Soft, Glassy, Active &amp; Adaptable Matter</strong></li>
+<li class="research-area-item"><strong>Physics of Flow, Glass &amp; Living Machines</strong></li>
+<li class="research-area-item"><strong>Material Failure and Molecular Information Processing</strong></li>
+<li class="research-area-item"><strong>Mechanobiology, Catastrophe Science, Emergent Intelligence</strong></li>
+</ul>
+</div>
+<div class="section">
+<h3>Extensive Experience in</h3>
+<ul>
+<li>Soft Condensed Matter</li>
+<li>High Performance Computing (Molecular Simulations)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Research within the Group</h3>
+<p>We perform extensive computer simulations, harnessing the power of High-Performance Computing (HPC), alongside statistical methods. Our aim is to develop and deploy data-driven yet inherently explainable techniques. These methods are meticulously designed to systematically investigate the intricate complex processes that drive autonomous organization and the phenomena of failure in both living and artificial systems. Our approach bridges the gap between complex data analysis and fundamental scientific understanding, ensuring our findings are not only predictive but also interpretable.</p>
+<p>Our research endeavors delve into several key directions, offering a comprehensive exploration of complex systems:</p>
+<ul>
+<li><strong>Molecular Information Processing:</strong> We meticulously decode how molecular systems store, manipulate, and relay information. This involves unraveling the fundamental principles that govern adaptive behaviors observed in both natural biological networks and synthetic molecular constructs. By understanding these intricate mechanisms, we aim to engineer more sophisticated and responsive artificial systems.</li>
+<li><strong>Cellular Migration and Turbulence:</strong> We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.</li>
+<li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
+<li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
+<li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
+<li><strong>Generative Physical Intelligence:</strong> We are pioneering the development of novel generative models that are deeply integrated with the fundamental laws of physics. This research aims to create AI systems capable of not only predicting but also generating physically plausible dynamics and structures. By teaching models the principles of statistical mechanics and emergent phenomena, we seek to build intelligent agents that can autonomously discover new materials, understand system failures, and generate innovative solutions to a complex physical challenges.</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-teaching">
+<h2>💡 Teaching &amp; Mentoring</h2>
+<div class="section">
+<h3>Glimpses</h3>
+<p>Moments from My Classes</p>
+<div class="playground-container">
+<iframe frameborder="0" src="slideshow.html"></iframe>
+</div>
+</div>
+ TEACHING DASHBOARD 
+<div id="teaching-dashboard">
+<p style="text-align: center; margin-bottom: 20px; font-size: 1.05em; color: var(--text-secondary);">
+                    Explore our academic engagements, mentoring programs, and pedagogical philosophy.
+                </p>
+<div class="course-grid">
+<!-- Card 1: Academic Courses -->
+<div class="course-card" onclick="openTeachingSection('teaching-courses')">
+<div>
+<h4>👨‍🏫 Academic Courses</h4>
+<p><strong>Focus:</strong> AI, Mathematics &amp; Material Science</p>
+<p>Courses delivered at Amrita Vishwa Vidyapeetham and S. N. Bose National Centre for Basic Sciences.</p>
+<ul style="margin-top:10px; font-size: 0.9em; color: var(--text-secondary);">
+<li>Mathematics for Intelligent Systems-III (23MAT204)</li>
+<li>Introduction to Material Informatics (23CHY115)</li>
+<li>Mathematics for Intelligent Systems-I (23MAT106)</li>
+<li>Research Methodology (PHY501)</li>
+</ul>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            View Course List →
+                        </div>
+</div>
+<!-- Card 2: Mentoring -->
+<div class="course-card" onclick="openTeachingSection('teaching-mentoring')">
+<div>
+<h4>🤝 Mentoring &amp; Supervision</h4>
+<p><strong>Role:</strong> Advisor &amp; Co-Supervisor</p>
+<p>Guiding research interns, Masters thesis students, and student collaborators.</p>
+<div style="margin-top:10px;">
+<span class="semester-tag">Interns</span>
+<span class="semester-tag">Thesis</span>
+</div>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            View Student Profiles →
+                        </div>
+</div>
+<!-- Card 3: Philosophy -->
+<div class="course-card" onclick="openTeachingSection('teaching-philosophy')">
+<div>
+<h4>🧠 Teaching Philosophy</h4>
+<p><strong>Approach:</strong> Interactive &amp; Generative</p>
+<p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            Read Methodology →
+                        </div>
+</div>
+</div>
+</div>
+ DETAILED VIEW: ACADEMIC COURSES 
+<div class="teaching-detail-view" id="teaching-courses">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>Courses Taught</h3>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Course Code</th>
+<th>Credit</th>
+<th>Hrs/Week</th>
+<th>Session</th>
+<th>Students</th>
+<th>TLP-Feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mathematics for Intelligent System - III (B.Tech in AI &amp; Data Science, Semester-III)</td>
+<td>3+3</td>
+<td>4+4</td>
+<td>2026-27 Odd</td>
+<td>65+66</td>
+<td>Ongoing</td>
+</tr>
+<tr>
+<td>Introduction to Material Informatics (B.Tech in AI &amp; Data Science, Semester-II)</td>
+<td>3+3</td>
+<td>4+4</td>
+<td>2025-26 Even</td>
+<td>64+65</td>
+<td>92.92%</td>
+</tr>
+<tr>
+<td>Mathematics for Intelligent System - I (B.Tech in AI &amp; Data Science, Semester-I)</td>
+<td>4+4</td>
+<td>5+5</td>
+<td>2025-26 Odd</td>
+<td>65+66</td>
+<td>93.11%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+ DETAILED VIEW: MENTORING 
+<div class="teaching-detail-view" id="teaching-mentoring">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>Research Supervision</h3>
+<div class="research-area-item">
+<strong>Research Interns</strong>
+<p>A. Jagdish, School of Physical Sciences, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+</div>
+<div class="research-area-item">
+<strong>Student Collaborators</strong>
+<p>A. Harish, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+<p>A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+<p>P. S. Mrudula, Department of AI, Amrita Vishwa Vidyapeetham (11/2025 onwards)</p>
+</div>
+<div class="research-area-item">
+<strong>Masters Thesis Co-supervision</strong>
+<p>Magnus Olsen, <em>Understanding Non-Newtonian Materials</em> <br/> (Supervisor: R. Cabriolu, Norwegian University of Science and Technology, since 08/2025)</p>
+</div>
+<div class="research-area-item">
+<strong>Supervision: Topical Projects</strong>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Subject Code</th>
+<th>Names</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<!-- 23CHY115 Projects -->
+<tr>
+<td>23CHY115</td>
+<td>Adithya R, Ashwin Krishna V, Madhan S, Nawin K.G</td>
+<td>Prediction of Molecular Solubility</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Mahalakshmi R, Venugopalan G, Ram Eswar P, Selva Vignesh V</td>
+<td>Semantic RAG with Specialized Embeddings</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>A. Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+<td>Bio-Match: Implant Material Recommender</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>P. Manvith, M. Venkat Naidu, S. Manoj Chowdary, B. Nakul</td>
+<td>Earthquake Probability &amp; Early Warning Analysis</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rithvik, Venkat, Abhishek, Grishmanth</td>
+<td>Forecasting Stress-Strain with Koopman</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rithvik Arulprakash, Harshith K. V, Vijayamurughan S, Vipin Sudhakar</td>
+<td>AI-Driven Dynamics in Active Glass</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Suthasrinitha K.G, Asmitha T, Moushika S, Mirudhunya V</td>
+<td>Governing Equations of Chaotic Systems</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>J. Harini, A. Harsha Sree, B. Pavani, P. Prasad</td>
+<td>Identifying Metastable States with HAVOK</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>B. Lalith, K. Swami, M. Pranavi, N. Manoj</td>
+<td>The Sandpile Model (BTW)</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>N.V. Varshitha, A. Jahnavi, T. Varshini, B. Sai Prasanna</td>
+<td>Polymer Property Prediction Simulator</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>V.R. Yasswant, Abishek S, Y. Sanmukha Sai, U. Sudheer</td>
+<td>Convex Hull for Alloy</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Hari Priya, Maha Sri, Neha, Prathibaa</td>
+<td>SINDy - Discovering Physics from Data</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Moorthy Neeraj, Mortha Sathwik, Surya Charan Teja, Pavan Kalyan S.V, Dhanush</td>
+<td>Lennard-Jones System for Glass Formation</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Sharvesh S. P, B. gurucharan, P. A. Bhavesh Jayan, Hashwin M</td>
+<td>The Butterfly Paradox: Chaos in MD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
+<td>Ocean Waves Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+<td>AI-Based Material Recommendation System</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>D. Durga Prasad Reddy, Mukesh Reddy, G. Yaswanth Reddy, K. Praneeth, Jasmitha</td>
+<td>Failure Prediction in Amorphous Solids</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>S. Sujitkumar, M. Hemanthkumar, H. Abinavkumaran, P.V. RithikRaj</td>
+<td>Molecular Phase Dynamics using Koopman DMD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Kirithik B, Sankardas K.K, V. Amruth, Vishnu Prasad P</td>
+<td>Discontinuous Molecular Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Adharsh K, Anu R, Sidharth M, Vethavarsini A</td>
+<td>Rare Event Acceleration with Koopman-GNN</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Akshara Sree R, Anirudh S Nair, Iniyaa Muthuselvan, Shashank Kannan</td>
+<td>The Battery Oracle</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Harish Kumaar S, S. Sri Raghav Vatsan, Dhruv Jayesh, Prithve KC</td>
+<td>Predicting Swarm Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Kanish Visyanth C, Kavipranidan J.T, Navaneet K.V, Nethaaji S</td>
+<td>Radiation Damage Prediction</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Revanth S, G Kamalesh, Jaswanth S, Elango Megabala G</td>
+<td>Graph Neural Networks for Molecules</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>K. Gayathri, P. Sri Harshini, M. Deekshitha, A. Gnana Amrutha</td>
+<td>AI-Based Inverse Material Selector</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rohith Meka, Kode Karrthik, Naram Divya Akhil, T. Yashwant</td>
+<td>Microstructure Evolution Prediction</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Meenakshi Bijoy, Neelanjana J Anil, Aryananda M, Ghadige Rithika</td>
+<td>Learning Swarm Behaviour</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>U. Raghu Nandan, S. Akshaya, Nikitha, Likhit K</td>
+<td>De-noising MD Data via Hankel SVD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>M. Harsha, M. Anudeep Reddy, P. Nihal Reddy, P. Naren</td>
+<td>Bayesian Optimization for Alloy Design</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>C. Sai Hardhik Reddy, R. Gagan Chowdhury, K. Charan Saatvikh Reddy, T. Sri Sai</td>
+<td>Deformation in Copper Crystals</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Srikar, Sumanth, Sai Sushanth, Sai Sathwik</td>
+<td>Perovskite Solar Cells</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Neha Saravanan, Y. Pranavi Reddy, T. Sai Varshitha</td>
+<td>Predicting Particle Mobility in Active Matter</td>
+</tr>
+<!-- 23MAT106 Projects -->
+<tr>
+<td>23MAT106</td>
+<td>Adithya R, Sai Prasanna B, Anudeep Reddy</td>
+<td>Stochastic Gradient Descent-Image Brightness Optimizer</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Abisheik S, Ashwin Krishna V, Nakul Sharvan B, Nawin K.G</td>
+<td>Interior Point Method for Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Raghuraman V, Vipin Sudhakar, Harshith KV, Rithvik Arul Prakash</td>
+<td>Optimization Using Sequential Quadratic Programming</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Harish Kumaar S, Prabakar, Venkat D, Prithve K C</td>
+<td>Minimizing 2-D Lennard-Jones System via Broyden’s Good Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>V R Yasswant, S. Sri Raghav Vatsan, Selva Vignesh V, Madhan S</td>
+<td>Augmented Lagrangian Method for Constrained Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P. Manvith Sharma, P. Grishmanth, P. Naren, S. Manoj</td>
+<td>Broyden’s Bad Method for Energy Minimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P. Sri Harshini, K. Gayathri, M. Deekshitha, Meenakshi Bijoy</td>
+<td>Movie Recommendation System</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>S Jaswant, Revanth S, Elango Megabala G, G Kamalesh</td>
+<td>Steepest Descent Algorithm</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Rohith Meka, Naram Divya Akhil, B. Sai Srikar, Danush Mani Yerramsetti</td>
+<td>Movie Recommendation Using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P.S. Sathwik, V.S. Amruth Chowdary, Kirithik B, Sankar Das K.K</td>
+<td>Computational Search for Glassy States using Conjugate Gradient</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>SV Pavan Kalyan, Neeraj M, C. Jasmitha, S. Akshaya, G. Rithika</td>
+<td>Audio Compression using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+<td>Energy Minimization of 2D Particle System via L-BFGS</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Mortha Sathwik, Surya Charan Tej B, AryaNanda M, Neelanjana J Anil</td>
+<td>Computer Glassy States via Newton-Raphson Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>T.V.S.S Phanindra Guptha, M. Vittal, K. Nanda Kishore, Athul V.R</td>
+<td>Lennard-Jones Potential via Nelder-Mead</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Y. Pranavi Reddy, Neha Saravanan, T. Sai Varshitha Reddy, K.B Nikitha Krishna</td>
+<td>Optimization of Lennard-Jones via PSO</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Nethaaji S, Navaneet KV, Kavipranidan JT, Kanish Visyanth C</td>
+<td>Computer Glassy States through Simulated Annealing</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Prasad Reddy, Sai Praneeth, Mukesh Reddy, Yaswanth Reddy</td>
+<td>Adopted Basis Newton-Raphson Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Kode Karrthik, Kella Likhith, T. Yaswanth Sai Vedadri, U. Raghu Nandan</td>
+<td>Glassy States by Instantaneous Quench (FIRE Algorithm)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>H. Abinavkumaran, S. Sujitkumar, M. Hemanthkumar, P.V. RithikRaj</td>
+<td>Stable Particle Arrangement via Barzilai-Borwein Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Vishnu Prasad, N Sai Sushanth Reddy, Hari Sumanth, Gnana Amrutha</td>
+<td>Glassy States via Instant Quenching</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Lalith Hari Sainath Reddy, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+<td>Powell’s Method for Energy Minimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Moushika S, Iniyaa Muthuselvan, Alamuru Harsha Sree, Akshara Sree R</td>
+<td>Levenberg-Marquardt Algorithm for Glass Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Suthasrinitha K G, Mirudhunya V, Asmitha T, Ram Eswar P</td>
+<td>RMS Propagation Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Pavani B, Maha Sri N, Neha S, Varshini T</td>
+<td>Basin Hopping Algorithm</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Ala Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+<td>Smart Diet Planner</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Lalith, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+<td>Powell’s Method of Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>K. Charan Saatvikh Reddy, R. Gagan Chowdary, C. Sai Hardhik Reddy, M. Venkat Naidu</td>
+<td>Adagrad Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Dhruv Jayesh Kansagara, Nihal Reddy P, T. Sri Sai, Y. Sanmukha Sai</td>
+<td>BFGS with Trust Region</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>J. Harini, Prathibaa, Mahalakshmi</td>
+<td>Image Compression using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Aadharsh, Anu R, Sidharth M, Vethavarsini A</td>
+<td>Glassy States via Instantaneous Quench (TNM)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal</td>
+<td>Smart Diet Planner (Revised)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Madhan Senthil Kumar, Selva Vignesh V, S. Sri Raghav Vatsan, V.R. Yasswant</td>
+<td>Augmented Lagrangian Method (ALM)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Sai Prasanna Anjaneyulu, M. Annudeep Reddy, R. Adithya</td>
+<td>Image Enhancement Using SGD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Mukesh Reddy, D. Durga Prasad Reddy, Yaswanth Reddy, K. Sai Praneeth</td>
+<td>Lennard-Jones via Adopted Basis Newton-Raphson</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Anirudh S Nair, Shashank Kannan, Vijayamurughan S, G. Venugopalan</td>
+<td>The Math Behind PageRank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+ DETAILED VIEW: PHILOSOPHY 
+<div class="teaching-detail-view" id="teaching-philosophy">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>My Teaching Philosophy</h3>
+<p>My approach to teaching is grounded in the belief that the interface between Physics and Artificial Intelligence provides a unique playground for intuitive understanding. I emphasize:</p>
+<ul>
+<li><strong>Active Learning:</strong> Moving beyond lectures to include live coding sessions, simulation workshops, and "playground" style problem solving.</li>
+<li><strong>Interdisciplinary Thinking:</strong> Encouraging students to see the mathematical structures common to both quantum mechanics and machine learning.</li>
+<li><strong>Project-Based Assessment:</strong> Evaluating understanding through the creation of tangible models and tools (like our Lab Products) rather than just rote memorization.</li>
+</ul>
+<p><em>"Education is not the learning of facts, but the training of the mind to think." - Albert Einstein</em></p>
+</div>
+</div>
+
+</template>
+  <script>
+(() => {
+  'use strict';
+
+  const PAGE_META = {
+    highlight: 'LAB 360° / OVERVIEW',
+    research: 'RESEARCH / DIRECTIONS',
+    publication: 'SCHOLARSHIP / PUBLICATIONS',
+    about: 'PEOPLE / ABOUT THE LAB',
+    teaching: 'EDUCATION / TEACHING',
+    outreach: 'COMMUNITY / OUTREACH',
+    latest: 'UPDATES / LATEST',
+    classroom: 'LEARNING / LIVE CLASSROOM',
+    products: 'INNOVATION / LAB PRODUCTS',
+    misc: 'NETWORK / PEOPLE & AWARDS',
+    playground: 'EXPERIMENT / PLAYGROUND'
+  };
+  const host = document.getElementById('page-host');
+  const nav = [...document.querySelectorAll('.nav-link')];
+  const kicker = document.getElementById('page-kicker-label');
+  let currentPage = '';
+
+  function pageFromHash() {
+    const id = location.hash.replace('#', '').trim();
+    return PAGE_META[id] ? id : 'highlight';
+  }
+
+  function updateNavigation(id) {
+    nav.forEach(a => {
+      const active = a.getAttribute('href') === `#${id}`;
+      a.classList.toggle('active', active);
+      if (active) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    kicker.textContent = PAGE_META[id] || PAGE_META.highlight;
+    document.title = id === 'highlight' ? 'Lab 360° | Physics, Artificial Intelligence & Data Science Research' : `${id.charAt(0).toUpperCase()+id.slice(1)} — Lab 360° | Physics + AI`;
+  }
+
+  async function loadPage(id) {
+    if (!PAGE_META[id]) id = 'highlight';
+    if (id === currentPage) return;
+    currentPage = id;
+    stopVisionCamera();
+    updateNavigation(id);
+    host.classList.add('is-loading');
+    try {
+      const template = document.getElementById(`section-template-${id}`);
+      if (!template) throw new Error(`Embedded section ${id} is missing`);
+      host.innerHTML = `<article class="page-content page-${id}">${template.innerHTML}</article>`;
+      host.classList.remove('is-loading');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      initialisePage(id);
+    } catch (error) {
+      host.innerHTML = `<section class="load-error"><h2>Page could not be loaded</h2><p>${error.message}</p><p>Check that the <code>sections/${id}.html</code> file is present in the repository.</p></section>`;
+      host.classList.remove('is-loading');
+    }
+  }
+
+  function initialisePage(id) {
+    if (id === 'classroom') initialiseClassroom();
+    if (id === 'teaching') initialiseTeaching();
+    if (id === 'highlight') initialiseVisionApplet();
+    // Make original inline page scripts execute after their fragment is inserted.
+    host.querySelectorAll('script').forEach(oldScript => {
+      const script = document.createElement('script');
+      [...oldScript.attributes].forEach(a => script.setAttribute(a.name, a.value));
+      script.textContent = oldScript.textContent;
+      oldScript.replaceWith(script);
+    });
+  }
+
+  // Browser-only vision demo. COCO-SSD detects and labels common objects;
+  // MobileSAM is linked separately for promptable object segmentation.
+  let visionStream = null;
+  let visionModelPromise = null;
+  function stopVisionCamera() {
+    if (visionStream) visionStream.getTracks().forEach(track => track.stop());
+    visionStream = null;
+  }
+  function loadVisionScript(src) {
+    return new Promise((resolve, reject) => {
+      const existing = [...document.scripts].find(script => script.src === src);
+      if (existing) { if (existing.dataset.loaded === 'true') resolve(); else { existing.addEventListener('load', resolve, {once:true}); existing.addEventListener('error', reject, {once:true}); } return; }
+      const script = document.createElement('script'); script.src = src; script.async = true;
+      script.onload = () => { script.dataset.loaded = 'true'; resolve(); };
+      script.onerror = () => reject(new Error('Could not load the browser vision library. Check your internet connection.'));
+      document.head.appendChild(script);
+    });
+  }
+  async function getVisionModel(status) {
+    if (!visionModelPromise) visionModelPromise = (async () => {
+      status.textContent = 'Loading the lightweight COCO-SSD model into this browser…';
+      await loadVisionScript('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js');
+      await loadVisionScript('https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js');
+      return await cocoSsd.load({base: 'mobilenet_v2'});
+    })();
+    try { return await visionModelPromise; } catch (error) { visionModelPromise = null; throw error; }
+  }
+  function initialiseVisionApplet() {
+    const video = document.getElementById('vision-video');
+    const overlay = document.getElementById('vision-overlay');
+    const start = document.getElementById('vision-start');
+    const capture = document.getElementById('vision-capture');
+    const detect = document.getElementById('vision-detect');
+    const status = document.getElementById('vision-status');
+    const placeholder = document.getElementById('vision-placeholder');
+    const liveTag = document.getElementById('vision-live-tag');
+    const results = document.getElementById('vision-results');
+    const snapshot = document.getElementById('vision-snapshot');
+    const download = document.getElementById('vision-download');
+    if (!video || !overlay || !start) return;
+    const ctx = overlay.getContext('2d');
+    const fitOverlay = () => {
+      if (!video.videoWidth || !video.videoHeight) return;
+      overlay.width = video.videoWidth; overlay.height = video.videoHeight;
+      ctx.clearRect(0, 0, overlay.width, overlay.height);
+    };
+    start.addEventListener('click', async () => {
+      try {
+        if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access requires HTTPS and a browser that supports camera input.');
+        if (visionStream) { stopVisionCamera(); video.srcObject = null; start.textContent = 'Start camera'; capture.disabled = true; detect.disabled = true; placeholder.hidden = false; liveTag.textContent = 'CAMERA OFF'; ctx.clearRect(0,0,overlay.width,overlay.height); status.textContent = 'Camera stopped.'; return; }
+        status.textContent = 'Requesting camera permission…';
+        visionStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1280},height:{ideal:720}},audio:false});
+        video.srcObject = visionStream; await video.play();
+        fitOverlay(); placeholder.hidden = true; liveTag.textContent = 'LIVE CAMERA';
+        start.textContent = 'Stop camera'; capture.disabled = false; detect.disabled = false;
+        status.textContent = 'Camera ready. Select Identify objects to run the model.';
+      } catch (error) { status.textContent = error.message || 'Unable to start camera. Check browser permissions.'; stopVisionCamera(); }
+    });
+    video.addEventListener('loadedmetadata', fitOverlay);
+    capture.addEventListener('click', () => {
+      if (!video.videoWidth) return;
+      snapshot.width = video.videoWidth; snapshot.height = video.videoHeight;
+      snapshot.getContext('2d').drawImage(video,0,0,snapshot.width,snapshot.height);
+      snapshot.toBlob(blob => { if (!blob) return; const url = URL.createObjectURL(blob); if (download.dataset.url) URL.revokeObjectURL(download.dataset.url); download.dataset.url = url; download.href = url; download.hidden = false; status.textContent = 'Frame captured. Download it to use the separate MobileSAM segmenter.'; },'image/png');
+    });
+    detect.addEventListener('click', async () => {
+      if (!visionStream || !video.videoWidth) return;
+      detect.disabled = true; results.innerHTML = '<span class="vision-muted">Analysing frame…</span>';
+      try {
+        const model = await getVisionModel(status);
+        const predictions = await model.detect(video, 20, 0.45);
+        fitOverlay(); ctx.clearRect(0,0,overlay.width,overlay.height);
+        results.innerHTML = '';
+        if (!predictions.length) { results.innerHTML = '<span class="vision-muted">No common objects detected. Try moving closer or improving the lighting.</span>'; status.textContent = 'Analysis complete. No objects detected.'; return; }
+        predictions.forEach(prediction => {
+          const [x,y,w,h] = prediction.bbox;
+          ctx.lineWidth = Math.max(2, overlay.width / 500); ctx.strokeStyle = '#b8f36b'; ctx.fillStyle = 'rgba(184,243,107,.10)';
+          ctx.fillRect(x,y,w,h); ctx.strokeRect(x,y,w,h);
+          const label = `${prediction.class} ${(prediction.score*100).toFixed(0)}%`;
+          ctx.font = `bold ${Math.max(13, overlay.width/65)}px sans-serif`;
+          const textWidth = ctx.measureText(label).width; const labelHeight = Math.max(22, overlay.width/38);
+          ctx.fillStyle = '#b8f36b'; ctx.fillRect(x,Math.max(0,y-labelHeight),textWidth+12,labelHeight);
+          ctx.fillStyle = '#09111f'; ctx.fillText(label,x+6,Math.max(15,y-6));
+          const chip = document.createElement('span'); chip.className = 'vision-result'; chip.textContent = label; results.appendChild(chip);
+        });
+        status.textContent = `Found ${predictions.length} object${predictions.length===1?'':'s'}. Inference completed in your browser.`;
+      } catch (error) { results.innerHTML = '<span class="vision-muted">Detection could not run. Please retry.</span>'; status.textContent = error.message || 'Vision model error.'; }
+      finally { detect.disabled = false; }
+    });
+  }
+
+  function initialiseClassroom() {
+    const prompt = document.getElementById('password-prompt-container');
+    const content = document.getElementById('classroom-content');
+    const form = document.getElementById('password-form');
+    const input = document.getElementById('passcode-input');
+    const error = document.getElementById('password-error-message');
+    if (!prompt || !content || !form) return;
+    const check = () => {
+      const granted = sessionStorage.getItem('classroomAccessGranted') === 'true';
+      prompt.hidden = granted;
+      content.classList.toggle('hidden', !granted);
+    };
+    check();
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (input.value.trim() === '23MAT106') {
+        sessionStorage.setItem('classroomAccessGranted', 'true');
+        error.textContent = '';
+        input.value = '';
+        check();
+      } else {
+        error.textContent = 'Incorrect passcode. Please try again.';
+        input.value = '';
+      }
+    });
+  }
+
+  function initialiseTeaching() {
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+  }
+
+  // Kept globally available because the original teaching/classroom cards call these.
+  window.openCourse = function(courseId) {
+    const dashboard = document.getElementById('classroom-dashboard');
+    if (dashboard) dashboard.style.display = 'none';
+    host.querySelectorAll('.course-detail-view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(courseId);
+    if (target) target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.closeCourse = function() {
+    host.querySelectorAll('.course-detail-view').forEach(v => v.classList.remove('active'));
+    const dashboard = document.getElementById('classroom-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+  };
+  window.openTeachingSection = function(sectionId) {
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'none';
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(sectionId);
+    if (target) target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.closeTeachingSection = function() {
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+  };
+
+  nav.forEach(link => link.addEventListener('click', event => {
+    const id = link.getAttribute('href').slice(1);
+    if (!PAGE_META[id]) return;
+    event.preventDefault();
+    if (location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+    loadPage(id);
+    document.getElementById('secondary-nav').classList.remove('open');
+  }));
+  window.addEventListener('popstate', () => loadPage(pageFromHash()));
+  window.addEventListener('hashchange', () => loadPage(pageFromHash()));
+
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('secondary-nav');
+    const open = menu.classList.toggle('open');
+    document.getElementById('menu-toggle').setAttribute('aria-expanded', String(open));
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  loadPage(pageFromHash());
+
+  // PWA install flow.
+  const installButton = document.getElementById('install-app');
+  let deferredPrompt = null;
+  const status = document.createElement('span');
+  status.id = 'install-status';
+  status.setAttribute('role', 'status');
+  installButton.after(status);
+  const isStandalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const showStatus = message => { status.textContent = message; status.classList.add('show'); };
+  if (isStandalone()) installButton.hidden = true;
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault(); deferredPrompt = event;
+  });
+  installButton.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const choice = await deferredPrompt.userChoice;
+      showStatus(choice?.outcome === 'accepted' ? 'Installation started.' : 'Installation cancelled.');
+      deferredPrompt = null;
+    } else {
+      showStatus(/iphone|ipad|ipod/i.test(navigator.userAgent)
+        ? 'On iPhone/iPad: use Share → Add to Home Screen.'
+        : 'Use your browser menu → Install app / Add to Home screen.');
+    }
+  });
+  window.addEventListener('appinstalled', () => { installButton.hidden = true; showStatus('App installed.'); });
+  if ('serviceWorker' in navigator && isSecureContext) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(console.warn));
+  }
+})();
+
+  </script>
+</body>
+</html>
