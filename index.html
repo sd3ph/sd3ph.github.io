@@ -206,15 +206,45 @@ tr:hover td{background:rgba(255,255,255,.025)}
 
 
 
-/* Lab 360° hero science-bubble game — scoped to the overview panel */
-.vision-lab{margin:0 0 28px;padding:clamp(16px,2.8vw,28px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(18,36,58,.97),rgba(7,17,31,.99));box-shadow:var(--shadow)}
-.vision-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{margin:7px 0 9px;padding:0;border:0;font-size:clamp(1.45rem,3vw,2.15rem)}.vision-heading p{max-width:720px;margin:0}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.15em;color:var(--accent-2)}
-.vision-chip{flex:none;padding:7px 10px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:var(--accent);font:9px "Space Mono",monospace;letter-spacing:.08em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-.vision-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.85fr);gap:16px}.vision-view{position:relative;min-height:300px;aspect-ratio:16/10;overflow:hidden;border:1px solid rgba(93,224,207,.24);border-radius:15px;background:radial-gradient(ellipse at 50% 45%,#102c43 0%,#061322 62%,#020812 100%)}.vision-view video,.vision-view canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.vision-view canvas{pointer-events:none}.vision-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;color:var(--muted);text-align:center}.vision-placeholder small{max-width:300px;color:var(--subtle);line-height:1.6}.vision-crosshair{font-size:42px;color:var(--accent-2)}.vision-live-tag{position:absolute;top:12px;left:12px;padding:5px 8px;border-radius:6px;background:rgba(3,9,18,.78);color:var(--muted);font:9px "Space Mono",monospace;letter-spacing:.1em}
-.vision-controls{display:flex;flex-direction:column;gap:11px;min-width:0}.vision-actions{display:flex;flex-wrap:wrap;gap:7px}.vision-btn{padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel-2);color:var(--ink);font-size:.78rem;font-weight:700;cursor:pointer}.vision-btn:disabled{opacity:.38;cursor:not-allowed}.vision-btn.vision-primary{background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b;border:0}.vision-status{min-height:48px;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.025);color:var(--muted);font-size:.76rem;line-height:1.55}.vision-scoreline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid rgba(184,243,107,.2);border-radius:10px;background:rgba(184,243,107,.055)}.vision-scoreline span{color:var(--muted);font-size:.72rem}.vision-scoreline strong{color:var(--accent);font:700 1.35rem "Space Mono",monospace}.vision-topic{min-height:112px;padding:13px;border:1px solid rgba(93,224,207,.2);border-radius:11px;background:rgba(93,224,207,.045)}.vision-topic small{display:block;margin-bottom:6px;color:var(--accent-2);font:9px "Space Mono",monospace;letter-spacing:.12em}.vision-topic strong{display:block;font-size:.94rem;line-height:1.35}.vision-topic p{margin:6px 0 0;color:var(--muted);font-size:.74rem;line-height:1.5}.vision-howto{margin:0;color:var(--subtle);font-size:.72rem;line-height:1.6}.vision-footnote{margin-top:13px;color:var(--subtle);font-size:.68rem;line-height:1.5}
-@media(max-width:760px){.vision-workspace{grid-template-columns:1fr}.vision-view{min-height:220px;aspect-ratio:4/3}.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}}
+
+/* Lab 360° Overview — Creative Intelligence rotating editorial spotlight */
+.vision-lab{position:relative;margin:0 0 30px;padding:clamp(18px,3vw,30px);overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:radial-gradient(ellipse at 7% 0%,rgba(255,107,138,.14),transparent 34%),radial-gradient(ellipse at 100% 100%,rgba(117,224,193,.13),transparent 36%),linear-gradient(135deg,#111a2a,#111629 58%,#1b172b);box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.vision-heading{position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{max-width:850px;margin:8px 0 10px;padding:0;border:0;font:800 clamp(1.65rem,3.6vw,2.8rem)/1.05 "Manrope",sans-serif;letter-spacing:-.055em;color:#f5f4f0}.vision-heading p{max-width:780px;margin:0;color:#b8c5d2;font-size:clamp(.85rem,1.3vw,1rem);line-height:1.7}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.vision-chip{flex:none;padding:8px 11px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:#b8f36b;font:9px "Space Mono",monospace;letter-spacing:.1em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#b8f36b;box-shadow:0 0 10px #b8f36b}
+.lab-ad-stage{position:relative;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);align-items:center;gap:clamp(18px,4vw,54px);min-height:285px;padding:clamp(16px,3vw,28px);overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:19px;background:linear-gradient(105deg,rgba(255,255,255,.045),rgba(255,255,255,.012));isolation:isolate}
+.lab-ad-art{position:relative;min-height:235px;display:grid;place-items:center;overflow:hidden;border-radius:14px;background:radial-gradient(circle at 50% 48%,var(--ad-glow,rgba(93,224,207,.22)),transparent 62%),linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.005))}
+.lab-ad-grid{position:absolute;inset:0;opacity:.19;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse,#000,transparent 76%)}
+.lab-ad-orbit{position:absolute;width:190px;height:190px;border:1px solid var(--ad-accent,rgba(117,224,193,.55));border-radius:42% 58% 57% 43% / 45% 44% 56% 55%;animation:lab-ad-rotate 18s linear infinite;box-shadow:0 0 35px var(--ad-glow,rgba(93,224,207,.15)),inset 0 0 24px var(--ad-glow,rgba(93,224,207,.12))}
+.lab-ad-orbit.orbit-b{width:145px;height:145px;border-style:dashed;transform:rotate(45deg);animation:lab-ad-rotate 24s linear infinite reverse;opacity:.7}
+.lab-ad-core{position:relative;z-index:1;width:94px;height:94px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:28px;background:linear-gradient(145deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#10182a;font-size:3.1rem;box-shadow:0 0 65px var(--ad-glow,rgba(93,224,207,.45)),inset 0 1px rgba(255,255,255,.7);transform:rotate(-9deg);animation:lab-ad-float 5s ease-in-out infinite}
+.lab-ad-float{position:absolute;z-index:2;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.28);border-radius:13px;background:rgba(9,17,31,.75);backdrop-filter:blur(8px);color:#fff;font:700 14px "Space Mono";box-shadow:0 8px 25px rgba(0,0,0,.18)}.float-a{top:15%;left:16%;color:var(--ad-accent-2,#ffc857)}.float-b{right:13%;top:24%;color:#ffc857;font-size:22px}.float-c{bottom:14%;left:23%;color:#ff9caf;font-size:25px}.float-d{bottom:18%;right:17%;color:#8bdccc}
+@keyframes lab-ad-rotate{to{transform:rotate(360deg)}}@keyframes lab-ad-float{0%,100%{transform:translateY(0) rotate(-9deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.lab-ad-copy{position:relative;z-index:1;padding:4px 0 22px}.lab-ad-category{display:block;margin-bottom:11px;color:var(--ad-accent-2,#ffc857);font:9px "Space Mono",monospace;letter-spacing:.15em}.lab-ad-copy h3{max-width:650px;margin:0 0 12px;color:#f5f4f0;font:800 clamp(1.5rem,3.2vw,2.55rem)/1.08 "Manrope",sans-serif;letter-spacing:-.05em}.lab-ad-copy p{max-width:620px;margin:0;color:#b6c3d1;font-size:.9rem;line-height:1.75}.lab-ad-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.lab-ad-tags span{padding:6px 9px;border:1px solid rgba(255,255,255,.15);border-radius:30px;color:#b6c9d1;font:8px "Space Mono";letter-spacing:.1em;background:rgba(255,255,255,.035)}
+.lab-ad-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lab-ad-cta{display:inline-flex;align-items:center;gap:16px;padding:11px 15px;border-radius:9px;background:linear-gradient(100deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#111a2a!important;font-size:.78rem;font-weight:800;text-decoration:none!important;box-shadow:0 7px 25px var(--ad-glow,rgba(93,224,207,.18))}.lab-ad-cta span{font-size:1rem}.lab-ad-refresh{padding:9px 0;border:0;background:transparent;color:#b8f36b;font-size:.75rem;font-weight:700;cursor:pointer}.lab-ad-pagination{position:absolute;right:clamp(16px,3vw,28px);bottom:13px;left:clamp(16px,3vw,28px);display:flex;justify-content:space-between;gap:10px;color:#72849a;font:8px "Space Mono";letter-spacing:.1em}
+.lab-ad-stage.ad-enter .lab-ad-copy{animation:lab-ad-in .55s ease both}.lab-ad-stage.ad-enter .lab-ad-art{animation:lab-ad-in .65s ease both}@keyframes lab-ad-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}.lab-ad-stage{grid-template-columns:1fr;gap:12px}.lab-ad-art{min-height:190px}.lab-ad-copy{padding-bottom:25px}.lab-ad-orbit{width:155px;height:155px}.lab-ad-orbit.orbit-b{width:120px;height:120px}.lab-ad-core{width:76px;height:76px;font-size:2.5rem}.lab-ad-pagination{font-size:7px}}
 
 
+
+
+/* PLAYGROUND — Gesture Atelier (scoped; other pages remain untouched) */
+.page-playground{width:100%;max-width:none}
+.atelier-page{--at-rose:#ff6b8a;--at-yellow:#ffc857;--at-mint:#75e0c1;--at-lilac:#c49aff;position:relative;overflow:hidden;padding:clamp(18px,3.5vw,42px);border:1px solid rgba(255,255,255,.11);border-radius:30px;background:radial-gradient(ellipse at 8% 10%,rgba(255,107,138,.12),transparent 32%),radial-gradient(ellipse at 90% 5%,rgba(117,224,193,.12),transparent 30%),linear-gradient(145deg,#111a2a,#101426 60%,#19152a);box-shadow:0 30px 90px rgba(0,0,0,.25)}
+.atelier-page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:radial-gradient(rgba(255,255,255,.45) .7px,transparent .7px);background-size:19px 19px;mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.atelier-topline,.atelier-hero,.atelier-studio,.atelier-footer{position:relative;z-index:1}
+.atelier-topline{display:flex;justify-content:space-between;gap:12px;align-items:center}.atelier-kicker,.atelier-section-tag,.atelier-overline{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.atelier-live{font:9px "Space Mono",monospace;letter-spacing:.12em;color:#b7c6d5}.atelier-live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#75e0c1;box-shadow:0 0 12px #75e0c1;margin-right:7px}
+.atelier-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);align-items:center;gap:24px;padding:clamp(32px,6vw,72px) 0 38px}.atelier-overline{color:#ffc857;margin:0 0 12px}.atelier-hero h1{font:800 clamp(2.5rem,6.2vw,5.3rem)/.98 "Manrope",sans-serif;letter-spacing:-.065em;margin:0;max-width:760px}.atelier-hero h1 em{font-style:normal;background:linear-gradient(100deg,#ff9caf,#ffc857 45%,#85e6d1 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.atelier-intro{max-width:670px;color:#b5c1d0;font-size:clamp(.94rem,1.4vw,1.08rem);line-height:1.8;margin:19px 0 22px}
+.atelier-prompt{max-width:620px;padding:15px 18px;border:1px solid rgba(255,200,87,.24);border-radius:15px;background:linear-gradient(100deg,rgba(255,200,87,.09),rgba(255,107,138,.04))}.atelier-prompt-label{display:block;color:#ffc857;font:9px "Space Mono",monospace;letter-spacing:.14em;margin-bottom:6px}.atelier-prompt strong{display:block;color:#fff0d5;font:700 1rem "Manrope",sans-serif}.atelier-text-btn{padding:7px 0 0;border:0;background:none;color:#85e6d1;font-size:.76rem;font-weight:700;cursor:pointer}
+.atelier-orbit{position:relative;width:min(100%,310px);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,rgba(255,200,87,.12),rgba(255,107,138,.07) 42%,transparent 70%);display:grid;place-items:center}.atelier-orbit-ring{position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%;inset:7%}.ring-two{inset:20%;border-style:dashed;animation:atelier-spin 35s linear infinite}.ring-one{border-color:rgba(117,224,193,.3);animation:atelier-spin 48s linear infinite reverse}.atelier-orbit-shape{position:absolute;filter:drop-shadow(0 0 18px currentColor)}.shape-star{top:10%;left:47%;font-size:2.8rem;color:#ffc857}.shape-flower{right:7%;top:40%;font-size:3.4rem;color:#ff8ca7}.shape-circle{left:13%;bottom:18%;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8c9eff,#e6a8ff);box-shadow:0 0 35px #8c9eff}.shape-spark{right:20%;bottom:12%;font-size:2rem;color:#75e0c1}.atelier-orbit-word{text-align:center;font:700 11px/1.8 "Space Mono",monospace;letter-spacing:.2em;color:#d8e7e6}
+@keyframes atelier-spin{to{transform:rotate(360deg)}}
+.atelier-studio{padding:clamp(15px,2.4vw,28px);border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(5,11,23,.62);box-shadow:inset 0 1px rgba(255,255,255,.04)}.atelier-studio-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:17px}.atelier-studio-head h2{margin:5px 0 0;font:700 clamp(1.25rem,2.6vw,1.8rem) "Manrope";letter-spacing:-.04em}.atelier-tools{display:flex;gap:6px;flex-wrap:wrap}.atelier-tool{padding:8px 12px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:rgba(255,255,255,.035);color:#b9c5d2;font-size:.75rem;cursor:pointer}.atelier-tool.active{background:rgba(117,224,193,.15);border-color:rgba(117,224,193,.45);color:#9af0d9}
+.atelier-workbench{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:14px}.atelier-canvas-wrap{position:relative;min-height:430px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:17px;background-color:#171d31;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),radial-gradient(ellipse at 50% 40%,#252944,#121a2b 75%);background-size:32px 32px,32px 32px,auto}.atelier-canvas-wrap canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}.atelier-canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:22px;text-align:center;pointer-events:none;color:#aab8ca}.atelier-canvas-hint span{font-size:2.4rem;color:#ffc857}.atelier-canvas-hint strong{font:700 1.05rem "Manrope";color:#e9edf4}.atelier-canvas-hint small{max-width:340px;font-size:.78rem;line-height:1.6}.atelier-canvas-badge{position:absolute;top:13px;left:14px;padding:6px 9px;border:1px solid rgba(255,255,255,.13);border-radius:7px;background:rgba(8,13,26,.65);color:#aebbd0;font:8px "Space Mono";letter-spacing:.12em;pointer-events:none}
+.atelier-side{display:flex;flex-direction:column;gap:12px;min-width:0}.atelier-camera-card,.atelier-guide,.atelier-director{padding:14px;border:1px solid rgba(255,255,255,.11);border-radius:15px;background:rgba(255,255,255,.035)}.atelier-side-title{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.atelier-side-title span,.atelier-side-title b,.atelier-director small{font:9px "Space Mono";letter-spacing:.1em;color:#8bdccc}.atelier-side-title b{color:#9aaabd}.atelier-camera-preview{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#0a1020}.atelier-camera-preview video,.atelier-camera-preview canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.atelier-camera-preview video{transform:scaleX(-1)}.atelier-camera-preview canvas{pointer-events:none}.atelier-camera-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#71839a;text-align:center}.atelier-camera-placeholder span{font-size:2rem;color:#75e0c1}.atelier-camera-placeholder small{font-size:.7rem}.atelier-camera-actions{display:flex;gap:7px;margin-top:9px}.atelier-action{padding:9px 12px;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:rgba(255,255,255,.05);color:#e4eaf0;font-size:.72rem;font-weight:700;cursor:pointer}.atelier-action.primary{border:0;background:linear-gradient(110deg,#ffc857,#ff9caf);color:#251927}.atelier-action:disabled{opacity:.4;cursor:not-allowed}.atelier-camera-note{margin:8px 0 0;color:#8494a9;font-size:.67rem;line-height:1.5}
+.atelier-guide .atelier-section-tag{display:block;margin-bottom:8px}.atelier-gesture-row{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}.atelier-gesture-row:last-child{border-bottom:0}.atelier-gesture-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(117,224,193,.09);font-size:1.2rem}.atelier-gesture-row strong,.atelier-gesture-row small{display:block}.atelier-gesture-row strong{font-size:.76rem;color:#edf3f5}.atelier-gesture-row small{font-size:.66rem;color:#91a0b4}
+.atelier-director{display:flex;align-items:flex-start;gap:10px;background:linear-gradient(110deg,rgba(255,107,138,.08),rgba(117,224,193,.06))}.atelier-director-dot{flex:none;width:8px;height:8px;margin-top:5px;border-radius:50%;background:#ffc857;box-shadow:0 0 12px #ffc857}.atelier-director small{display:block;margin-bottom:5px;color:#ffc857}.atelier-director strong{display:block;color:#cbd6e3;font-size:.74rem;font-weight:500;line-height:1.5}
+.atelier-bottom-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.025)}.atelier-palette,.atelier-canvas-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.atelier-palette>span{margin-right:4px;color:#8fa0b5;font:8px "Space Mono";letter-spacing:.1em}.atelier-swatch{width:23px;height:23px;border:2px solid transparent;border-radius:50%;background:var(--swatch);cursor:pointer;box-shadow:0 0 0 1px rgba(255,255,255,.15)}.atelier-swatch.selected{outline:2px solid white;outline-offset:3px}.atelier-score{display:flex;align-items:center;gap:7px;margin-right:5px}.atelier-score b{font:700 1.2rem "Space Mono";color:#ffc857}.atelier-score small{font:8px "Space Mono";letter-spacing:.08em;color:#8fa0b5}
+.atelier-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(30px,5vw,54px) 4px 8px}.atelier-footer h2{margin:8px 0 6px;font:800 clamp(1.45rem,3vw,2.3rem) "Manrope";letter-spacing:-.045em}.atelier-footer p{max-width:620px;margin:0;color:#aab8c8;font-size:.87rem}.atelier-footer-mark{flex:none;text-align:right;font:800 clamp(1.25rem,3vw,2.1rem)/1.05 "Manrope";letter-spacing:-.06em;color:#dce8eb}.atelier-footer-mark em{font-style:normal;color:#ff9caf}
+@media(max-width:850px){.atelier-hero{grid-template-columns:1fr}.atelier-orbit{width:210px;max-width:55vw}.atelier-workbench{grid-template-columns:1fr}.atelier-side{display:grid;grid-template-columns:1fr 1fr}.atelier-director{grid-column:1/-1}.atelier-camera-preview{aspect-ratio:16/8}.atelier-canvas-wrap{min-height:360px}}
+@media(max-width:600px){.page-playground{width:100%}.atelier-page{padding:17px;border-radius:20px}.atelier-topline{align-items:flex-start;flex-direction:column}.atelier-hero{padding:35px 0 25px}.atelier-orbit{width:175px}.atelier-studio-head{align-items:flex-start;flex-direction:column}.atelier-tools{width:100%}.atelier-tool{flex:1}.atelier-canvas-wrap{min-height:310px}.atelier-side{display:flex}.atelier-bottom-bar{align-items:flex-start}.atelier-palette{width:100%}.atelier-canvas-actions{width:100%}.atelier-footer{align-items:flex-start;flex-direction:column}.atelier-footer-mark{text-align:left}}
 </style>
 </head>
 <body>
@@ -909,94 +939,104 @@ tr:hover td{background:rgba(255,255,255,.025)}
 
 </template>
 <template id="section-template-highlight">
-<h1>Lab 360°: Physics, Artificial Intelligence &amp; Data Science Research</h1>
-<p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and learning initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We combine fundamental physics, artificial intelligence, machine learning and data science to investigate complex natural and artificial systems through computational and data-driven approaches.</p>
-<section class="vision-lab" id="vision-lab" aria-label="Lab 360 interactive science bubble challenge">
+<h1>Lab 360° — Creative Intelligence for a Complex World</h1>
+<p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and innovation initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We bring together physics, artificial intelligence, machine learning and data science to understand complex systems and translate scientific insight into useful computational methods, prototypes and collaborative opportunities.</p>
+<section class="vision-lab" id="vision-lab" aria-label="Lab 360 creative intelligence spotlight">
   <div class="vision-heading">
     <div>
-      <span class="vision-eyebrow">LAB 360° / THE SCIENCE SPARK</span>
-      <h2>Pop a bubble. Spark an idea.</h2>
-      <p>Step into the Lab 360° challenge. Follow a floating bubble, pinch it with your fingers, and discover a fascinating question from the natural world. Which question would you love to explore with AI?</p>
+      <span class="vision-eyebrow">LAB 360° / CREATIVE INTELLIGENCE FOR TECHZIES</span>
+      <h2 id="lab-ad-headline">What if your next big idea could change the world?</h2>
+      <p id="lab-ad-subtitle">Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.</p>
     </div>
-    <span class="vision-chip"><i></i> PLAY · EXPLORE · IMAGINE</span>
+    <span class="vision-chip"><i></i> IDEAS IN MOTION</span>
   </div>
-  <div class="vision-workspace">
-    <div class="vision-view">
-      <video id="vision-video" autoplay playsinline muted aria-label="Live camera view for the hand gesture game"></video>
-      <canvas id="vision-overlay" aria-hidden="true"></canvas>
-      <div class="vision-placeholder" id="vision-placeholder">
-        <span class="vision-crosshair">✧</span>
-        <strong>Your science bubbles are waiting</strong>
-        <small>Start the game, allow camera access, then bring one hand into view. Pinch your thumb and index finger on a bubble to pop it.</small>
-      </div>
-      <span class="vision-live-tag" id="vision-live-tag">GAME READY</span>
+  <div class="lab-ad-stage" id="lab-ad-stage">
+    <div class="lab-ad-art" aria-hidden="true">
+      <div class="lab-ad-orbit orbit-a"></div><div class="lab-ad-orbit orbit-b"></div>
+      <div class="lab-ad-core"><span id="lab-ad-symbol">✳</span></div>
+      <span class="lab-ad-float float-a">AI</span><span class="lab-ad-float float-b">✦</span>
+      <span class="lab-ad-float float-c">∞</span><span class="lab-ad-float float-d">01</span>
+      <div class="lab-ad-grid"></div>
     </div>
-    <div class="vision-controls">
-      <div class="vision-actions">
-        <button type="button" class="vision-btn vision-primary" id="vision-start">Start the game</button>
-        <button type="button" class="vision-btn" id="vision-flip" disabled>Switch camera</button>
+    <div class="lab-ad-copy">
+      <span class="lab-ad-category" id="lab-ad-category">THE NEXT FRONTIER · AI + SCIENCE</span>
+      <h3 id="lab-ad-title">From questions to possibilities.</h3>
+      <p id="lab-ad-description">We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.</p>
+      <div class="lab-ad-tags" id="lab-ad-tags"><span>EXPLORE</span><span>EXPERIMENT</span><span>CREATE</span></div>
+      <div class="lab-ad-actions">
+        <a class="lab-ad-cta" id="lab-ad-link" href="#research">Explore the Lab <span>↗</span></a>
+        <button type="button" class="lab-ad-refresh" id="lab-ad-refresh" aria-label="Show another Lab 360 feature">Another spark ↻</button>
       </div>
-      <div class="vision-scoreline"><span>SCIENCE SPARKS COLLECTED</span><strong id="vision-score">0</strong></div>
-      <div class="vision-topic" aria-live="polite">
-        <small id="vision-topic-label">YOUR NEXT BIG QUESTION</small>
-        <strong id="vision-topic-title">Can AI help us understand the secrets of nature?</strong>
-        <p id="vision-topic-desc">Burst a bubble to reveal a fresh idea from physics, biology, climate, space and beyond.</p>
-      </div>
-      <div class="vision-status" id="vision-status" role="status" aria-live="polite">Ready when you are. Camera access begins only when you press Start the game.</div>
-      <p class="vision-howto"><strong>How to play:</strong> Hold your hand up to the camera. Move your index fingertip onto the glowing bubble, then gently pinch your thumb and index finger together. Each pop reveals a new science question.</p>
     </div>
+    <div class="lab-ad-pagination"><span id="lab-ad-count">01 / 08</span><span>EVERY VISIT. A NEW PERSPECTIVE.</span></div>
   </div>
-  <div class="vision-footnote">A playful invitation to turn curiosity into discovery. Your camera feed is used in this browser session and is not sent to Lab 360° servers.</div>
 </section>
-<h2>Lab 360° | The Nexus of Data-driven Creativity</h2>
-<p>Welcome to <b>Lab 360°</b>—a crucible of innovation where abstract contemplation is transmuted into purposeful action, and action into world-shaping realities. Embracing an omnidirectional perspective, we traverse the physical continuum from the quantum choreography of molecular assemblies to the subterranean fury of seismic faults, and from automated kinematic systems to predictive climate modeling. We are driven by a relentless thirst for data-fueled discovery, translating high-dimensional entropy into elegant mathematical models that power next-generation healthcare, molecular intelligence, and sustainable societal enterprise.</p>
-<ul>
-<li><b>Omnidirectional Data Exploration:</b> Dissolving conventional academic silos, our researchers synthesize insights across disparate domains—from the precision mechanics of athletic motion to continental-scale environmental rhythms—extracting harmony from complex data streams.</li>
-<li><b>Molecular Intelligence &amp; Clinical Horizons:</b> Orchestrating deep learning with biophysical intuition, we decode the architecture of macromolecular interactions, catalyzing breakthroughs in targeted therapeutics and precision diagnostics.</li>
-<li><b>Planetary Dynamics &amp; Structural Resilience:</b> Fusing fundamental physics with machine intelligence to anticipate catastrophic structural shifts and geodynamic hazards, fortifying communities against nature’s most extreme events.</li>
-<li><b>Deep Tech for Humanitarian Enterprise:</b> We treat discovery not merely as an intellectual pursuit, but as a moral imperative—incubating agile, socially conscious ventures that transform laboratory breakthroughs into enduring global value.</li>
-</ul>
-<p>Though we are new, Lab 360° is guided by an ambitious mandate: to empower a cadre of forward-looking thinkers equipped to craft the technological paradigms of tomorrow.</p>
-<h2>Lab 360° has a heart of Physics</h2>
-<p>Positioned at the luminous crossroads of non-equilibrium physics and machine intelligence, we uncover the universal principles that govern intricate, multi-scale systems. We approach artificial intelligence not merely as an engine for empirical prediction, but as an epistemic prism—a tool to reveal the latent mathematical harmonies of the cosmos. Our central research thrusts comprise:</p>
-<ul>
-<li><b>Collective Intelligence in Natural and Synthetic Swarms:</b> How do autonomous entities—from avian murmurations and cellular monolayers to coordinated robotic swarms—manifest collective genius from minimal local rules? We investigate the physical principles of emergence to engineer resilient, self-organizing synthetic systems.</li>
-<li><b>Physics of Living Matter &amp; Morphogenesis:</b> Viewing biological assemblies through the lens of active matter, we illuminate the biomechanical forces orchestrating tissue repair, pattern formation, and embryonic growth, charting new possibilities for regenerative bioengineering.</li>
-<li><b>Mechanics of Disordered &amp; Amorphous Solids:</b> Defying crystalline predictability, glasses and granular media conceal subtle preludes to catastrophic failure. We develop physics-informed algorithms capable of detecting the structural precursors to rupture, pioneering the design of ultra-durable, damage-tolerant materials.</li>
-<li><b>Interpretable Machine Intelligence for Fundamental Discovery:</b> Transcending opaque black-box models, our neural architectures are sculpted to distill sparse, transparent governing equations directly from raw observation, revealing fundamental physical laws that ignite bold scientific hypotheses.</li>
-</ul>
-<p>Flourishing at the vibrant intersection of theoretical elegance and experimental craftsmanship, we cultivate an intellectual commons where fearless curiosity gives rise to enduring innovation.</p>
+
+<h2>A research platform built around one idea: connect disciplines, create impact</h2>
+<p>Many important challenges sit between established fields. Lab 360° works across those boundaries—using the principles of physics, the reach of data science and the capabilities of AI to study systems that are dynamic, interconnected and difficult to predict. Our approach combines fundamental questions with computational experimentation, interpretable modelling and opportunities for real-world collaboration.</p>
+
 <div class="section">
-<h3>🌟 Highlights</h3>
-<ul>
-<li><strong>Research Interests:</strong> Investigating the dynamics of natural and artificial complex systems, with a focus on out-of-equilibrium soft, glassy, and active matter.</li>
-<li><strong>Physics at the Interface of AI:</strong> By training models from physical systems, we integrate fundamental physical laws into novel AI models. This involves using high-performance computing and explainable AI to decode molecular information processing, predict material failure, and attempts to understand emergent behaviors in living and artificial systems.</li>
-<li><strong>Teaching and Mentoring:</strong> Engaged in teaching courses such as Mathematics for AI and Intelligent Systems, and mentoring research interns and graduate students.</li>
-</ul>
-</div>
-<div class="section">
-<h2>🌟 Join Us </h2>
-<div class="advertisement">
-<h1>Join Us to Innovate</h1>
-<p> We are seeking creative individuals to join our lab to co-create the future.</p>
-<p>Whether you are an established researcher, a budding scientist, or a creative force eager to collaborate, we have a place for you. We are actively seeking passionate individuals for:</p>
-<div class="opportunities">
-<div class="opportunity">Collaborative Projects</div>
-<div class="opportunity">Internship Opportunities</div>
-<div class="opportunity">PhD Positions</div>
-<div class="opportunity">Postdoctoral Fellowships</div>
-</div>
-<p>Find your chance to work on projects that matter, surrounded by a team to pushing the boundaries of what's possible. We believe in the power of diversity and the magic that happens when generative minds connect.</p>
-<div class="call-to-action">
-<h2 style="justify-content: center; border: none;">Ready to answer the call?</h2>
-<p>We want to hear from you: your vision and plans with us.<br/>Email your one-page CV, a well supported SOP</p>
-<a class="email-link" href="mailto:sumandutta.avvcb@gmail.com">Submit</a>
-</div>
-<p style="margin-top: 25px; font-style: italic; font-size: 0.9em;">Let's build the future together.</p>
-</div>
-<img alt="Join Us Graphic" src="joinus.png" style="width: 100%; margin-top: 15px; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+  <h3>Why Lab 360°</h3>
+  <ul>
+    <li><strong>Physics-informed intelligence:</strong> We use physical principles to guide data-driven models, with the aim of making predictions more interpretable, robust and scientifically meaningful.</li>
+    <li><strong>Research across scales:</strong> Our interests span molecular and material systems, living matter, collective behaviour, fluid dynamics, environmental processes and other complex systems.</li>
+    <li><strong>From insight to application:</strong> We seek pathways from scientific understanding to computational tools, proof-of-concept prototypes and collaborative applications.</li>
+    <li><strong>People and capability building:</strong> Teaching, mentoring and interdisciplinary projects help develop researchers and technologists who can work confidently across science and AI.</li>
+  </ul>
 </div>
 
+<h2>Our scientific foundation: Physics meets AI</h2>
+<p>Physics provides a powerful language for understanding how systems evolve. AI offers new ways to analyse data, identify patterns and build predictive models. At Lab 360°, we bring these perspectives together—not to replace scientific reasoning with black-box prediction, but to develop methods that can reveal mechanisms, test hypotheses and support discovery.</p>
+<ul>
+  <li><strong>Complex and active matter:</strong> Understanding collective motion, self-organisation and emergent behaviour in natural and synthetic systems, from biological assemblies to coordinated swarms.</li>
+  <li><strong>Soft, glassy and disordered materials:</strong> Studying structural changes, relaxation and the precursors of failure in materials whose behaviour is difficult to capture with conventional models.</li>
+  <li><strong>Data-driven physics:</strong> Developing approaches such as reduced-order modelling, dynamical-systems learning and interpretable machine learning to extract useful structure from observations and simulations.</li>
+  <li><strong>Scientific computing and simulation:</strong> Combining numerical modelling, high-performance computing and data analysis to investigate systems across multiple length and time scales.</li>
+  <li><strong>AI for interdisciplinary challenges:</strong> Exploring how these methods can contribute to areas such as materials discovery, environmental understanding, health-related data analysis and resilient engineered systems.</li>
+</ul>
+
+<div class="section">
+  <h3>From research strengths to collaborative opportunity</h3>
+  <p>We welcome partners who want to explore technically ambitious questions with a strong scientific foundation. Depending on the challenge and its readiness, collaboration may begin with a focused feasibility study, progress to a shared research project, or develop into a prototype for further validation.</p>
+  <ul>
+    <li><strong>Applied research and co-development:</strong> Define a challenge, identify the right scientific and computational approach, and work together on a demonstrator or proof of concept.</li>
+    <li><strong>Data and modelling partnerships:</strong> Explore the value of suitable datasets, simulations and domain expertise through reproducible analytical workflows.</li>
+    <li><strong>Talent and research engagement:</strong> Connect with students and early-career researchers through internships, mentoring and project-based collaboration.</li>
+    <li><strong>Translation with care:</strong> Evaluate technical feasibility, validation needs, limitations and responsible deployment before moving towards real-world use.</li>
+  </ul>
+  <p>We are an interdisciplinary research initiative with an evolving portfolio. Specific project scope, deliverables and collaboration arrangements are developed with each partner; we do not present exploratory research as a validated commercial product.</p>
+</div>
+
+<div class="section">
+  <h3>Research, teaching and mentoring</h3>
+  <ul>
+    <li><strong>Research:</strong> Investigating natural and artificial complex systems, with particular interest in non-equilibrium physics, soft and glassy matter, active systems and data-driven modelling.</li>
+    <li><strong>Education:</strong> Teaching and developing learning experiences in mathematics for AI, intelligent systems, data science and material informatics.</li>
+    <li><strong>Mentoring:</strong> Supporting student projects and research internships that combine scientific questions with computational methods.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Partner with Lab 360°</h2>
+  <div class="advertisement">
+    <h1>Bring us a challenge. Let’s explore what’s possible.</h1>
+    <p>We are interested in conversations with research organisations, industry teams, technology innovators, funders and curious collaborators who see value in connecting fundamental science with intelligent computation.</p>
+    <p>Potential starting points include:</p>
+    <div class="opportunities">
+      <div class="opportunity">Collaborative Research</div>
+      <div class="opportunity">Applied AI Projects</div>
+      <div class="opportunity">Proof-of-Concept Studies</div>
+      <div class="opportunity">Student &amp; Research Internships</div>
+    </div>
+    <p>Whether you have a well-defined technical problem or an early-stage idea, we welcome a conversation about the question, the data, the methods and the possible path forward.</p>
+    <div class="call-to-action">
+      <h2 style="justify-content: center; border: none;">Let’s start a conversation</h2>
+      <p>Share a short description of your idea or challenge, along with your background and the kind of collaboration you have in mind.</p>
+      <a class="email-link" href="mailto:sumandutta.avvcb@gmail.com?subject=Lab%20360%C2%B0%20Collaboration%20Enquiry">Discuss a collaboration</a>
+    </div>
+    <p style="margin-top: 25px; font-style: italic; font-size: 0.9em;">Scientific depth. Creative intelligence. Shared progress.</p>
+  </div>
+</div>
 </template>
 <template id="section-template-latest">
 <h2>✨ Latest News</h2>
@@ -1169,14 +1209,93 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
 
 </template>
 <template id="section-template-playground">
-<h2>🎮 Swarm Intelligence</h2>
-<div class="section">
-<p>Unleash the swarm. Take control of the artificial 'intelligence' and guide its trajectory toward the target in the simulation below. Acknowledgement: Harish Kumaar S, S. Sri Raghav Vatsan, Neelanjana. J A, Aryananda M, M. Bijoy, Ghadige R, D. Jayesh, Prithve KC, A. Jagdish (Ongoing) </p>
-<div class="playground-container">
-<iframe frameborder="0" src="boids_lj_interactive.html"></iframe>
-</div>
-</div>
+<section class="atelier-page" aria-label="Lab 360 Creative Gesture Atelier">
+  <div class="atelier-topline">
+    <span class="atelier-kicker">LAB 360° · CREATIVE INTELLIGENCE STUDIO</span>
+    <span class="atelier-live"><i></i> YOUR CANVAS IS ALIVE</span>
+  </div>
+  <header class="atelier-hero">
+    <div class="atelier-hero-copy">
+      <p class="atelier-overline">A LITTLE ART. A LITTLE MAGIC. A LOT OF YOU.</p>
+      <h1>Make something <em>unforgettable.</em></h1>
+      <p class="atelier-intro">Your hands are the brushes. Your imagination is the algorithm. Step into a playful world where gestures become colour, patterns become stories, and every creation is uniquely yours.</p>
+      <div class="atelier-prompt">
+        <span class="atelier-prompt-label">TODAY'S CREATIVE SPARK</span>
+        <strong id="atelier-challenge">Create a garden that could only grow in your imagination.</strong>
+        <button type="button" id="atelier-new-challenge" class="atelier-text-btn">Give me another idea ↗</button>
+      </div>
+    </div>
+    <div class="atelier-orbit" aria-hidden="true">
+      <div class="atelier-orbit-ring ring-one"></div><div class="atelier-orbit-ring ring-two"></div>
+      <span class="atelier-orbit-shape shape-star">✳</span><span class="atelier-orbit-shape shape-flower">✿</span>
+      <span class="atelier-orbit-shape shape-circle"></span><span class="atelier-orbit-shape shape-spark">✦</span>
+      <span class="atelier-orbit-word">CREATE<br>PLAY<br>REPEAT</span>
+    </div>
+  </header>
 
+  <div class="atelier-studio">
+    <div class="atelier-studio-head">
+      <div><span class="atelier-section-tag">01 / THE CANVAS</span><h2>Your hands. Your masterpiece.</h2></div>
+      <div class="atelier-tools">
+        <button type="button" class="atelier-tool active" data-tool="draw" aria-pressed="true">✳ Draw</button>
+        <button type="button" class="atelier-tool" data-tool="stamp" aria-pressed="false">❋ Stamp</button>
+        <button type="button" class="atelier-tool" data-tool="erase" aria-pressed="false">⌫ Erase</button>
+      </div>
+    </div>
+    <div class="atelier-workbench">
+      <div class="atelier-canvas-wrap">
+        <canvas id="atelier-canvas" aria-label="Your digital art canvas"></canvas>
+        <div class="atelier-canvas-hint" id="atelier-canvas-hint"><span>✦</span><strong>Your blank canvas is full of possibility.</strong><small>Start the camera and raise a hand, or simply draw with your mouse or finger.</small></div>
+        <div class="atelier-canvas-badge">LAB 360° · OPEN STUDIO</div>
+      </div>
+      <aside class="atelier-side">
+        <div class="atelier-camera-card">
+          <div class="atelier-side-title"><span>02 / THE MAGIC LENS</span><b id="atelier-camera-state">CAMERA OFF</b></div>
+          <div class="atelier-camera-preview">
+            <video id="atelier-video" autoplay playsinline muted></video>
+            <div class="atelier-camera-placeholder" id="atelier-camera-placeholder"><span>◎</span><small>Your creative co-pilot is ready</small></div>
+            <canvas id="atelier-camera-overlay"></canvas>
+          </div>
+          <div class="atelier-camera-actions">
+            <button type="button" class="atelier-action primary" id="atelier-start">Start camera</button>
+            <button type="button" class="atelier-action" id="atelier-switch" disabled>Flip</button>
+          </div>
+          <p class="atelier-camera-note" id="atelier-camera-note">Camera is optional. You can also create with mouse or touch.</p>
+        </div>
+        <div class="atelier-guide">
+          <span class="atelier-section-tag">03 / GESTURE GUIDE</span>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">☝</span><div><strong>Point up</strong><small>Guide your fingertip to draw</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✋</span><div><strong>Open palm</strong><small>Switch to the next colour</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✊</span><div><strong>Make a fist</strong><small>Stamp a playful motif</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✌</span><div><strong>Peace sign</strong><small>Sprinkle a little sparkle</small></div></div>
+        </div>
+        <div class="atelier-director" aria-live="polite"><span class="atelier-director-dot"></span><div><small>YOUR CREATIVE CO-PILOT</small><strong id="atelier-director-text">I’m ready when you are. Let’s make a little magic.</strong></div></div>
+      </aside>
+    </div>
+
+    <div class="atelier-bottom-bar">
+      <div class="atelier-palette" aria-label="Choose a colour">
+        <span>COLOUR STORY</span>
+        <button class="atelier-swatch selected" data-colour="#ff6b8a" style="--swatch:#ff6b8a" aria-label="Coral" aria-pressed="true"></button>
+        <button class="atelier-swatch" data-colour="#ffc857" style="--swatch:#ffc857" aria-label="Sunshine" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#75e0c1" style="--swatch:#75e0c1" aria-label="Mint" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#8c9eff" style="--swatch:#8c9eff" aria-label="Iris" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#e6a8ff" style="--swatch:#e6a8ff" aria-label="Lilac" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#f7f2dc" style="--swatch:#f7f2dc" aria-label="Cloud" aria-pressed="false"></button>
+      </div>
+      <div class="atelier-canvas-actions">
+        <span class="atelier-score"><b id="atelier-score">0</b><small>CREATIVE SPARKS</small></span>
+        <button type="button" class="atelier-action" id="atelier-undo">↶ Undo</button>
+        <button type="button" class="atelier-action" id="atelier-clear">Clear</button>
+        <button type="button" class="atelier-action primary" id="atelier-save">Save artwork ↓</button>
+      </div>
+    </div>
+  </div>
+  <footer class="atelier-footer">
+    <div><span class="atelier-section-tag">THE LAB 360° INVITATION</span><h2>What will your hands dream up next?</h2><p>Art is a way of seeing. AI is a way of exploring. Together, they make room for wonderfully unexpected ideas.</p></div>
+    <div class="atelier-footer-mark">MAKE<br><em>WONDER</em><br>VISIBLE.</div>
+  </footer>
+</section>
 </template>
 <template id="section-template-products">
 <h2>🧪 Lab Products</h2>
@@ -1888,7 +2007,7 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
     if (!PAGE_META[id]) id = 'highlight';
     if (id === currentPage) return;
     currentPage = id;
-    stopVisionCamera();
+    stopAtelierCamera();
     updateNavigation(id);
     host.classList.add('is-loading');
     try {
@@ -1908,6 +2027,7 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
     if (id === 'classroom') initialiseClassroom();
     if (id === 'teaching') initialiseTeaching();
     if (id === 'highlight') initialiseVisionApplet();
+    if (id === 'playground') initialiseAtelier();
     // Make original inline page scripts execute after their fragment is inserted.
     host.querySelectorAll('script').forEach(oldScript => {
       const script = document.createElement('script');
@@ -1917,273 +2037,380 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
     });
   }
 
-  // Lab 360° science-bubble game. Hand landmarks are processed in the browser.
-  let visionStream = null;
-  let visionHands = null;
-  let visionAnimationFrame = null;
-  let visionFacingMode = 'environment';
-  let visionHandPoint = null;
-  let visionPinching = false;
-  let visionLastBurst = 0;
-  let visionScore = 0;
-  let visionBubble = null;
-  let visionGameActive = false;
-  let visionLastVideoTime = -1;
-  let visionHandsBusy = false;
+  // Gesture Atelier: lightweight hand-gesture interaction and a mouse/touch fallback.
+  let atelierStream = null;
+  let atelierRecognizer = null;
+  let atelierRaf = null;
+  let atelierFacing = 'user';
+  let atelierLastGesture = '';
+  let atelierGestureAt = 0;
+  let atelierLastVideoTime = -1;
+  let atelierBusy = false;
 
-  const scienceTopics = [
-    {title:'Can AI predict an earthquake?',desc:'Could patterns hidden in seismic waves help us understand when the Earth is ready to move?',tag:'EARTH & SEISMOLOGY'},
-    {title:'How do cells make decisions?',desc:'Can machine learning reveal the rules behind the remarkable behaviour of living cells?',tag:'BIOLOGY & COMPLEXITY'},
-    {title:'Can we forecast a monsoon?',desc:'What can clouds, oceans and decades of climate data tell us about tomorrow’s rain?',tag:'CLIMATE & WEATHER'},
-    {title:'What makes a material intelligent?',desc:'Can AI discover materials that adapt, respond and change with their surroundings?',tag:'MATERIALS & DESIGN'},
-    {title:'Are there hidden patterns in the stars?',desc:'Can algorithms find unusual planets and cosmic signals in a sky full of data?',tag:'ASTRONOMY & SPACE'},
-    {title:'Can AI help protect biodiversity?',desc:'Could images and soundscapes reveal which species share, shape and sustain an ecosystem?',tag:'ECOLOGY & CONSERVATION'},
-    {title:'Why do fluids suddenly become turbulent?',desc:'Can data-driven physics uncover the hidden structure of swirling flows?',tag:'FLUIDS & PHYSICS'},
-    {title:'Can we grow food with less water?',desc:'How might AI help plants thrive while using every drop more wisely?',tag:'AGRICULTURE & SUSTAINABILITY'},
-    {title:'How does the brain learn?',desc:'Can computational models help us understand memory, adaptation and intelligence?',tag:'NEUROSCIENCE & AI'},
-    {title:'Can we spot disease earlier?',desc:'Could subtle patterns in medical data help clinicians see warning signs sooner?',tag:'HEALTH & AI'},
-    {title:'What happens inside a black hole?',desc:'How can mathematics and computation help us explore the universe’s biggest mysteries?',tag:'COSMOS & GRAVITY'},
-    {title:'Can AI make cities cooler?',desc:'Can urban data help design greener streets and more comfortable neighbourhoods?',tag:'CITIES & ENVIRONMENT'}
-  ];
-
-  function stopVisionCamera() {
-    visionGameActive = false;
-    if (visionAnimationFrame) cancelAnimationFrame(visionAnimationFrame);
-    visionAnimationFrame = null;
-    visionHandPoint = null;
-    visionHandsBusy = false;
-    if (visionStream) visionStream.getTracks().forEach(track => track.stop());
-    visionStream = null;
-    if (visionHands) {
-      try { visionHands.close(); } catch (_) {}
-      visionHands = null;
+  function stopAtelierCamera() {
+    if (atelierRaf) cancelAnimationFrame(atelierRaf);
+    atelierRaf = null;
+    if (atelierStream) atelierStream.getTracks().forEach(track => track.stop());
+    atelierStream = null;
+    if (atelierRecognizer) {
+      try { atelierRecognizer.close(); } catch (_) {}
+      atelierRecognizer = null;
     }
+    atelierBusy = false;
+    atelierLastGesture = '';
+    atelierLastVideoTime = -1;
   }
 
-  function loadVisionScript(src) {
-    return new Promise((resolve, reject) => {
-      const existing = [...document.scripts].find(script => script.src === src);
-      if (existing) {
-        if (existing.dataset.loaded === 'true') resolve();
-        else { existing.addEventListener('load', resolve, {once:true}); existing.addEventListener('error', reject, {once:true}); }
-        return;
-      }
-      const script = document.createElement('script');
-      script.src = src;
-      script.async = true;
-      script.onload = () => { script.dataset.loaded = 'true'; resolve(); };
-      script.onerror = () => reject(new Error('The hand-play experience could not load. Please check your internet connection and try again.'));
-      document.head.appendChild(script);
-    });
-  }
+  function initialiseAtelier() {
+    const canvas = document.getElementById('atelier-canvas');
+    const video = document.getElementById('atelier-video');
+    const overlay = document.getElementById('atelier-camera-overlay');
+    if (!canvas || !video || !overlay) return;
 
-  function initialiseVisionApplet() {
-    const video = document.getElementById('vision-video');
-    const overlay = document.getElementById('vision-overlay');
-    const start = document.getElementById('vision-start');
-    const flip = document.getElementById('vision-flip');
-    const status = document.getElementById('vision-status');
-    const placeholder = document.getElementById('vision-placeholder');
-    const liveTag = document.getElementById('vision-live-tag');
-    const scoreNode = document.getElementById('vision-score');
-    const topicLabel = document.getElementById('vision-topic-label');
-    const topicTitle = document.getElementById('vision-topic-title');
-    const topicDesc = document.getElementById('vision-topic-desc');
-    if (!video || !overlay || !start) return;
+    const ctx = canvas.getContext('2d');
+    const octx = overlay.getContext('2d');
+    const hint = document.getElementById('atelier-canvas-hint');
+    const start = document.getElementById('atelier-start');
+    const flip = document.getElementById('atelier-switch');
+    const cameraState = document.getElementById('atelier-camera-state');
+    const cameraPlaceholder = document.getElementById('atelier-camera-placeholder');
+    const cameraNote = document.getElementById('atelier-camera-note');
+    const director = document.getElementById('atelier-director-text');
+    const scoreEl = document.getElementById('atelier-score');
+    const challengeEl = document.getElementById('atelier-challenge');
+    const newChallenge = document.getElementById('atelier-new-challenge');
+    const challenges = [
+      'Create a garden that could only grow in your imagination.',
+      'Invent a butterfly with wings made of stardust.',
+      'Draw a tiny universe where planets bloom like flowers.',
+      'Design a creature that might live beneath an alien ocean.',
+      'Make a colourful map of a place that does not exist.',
+      'Turn a simple wave into a joyful piece of abstract art.',
+      'Create a flower that has never existed in nature.',
+      'Imagine a city where buildings grow like trees.'
+    ];
+    const palette = ['#ff6b8a','#ffc857','#75e0c1','#8c9eff','#e6a8ff','#f7f2dc'];
+    let colourIndex = 0, tool = 'draw', score = 0, drawing = false, lastPoint = null;
+    let strokes = [], activeStroke = null, lastStampAt = 0, pointerDown = false;
 
-    const ctx = overlay.getContext('2d');
-    let bubbleIndex = -1;
-    let previousFrame = -1;
-
-    function fitOverlay() {
-      if (!video.videoWidth || !video.videoHeight) return;
-      if (overlay.width !== video.videoWidth || overlay.height !== video.videoHeight) {
-        overlay.width = video.videoWidth;
-        overlay.height = video.videoHeight;
-      }
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const old = document.createElement('canvas');
+      old.width = canvas.width || Math.round(rect.width * devicePixelRatio);
+      old.height = canvas.height || Math.round(rect.height * devicePixelRatio);
+      if (canvas.width && canvas.height) old.getContext('2d').drawImage(canvas,0,0);
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(rect.width * ratio);
+      canvas.height = Math.round(rect.height * ratio);
+      ctx.setTransform(ratio,0,0,ratio,0,0);
+      if (old.width && old.height) ctx.drawImage(old,0,0,rect.width,rect.height);
+      redraw();
     }
 
-    function nextBubble() {
-      let next = Math.floor(Math.random() * scienceTopics.length);
-      if (scienceTopics.length > 1 && next === bubbleIndex) next = (next + 1) % scienceTopics.length;
-      bubbleIndex = next;
-      const topic = scienceTopics[next];
-      visionBubble = {
-        x: overlay.width * (0.28 + Math.random() * 0.44),
-        y: overlay.height * (0.30 + Math.random() * 0.40),
-        radius: Math.max(48, Math.min(overlay.width, overlay.height) * 0.105),
-        phase: Math.random() * Math.PI * 2,
-        topic
-      };
-      topicLabel.textContent = 'A QUESTION TO EXPLORE · ' + topic.tag;
-      topicTitle.textContent = topic.title;
-      topicDesc.textContent = topic.desc;
+    function canvasPoint(clientX, clientY) {
+      const r = canvas.getBoundingClientRect();
+      return {x:clientX-r.left,y:clientY-r.top};
     }
 
-    function burstBubble() {
-      if (!visionBubble) return;
-      const now = performance.now();
-      if (now - visionLastBurst < 850) return;
-      visionLastBurst = now;
-      visionScore += 1;
-      scoreNode.textContent = String(visionScore);
-      status.textContent = 'Pop! One more science spark collected. Find the next glowing bubble.';
-      nextBubble();
-    }
-
-    function drawBubble(now) {
-      if (!visionBubble || !overlay.width) return;
-      const b = visionBubble;
-      const driftX = Math.sin(now / 850 + b.phase) * b.radius * 0.12;
-      const driftY = Math.cos(now / 1050 + b.phase) * b.radius * 0.10;
-      const x = b.x + driftX, y = b.y + driftY, r = b.radius;
-      const glow = ctx.createRadialGradient(x-r*.25,y-r*.35,r*.08,x,y,r*1.18);
-      glow.addColorStop(0,'rgba(213,255,255,.95)');
-      glow.addColorStop(.22,'rgba(93,224,207,.52)');
-      glow.addColorStop(.72,'rgba(72,150,220,.18)');
-      glow.addColorStop(1,'rgba(72,150,220,.015)');
+    function drawStroke(stroke) {
+      if (!stroke || !stroke.points.length) return;
       ctx.save();
-      ctx.shadowColor = 'rgba(93,224,207,.7)';
-      ctx.shadowBlur = 25;
-      ctx.fillStyle = glow;
-      ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
-      ctx.shadowBlur = 0;
-      ctx.lineWidth = Math.max(2, r*.035);
-      ctx.strokeStyle = 'rgba(204,255,248,.9)';
-      ctx.stroke();
-      ctx.beginPath(); ctx.arc(x-r*.28,y-r*.30,r*.17,0,Math.PI*2);
-      ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.fill();
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillStyle = '#f4ffff';
-      ctx.font = `700 ${Math.max(11,Math.min(17,r*.24))}px system-ui,sans-serif`;
-      const words = b.topic.tag.split(' ');
-      const shortTag = words.length > 2 ? words.slice(0,2).join(' ') : b.topic.tag;
-      ctx.fillText(shortTag, x, y+r*.08, r*1.55);
-      ctx.font = `600 ${Math.max(9,Math.min(12,r*.17))}px system-ui,sans-serif`;
-      ctx.fillStyle = 'rgba(235,255,255,.88)';
-      ctx.fillText('PINCH TO POP', x, y+r*.38, r*1.55);
+      ctx.globalCompositeOperation = stroke.tool === 'erase' ? 'destination-out' : 'source-over';
+      ctx.strokeStyle = stroke.colour;
+      ctx.fillStyle = stroke.colour;
+      ctx.lineWidth = stroke.tool === 'erase' ? 28 : stroke.width;
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      if (stroke.tool === 'stamp') {
+        const p = stroke.points[0];
+        drawMotif(p.x,p.y,stroke.colour,stroke.motif || 'flower');
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(stroke.points[0].x,stroke.points[0].y);
+        for (let i=1;i<stroke.points.length;i++) ctx.lineTo(stroke.points[i].x,stroke.points[i].y);
+        if (stroke.points.length === 1) ctx.lineTo(stroke.points[0].x+.1,stroke.points[0].y+.1);
+        ctx.stroke();
+      }
       ctx.restore();
-      b.drawX = x; b.drawY = y;
     }
 
-    function onHandResults(results) {
-      const landmarks = results.multiHandLandmarks && results.multiHandLandmarks[0];
-      if (!landmarks) { visionHandPoint = null; visionPinching = false; return; }
-      const indexTip = landmarks[8], thumbTip = landmarks[4];
-      visionHandPoint = {x:indexTip.x*overlay.width, y:indexTip.y*overlay.height};
-      const pinchDistance = Math.hypot((indexTip.x-thumbTip.x),(indexTip.y-thumbTip.y));
-      const pinchingNow = pinchDistance < 0.055;
-      if (pinchingNow && !visionPinching && visionBubble) {
-        const b = visionBubble;
-        const dx = visionHandPoint.x - (b.drawX ?? b.x);
-        const dy = visionHandPoint.y - (b.drawY ?? b.y);
-        if (Math.hypot(dx,dy) < b.radius * 1.18) burstBubble();
+    function drawMotif(x,y,colour,motif) {
+      ctx.save(); ctx.translate(x,y); ctx.fillStyle=colour; ctx.strokeStyle=colour;
+      ctx.shadowColor=colour; ctx.shadowBlur=15;
+      if (motif === 'spark') {
+        for(let i=0;i<8;i++){ctx.rotate(Math.PI/4);ctx.beginPath();ctx.ellipse(0,-13,3,10,0,0,Math.PI*2);ctx.fill();}
+        ctx.beginPath();ctx.arc(0,0,4,0,Math.PI*2);ctx.fill();
+      } else {
+        for(let i=0;i<6;i++){ctx.rotate(Math.PI/3);ctx.beginPath();ctx.ellipse(0,-12,7,13,0,0,Math.PI*2);ctx.fill();}
+        ctx.beginPath();ctx.arc(0,0,7,0,Math.PI*2);ctx.fillStyle='#fff0c9';ctx.fill();
       }
-      visionPinching = pinchingNow;
+      ctx.restore();
+    }
+
+    function redraw() {
+      const r = canvas.getBoundingClientRect();
+      ctx.clearRect(0,0,r.width,r.height);
+      strokes.forEach(drawStroke);
+      if (activeStroke) drawStroke(activeStroke);
+      hint.hidden = strokes.length > 0 || !!activeStroke;
+    }
+
+    function addPoint(point) {
+      if (tool === 'stamp') {
+        const now = performance.now();
+        if (now-lastStampAt < 650) return;
+        lastStampAt = now;
+        strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[point],motif:'flower'});
+        score += 1; scoreEl.textContent = score;
+        redraw(); return;
+      }
+      if (!activeStroke) activeStroke = {tool,colour:palette[colourIndex],width:tool==='erase'?28:5,points:[point]};
+      else activeStroke.points.push(point);
+      redraw();
+    }
+
+    function endStroke() {
+      if (activeStroke) {
+        strokes.push(activeStroke);
+        activeStroke = null;
+        score += 1; scoreEl.textContent = score;
+        redraw();
+      }
+      lastPoint = null;
+    }
+
+    function chooseTool(next) {
+      tool = next;
+      document.querySelectorAll('.atelier-tool').forEach(btn => {
+        const active = btn.dataset.tool === tool;
+        btn.classList.toggle('active',active);
+        btn.setAttribute('aria-pressed',String(active));
+      });
+      director.textContent = tool === 'draw' ? 'Lovely. Let your fingertip wander and leave a trail of colour.' :
+        tool === 'stamp' ? 'Tap or make a fist to add a little floral surprise.' :
+        'Every masterpiece needs a little editing. Smoothly erase and begin again.';
+    }
+
+    function nextColour() {
+      colourIndex = (colourIndex+1)%palette.length;
+      document.querySelectorAll('.atelier-swatch').forEach((b,i)=>{
+        b.classList.toggle('selected',i===colourIndex);
+        b.setAttribute('aria-pressed',String(i===colourIndex));
+      });
+      director.textContent = 'A fresh colour! Your canvas is taking on a life of its own.';
+    }
+
+    function handleGesture(name, landmarks) {
+      const now = performance.now();
+      const index = landmarks && landmarks[8];
+      const point = index ? {x:(atelierFacing === 'user' ? 1-index.x : index.x)*canvas.clientWidth,y:index.y*canvas.clientHeight} : null;
+      if (name === 'Pointing_Up' && point) {
+        if (!drawing) { drawing=true; lastPoint=null; }
+        addPoint(point);
+        lastPoint=point;
+        director.textContent = 'I see your creative line. Keep moving to sketch your idea.';
+      } else if (drawing) {
+        drawing=false; endStroke();
+      }
+      if (name && name !== atelierLastGesture && now-atelierGestureAt>550) {
+        atelierGestureAt=now;
+        if (name === 'Open_Palm') nextColour();
+        if (name === 'Closed_Fist') {
+          if (tool !== 'erase') {
+            strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[point || {x:canvas.clientWidth/2,y:canvas.clientHeight/2}],motif:'flower'});
+            score+=1;scoreEl.textContent=score;redraw();
+            director.textContent='A handmade bloom! Your artwork just grew a new detail.';
+          }
+        }
+        if (name === 'Victory') {
+          const p=point || {x:canvas.clientWidth/2,y:canvas.clientHeight/2};
+          strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[p],motif:'spark'});
+          score+=1;scoreEl.textContent=score;redraw();
+          director.textContent='Peace, love and a little sparkle. Beautifully done!';
+        }
+      }
+      atelierLastGesture=name || '';
     }
 
     async function startCamera() {
-      if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access needs a secure HTTPS page and a supported browser.');
-      stopVisionCamera();
-      status.textContent = 'Opening your camera…';
-      visionStream = await navigator.mediaDevices.getUserMedia({
-        video:{facingMode:{ideal:visionFacingMode},width:{ideal:960},height:{ideal:720}},
-        audio:false
-      });
-      video.srcObject = visionStream;
-      const mirrorPreview = visionFacingMode === 'user';
-      video.style.transform = mirrorPreview ? 'scaleX(-1)' : 'none';
-      overlay.style.transform = mirrorPreview ? 'scaleX(-1)' : 'none';
+      if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access requires a secure HTTPS page and a supported browser.');
+      stopAtelierCamera();
+      atelierStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:atelierFacing},width:{ideal:640},height:{ideal:480}},audio:false});
+      video.srcObject=atelierStream;
+      video.style.transform=atelierFacing === 'user' ? 'scaleX(-1)' : 'none';
+      overlay.style.transform=atelierFacing === 'user' ? 'scaleX(-1)' : 'none';
       await video.play();
-      fitOverlay();
-      placeholder.hidden = true;
-      liveTag.textContent = visionFacingMode === 'user' ? 'FRONT CAMERA · LIVE' : 'REAR CAMERA · LIVE';
-      start.textContent = 'Stop game';
-      flip.disabled = false;
-      status.textContent = 'Camera is ready. Loading your hand-play experience…';
-
-      await loadVisionScript('https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.js');
-      visionHands = new Hands({locateFile:(file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/${file}`});
-      visionHands.setOptions({
-        maxNumHands:1,
-        modelComplexity:0,
-        minDetectionConfidence:0.62,
-        minTrackingConfidence:0.58
+      cameraPlaceholder.hidden=true;
+      cameraState.textContent='CAMERA LIVE';
+      cameraNote.textContent='Your camera stays in this browser session. Nothing is uploaded.';
+      start.textContent='Stop camera'; flip.disabled=false;
+      director.textContent='Show me one hand. Point up to draw, open your palm to change colour.';
+      const vision = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14');
+      const fileset = await vision.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm');
+      atelierRecognizer = await vision.GestureRecognizer.createFromOptions(fileset,{
+        baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task',delegate:'GPU'},
+        runningMode:'VIDEO',numHands:1,
+        cannedGesturesClassifierOptions:{scoreThreshold:0.58},
+        minHandDetectionConfidence:0.58,minHandPresenceConfidence:0.58,minTrackingConfidence:0.55
+      }).catch(async()=>{
+        return await vision.GestureRecognizer.createFromOptions(fileset,{
+          baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task'},
+          runningMode:'VIDEO',numHands:1,
+          minHandDetectionConfidence:0.58,minHandPresenceConfidence:0.58,minTrackingConfidence:0.55
+        });
       });
-      visionHands.onResults(onHandResults);
-      visionGameActive = true;
-      visionScore = 0;
-      scoreNode.textContent = '0';
-      visionPinching = false;
-      visionLastVideoTime = -1;
-      nextBubble();
-      status.textContent = 'You’re in! Move your fingertip onto the bubble and pinch thumb + index finger to pop it.';
-      liveTag.textContent = 'SCIENCE BUBBLES · LIVE';
-
-      const animate = async (now) => {
-        if (!visionGameActive || !visionStream) return;
-        fitOverlay();
-        ctx.clearRect(0,0,overlay.width,overlay.height);
-        drawBubble(now);
-        if (visionHandPoint) {
-          ctx.save();
-          ctx.beginPath();
-          ctx.arc(visionHandPoint.x,visionHandPoint.y,Math.max(8,overlay.width*.012),0,Math.PI*2);
-          ctx.fillStyle = visionPinching ? '#b8f36b' : '#ffffff';
-          ctx.shadowColor = '#5de0cf'; ctx.shadowBlur = 16; ctx.fill();
-          ctx.restore();
+      atelierLastVideoTime=-1;atelierLastGesture='';
+      const tick=(now)=>{
+        if(!atelierStream||!atelierRecognizer)return;
+        const vw=video.videoWidth||320,vh=video.videoHeight||240;
+        if(overlay.width!==vw||overlay.height!==vh){overlay.width=vw;overlay.height=vh;}
+        octx.clearRect(0,0,overlay.width,overlay.height);
+        if(video.readyState>=2&&video.currentTime!==atelierLastVideoTime&&!atelierBusy){
+          atelierLastVideoTime=video.currentTime;atelierBusy=true;
+          try{
+            const result=atelierRecognizer.recognizeForVideo(video,now);
+            const gesture=result.gestures?.[0]?.[0]?.categoryName||'';
+            const landmarks=result.landmarks?.[0];
+            if(landmarks?.[8]){
+              const tip=landmarks[8];
+              octx.beginPath();octx.arc(tip.x*overlay.width,tip.y*overlay.height,10,0,Math.PI*2);
+              octx.fillStyle='#ffc857';octx.shadowColor='#ffc857';octx.shadowBlur=16;octx.fill();
+            }
+            handleGesture(gesture,landmarks);
+          }catch(_){}
+          atelierBusy=false;
         }
-        if (video.readyState >= 2 && video.currentTime !== previousFrame && !visionHandsBusy) {
-          previousFrame = video.currentTime;
-          visionHandsBusy = true;
-          try { await visionHands.send({image:video}); } catch (_) {}
-          visionHandsBusy = false;
-        }
-        visionAnimationFrame = requestAnimationFrame(animate);
+        atelierRaf=requestAnimationFrame(tick);
       };
-      visionAnimationFrame = requestAnimationFrame(animate);
+      atelierRaf=requestAnimationFrame(tick);
     }
 
-    start.addEventListener('click', async () => {
-      if (visionStream) {
-        stopVisionCamera();
-        video.srcObject = null;
-        start.textContent = 'Start the game';
-        flip.disabled = true;
-        placeholder.hidden = false;
-        liveTag.textContent = 'GAME READY';
-        ctx.clearRect(0,0,overlay.width,overlay.height);
-        status.textContent = 'Game paused. Start again whenever curiosity calls.';
-        return;
+    canvas.addEventListener('pointerdown',e=>{
+      pointerDown=true;canvas.setPointerCapture(e.pointerId);
+      const p=canvasPoint(e.clientX,e.clientY);
+      if(tool==='stamp')addPoint(p);
+      else{activeStroke={tool,colour:palette[colourIndex],width:tool==='erase'?28:5,points:[p]};redraw();}
+    });
+    canvas.addEventListener('pointermove',e=>{
+      if(!pointerDown||!activeStroke)return;
+      activeStroke.points.push(canvasPoint(e.clientX,e.clientY));redraw();
+    });
+    const finishPointer=()=>{if(pointerDown){pointerDown=false;endStroke();}};
+    canvas.addEventListener('pointerup',finishPointer);
+    canvas.addEventListener('pointercancel',finishPointer);
+    canvas.addEventListener('lostpointercapture',finishPointer);
+
+    document.querySelectorAll('.atelier-tool').forEach(btn=>btn.addEventListener('click',()=>chooseTool(btn.dataset.tool)));
+    document.querySelectorAll('.atelier-swatch').forEach((btn,i)=>btn.addEventListener('click',()=>{
+      colourIndex=i;
+      document.querySelectorAll('.atelier-swatch').forEach((b,j)=>{b.classList.toggle('selected',j===i);b.setAttribute('aria-pressed',String(j===i));});
+    }));
+    newChallenge.addEventListener('click',()=>{
+      let next;do{next=challenges[Math.floor(Math.random()*challenges.length)];}while(next===challengeEl.textContent&&challenges.length>1);
+      challengeEl.textContent=next;
+      director.textContent='A new creative spark! There is no wrong way to imagine it.';
+    });
+    document.getElementById('atelier-undo').addEventListener('click',()=>{
+      if(strokes.length){strokes.pop();redraw();director.textContent='One step back, more room to experiment.';}
+    });
+    document.getElementById('atelier-clear').addEventListener('click',()=>{
+      strokes=[];activeStroke=null;score=0;scoreEl.textContent='0';redraw();director.textContent='A fresh page. What will you make this time?';
+    });
+    document.getElementById('atelier-save').addEventListener('click',()=>{
+      const link=document.createElement('a');link.download='lab360-gesture-art.png';link.href=canvas.toDataURL('image/png');link.click();
+      director.textContent='Your creation is ready to travel. Keep making wonderful things!';
+    });
+    start.addEventListener('click',async()=>{
+      if(atelierStream){
+        stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;
+        cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;
+        director.textContent='Camera paused. Your artwork is safe on the canvas.';
+      }else{
+        start.disabled=true;cameraNote.textContent='Waking up your creative co-pilot…';
+        try{await startCamera();}
+        catch(error){stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;cameraNote.textContent=error.message||'Could not start camera. Please check permissions and try again.';director.textContent='No worries — you can still create with mouse or touch.';}
+        finally{start.disabled=false;}
       }
-      start.disabled = true;
-      try { await startCamera(); }
-      catch (error) {
-        stopVisionCamera();
-        video.srcObject = null;
-        start.textContent = 'Start the game';
-        flip.disabled = true;
-        status.textContent = error.message || 'Could not start the game. Please check camera permission and try again.';
-      } finally { start.disabled = false; }
+    });
+    flip.addEventListener('click',async()=>{
+      if(!atelierStream)return;
+      atelierFacing=atelierFacing==='user'?'environment':'user';
+      start.disabled=true;flip.disabled=true;
+      try{await startCamera();}
+      catch(error){stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;cameraNote.textContent=error.message||'Could not switch camera.';}
+      finally{start.disabled=false;flip.disabled=!atelierStream;}
     });
 
-    flip.addEventListener('click', async () => {
-      if (!visionStream) return;
-      visionFacingMode = visionFacingMode === 'environment' ? 'user' : 'environment';
-      start.disabled = true; flip.disabled = true;
-      try { await startCamera(); }
-      catch (error) {
-        stopVisionCamera();
-        video.srcObject = null;
-        start.textContent = 'Start the game';
-        placeholder.hidden = false;
-        liveTag.textContent = 'GAME READY';
-        status.textContent = error.message || 'Could not switch cameras. Please restart the game.';
-      } finally { start.disabled = false; flip.disabled = !visionStream; }
-    });
+    const resizeObserver=new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(canvas.parentElement);
+    resizeCanvas();
+    window.addEventListener('pagehide',stopAtelierCamera,{once:true});
+  }
 
-    video.addEventListener('loadedmetadata', fitOverlay);
-    nextBubble();
+  // Lab 360° rotating creative-intelligence spotlight for the Overview page.
+  function initialiseVisionApplet() {
+    const stage = document.getElementById('lab-ad-stage');
+    const headline = document.getElementById('lab-ad-headline');
+    const subtitle = document.getElementById('lab-ad-subtitle');
+    const category = document.getElementById('lab-ad-category');
+    const title = document.getElementById('lab-ad-title');
+    const description = document.getElementById('lab-ad-description');
+    const tags = document.getElementById('lab-ad-tags');
+    const link = document.getElementById('lab-ad-link');
+    const symbol = document.getElementById('lab-ad-symbol');
+    const count = document.getElementById('lab-ad-count');
+    const refresh = document.getElementById('lab-ad-refresh');
+    if (!stage || stage.dataset.ready === 'true') return;
+    stage.dataset.ready = 'true';
+
+    const campaigns = [
+      {headline:'What if your next big idea could change the world?',subtitle:'Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.',category:'THE NEXT FRONTIER · AI + SCIENCE',title:'From questions to possibilities.',description:'We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.',tags:['EXPLORE','EXPERIMENT','CREATE'],symbol:'✳',a:'#75e0c1',b:'#8c9eff',glow:'rgba(93,224,207,.28)',accent:'#75e0c1',accent2:'#ffc857',cta:'Explore the Lab',href:'#research'},
+      {headline:'Don’t just imagine the future. Model it.',subtitle:'A playground for techZies who think beyond the obvious and build beyond the expected.',category:'CREATIVE INTELLIGENCE · COMPUTE + CREATE',title:'Code meets curiosity.',description:'From data-driven discovery to intelligent systems, we turn computational thinking into tools for exploring the real world.',tags:['COMPUTE','QUESTION','INVENT'],symbol:'⌘',a:'#ffc857',b:'#ff8ca7',glow:'rgba(255,155,117,.25)',accent:'#ffc857',accent2:'#ff9caf',cta:'See what we explore',href:'#research'},
+      {headline:'The universe is full of data. What will you discover?',subtitle:'For curious minds who see patterns, ask better questions and love a beautiful challenge.',category:'DATA · PATTERNS · DISCOVERY',title:'Find the signal in the beautiful chaos.',description:'We use data science, machine learning and physics-inspired ideas to uncover patterns in complex natural and engineered systems.',tags:['DATA STORIES','HIDDEN PATTERNS','DISCOVERY'],symbol:'⌁',a:'#8c9eff',b:'#75e0c1',glow:'rgba(140,158,255,.25)',accent:'#8c9eff',accent2:'#75e0c1',cta:'Explore our research',href:'#research'},
+      {headline:'Think like a scientist. Create like an artist.',subtitle:'A home for experimentation, playful thinking and ideas that cross boundaries.',category:'THE ART OF THINKING · SCIENCE + AI',title:'Where imagination gets an algorithm.',description:'We connect scientific questions with computational creativity to make new ways of seeing, testing and understanding.',tags:['IMAGINE','PROTOTYPE','DISCOVER'],symbol:'✺',a:'#e6a8ff',b:'#ffc857',glow:'rgba(230,168,255,.25)',accent:'#e6a8ff',accent2:'#ffc857',cta:'Meet the Lab',href:'#about'},
+      {headline:'Complex problems deserve creative minds.',subtitle:'Explore a world where physics, AI and bold questions work together.',category:'COMPLEX SYSTEMS · NEW PERSPECTIVES',title:'Make complexity your playground.',description:'From fluids and materials to collective behaviour, we investigate how complex systems evolve, adapt and surprise us.',tags:['PHYSICS','COMPLEXITY','AI'],symbol:'◎',a:'#ff6b8a',b:'#8c9eff',glow:'rgba(255,107,138,.25)',accent:'#ff6b8a',accent2:'#8c9eff',cta:'Dive into research',href:'#research'},
+      {headline:'Curiosity is your most powerful technology.',subtitle:'Bring your questions. Bring your imagination. Let’s see what happens when they meet AI.',category:'FOR THE CURIOUS · FOR THE BOLD',title:'A lab for the beautifully curious.',description:'We make room for open-ended exploration, data-driven ideas and the joy of discovering something nobody expected.',tags:['ASK MORE','LEARN FAST','BUILD BOLD'],symbol:'✦',a:'#75e0c1',b:'#ffc857',glow:'rgba(117,224,193,.25)',accent:'#75e0c1',accent2:'#ffc857',cta:'Discover Lab 360°',href:'#about'},
+      {headline:'From a tiny observation to a giant possibility.',subtitle:'Big discoveries often begin with a small question. What’s yours?',category:'IDEAS TO IMPACT · LEARN + BUILD',title:'Small sparks. Expansive thinking.',description:'Explore projects, learning experiences and research that bring intelligent computation closer to meaningful scientific questions.',tags:['OBSERVE','CONNECT','TRANSFORM'],symbol:'✧',a:'#ffc857',b:'#e6a8ff',glow:'rgba(255,200,87,.25)',accent:'#ffc857',accent2:'#e6a8ff',cta:'Explore projects',href:'#products'},
+      {headline:'The next breakthrough might start with you.',subtitle:'Creative intelligence for techZies: think freely, experiment fearlessly, make something matter.',category:'LAB 360° · OPEN INVITATION',title:'Come curious. Leave inspired.',description:'Discover the people, ideas and experiments at the intersection of physics, artificial intelligence and complex systems.',tags:['PEOPLE','IDEAS','POSSIBILITIES'],symbol:'∞',a:'#ff8ca7',b:'#75e0c1',glow:'rgba(255,140,167,.25)',accent:'#ff8ca7',accent2:'#75e0c1',cta:'Step inside',href:'#about'}
+    ];
+
+    let current = -1;
+    let timer = null;
+    function showCampaign(index) {
+      if (index === current) index = (index + 1) % campaigns.length;
+      current = index;
+      const c = campaigns[current];
+      headline.textContent = c.headline;
+      subtitle.textContent = c.subtitle;
+      category.textContent = c.category;
+      title.textContent = c.title;
+      description.textContent = c.description;
+      symbol.textContent = c.symbol;
+      tags.replaceChildren(...c.tags.map(t => { const span=document.createElement('span'); span.textContent=t; return span; }));
+      link.textContent = c.cta + ' ↗';
+      link.href = c.href;
+      stage.style.setProperty('--ad-core-a',c.a);
+      stage.style.setProperty('--ad-core-b',c.b);
+      stage.style.setProperty('--ad-glow',c.glow);
+      stage.style.setProperty('--ad-accent',c.accent);
+      stage.style.setProperty('--ad-accent-2',c.accent2);
+      count.textContent = String(current+1).padStart(2,'0') + ' / ' + String(campaigns.length).padStart(2,'0');
+      stage.classList.remove('ad-enter');
+      void stage.offsetWidth;
+      stage.classList.add('ad-enter');
+    }
+    // Select a different campaign on each page visit/session, then rotate periodically.
+    const first = Math.floor(Math.random() * campaigns.length);
+    showCampaign(first);
+    refresh.addEventListener('click',() => {
+      showCampaign((current+1)%campaigns.length);
+      if (timer) { clearInterval(timer); timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000); }
+    });
+    timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    document.addEventListener('visibilitychange',() => {
+      if (document.hidden && timer) { clearInterval(timer); timer=null; }
+      else if (!document.hidden && !timer) timer=setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    });
   }
 
   function initialiseClassroom() {
