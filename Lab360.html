@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09111f">
+<meta name="description" content="Lab 360° — Engineering data to engineer life. Research and development across Physics of Life, Material Engineering, Healthcare AI and AI for Society.">
+<meta name="keywords" content="Lab 360, Physics of Life, Material Engineering, Healthcare AI, AI for Society, living systems, materials informatics, scientific machine learning">
+<title>Lab 360° | Engineering data to engineer life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+/* Lab 360° / modular design system — edit this file to change the global look */
+:root{
+  color-scheme:dark;
+  --bg:#08111f;--panel:#0e1b2d;--panel-2:#13243a;--panel-3:#192e47;
+  --ink:#edf4f7;--muted:#a5b7c7;--subtle:#71869a;
+  --line:rgba(190,220,230,.14);--accent:#b8f36b;--accent-2:#5de0cf;
+  --glow:rgba(184,243,107,.13);--radius:22px;
+  --shadow:0 22px 65px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;min-height:100vh;background:
+  radial-gradient(ellipse at 8% 5%,rgba(93,224,207,.10),transparent 34rem),
+  radial-gradient(ellipse at 92% 18%,rgba(184,243,107,.08),transparent 32rem),var(--bg);
+  color:var(--ink);font:15px/1.72 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent-2);text-underline-offset:3px}
+button,input{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:#101b17}
+.ambient{position:fixed;z-index:-1;width:380px;height:380px;border-radius:50%;filter:blur(110px);opacity:.13;pointer-events:none}
+.ambient-one{background:#50d8c6;top:8%;left:-220px}.ambient-two{background:#b8f36b;right:-230px;top:48%}
+.site-header{position:sticky;top:12px;z-index:50;width:min(1240px,calc(100% - 36px));margin:12px auto 38px;
+  background:rgba(12,25,42,.82);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);backdrop-filter:blur(22px);padding:14px 18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:190px}
+.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#10201b;font:800 1.65rem/1 "Manrope";box-shadow:0 8px 25px rgba(93,224,207,.18)}
+.brand-mark span{color:#fff}.brand-copy{display:flex;flex-direction:column;line-height:1.2}
+.brand-copy strong{font:800 1.05rem "Manrope";letter-spacing:-.04em}.brand-copy strong span{color:var(--accent)}
+.brand-copy small{margin-top:4px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.08em;text-transform:uppercase}
+.primary-nav{position:absolute;left:50%;top:20px;transform:translateX(-50%);display:flex;gap:7px}
+.primary-nav a,.secondary-nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:.83rem;font-weight:700;white-space:nowrap;transition:.2s}
+.primary-nav a:hover,.secondary-nav a:hover,.nav-link.active{background:var(--glow);color:var(--accent);box-shadow:inset 0 0 0 1px rgba(184,243,107,.15)}
+.header-actions{display:flex;align-items:center;gap:12px;position:absolute;right:18px;top:18px}
+.status-chip{color:var(--muted);font-size:.72rem;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.status-chip i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.install-button{border:1px solid rgba(184,243,107,.28);background:var(--glow);color:var(--accent);padding:8px 12px;border-radius:10px;font-size:.78rem;font-weight:700;cursor:pointer}
+.install-button:hover{background:rgba(184,243,107,.2)}
+#install-status{display:none;position:absolute;right:0;top:42px;width:240px;padding:10px 12px;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:.75rem}
+#install-status.show{display:block}
+.secondary-nav{display:flex;align-items:center;justify-content:center;gap:4px;border-top:1px solid var(--line);margin-top:14px;padding:9px 0 10px;overflow-x:auto;scrollbar-width:none}
+.secondary-nav::-webkit-scrollbar{display:none}
+.menu-toggle{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+.site-main{width:min(1120px,calc(100% - 42px));margin:0 auto}
+.page-kicker{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 22px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.17em;text-align:center}
+.kicker-line{width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--accent-2))}
+.kicker-line:last-child{transform:rotate(180deg)}
+#page-host{min-height:55vh;transition:opacity .18s}
+#page-host.is-loading{opacity:.45}
+.page-content{animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.loading-state,.load-error{min-height:35vh;display:grid;place-content:center;text-align:center;color:var(--muted)}
+.loader{width:34px;height:34px;margin:auto;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.22;letter-spacing:-.045em;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.8rem)}h2{font-size:clamp(1.5rem,3.2vw,2.35rem);margin:0 0 20px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+h3{font-size:1.28rem;color:var(--accent);margin:28px 0 13px}h4{font-size:1.05rem;margin:16px 0 9px}
+p{color:var(--muted);margin:0 0 15px}strong,b{color:var(--ink);font-weight:700}
+ul,ol{padding-left:22px;margin:0 0 20px}li{color:var(--muted);padding-left:4px;margin:0 0 9px}li::marker{color:var(--accent)}
+img{max-width:100%;height:auto;border-radius:14px}
+.page-content>img:first-child{display:block;width:100%;max-height:390px;object-fit:cover;border:1px solid var(--line);margin:0 0 28px}
+.section,.research-area-item,.publication-item,.timeline-content,.advertisement,.course-card,.outreach-card,.collaborator-item{
+  background:linear-gradient(145deg,rgba(18,36,58,.94),rgba(12,26,44,.92));border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:0 12px 35px rgba(0,0,0,.12)}
+.section{padding:clamp(18px,3vw,28px);margin:18px 0}
+.section:hover,.publication-item:hover,.course-card:hover,.outreach-card:hover{border-color:rgba(93,224,207,.34)}
+.research-area-item,.publication-item,.timeline-content{padding:16px 19px;margin:0 0 13px}
+.research-area-item{border-left:3px solid var(--accent-2)}
+.publication-item .citation{color:var(--ink);font-size:.96rem;line-height:1.7}
+.publication-item a{display:inline-block;padding:3px 8px;border-radius:6px;background:rgba(93,224,207,.1);text-decoration:none;font-size:.82rem;font-weight:700}
+.timeline{border-left:1px solid rgba(93,224,207,.35);padding-left:22px;margin-left:7px}
+.timeline-item{position:relative;margin-bottom:18px}.timeline-item:before{content:"";position:absolute;left:-28px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}
+.advertisement{padding:clamp(22px,4vw,38px);text-align:center;background:radial-gradient(ellipse at top right,rgba(184,243,107,.13),transparent 60%),var(--panel)}
+.advertisement h1{color:var(--accent);font-size:clamp(1.7rem,4vw,2.7rem)}
+.opportunities,.social-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.opportunity,.semester-tag,.course-code{display:inline-block;padding:5px 11px;border-radius:30px;background:var(--glow);border:1px solid rgba(184,243,107,.2);color:var(--accent);font-size:.8rem;font-weight:700}
+.email-link{display:inline-flex;padding:11px 22px;border-radius:11px;background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b!important;text-decoration:none;font-weight:800}
+.course-grid,.outreach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:15px;margin-top:17px}
+.course-card,.outreach-card{padding:20px;transition:transform .2s,border-color .2s;cursor:pointer}
+.course-card:hover,.outreach-card:hover{transform:translateY(-3px)}
+.course-card h4{margin-top:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.outreach-card{border-top:3px solid var(--accent)}
+.outreach-icon{font-size:1.8rem;display:block;margin-bottom:8px}
+.back-btn{display:inline-flex;align-items:center;gap:7px;margin:0 0 18px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);color:var(--ink);cursor:pointer}
+.course-detail-view,.teaching-detail-view{display:none;animation:rise .25s ease}
+.course-detail-view.active,.teaching-detail-view.active{display:block}
+.playground-container{width:100%;height:70vh;min-height:420px;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#05070b}
+.playground-container iframe{width:100%;height:100%;border:0}
+.password-prompt-container{max-width:500px;margin:32px auto;padding:30px 22px;text-align:center;background:var(--panel);border:1px dashed rgba(184,243,107,.35);border-radius:18px}
+.password-form{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}
+.password-form input{width:min(270px,100%);padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:#091525;color:var(--ink)}
+.password-form button{padding:10px 18px;border:0;border-radius:9px;background:var(--accent);color:#10201b;font-weight:800;cursor:pointer}
+.password-error-message{margin-top:12px;color:#ff8b8b;font-weight:700}
+#classroom-content.hidden{display:none}
+#password-prompt-container[hidden]{display:none}
+.table-responsive{width:100%;overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;min-width:550px;border-collapse:collapse;background:var(--panel-2);font-size:.9rem}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);color:var(--muted)}
+th{background:rgba(255,255,255,.04);color:var(--ink);font-family:"Manrope"}
+tr:hover td{background:rgba(255,255,255,.025)}
+.profile-header{display:flex;align-items:center;gap:22px}.profile-picture{width:100px;height:100px;object-fit:cover;border-radius:50%;border:2px solid var(--accent)}
+.header-text h1{font-size:2rem;margin:0 0 5px}.header-text p{color:var(--accent);margin:0}
+.social-links a img{height:27px;border-radius:7px}
+.playground-container iframe{display:block}
+.site-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:55px;padding:22px 0 30px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.04em}
+.site-footer a{color:var(--accent-2);text-decoration:none}
+[hidden]{display:none!important}
+@media(max-width:900px){
+ .site-header{padding:12px 14px 0}.primary-nav{position:static;transform:none;margin-left:auto;margin-right:190px}
+ .header-actions{top:15px;right:14px}.status-chip{display:none}
+ .secondary-nav{justify-content:flex-start}
+}
+@media(max-width:680px){
+ .site-header{top:6px;width:calc(100% - 18px);margin:6px auto 25px;border-radius:15px}
+ .brand-mark{width:38px;height:38px}.brand-copy strong{font-size:.96rem}
+ .primary-nav{display:none}.header-actions{top:13px;right:12px}.menu-toggle{display:block}
+ .install-button{padding:7px 9px}.secondary-nav{display:none;flex-wrap:wrap;justify-content:flex-start;white-space:normal;overflow:visible;padding:10px 0}
+ .secondary-nav.open{display:flex}.secondary-nav a{font-size:.78rem;padding:7px 9px}
+ .site-main{width:calc(100% - 28px)}.page-kicker{font-size:8px;letter-spacing:.11em}
+ .section{padding:17px;margin:13px 0;border-radius:16px}
+ .profile-header{align-items:flex-start}.profile-picture{width:72px;height:72px}
+ .site-footer{font-size:9px;justify-content:center;text-align:center}
+ .playground-container{height:65vh;min-height:360px}
+}
+
+
+
+
+/* Lab 360° Overview — Creative Intelligence rotating editorial spotlight */
+.vision-lab{position:relative;margin:0 0 30px;padding:clamp(18px,3vw,30px);overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:radial-gradient(ellipse at 7% 0%,rgba(255,107,138,.14),transparent 34%),radial-gradient(ellipse at 100% 100%,rgba(117,224,193,.13),transparent 36%),linear-gradient(135deg,#111a2a,#111629 58%,#1b172b);box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.vision-heading{position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{max-width:850px;margin:8px 0 10px;padding:0;border:0;font:800 clamp(1.65rem,3.6vw,2.8rem)/1.05 "Manrope",sans-serif;letter-spacing:-.055em;color:#f5f4f0}.vision-heading p{max-width:780px;margin:0;color:#b8c5d2;font-size:clamp(.85rem,1.3vw,1rem);line-height:1.7}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.vision-chip{flex:none;padding:8px 11px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:#b8f36b;font:9px "Space Mono",monospace;letter-spacing:.1em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#b8f36b;box-shadow:0 0 10px #b8f36b}
+.lab-ad-stage{position:relative;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);align-items:center;gap:clamp(18px,4vw,54px);min-height:285px;padding:clamp(16px,3vw,28px);overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:19px;background:linear-gradient(105deg,rgba(255,255,255,.045),rgba(255,255,255,.012));isolation:isolate}
+.lab-ad-art{position:relative;min-height:235px;display:grid;place-items:center;overflow:hidden;border-radius:14px;background:radial-gradient(circle at 50% 48%,var(--ad-glow,rgba(93,224,207,.22)),transparent 62%),linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.005))}
+.lab-ad-grid{position:absolute;inset:0;opacity:.19;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse,#000,transparent 76%)}
+.lab-ad-orbit{position:absolute;width:190px;height:190px;border:1px solid var(--ad-accent,rgba(117,224,193,.55));border-radius:42% 58% 57% 43% / 45% 44% 56% 55%;animation:lab-ad-rotate 18s linear infinite;box-shadow:0 0 35px var(--ad-glow,rgba(93,224,207,.15)),inset 0 0 24px var(--ad-glow,rgba(93,224,207,.12))}
+.lab-ad-orbit.orbit-b{width:145px;height:145px;border-style:dashed;transform:rotate(45deg);animation:lab-ad-rotate 24s linear infinite reverse;opacity:.7}
+.lab-ad-core{position:relative;z-index:1;width:94px;height:94px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:28px;background:linear-gradient(145deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#10182a;font-size:3.1rem;box-shadow:0 0 65px var(--ad-glow,rgba(93,224,207,.45)),inset 0 1px rgba(255,255,255,.7);transform:rotate(-9deg);animation:lab-ad-float 5s ease-in-out infinite}
+.lab-ad-float{position:absolute;z-index:2;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.28);border-radius:13px;background:rgba(9,17,31,.75);backdrop-filter:blur(8px);color:#fff;font:700 14px "Space Mono";box-shadow:0 8px 25px rgba(0,0,0,.18)}.float-a{top:15%;left:16%;color:var(--ad-accent-2,#ffc857)}.float-b{right:13%;top:24%;color:#ffc857;font-size:22px}.float-c{bottom:14%;left:23%;color:#ff9caf;font-size:25px}.float-d{bottom:18%;right:17%;color:#8bdccc}
+@keyframes lab-ad-rotate{to{transform:rotate(360deg)}}@keyframes lab-ad-float{0%,100%{transform:translateY(0) rotate(-9deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.lab-ad-copy{position:relative;z-index:1;padding:4px 0 22px}.lab-ad-category{display:block;margin-bottom:11px;color:var(--ad-accent-2,#ffc857);font:9px "Space Mono",monospace;letter-spacing:.15em}.lab-ad-copy h3{max-width:650px;margin:0 0 12px;color:#f5f4f0;font:800 clamp(1.5rem,3.2vw,2.55rem)/1.08 "Manrope",sans-serif;letter-spacing:-.05em}.lab-ad-copy p{max-width:620px;margin:0;color:#b6c3d1;font-size:.9rem;line-height:1.75}.lab-ad-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.lab-ad-tags span{padding:6px 9px;border:1px solid rgba(255,255,255,.15);border-radius:30px;color:#b6c9d1;font:8px "Space Mono";letter-spacing:.1em;background:rgba(255,255,255,.035)}
+.lab-ad-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lab-ad-cta{display:inline-flex;align-items:center;gap:16px;padding:11px 15px;border-radius:9px;background:linear-gradient(100deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#111a2a!important;font-size:.78rem;font-weight:800;text-decoration:none!important;box-shadow:0 7px 25px var(--ad-glow,rgba(93,224,207,.18))}.lab-ad-cta span{font-size:1rem}.lab-ad-refresh{padding:9px 0;border:0;background:transparent;color:#b8f36b;font-size:.75rem;font-weight:700;cursor:pointer}.lab-ad-pagination{position:absolute;right:clamp(16px,3vw,28px);bottom:13px;left:clamp(16px,3vw,28px);display:flex;justify-content:space-between;gap:10px;color:#72849a;font:8px "Space Mono";letter-spacing:.1em}
+.lab-ad-stage.ad-enter .lab-ad-copy{animation:lab-ad-in .55s ease both}.lab-ad-stage.ad-enter .lab-ad-art{animation:lab-ad-in .65s ease both}@keyframes lab-ad-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}.lab-ad-stage{grid-template-columns:1fr;gap:12px}.lab-ad-art{min-height:190px}.lab-ad-copy{padding-bottom:25px}.lab-ad-orbit{width:155px;height:155px}.lab-ad-orbit.orbit-b{width:120px;height:120px}.lab-ad-core{width:76px;height:76px;font-size:2.5rem}.lab-ad-pagination{font-size:7px}}
+
+
+
+
+/* PLAYGROUND — Gesture Atelier (scoped; other pages remain untouched) */
+.page-playground{width:100%;max-width:none}
+.atelier-page{--at-rose:#ff6b8a;--at-yellow:#ffc857;--at-mint:#75e0c1;--at-lilac:#c49aff;position:relative;overflow:hidden;padding:clamp(18px,3.5vw,42px);border:1px solid rgba(255,255,255,.11);border-radius:30px;background:radial-gradient(ellipse at 8% 10%,rgba(255,107,138,.12),transparent 32%),radial-gradient(ellipse at 90% 5%,rgba(117,224,193,.12),transparent 30%),linear-gradient(145deg,#111a2a,#101426 60%,#19152a);box-shadow:0 30px 90px rgba(0,0,0,.25)}
+.atelier-page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:radial-gradient(rgba(255,255,255,.45) .7px,transparent .7px);background-size:19px 19px;mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.atelier-topline,.atelier-hero,.atelier-studio,.atelier-footer{position:relative;z-index:1}
+.atelier-topline{display:flex;justify-content:space-between;gap:12px;align-items:center}.atelier-kicker,.atelier-section-tag,.atelier-overline{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.atelier-live{font:9px "Space Mono",monospace;letter-spacing:.12em;color:#b7c6d5}.atelier-live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#75e0c1;box-shadow:0 0 12px #75e0c1;margin-right:7px}
+.atelier-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);align-items:center;gap:24px;padding:clamp(32px,6vw,72px) 0 38px}.atelier-overline{color:#ffc857;margin:0 0 12px}.atelier-hero h1{font:800 clamp(2.5rem,6.2vw,5.3rem)/.98 "Manrope",sans-serif;letter-spacing:-.065em;margin:0;max-width:760px}.atelier-hero h1 em{font-style:normal;background:linear-gradient(100deg,#ff9caf,#ffc857 45%,#85e6d1 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.atelier-intro{max-width:670px;color:#b5c1d0;font-size:clamp(.94rem,1.4vw,1.08rem);line-height:1.8;margin:19px 0 22px}
+.atelier-prompt{max-width:620px;padding:15px 18px;border:1px solid rgba(255,200,87,.24);border-radius:15px;background:linear-gradient(100deg,rgba(255,200,87,.09),rgba(255,107,138,.04))}.atelier-prompt-label{display:block;color:#ffc857;font:9px "Space Mono",monospace;letter-spacing:.14em;margin-bottom:6px}.atelier-prompt strong{display:block;color:#fff0d5;font:700 1rem "Manrope",sans-serif}.atelier-text-btn{padding:7px 0 0;border:0;background:none;color:#85e6d1;font-size:.76rem;font-weight:700;cursor:pointer}
+.atelier-orbit{position:relative;width:min(100%,310px);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,rgba(255,200,87,.12),rgba(255,107,138,.07) 42%,transparent 70%);display:grid;place-items:center}.atelier-orbit-ring{position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%;inset:7%}.ring-two{inset:20%;border-style:dashed;animation:atelier-spin 35s linear infinite}.ring-one{border-color:rgba(117,224,193,.3);animation:atelier-spin 48s linear infinite reverse}.atelier-orbit-shape{position:absolute;filter:drop-shadow(0 0 18px currentColor)}.shape-star{top:10%;left:47%;font-size:2.8rem;color:#ffc857}.shape-flower{right:7%;top:40%;font-size:3.4rem;color:#ff8ca7}.shape-circle{left:13%;bottom:18%;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8c9eff,#e6a8ff);box-shadow:0 0 35px #8c9eff}.shape-spark{right:20%;bottom:12%;font-size:2rem;color:#75e0c1}.atelier-orbit-word{text-align:center;font:700 11px/1.8 "Space Mono",monospace;letter-spacing:.2em;color:#d8e7e6}
+@keyframes atelier-spin{to{transform:rotate(360deg)}}
+.atelier-studio{padding:clamp(15px,2.4vw,28px);border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(5,11,23,.62);box-shadow:inset 0 1px rgba(255,255,255,.04)}.atelier-studio-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:17px}.atelier-studio-head h2{margin:5px 0 0;font:700 clamp(1.25rem,2.6vw,1.8rem) "Manrope";letter-spacing:-.04em}.atelier-tools{display:flex;gap:6px;flex-wrap:wrap}.atelier-tool{padding:8px 12px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:rgba(255,255,255,.035);color:#b9c5d2;font-size:.75rem;cursor:pointer}.atelier-tool.active{background:rgba(117,224,193,.15);border-color:rgba(117,224,193,.45);color:#9af0d9}
+.atelier-workbench{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:14px}.atelier-canvas-wrap{position:relative;min-height:430px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:17px;background-color:#171d31;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),radial-gradient(ellipse at 50% 40%,#252944,#121a2b 75%);background-size:32px 32px,32px 32px,auto}.atelier-canvas-wrap canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}.atelier-canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:22px;text-align:center;pointer-events:none;color:#aab8ca}.atelier-canvas-hint span{font-size:2.4rem;color:#ffc857}.atelier-canvas-hint strong{font:700 1.05rem "Manrope";color:#e9edf4}.atelier-canvas-hint small{max-width:340px;font-size:.78rem;line-height:1.6}.atelier-canvas-badge{position:absolute;top:13px;left:14px;padding:6px 9px;border:1px solid rgba(255,255,255,.13);border-radius:7px;background:rgba(8,13,26,.65);color:#aebbd0;font:8px "Space Mono";letter-spacing:.12em;pointer-events:none}
+.atelier-side{display:flex;flex-direction:column;gap:12px;min-width:0}.atelier-camera-card,.atelier-guide,.atelier-director{padding:14px;border:1px solid rgba(255,255,255,.11);border-radius:15px;background:rgba(255,255,255,.035)}.atelier-side-title{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.atelier-side-title span,.atelier-side-title b,.atelier-director small{font:9px "Space Mono";letter-spacing:.1em;color:#8bdccc}.atelier-side-title b{color:#9aaabd}.atelier-camera-preview{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#0a1020}.atelier-camera-preview video,.atelier-camera-preview canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.atelier-camera-preview video{transform:scaleX(-1)}.atelier-camera-preview canvas{pointer-events:none}.atelier-camera-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#71839a;text-align:center}.atelier-camera-placeholder span{font-size:2rem;color:#75e0c1}.atelier-camera-placeholder small{font-size:.7rem}.atelier-camera-actions{display:flex;gap:7px;margin-top:9px}.atelier-action{padding:9px 12px;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:rgba(255,255,255,.05);color:#e4eaf0;font-size:.72rem;font-weight:700;cursor:pointer}.atelier-action.primary{border:0;background:linear-gradient(110deg,#ffc857,#ff9caf);color:#251927}.atelier-action:disabled{opacity:.4;cursor:not-allowed}.atelier-camera-note{margin:8px 0 0;color:#8494a9;font-size:.67rem;line-height:1.5}
+.atelier-guide .atelier-section-tag{display:block;margin-bottom:8px}.atelier-gesture-row{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}.atelier-gesture-row:last-child{border-bottom:0}.atelier-gesture-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(117,224,193,.09);font-size:1.2rem}.atelier-gesture-row strong,.atelier-gesture-row small{display:block}.atelier-gesture-row strong{font-size:.76rem;color:#edf3f5}.atelier-gesture-row small{font-size:.66rem;color:#91a0b4}
+.atelier-director{display:flex;align-items:flex-start;gap:10px;background:linear-gradient(110deg,rgba(255,107,138,.08),rgba(117,224,193,.06))}.atelier-director-dot{flex:none;width:8px;height:8px;margin-top:5px;border-radius:50%;background:#ffc857;box-shadow:0 0 12px #ffc857}.atelier-director small{display:block;margin-bottom:5px;color:#ffc857}.atelier-director strong{display:block;color:#cbd6e3;font-size:.74rem;font-weight:500;line-height:1.5}
+.atelier-bottom-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.025)}.atelier-palette,.atelier-canvas-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.atelier-palette>span{margin-right:4px;color:#8fa0b5;font:8px "Space Mono";letter-spacing:.1em}.atelier-swatch{width:23px;height:23px;border:2px solid transparent;border-radius:50%;background:var(--swatch);cursor:pointer;box-shadow:0 0 0 1px rgba(255,255,255,.15)}.atelier-swatch.selected{outline:2px solid white;outline-offset:3px}.atelier-score{display:flex;align-items:center;gap:7px;margin-right:5px}.atelier-score b{font:700 1.2rem "Space Mono";color:#ffc857}.atelier-score small{font:8px "Space Mono";letter-spacing:.08em;color:#8fa0b5}
+.atelier-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(30px,5vw,54px) 4px 8px}.atelier-footer h2{margin:8px 0 6px;font:800 clamp(1.45rem,3vw,2.3rem) "Manrope";letter-spacing:-.045em}.atelier-footer p{max-width:620px;margin:0;color:#aab8c8;font-size:.87rem}.atelier-footer-mark{flex:none;text-align:right;font:800 clamp(1.25rem,3vw,2.1rem)/1.05 "Manrope";letter-spacing:-.06em;color:#dce8eb}.atelier-footer-mark em{font-style:normal;color:#ff9caf}
+@media(max-width:850px){.atelier-hero{grid-template-columns:1fr}.atelier-orbit{width:210px;max-width:55vw}.atelier-workbench{grid-template-columns:1fr}.atelier-side{display:grid;grid-template-columns:1fr 1fr}.atelier-director{grid-column:1/-1}.atelier-camera-preview{aspect-ratio:16/8}.atelier-canvas-wrap{min-height:360px}}
+@media(max-width:600px){.page-playground{width:100%}.atelier-page{padding:17px;border-radius:20px}.atelier-topline{align-items:flex-start;flex-direction:column}.atelier-hero{padding:35px 0 25px}.atelier-orbit{width:175px}.atelier-studio-head{align-items:flex-start;flex-direction:column}.atelier-tools{width:100%}.atelier-tool{flex:1}.atelier-canvas-wrap{min-height:310px}.atelier-side{display:flex}.atelier-bottom-bar{align-items:flex-start}.atelier-palette{width:100%}.atelier-canvas-actions{width:100%}.atelier-footer{align-items:flex-start;flex-direction:column}.atelier-footer-mark{text-align:left}}
+
+/* LANDING PAGE — four balanced research and development pillars */
+.pillars-intro{position:relative;padding:clamp(22px,4vw,42px) clamp(4px,1vw,12px) 30px;text-align:center}
+.pillars-overline{display:inline-block;color:var(--accent-2);font:9px "Space Mono",monospace;letter-spacing:.16em}
+.pillars-intro h1{max-width:930px;margin:15px auto 17px;font-size:clamp(2.25rem,5.2vw,4.3rem);line-height:1.04;letter-spacing:-.065em;background:linear-gradient(100deg,#f3f7f8 12%,#9be7d8 56%,#c5f18a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pillars-lead{max-width:820px;margin:0 auto;color:#b3c3d0;font-size:clamp(.94rem,1.4vw,1.08rem);line-height:1.85}
+.pillars-statement{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin:24px 0 0;color:#d8e7e8;font:9px "Space Mono";letter-spacing:.12em}
+.pillars-statement i{width:22px;height:1px;background:linear-gradient(90deg,var(--accent-2),var(--accent))}
+.pillar-section{margin:20px 0 25px}
+.pillar-section-heading{margin:0 0 20px;text-align:center}
+.pillar-section-heading h2{display:table;margin:9px auto 10px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.pillar-section-heading p{max-width:700px;margin:auto}
+.pillar-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.pillar-card{--pillar:#79dfcc;overflow:hidden;border:1px solid var(--line);border-radius:21px;background:linear-gradient(150deg,rgba(20,39,61,.96),rgba(10,23,40,.97));box-shadow:0 15px 38px rgba(0,0,0,.16);transition:transform .25s,border-color .25s}
+.pillar-card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--pillar) 48%,transparent)}
+.pillar-physics{--pillar:#82e2cf}.pillar-data{--pillar:#a9c7ff}.pillar-health{--pillar:#ff9db6}.pillar-social{--pillar:#c7a5ff}
+.pillar-visual{height:190px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 50%,color-mix(in srgb,var(--pillar) 16%,transparent),transparent 68%),linear-gradient(135deg,rgba(255,255,255,.035),transparent)}
+.pillar-content{padding:21px 23px 23px}
+.pillar-index{color:var(--pillar);font:8px "Space Mono";letter-spacing:.14em}
+.pillar-content h3{margin:9px 0 13px;color:#f1f5f6;font-size:clamp(1.18rem,2vw,1.48rem);letter-spacing:-.035em}
+.pillar-content p{font-size:.86rem;line-height:1.78;margin:0 0 11px}
+.pillar-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.pillar-tags span{padding:5px 8px;border:1px solid color-mix(in srgb,var(--pillar) 28%,transparent);border-radius:30px;background:color-mix(in srgb,var(--pillar) 8%,transparent);color:#d6e3e8;font-size:.67rem}
+.pillar-social .pillar-content{padding:16px 19px 18px}
+.pillar-social .pillar-content h3{margin:6px 0 9px}
+.pillar-social .pillar-content p{font-size:.78rem;line-height:1.55;margin-bottom:8px}
+.pillar-social .pillar-tags{margin-top:10px}
+.pillar-social .pillar-tags span{padding:4px 7px;font-size:.62rem}
+.visual-caption{position:absolute;bottom:12px;left:0;width:100%;text-align:center;color:rgba(220,239,241,.6);font:8px "Space Mono";letter-spacing:.16em}
+.fluid-field{position:absolute;inset:0;overflow:hidden}
+.fluid-particle{position:absolute;width:12px;height:12px;border:1px solid rgba(130,226,207,.9);border-radius:42% 58% 55% 45%;background:rgba(130,226,207,.22);box-shadow:0 0 14px rgba(130,226,207,.35);animation:particle-drift 6s ease-in-out infinite alternate}
+.p1{left:9%;top:22%;animation-delay:-1s}.p2{left:19%;top:65%;animation-delay:-3s}.p3{left:29%;top:34%;animation-delay:-2s}.p4{left:38%;top:76%;animation-delay:-4s}.p5{left:49%;top:19%;animation-delay:-2.5s}.p6{left:59%;top:56%;animation-delay:-1.5s}.p7{left:70%;top:28%;animation-delay:-3.5s}.p8{left:82%;top:68%;animation-delay:-.5s}.p9{left:91%;top:39%;animation-delay:-2.2s}.p10{left:14%;top:43%;width:7px;height:7px}.p11{left:34%;top:17%;width:7px;height:7px}.p12{left:45%;top:48%;width:8px;height:8px}.p13{left:65%;top:79%;width:8px;height:8px}.p14{left:76%;top:48%;width:7px;height:7px}.p15{left:87%;top:17%;width:8px;height:8px}.p16{left:24%;top:83%;width:7px;height:7px}.p17{left:54%;top:84%;width:7px;height:7px}.p18{left:96%;top:83%;width:7px;height:7px}
+.fluid-wave{position:absolute;left:-10%;width:120%;height:85px;border:1px solid rgba(130,226,207,.24);border-radius:50%;transform:rotate(-8deg);animation:wave-flow 9s ease-in-out infinite alternate}.wave-one{top:30%}.wave-two{top:45%;transform:rotate(8deg);animation-delay:-4s}
+@keyframes particle-drift{to{transform:translate(13px,-12px) rotate(100deg);border-radius:55% 45% 40% 60%}}
+@keyframes wave-flow{to{transform:translateX(3%) rotate(5deg) scaleY(.72)}}
+.data-constellation,.social-network{position:absolute;inset:0;display:grid;place-items:center}
+.data-constellation svg,.social-network svg{width:min(94%,440px);height:100%;overflow:visible}
+.data-links path,.social-links-art path{fill:none;stroke:rgba(169,199,255,.35);stroke-width:1.4;stroke-dasharray:5 6;animation:dash-flow 8s linear infinite}
+.data-nodes circle{fill:#a9c7ff;stroke:#e6efff;stroke-width:1.5;filter:drop-shadow(0 0 8px rgba(169,199,255,.8));transform-box:fill-box;transform-origin:center;animation:node-pulse 3s ease-in-out infinite alternate}
+.data-nodes circle:nth-child(even){animation-delay:-1.4s}
+.data-pulse circle{fill:none;stroke:rgba(169,199,255,.5);stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:pulse-out 3s ease-out infinite}
+.data-pulse circle:last-child{animation-delay:1.5s}
+@keyframes dash-flow{to{stroke-dashoffset:-90}}@keyframes node-pulse{to{transform:scale(1.3);opacity:.65}}@keyframes pulse-out{0%{transform:scale(.5);opacity:.8}100%{transform:scale(1.65);opacity:0}}
+.data-label{position:absolute;padding:5px 8px;border:1px solid rgba(169,199,255,.25);border-radius:6px;background:rgba(10,20,38,.75);color:#c9d9ff;font:7px "Space Mono";letter-spacing:.1em}
+.label-a{left:8%;top:18%}.label-b{right:8%;top:24%}.label-c{right:13%;bottom:23%}
+.health-orbit{position:absolute;inset:0;display:grid;place-items:center}
+.health-ring{position:absolute;width:140px;height:140px;border:1px solid rgba(255,157,182,.4);border-radius:50%;animation:health-spin 16s linear infinite}
+.ring-b{width:190px;height:110px;border-style:dashed;transform:rotate(55deg);animation-direction:reverse;animation-duration:21s}
+.health-cross{z-index:2;width:60px;height:60px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.6);border-radius:19px;background:linear-gradient(145deg,#ff9db6,#f6c2ce);color:#291722;font:300 3rem "Manrope";box-shadow:0 0 35px rgba(255,157,182,.45);animation:health-float 4s ease-in-out infinite}
+.health-pulse{position:absolute;width:88%;height:75px;opacity:.72}
+.health-pulse path{fill:none;stroke:#ff9db6;stroke-width:2.2;stroke-dasharray:12 7;animation:dash-flow 5s linear infinite}
+.health-node{position:absolute;z-index:3;width:31px;height:31px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:10px;background:#17243a;color:#ffdce5;font:11px "Space Mono";box-shadow:0 0 18px rgba(255,157,182,.25);animation:health-float 4.5s ease-in-out infinite}
+.hn-a{top:22%;left:27%}.hn-b{right:24%;top:27%;animation-delay:-1s}.hn-c{bottom:20%;left:47%;animation-delay:-2s}
+@keyframes health-spin{to{transform:rotate(360deg)}}@keyframes health-float{50%{translate:0 -8px}}
+.social-links-art path{stroke:rgba(199,165,255,.48);stroke-dasharray:4 5}
+.social-nodes-art circle{fill:rgba(199,165,255,.13);stroke:#c7a5ff;stroke-width:1.5;filter:drop-shadow(0 0 8px rgba(199,165,255,.3));animation:node-pulse 4s ease-in-out infinite alternate}
+.social-nodes-art circle:first-child{fill:rgba(199,165,255,.34);animation-delay:-1s}
+.social-symbols text{fill:#eadfff;text-anchor:middle;font:18px "Manrope";dominant-baseline:middle}
+.pillars-method{margin:22px 0 30px;padding:clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:21px;background:linear-gradient(120deg,rgba(93,224,207,.06),rgba(184,243,107,.035))}
+.pillars-method h2{margin:8px 0 12px;padding:0;border:0}
+.pillars-method>p{max-width:850px}
+.method-track{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:22px}
+.method-track>div{display:grid;gap:3px;min-width:0}
+.method-track b{color:var(--accent-2);font:9px "Space Mono"}
+.method-track strong{font:700 .92rem "Manrope";color:var(--ink)}
+.method-track small{font-size:.72rem;color:var(--subtle)}
+.method-track>i{color:var(--accent);font-style:normal}
+@media(max-width:760px){.pillar-grid{grid-template-columns:1fr}.pillar-visual{height:175px}.pillar-content{padding:19px}.method-track{display:grid;grid-template-columns:1fr 1fr;gap:17px}.method-track>i{display:none}.pillars-statement{gap:8px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.pillar-card,.fluid-particle,.fluid-wave,.data-links path,.data-nodes circle,.data-pulse circle,.health-ring,.health-cross,.health-pulse path,.health-node,.social-links-art path,.social-nodes-art circle{animation:none!important;transition:none!important}}
+
+
+/* Standalone landing-page navigation */
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{min-height:100vh}
+.site-header{position:sticky;top:0;z-index:50}
+.standalone-nav a{text-decoration:none}
+.site-footer{margin-top:30px}
+@media(max-width:760px){.primary-nav{display:flex}.secondary-nav{display:none}.header-actions .status-chip{display:none}}
+
+/* Principal Investigator subpage */
+.pi-page{width:min(1120px,calc(100% - 42px));margin:0 auto;animation:rise .35s ease both}
+.pi-hero{position:relative;overflow:hidden;padding:clamp(24px,5vw,48px);border:1px solid var(--line);border-radius:26px;background:radial-gradient(ellipse at 95% 8%,rgba(184,243,107,.15),transparent 38%),radial-gradient(ellipse at 5% 100%,rgba(93,224,207,.13),transparent 40%),linear-gradient(135deg,#112239,#101a2b 65%,#17243a);box-shadow:var(--shadow)}
+.pi-kicker{font:10px "Space Mono";letter-spacing:.16em;color:var(--accent-2);text-transform:uppercase}
+.pi-hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:28px;align-items:center}
+.pi-monogram{width:145px;height:145px;margin:0 auto 14px;display:grid;place-items:center;border-radius:38px;border:1px solid rgba(184,243,107,.35);background:linear-gradient(145deg,rgba(184,243,107,.2),rgba(93,224,207,.13));box-shadow:0 20px 50px rgba(0,0,0,.2);font:800 4rem "Manrope";letter-spacing:-.1em;color:var(--accent)}
+.pi-identity{text-align:center;color:var(--muted);font-size:.82rem}.pi-hero h1{font-size:clamp(2.2rem,5vw,4rem);margin:12px 0 8px}.pi-role{font:700 1rem "Manrope";color:var(--accent-2);margin-bottom:5px}.pi-affiliation{color:var(--muted);margin-bottom:18px}.pi-lead{max-width:720px;font-size:1.02rem;line-height:1.8}
+.pi-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pi-actions a{display:inline-flex;align-items:center;padding:10px 15px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.84rem;border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.04)}.pi-actions a.primary{background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b;border:0}
+.pi-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 28px}.pi-stat{padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(16,31,50,.82)}.pi-stat strong{display:block;color:var(--accent);font:800 clamp(1.5rem,3vw,2rem) "Manrope";line-height:1.2}.pi-stat span{display:block;color:var(--muted);font-size:.76rem;margin-top:5px}
+.pi-section{margin:26px 0}.pi-section>h2{margin-bottom:14px}.pi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.pi-card{padding:20px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,rgba(18,36,58,.94),rgba(12,26,44,.92))}.pi-card h3{margin:0 0 9px;font-size:1.08rem}.pi-card p:last-child{margin-bottom:0}.pi-card .pi-label{font:9px "Space Mono";letter-spacing:.12em;color:var(--subtle);text-transform:uppercase;display:block;margin-bottom:8px}
+.pi-timeline{border-left:1px solid rgba(93,224,207,.4);padding-left:22px;margin:16px 0 0 8px}.pi-timeline-item{position:relative;padding:0 0 19px}.pi-timeline-item:before{content:"";position:absolute;left:-28px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}.pi-timeline-item strong{display:block;color:var(--ink)}.pi-timeline-item small{color:var(--accent-2);font:10px "Space Mono"}.pi-timeline-item p{margin:4px 0 0}
+.pi-publication{padding:15px 18px;margin:0 0 10px;border:1px solid var(--line);border-radius:14px;background:rgba(16,31,50,.65)}.pi-publication strong{display:block}.pi-publication span{font-size:.83rem;color:var(--muted)}
+.pi-note{font-size:.78rem;color:var(--subtle);margin-top:12px}
+@media(max-width:760px){.pi-hero-grid{grid-template-columns:1fr}.pi-identity{order:-1}.pi-monogram{width:105px;height:105px;font-size:3rem}.pi-stats{grid-template-columns:repeat(2,1fr)}.pi-grid{grid-template-columns:1fr}.pi-page{width:calc(100% - 28px)}}
+
+</style>
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Lab 360° home">
+    <span class="brand-mark">360<span>°</span></span>
+    <span class="brand-copy"><strong>Lab <span>360°</span></strong><small>SCIENCE · INTELLIGENCE · IMPACT</small></span>
+  </a>
+  <nav class="primary-nav standalone-nav" aria-label="Primary navigation">
+    <a href="#pillars" class="nav-link home-nav">Pillars</a>
+    <a href="#method" class="nav-link home-nav">Our approach</a>
+    <a href="#pi" class="nav-link" id="pi-nav">Principal Investigator</a>
+  </nav>
+  <div class="header-actions"><span class="status-chip"><i></i> Exploring the complex</span></div>
+</header>
+<main class="site-main" id="top">
+
+<section aria-label="Lab 360 creative intelligence spotlight" class="vision-lab" id="vision-lab">
+<div class="vision-heading">
+<div>
+<span class="vision-eyebrow">LAB 360° / CREATIVE INTELLIGENCE FOR TECHZIES</span>
+<h2 id="lab-ad-headline">What if your next big idea could change the world?</h2>
+<p id="lab-ad-subtitle">Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.</p>
+</div>
+<span class="vision-chip"><i></i> IDEAS IN MOTION</span>
+</div>
+<div class="lab-ad-stage" id="lab-ad-stage">
+<div aria-hidden="true" class="lab-ad-art">
+<div class="lab-ad-orbit orbit-a"></div><div class="lab-ad-orbit orbit-b"></div>
+<div class="lab-ad-core"><span id="lab-ad-symbol">✳</span></div>
+<span class="lab-ad-float float-a">AI</span><span class="lab-ad-float float-b">✦</span>
+<span class="lab-ad-float float-c">∞</span><span class="lab-ad-float float-d">01</span>
+<div class="lab-ad-grid"></div>
+</div>
+<div class="lab-ad-copy">
+<span class="lab-ad-category" id="lab-ad-category">THE NEXT FRONTIER · AI + SCIENCE</span>
+<h3 id="lab-ad-title">From questions to possibilities.</h3>
+<p id="lab-ad-description">We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.</p>
+<div class="lab-ad-tags" id="lab-ad-tags"><span>EXPLORE</span><span>EXPERIMENT</span><span>CREATE</span></div>
+<div class="lab-ad-actions">
+<a class="lab-ad-cta" href="#pillars" id="lab-ad-link">Explore the Lab <span>↗</span></a>
+<button aria-label="Show another Lab 360 feature" class="lab-ad-refresh" id="lab-ad-refresh" type="button">Another spark ↻</button>
+</div>
+</div>
+<div class="lab-ad-pagination"><span id="lab-ad-count">01 / 08</span><span>EVERY VISIT. A NEW PERSPECTIVE.</span></div>
+</div>
+</section>
+<header class="pillars-intro">
+<span class="pillars-overline">LAB 360° / FOUR PILLARS · ONE CONNECTED VISION</span>
+<h1>Engineering data to engineer life</h1>
+<p class="pillars-lead">Lab 360° is an interdisciplinary research and innovation initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We develop scientific models, data-driven systems and human-centred technologies to understand complex behaviour and address challenges that matter in the world around us.</p>
+<div class="pillars-statement"><span>OBSERVE</span><i></i><span>UNDERSTAND</span><i></i><span>MODEL</span><i></i><span>ENABLE</span></div>
+</header>
+<section aria-labelledby="pillars-title" class="pillar-section" id="pillars">
+<div class="pillar-section-heading">
+<span class="pillars-overline">OUR DEVELOPMENT LANDSCAPE</span>
+<h2 id="pillars-title">Four primary pillars</h2>
+<p>Distinct domains, connected by a shared commitment to rigorous modelling, intelligent computation and meaningful outcomes.</p>
+</div>
+<div class="pillar-grid">
+<article class="pillar-card pillar-physics" id="physics-of-life">
+<div aria-hidden="true" class="pillar-visual">
+<div class="fluid-field">
+<span class="fluid-particle p1"></span><span class="fluid-particle p2"></span><span class="fluid-particle p3"></span><span class="fluid-particle p4"></span><span class="fluid-particle p5"></span><span class="fluid-particle p6"></span><span class="fluid-particle p7"></span><span class="fluid-particle p8"></span><span class="fluid-particle p9"></span><span class="fluid-particle p10"></span><span class="fluid-particle p11"></span><span class="fluid-particle p12"></span><span class="fluid-particle p13"></span><span class="fluid-particle p14"></span><span class="fluid-particle p15"></span><span class="fluid-particle p16"></span><span class="fluid-particle p17"></span><span class="fluid-particle p18"></span>
+<div class="fluid-wave wave-one"></div><div class="fluid-wave wave-two"></div>
+<span class="visual-caption">MATTER / MOTION / LIFE</span>
+</div>
+</div>
+<div class="pillar-content">
+<span class="pillar-index">01 / BIOLOGICAL &amp; COMPLEX SYSTEMS</span>
+<h3>Physics of Life</h3>
+<p>How do physical principles shape living systems, from molecules and cells to tissues, organisms and collective behaviour? We explore life as a dynamic, multiscale process—where active matter, fluctuations, transport, mechanics and self-organisation generate structure, adaptation and emergent function.</p>
+<p>Our research spans biological and active matter, cellular and tissue mechanics, collective motion, intracellular transport, non-equilibrium dynamics and the physics of living fluids. Models of jamming, yielding, glassy relaxation and non-Gaussian transport help reveal how living and life-inspired materials reorganise, adapt and respond to stress across scales.</p>
+<div class="pillar-tags"><span>Biological physics</span><span>Active matter</span><span>Cell &amp; tissue mechanics</span><span>Living fluids</span></div>
+</div>
+</article>
+<article class="pillar-card pillar-data" id="material-engineering">
+<div aria-hidden="true" class="pillar-visual">
+<div class="data-constellation">
+<svg role="presentation" viewbox="0 0 440 210">
+<g class="data-links"><path d="M42 106 L120 48 L204 91 L290 35 L390 76 M42 106 L126 164 L204 91 L302 158 L390 76 M120 48 L126 164 M290 35 L302 158 M204 91 L390 76"></path></g>
+<g class="data-nodes"><circle cx="42" cy="106" r="12"></circle><circle cx="120" cy="48" r="9"></circle><circle cx="126" cy="164" r="9"></circle><circle cx="204" cy="91" r="16"></circle><circle cx="290" cy="35" r="9"></circle><circle cx="302" cy="158" r="11"></circle><circle cx="390" cy="76" r="13"></circle></g>
+<g class="data-pulse"><circle cx="204" cy="91" r="27"></circle><circle cx="204" cy="91" r="42"></circle></g>
+</svg>
+<div class="data-label label-a">STRUCTURE</div><div class="data-label label-b">PROPERTY</div><div class="data-label label-c">DESIGN</div>
+<span class="visual-caption">STRUCTURE → FUNCTION → DESIGN</span>
+</div>
+</div>
+<div class="pillar-content">
+<span class="pillar-index">02 / COMPUTATIONAL MATERIALS INNOVATION</span>
+<h3>Material Engineering</h3>
+<p>We combine materials science, computational modelling and data-driven methods to understand, design and optimise materials for real-world applications. By connecting experimental measurements, scientific literature, simulation outputs and materials databases through integrated data pipelines and APIs, we turn complex information into useful structure–property insights.</p>
+<p>Our development directions include materials informatics, property prediction, candidate screening, microstructure analysis, process–structure–property relationships and inverse materials design. Machine learning, physics-informed models and simulation-assisted workflows can accelerate the exploration of functional, lightweight, durable and sustainable materials, while supporting more efficient experimentation and engineering decisions.</p>
+<div class="pillar-tags"><span>Materials informatics</span><span>Property prediction</span><span>Microstructure</span><span>Sustainable materials</span></div>
+</div>
+</article>
+<article class="pillar-card pillar-health" id="healthcare-ai">
+<div aria-hidden="true" class="pillar-visual">
+<div class="health-orbit">
+<div class="health-ring ring-a"></div><div class="health-ring ring-b"></div>
+<div class="health-cross">+</div>
+<svg class="health-pulse" role="presentation" viewbox="0 0 420 130"><path d="M5 68 H90 L119 68 L145 28 L178 105 L211 49 L238 68 H415"></path></svg>
+<span class="health-node hn-a">AI</span><span class="health-node hn-b">◉</span><span class="health-node hn-c">✧</span>
+<span class="visual-caption">SENSE / INTERPRET / SUPPORT</span>
+</div>
+</div>
+<div class="pillar-content">
+<span class="pillar-index">03 / HUMAN-CENTRED INTELLIGENCE</span>
+<h3>Healthcare AI</h3>
+<p>We develop responsible AI models for personalised wellbeing, functional assessment and accessible screening. Multimodal data—from images and movement to lifestyle and physiological signals—can help characterise individual patterns and support tailored insights, with careful attention to validation, uncertainty, privacy and clinical boundaries.</p>
+<p>Development directions include obesity and nutrition assessment, vision-guided neuro-rehabilitation, vision-based functional measurements and screening tools for mental wellbeing. Vision-language models can support more natural therapy guidance and human–AI interaction, helping translate observations into understandable feedback for individuals, caregivers and professionals.</p>
+<div class="pillar-tags"><span>Personalised wellbeing</span><span>Nutrition &amp; obesity</span><span>Neuro-rehabilitation</span><span>Vision-language AI</span></div>
+</div>
+</article>
+<article class="pillar-card pillar-social" id="ai-for-society">
+<div aria-hidden="true" class="pillar-visual">
+<div class="social-network">
+<svg role="presentation" viewbox="0 0 440 210">
+<g class="social-links-art"><path d="M220 100 L94 48 M220 100 L346 48 M220 100 L94 160 M220 100 L346 160 M94 48 L94 160 M346 48 L346 160"></path></g>
+<g class="social-nodes-art"><circle cx="220" cy="100" r="36"></circle><circle cx="94" cy="48" r="21"></circle><circle cx="346" cy="48" r="21"></circle><circle cx="94" cy="160" r="21"></circle><circle cx="346" cy="160" r="21"></circle></g>
+<g class="social-symbols"><text x="220" y="109">♥</text><text x="94" y="55">+</text><text x="346" y="55">⌂</text><text x="94" y="167">✦</text><text x="346" y="167">◎</text></g>
+</svg>
+<span class="visual-caption">TECHNOLOGY WITH A HUMAN PURPOSE</span>
+</div>
+</div>
+<div class="pillar-content">
+<span class="pillar-index">04 / HUMAN-CENTRED INNOVATION</span>
+<h3>AI for Society</h3>
+<p>We engineer AI systems that connect data, people and physical infrastructure to address challenges at the scale of communities. Large public datasets, health and environmental APIs, sensor streams and local knowledge can be integrated into automated pipelines for monitoring, forecasting and decision support. In areas such as epidemics and public health, these systems can support epidemic modelling and forecasting, trend analysis, risk mapping, resource coordination and early-warning workflows—helping institutions act on changing conditions with greater speed and situational awareness.</p>
+<p>Our work also explores Physical AI: intelligent systems that perceive and act in the real world through cameras, edge devices, mobile platforms and assistive robotics. Applications include vision-guided elderly care, activity and fall-risk awareness, rehabilitation support, assistive technologies and an E-Blood Bank platform for donor discovery and coordination. By combining predictive models, AI-driven automation and human-centred design, we aim to build practical systems for healthcare access, disaster response and resilient public services, with privacy, reliability and human oversight built into deployment.</p>
+<div class="pillar-tags"><span>Epidemic intelligence</span><span>AI-driven automation</span><span>Physical AI</span><span>E-Blood Bank</span><span>Assistive care</span></div>
+</div>
+</article>
+</div>
+</section>
+<section class="pillars-method" id="method">
+<span class="pillars-overline">A SHARED DEVELOPMENT METHOD</span>
+<h2>From a complex question to a useful system</h2>
+<p>Across all four pillars, we move through a common cycle: understand the domain, build and test models, integrate relevant data and tools, then evaluate performance in the context where the system is intended to be used. Scientific rigour, transparent limitations and human needs guide each stage.</p>
+<div class="method-track">
+<div><b>01</b><strong>Discover</strong><small>Frame the challenge</small></div><i>→</i>
+<div><b>02</b><strong>Model</strong><small>Explain and predict</small></div><i>→</i>
+<div><b>03</b><strong>Integrate</strong><small>Build useful workflows</small></div><i>→</i>
+<div><b>04</b><strong>Evaluate</strong><small>Validate in context</small></div>
+</div>
+</section>
+
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Lab 360°</span>
+  <span>Observe → Model → Engineer → Enable</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+</main>
+
+<main class="pi-page" id="pi-page" hidden>
+  <section class="pi-hero">
+    <div class="pi-hero-grid">
+      <div>
+        <span class="pi-kicker">LAB 360° / PRINCIPAL INVESTIGATOR</span>
+        <h1>Suman Dutta</h1>
+        <div class="pi-role">PhD, AMRSC · Assistant Professor (Senior Grade)</div>
+        <div class="pi-affiliation">School of Artificial Intelligence · Amrita Vishwa Vidyapeetham · Coimbatore, India</div>
+        <p class="pi-lead">An interdisciplinary physicist working across soft and active matter, complex systems and data-driven scientific discovery. His research combines physical modelling, numerical simulation and learning-based methods to understand complex behaviour and develop intelligent approaches for scientific and societal challenges.</p>
+        <div class="pi-actions">
+          <a class="primary" href="mailto:sumandutta.physics@gmail.com">Contact the PI ↗</a>
+          <a href="https://sd3ph.github.io/CV.html" target="_blank" rel="noopener">Academic CV ↗</a>
+          <a href="https://sd3ph.github.io/" target="_blank" rel="noopener">Research website ↗</a>
+        </div>
+      </div>
+      <div class="pi-identity"><div class="pi-monogram" aria-label="Suman Dutta monogram">SD</div><div>Research · Teaching · Mentoring<br>Interdisciplinary collaboration</div></div>
+    </div>
+  </section>
+
+  <section class="pi-stats" aria-label="Academic profile highlights">
+    <div class="pi-stat"><strong>13+</strong><span>Research publications</span></div>
+    <div class="pi-stat"><strong>6+ yrs</strong><span>Post-PhD research experience</span></div>
+    <div class="pi-stat"><strong>28+</strong><span>Invited and scientific talks</span></div>
+    <div class="pi-stat"><strong>93%+</strong><span>Average teaching feedback</span></div>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">01 / RESEARCH IDENTITY</span>
+    <h2>Ideas across disciplines.</h2>
+    <div class="pi-grid">
+      <article class="pi-card"><span class="pi-label">Physics of Life</span><h3>Soft, active and disordered matter</h3><p>Soft matter physics, active matter, non-equilibrium statistical mechanics, glassy dynamics, dynamical heterogeneity, complex fluids, non-Gaussian diffusion, rheology and yielding.</p></article>
+      <article class="pi-card"><span class="pi-label">Scientific machine learning</span><h3>Data-driven model engineering</h3><p>Reduced-order modelling, Koopman and HAVOK methods, scientific machine learning, interpretable computational approaches and AI methods for complex systems.</p></article>
+      <article class="pi-card"><span class="pi-label">Methods</span><h3>From physical insight to prediction</h3><p>Numerical simulations, molecular dynamics, statistical physics, information-theoretic measures, dynamical systems analysis and learning-based prediction.</p></article>
+      <article class="pi-card"><span class="pi-label">Interdisciplinary directions</span><h3>Models with practical reach</h3><p>Research interests extend to materials informatics, multimodal and agentic AI, personalised nutrition and data-informed approaches to complex real-world systems.</p></article>
+    </div>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">02 / CAREER</span><h2>Professional experience.</h2>
+    <div class="pi-timeline">
+      <div class="pi-timeline-item"><small>MAR 2025 – PRESENT</small><strong>Assistant Professor (Senior Grade)</strong><p>School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore, India.</p></div>
+      <div class="pi-timeline-item"><small>JAN 2024 – SEP 2024</small><strong>Postdoctoral Fellow · Simons Centre for the Study of Living Machines</strong><p>National Centre for Biological Sciences – TIFR, Bengaluru.</p></div>
+      <div class="pi-timeline-item"><small>JAN 2021 – DEC 2023</small><strong>Postdoctoral Fellow · International Centre for Theoretical Sciences</strong><p>Tata Institute of Fundamental Research, Bengaluru.</p></div>
+      <div class="pi-timeline-item"><small>FEB 2018 – DEC 2020</small><strong>Postdoctoral Fellow · The Institute of Mathematical Sciences</strong><p>Chennai, India.</p></div>
+    </div>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">03 / SELECTED RESEARCH</span><h2>Research contributions.</h2>
+    <div class="pi-publication"><strong>Persistently Non-Gaussian Metastable Liquids</strong><span>V. Vaibhav, T. Das &amp; S. Dutta · Annalen der Physik, 538(4), e00247 (2026) · Corresponding author</span></div>
+    <div class="pi-publication"><strong>Crystal to liquid cross-over in the active Calogero–Moser model</strong><span>S. Santra et al. · Journal of Statistical Mechanics: Theory and Experiment (2025)</span></div>
+    <div class="pi-publication"><strong>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</strong><span>S. Dutta, P. Chaudhuri, M. Rao &amp; C. Dasgupta · arXiv:2509.00376 (2025) · First and corresponding author</span></div>
+    <div class="pi-publication"><strong>Entropic timescales of dynamic heterogeneity in supercooled liquid</strong><span>V. Vaibhav &amp; S. Dutta · Physical Review E (Letter), 109, L062102 (2024) · Corresponding author</span></div>
+    <p class="pi-note">Selected entries summarised from the published academic CV. See the full CV for the complete publication record and links.</p>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">04 / PROJECTS &amp; COLLABORATION</span><h2>Building computational research capabilities.</h2>
+    <div class="pi-grid">
+      <article class="pi-card"><span class="pi-label">International computing grant · Co-PI</span><h3>Glassy Rheology — EuroHPC JU Benchmark Grant</h3><p>2000 node-hours on LUMI-G, supporting computational studies of glassy rheology. Completed 2025–26.</p></article>
+      <article class="pi-card"><span class="pi-label">Industry–academia collaboration · Co-PI</span><h3>Multimodal Agentic AI for Geological Well Log Analysis</h3><p>Proof-of-concept system developed with Telesto Energy Pvt. Ltd. through Amrita’s Directorate of Corporate &amp; Industry Relations. Completed 2025–26.</p></article>
+    </div>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">05 / TEACHING &amp; MENTORING</span><h2>Teaching that connects fields.</h2>
+    <div class="pi-grid">
+      <article class="pi-card"><h3>Mathematics for Intelligent Systems – III</h3><p>B.Tech AI &amp; Data Science · 2026–27 · Two sections · Average TLP feedback: 95.52% (as reported in the CV).</p></article>
+      <article class="pi-card"><h3>Introduction to Material Informatics</h3><p>B.Tech AI &amp; Data Science · 2025–26 · Two sections · Average TLP feedback: 91.29% (as reported in the CV).</p></article>
+      <article class="pi-card"><h3>Mathematics for Intelligent Systems – I</h3><p>B.Tech AI &amp; Data Science · 2025–26 · Two sections · Average TLP feedback: 93.11% (as reported in the CV).</p></article>
+      <article class="pi-card"><h3>Research mentoring</h3><p>PhD supervision and research internships spanning computational modelling, active matter, collective dynamics and data-driven methods.</p></article>
+    </div>
+  </section>
+
+  <section class="pi-section">
+    <span class="pi-kicker">06 / EDUCATION &amp; ACADEMIC SERVICE</span><h2>Academic foundations.</h2>
+    <div class="pi-grid">
+      <article class="pi-card"><span class="pi-label">2012–2018 · Degree awarded 2019</span><h3>PhD · Numerical Studies on the Dynamics of Soft Matter Systems</h3><p>S. N. Bose National Centre for Basic Sciences, Kolkata. Degree awarded by the University of Calcutta. Advisor: Professor J. Chakrabarti.</p></article>
+      <article class="pi-card"><span class="pi-label">2010–2012</span><h3>M.Sc.</h3><p>S. N. Bose National Centre for Basic Sciences, Kolkata. Degree awarded by West Bengal University of Technology.</p></article>
+      <article class="pi-card"><h3>Academic and professional service</h3><p>Academic coordination, curriculum design, M.Tech and PhD admissions, journal peer review and scientific session chairing.</p></article>
+      <article class="pi-card"><h3>Scientific outreach</h3><p>Organised and contributed to AI and sustainability-focused student hackathons, interdisciplinary workshops and international knowledge-exchange activities.</p></article>
+    </div>
+  </section>
+  <footer class="site-footer"><span>© <span class="pi-year"></span> Lab 360°</span><span>Principal Investigator · Suman Dutta</span><a href="#top" id="back-overview">Back to overview ↑</a></footer>
+</main>
+<script>
+(() => {
+'use strict';
+  function initialiseVisionApplet() {
+    const stage = document.getElementById('lab-ad-stage');
+    const headline = document.getElementById('lab-ad-headline');
+    const subtitle = document.getElementById('lab-ad-subtitle');
+    const category = document.getElementById('lab-ad-category');
+    const title = document.getElementById('lab-ad-title');
+    const description = document.getElementById('lab-ad-description');
+    const tags = document.getElementById('lab-ad-tags');
+    const link = document.getElementById('lab-ad-link');
+    const symbol = document.getElementById('lab-ad-symbol');
+    const count = document.getElementById('lab-ad-count');
+    const refresh = document.getElementById('lab-ad-refresh');
+    if (!stage || stage.dataset.ready === 'true') return;
+    stage.dataset.ready = 'true';
+
+    const campaigns = [
+      {headline:'What if your next big idea could change the world?',subtitle:'Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.',category:'THE NEXT FRONTIER · AI + SCIENCE',title:'From questions to possibilities.',description:'We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.',tags:['EXPLORE','EXPERIMENT','CREATE'],symbol:'✳',a:'#75e0c1',b:'#8c9eff',glow:'rgba(93,224,207,.28)',accent:'#75e0c1',accent2:'#ffc857',cta:'Explore the Lab',href:'#pillars'},
+      {headline:'Don’t just imagine the future. Model it.',subtitle:'A playground for techZies who think beyond the obvious and build beyond the expected.',category:'CREATIVE INTELLIGENCE · COMPUTE + CREATE',title:'Code meets curiosity.',description:'From data-driven discovery to intelligent systems, we turn computational thinking into tools for exploring the real world.',tags:['COMPUTE','QUESTION','INVENT'],symbol:'⌘',a:'#ffc857',b:'#ff8ca7',glow:'rgba(255,155,117,.25)',accent:'#ffc857',accent2:'#ff9caf',cta:'See what we explore',href:'#pillars'},
+      {headline:'The universe is full of data. What will you discover?',subtitle:'For curious minds who see patterns, ask better questions and love a beautiful challenge.',category:'DATA · PATTERNS · DISCOVERY',title:'Find the signal in the beautiful chaos.',description:'We use data science, machine learning and physics-inspired ideas to uncover patterns in complex natural and engineered systems.',tags:['DATA STORIES','HIDDEN PATTERNS','DISCOVERY'],symbol:'⌁',a:'#8c9eff',b:'#75e0c1',glow:'rgba(140,158,255,.25)',accent:'#8c9eff',accent2:'#75e0c1',cta:'Explore our research',href:'#pillars'},
+      {headline:'Think like a scientist. Create like an artist.',subtitle:'A home for experimentation, playful thinking and ideas that cross boundaries.',category:'THE ART OF THINKING · SCIENCE + AI',title:'Where imagination gets an algorithm.',description:'We connect scientific questions with computational creativity to make new ways of seeing, testing and understanding.',tags:['IMAGINE','PROTOTYPE','DISCOVER'],symbol:'✺',a:'#e6a8ff',b:'#ffc857',glow:'rgba(230,168,255,.25)',accent:'#e6a8ff',accent2:'#ffc857',cta:'Meet the Lab',href:'#method'},
+      {headline:'Complex problems deserve creative minds.',subtitle:'Explore a world where physics, AI and bold questions work together.',category:'COMPLEX SYSTEMS · NEW PERSPECTIVES',title:'Make complexity your playground.',description:'From fluids and materials to collective behaviour, we investigate how complex systems evolve, adapt and surprise us.',tags:['PHYSICS','COMPLEXITY','AI'],symbol:'◎',a:'#ff6b8a',b:'#8c9eff',glow:'rgba(255,107,138,.25)',accent:'#ff6b8a',accent2:'#8c9eff',cta:'Dive into research',href:'#pillars'},
+      {headline:'Curiosity is your most powerful technology.',subtitle:'Bring your questions. Bring your imagination. Let’s see what happens when they meet AI.',category:'FOR THE CURIOUS · FOR THE BOLD',title:'A lab for the beautifully curious.',description:'We make room for open-ended exploration, data-driven ideas and the joy of discovering something nobody expected.',tags:['ASK MORE','LEARN FAST','BUILD BOLD'],symbol:'✦',a:'#75e0c1',b:'#ffc857',glow:'rgba(117,224,193,.25)',accent:'#75e0c1',accent2:'#ffc857',cta:'Discover Lab 360°',href:'#method'},
+      {headline:'From a tiny observation to a giant possibility.',subtitle:'Big discoveries often begin with a small question. What’s yours?',category:'IDEAS TO IMPACT · LEARN + BUILD',title:'Small sparks. Expansive thinking.',description:'Explore projects, learning experiences and research that bring intelligent computation closer to meaningful scientific questions.',tags:['OBSERVE','CONNECT','TRANSFORM'],symbol:'✧',a:'#ffc857',b:'#e6a8ff',glow:'rgba(255,200,87,.25)',accent:'#ffc857',accent2:'#e6a8ff',cta:'Explore projects',href:'#pillars'},
+      {headline:'The next breakthrough might start with you.',subtitle:'Creative intelligence for techZies: think freely, experiment fearlessly, make something matter.',category:'LAB 360° · OPEN INVITATION',title:'Come curious. Leave inspired.',description:'Discover the people, ideas and experiments at the intersection of physics, artificial intelligence and complex systems.',tags:['PEOPLE','IDEAS','POSSIBILITIES'],symbol:'∞',a:'#ff8ca7',b:'#75e0c1',glow:'rgba(255,140,167,.25)',accent:'#ff8ca7',accent2:'#75e0c1',cta:'Step inside',href:'#method'}
+    ];
+
+    let current = -1;
+    let timer = null;
+    function showCampaign(index) {
+      if (index === current) index = (index + 1) % campaigns.length;
+      current = index;
+      const c = campaigns[current];
+      headline.textContent = c.headline;
+      subtitle.textContent = c.subtitle;
+      category.textContent = c.category;
+      title.textContent = c.title;
+      description.textContent = c.description;
+      symbol.textContent = c.symbol;
+      tags.replaceChildren(...c.tags.map(t => { const span=document.createElement('span'); span.textContent=t; return span; }));
+      link.textContent = c.cta + ' ↗';
+      link.href = c.href;
+      stage.style.setProperty('--ad-core-a',c.a);
+      stage.style.setProperty('--ad-core-b',c.b);
+      stage.style.setProperty('--ad-glow',c.glow);
+      stage.style.setProperty('--ad-accent',c.accent);
+      stage.style.setProperty('--ad-accent-2',c.accent2);
+      count.textContent = String(current+1).padStart(2,'0') + ' / ' + String(campaigns.length).padStart(2,'0');
+      stage.classList.remove('ad-enter');
+      void stage.offsetWidth;
+      stage.classList.add('ad-enter');
+    }
+    // Select a different campaign on each page visit/session, then rotate periodically.
+    const first = Math.floor(Math.random() * campaigns.length);
+    showCampaign(first);
+    refresh.addEventListener('click',() => {
+      showCampaign((current+1)%campaigns.length);
+      if (timer) { clearInterval(timer); timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000); }
+    });
+    timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    document.addEventListener('visibilitychange',() => {
+      if (document.hidden && timer) { clearInterval(timer); timer=null; }
+      else if (!document.hidden && !timer) timer=setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    });
+  }
+
+const homePage = document.getElementById('top');
+const piPage = document.getElementById('pi-page');
+const piNav = document.getElementById('pi-nav');
+function renderRoute() {
+  const showPI = location.hash === '#pi';
+  homePage.hidden = showPI;
+  piPage.hidden = !showPI;
+  document.querySelectorAll('.home-nav').forEach(a => a.classList.toggle('active', !showPI && location.hash === a.getAttribute('href')));
+  piNav.classList.toggle('active', showPI);
+  if (showPI) window.scrollTo(0,0);
+  else if (location.hash && location.hash !== '#top') {
+    const target = document.querySelector(location.hash);
+    if (target) setTimeout(() => target.scrollIntoView({behavior:'smooth',block:'start'}), 30);
+  }
+}
+window.addEventListener('hashchange', renderRoute);
+document.getElementById('back-overview').addEventListener('click', () => { location.hash = '#top'; });
+document.querySelectorAll('.home-nav').forEach(a => a.addEventListener('click', () => { if (location.hash === a.getAttribute('href')) renderRoute(); }));
+initialiseVisionApplet();
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelector('.pi-year').textContent = new Date().getFullYear();
+renderRoute();
+})();
+</script>
+</body>
+</html>
