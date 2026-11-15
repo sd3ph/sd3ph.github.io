@@ -246,6 +246,44 @@ tr:hover td{background:rgba(255,255,255,.025)}
 @media(max-width:850px){.atelier-hero{grid-template-columns:1fr}.atelier-orbit{width:210px;max-width:55vw}.atelier-workbench{grid-template-columns:1fr}.atelier-side{display:grid;grid-template-columns:1fr 1fr}.atelier-director{grid-column:1/-1}.atelier-camera-preview{aspect-ratio:16/8}.atelier-canvas-wrap{min-height:360px}}
 @media(max-width:600px){.page-playground{width:100%}.atelier-page{padding:17px;border-radius:20px}.atelier-topline{align-items:flex-start;flex-direction:column}.atelier-hero{padding:35px 0 25px}.atelier-orbit{width:175px}.atelier-studio-head{align-items:flex-start;flex-direction:column}.atelier-tools{width:100%}.atelier-tool{flex:1}.atelier-canvas-wrap{min-height:310px}.atelier-side{display:flex}.atelier-bottom-bar{align-items:flex-start}.atelier-palette{width:100%}.atelier-canvas-actions{width:100%}.atelier-footer{align-items:flex-start;flex-direction:column}.atelier-footer-mark{text-align:left}}
 </style>
+<link rel="stylesheet" href="/static/visitor-guide.css">
+<style id="lab360-visitor-guide-inline-css">
+/* Self-contained visitor-guide styling: works even when /static/visitor-guide.css is absent. */
+#lab360-guide-root{position:fixed!important;right:clamp(16px,3vw,30px)!important;bottom:clamp(16px,3vw,28px)!important;z-index:2147483000!important;width:auto!important;height:auto!important;max-width:calc(100vw - 32px)!important;font-family:Inter,Manrope,system-ui,-apple-system,"Segoe UI",sans-serif!important;color:#edf4ff!important;line-height:1.45!important;isolation:isolate}
+#lab360-guide-root *{box-sizing:border-box}
+#lab360-guide-root button{font:inherit;cursor:pointer}
+#lab360-guide-panel{display:none;position:absolute!important;right:0!important;bottom:72px!important;width:min(430px,calc(100vw - 32px))!important;max-height:min( min(760px, calc(100vh - 112px)), 82vh)!important;overflow:hidden!important;flex-direction:column!important;gap:0!important;padding:0!important;margin:0!important;border:1px solid rgba(145,177,220,.24)!important;border-radius:22px!important;background:linear-gradient(155deg,#101c31 0%,#0a1425 58%,#101a2c 100%)!important;box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.035) inset!important;color:#edf4ff!important;text-align:left!important;transform:none!important}
+#lab360-guide-panel[aria-hidden="false"],#lab360-guide-panel.is-open,#lab360-guide-panel.open{display:flex!important}
+#lab360-guide-panel .vg-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;padding:19px 20px!important;border-bottom:1px solid rgba(255,255,255,.09)!important;background:rgba(255,255,255,.025)!important}
+#lab360-guide-panel .vg-brand{display:flex!important;align-items:center!important;gap:12px!important;min-width:0!important}
+#lab360-guide-panel .vg-brand-mark{display:grid!important;place-items:center!important;flex:none!important;width:44px!important;height:44px!important;border-radius:14px!important;background:linear-gradient(135deg,#7ce3d0,#8da8ff)!important;color:#071522!important;font-size:14px!important;font-weight:900!important;letter-spacing:-.06em!important;box-shadow:0 6px 22px rgba(124,227,208,.18)!important}
+#lab360-guide-panel .vg-brand strong{display:block!important;color:#f6f8ff!important;font-size:17px!important;font-weight:800!important;line-height:1.25!important}
+#lab360-guide-panel .vg-brand small{display:block!important;margin-top:4px!important;color:#8ea5c2!important;font-size:9px!important;font-weight:700!important;letter-spacing:.13em!important}
+#lab360-guide-panel .vg-close{display:grid!important;place-items:center!important;flex:none!important;width:34px!important;height:34px!important;padding:0!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:10px!important;background:rgba(255,255,255,.07)!important;color:#dce8f7!important;font-size:21px!important;line-height:1!important}
+#lab360-guide-panel .vg-close:hover{background:rgba(255,255,255,.14)!important}
+#lab360-guide-panel .vg-intro{padding:17px 20px 12px!important}
+#lab360-guide-panel #vg-title{display:block!important;color:#f4f7ff!important;font-size:17px!important;font-weight:800!important}
+#lab360-guide-panel #vg-subtitle{margin:6px 0 0!important;color:#a8bbd3!important;font-size:13px!important;line-height:1.55!important}
+#lab360-guide-panel .vg-suggestions{display:flex!important;flex-wrap:wrap!important;gap:7px!important;padding:0 20px 14px!important}
+#lab360-guide-panel .vg-suggestions button{padding:8px 11px!important;border:1px solid rgba(137,170,213,.22)!important;border-radius:9px!important;background:rgba(137,170,213,.10)!important;color:#dceaff!important;font-size:11px!important;font-weight:650!important;transition:background .2s,border-color .2s!important}
+#lab360-guide-panel .vg-suggestions button:hover{background:rgba(124,227,208,.16)!important;border-color:rgba(124,227,208,.45)!important}
+#lab360-guide-panel #vg-transcript{flex:1 1 auto!important;min-height:105px!important;max-height:230px!important;overflow-y:auto!important;margin:0 20px!important;padding:13px!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:13px!important;background:rgba(3,9,19,.38)!important;color:#dbe7f7!important;font-size:13px!important;line-height:1.55!important;overscroll-behavior:contain!important}
+#lab360-guide-panel .vg-empty{color:#8299b5!important;text-align:center!important;padding:18px 5px!important}
+#lab360-guide-panel .vg-status{display:flex!important;align-items:center!important;gap:8px!important;padding:12px 20px 8px!important;color:#93a9c4!important;font-size:11px!important}
+#lab360-guide-panel .vg-status i{display:block!important;width:7px!important;height:7px!important;border-radius:50%!important;background:#8b9bb0!important;box-shadow:0 0 0 3px rgba(139,155,176,.12)!important}
+#lab360-guide-panel .vg-controls{display:flex!important;gap:8px!important;align-items:center!important;padding:0 20px 13px!important}
+#lab360-guide-panel .vg-btn{min-height:38px!important;padding:9px 13px!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:9px!important;background:rgba(255,255,255,.07)!important;color:#d9e5f5!important;font-size:12px!important;font-weight:700!important}
+#lab360-guide-panel .vg-btn.primary{border-color:transparent!important;background:linear-gradient(110deg,#7ce3d0,#9db5ff)!important;color:#071522!important}
+#lab360-guide-panel .vg-btn:disabled{opacity:.38!important;cursor:not-allowed!important}
+#lab360-guide-panel #vg-error{display:none;margin:0 20px 10px!important;padding:8px 10px!important;border:1px solid rgba(255,125,125,.22)!important;border-radius:8px!important;background:rgba(255,90,90,.08)!important;color:#ffb4b4!important;font-size:11px!important}
+#lab360-guide-panel #vg-error:not(:empty){display:block!important}
+#lab360-guide-panel .vg-privacy{padding:0 20px 16px!important;color:#7187a3!important;font-size:10px!important;line-height:1.5!important}
+#lab360-guide-launch{display:flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;min-height:48px!important;padding:0 17px!important;border:1px solid rgba(160,205,231,.35)!important;border-radius:999px!important;background:linear-gradient(110deg,#172a43,#0e1b2e)!important;color:#f2f7ff!important;font-size:13px!important;font-weight:750!important;letter-spacing:.01em!important;box-shadow:0 10px 35px rgba(0,0,0,.38),0 0 25px rgba(124,227,208,.10)!important;white-space:nowrap!important;transition:transform .2s,box-shadow .2s!important}
+#lab360-guide-launch:hover{transform:translateY(-2px)!important;box-shadow:0 14px 38px rgba(0,0,0,.44),0 0 28px rgba(124,227,208,.18)!important}
+#lab360-guide-launch .vg-launch-orb{display:grid!important;place-items:center!important;width:24px!important;height:24px!important;border-radius:50%!important;background:linear-gradient(135deg,#7ce3d0,#9db5ff)!important;color:#071522!important;font-size:15px!important}
+@media(max-width:520px){#lab360-guide-root{right:12px!important;bottom:12px!important;max-width:calc(100vw - 24px)!important}#lab360-guide-panel{right:0!important;bottom:62px!important;width:calc(100vw - 24px)!important;max-height:calc(100dvh - 92px)!important;border-radius:18px!important}#lab360-guide-panel .vg-head{padding:15px 16px!important}#lab360-guide-panel .vg-intro{padding:14px 16px 10px!important}#lab360-guide-panel .vg-suggestions{padding:0 16px 12px!important}#lab360-guide-panel #vg-transcript{margin:0 16px!important;max-height:32vh!important}#lab360-guide-panel .vg-status{padding:10px 16px 7px!important}#lab360-guide-panel .vg-controls{padding:0 16px 11px!important}#lab360-guide-panel .vg-privacy{padding:0 16px 13px!important}}
+@media(prefers-reduced-motion:reduce){#lab360-guide-root *{transition:none!important}}
+</style>
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -940,52 +978,893 @@ tr:hover td{background:rgba(255,255,255,.025)}
 
 </template>
 <template id="section-template-highlight">
-<section class="vision-lab" id="vision-lab" aria-label="Lab 360 creative intelligence spotlight">
-  <div class="vision-heading">
-    <div>
-      <span class="vision-eyebrow">LAB 360° / CREATIVE INTELLIGENCE FOR TECHZIES</span>
-      <h2 id="lab-ad-headline">What if your next big idea could change the world?</h2>
-      <p id="lab-ad-subtitle">Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.</p>
-    </div>
-    <span class="vision-chip"><i></i> IDEAS IN MOTION</span>
+
+<section class="vision-lab" id="vision-lab" aria-label="Lab 360 brand animation">
+  <div class="lab360-brand-embed" style="position:relative;width:100%;aspect-ratio:16 / 9;overflow:hidden;border:1px solid rgba(185,245,109,.22);border-radius:22px;background:#060d15;box-shadow:0 24px 70px rgba(0,0,0,.28);">
+    <iframe
+      title="Lab 360° animated brand identity"
+      srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;Lab 360° — Brand Animation&lt;/title&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+  &lt;link
+    href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap&quot;
+    rel=&quot;stylesheet&quot;
+  /&gt;
+  &lt;style&gt;
+    :root {
+      --bg-deep: #060d15;
+      --bg-navy: #0a1522;
+      --brand-white: #f3f7fb;
+      --brand-lime: #b9f56d;
+      --brand-lime-glow: rgba(185, 245, 109, 0.45);
+      --brand-slate: #6f8398;
+      --grid-line: rgba(111, 131, 152, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(circle at 28% 50%, #0d2233 0%, var(--bg-navy) 45%, var(--bg-deep) 100%);
+      font-family: &#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Roboto, sans-serif;
+      color: var(--brand-white);
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+    }
+
+    canvas#bg-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    /* Subtle film vignette &amp; scanline texture */
+    .vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, transparent 48%, rgba(3, 7, 12, 0.72) 100%);
+      z-index: 2;
+    }
+
+    /* Brand Lockup Container */
+    .brand-container {
+      position: relative;
+      z-index: 5;
+      padding: 3.2rem 4rem;
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .lockup {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    /* Main Title Row */
+    .wordmark-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.28em;
+      font-size: clamp(3.2rem, 7.2vw, 6.2rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      position: relative;
+    }
+
+    .mask-wrap {
+      overflow: hidden;
+      display: inline-flex;
+      padding: 0.08em 0.04em 0.1em 0;
+      margin: -0.08em -0.04em -0.1em 0;
+    }
+
+    .word-lab {
+      color: var(--brand-white);
+      display: inline-block;
+      transform: translateY(115%);
+      opacity: 0;
+      filter: blur(8px);
+      will-change: transform, opacity, filter;
+    }
+
+    .word-360 {
+      color: var(--brand-lime);
+      display: inline-flex;
+      align-items: flex-start;
+      transform: translateY(115%);
+      opacity: 0;
+      filter: blur(8px);
+      text-shadow: 0 0 28px rgba(185, 245, 109, 0.18);
+      will-change: transform, opacity, filter, text-shadow;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .degree-symbol {
+      display: inline-block;
+      position: relative;
+      transform-origin: center center;
+    }
+
+    /* Micro flare on the degree ring lock */
+    .degree-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--brand-lime);
+      transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Precision laser divider line during reveal */
+    .scan-rule {
+      position: relative;
+      width: 100%;
+      height: 1px;
+      margin: 0.95rem 0 0.85rem 0;
+      background: linear-gradient(90deg, rgba(185, 245, 109, 0.85), rgba(111, 131, 152, 0.2), transparent);
+      transform: scaleX(0);
+      transform-origin: left center;
+      opacity: 0;
+    }
+
+    /* Tagline Row: SCIENCE · INTELLIGENCE · IMPACT */
+    .tagline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.95em;
+      font-family: &#x27;JetBrains Mono&#x27;, ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: clamp(0.76rem, 1.45vw, 1.18rem);
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      color: var(--brand-slate);
+      text-transform: uppercase;
+      padding-left: 0.18em;
+    }
+
+    .tag-item {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      filter: blur(4px);
+      transition: color 0.4s ease, text-shadow 0.4s ease;
+    }
+
+    .tag-item.highlight {
+      color: #a9c1d6;
+      text-shadow: 0 0 12px rgba(185, 245, 109, 0.25);
+    }
+
+    .tag-dot {
+      display: inline-block;
+      opacity: 0;
+      transform: scale(0);
+      color: var(--brand-lime);
+      font-weight: 700;
+    }
+
+    /* Keyframe Animation States */
+    .is-playing .word-lab {
+      animation: revealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 1.55s forwards;
+    }
+
+    .is-playing .word-360 {
+      animation:
+        revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.72s forwards,
+        limeLockGlow 1.1s ease-out 2.55s forwards;
+    }
+
+    .is-playing .degree-pulse {
+      animation: degreeShockwave 1.15s cubic-bezier(0.16, 1, 0.3, 1) 2.58s forwards;
+    }
+
+    .is-playing .scan-rule {
+      animation: ruleSweep 1.35s cubic-bezier(0.22, 1, 0.36, 1) 2.15s forwards;
+    }
+
+    .is-playing .tag-science {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.75s forwards;
+    }
+    .is-playing .dot-1 {
+      animation: dotPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 2.98s forwards;
+    }
+    .is-playing .tag-intelligence {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.12s forwards;
+    }
+    .is-playing .dot-2 {
+      animation: dotPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 3.35s forwards;
+    }
+    .is-playing .tag-impact {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.48s forwards;
+    }
+
+    @keyframes revealUp {
+      0% {
+        transform: translateY(115%);
+        opacity: 0;
+        filter: blur(10px);
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+        filter: blur(0px);
+      }
+    }
+
+    @keyframes limeLockGlow {
+      0% {
+        text-shadow: 0 0 18px rgba(185, 245, 109, 0.15);
+      }
+      35% {
+        text-shadow: 0 0 42px rgba(185, 245, 109, 0.75), 0 0 14px rgba(255, 255, 255, 0.45);
+      }
+      100% {
+        text-shadow: 0 0 26px rgba(185, 245, 109, 0.22);
+      }
+    }
+
+    @keyframes degreeShockwave {
+      0% {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(6.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes ruleSweep {
+      0% {
+        transform: scaleX(0);
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.9;
+      }
+      70% {
+        transform: scaleX(1);
+        opacity: 0.65;
+      }
+      100% {
+        transform: scaleX(1);
+        opacity: 0.14;
+      }
+    }
+
+    @keyframes tagIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+        filter: blur(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes dotPop {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1.25);
+        color: var(--brand-lime);
+      }
+      100% {
+        opacity: 0.75;
+        transform: scale(1);
+        color: var(--brand-slate);
+      }
+    }
+
+    /* Subtle HUD Corner Brackets */
+    .hud-corners {
+      position: fixed;
+      inset: 24px;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hud-corners.visible {
+      opacity: 1;
+    }
+
+    .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: rgba(111, 131, 152, 0.25);
+      border-style: solid;
+    }
+    .corner.tl { top: 0; left: 0; border-width: 1px 0 0 1px; }
+    .corner.tr { top: 0; right: 0; border-width: 1px 1px 0 0; }
+    .corner.bl { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+    .corner.br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+    .telemetry-readout {
+      position: fixed;
+      top: 32px;
+      right: 36px;
+      font-family: &#x27;JetBrains Mono&#x27;, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: rgba(111, 131, 152, 0.5);
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .telemetry-readout span {
+      color: rgba(185, 245, 109, 0.7);
+    }
+
+    /* Minimal Floating Controls */
+    .controls {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(10, 21, 34, 0.65);
+      border: 1px solid rgba(111, 131, 152, 0.2);
+      backdrop-filter: blur(12px);
+      opacity: 0.35;
+      transition: opacity 0.3s ease, border-color 0.3s ease;
+    }
+
+    .controls:hover {
+      opacity: 1;
+      border-color: rgba(185, 245, 109, 0.35);
+    }
+
+    .ctrl-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: var(--brand-white);
+      font-family: &#x27;JetBrains Mono&#x27;, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .ctrl-btn:hover {
+      background: rgba(185, 245, 109, 0.12);
+      color: var(--brand-lime);
+    }
+
+    .ctrl-btn.active {
+      background: rgba(185, 245, 109, 0.18);
+      color: var(--brand-lime);
+    }
+
+    .ctrl-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(111, 131, 152, 0.25);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;stage&quot;&gt;
+    &lt;canvas id=&quot;bg-canvas&quot;&gt;&lt;/canvas&gt;
+    &lt;div class=&quot;vignette&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;hud-corners&quot; id=&quot;hud&quot;&gt;
+      &lt;div class=&quot;corner tl&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner tr&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner bl&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner br&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;telemetry-readout&quot;&gt;
+      PHASE &lt;span id=&quot;phase-angle&quot;&gt;000.0°&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;brand-container&quot; id=&quot;brand-container&quot;&gt;
+      &lt;div class=&quot;lockup&quot; id=&quot;lockup&quot;&gt;
+        &lt;div class=&quot;wordmark-row&quot;&gt;
+          &lt;span class=&quot;mask-wrap&quot;&gt;
+            &lt;span class=&quot;word-lab&quot;&gt;Lab&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&quot;mask-wrap&quot;&gt;
+            &lt;span class=&quot;word-360&quot; id=&quot;word-360&quot;&gt;
+              &lt;span id=&quot;counter-val&quot;&gt;000&lt;/span&gt;&lt;span class=&quot;degree-symbol&quot;&gt;°&lt;span class=&quot;degree-pulse&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;scan-rule&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;tagline&quot;&gt;
+          &lt;span class=&quot;tag-item tag-science&quot;&gt;SCIENCE&lt;/span&gt;
+          &lt;span class=&quot;tag-dot dot-1&quot;&gt;·&lt;/span&gt;
+          &lt;span class=&quot;tag-item tag-intelligence&quot;&gt;INTELLIGENCE&lt;/span&gt;
+          &lt;span class=&quot;tag-dot dot-2&quot;&gt;·&lt;/span&gt;
+          &lt;span class=&quot;tag-item tag-impact&quot;&gt;IMPACT&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;controls&quot;&gt;
+&lt;div class=&quot;ctrl-divider&quot;&gt;&lt;/div&gt;
+      &lt;button class=&quot;ctrl-btn active&quot; id=&quot;loop-btn&quot; title=&quot;Toggle Auto-Loop (8.5s)&quot;&gt;
+        AUTO-LOOP: ON
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const canvas = document.getElementById(&#x27;bg-canvas&#x27;);
+      const ctx = canvas.getContext(&#x27;2d&#x27;);
+      const lockup = document.getElementById(&#x27;lockup&#x27;);
+      const brandContainer = document.getElementById(&#x27;brand-container&#x27;);
+      const counterEl = document.getElementById(&#x27;counter-val&#x27;);
+      const phaseAngleEl = document.getElementById(&#x27;phase-angle&#x27;);
+      const hud = document.getElementById(&#x27;hud&#x27;);
+const loopBtn = document.getElementById(&#x27;loop-btn&#x27;);
+      const tagItems = document.querySelectorAll(&#x27;.tag-item&#x27;);
+
+      let width = 0;
+      let height = 0;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      let startTime = performance.now();
+      let autoLoop = true;
+      let loopTimer = null;
+
+      // Subtle mouse parallax
+      const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      // Particle constellation (Intelligence + Science)
+      const PARTICLE_COUNT = 58;
+      const particles = [];
+
+      function initParticles() {
+        particles.length = 0;
+        for (let i = 0; i &lt; PARTICLE_COUNT; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const dist = 120 + Math.random() * Math.max(width, height) * 0.48;
+          particles.push({
+            angle,
+            baseDist: dist,
+            dist,
+            speed: (0.04 + Math.random() * 0.08) * (Math.random() &gt; 0.5 ? 1 : -1),
+            size: 1 + Math.random() * 1.8,
+            alpha: 0.15 + Math.random() * 0.45,
+            isLime: Math.random() &lt; 0.28,
+            pulseOffset: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (particles.length === 0) initParticles();
+      }
+
+      window.addEventListener(&#x27;resize&#x27;, resize);
+      resize();
+
+      window.addEventListener(&#x27;pointermove&#x27;, (e) =&gt; {
+        pointer.tx = (e.clientX / width - 0.5) * 2;
+        pointer.ty = (e.clientY / height - 0.5) * 2;
+      });
+
+      // Easing utilities
+      const easeOutExpo = (t) =&gt; (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+      const easeInOutCubic = (t) =&gt; (t &lt; 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+      const clamp = (v, min, max) =&gt; Math.max(min, Math.min(max, v));
+
+      // Counter animation: 000 -&gt; 360 synced with reveal
+      function updateCounter(elapsedSec) {
+        const start = 1.72;
+        const duration = 0.88;
+        if (elapsedSec &lt; start) {
+          counterEl.textContent = &#x27;000&#x27;;
+          return;
+        }
+        const p = clamp((elapsedSec - start) / duration, 0, 1);
+        const eased = easeOutExpo(p);
+        const val = Math.round(eased * 360);
+        counterEl.textContent = String(val).padStart(3, &#x27;0&#x27;);
+      }
+
+      // Draw subtle architectural grid
+      function drawGrid(cx, cy, opacity) {
+        if (opacity &lt;= 0.005) return;
+        const step = 72;
+        ctx.save();
+        ctx.strokeStyle = `rgba(111, 131, 152, ${0.065 * opacity})`;
+        ctx.lineWidth = 1;
+
+        const offsetX = (cx % step) - step;
+        const offsetY = (cy % step) - step;
+
+        ctx.beginPath();
+        for (let x = offsetX; x &lt; width; x += step) {
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, height);
+        }
+        for (let y = offsetY; y &lt; height; y += step) {
+          ctx.moveTo(0, y);
+          ctx.lineTo(width, y);
+        }
+        ctx.stroke();
+
+        // Crosshair intersections near center
+        ctx.strokeStyle = `rgba(185, 245, 109, ${0.12 * opacity})`;
+        for (let x = offsetX; x &lt; width; x += step * 2) {
+          for (let y = offsetY; y &lt; height; y += step * 2) {
+            const dist = Math.hypot(x - cx, y - cy);
+            if (dist &lt; 420) {
+              ctx.beginPath();
+              ctx.moveTo(x - 3, y);
+              ctx.lineTo(x + 3, y);
+              ctx.moveTo(x, y - 3);
+              ctx.lineTo(x, y + 3);
+              ctx.stroke();
+            }
+          }
+        }
+        ctx.restore();
+      }
+
+      // Draw 360° Orbital Telemetry Rings &amp; Sweep
+      function drawOrbitals(cx, cy, elapsedSec) {
+        const baseR = Math.min(width, height) * 0.29;
+
+        // Intro sweep progress (0.1s -&gt; 1.55s)
+        const introP = clamp((elapsedSec - 0.08) / 1.45, 0, 1);
+        const sweepAngle = easeInOutCubic(introP) * Math.PI * 2;
+
+        // Ambient rotation after intro
+        const ambientRot = elapsedSec * 0.14;
+
+        // Expanding ring opacity fades softly once typography settles so logo stays hero
+        const ringPresence = elapsedSec &lt; 2.2
+          ? clamp(elapsedSec / 0.6, 0, 1)
+          : Math.max(0.32, 1 - (elapsedSec - 2.2) * 0.25);
+
+        ctx.save();
+        ctx.translate(cx, cy);
+
+        // 1. Primary 360° glowing arc sweep during genesis
+        if (introP &gt; 0 &amp;&amp; elapsedSec &lt; 3.4) {
+          const fadeOut = elapsedSec &gt; 1.7 ? clamp(1 - (elapsedSec - 1.7) / 1.5, 0, 1) : 1;
+          const arcR = baseR * (0.72 + 0.28 * easeOutExpo(introP));
+
+          ctx.save();
+          ctx.rotate(-Math.PI / 2);
+
+          // Glowing lime arc trail
+          const grad = ctx.createConicGradient(0, 0, 0);
+          grad.addColorStop(0, `rgba(185, 245, 109, 0)`);
+          grad.addColorStop(0.75, `rgba(185, 245, 109, ${0.25 * fadeOut})`);
+          grad.addColorStop(1, `rgba(185, 245, 109, ${0.95 * fadeOut})`);
+
+          ctx.beginPath();
+          ctx.arc(0, 0, arcR, 0, sweepAngle);
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 2.5;
+          ctx.shadowColor = &#x27;rgba(185, 245, 109, 0.85)&#x27;;
+          ctx.shadowBlur = 16;
+          ctx.stroke();
+
+          // Leading luminous head particle
+          if (introP &lt; 0.995) {
+            const hx = Math.cos(sweepAngle) * arcR;
+            const hy = Math.sin(sweepAngle) * arcR;
+            ctx.beginPath();
+            ctx.arc(hx, hy, 4, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(243, 255, 224, ${fadeOut})`;
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+
+        // 2. Precision degree tick ring (outer)
+        const tickAlpha = ringPresence * 0.42;
+        ctx.save();
+        ctx.rotate(ambientRot * 0.35);
+        const tickR = baseR * 1.18;
+        const totalTicks = 72;
+        const revealedTicks = Math.floor(totalTicks * clamp(introP * 1.15, 0, 1));
+
+        for (let i = 0; i &lt; revealedTicks; i++) {
+          const a = (i / totalTicks) * Math.PI * 2;
+          const isMajor = i % 6 === 0;
+          const len = isMajor ? 10 : 4;
+          ctx.beginPath();
+          ctx.moveTo(Math.cos(a) * tickR, Math.sin(a) * tickR);
+          ctx.lineTo(Math.cos(a) * (tickR + len), Math.sin(a) * (tickR + len));
+          ctx.strokeStyle = isMajor
+            ? `rgba(185, 245, 109, ${tickAlpha * 0.75})`
+            : `rgba(111, 131, 152, ${tickAlpha * 0.55})`;
+          ctx.lineWidth = isMajor ? 1.4 : 1;
+          ctx.stroke();
+        }
+        ctx.restore();
+
+        // 3. Segmented dashed orbital ring (counter-rotating)
+        ctx.save();
+        ctx.rotate(-ambientRot * 0.55);
+        ctx.setLineDash([4, 10, 24, 10]);
+        ctx.beginPath();
+        ctx.arc(0, 0, baseR * 0.92, 0, Math.PI * 2 * clamp(introP * 1.1, 0, 1));
+        ctx.strokeStyle = `rgba(111, 131, 152, ${0.24 * ringPresence})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.restore();
+
+        // 4. Inner subtle lime orbital arcs
+        ctx.save();
+        ctx.rotate(ambientRot * 0.8);
+        for (let k = 0; k &lt; 3; k++) {
+          const startA = (k * Math.PI * 2) / 3;
+          ctx.beginPath();
+          ctx.arc(0, 0, baseR * 0.72, startA, startA + 0.55);
+          ctx.strokeStyle = `rgba(185, 245, 109, ${0.18 * ringPresence})`;
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+        }
+        ctx.restore();
+
+        // 5. Impact Ripple Wave (triggers around 3.45s and periodically every 6s)
+        const triggerTimes = [2.58, 3.55];
+        if (elapsedSec &gt; 6.5) {
+          const cycle = Math.floor((elapsedSec - 6.5) / 6.0);
+          triggerTimes.push(6.5 + cycle * 6.0);
+        }
+        for (const t0 of triggerTimes) {
+          const dt = elapsedSec - t0;
+          if (dt &gt;= 0 &amp;&amp; dt &lt; 2.2) {
+            const rp = dt / 2.2;
+            const rRadius = baseR * 0.25 + easeOutExpo(rp) * baseR * 1.65;
+            const rAlpha = (1 - rp) * 0.35;
+            ctx.beginPath();
+            ctx.arc(0, 0, rRadius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(185, 245, 109, ${rAlpha})`;
+            ctx.lineWidth = 1.5 * (1 - rp * 0.6);
+            ctx.stroke();
+          }
+        }
+
+        ctx.restore();
+      }
+
+      // Draw Intelligence Constellation (nodes + dynamic edges)
+      function drawConstellation(cx, cy, elapsedSec, dt) {
+        const appear = clamp((elapsedSec - 0.3) / 1.4, 0, 1);
+        if (appear &lt;= 0) return;
+
+        // Convergence impulse around 1.2s -&gt; 2.4s
+        const gather = elapsedSec &lt; 2.3
+          ? Math.sin(clamp((elapsedSec - 0.9) / 1.4, 0, 1) * Math.PI) * 0.16
+          : 0;
+
+        const positions = [];
+        for (let i = 0; i &lt; particles.length; i++) {
+          const p = particles[i];
+          p.angle += p.speed * dt;
+          const r = p.baseDist * (1 - gather);
+          const x = cx + Math.cos(p.angle) * r + pointer.x * (p.size * 6);
+          const y = cy + Math.sin(p.angle) * r + pointer.y * (p.size * 6);
+          positions.push({ x, y, p });
+        }
+
+        // Neural edges between nearby nodes
+        const maxLinkDist = 135;
+        ctx.save();
+        for (let i = 0; i &lt; positions.length; i++) {
+          for (let j = i + 1; j &lt; positions.length; j++) {
+            const dx = positions[i].x - positions[j].x;
+            const dy = positions[i].y - positions[j].y;
+            const d = Math.hypot(dx, dy);
+            if (d &lt; maxLinkDist) {
+              const alpha = (1 - d / maxLinkDist) * 0.14 * appear;
+              ctx.beginPath();
+              ctx.moveTo(positions[i].x, positions[i].y);
+              ctx.lineTo(positions[j].x, positions[j].y);
+              ctx.strokeStyle = (positions[i].p.isLime || positions[j].p.isLime)
+                ? `rgba(185, 245, 109, ${alpha * 1.15})`
+                : `rgba(111, 131, 152, ${alpha})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw nodes
+        for (let i = 0; i &lt; positions.length; i++) {
+          const { x, y, p } = positions[i];
+          const twinkle = 0.7 + 0.3 * Math.sin(elapsedSec * 2.2 + p.pulseOffset);
+          ctx.beginPath();
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.isLime
+            ? `rgba(185, 245, 109, ${p.alpha * twinkle * appear})`
+            : `rgba(165, 188, 212, ${p.alpha * 0.7 * twinkle * appear})`;
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      // Draw subtle ambient glow behind Lab 360°
+      function drawAmbientGlow(cx, cy, elapsedSec) {
+        const glowP = clamp((elapsedSec - 1.4) / 1.5, 0, 1);
+        const pulse = 1 + 0.06 * Math.sin(elapsedSec * 1.4);
+        const r = Math.min(width, height) * 0.42 * pulse;
+
+        const grad = ctx.createRadialGradient(cx + 80, cy, 10, cx + 80, cy, r);
+        grad.addColorStop(0, `rgba(185, 245, 109, ${0.075 * glowP})`);
+        grad.addColorStop(0.45, `rgba(22, 68, 86, ${0.14 * glowP})`);
+        grad.addColorStop(1, &#x27;rgba(6, 13, 21, 0)&#x27;);
+
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, width, height);
+      }
+
+      let lastFrame = performance.now();
+
+      function render(now) {
+        const dt = Math.min((now - lastFrame) / 1000, 0.05);
+        lastFrame = now;
+        const elapsedSec = (now - startTime) / 1000;
+
+        // Smooth pointer interpolation
+        pointer.x += (pointer.tx - pointer.x) * 0.06;
+        pointer.y += (pointer.ty - pointer.y) * 0.06;
+
+        // Subtle 3D tilt on the brand lockup
+        brandContainer.style.transform =
+          `rotateY(${pointer.x * 3.2}deg) rotateX(${-pointer.y * 2.5}deg) translate3d(${pointer.x * 6}px, ${pointer.y * 6}px, 0)`;
+
+        const cx = width * 0.5 + pointer.x * -8;
+        const cy = height * 0.5 + pointer.y * -8;
+
+        ctx.clearRect(0, 0, width, height);
+
+        drawAmbientGlow(cx, cy, elapsedSec);
+        drawGrid(cx, cy, clamp(elapsedSec / 1.2, 0, 1));
+        drawConstellation(cx, cy, elapsedSec, dt);
+        drawOrbitals(cx, cy, elapsedSec);
+
+        // Update 000-&gt;360 counter
+        updateCounter(elapsedSec);
+
+        // Update HUD telemetry phase angle
+        const phaseDeg = ((elapsedSec * 24) % 360).toFixed(1).padStart(5, &#x27;0&#x27;);
+        phaseAngleEl.textContent = `${phaseDeg}°`;
+
+        requestAnimationFrame(render);
+      }
+
+      // Subtle periodic highlight wave across SCIENCE · INTELLIGENCE · IMPACT in idle state
+      let tagCycleInterval = null;
+      function startTagCycle() {
+        clearInterval(tagCycleInterval);
+        let idx = 0;
+        tagCycleInterval = setInterval(() =&gt; {
+          tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+          tagItems[idx % tagItems.length].classList.add(&#x27;highlight&#x27;);
+          setTimeout(() =&gt; {
+            tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+          }, 900);
+          idx++;
+        }, 2800);
+      }
+
+      function playSequence() {
+        clearTimeout(loopTimer);
+        startTime = performance.now();
+        hud.classList.remove(&#x27;visible&#x27;);
+        lockup.classList.remove(&#x27;is-playing&#x27;);
+        tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+        counterEl.textContent = &#x27;000&#x27;;
+
+        // Force DOM reflow to restart CSS keyframe animations cleanly
+        void lockup.offsetWidth;
+        lockup.classList.add(&#x27;is-playing&#x27;);
+
+        setTimeout(() =&gt; hud.classList.add(&#x27;visible&#x27;), 600);
+        startTagCycle();
+
+        if (autoLoop) {
+          loopTimer = setTimeout(playSequence, 8500);
+        }
+      }
+loopBtn.addEventListener(&#x27;click&#x27;, () =&gt; {
+        autoLoop = !autoLoop;
+        loopBtn.classList.toggle(&#x27;active&#x27;, autoLoop);
+        loopBtn.textContent = autoLoop ? &#x27;AUTO-LOOP: ON&#x27; : &#x27;AUTO-LOOP: OFF&#x27;;
+        clearTimeout(loopTimer);
+        if (autoLoop) {
+          const elapsed = performance.now() - startTime;
+          const remaining = Math.max(800, 8500 - (elapsed % 8500));
+          loopTimer = setTimeout(playSequence, remaining);
+        }
+      });
+
+      // Kick off animation
+      playSequence();
+      requestAnimationFrame(render);
+    })();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"
+      loading="eager"
+      scrolling="no"
+      style="position:absolute;inset:0;display:block;width:100%;height:100%;border:0;background:#060d15;"
+      allow="autoplay"
+    ></iframe>
   </div>
-  <div class="lab-ad-stage" id="lab-ad-stage">
-    <div class="lab-ad-art" aria-hidden="true">
-      <div class="lab-ad-orbit orbit-a"></div><div class="lab-ad-orbit orbit-b"></div>
-      <div class="lab-ad-core"><span id="lab-ad-symbol">✳</span></div>
-      <span class="lab-ad-float float-a">AI</span><span class="lab-ad-float float-b">✦</span>
-      <span class="lab-ad-float float-c">∞</span><span class="lab-ad-float float-d">01</span>
-      <div class="lab-ad-grid"></div>
-    </div>
-    <div class="lab-ad-copy">
-      <span class="lab-ad-category" id="lab-ad-category">THE NEXT FRONTIER · AI + SCIENCE</span>
-      <h3 id="lab-ad-title">From questions to possibilities.</h3>
-      <p id="lab-ad-description">We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.</p>
-      <div class="lab-ad-tags" id="lab-ad-tags"><span>EXPLORE</span><span>EXPERIMENT</span><span>CREATE</span></div>
-      <div class="lab-ad-actions">
-        <a class="lab-ad-cta" id="lab-ad-link" href="#research">Explore the Lab <span>↗</span></a>
-        <button type="button" class="lab-ad-refresh" id="lab-ad-refresh" aria-label="Show another Lab 360 feature">Another spark ↻</button>
-      </div>
-    </div>
-    <div class="lab-ad-pagination"><span id="lab-ad-count">01 / 08</span><span>EVERY VISIT. A NEW PERSPECTIVE.</span></div>
+  <div style="display:flex;justify-content:center;margin:22px 0 6px;">
+    <a href="https://sd3ph.github.io/Lab360.html" target="_blank" rel="noopener noreferrer"
+       style="display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border:1px solid rgba(185,245,109,.55);border-radius:999px;background:linear-gradient(135deg,#b9f56d,#8ed84c);color:#08111a;font:700 13px/1.2 Inter,Arial,sans-serif;letter-spacing:.08em;text-decoration:none;box-shadow:0 8px 28px rgba(185,245,109,.18);transition:transform .2s ease,box-shadow .2s ease;">
+      EXPLORE LAB 360° <span aria-hidden="true">↗</span>
+    </a>
   </div>
 </section>
 
-<h1>Lab 360° — Creative Intelligence for a Complex World</h1>
-<p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and innovation initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. We bring together physics, artificial intelligence, machine learning and data science to understand complex systems and translate scientific insight into useful computational methods, prototypes and collaborative opportunities.</p>
 
-<h2>A research platform built around one idea: connect disciplines, create impact</h2>
-<p>Many important challenges sit between established fields. Lab 360° works across those boundaries—using the principles of physics, the reach of data science and the capabilities of AI to study systems that are dynamic, interconnected and difficult to predict. Our approach combines fundamental questions with computational experimentation, interpretable modelling and opportunities for real-world collaboration.</p>
-
-<div class="section">
-  <h3>Why Lab 360°</h3>
-  <ul>
-    <li><strong>Physics-informed intelligence:</strong> We use physical principles to guide data-driven models, with the aim of making predictions more interpretable, robust and scientifically meaningful.</li>
-    <li><strong>Research across scales:</strong> Our interests span molecular and material systems, living matter, collective behaviour, fluid dynamics, environmental processes and other complex systems.</li>
-    <li><strong>From insight to application:</strong> We seek pathways from scientific understanding to computational tools, proof-of-concept prototypes and collaborative applications.</li>
-    <li><strong>People and capability building:</strong> Teaching, mentoring and interdisciplinary projects help develop researchers and technologists who can work confidently across science and AI.</li>
-  </ul>
-</div>
+<h1>Creative Intelligence for the Complex World</h1>
 
 <h2>Our scientific foundation: Physics meets AI</h2>
 <p>Physics provides a powerful language for understanding how systems evolve. AI offers new ways to analyse data, identify patterns and build predictive models. At Lab 360°, we bring these perspectives together—not to replace scientific reasoning with black-box prediction, but to develop methods that can reveal mechanisms, test hypotheses and support discovery.</p>
@@ -2528,5 +3407,35 @@ non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Nat
 })();
 
   </script>
+
+<!-- Persistent Lab 360° voice guide: isolated from the existing page content -->
+<div id="lab360-guide-root">
+  <section id="lab360-guide-panel" role="dialog" aria-label="Lab 360 visitor voice guide" aria-hidden="true">
+    <header class="vg-head">
+      <div class="vg-brand"><div class="vg-brand-mark">360°</div><div><strong>Ask Lab 360°</strong><small>VOICE-POWERED SITE GUIDE</small></div></div>
+      <button class="vg-close" id="vg-close" aria-label="Close voice guide">×</button>
+    </header>
+    <div class="vg-intro"><strong id="vg-title">Find your way around</strong><p id="vg-subtitle">Ask a question about the research, people, publications, teaching or projects on this website.</p></div>
+    <div class="vg-suggestions">
+      <button data-vg-prompt="Give me a quick introduction to Lab 360° and its research focus.">About Lab 360°</button>
+      <button data-vg-prompt="Where can I learn about Suman Dutta's background and experience?">Suman Dutta</button>
+      <button data-vg-prompt="Guide me to the research areas and explain the main themes.">Research areas</button>
+      <button data-vg-prompt="Where can I find publications and collaborations?">Publications</button>
+    </div>
+    <div id="vg-transcript" aria-live="polite"><div class="vg-empty" id="vg-empty">Your conversation will appear here.<br>Start speaking and I’ll guide you to the right section.</div></div>
+    <div class="vg-status" id="vg-status"><i></i><span id="vg-status-text">Offline</span></div>
+    <div class="vg-controls">
+      <button class="vg-btn primary" id="vg-start">Start voice guide</button>
+      <button class="vg-btn" id="vg-mute" disabled>Mute</button>
+      <button class="vg-btn" id="vg-end" disabled>End</button>
+    </div>
+    <div id="vg-error" role="alert"></div>
+    <div class="vg-privacy">Microphone starts only when you choose Start. Audio is streamed to the configured AI service. Do not share passwords or sensitive personal information.</div>
+  </section>
+  <button id="lab360-guide-launch" aria-controls="lab360-guide-panel" aria-expanded="false"><span class="vg-launch-orb">✳</span><span>Ask Lab 360°</span></button>
+</div>
+<script>window.LAB360_VOICE_API_BASE = window.LAB360_VOICE_API_BASE || "";</script>
+<script src="/static/visitor-guide.js" defer></script>
+
 </body>
 </html>
