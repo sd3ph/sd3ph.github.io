@@ -1,0 +1,3441 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09111f">
+  <meta name="description" content="Lab 360° is an interdisciplinary Physics, Artificial Intelligence and Data Science research group at Amrita Vishwa Vidyapeetham, Coimbatore. Explore computational physics, machine learning, complex systems, materials informatics and data-driven scientific discovery.">
+  <meta name="keywords" content="Physics and AI research lab, Physics and Data Science lab, Artificial Intelligence research India, computational physics, data-driven physics, machine learning for physics, physics-informed machine learning, complex systems, statistical physics, soft matter physics, materials informatics, scientific machine learning, Amrita Vishwa Vidyapeetham">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="google-site-verification" content="OsgxjynQ4a4xbpkEOQ-KIJRmMp-A5dGNAFjkcqMCgWg">
+  <meta name="author" content="Lab 360°">
+  <link rel="canonical" href="https://sd3ph.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Lab 360°">
+  <meta property="og:url" content="https://sd3ph.github.io/">
+  <meta property="og:title" content="Lab 360° | Physics, Artificial Intelligence & Data Science Research">
+  <meta property="og:description" content="Interdisciplinary research connecting physics, AI and data science at Amrita Vishwa Vidyapeetham, Coimbatore. Computational physics, machine learning, complex systems and materials informatics.">
+  <meta property="og:image" content="https://sd3ph.github.io/cover1.png">
+  <meta property="og:image:alt" content="Lab 360° — Physics, Artificial Intelligence and Data Science research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lab 360° | Physics + AI + Data Science">
+  <meta name="twitter:description" content="Research at the intersection of physics, artificial intelligence, data science and complex systems.">
+  <meta name="twitter:image" content="https://sd3ph.github.io/cover1.png">
+  <title>Lab 360° | Physics, Artificial Intelligence & Data Science Research</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sd3ph.github.io/#website",
+        "url": "https://sd3ph.github.io/",
+        "name": "Lab 360°",
+        "description": "Interdisciplinary Physics, Artificial Intelligence and Data Science research, education and scientific innovation.",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "ResearchOrganization",
+        "@id": "https://sd3ph.github.io/#lab",
+        "name": "Lab 360° — Physics + AI",
+        "alternateName": ["Lab 360", "Physics + AI Lab"],
+        "url": "https://sd3ph.github.io/",
+        "description": "An interdisciplinary research and learning initiative connecting physics, artificial intelligence, data science and complex systems.",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Amrita Vishwa Vidyapeetham",
+          "url": "https://www.amrita.edu/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Coimbatore",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": [
+          "Physics and artificial intelligence",
+          "Data science for physical systems",
+          "Computational physics",
+          "Statistical physics",
+          "Complex systems",
+          "Machine learning",
+          "Physics-informed machine learning",
+          "Scientific machine learning",
+          "Soft matter and active matter",
+          "Materials informatics",
+          "Molecular dynamics",
+          "Dynamical systems and time-series analysis",
+          "High-performance computing"
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+/* Lab 360° / modular design system — edit this file to change the global look */
+:root{
+  color-scheme:dark;
+  --bg:#08111f;--panel:#0e1b2d;--panel-2:#13243a;--panel-3:#192e47;
+  --ink:#edf4f7;--muted:#a5b7c7;--subtle:#71869a;
+  --line:rgba(190,220,230,.14);--accent:#b8f36b;--accent-2:#5de0cf;
+  --glow:rgba(184,243,107,.13);--radius:22px;
+  --shadow:0 22px 65px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;min-height:100vh;background:
+  radial-gradient(ellipse at 8% 5%,rgba(93,224,207,.10),transparent 34rem),
+  radial-gradient(ellipse at 92% 18%,rgba(184,243,107,.08),transparent 32rem),var(--bg);
+  color:var(--ink);font:15px/1.72 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent-2);text-underline-offset:3px}
+button,input{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:#101b17}
+.ambient{position:fixed;z-index:-1;width:380px;height:380px;border-radius:50%;filter:blur(110px);opacity:.13;pointer-events:none}
+.ambient-one{background:#50d8c6;top:8%;left:-220px}.ambient-two{background:#b8f36b;right:-230px;top:48%}
+.site-header{position:sticky;top:12px;z-index:50;width:min(1240px,calc(100% - 36px));margin:12px auto 38px;
+  background:rgba(12,25,42,.82);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);backdrop-filter:blur(22px);padding:14px 18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:190px}
+.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#10201b;font:800 1.65rem/1 "Manrope";box-shadow:0 8px 25px rgba(93,224,207,.18)}
+.brand-mark span{color:#fff}.brand-copy{display:flex;flex-direction:column;line-height:1.2}
+.brand-copy strong{font:800 1.05rem "Manrope";letter-spacing:-.04em}.brand-copy strong span{color:var(--accent)}
+.brand-copy small{margin-top:4px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.08em;text-transform:uppercase}
+.primary-nav{position:absolute;left:50%;top:20px;transform:translateX(-50%);display:flex;gap:7px}
+.primary-nav a,.secondary-nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:.83rem;font-weight:700;white-space:nowrap;transition:.2s}
+.primary-nav a:hover,.secondary-nav a:hover,.nav-link.active{background:var(--glow);color:var(--accent);box-shadow:inset 0 0 0 1px rgba(184,243,107,.15)}
+.header-actions{display:flex;align-items:center;gap:12px;position:absolute;right:18px;top:18px}
+.status-chip{color:var(--muted);font-size:.72rem;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.status-chip i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.install-button{border:1px solid rgba(184,243,107,.28);background:var(--glow);color:var(--accent);padding:8px 12px;border-radius:10px;font-size:.78rem;font-weight:700;cursor:pointer}
+.install-button:hover{background:rgba(184,243,107,.2)}
+#install-status{display:none;position:absolute;right:0;top:42px;width:240px;padding:10px 12px;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:.75rem}
+#install-status.show{display:block}
+.secondary-nav{display:flex;align-items:center;justify-content:center;gap:4px;border-top:1px solid var(--line);margin-top:14px;padding:9px 0 10px;overflow-x:auto;scrollbar-width:none}
+.secondary-nav::-webkit-scrollbar{display:none}
+.menu-toggle{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+.site-main{width:min(1120px,calc(100% - 42px));margin:0 auto}
+.page-kicker{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 22px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.17em;text-align:center}
+.kicker-line{width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--accent-2))}
+.kicker-line:last-child{transform:rotate(180deg)}
+#page-host{min-height:55vh;transition:opacity .18s}
+#page-host.is-loading{opacity:.45}
+.page-content{animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.loading-state,.load-error{min-height:35vh;display:grid;place-content:center;text-align:center;color:var(--muted)}
+.loader{width:34px;height:34px;margin:auto;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.22;letter-spacing:-.045em;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.8rem)}h2{font-size:clamp(1.5rem,3.2vw,2.35rem);margin:0 0 20px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+h3{font-size:1.28rem;color:var(--accent);margin:28px 0 13px}h4{font-size:1.05rem;margin:16px 0 9px}
+p{color:var(--muted);margin:0 0 15px}strong,b{color:var(--ink);font-weight:700}
+ul,ol{padding-left:22px;margin:0 0 20px}li{color:var(--muted);padding-left:4px;margin:0 0 9px}li::marker{color:var(--accent)}
+img{max-width:100%;height:auto;border-radius:14px}
+.page-content>img:first-child{display:block;width:100%;max-height:390px;object-fit:cover;border:1px solid var(--line);margin:0 0 28px}
+.section,.research-area-item,.publication-item,.timeline-content,.advertisement,.course-card,.outreach-card,.collaborator-item{
+  background:linear-gradient(145deg,rgba(18,36,58,.94),rgba(12,26,44,.92));border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:0 12px 35px rgba(0,0,0,.12)}
+.section{padding:clamp(18px,3vw,28px);margin:18px 0}
+.section:hover,.publication-item:hover,.course-card:hover,.outreach-card:hover{border-color:rgba(93,224,207,.34)}
+.research-area-item,.publication-item,.timeline-content{padding:16px 19px;margin:0 0 13px}
+.research-area-item{border-left:3px solid var(--accent-2)}
+.publication-item .citation{color:var(--ink);font-size:.96rem;line-height:1.7}
+.publication-item a{display:inline-block;padding:3px 8px;border-radius:6px;background:rgba(93,224,207,.1);text-decoration:none;font-size:.82rem;font-weight:700}
+.timeline{border-left:1px solid rgba(93,224,207,.35);padding-left:22px;margin-left:7px}
+.timeline-item{position:relative;margin-bottom:18px}.timeline-item:before{content:"";position:absolute;left:-28px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}
+.advertisement{padding:clamp(22px,4vw,38px);text-align:center;background:radial-gradient(ellipse at top right,rgba(184,243,107,.13),transparent 60%),var(--panel)}
+.advertisement h1{color:var(--accent);font-size:clamp(1.7rem,4vw,2.7rem)}
+.opportunities,.social-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.opportunity,.semester-tag,.course-code{display:inline-block;padding:5px 11px;border-radius:30px;background:var(--glow);border:1px solid rgba(184,243,107,.2);color:var(--accent);font-size:.8rem;font-weight:700}
+.email-link{display:inline-flex;padding:11px 22px;border-radius:11px;background:linear-gradient(110deg,var(--accent),var(--accent-2));color:#0a1b1b!important;text-decoration:none;font-weight:800}
+.course-grid,.outreach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:15px;margin-top:17px}
+.course-card,.outreach-card{padding:20px;transition:transform .2s,border-color .2s;cursor:pointer}
+.course-card:hover,.outreach-card:hover{transform:translateY(-3px)}
+.course-card h4{margin-top:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.outreach-card{border-top:3px solid var(--accent)}
+.outreach-icon{font-size:1.8rem;display:block;margin-bottom:8px}
+.back-btn{display:inline-flex;align-items:center;gap:7px;margin:0 0 18px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);color:var(--ink);cursor:pointer}
+.course-detail-view,.teaching-detail-view{display:none;animation:rise .25s ease}
+.course-detail-view.active,.teaching-detail-view.active{display:block}
+.playground-container{width:100%;height:70vh;min-height:420px;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#05070b}
+.playground-container iframe{width:100%;height:100%;border:0}
+.password-prompt-container{max-width:500px;margin:32px auto;padding:30px 22px;text-align:center;background:var(--panel);border:1px dashed rgba(184,243,107,.35);border-radius:18px}
+.password-form{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}
+.password-form input{width:min(270px,100%);padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:#091525;color:var(--ink)}
+.password-form button{padding:10px 18px;border:0;border-radius:9px;background:var(--accent);color:#10201b;font-weight:800;cursor:pointer}
+.password-error-message{margin-top:12px;color:#ff8b8b;font-weight:700}
+#classroom-content.hidden{display:none}
+#password-prompt-container[hidden]{display:none}
+.table-responsive{width:100%;overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;min-width:550px;border-collapse:collapse;background:var(--panel-2);font-size:.9rem}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);color:var(--muted)}
+th{background:rgba(255,255,255,.04);color:var(--ink);font-family:"Manrope"}
+tr:hover td{background:rgba(255,255,255,.025)}
+.profile-header{display:flex;align-items:center;gap:22px}.profile-picture{width:100px;height:100px;object-fit:cover;border-radius:50%;border:2px solid var(--accent)}
+.header-text h1{font-size:2rem;margin:0 0 5px}.header-text p{color:var(--accent);margin:0}
+.social-links a img{height:27px;border-radius:7px}
+.playground-container iframe{display:block}
+.site-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:55px;padding:22px 0 30px;color:var(--subtle);font:10px "Space Mono";letter-spacing:.04em}
+.site-footer a{color:var(--accent-2);text-decoration:none}
+[hidden]{display:none!important}
+@media(max-width:900px){
+ .site-header{padding:12px 14px 0}.primary-nav{position:static;transform:none;margin-left:auto;margin-right:190px}
+ .header-actions{top:15px;right:14px}.status-chip{display:none}
+ .secondary-nav{justify-content:flex-start}
+}
+@media(max-width:680px){
+ .site-header{top:6px;width:calc(100% - 18px);margin:6px auto 25px;border-radius:15px}
+ .brand-mark{width:38px;height:38px}.brand-copy strong{font-size:.96rem}
+ .primary-nav{display:none}.header-actions{top:13px;right:12px}.menu-toggle{display:block}
+ .install-button{padding:7px 9px}.secondary-nav{display:none;flex-wrap:wrap;justify-content:flex-start;white-space:normal;overflow:visible;padding:10px 0}
+ .secondary-nav.open{display:flex}.secondary-nav a{font-size:.78rem;padding:7px 9px}
+ .site-main{width:calc(100% - 28px)}.page-kicker{font-size:8px;letter-spacing:.11em}
+ .section{padding:17px;margin:13px 0;border-radius:16px}
+ .profile-header{align-items:flex-start}.profile-picture{width:72px;height:72px}
+ .site-footer{font-size:9px;justify-content:center;text-align:center}
+ .playground-container{height:65vh;min-height:360px}
+}
+
+
+
+
+/* Lab 360° Overview — Creative Intelligence rotating editorial spotlight */
+.vision-lab{position:relative;margin:0 0 30px;padding:clamp(18px,3vw,30px);overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:radial-gradient(ellipse at 7% 0%,rgba(255,107,138,.14),transparent 34%),radial-gradient(ellipse at 100% 100%,rgba(117,224,193,.13),transparent 36%),linear-gradient(135deg,#111a2a,#111629 58%,#1b172b);box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.vision-heading{position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.vision-heading h2{max-width:850px;margin:8px 0 10px;padding:0;border:0;font:800 clamp(1.65rem,3.6vw,2.8rem)/1.05 "Manrope",sans-serif;letter-spacing:-.055em;color:#f5f4f0}.vision-heading p{max-width:780px;margin:0;color:#b8c5d2;font-size:clamp(.85rem,1.3vw,1rem);line-height:1.7}.vision-eyebrow{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.vision-chip{flex:none;padding:8px 11px;border:1px solid rgba(184,243,107,.25);border-radius:30px;color:#b8f36b;font:9px "Space Mono",monospace;letter-spacing:.1em}.vision-chip i{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#b8f36b;box-shadow:0 0 10px #b8f36b}
+.lab-ad-stage{position:relative;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);align-items:center;gap:clamp(18px,4vw,54px);min-height:285px;padding:clamp(16px,3vw,28px);overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:19px;background:linear-gradient(105deg,rgba(255,255,255,.045),rgba(255,255,255,.012));isolation:isolate}
+.lab-ad-art{position:relative;min-height:235px;display:grid;place-items:center;overflow:hidden;border-radius:14px;background:radial-gradient(circle at 50% 48%,var(--ad-glow,rgba(93,224,207,.22)),transparent 62%),linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.005))}
+.lab-ad-grid{position:absolute;inset:0;opacity:.19;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse,#000,transparent 76%)}
+.lab-ad-orbit{position:absolute;width:190px;height:190px;border:1px solid var(--ad-accent,rgba(117,224,193,.55));border-radius:42% 58% 57% 43% / 45% 44% 56% 55%;animation:lab-ad-rotate 18s linear infinite;box-shadow:0 0 35px var(--ad-glow,rgba(93,224,207,.15)),inset 0 0 24px var(--ad-glow,rgba(93,224,207,.12))}
+.lab-ad-orbit.orbit-b{width:145px;height:145px;border-style:dashed;transform:rotate(45deg);animation:lab-ad-rotate 24s linear infinite reverse;opacity:.7}
+.lab-ad-core{position:relative;z-index:1;width:94px;height:94px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:28px;background:linear-gradient(145deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#10182a;font-size:3.1rem;box-shadow:0 0 65px var(--ad-glow,rgba(93,224,207,.45)),inset 0 1px rgba(255,255,255,.7);transform:rotate(-9deg);animation:lab-ad-float 5s ease-in-out infinite}
+.lab-ad-float{position:absolute;z-index:2;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.28);border-radius:13px;background:rgba(9,17,31,.75);backdrop-filter:blur(8px);color:#fff;font:700 14px "Space Mono";box-shadow:0 8px 25px rgba(0,0,0,.18)}.float-a{top:15%;left:16%;color:var(--ad-accent-2,#ffc857)}.float-b{right:13%;top:24%;color:#ffc857;font-size:22px}.float-c{bottom:14%;left:23%;color:#ff9caf;font-size:25px}.float-d{bottom:18%;right:17%;color:#8bdccc}
+@keyframes lab-ad-rotate{to{transform:rotate(360deg)}}@keyframes lab-ad-float{0%,100%{transform:translateY(0) rotate(-9deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.lab-ad-copy{position:relative;z-index:1;padding:4px 0 22px}.lab-ad-category{display:block;margin-bottom:11px;color:var(--ad-accent-2,#ffc857);font:9px "Space Mono",monospace;letter-spacing:.15em}.lab-ad-copy h3{max-width:650px;margin:0 0 12px;color:#f5f4f0;font:800 clamp(1.5rem,3.2vw,2.55rem)/1.08 "Manrope",sans-serif;letter-spacing:-.05em}.lab-ad-copy p{max-width:620px;margin:0;color:#b6c3d1;font-size:.9rem;line-height:1.75}.lab-ad-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.lab-ad-tags span{padding:6px 9px;border:1px solid rgba(255,255,255,.15);border-radius:30px;color:#b6c9d1;font:8px "Space Mono";letter-spacing:.1em;background:rgba(255,255,255,.035)}
+.lab-ad-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lab-ad-cta{display:inline-flex;align-items:center;gap:16px;padding:11px 15px;border-radius:9px;background:linear-gradient(100deg,var(--ad-core-a,#75e0c1),var(--ad-core-b,#8c9eff));color:#111a2a!important;font-size:.78rem;font-weight:800;text-decoration:none!important;box-shadow:0 7px 25px var(--ad-glow,rgba(93,224,207,.18))}.lab-ad-cta span{font-size:1rem}.lab-ad-refresh{padding:9px 0;border:0;background:transparent;color:#b8f36b;font-size:.75rem;font-weight:700;cursor:pointer}.lab-ad-pagination{position:absolute;right:clamp(16px,3vw,28px);bottom:13px;left:clamp(16px,3vw,28px);display:flex;justify-content:space-between;gap:10px;color:#72849a;font:8px "Space Mono";letter-spacing:.1em}
+.lab-ad-stage.ad-enter .lab-ad-copy{animation:lab-ad-in .55s ease both}.lab-ad-stage.ad-enter .lab-ad-art{animation:lab-ad-in .65s ease both}@keyframes lab-ad-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.vision-heading{flex-direction:column}.vision-chip{align-self:flex-start}.lab-ad-stage{grid-template-columns:1fr;gap:12px}.lab-ad-art{min-height:190px}.lab-ad-copy{padding-bottom:25px}.lab-ad-orbit{width:155px;height:155px}.lab-ad-orbit.orbit-b{width:120px;height:120px}.lab-ad-core{width:76px;height:76px;font-size:2.5rem}.lab-ad-pagination{font-size:7px}}
+
+
+
+
+/* PLAYGROUND — Gesture Atelier (scoped; other pages remain untouched) */
+.page-playground{width:100%;max-width:none}
+.atelier-page{--at-rose:#ff6b8a;--at-yellow:#ffc857;--at-mint:#75e0c1;--at-lilac:#c49aff;position:relative;overflow:hidden;padding:clamp(18px,3.5vw,42px);border:1px solid rgba(255,255,255,.11);border-radius:30px;background:radial-gradient(ellipse at 8% 10%,rgba(255,107,138,.12),transparent 32%),radial-gradient(ellipse at 90% 5%,rgba(117,224,193,.12),transparent 30%),linear-gradient(145deg,#111a2a,#101426 60%,#19152a);box-shadow:0 30px 90px rgba(0,0,0,.25)}
+.atelier-page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:radial-gradient(rgba(255,255,255,.45) .7px,transparent .7px);background-size:19px 19px;mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.atelier-topline,.atelier-hero,.atelier-studio,.atelier-footer{position:relative;z-index:1}
+.atelier-topline{display:flex;justify-content:space-between;gap:12px;align-items:center}.atelier-kicker,.atelier-section-tag,.atelier-overline{font:10px "Space Mono",monospace;letter-spacing:.16em;color:#8bdccc}.atelier-live{font:9px "Space Mono",monospace;letter-spacing:.12em;color:#b7c6d5}.atelier-live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#75e0c1;box-shadow:0 0 12px #75e0c1;margin-right:7px}
+.atelier-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);align-items:center;gap:24px;padding:clamp(32px,6vw,72px) 0 38px}.atelier-overline{color:#ffc857;margin:0 0 12px}.atelier-hero h1{font:800 clamp(2.5rem,6.2vw,5.3rem)/.98 "Manrope",sans-serif;letter-spacing:-.065em;margin:0;max-width:760px}.atelier-hero h1 em{font-style:normal;background:linear-gradient(100deg,#ff9caf,#ffc857 45%,#85e6d1 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.atelier-intro{max-width:670px;color:#b5c1d0;font-size:clamp(.94rem,1.4vw,1.08rem);line-height:1.8;margin:19px 0 22px}
+.atelier-prompt{max-width:620px;padding:15px 18px;border:1px solid rgba(255,200,87,.24);border-radius:15px;background:linear-gradient(100deg,rgba(255,200,87,.09),rgba(255,107,138,.04))}.atelier-prompt-label{display:block;color:#ffc857;font:9px "Space Mono",monospace;letter-spacing:.14em;margin-bottom:6px}.atelier-prompt strong{display:block;color:#fff0d5;font:700 1rem "Manrope",sans-serif}.atelier-text-btn{padding:7px 0 0;border:0;background:none;color:#85e6d1;font-size:.76rem;font-weight:700;cursor:pointer}
+.atelier-orbit{position:relative;width:min(100%,310px);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,rgba(255,200,87,.12),rgba(255,107,138,.07) 42%,transparent 70%);display:grid;place-items:center}.atelier-orbit-ring{position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%;inset:7%}.ring-two{inset:20%;border-style:dashed;animation:atelier-spin 35s linear infinite}.ring-one{border-color:rgba(117,224,193,.3);animation:atelier-spin 48s linear infinite reverse}.atelier-orbit-shape{position:absolute;filter:drop-shadow(0 0 18px currentColor)}.shape-star{top:10%;left:47%;font-size:2.8rem;color:#ffc857}.shape-flower{right:7%;top:40%;font-size:3.4rem;color:#ff8ca7}.shape-circle{left:13%;bottom:18%;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8c9eff,#e6a8ff);box-shadow:0 0 35px #8c9eff}.shape-spark{right:20%;bottom:12%;font-size:2rem;color:#75e0c1}.atelier-orbit-word{text-align:center;font:700 11px/1.8 "Space Mono",monospace;letter-spacing:.2em;color:#d8e7e6}
+@keyframes atelier-spin{to{transform:rotate(360deg)}}
+.atelier-studio{padding:clamp(15px,2.4vw,28px);border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(5,11,23,.62);box-shadow:inset 0 1px rgba(255,255,255,.04)}.atelier-studio-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:17px}.atelier-studio-head h2{margin:5px 0 0;font:700 clamp(1.25rem,2.6vw,1.8rem) "Manrope";letter-spacing:-.04em}.atelier-tools{display:flex;gap:6px;flex-wrap:wrap}.atelier-tool{padding:8px 12px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:rgba(255,255,255,.035);color:#b9c5d2;font-size:.75rem;cursor:pointer}.atelier-tool.active{background:rgba(117,224,193,.15);border-color:rgba(117,224,193,.45);color:#9af0d9}
+.atelier-workbench{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:14px}.atelier-canvas-wrap{position:relative;min-height:430px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:17px;background-color:#171d31;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),radial-gradient(ellipse at 50% 40%,#252944,#121a2b 75%);background-size:32px 32px,32px 32px,auto}.atelier-canvas-wrap canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}.atelier-canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:22px;text-align:center;pointer-events:none;color:#aab8ca}.atelier-canvas-hint span{font-size:2.4rem;color:#ffc857}.atelier-canvas-hint strong{font:700 1.05rem "Manrope";color:#e9edf4}.atelier-canvas-hint small{max-width:340px;font-size:.78rem;line-height:1.6}.atelier-canvas-badge{position:absolute;top:13px;left:14px;padding:6px 9px;border:1px solid rgba(255,255,255,.13);border-radius:7px;background:rgba(8,13,26,.65);color:#aebbd0;font:8px "Space Mono";letter-spacing:.12em;pointer-events:none}
+.atelier-side{display:flex;flex-direction:column;gap:12px;min-width:0}.atelier-camera-card,.atelier-guide,.atelier-director{padding:14px;border:1px solid rgba(255,255,255,.11);border-radius:15px;background:rgba(255,255,255,.035)}.atelier-side-title{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.atelier-side-title span,.atelier-side-title b,.atelier-director small{font:9px "Space Mono";letter-spacing:.1em;color:#8bdccc}.atelier-side-title b{color:#9aaabd}.atelier-camera-preview{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#0a1020}.atelier-camera-preview video,.atelier-camera-preview canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.atelier-camera-preview video{transform:scaleX(-1)}.atelier-camera-preview canvas{pointer-events:none}.atelier-camera-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#71839a;text-align:center}.atelier-camera-placeholder span{font-size:2rem;color:#75e0c1}.atelier-camera-placeholder small{font-size:.7rem}.atelier-camera-actions{display:flex;gap:7px;margin-top:9px}.atelier-action{padding:9px 12px;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:rgba(255,255,255,.05);color:#e4eaf0;font-size:.72rem;font-weight:700;cursor:pointer}.atelier-action.primary{border:0;background:linear-gradient(110deg,#ffc857,#ff9caf);color:#251927}.atelier-action:disabled{opacity:.4;cursor:not-allowed}.atelier-camera-note{margin:8px 0 0;color:#8494a9;font-size:.67rem;line-height:1.5}
+.atelier-guide .atelier-section-tag{display:block;margin-bottom:8px}.atelier-gesture-row{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}.atelier-gesture-row:last-child{border-bottom:0}.atelier-gesture-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(117,224,193,.09);font-size:1.2rem}.atelier-gesture-row strong,.atelier-gesture-row small{display:block}.atelier-gesture-row strong{font-size:.76rem;color:#edf3f5}.atelier-gesture-row small{font-size:.66rem;color:#91a0b4}
+.atelier-director{display:flex;align-items:flex-start;gap:10px;background:linear-gradient(110deg,rgba(255,107,138,.08),rgba(117,224,193,.06))}.atelier-director-dot{flex:none;width:8px;height:8px;margin-top:5px;border-radius:50%;background:#ffc857;box-shadow:0 0 12px #ffc857}.atelier-director small{display:block;margin-bottom:5px;color:#ffc857}.atelier-director strong{display:block;color:#cbd6e3;font-size:.74rem;font-weight:500;line-height:1.5}
+.atelier-bottom-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.025)}.atelier-palette,.atelier-canvas-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.atelier-palette>span{margin-right:4px;color:#8fa0b5;font:8px "Space Mono";letter-spacing:.1em}.atelier-swatch{width:23px;height:23px;border:2px solid transparent;border-radius:50%;background:var(--swatch);cursor:pointer;box-shadow:0 0 0 1px rgba(255,255,255,.15)}.atelier-swatch.selected{outline:2px solid white;outline-offset:3px}.atelier-score{display:flex;align-items:center;gap:7px;margin-right:5px}.atelier-score b{font:700 1.2rem "Space Mono";color:#ffc857}.atelier-score small{font:8px "Space Mono";letter-spacing:.08em;color:#8fa0b5}
+.atelier-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(30px,5vw,54px) 4px 8px}.atelier-footer h2{margin:8px 0 6px;font:800 clamp(1.45rem,3vw,2.3rem) "Manrope";letter-spacing:-.045em}.atelier-footer p{max-width:620px;margin:0;color:#aab8c8;font-size:.87rem}.atelier-footer-mark{flex:none;text-align:right;font:800 clamp(1.25rem,3vw,2.1rem)/1.05 "Manrope";letter-spacing:-.06em;color:#dce8eb}.atelier-footer-mark em{font-style:normal;color:#ff9caf}
+@media(max-width:850px){.atelier-hero{grid-template-columns:1fr}.atelier-orbit{width:210px;max-width:55vw}.atelier-workbench{grid-template-columns:1fr}.atelier-side{display:grid;grid-template-columns:1fr 1fr}.atelier-director{grid-column:1/-1}.atelier-camera-preview{aspect-ratio:16/8}.atelier-canvas-wrap{min-height:360px}}
+@media(max-width:600px){.page-playground{width:100%}.atelier-page{padding:17px;border-radius:20px}.atelier-topline{align-items:flex-start;flex-direction:column}.atelier-hero{padding:35px 0 25px}.atelier-orbit{width:175px}.atelier-studio-head{align-items:flex-start;flex-direction:column}.atelier-tools{width:100%}.atelier-tool{flex:1}.atelier-canvas-wrap{min-height:310px}.atelier-side{display:flex}.atelier-bottom-bar{align-items:flex-start}.atelier-palette{width:100%}.atelier-canvas-actions{width:100%}.atelier-footer{align-items:flex-start;flex-direction:column}.atelier-footer-mark{text-align:left}}
+</style>
+<link rel="stylesheet" href="/static/visitor-guide.css">
+<style id="lab360-visitor-guide-inline-css">
+/* Self-contained visitor-guide styling: works even when /static/visitor-guide.css is absent. */
+#lab360-guide-root{position:fixed!important;right:clamp(16px,3vw,30px)!important;bottom:clamp(16px,3vw,28px)!important;z-index:2147483000!important;width:auto!important;height:auto!important;max-width:calc(100vw - 32px)!important;font-family:Inter,Manrope,system-ui,-apple-system,"Segoe UI",sans-serif!important;color:#edf4ff!important;line-height:1.45!important;isolation:isolate}
+#lab360-guide-root *{box-sizing:border-box}
+#lab360-guide-root button{font:inherit;cursor:pointer}
+#lab360-guide-panel{display:none;position:absolute!important;right:0!important;bottom:72px!important;width:min(430px,calc(100vw - 32px))!important;max-height:min( min(760px, calc(100vh - 112px)), 82vh)!important;overflow:hidden!important;flex-direction:column!important;gap:0!important;padding:0!important;margin:0!important;border:1px solid rgba(145,177,220,.24)!important;border-radius:22px!important;background:linear-gradient(155deg,#101c31 0%,#0a1425 58%,#101a2c 100%)!important;box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.035) inset!important;color:#edf4ff!important;text-align:left!important;transform:none!important}
+#lab360-guide-panel[aria-hidden="false"],#lab360-guide-panel.is-open,#lab360-guide-panel.open{display:flex!important}
+#lab360-guide-panel .vg-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;padding:19px 20px!important;border-bottom:1px solid rgba(255,255,255,.09)!important;background:rgba(255,255,255,.025)!important}
+#lab360-guide-panel .vg-brand{display:flex!important;align-items:center!important;gap:12px!important;min-width:0!important}
+#lab360-guide-panel .vg-brand-mark{display:grid!important;place-items:center!important;flex:none!important;width:44px!important;height:44px!important;border-radius:14px!important;background:linear-gradient(135deg,#7ce3d0,#8da8ff)!important;color:#071522!important;font-size:14px!important;font-weight:900!important;letter-spacing:-.06em!important;box-shadow:0 6px 22px rgba(124,227,208,.18)!important}
+#lab360-guide-panel .vg-brand strong{display:block!important;color:#f6f8ff!important;font-size:17px!important;font-weight:800!important;line-height:1.25!important}
+#lab360-guide-panel .vg-brand small{display:block!important;margin-top:4px!important;color:#8ea5c2!important;font-size:9px!important;font-weight:700!important;letter-spacing:.13em!important}
+#lab360-guide-panel .vg-close{display:grid!important;place-items:center!important;flex:none!important;width:34px!important;height:34px!important;padding:0!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:10px!important;background:rgba(255,255,255,.07)!important;color:#dce8f7!important;font-size:21px!important;line-height:1!important}
+#lab360-guide-panel .vg-close:hover{background:rgba(255,255,255,.14)!important}
+#lab360-guide-panel .vg-intro{padding:17px 20px 12px!important}
+#lab360-guide-panel #vg-title{display:block!important;color:#f4f7ff!important;font-size:17px!important;font-weight:800!important}
+#lab360-guide-panel #vg-subtitle{margin:6px 0 0!important;color:#a8bbd3!important;font-size:13px!important;line-height:1.55!important}
+#lab360-guide-panel .vg-suggestions{display:flex!important;flex-wrap:wrap!important;gap:7px!important;padding:0 20px 14px!important}
+#lab360-guide-panel .vg-suggestions button{padding:8px 11px!important;border:1px solid rgba(137,170,213,.22)!important;border-radius:9px!important;background:rgba(137,170,213,.10)!important;color:#dceaff!important;font-size:11px!important;font-weight:650!important;transition:background .2s,border-color .2s!important}
+#lab360-guide-panel .vg-suggestions button:hover{background:rgba(124,227,208,.16)!important;border-color:rgba(124,227,208,.45)!important}
+#lab360-guide-panel #vg-transcript{flex:1 1 auto!important;min-height:105px!important;max-height:230px!important;overflow-y:auto!important;margin:0 20px!important;padding:13px!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:13px!important;background:rgba(3,9,19,.38)!important;color:#dbe7f7!important;font-size:13px!important;line-height:1.55!important;overscroll-behavior:contain!important}
+#lab360-guide-panel .vg-empty{color:#8299b5!important;text-align:center!important;padding:18px 5px!important}
+#lab360-guide-panel .vg-status{display:flex!important;align-items:center!important;gap:8px!important;padding:12px 20px 8px!important;color:#93a9c4!important;font-size:11px!important}
+#lab360-guide-panel .vg-status i{display:block!important;width:7px!important;height:7px!important;border-radius:50%!important;background:#8b9bb0!important;box-shadow:0 0 0 3px rgba(139,155,176,.12)!important}
+#lab360-guide-panel .vg-controls{display:flex!important;gap:8px!important;align-items:center!important;padding:0 20px 13px!important}
+#lab360-guide-panel .vg-btn{min-height:38px!important;padding:9px 13px!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:9px!important;background:rgba(255,255,255,.07)!important;color:#d9e5f5!important;font-size:12px!important;font-weight:700!important}
+#lab360-guide-panel .vg-btn.primary{border-color:transparent!important;background:linear-gradient(110deg,#7ce3d0,#9db5ff)!important;color:#071522!important}
+#lab360-guide-panel .vg-btn:disabled{opacity:.38!important;cursor:not-allowed!important}
+#lab360-guide-panel #vg-error{display:none;margin:0 20px 10px!important;padding:8px 10px!important;border:1px solid rgba(255,125,125,.22)!important;border-radius:8px!important;background:rgba(255,90,90,.08)!important;color:#ffb4b4!important;font-size:11px!important}
+#lab360-guide-panel #vg-error:not(:empty){display:block!important}
+#lab360-guide-panel .vg-privacy{padding:0 20px 16px!important;color:#7187a3!important;font-size:10px!important;line-height:1.5!important}
+#lab360-guide-launch{display:flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;min-height:48px!important;padding:0 17px!important;border:1px solid rgba(160,205,231,.35)!important;border-radius:999px!important;background:linear-gradient(110deg,#172a43,#0e1b2e)!important;color:#f2f7ff!important;font-size:13px!important;font-weight:750!important;letter-spacing:.01em!important;box-shadow:0 10px 35px rgba(0,0,0,.38),0 0 25px rgba(124,227,208,.10)!important;white-space:nowrap!important;transition:transform .2s,box-shadow .2s!important}
+#lab360-guide-launch:hover{transform:translateY(-2px)!important;box-shadow:0 14px 38px rgba(0,0,0,.44),0 0 28px rgba(124,227,208,.18)!important}
+#lab360-guide-launch .vg-launch-orb{display:grid!important;place-items:center!important;width:24px!important;height:24px!important;border-radius:50%!important;background:linear-gradient(135deg,#7ce3d0,#9db5ff)!important;color:#071522!important;font-size:15px!important}
+@media(max-width:520px){#lab360-guide-root{right:12px!important;bottom:12px!important;max-width:calc(100vw - 24px)!important}#lab360-guide-panel{right:0!important;bottom:62px!important;width:calc(100vw - 24px)!important;max-height:calc(100dvh - 92px)!important;border-radius:18px!important}#lab360-guide-panel .vg-head{padding:15px 16px!important}#lab360-guide-panel .vg-intro{padding:14px 16px 10px!important}#lab360-guide-panel .vg-suggestions{padding:0 16px 12px!important}#lab360-guide-panel #vg-transcript{margin:0 16px!important;max-height:32vh!important}#lab360-guide-panel .vg-status{padding:10px 16px 7px!important}#lab360-guide-panel .vg-controls{padding:0 16px 11px!important}#lab360-guide-panel .vg-privacy{padding:0 16px 13px!important}}
+@media(prefers-reduced-motion:reduce){#lab360-guide-root *{transition:none!important}}
+</style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#highlight" aria-label="Lab 360° home">
+      <span class="brand-mark">360<span>°</span></span>
+      <span class="brand-copy"><strong>Physics<span>+</span>AI</strong><small>PHYSICS · AI · COMPLEX SYSTEMS</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#publication" class="nav-link">Publications</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="status-chip"><i></i> Exploring the complex</span>
+      <button id="install-app" class="install-button" type="button"><span aria-hidden="true">↓</span> <span class="install-label">Install</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+    <nav class="secondary-nav" id="secondary-nav" aria-label="Site sections">
+      <a href="#highlight" class="nav-link">Overview</a>
+      <a href="#teaching" class="nav-link">Teaching</a>
+      <a href="#outreach" class="nav-link">Outreach</a>
+      <a href="#latest" class="nav-link">Latest</a>
+      <a href="#classroom" class="nav-link">Live Classroom</a>
+      <a href="#products" class="nav-link">Lab Products</a>
+      <a href="#misc" class="nav-link">People & Awards</a>
+      <a href="#playground" class="nav-link">Playground</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <div class="page-kicker"><span class="kicker-line"></span><span id="page-kicker-label">LAB 360° / OVERVIEW</span><span class="kicker-line"></span></div>
+    <div id="page-host" aria-live="polite">
+      <article class="page-content page-highlight">
+        <h1>Lab 360°: Physics, Artificial Intelligence &amp; Data Science Research</h1>
+        <p><strong>Lab 360° — Physics + AI</strong> is an interdisciplinary research and learning initiative associated with Amrita Vishwa Vidyapeetham, Coimbatore. It connects fundamental physics, artificial intelligence, machine learning and data science to understand and model complex natural and artificial systems.</p>
+        <p>Research themes include computational and statistical physics, non-equilibrium and soft matter, complex systems, data-driven modelling, scientific machine learning, materials informatics, molecular dynamics, interpretable AI and high-performance computing. The site also shares research directions, publications, teaching resources, projects and opportunities for collaboration.</p>
+        <p>Explore the <a href="#research">research areas</a>, <a href="#publication">publications</a>, <a href="#teaching">teaching resources</a> and <a href="#outreach">outreach activities</a>.</p>
+      </article>
+    </div>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Lab 360° · Physics + AI</span>
+      <span>Curiosity → Models → Discovery</span>
+      <a href="#highlight">Back to top ↑</a>
+    </footer>
+  </main>
+
+<!-- Embedded page sections: avoids path/fetch deployment failures -->
+<template id="section-template-about">
+<h2>Group Leader</h2>
+<div class="profile-header section">
+<img alt="Profile Picture" class="profile-picture" src="Image_PPic.png"/>
+<div class="header-text">
+<h1>Suman Dutta</h1>
+<p>Researcher | Intelligent Living &amp; Artificial Systems</p>
+</div>
+</div>
+<h2> About Me</h2>
+<p>I am a <strong>Creative</strong> researcher in the field of <strong>Intelligent Complex Systems</strong>, with a specialization in <strong>out-of-equilibrium Complex Fluids</strong>. I investigate model dynamics of <strong>Natural and Artificial Systems</strong>, combining <strong>Statistical Physics</strong>, <strong>High Performance Computing </strong> and <strong>Machine Intelligence</strong>, with an aim to develop strategies for <strong>Generative Physical Systems</strong>.</p>
+<div class="section">
+<h3>🎓 Professional Journey</h3>
+<h4>Present Affiliation</h4>
+<p><strong>Gemini Certified Faculty</strong><br/>(2026-2028)<br/></p>
+<p><strong>Assistant Professor (Sr. Gr.), Department of Artificial Intelligence</strong><br/>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore HQ<br/></p>
+<h4>Professional Research Experience</h4>
+<ul>
+<li><strong>Post Doctoral Fellow</strong> (01/2024 – 09/2024)<br/>Simons Centre for the Study of Living Machines, National Centre for Biological Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: M. Rao)</li>
+<li><strong>Post Doctoral Fellow</strong> (01/2021 – 12/2023)<br/>International Centre for Theoretical Sciences - Tata Institute of Fundamental Research, Bangalore (Advisor: C. Dasgupta)</li>
+<li><strong>Post Doctoral Fellow</strong> (02/2018 – 12/2020)<br/>The Institute of Mathematical Sciences, Chennai (Advisor: P. Chaudhuri, in collaboration with K. Martens)</li>
+</ul>
+<h4>Visiting Researcher Experience</h4>
+<ul>
+<li>Fluvial Mechanics Laboratory Indian Statistical Institute (Kolkata, IN) </li>
+<li>Department of Physics Indian Institute of Science (Bangalore, IN) </li>
+<li>Department of Physics Indian Institute of Science Education and Research (Bhopal, IN) </li>
+<li>Laboratoire Interdisciplinaire de Physique Université Grenoble Alpes (Grenoble, FR) </li>
+<li>Institut für Theoretische Physik II - Soft Matter Heinrich-Heine-Universität (Düsseldorf, DE) </li>
+</ul>
+<h4>Education</h4>
+<ul>
+<li><strong>Ph.D in Physics</strong> (08/2012 – 01/2018)<br/>Department of Chemical, Biological and Macromolecular Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata (Degree awarded by University of Calcutta) <br/><em>Thesis:</em> Numerical Studies on the Dynamics of Soft Matter Systems (Advisor: J. Chakrabarti)</li>
+<li><strong>M.Sc in Physical Sciences</strong> (08/2010 – 07/2012)<br/>S. N. Bose National Centre for Basic Sciences (Degree awarded by West Bengal University of Technology, Kolkata)</li>
+</ul>
+</div>
+<h2>📫 Connect</h2>
+<div class="section" style="text-align: center;">
+<div class="social-links">
+<a href="mailto:sumandutta.snbncbs@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-red?style=flat-square&amp;logo=gmail&amp;logoColor=white"/></a>
+<a href="https://scholar.google.com/citations?user=j-83jp8AAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/Google_Scholar-007bff?style=flat-square&amp;logo=google-scholar&amp;logoColor=white"/></a>
+<a href="https://github.com/sd3ph"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/sd3ph/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&amp;logo=linkedin&amp;logoColor=white"/></a>
+<a href="https://sd3ph.github.io/CV.html" target="_blank" rel="noopener noreferrer"><img alt="Resume" src="https://img.shields.io/badge/Resume-8B6FF0?style=flat-square&amp;logo=readthedocs&amp;logoColor=white"/></a>
+</div>
+</div>
+
+</template>
+<template id="section-template-classroom">
+<h2>🧑‍🏫 Live Class Room</h2>
+ Password Prompt Container 
+<div class="password-prompt-container" id="password-prompt-container">
+<h3>🔒 Access Restricted</h3>
+<p>Please enter the passcode to view course materials.</p>
+<form class="password-form" id="password-form">
+<input id="passcode-input" placeholder="Enter passcode" required="" type="password"/>
+<button type="submit">Unlock</button>
+</form>
+<p class="password-error-message" id="password-error-message"></p>
+</div>
+ Protected Content 
+<div class="hidden" id="classroom-content">
+<!-- DASHBOARD VIEW -->
+<div id="classroom-dashboard">
+<p style="text-align: center; margin-bottom: 25px; font-size: 1.05em;">Welcome to the Live Class Room. Select a course below to view details.</p>
+<div class="course-grid">
+<!-- Card 1: 23MAT106 -->
+<div class="course-card" onclick="openCourse('course-mat106')">
+<div>
+<h4>Mathematics for Intelligent Systems - I</h4>
+<p><span class="course-code">23MAT106</span> <span class="semester-tag">Fall 2025</span></p>
+<p><strong>Subject:</strong> Linear Algebra, ODEs, Probability, Quantum Computing</p>
+<p><strong>Credit:</strong> 4 </p>
+<p><strong>Timeline:</strong> 6 Aug - 5 Dec, 2025 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 133 Students) First Year, First Semester </p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card 2: 23CHY115 -->
+<div class="course-card" onclick="openCourse('course-chy115')">
+<div>
+<h4>Introduction to Material Informatics</h4>
+<p><span class="course-code">23CHY115</span> <span class="semester-tag">Spring 2026</span></p>
+<p><strong>Subject:</strong> AI in Material Science</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 5 Jan - 4 May, 2026 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 129 Students) First Year, Second Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card 3: 23MAT204 -->
+<div class="course-card" onclick="openCourse('course-mat204')">
+<div>
+<h4>Mathematics for Intelligent Systems - III</h4>
+<p><span class="course-code">23MAT204</span> <span class="semester-tag">Fall 2026</span></p>
+<p><strong>Subject:</strong> Advanced Optimization, Multivariate Calculus, Vector Spaces</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 15 July - 30 Nov, 2026 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Third Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+<!-- Card: 25AID434 -->
+<div class="course-card">
+<div>
+<h4>Linear Algebra and Quantum Gates</h4>
+<p><span class="course-code">25AID434</span></p>
+<p><strong>Subject:</strong> Linear Algebra and Quantum Gates</p>
+</div>
+</div>
+<!-- Card 4: 23MAT214 -->
+<div class="course-card" onclick="openCourse('course-mat314')">
+<div>
+<h4>Mathematics for Intelligent Systems - IV</h4>
+<p><span class="course-code">23MAT214</span> <span class="semester-tag">Spring 2027</span></p>
+<p><strong>Subject:</strong> Random Processes, Advanced Probability, Statistical Inference</p>
+<p><strong>Credit:</strong> 3 </p>
+<p><strong>Timeline:</strong> 20 Nov, 2026 - 26 April, 2027 </p>
+<p><strong>Students:</strong> BTech AID, Batch A and B (Total: 131 Students) Second Year, Fourth Semester</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan);">
+                                Click to view Schedule, Syllabus &amp; Notes →
+                            </div>
+</div>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT106 -->
+<div class="course-detail-view" id="course-mat106">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2025 </li>
+<li><strong>Course Code:</strong> 23MAT106</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - I - 23MAT106, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:00 - 08:50</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:45 - 11:35</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">12:25 - 01:15</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 02:55</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:55 - 03:45</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">03:45 - 04:35</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">04:35 - 06:15</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Basics of Linear Algebra - Linear Dependence and independence of vectors - Gaussian Elimination - Rank of set of vectors forming a matrix - Vector space and Basis set for a Vector space – Dot product and Orthogonality - CR decomposition - Rotation matrices - Eigenvalues and Eigenvectors and its interpretation - Introduction to SVD. Computational experiments using Matlab/Excel/Simulink.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Ordinary Linear differential equations, formulation - concept of slope, velocity and acceleration - analytical and numerical solutions - Impulse Response computations - converting higher order into first order equations - examples of ODE modelling in falling objects, satellite and planetary motion, Electrical and mechanical systems – Introduction to solving simple differential equations with Simulink - Introduction to one variable optimization - Taylor series. Computational experiments using Matlab /Excel/Simulink.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Introduction to random variables (continuous and discrete), mean, standard deviation, variance, sum of independent random variable, convolution, sum of convolution integral, probability distributions.</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Introduction to quantum computing, Quantum Computing Roadmap, Quantum Mission in India, A Brief Introduction to Applications of Quantum computers, Quantum Computing Basics, Bracket Notation, Inner product, outer product, concept of state.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1iQD5Idz2AqHFS5tHxHp9FYU0DpuDQ2t2/view?usp=sharing">Lecture 01: Introduction to Linear Algebra for AI (06/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1QxHKnfaHpDvrX1Q6f9Q9I8hQ8eetbBaU/view?usp=sharing">Lecture 02: Pseudoinverse in Action: Left and Right Inverses (08/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1tWhlRsK2VE4cyas4OhLAwnjNwyOfuxR/view?usp=sharing">Lecture 03: Pseudoinverse : Guide to your first AI application (11/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1xMa106_qIavA7vq0Un-bNcqrSbn4ItBr/view?usp=sharing">Lecture 04: Complex Data Processing (13/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1Cex5xgXujKA76VS8t02WuPzfFm4i7vMf/view?usp=sharing">Lecture 05-06: Introduction to Advanced Optimization and Physics-Informed Approaches(18/8/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1rwP78U60kntlpxxYTe5jD12t332jRt1s/view?usp=sharing">Lecture 07: The Linear Algebra Behind Large Language Models and Generative AI (21/08/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 08-10: The Physics behind the Data: Unveiling the Symmetries and Principal Axes of Transformations (1-5/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1MkGZUF9IKAIYxBv7noBz9B3FnrgaPJc5/view?usp=sharing">Lecture 11-12: Introduction to Ordinary Differential Equations (8-10/9/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1_PaitQ1drWka5PChDg8cy8fRMGuFMhA2/view?usp=sharing">Lecture 13-15:Impulse Response and Convolution(10-13/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1pRwjpohrF_t-iULyS0VWk7NBpHGEKWqo/view?usp=sharing">Lecture S1: An Introduction to Python for Linear Algebra(17/09/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1hlK77sH8cevDB_e4i1mbi67cYOawG7hw/view?usp=sharing">Lecture 16-17: Modeling Falling Objects, Satellites, and Planetary Motion (3-4/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1oe9eS-2PNsJ_ms5_4UgoKinqTAhAeGID/view?usp=sharing">Lecture 18: Ordinary Differential Equations (6/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/15vP6HRE0uMPYSHGrdb1SOZZ2CLl9UuaU/view?usp=sharing">Lecture 19: Complex RLC Circuit Analysis (8/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1mkCa3YYbM5Y04IAdMoVx39nBrDEsV5sR/view?usp=sharing">Lecture 20-21: Solving Ordinary Differential Equations in Python with SciPy (8/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1C-MSVKh_8QVNJtfayCFyjBGn_F1A2To5/view?usp=sharing">Lecture 22: Numerical Solution of ODEs (11/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1iRcFYW5_NAFJNh9FnoA9uo16n-Cv5R8c/view?usp=sharing">Lecture 23-26: Probability and Random Variables (24/10/2025)</a> - (LH 310/314)</li>
+<li><a href="https://drive.google.com/file/d/1qLYkZweb2UPk8yMq9tnCXjYJoxhnoDSO/view?usp=sharing">Hybrid Lecture-1: Buidling your first AI model (5/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1qPFETANADVHdJYmeeauB-VWI1uOieIvr/view?usp=sharing">Hybrid Lecture-2: Building your second AI model (6/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1JhTzCXodJKlXThSbIfQH9Wt4rWrv4WA1/view?usp=sharing">Hybrid Lecture-3: Polynomial Regression via Design Matrix Modification (7/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1HwdJjU6YZwOnGfQAE5U_FlKCwx0ZBiwr/view?usp=sharing">Hybrid Lecture-4: Finding the Pseudoinverse via CR Decomposition (11/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1o-EyZnoYgP5XWq7N9jYSVEB9K5tOGHDT/view?usp=sharing">Hybrid Lecture-5: Application of Singular Value Decomposition(SVD) (12/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1ZmoDHKNj4rgpQNUL0a5F4NBmyQDESGfY/view?usp=sharing">Hybrid Lecture-6: Application of Singular Value Decomposition(SVD) and Stochastic Analysis (14/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1AH3pcCV2Y20UcjFV1GsWdiEphSNxoSeG/view?usp=sharing"> Summary and Revision Unit-I-II-III (Theory) (17/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1H00roWBC8HzWcGgA-pDbqYawVBSGjIwY/view?usp=sharing"> Summary and Revision Unit-I-II-III (Coding) (19/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1odIEqeeOxx4CVEQcGZPm_qSWesh43KN_/view?usp=sharing"> SmartLab1: Linear Regression on the Edge (27/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1_WMGs493n6NF6MFzfg_KIoJpky-3X1ex/view?usp=sharing"> Lecture 27: Introduction to Quantum Computing (28/11/2025)</a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1TDx-ZVSEYl2dRAufjnGKXv9N5GwKH0rJ/view?usp=sharing"> Lecture 28-30: Introduction to Quantum Computing (Extended) (29/11/2025)</a> - (LH 15/16)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1kfk44ClGk1CHYdp4oH3HK4MVGU5g_oYK/view?usp=drive_link"> Summary of Topical Projects </a> </li>
+</ul>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1rkGgMks5BO0PGgv5f-wHzubaMnZHBIxF/view?usp=sharing">Assignment 1: Linear Algebra and ML </a> - (Due: 18/08/2025)</li>
+<li><a href="https://drive.google.com/file/d/1yReUaF3pPoDgymTmBLUbRtqrZP40dzlW/view?usp=sharing">Assignment 2: Differential Equations and Modeling</a> - (Due: 11/10/2025)</li>
+</ul>
+</div>
+</div>
+<!-- DETAILED VIEW: 23CHY115 -->
+<div class="course-detail-view" id="course-chy115">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2025 </li>
+<li><strong>Course Code:</strong> 23CHY115</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Material Informatics - 23CHY115, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:00 - 08:50</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:45 - 11:35</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td><td></td><td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">12:25 - 01:15</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td></td><td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">03:45 - 04:35</td>
+<td></td><td></td><td></td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Introduction to material science – structure, properties, and process spaces - process-structure-property linkages – foundation of material informatics – introduction to molecular mechanism and force field – quantification of dynamics properties of polymers (monte carlo simulation, molecular dynamics simulation, normal mode analysis) – electronics structure of atoms (Gaussian, Gauss view, density functional theory)</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Quantification and screening of materials properties - property prediction and optimization using AI - materials design and discovery using AI – how to handle small, spared, and low-quality dataset using AI.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Materials failure and sustainability analysis – new material and inverse materials design concept – solve inverse design using AI – enhance speed, efficacy and cost-effectiveness of material using AI - basic concept of quantum computing in material informatics.</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Case studies of materials informatics (use of AI) in different fields (e.g. energy, aerospace, biomedical, etc.) - ethical considerations and limitations of materials informatics - future directions and challenges in materials informatics.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/10rcKnWqmk5Hy0MSTJqXo8-H74M2xk72T/view?usp=sharing">Lecture 01-03: Overview of Material Informatics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1cZaj16h_Sk6r1eZzc-ZFUbtcTkD7J-z2/view?usp=sharing">Lecture S1: Generative Prediction using Koopman Theory </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1hfJNXZGG6GfeTdLZS3ALU6GrzoUQhBdy/view?usp=sharing">Lecture 4-5: Koopman Operator &amp; Simple DMD </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1lz4Ddp6zURVGcWDvydx6Za-LBiv1wt7c/view?usp=sharing">Lecture 6-7: Koopman Prediction in Material Informatics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1uW-H33hAH_Th4Y_Ejim6yngpuo9gq43a/view?usp=sharing">Lecture 8: Single Variable Time-Series Prediction (Hankel-DMD) </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1zUQ6BYGaNtxK2LeCS5pzdL0czc-1aZHG/view?usp=sharing">Lecture S2: Data-Driven Model Engineering </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1zUQ6BYGaNtxK2LeCS5pzdL0czc-1aZHG/view?usp=drive_link">DMD Slides: Data-Driven Model Engineering </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/10btQz3_e2ZYVLppxqe5Zqhg0wxUBOAZY/view?usp=drive_link">Lecture 9-10: Analytical Data-Driven Koopman </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1I54B2QkDEIKDU_1Vk8Or9NcVrmtz-gaw/view?usp=drive_link">Lecture 11-12: Introduction to Molecular Dynamics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1hnKFxWve7AYl4j8dOCd-JzC-rZAyxlYu/view?usp=drive_link">Lecture 13: Basic Molecular Dynamics </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1t1njTsSTpOiqRU6bVZCJHe98pCBcKfsM/view?usp=drive_link">Lecture 14-15: Catastrophic Algorithms in Materials BTW Sandpile vs. CBO Earthquake Model </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1BSzk1M6NML5LYN_KgRYH-GUJco4YDLPv/view?usp=sharing">Lecture 14-18: Catastrophic Algorithms in Materials BTW Sandpile vs. CBO Earthquake Model </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1X1Cv0vV0pIWJsyU0P-M8dduBeOsBiz-I/view?usp=sharing">Lecture 22: Massively Parallel Material Simulations LAMMPS and OVITO </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 24: Agent-Based Simulations using LAMMPS </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1SXG6P7WjXRF_BbrG1r8ix1ya77g1PmKw/view?usp=sharing">Lecture 26: Post Processing LAMMPS data </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1x02_HxmbctBWNH9JE-QyohEowLdpwCw6/view?usp=sharing">Lecture 27: Tutorial: Material Discovery with AI </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1-ZvtPiX5y_kmptXihOqa5jQbOkfN724e/view?usp=sharing">Lecture 26-30: Material Discovery by AI </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1lmd9snw_9iXnuwFd-jeRUOTeB5SqjVov/view?usp=sharing">Lecture 31: Vibrational Dynamics, Normal Mode Analysis (NMA) and Data-Driven Modeling </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1znn-zVH3Ciy3cJJHQO3Tiuo-i4yUdGIt/view?usp=sharing">Lecture 32-34: Ethical Considerations, Limitations, and Future Directions </a> - (LH 15/16)</li>
+<li><a href="https://drive.google.com/file/d/1Is5xz_s14I5ROZDtmghbUwJOtNb5wAZT/view?usp=sharing">Extensive Summary</a> - (LH 15/16)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/13OLMqsd1L7j0Fj4esVj72-NellyJjNn9/view?usp=sharing"> Summary of Project Review</a> </li>
+</ul>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1DHuBZ-bzmekvveB4S0OiRT2LBufMDDvi/view?usp=sharing">Assignment 01: Due Date 31/01/2026 </a> - (LH 15/16)</li>
+</ul>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT204 -->
+<div class="course-detail-view" id="course-mat204">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Fall, 2026 </li>
+<li><strong>Course Code:</strong> 23MAT204</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - III - 23MAT204, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Direct methods for convex functions - sparsity inducing penalty functions- Constrained Convex Optimization problems - Krylov subspace -Conjugate gradient method - formulating problems as LP and QP - Lagrangian multiplier method-KKT conditions - support vector machines- solving by packages (CVXOPT) - Introduction to RKS - Introduction to DMD-Tensor and HoSVD- Linear algebra for AI.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Introduction to PDEs - Formulation and numerical solution methods (Finite difference and Fourier) for PDEs in Physics and Engineering- Computational experiments using Matlab/Excel/Simulink.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Multivariate Gaussian and weighted least squares - Markov chains - Markov decision Process </dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Introduction to quantum computing-Bells inequality-Quantum gates</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<p style="font-style: italic; color: var(--text-muted);">
+        Lecture materials and notes will be uploaded concurrently with the session schedule.
+    </p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1EwogTaFt1xZVnn0F5ViFsdDrhAy-Z_si/view?usp=drive_link">Lecture 01–04: Revision Lectures (16/07/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1jctIVBS-wtMVfnak4N-NsIZhkYFSlvO7/view?usp=drive_link">Lecture 05–07: Convexity and Derivatives in Multivariable Space — Gradients, Jacobians, and Hessians</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1b1s9-iJJV5DzEm1I5XM53A4_TqdYW8ol/view?usp=drive_link">Lecture 08–10: Introduction to Convex Optimization — Applications in AI</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/14j82gOLLanHIJiCT05aXygfujhRC3Dfi/view?usp=drive_link">Lecture 10b: The Method of Lagrange Multipliers</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1zGw-iGAGiykFh2iBI4zcj1LJ7AqViz7g/view?usp=drive_link">Lecture 11–13: Sparsity, Constraints, and Smart Search Methods</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1owY3q7knQ_mTrE6K5zQHpRKvmwAyX2ka/view?usp=drive_link">Lecture 14–15: The Conjugate Gradient Method</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1nLnM5vGfJTQQQD0EuVGQBX2D3A8TeK2H/view?usp=drive_link">Lecture 16–17: Classical and Stochastic Optimization Algorithms (04/08/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1stwpuUI90J834yh1-lkXL2vKY3jFBXYN/view?usp=drive_link">Lecture 18: Why Support Vector Machines? — The Maximum Margin Principle (09/11/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1bClgNZc1M5Nem0LNVQw6sRSTH_w2nUcq/view?usp=drive_link">Lecture 19–20: Predicting Student Pass/Fail Using SVM and Pseudoinverse</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1DiuiZxEs901s02BZ3rPAvXEwzmlZnGEX/view?usp=drive_link">Lecture 21–25: Introduction to Partial Differential Equations in Engineering and Physics (05/09/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1da3pM5BnLSqZCbzQZIrCMGEzXFETzx3H/view?usp=drive_link">Lecture 22: Four Easy First-Order Homogeneous PDEs — Separation of Variables</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1A1lxsGCwUdJjZtyWICE9772PQ_CXcoPs/view?usp=drive_link">Lecture 27: Solving PDEs with SymPy (21/09/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1BDi3Ck8p0S9DX8TNQj8HzV4Wjc-sDh8Y/view?usp=drive_link">Lecture 29–30: Solving and Discovering PDEs — Fourier Transform, FDM, and PINNs (05/10/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1v1S7qb9bS1IvymN6IlolKxtfZR6XWPQC/view?usp=drive_link">Lecture 31–32: Engineering Foundations of Machine Learning (05/10/2026)</a> - (LH 115/116)</li>
+<li><a href="https://drive.google.com/file/d/1VNK5-s_vWhYCOEtVnVR42vbd4RbEPMdU/view?usp=drive_link">Lecture 34–36: Foundations of Quantum Computing — Qubits, Quantum Gates, and Bell’s Inequality</a> - (LH 115/116)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
+</div>
+</div>
+<!-- DETAILED VIEW: 23MAT304 -->
+<div class="course-detail-view" id="course-mat304">
+<button class="back-btn" onclick="closeCourse()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                        Back to Dashboard
+                    </button>
+<div class="section">
+<h3>Course Details</h3>
+<ul>
+<li><strong>Class:</strong> BTech AID</li>
+<li><strong>Semester:</strong> Spring, 2027 </li>
+<li><strong>Course Code:</strong> 23MAT304</li>
+</ul>
+</div>
+<div class="section">
+<h3>Combined Weekly Schedule</h3>
+<p style="font-weight: bold; margin-bottom: 5px;">BTech (AID)</p>
+<p style="font-size: 1.05em; font-style: italic; margin-top: 0;">Mathematics for Intelligent Systems - IV - 23MAT304, School of AI, Amrita Vishwa Vidyapeetham</p>
+<div class="table-responsive">
+<table style="text-align: center;">
+<thead>
+<tr>
+<th>Time Slot</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: bold;">08:50 - 09:40</td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">09:40 - 10:30</td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">10:30 - 10:45</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">11:35 - 12:25</td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B</span></td>
+<td></td>
+<td></td>
+<td><span class="semester-tag">Section A</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold;">01:15 - 02:05</td>
+<td colspan="5" style="background: rgba(255,255,255,0.05); font-style: italic;">Lunch Break</td>
+</tr>
+<tr>
+<td style="font-weight: bold;">02:05 - 03:45</td>
+<td></td>
+<td><span class="semester-tag" style="border-color: var(--accent-pink); color: var(--accent-pink);">Section B (Lab)</span></td>
+<td></td>
+<td><span class="semester-tag">Section A (Lab)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<h3>Syllabus</h3>
+<dl>
+<dt><strong>Unit 1</strong></dt>
+<dd>Advanced Probability Theory - Joint, conditional, and marginal distributions, Multivariate Gaussian distributions, Transformations of random variables, Characteristic functions, Moments and cumulants.</dd>
+<dt><strong>Unit 2</strong></dt>
+<dd>Stochastic Processes &amp; Random Walks - Discrete and continuous-time Markov chains, Transition probability matrices, Chapman-Kolmogorov equations, Stationary distributions, Ergodicity, Poisson processes, Brownian motion.</dd>
+<dt><strong>Unit 3</strong></dt>
+<dd>Statistical Inference &amp; Estimation - Maximum Likelihood Estimation (MLE), Maximum A Posteriori (MAP), Bayesian inference, Expectation-Maximization (EM) algorithm, Hypothesis testing, Confidence intervals, Information theory measures (Entropy, KL divergence).</dd>
+<dt><strong>Unit 4</strong></dt>
+<dd>Probabilistic Modeling in AI - Markov Decision Processes (MDPs), Hidden Markov Models (HMMs), Markov Chain Monte Carlo (MCMC), Metropolis-Hastings and Gibbs sampling, Generative probabilistic models.</dd>
+</dl>
+</div>
+<div class="section">
+<h3>Lecture Notes</h3>
+<p style="font-style: italic; color: var(--text-muted);">Lecture materials and notes will be uploaded concurrently with the session schedule.</p>
+</div>
+<div class="section">
+<h3>Topical Project</h3>
+<p style="font-style: italic; color: var(--text-muted);">Project briefs and topics will be announced during Unit 2.</p>
+</div>
+<div class="section">
+<h3>Assignments</h3>
+<p style="font-style: italic; color: var(--text-muted);">Assignments will be published here with respective deadlines.</p>
+</div>
+</div>
+</div>
+
+</template>
+<template id="section-template-highlight">
+
+<section class="vision-lab" id="vision-lab" aria-label="Lab 360 brand animation">
+  <div class="lab360-brand-embed" style="position:relative;width:100%;aspect-ratio:16 / 9;overflow:hidden;border:1px solid rgba(185,245,109,.22);border-radius:22px;background:#060d15;box-shadow:0 24px 70px rgba(0,0,0,.28);">
+    <iframe
+      title="Lab 360° animated brand identity"
+      srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;Lab 360° — Brand Animation&lt;/title&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+  &lt;link
+    href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap&quot;
+    rel=&quot;stylesheet&quot;
+  /&gt;
+  &lt;style&gt;
+    :root {
+      --bg-deep: #060d15;
+      --bg-navy: #0a1522;
+      --brand-white: #f3f7fb;
+      --brand-lime: #b9f56d;
+      --brand-lime-glow: rgba(185, 245, 109, 0.45);
+      --brand-slate: #6f8398;
+      --grid-line: rgba(111, 131, 152, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(circle at 28% 50%, #0d2233 0%, var(--bg-navy) 45%, var(--bg-deep) 100%);
+      font-family: &#x27;Inter&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Roboto, sans-serif;
+      color: var(--brand-white);
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+    }
+
+    canvas#bg-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    /* Subtle film vignette &amp; scanline texture */
+    .vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, transparent 48%, rgba(3, 7, 12, 0.72) 100%);
+      z-index: 2;
+    }
+
+    /* Brand Lockup Container */
+    .brand-container {
+      position: relative;
+      z-index: 5;
+      padding: 3.2rem 4rem;
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .lockup {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    /* Main Title Row */
+    .wordmark-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.28em;
+      font-size: clamp(3.2rem, 7.2vw, 6.2rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      position: relative;
+    }
+
+    .mask-wrap {
+      overflow: hidden;
+      display: inline-flex;
+      padding: 0.08em 0.04em 0.1em 0;
+      margin: -0.08em -0.04em -0.1em 0;
+    }
+
+    .word-lab {
+      color: var(--brand-white);
+      display: inline-block;
+      transform: translateY(115%);
+      opacity: 0;
+      filter: blur(8px);
+      will-change: transform, opacity, filter;
+    }
+
+    .word-360 {
+      color: var(--brand-lime);
+      display: inline-flex;
+      align-items: flex-start;
+      transform: translateY(115%);
+      opacity: 0;
+      filter: blur(8px);
+      text-shadow: 0 0 28px rgba(185, 245, 109, 0.18);
+      will-change: transform, opacity, filter, text-shadow;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .degree-symbol {
+      display: inline-block;
+      position: relative;
+      transform-origin: center center;
+    }
+
+    /* Micro flare on the degree ring lock */
+    .degree-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--brand-lime);
+      transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Precision laser divider line during reveal */
+    .scan-rule {
+      position: relative;
+      width: 100%;
+      height: 1px;
+      margin: 0.95rem 0 0.85rem 0;
+      background: linear-gradient(90deg, rgba(185, 245, 109, 0.85), rgba(111, 131, 152, 0.2), transparent);
+      transform: scaleX(0);
+      transform-origin: left center;
+      opacity: 0;
+    }
+
+    /* Tagline Row: SCIENCE · INTELLIGENCE · IMPACT */
+    .tagline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.95em;
+      font-family: &#x27;JetBrains Mono&#x27;, ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: clamp(0.76rem, 1.45vw, 1.18rem);
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      color: var(--brand-slate);
+      text-transform: uppercase;
+      padding-left: 0.18em;
+    }
+
+    .tag-item {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      filter: blur(4px);
+      transition: color 0.4s ease, text-shadow 0.4s ease;
+    }
+
+    .tag-item.highlight {
+      color: #a9c1d6;
+      text-shadow: 0 0 12px rgba(185, 245, 109, 0.25);
+    }
+
+    .tag-dot {
+      display: inline-block;
+      opacity: 0;
+      transform: scale(0);
+      color: var(--brand-lime);
+      font-weight: 700;
+    }
+
+    /* Keyframe Animation States */
+    .is-playing .word-lab {
+      animation: revealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 1.55s forwards;
+    }
+
+    .is-playing .word-360 {
+      animation:
+        revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.72s forwards,
+        limeLockGlow 1.1s ease-out 2.55s forwards;
+    }
+
+    .is-playing .degree-pulse {
+      animation: degreeShockwave 1.15s cubic-bezier(0.16, 1, 0.3, 1) 2.58s forwards;
+    }
+
+    .is-playing .scan-rule {
+      animation: ruleSweep 1.35s cubic-bezier(0.22, 1, 0.36, 1) 2.15s forwards;
+    }
+
+    .is-playing .tag-science {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.75s forwards;
+    }
+    .is-playing .dot-1 {
+      animation: dotPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 2.98s forwards;
+    }
+    .is-playing .tag-intelligence {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.12s forwards;
+    }
+    .is-playing .dot-2 {
+      animation: dotPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 3.35s forwards;
+    }
+    .is-playing .tag-impact {
+      animation: tagIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.48s forwards;
+    }
+
+    @keyframes revealUp {
+      0% {
+        transform: translateY(115%);
+        opacity: 0;
+        filter: blur(10px);
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+        filter: blur(0px);
+      }
+    }
+
+    @keyframes limeLockGlow {
+      0% {
+        text-shadow: 0 0 18px rgba(185, 245, 109, 0.15);
+      }
+      35% {
+        text-shadow: 0 0 42px rgba(185, 245, 109, 0.75), 0 0 14px rgba(255, 255, 255, 0.45);
+      }
+      100% {
+        text-shadow: 0 0 26px rgba(185, 245, 109, 0.22);
+      }
+    }
+
+    @keyframes degreeShockwave {
+      0% {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(6.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes ruleSweep {
+      0% {
+        transform: scaleX(0);
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.9;
+      }
+      70% {
+        transform: scaleX(1);
+        opacity: 0.65;
+      }
+      100% {
+        transform: scaleX(1);
+        opacity: 0.14;
+      }
+    }
+
+    @keyframes tagIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+        filter: blur(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes dotPop {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1.25);
+        color: var(--brand-lime);
+      }
+      100% {
+        opacity: 0.75;
+        transform: scale(1);
+        color: var(--brand-slate);
+      }
+    }
+
+    /* Subtle HUD Corner Brackets */
+    .hud-corners {
+      position: fixed;
+      inset: 24px;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hud-corners.visible {
+      opacity: 1;
+    }
+
+    .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: rgba(111, 131, 152, 0.25);
+      border-style: solid;
+    }
+    .corner.tl { top: 0; left: 0; border-width: 1px 0 0 1px; }
+    .corner.tr { top: 0; right: 0; border-width: 1px 1px 0 0; }
+    .corner.bl { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+    .corner.br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+    .telemetry-readout {
+      position: fixed;
+      top: 32px;
+      right: 36px;
+      font-family: &#x27;JetBrains Mono&#x27;, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: rgba(111, 131, 152, 0.5);
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .telemetry-readout span {
+      color: rgba(185, 245, 109, 0.7);
+    }
+
+    /* Minimal Floating Controls */
+    .controls {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(10, 21, 34, 0.65);
+      border: 1px solid rgba(111, 131, 152, 0.2);
+      backdrop-filter: blur(12px);
+      opacity: 0.35;
+      transition: opacity 0.3s ease, border-color 0.3s ease;
+    }
+
+    .controls:hover {
+      opacity: 1;
+      border-color: rgba(185, 245, 109, 0.35);
+    }
+
+    .ctrl-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: var(--brand-white);
+      font-family: &#x27;JetBrains Mono&#x27;, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .ctrl-btn:hover {
+      background: rgba(185, 245, 109, 0.12);
+      color: var(--brand-lime);
+    }
+
+    .ctrl-btn.active {
+      background: rgba(185, 245, 109, 0.18);
+      color: var(--brand-lime);
+    }
+
+    .ctrl-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(111, 131, 152, 0.25);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;stage&quot;&gt;
+    &lt;canvas id=&quot;bg-canvas&quot;&gt;&lt;/canvas&gt;
+    &lt;div class=&quot;vignette&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;hud-corners&quot; id=&quot;hud&quot;&gt;
+      &lt;div class=&quot;corner tl&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner tr&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner bl&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;corner br&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;telemetry-readout&quot;&gt;
+      PHASE &lt;span id=&quot;phase-angle&quot;&gt;000.0°&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;brand-container&quot; id=&quot;brand-container&quot;&gt;
+      &lt;div class=&quot;lockup&quot; id=&quot;lockup&quot;&gt;
+        &lt;div class=&quot;wordmark-row&quot;&gt;
+          &lt;span class=&quot;mask-wrap&quot;&gt;
+            &lt;span class=&quot;word-lab&quot;&gt;Lab&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&quot;mask-wrap&quot;&gt;
+            &lt;span class=&quot;word-360&quot; id=&quot;word-360&quot;&gt;
+              &lt;span id=&quot;counter-val&quot;&gt;000&lt;/span&gt;&lt;span class=&quot;degree-symbol&quot;&gt;°&lt;span class=&quot;degree-pulse&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;scan-rule&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;tagline&quot;&gt;
+          &lt;span class=&quot;tag-item tag-science&quot;&gt;SCIENCE&lt;/span&gt;
+          &lt;span class=&quot;tag-dot dot-1&quot;&gt;·&lt;/span&gt;
+          &lt;span class=&quot;tag-item tag-intelligence&quot;&gt;INTELLIGENCE&lt;/span&gt;
+          &lt;span class=&quot;tag-dot dot-2&quot;&gt;·&lt;/span&gt;
+          &lt;span class=&quot;tag-item tag-impact&quot;&gt;IMPACT&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;controls&quot;&gt;
+&lt;div class=&quot;ctrl-divider&quot;&gt;&lt;/div&gt;
+      &lt;button class=&quot;ctrl-btn active&quot; id=&quot;loop-btn&quot; title=&quot;Toggle Auto-Loop (8.5s)&quot;&gt;
+        AUTO-LOOP: ON
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const canvas = document.getElementById(&#x27;bg-canvas&#x27;);
+      const ctx = canvas.getContext(&#x27;2d&#x27;);
+      const lockup = document.getElementById(&#x27;lockup&#x27;);
+      const brandContainer = document.getElementById(&#x27;brand-container&#x27;);
+      const counterEl = document.getElementById(&#x27;counter-val&#x27;);
+      const phaseAngleEl = document.getElementById(&#x27;phase-angle&#x27;);
+      const hud = document.getElementById(&#x27;hud&#x27;);
+const loopBtn = document.getElementById(&#x27;loop-btn&#x27;);
+      const tagItems = document.querySelectorAll(&#x27;.tag-item&#x27;);
+
+      let width = 0;
+      let height = 0;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      let startTime = performance.now();
+      let autoLoop = true;
+      let loopTimer = null;
+
+      // Subtle mouse parallax
+      const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      // Particle constellation (Intelligence + Science)
+      const PARTICLE_COUNT = 58;
+      const particles = [];
+
+      function initParticles() {
+        particles.length = 0;
+        for (let i = 0; i &lt; PARTICLE_COUNT; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const dist = 120 + Math.random() * Math.max(width, height) * 0.48;
+          particles.push({
+            angle,
+            baseDist: dist,
+            dist,
+            speed: (0.04 + Math.random() * 0.08) * (Math.random() &gt; 0.5 ? 1 : -1),
+            size: 1 + Math.random() * 1.8,
+            alpha: 0.15 + Math.random() * 0.45,
+            isLime: Math.random() &lt; 0.28,
+            pulseOffset: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (particles.length === 0) initParticles();
+      }
+
+      window.addEventListener(&#x27;resize&#x27;, resize);
+      resize();
+
+      window.addEventListener(&#x27;pointermove&#x27;, (e) =&gt; {
+        pointer.tx = (e.clientX / width - 0.5) * 2;
+        pointer.ty = (e.clientY / height - 0.5) * 2;
+      });
+
+      // Easing utilities
+      const easeOutExpo = (t) =&gt; (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+      const easeInOutCubic = (t) =&gt; (t &lt; 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+      const clamp = (v, min, max) =&gt; Math.max(min, Math.min(max, v));
+
+      // Counter animation: 000 -&gt; 360 synced with reveal
+      function updateCounter(elapsedSec) {
+        const start = 1.72;
+        const duration = 0.88;
+        if (elapsedSec &lt; start) {
+          counterEl.textContent = &#x27;000&#x27;;
+          return;
+        }
+        const p = clamp((elapsedSec - start) / duration, 0, 1);
+        const eased = easeOutExpo(p);
+        const val = Math.round(eased * 360);
+        counterEl.textContent = String(val).padStart(3, &#x27;0&#x27;);
+      }
+
+      // Draw subtle architectural grid
+      function drawGrid(cx, cy, opacity) {
+        if (opacity &lt;= 0.005) return;
+        const step = 72;
+        ctx.save();
+        ctx.strokeStyle = `rgba(111, 131, 152, ${0.065 * opacity})`;
+        ctx.lineWidth = 1;
+
+        const offsetX = (cx % step) - step;
+        const offsetY = (cy % step) - step;
+
+        ctx.beginPath();
+        for (let x = offsetX; x &lt; width; x += step) {
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, height);
+        }
+        for (let y = offsetY; y &lt; height; y += step) {
+          ctx.moveTo(0, y);
+          ctx.lineTo(width, y);
+        }
+        ctx.stroke();
+
+        // Crosshair intersections near center
+        ctx.strokeStyle = `rgba(185, 245, 109, ${0.12 * opacity})`;
+        for (let x = offsetX; x &lt; width; x += step * 2) {
+          for (let y = offsetY; y &lt; height; y += step * 2) {
+            const dist = Math.hypot(x - cx, y - cy);
+            if (dist &lt; 420) {
+              ctx.beginPath();
+              ctx.moveTo(x - 3, y);
+              ctx.lineTo(x + 3, y);
+              ctx.moveTo(x, y - 3);
+              ctx.lineTo(x, y + 3);
+              ctx.stroke();
+            }
+          }
+        }
+        ctx.restore();
+      }
+
+      // Draw 360° Orbital Telemetry Rings &amp; Sweep
+      function drawOrbitals(cx, cy, elapsedSec) {
+        const baseR = Math.min(width, height) * 0.29;
+
+        // Intro sweep progress (0.1s -&gt; 1.55s)
+        const introP = clamp((elapsedSec - 0.08) / 1.45, 0, 1);
+        const sweepAngle = easeInOutCubic(introP) * Math.PI * 2;
+
+        // Ambient rotation after intro
+        const ambientRot = elapsedSec * 0.14;
+
+        // Expanding ring opacity fades softly once typography settles so logo stays hero
+        const ringPresence = elapsedSec &lt; 2.2
+          ? clamp(elapsedSec / 0.6, 0, 1)
+          : Math.max(0.32, 1 - (elapsedSec - 2.2) * 0.25);
+
+        ctx.save();
+        ctx.translate(cx, cy);
+
+        // 1. Primary 360° glowing arc sweep during genesis
+        if (introP &gt; 0 &amp;&amp; elapsedSec &lt; 3.4) {
+          const fadeOut = elapsedSec &gt; 1.7 ? clamp(1 - (elapsedSec - 1.7) / 1.5, 0, 1) : 1;
+          const arcR = baseR * (0.72 + 0.28 * easeOutExpo(introP));
+
+          ctx.save();
+          ctx.rotate(-Math.PI / 2);
+
+          // Glowing lime arc trail
+          const grad = ctx.createConicGradient(0, 0, 0);
+          grad.addColorStop(0, `rgba(185, 245, 109, 0)`);
+          grad.addColorStop(0.75, `rgba(185, 245, 109, ${0.25 * fadeOut})`);
+          grad.addColorStop(1, `rgba(185, 245, 109, ${0.95 * fadeOut})`);
+
+          ctx.beginPath();
+          ctx.arc(0, 0, arcR, 0, sweepAngle);
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 2.5;
+          ctx.shadowColor = &#x27;rgba(185, 245, 109, 0.85)&#x27;;
+          ctx.shadowBlur = 16;
+          ctx.stroke();
+
+          // Leading luminous head particle
+          if (introP &lt; 0.995) {
+            const hx = Math.cos(sweepAngle) * arcR;
+            const hy = Math.sin(sweepAngle) * arcR;
+            ctx.beginPath();
+            ctx.arc(hx, hy, 4, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(243, 255, 224, ${fadeOut})`;
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+
+        // 2. Precision degree tick ring (outer)
+        const tickAlpha = ringPresence * 0.42;
+        ctx.save();
+        ctx.rotate(ambientRot * 0.35);
+        const tickR = baseR * 1.18;
+        const totalTicks = 72;
+        const revealedTicks = Math.floor(totalTicks * clamp(introP * 1.15, 0, 1));
+
+        for (let i = 0; i &lt; revealedTicks; i++) {
+          const a = (i / totalTicks) * Math.PI * 2;
+          const isMajor = i % 6 === 0;
+          const len = isMajor ? 10 : 4;
+          ctx.beginPath();
+          ctx.moveTo(Math.cos(a) * tickR, Math.sin(a) * tickR);
+          ctx.lineTo(Math.cos(a) * (tickR + len), Math.sin(a) * (tickR + len));
+          ctx.strokeStyle = isMajor
+            ? `rgba(185, 245, 109, ${tickAlpha * 0.75})`
+            : `rgba(111, 131, 152, ${tickAlpha * 0.55})`;
+          ctx.lineWidth = isMajor ? 1.4 : 1;
+          ctx.stroke();
+        }
+        ctx.restore();
+
+        // 3. Segmented dashed orbital ring (counter-rotating)
+        ctx.save();
+        ctx.rotate(-ambientRot * 0.55);
+        ctx.setLineDash([4, 10, 24, 10]);
+        ctx.beginPath();
+        ctx.arc(0, 0, baseR * 0.92, 0, Math.PI * 2 * clamp(introP * 1.1, 0, 1));
+        ctx.strokeStyle = `rgba(111, 131, 152, ${0.24 * ringPresence})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.restore();
+
+        // 4. Inner subtle lime orbital arcs
+        ctx.save();
+        ctx.rotate(ambientRot * 0.8);
+        for (let k = 0; k &lt; 3; k++) {
+          const startA = (k * Math.PI * 2) / 3;
+          ctx.beginPath();
+          ctx.arc(0, 0, baseR * 0.72, startA, startA + 0.55);
+          ctx.strokeStyle = `rgba(185, 245, 109, ${0.18 * ringPresence})`;
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+        }
+        ctx.restore();
+
+        // 5. Impact Ripple Wave (triggers around 3.45s and periodically every 6s)
+        const triggerTimes = [2.58, 3.55];
+        if (elapsedSec &gt; 6.5) {
+          const cycle = Math.floor((elapsedSec - 6.5) / 6.0);
+          triggerTimes.push(6.5 + cycle * 6.0);
+        }
+        for (const t0 of triggerTimes) {
+          const dt = elapsedSec - t0;
+          if (dt &gt;= 0 &amp;&amp; dt &lt; 2.2) {
+            const rp = dt / 2.2;
+            const rRadius = baseR * 0.25 + easeOutExpo(rp) * baseR * 1.65;
+            const rAlpha = (1 - rp) * 0.35;
+            ctx.beginPath();
+            ctx.arc(0, 0, rRadius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(185, 245, 109, ${rAlpha})`;
+            ctx.lineWidth = 1.5 * (1 - rp * 0.6);
+            ctx.stroke();
+          }
+        }
+
+        ctx.restore();
+      }
+
+      // Draw Intelligence Constellation (nodes + dynamic edges)
+      function drawConstellation(cx, cy, elapsedSec, dt) {
+        const appear = clamp((elapsedSec - 0.3) / 1.4, 0, 1);
+        if (appear &lt;= 0) return;
+
+        // Convergence impulse around 1.2s -&gt; 2.4s
+        const gather = elapsedSec &lt; 2.3
+          ? Math.sin(clamp((elapsedSec - 0.9) / 1.4, 0, 1) * Math.PI) * 0.16
+          : 0;
+
+        const positions = [];
+        for (let i = 0; i &lt; particles.length; i++) {
+          const p = particles[i];
+          p.angle += p.speed * dt;
+          const r = p.baseDist * (1 - gather);
+          const x = cx + Math.cos(p.angle) * r + pointer.x * (p.size * 6);
+          const y = cy + Math.sin(p.angle) * r + pointer.y * (p.size * 6);
+          positions.push({ x, y, p });
+        }
+
+        // Neural edges between nearby nodes
+        const maxLinkDist = 135;
+        ctx.save();
+        for (let i = 0; i &lt; positions.length; i++) {
+          for (let j = i + 1; j &lt; positions.length; j++) {
+            const dx = positions[i].x - positions[j].x;
+            const dy = positions[i].y - positions[j].y;
+            const d = Math.hypot(dx, dy);
+            if (d &lt; maxLinkDist) {
+              const alpha = (1 - d / maxLinkDist) * 0.14 * appear;
+              ctx.beginPath();
+              ctx.moveTo(positions[i].x, positions[i].y);
+              ctx.lineTo(positions[j].x, positions[j].y);
+              ctx.strokeStyle = (positions[i].p.isLime || positions[j].p.isLime)
+                ? `rgba(185, 245, 109, ${alpha * 1.15})`
+                : `rgba(111, 131, 152, ${alpha})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw nodes
+        for (let i = 0; i &lt; positions.length; i++) {
+          const { x, y, p } = positions[i];
+          const twinkle = 0.7 + 0.3 * Math.sin(elapsedSec * 2.2 + p.pulseOffset);
+          ctx.beginPath();
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.isLime
+            ? `rgba(185, 245, 109, ${p.alpha * twinkle * appear})`
+            : `rgba(165, 188, 212, ${p.alpha * 0.7 * twinkle * appear})`;
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      // Draw subtle ambient glow behind Lab 360°
+      function drawAmbientGlow(cx, cy, elapsedSec) {
+        const glowP = clamp((elapsedSec - 1.4) / 1.5, 0, 1);
+        const pulse = 1 + 0.06 * Math.sin(elapsedSec * 1.4);
+        const r = Math.min(width, height) * 0.42 * pulse;
+
+        const grad = ctx.createRadialGradient(cx + 80, cy, 10, cx + 80, cy, r);
+        grad.addColorStop(0, `rgba(185, 245, 109, ${0.075 * glowP})`);
+        grad.addColorStop(0.45, `rgba(22, 68, 86, ${0.14 * glowP})`);
+        grad.addColorStop(1, &#x27;rgba(6, 13, 21, 0)&#x27;);
+
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, width, height);
+      }
+
+      let lastFrame = performance.now();
+
+      function render(now) {
+        const dt = Math.min((now - lastFrame) / 1000, 0.05);
+        lastFrame = now;
+        const elapsedSec = (now - startTime) / 1000;
+
+        // Smooth pointer interpolation
+        pointer.x += (pointer.tx - pointer.x) * 0.06;
+        pointer.y += (pointer.ty - pointer.y) * 0.06;
+
+        // Subtle 3D tilt on the brand lockup
+        brandContainer.style.transform =
+          `rotateY(${pointer.x * 3.2}deg) rotateX(${-pointer.y * 2.5}deg) translate3d(${pointer.x * 6}px, ${pointer.y * 6}px, 0)`;
+
+        const cx = width * 0.5 + pointer.x * -8;
+        const cy = height * 0.5 + pointer.y * -8;
+
+        ctx.clearRect(0, 0, width, height);
+
+        drawAmbientGlow(cx, cy, elapsedSec);
+        drawGrid(cx, cy, clamp(elapsedSec / 1.2, 0, 1));
+        drawConstellation(cx, cy, elapsedSec, dt);
+        drawOrbitals(cx, cy, elapsedSec);
+
+        // Update 000-&gt;360 counter
+        updateCounter(elapsedSec);
+
+        // Update HUD telemetry phase angle
+        const phaseDeg = ((elapsedSec * 24) % 360).toFixed(1).padStart(5, &#x27;0&#x27;);
+        phaseAngleEl.textContent = `${phaseDeg}°`;
+
+        requestAnimationFrame(render);
+      }
+
+      // Subtle periodic highlight wave across SCIENCE · INTELLIGENCE · IMPACT in idle state
+      let tagCycleInterval = null;
+      function startTagCycle() {
+        clearInterval(tagCycleInterval);
+        let idx = 0;
+        tagCycleInterval = setInterval(() =&gt; {
+          tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+          tagItems[idx % tagItems.length].classList.add(&#x27;highlight&#x27;);
+          setTimeout(() =&gt; {
+            tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+          }, 900);
+          idx++;
+        }, 2800);
+      }
+
+      function playSequence() {
+        clearTimeout(loopTimer);
+        startTime = performance.now();
+        hud.classList.remove(&#x27;visible&#x27;);
+        lockup.classList.remove(&#x27;is-playing&#x27;);
+        tagItems.forEach((el) =&gt; el.classList.remove(&#x27;highlight&#x27;));
+        counterEl.textContent = &#x27;000&#x27;;
+
+        // Force DOM reflow to restart CSS keyframe animations cleanly
+        void lockup.offsetWidth;
+        lockup.classList.add(&#x27;is-playing&#x27;);
+
+        setTimeout(() =&gt; hud.classList.add(&#x27;visible&#x27;), 600);
+        startTagCycle();
+
+        if (autoLoop) {
+          loopTimer = setTimeout(playSequence, 8500);
+        }
+      }
+loopBtn.addEventListener(&#x27;click&#x27;, () =&gt; {
+        autoLoop = !autoLoop;
+        loopBtn.classList.toggle(&#x27;active&#x27;, autoLoop);
+        loopBtn.textContent = autoLoop ? &#x27;AUTO-LOOP: ON&#x27; : &#x27;AUTO-LOOP: OFF&#x27;;
+        clearTimeout(loopTimer);
+        if (autoLoop) {
+          const elapsed = performance.now() - startTime;
+          const remaining = Math.max(800, 8500 - (elapsed % 8500));
+          loopTimer = setTimeout(playSequence, remaining);
+        }
+      });
+
+      // Kick off animation
+      playSequence();
+      requestAnimationFrame(render);
+    })();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"
+      loading="eager"
+      scrolling="no"
+      style="position:absolute;inset:0;display:block;width:100%;height:100%;border:0;background:#060d15;"
+      allow="autoplay"
+    ></iframe>
+  </div>
+  <div style="display:flex;justify-content:center;margin:22px 0 6px;">
+    <a href="https://sd3ph.github.io/Lab360.html" target="_blank" rel="noopener noreferrer"
+       style="display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border:1px solid rgba(185,245,109,.55);border-radius:999px;background:linear-gradient(135deg,#b9f56d,#8ed84c);color:#08111a;font:700 13px/1.2 Inter,Arial,sans-serif;letter-spacing:.08em;text-decoration:none;box-shadow:0 8px 28px rgba(185,245,109,.18);transition:transform .2s ease,box-shadow .2s ease;">
+      EXPLORE LAB 360° <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
+
+
+<h1>Creative Intelligence for the Complex World</h1>
+
+<h2>Our scientific foundation: Physics meets AI</h2>
+<p>Physics provides a powerful language for understanding how systems evolve. AI offers new ways to analyse data, identify patterns and build predictive models. At Lab 360°, we bring these perspectives together—not to replace scientific reasoning with black-box prediction, but to develop methods that can reveal mechanisms, test hypotheses and support discovery.</p>
+<ul>
+  <li><strong>Complex and active matter:</strong> Understanding collective motion, self-organisation and emergent behaviour in natural and synthetic systems, from biological assemblies to coordinated swarms.</li>
+  <li><strong>Soft, glassy and disordered materials:</strong> Studying structural changes, relaxation and the precursors of failure in materials whose behaviour is difficult to capture with conventional models.</li>
+  <li><strong>Data-driven physics:</strong> Developing approaches such as reduced-order modelling, dynamical-systems learning and interpretable machine learning to extract useful structure from observations and simulations.</li>
+  <li><strong>Scientific computing and simulation:</strong> Combining numerical modelling, high-performance computing and data analysis to investigate systems across multiple length and time scales.</li>
+  <li><strong>AI for interdisciplinary challenges:</strong> Exploring how these methods can contribute to areas such as materials discovery, environmental understanding, health-related data analysis and resilient engineered systems.</li>
+</ul>
+
+<div class="section">
+  <h3>From research strengths to collaborative opportunity</h3>
+  <p>We welcome partners who want to explore technically ambitious questions with a strong scientific foundation. Depending on the challenge and its readiness, collaboration may begin with a focused feasibility study, progress to a shared research project, or develop into a prototype for further validation.</p>
+  <ul>
+    <li><strong>Applied research and co-development:</strong> Define a challenge, identify the right scientific and computational approach, and work together on a demonstrator or proof of concept.</li>
+    <li><strong>Data and modelling partnerships:</strong> Explore the value of suitable datasets, simulations and domain expertise through reproducible analytical workflows.</li>
+    <li><strong>Talent and research engagement:</strong> Connect with students and early-career researchers through internships, mentoring and project-based collaboration.</li>
+    <li><strong>Translation with care:</strong> Evaluate technical feasibility, validation needs, limitations and responsible deployment before moving towards real-world use.</li>
+  </ul>
+  <p>We are an interdisciplinary research initiative with an evolving portfolio. Specific project scope, deliverables and collaboration arrangements are developed with each partner; we do not present exploratory research as a validated commercial product.</p>
+</div>
+
+<div class="section">
+  <h3>Research, teaching and mentoring</h3>
+  <ul>
+    <li><strong>Research:</strong> Investigating natural and artificial complex systems, with particular interest in non-equilibrium physics, soft and glassy matter, active systems and data-driven modelling.</li>
+    <li><strong>Education:</strong> Teaching and developing learning experiences in mathematics for AI, intelligent systems, data science and material informatics.</li>
+    <li><strong>Mentoring:</strong> Supporting student projects and research internships that combine scientific questions with computational methods.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Partner with Lab 360°</h2>
+  <div class="advertisement">
+    <h1>Bring us a challenge. Let’s explore what’s possible.</h1>
+    <p>We are interested in conversations with research organisations, industry teams, technology innovators, funders and curious collaborators who see value in connecting fundamental science with intelligent computation.</p>
+    <p>Potential starting points include:</p>
+    <div class="opportunities">
+      <div class="opportunity">Collaborative Research</div>
+      <div class="opportunity">Applied AI Projects</div>
+      <div class="opportunity">Proof-of-Concept Studies</div>
+      <div class="opportunity">Student &amp; Research Internships</div>
+    </div>
+    <p>Whether you have a well-defined technical problem or an early-stage idea, we welcome a conversation about the question, the data, the methods and the possible path forward.</p>
+    <div class="call-to-action">
+      <h2 style="justify-content: center; border: none;">Let’s start a conversation</h2>
+      <p>Share a short description of your idea or challenge, along with your background and the kind of collaboration you have in mind.</p>
+      <a class="email-link" href="mailto:sumandutta.avvcb@gmail.com?subject=Lab%20360%C2%B0%20Collaboration%20Enquiry">Discuss a collaboration</a>
+    </div>
+    <p style="margin-top: 25px; font-style: italic; font-size: 0.9em;">Scientific depth. Creative intelligence. Shared progress.</p>
+  </div>
+</div>
+</template>
+<template id="section-template-latest">
+<h2>✨ Latest News</h2>
+<div class="section">
+<div class="timeline">,
+
+                <div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman presented work titled "Inverse Learning Complex Systems" - by Moushika S, Ashmitha T, V Vaibhav &amp; Suman Dutta, at the Statistical Mechanics Meeting - Kolkata coorganised by IISER-Kolkata, S. N. Bose National Centre for Basic Sciences, Bose Institute &amp; Indian Association for the Cultivation of Science (Oct 13-15, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman presented work titled "An Adaptive AI Assisted Framework for Personalized Indian Nutrition" - by M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal, B. Surya. Tej, M. Neeraj
+Dr Chakravarthy S Maddipati, Dr Br Nivedita Pavithran &amp; Suman Dutta, at the 58th Conference of Nutrition Society of India, at Avinashilingam Institute for Home Science and Higher Education for Women (Oct 8-9, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Poster on AI-driven Material Discovery platform - GenMatX by Revanth S, G Kamalesh, P S Sugatha, Sudip K Batabyal &amp; Suman Dutta, at the National Conference on Quality and Safety of Biosimilars, organized by IPC &amp; C-CAMP (Sept 10-11, 2026). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Magnus Olsen submitted his Master's thesis titled 'Molecular dynamics simulations of
+non-Newtonian flow in glassy materials' at Department of Physics, Faculty of Natural Sciences, Norwegian University of Science and Technology (Supervisor: R. Cabriolu, Co-supervisor: Suman Dutta) (Sept 07, 2026) </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Siddharth M and MVS Praneeth has successfully completed the summer internship at the Department of Physics, SRM University. </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman delivered a talk at the Department of Physics of Complex Systems, S. N. Bose National Centre for Basic Sciences, Kolkata: Persistently Non-Gaussian Metastable Fluids </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Moushika S selected for ICTS-TIFR Summer Course: Dynamical Systems in Neuroscience </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Archit Harish joined the Institute of Mathematical Sciences, Chennai </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Completed Project: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate &amp; Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore (2025-2026) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Publication: Persistently Non Gaussian Metastable Liquids, V. Vaibhav, T. Das and S. Dutta, Ann. Phys. (Berlin), 538 (4), e00247 (2026) </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Oral presentation in International Mini-Workshop - 125 Minutes: Optimal Diet Plannar, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha and A. Sheshank Royal </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>International Mini-Workshop - 125 Minutes was organised at School of AI (Coordinators: Dr Milton Mondal, Ayan Banerjee and Suman Dutta). </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong> Suman delivered a talk at the Institute of Mathematical Sciences, Chennai: Persistently Non-Gaussian Metastable Fluids </strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>EuroHPC Benchmark Access awarded for LUMI clusters (9th Fastest Supercomputer Globally) (PI: Raffaela Cabriolu, CoPI: Suman Dutta)</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Archit Harish selected for the Biophysical Society/ICTS-TIFR flagship Meeting: Spatial Organizations of Biophysical Functions. He presented a poster -- Learning Micro-flocking Dynamics in Living Machines by Hybrid Machine Intelligence</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Agnevesh Jagdish selected in the ICTS-TIFR/Google flagship school: Data Science: Probabilistic and Optimization Methods II.</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Oral presentation by Archit in International Conference: Machine Learning Material Heterogeneity at Micro-scale, A Harish, A Jagdish, A Venkatraman, S Dutta, International Conference on Advanced Materials and Green Technologies, MPD34; 74 (2025)</strong>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<strong>Suman Dutta joined the School of AI, Amrita Vishwa Vidyapeetham, as Assistant Professor (24 March, 2025).</strong>
+</div>
+</div>
+</div>
+</div>
+
+</template>
+<template id="section-template-misc">
+<h2>🤝 Research Collaborators</h2>
+<div class="section">
+<div class="research-area-item"><strong>Jaydeb Chakrabarti</strong> (Senior Professor, S N Bose National Centre for Basic Sciences, Kolkata, IN)</div>
+<div class="research-area-item"><strong>Pinaki Chaudhuri</strong> (Professor, The Institute of Mathematical Sciences, Chennai, IN)</div>
+<div class="research-area-item"><strong>Kirsten Martens</strong> (CNRS Researcher, University of Grenoble Alpes, Grenoble, FR)</div>
+<div class="research-area-item"><strong>Chandan Dasgupta</strong> (Honorary Professor, Indian Institute of Sciences, Bengaluru, IN)</div>
+<div class="research-area-item"><strong>Madan Rao</strong> (Senior Professor, National Centre for Biological Sciences -TIFR, Bengaluru, IN)</div>
+<div class="research-area-item"><strong>Vinay Vaibhav</strong> (Post Doctoral Fellow, University of Goettingen, DE)</div>
+<div class="research-area-item"><strong>Raffaela Cabriolu</strong> (Associate Professor, Norwegian University of Science and Technology, NO)</div>
+<div class="research-area-item"><strong>Tamoghna Kanti Das</strong> (Assistant Professor, WPA-NanoLSI - Kanazawa University, JP)</div>
+<div class="research-area-item"><strong>AM Parvez Biswas</strong> (Solution Architect - Enterprise Systems, Data &amp; Integration, Tata Consultancy Services, IN)</div>
+<div class="research-area-item"><strong>Souvick Das</strong> (Post Doctoral Fellow, University of Luxembourg, LU)</div>
+<div class="research-area-item"><strong> Nivedita Pavithran </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+<div class="research-area-item"><strong> Chakravarthy S Maddipati </strong> (Professor, Amrita Hospital-Kochi, IN)</div>
+<div class="research-area-item"><strong> Sudip Kumar Batabyal </strong> (Professor, Amrita Vishwa Vidyapeetham, IN)</div>
+</div>
+<h2>🏆 Awards &amp; Recognition</h2>
+<div class="section">
+<ul>
+<li><strong>Project Awarded: EUROHPC-Joint Undertaking Benchmark Access</strong> (2025-2026) (PI: Raffaela Cabriolu, CoPI: S. Dutta).</li>
+<li><strong>Project Awarded: Development of a Proof-of-Concept Multimodal Agentic AI System for Advanced Geological Well Log Analysis</strong> (PI: Abhijith A, Project in partnership with Telesto Energy Pvt. Ltd. via The Directorate of Corporate &amp; Industry Relations, Amrita Vishwa Vidyapeetham, Coimbatore) (PI: Abhijit A., CoPI: Sai N Sundarakrishna, T. Subeesh and S. Dutta) (2025-2026).</li>
+<li><strong>Best Oral Presenter</strong> at the Condensed Matter and Statistical Physics Symposium, Presidency University (August 2024).</li>
+<li><strong>Visiting Research Grant</strong> from the Indo-French Centre for the Promotion of Advanced Research (IFC-PAR/CEFIPRA) (2019, 2018).</li>
+<li><strong>Post BSc Integrated PhD Research Fellowship</strong> (2010-18).</li>
+<li><strong>National Merit Scholarship</strong> (2004).</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-outreach">
+<h2>📢 Outreach &amp; Community</h2>
+<p style="text-align: center; margin-bottom: 25px;">Engaging with the scientific community and the public to demystify Physics and AI.</p>
+<div class="outreach-grid">
+<!-- Outreach Item 1 -->
+<div class="outreach-card">
+<span class="outreach-icon">🗣️</span>
+<h4>Talks</h4>
+<p>Talks/Presentations</p>
+<ul style="font-size: 0.9em;">
+<li>International: 3+ </li>
+<li>National: 10+ </li>
+<li>Total: 26+ </li>
+</ul>
+</div>
+<!-- Outreach Item 3 -->
+<div class="outreach-card">
+<span class="outreach-icon">🌍</span>
+<h4>Science Popularization</h4>
+<p>October 31, 2025 -- Story writing by human-machine collaboration. Participation: 115 Students </p>
+<p>February 6, 2026 -- International Mini-Workshop -- 125 Minutes (Online). Participation: 106 </p>
+</div>
+<!-- Outreach Item 4 -->
+<div class="outreach-card">
+<span class="outreach-icon">🏆</span>
+<h4>Competitions</h4>
+<p>August 28–29, 2025-- The Class Hackathon on the theme "AI for Greener Future". Participation: 23 Groups (Each consisting of 6 Members) </p>
+<p>March 20, 2026-- Class hackathon -II. Participation: 9 Groups (Each consisting of 4-6 Members) </p>
+</div>
+</div>
+<div class="section" style="margin-top: 30px;">
+<h3>Milestones</h3>
+<div class="research-area-item">
+<strong>Human+AI Collaboration</strong>
+<p>In a fusion of logic and creativity, we conducted an experimental initiative in the Autumn of 2025, challenging first-year BTech(AID) students to move beyond the mechanics of AI to the artistry of generation. The resulting anthology compiles 115 distinct narratives, representing a massive coordination of human imagination amplified by Large Language Models. This collection showcases a remarkable spectrum of themes, refracting a single premise into genres ranging from the futuristic sci-fi of The Neural Vault and ZeroTrace to the philosophical introspection of synthetic intelligence. Demonstrating how artificial tools can yield storytelling, we present the book: "Tales from the Hidden Layers — An Anthology of Neural Symphonies" (115 Stories from 115 Student coauthors from BTech AID S1 batch, 748 Pages).</p>
+</div>
+</div>
+
+</template>
+<template id="section-template-playground">
+<section class="atelier-page" aria-label="Lab 360 Creative Gesture Atelier">
+  <div class="atelier-topline">
+    <span class="atelier-kicker">LAB 360° · CREATIVE INTELLIGENCE STUDIO</span>
+    <span class="atelier-live"><i></i> YOUR CANVAS IS ALIVE</span>
+  </div>
+  <header class="atelier-hero">
+    <div class="atelier-hero-copy">
+      <p class="atelier-overline">A LITTLE ART. A LITTLE MAGIC. A LOT OF YOU.</p>
+      <h1>Make something <em>unforgettable.</em></h1>
+      <p class="atelier-intro">Your hands are the brushes. Your imagination is the algorithm. Step into a playful world where gestures become colour, patterns become stories, and every creation is uniquely yours.</p>
+      <div class="atelier-prompt">
+        <span class="atelier-prompt-label">TODAY'S CREATIVE SPARK</span>
+        <strong id="atelier-challenge">Create a garden that could only grow in your imagination.</strong>
+        <button type="button" id="atelier-new-challenge" class="atelier-text-btn">Give me another idea ↗</button>
+      </div>
+    </div>
+    <div class="atelier-orbit" aria-hidden="true">
+      <div class="atelier-orbit-ring ring-one"></div><div class="atelier-orbit-ring ring-two"></div>
+      <span class="atelier-orbit-shape shape-star">✳</span><span class="atelier-orbit-shape shape-flower">✿</span>
+      <span class="atelier-orbit-shape shape-circle"></span><span class="atelier-orbit-shape shape-spark">✦</span>
+      <span class="atelier-orbit-word">CREATE<br>PLAY<br>REPEAT</span>
+    </div>
+  </header>
+
+  <div class="atelier-studio">
+    <div class="atelier-studio-head">
+      <div><span class="atelier-section-tag">01 / THE CANVAS</span><h2>Your hands. Your masterpiece.</h2></div>
+      <div class="atelier-tools">
+        <button type="button" class="atelier-tool active" data-tool="draw" aria-pressed="true">✳ Draw</button>
+        <button type="button" class="atelier-tool" data-tool="stamp" aria-pressed="false">❋ Stamp</button>
+        <button type="button" class="atelier-tool" data-tool="erase" aria-pressed="false">⌫ Erase</button>
+      </div>
+    </div>
+    <div class="atelier-workbench">
+      <div class="atelier-canvas-wrap">
+        <canvas id="atelier-canvas" aria-label="Your digital art canvas"></canvas>
+        <div class="atelier-canvas-hint" id="atelier-canvas-hint"><span>✦</span><strong>Your blank canvas is full of possibility.</strong><small>Start the camera and raise a hand, or simply draw with your mouse or finger.</small></div>
+        <div class="atelier-canvas-badge">LAB 360° · OPEN STUDIO</div>
+      </div>
+      <aside class="atelier-side">
+        <div class="atelier-camera-card">
+          <div class="atelier-side-title"><span>02 / THE MAGIC LENS</span><b id="atelier-camera-state">CAMERA OFF</b></div>
+          <div class="atelier-camera-preview">
+            <video id="atelier-video" autoplay playsinline muted></video>
+            <div class="atelier-camera-placeholder" id="atelier-camera-placeholder"><span>◎</span><small>Your creative co-pilot is ready</small></div>
+            <canvas id="atelier-camera-overlay"></canvas>
+          </div>
+          <div class="atelier-camera-actions">
+            <button type="button" class="atelier-action primary" id="atelier-start">Start camera</button>
+            <button type="button" class="atelier-action" id="atelier-switch" disabled>Flip</button>
+          </div>
+          <p class="atelier-camera-note" id="atelier-camera-note">Camera is optional. You can also create with mouse or touch.</p>
+        </div>
+        <div class="atelier-guide">
+          <span class="atelier-section-tag">03 / GESTURE GUIDE</span>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">☝</span><div><strong>Point up</strong><small>Guide your fingertip to draw</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✋</span><div><strong>Open palm</strong><small>Switch to the next colour</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✊</span><div><strong>Make a fist</strong><small>Stamp a playful motif</small></div></div>
+          <div class="atelier-gesture-row"><span class="atelier-gesture-icon">✌</span><div><strong>Peace sign</strong><small>Sprinkle a little sparkle</small></div></div>
+        </div>
+        <div class="atelier-director" aria-live="polite"><span class="atelier-director-dot"></span><div><small>YOUR CREATIVE CO-PILOT</small><strong id="atelier-director-text">I’m ready when you are. Let’s make a little magic.</strong></div></div>
+      </aside>
+    </div>
+
+    <div class="atelier-bottom-bar">
+      <div class="atelier-palette" aria-label="Choose a colour">
+        <span>COLOUR STORY</span>
+        <button class="atelier-swatch selected" data-colour="#ff6b8a" style="--swatch:#ff6b8a" aria-label="Coral" aria-pressed="true"></button>
+        <button class="atelier-swatch" data-colour="#ffc857" style="--swatch:#ffc857" aria-label="Sunshine" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#75e0c1" style="--swatch:#75e0c1" aria-label="Mint" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#8c9eff" style="--swatch:#8c9eff" aria-label="Iris" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#e6a8ff" style="--swatch:#e6a8ff" aria-label="Lilac" aria-pressed="false"></button>
+        <button class="atelier-swatch" data-colour="#f7f2dc" style="--swatch:#f7f2dc" aria-label="Cloud" aria-pressed="false"></button>
+      </div>
+      <div class="atelier-canvas-actions">
+        <span class="atelier-score"><b id="atelier-score">0</b><small>CREATIVE SPARKS</small></span>
+        <button type="button" class="atelier-action" id="atelier-undo">↶ Undo</button>
+        <button type="button" class="atelier-action" id="atelier-clear">Clear</button>
+        <button type="button" class="atelier-action primary" id="atelier-save">Save artwork ↓</button>
+      </div>
+    </div>
+  </div>
+  <footer class="atelier-footer">
+    <div><span class="atelier-section-tag">THE LAB 360° INVITATION</span><h2>What will your hands dream up next?</h2><p>Art is a way of seeing. AI is a way of exploring. Together, they make room for wonderfully unexpected ideas.</p></div>
+    <div class="atelier-footer-mark">MAKE<br><em>WONDER</em><br>VISIBLE.</div>
+  </footer>
+</section>
+</template>
+<template id="section-template-products">
+<h2>🧪 Lab Products</h2>
+<div class="section">
+<h3>🤖 Aadri 2.0: Conversational AI for Customary Profiles</h3>
+<h4>AADRI – An Intelligent Conversational AI for Academic Profiles (v2.0)</h4>
+<h4>🔹 Team</h4>
+<ul>
+<li><strong>Lead Developer:</strong> Dr. Suman Dutta, School of AI, Amrita Vishwa Vidyapeetham</li>
+<li><strong>Quality Testing:</strong> BTech AID (Core) students</li>
+<li><strong>Consultants &amp; Reviewers:</strong> Experts from TCS, Cognizant, and University of Luxembourg</li>
+</ul>
+<h4>🔹 Project Synopsis</h4>
+<p> AI system engineered for the interactive presentation of academic profiles. Utilizing the Google Gemini engine and Retrieval-Augmented Generation (RAG) architecture, it transforms static information base into dynamic, query-driven user experiences. The platform ensures heightened accuracy, engagement, and personalization in professional digital self-presentation.</p>
+<h4>🔹 Colloquial Abstract</h4>
+<p>Aadri can be conceptualized as an intelligent assistant that articulates your academic contributions with the fluency of an informed colleague. Rather than navigating a conventional, static document, users engage through direct inquiry, receiving precise and user-centric responses. It functions as a personalized navigational tool for one's research portfolio, pedagogical experience, and professional accomplishments.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To make academic profiles interactive, accessible, and engaging.</li>
+<li>To help users (students, collaborators, institutions) explore a researcher’s work through natural conversation.</li>
+<li>To set a new standard for how academics present themselves digitally.</li>
+</ul>
+<h4>🔹 Mobile Demonstration 📱</h4>
+<p>Evaluate the application's real-time conversational capabilities on the go, in the playground subpage. Read the: <a href="https://drive.google.com/file/d/1wTpjT0-jby8hUuf01bEL8L08Mx2ihmwp/view?usp=sharing" style="text-decoration: none; color: var(--accent-cyan); font-weight: bold; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 2px;">White Paper</a></p>
+</div>
+<div class="section">
+<h3>📝 AtoGRAD: OMR Solutions for Class-based Tests</h3>
+<p>AtoGRAD is an innovative Optical Mark Recognition (OMR) solution designed to streamline and automate the grading process for classroom-based tests. More details coming soon!</p>
+<h4>🔹 Team</h4>
+<p>To be announced.</p>
+<h4>🔹 Abstract</h4>
+<p>Details about the technology and application will be available shortly.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To provide a fast, accurate, and cost-effective OMR solution for educators.</li>
+<li>To reduce the manual effort and time spent on grading multiple-choice exams.</li>
+<li>To offer instant analytics and performance reports for students and instructors.</li>
+</ul>
+</div>
+<div class="section">
+<h3>🩺 MedScriptAI: Intelligent Medical Documentation</h3>
+<h4>MedScriptAI – Automated Clinical Scripting and Analysis Engine</h4>
+<h4>🔹 Team</h4>
+<p>To be announced.</p>
+<h4>🔹 Project Synopsis</h4>
+<p>MedScriptAI utilizes advanced natural language processing to transcribe and analyze clinical interactions. By automating documentation, it allows healthcare professionals to focus more on patient care and less on administrative tasks.</p>
+<h4>🔹 Purpose</h4>
+<ul>
+<li>To reduce clinician burnout by automating electronic health record (EHR) entries.</li>
+<li>To ensure high accuracy in medical transcription and prescription generation.</li>
+<li>To provide real-time clinical decision support based on patient history.</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-publication">
+<h2>📚 Publications</h2>
+<div class="section">
+<h3>2026</h3>
+<div class="publication-item">
+<p class="citation">V. Vaibhav, T. Das &amp; <u>S. Dutta</u>*, <em>Persistently Non-Gaussian Metastable Liquids</em>, Ann. Phys. (Berlin) 538 (4), e00247(2026) [<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.202500247" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<h3>2025</h3>
+<div class="publication-item">
+<p class="citation">S. Santra, L. Touzo, C. Dasgupta, A. Dhar, <u>S. Dutta</u>, A. Kundu, P. Le Doussal, G. Schehr &amp; P. Singh, <em>Crystal to liquid cross-over in the active Calogero-Moser model</em>, J. Stat. Mech. 033203 (2025) [<a href="https://iopscience.iop.org/article/10.1088/1742-5468/adbb5d" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Contributing author</u></p>
+</div>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>*, P. Chaudhuri, M. Rao &amp; C. Dasgupta, <em>Activity-driven sorting, approach to criticality and turbulent flows in dense persistent active fluids</em>, arXiv:2509.00376 (2025) [<a href="https://arxiv.org/abs/2509.00376" rel="noopener noreferrer" target="_blank">LINK</a>] </p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2024</h3>
+<div class="publication-item">
+<p class="citation">V. Vaibhav &amp; <u>S. Dutta</u>*, <em>Entropic timescales of Dynamic Heterogeneity in Supercooled Liquid</em>, Phys. Rev. E (Lett.), <strong>109</strong>, L062102 (2024) [<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.L062102" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<h3>2023</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>, K. Martens &amp; P. Chaudhuri, <em>Creep response of athermal amorphous solids under imposed shear stress</em>, arXiv:2303.04718 (2023) [<a href="https://arxiv.org/abs/2303.04718" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First author</u></p>
+</div>
+<h3>2021</h3>
+<div class="publication-item">
+<p class="citation">C. Liu, <u>S. Dutta</u>, P. Chaudhuri &amp; K. Martens, <em>Elastoplastic approach based on microscopic insights for the steady state and transient dynamics of sheared disordered solids</em>, Phys. Rev. Lett., <strong>126</strong>, 138005 (2021) [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.138005" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Joint first author</u></p>
+</div>
+<h3>2020</h3>
+<div class="publication-item">
+<p class="citation">R. Dandekar, S. Bose &amp; <u>S. Dutta</u>*, <em>Non-Gaussian information of heterogeneity in soft matter</em>, Europhys. Lett., <strong>131</strong>, 18002 (2020) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/131/18002/meta" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Corresponding author</u></p>
+</div>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Length-scales of dynamic heterogeneity in a driven binary colloid</em>, Phys. Chem. Chem. Phys., <strong>22</strong>, 17731 (2020) [<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02703k/unauth" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2019</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>*, <em>Microscopic insights into dynamical heterogeneity in a lane forming colloid</em>, Chem. Phys., <strong>522</strong>, 256 (2019) [<a href="https://www.sciencedirect.com/science/article/pii/S0301010418311510" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Solo author</u></p>
+</div>
+<h3>2018</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Transient dynamical responses of a charged binary colloid in an electric field</em>, Soft Matter, <strong>14</strong>, 4477 (2018) [<a href="https://pubs.rsc.org/en/content/articlehtml/2018/sm/c7sm02552a" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First and Corresponding author</u></p>
+</div>
+<h3>2016</h3>
+<div class="publication-item">
+<p class="citation"><u>S. Dutta</u>* &amp; J. Chakrabarti, <em>Anomalous dynamical responses in a driven system</em>, Europhys. Lett., <strong>116</strong>, 38001 (2016) [<a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/38001/meta" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>First author</u></p>
+</div>
+<h3>2015</h3>
+<div class="publication-item">
+<p class="citation">J. Chakrabarti &amp; <u>S. Dutta</u>, <em>Analytical form of forces in hydrophobic collapse</em>, Chem. Phys. Lett., 620, <strong>109</strong> (2015) [<a href="https://www.sciencedirect.com/science/article/pii/S0009261414010483" rel="noopener noreferrer" target="_blank">LINK</a>]</p>
+<p><strong>Contribution:</strong> <u>Second author</u></p>
+</div>
+</div>
+
+</template>
+<template id="section-template-research">
+<h2>🔬 Research Interests &amp; Competencies</h2>
+<div class="section">
+<h3>Research Expertise</h3>
+<ul>
+<li><strong>Domain Expertise:</strong> Collective Intelligence in Living and Artificial Systems, Physics of Complex Fluids, Soft Condensed Matter. </li>
+<li><strong>Core Competencies:</strong> Creative Research, Out-of-Equilibrium Statistical Physics, Machine Learning Order Disorder.</li>
+</ul>
+</div>
+<div class="research-gifs" style="display: flex; gap: 15px; width: 100%; aspect-ratio: 32 / 9; overflow: hidden; margin-bottom: 20px;">
+<img alt="First highlight cover image" src="cavitation.gif" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+<img alt="Second highlight cover image" src="mips.gif" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glow);"/>
+</div>
+<div class="section">
+<h3>Key Research Areas</h3>
+<ul>
+<li class="research-area-item"><strong>Soft, Glassy, Active &amp; Adaptable Matter</strong></li>
+<li class="research-area-item"><strong>Physics of Flow, Glass &amp; Living Machines</strong></li>
+<li class="research-area-item"><strong>Material Failure and Molecular Information Processing</strong></li>
+<li class="research-area-item"><strong>Mechanobiology, Catastrophe Science, Emergent Intelligence</strong></li>
+</ul>
+</div>
+<div class="section">
+<h3>Extensive Experience in</h3>
+<ul>
+<li>Soft Condensed Matter</li>
+<li>High Performance Computing (Molecular Simulations)</li>
+</ul>
+</div>
+<div class="section">
+<h3>Research within the Group</h3>
+<p>We perform extensive computer simulations, harnessing the power of High-Performance Computing (HPC), alongside statistical methods. Our aim is to develop and deploy data-driven yet inherently explainable techniques. These methods are meticulously designed to systematically investigate the intricate complex processes that drive autonomous organization and the phenomena of failure in both living and artificial systems. Our approach bridges the gap between complex data analysis and fundamental scientific understanding, ensuring our findings are not only predictive but also interpretable.</p>
+<p>Our research endeavors delve into several key directions, offering a comprehensive exploration of complex systems:</p>
+<ul>
+<li><strong>Molecular Information Processing:</strong> We meticulously decode how molecular systems store, manipulate, and relay information. This involves unraveling the fundamental principles that govern adaptive behaviors observed in both natural biological networks and synthetic molecular constructs. By understanding these intricate mechanisms, we aim to engineer more sophisticated and responsive artificial systems.</li>
+<li><strong>Cellular Migration and Turbulence:</strong> We investigate the often chaotic and dynamic patterns exhibited by migrating cells. This research focuses on understanding their collective dynamics during critical biological processes such as tissue formation, repair, and in cases of failure. By analyzing these complex movements, we gain insights into emergent behaviors and the underlying physical constraints.</li>
+<li><strong>Failure and Jamming of Amorphous Systems:</strong> A significant area of our work explores the transitions of disordered materials between fluid-like and rigid states. We aim to develop predictive models that can accurately forecast their resilience, pinpoint critical points of failure, and understand the jamming phenomena that can lead to material collapse.</li>
+<li><strong>Predicting Vulnerability and Avalanches:</strong> We develop models that capture the dynamics of critical cascades—phenomena ranging from natural avalanches to the interconnectedness of economic societies. Our goal is to forecast the likelihood and potential impact of systemic failures, thereby enabling proactive mitigation strategies.</li>
+<li><strong>Autonomous and Critical Phenomena in Living and Artificial Systems:</strong> We are deeply interested in the emergence of self-organized behaviors in systems poised at critical thresholds. By studying these systems, we aim to uncover the delicate balance between stability and adaptability, and how these seemingly opposing forces coexist to drive complex system evolution.</li>
+<li><strong>Generative Physical Intelligence:</strong> We are pioneering the development of novel generative models that are deeply integrated with the fundamental laws of physics. This research aims to create AI systems capable of not only predicting but also generating physically plausible dynamics and structures. By teaching models the principles of statistical mechanics and emergent phenomena, we seek to build intelligent agents that can autonomously discover new materials, understand system failures, and generate innovative solutions to a complex physical challenges.</li>
+</ul>
+</div>
+
+</template>
+<template id="section-template-teaching">
+<h2>💡 Teaching &amp; Mentoring</h2>
+<div class="section">
+<h3>Glimpses</h3>
+<p>Moments from My Classes</p>
+<div class="playground-container">
+<iframe frameborder="0" src="slideshow.html"></iframe>
+</div>
+</div>
+ TEACHING DASHBOARD 
+<div id="teaching-dashboard">
+<p style="text-align: center; margin-bottom: 20px; font-size: 1.05em; color: var(--text-secondary);">
+                    Explore our academic engagements, mentoring programs, and pedagogical philosophy.
+                </p>
+<div class="course-grid">
+<!-- Card 1: Academic Courses -->
+<div class="course-card" onclick="openTeachingSection('teaching-courses')">
+<div>
+<h4>👨‍🏫 Academic Courses</h4>
+<p><strong>Focus:</strong> AI, Mathematics &amp; Material Science</p>
+<p>Courses delivered at Amrita Vishwa Vidyapeetham and S. N. Bose National Centre for Basic Sciences.</p>
+<ul style="margin-top:10px; font-size: 0.9em; color: var(--text-secondary);">
+<li>Mathematics for Intelligent Systems-III (23MAT204)</li>
+<li>Introduction to Material Informatics (23CHY115)</li>
+<li>Mathematics for Intelligent Systems-I (23MAT106)</li>
+<li>Research Methodology (PHY501)</li>
+</ul>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            View Course List →
+                        </div>
+</div>
+<!-- Card 2: Mentoring -->
+<div class="course-card" onclick="openTeachingSection('teaching-mentoring')">
+<div>
+<h4>🤝 Mentoring &amp; Supervision</h4>
+<p><strong>Role:</strong> Advisor &amp; Co-Supervisor</p>
+<p>Guiding research interns, Masters thesis students, and student collaborators.</p>
+<div style="margin-top:10px;">
+<span class="semester-tag">Interns</span>
+<span class="semester-tag">Thesis</span>
+</div>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            View Student Profiles →
+                        </div>
+</div>
+<!-- Card 3: Philosophy -->
+<div class="course-card" onclick="openTeachingSection('teaching-philosophy')">
+<div>
+<h4>🧠 Teaching Philosophy</h4>
+<p><strong>Approach:</strong> Interactive &amp; Generative</p>
+<p>Believing in "Learning by Doing" and bridging the gap between theoretical Physics and applied AI.</p>
+</div>
+<div style="margin-top: 15px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+                            Read Methodology →
+                        </div>
+</div>
+</div>
+</div>
+ DETAILED VIEW: ACADEMIC COURSES 
+<div class="teaching-detail-view" id="teaching-courses">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>Courses Taught</h3>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Course Code</th>
+<th>Credit</th>
+<th>Hrs/Week</th>
+<th>Session</th>
+<th>Students</th>
+<th>TLP-Feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mathematics for Intelligent System - III (B.Tech in AI &amp; Data Science, Semester-III)</td>
+<td>3+3</td>
+<td>4+4</td>
+<td>2026-27 Odd</td>
+<td>65+66</td>
+<td>Ongoing</td>
+</tr>
+<tr>
+<td>Introduction to Material Informatics (B.Tech in AI &amp; Data Science, Semester-II)</td>
+<td>3+3</td>
+<td>4+4</td>
+<td>2025-26 Even</td>
+<td>64+65</td>
+<td>92.92%</td>
+</tr>
+<tr>
+<td>Mathematics for Intelligent System - I (B.Tech in AI &amp; Data Science, Semester-I)</td>
+<td>4+4</td>
+<td>5+5</td>
+<td>2025-26 Odd</td>
+<td>65+66</td>
+<td>93.11%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+ DETAILED VIEW: MENTORING 
+<div class="teaching-detail-view" id="teaching-mentoring">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>Research Supervision</h3>
+<div class="research-area-item">
+<strong>Research Interns</strong>
+<p>A. Jagdish, School of Physical Sciences, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+</div>
+<div class="research-area-item">
+<strong>Student Collaborators</strong>
+<p>A. Harish, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+<p>A. Venkatraman, Department of Mathematics, Amrita Vishwa Vidyapeetham (06/2025 onwards)</p>
+<p>P. S. Mrudula, Department of AI, Amrita Vishwa Vidyapeetham (11/2025 onwards)</p>
+</div>
+<div class="research-area-item">
+<strong>Masters Thesis Co-supervision</strong>
+<p>Magnus Olsen, <em>Understanding Non-Newtonian Materials</em> <br/> (Supervisor: R. Cabriolu, Norwegian University of Science and Technology, since 08/2025)</p>
+</div>
+<div class="research-area-item">
+<strong>Supervision: Topical Projects</strong>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Subject Code</th>
+<th>Names</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<!-- 23CHY115 Projects -->
+<tr>
+<td>23CHY115</td>
+<td>Adithya R, Ashwin Krishna V, Madhan S, Nawin K.G</td>
+<td>Prediction of Molecular Solubility</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Mahalakshmi R, Venugopalan G, Ram Eswar P, Selva Vignesh V</td>
+<td>Semantic RAG with Specialized Embeddings</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>A. Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+<td>Bio-Match: Implant Material Recommender</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>P. Manvith, M. Venkat Naidu, S. Manoj Chowdary, B. Nakul</td>
+<td>Earthquake Probability &amp; Early Warning Analysis</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rithvik, Venkat, Abhishek, Grishmanth</td>
+<td>Forecasting Stress-Strain with Koopman</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rithvik Arulprakash, Harshith K. V, Vijayamurughan S, Vipin Sudhakar</td>
+<td>AI-Driven Dynamics in Active Glass</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Suthasrinitha K.G, Asmitha T, Moushika S, Mirudhunya V</td>
+<td>Governing Equations of Chaotic Systems</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>J. Harini, A. Harsha Sree, B. Pavani, P. Prasad</td>
+<td>Identifying Metastable States with HAVOK</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>B. Lalith, K. Swami, M. Pranavi, N. Manoj</td>
+<td>The Sandpile Model (BTW)</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>N.V. Varshitha, A. Jahnavi, T. Varshini, B. Sai Prasanna</td>
+<td>Polymer Property Prediction Simulator</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>V.R. Yasswant, Abishek S, Y. Sanmukha Sai, U. Sudheer</td>
+<td>Convex Hull for Alloy</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Hari Priya, Maha Sri, Neha, Prathibaa</td>
+<td>SINDy - Discovering Physics from Data</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Moorthy Neeraj, Mortha Sathwik, Surya Charan Teja, Pavan Kalyan S.V, Dhanush</td>
+<td>Lennard-Jones System for Glass Formation</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Sharvesh S. P, B. gurucharan, P. A. Bhavesh Jayan, Hashwin M</td>
+<td>The Butterfly Paradox: Chaos in MD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>T.V.S.S Phanindra Guptha, Athul V.R, Nanda Kishore, M. Vittal</td>
+<td>Ocean Waves Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+<td>AI-Based Material Recommendation System</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>D. Durga Prasad Reddy, Mukesh Reddy, G. Yaswanth Reddy, K. Praneeth, Jasmitha</td>
+<td>Failure Prediction in Amorphous Solids</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>S. Sujitkumar, M. Hemanthkumar, H. Abinavkumaran, P.V. RithikRaj</td>
+<td>Molecular Phase Dynamics using Koopman DMD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Kirithik B, Sankardas K.K, V. Amruth, Vishnu Prasad P</td>
+<td>Discontinuous Molecular Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Adharsh K, Anu R, Sidharth M, Vethavarsini A</td>
+<td>Rare Event Acceleration with Koopman-GNN</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Akshara Sree R, Anirudh S Nair, Iniyaa Muthuselvan, Shashank Kannan</td>
+<td>The Battery Oracle</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Harish Kumaar S, S. Sri Raghav Vatsan, Dhruv Jayesh, Prithve KC</td>
+<td>Predicting Swarm Dynamics</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Kanish Visyanth C, Kavipranidan J.T, Navaneet K.V, Nethaaji S</td>
+<td>Radiation Damage Prediction</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Revanth S, G Kamalesh, Jaswanth S, Elango Megabala G</td>
+<td>Graph Neural Networks for Molecules</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>K. Gayathri, P. Sri Harshini, M. Deekshitha, A. Gnana Amrutha</td>
+<td>AI-Based Inverse Material Selector</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Rohith Meka, Kode Karrthik, Naram Divya Akhil, T. Yashwant</td>
+<td>Microstructure Evolution Prediction</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Meenakshi Bijoy, Neelanjana J Anil, Aryananda M, Ghadige Rithika</td>
+<td>Learning Swarm Behaviour</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>U. Raghu Nandan, S. Akshaya, Nikitha, Likhit K</td>
+<td>De-noising MD Data via Hankel SVD</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>M. Harsha, M. Anudeep Reddy, P. Nihal Reddy, P. Naren</td>
+<td>Bayesian Optimization for Alloy Design</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>C. Sai Hardhik Reddy, R. Gagan Chowdhury, K. Charan Saatvikh Reddy, T. Sri Sai</td>
+<td>Deformation in Copper Crystals</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Srikar, Sumanth, Sai Sushanth, Sai Sathwik</td>
+<td>Perovskite Solar Cells</td>
+</tr>
+<tr>
+<td>23CHY115</td>
+<td>Neha Saravanan, Y. Pranavi Reddy, T. Sai Varshitha</td>
+<td>Predicting Particle Mobility in Active Matter</td>
+</tr>
+<!-- 23MAT106 Projects -->
+<tr>
+<td>23MAT106</td>
+<td>Adithya R, Sai Prasanna B, Anudeep Reddy</td>
+<td>Stochastic Gradient Descent-Image Brightness Optimizer</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Abisheik S, Ashwin Krishna V, Nakul Sharvan B, Nawin K.G</td>
+<td>Interior Point Method for Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Raghuraman V, Vipin Sudhakar, Harshith KV, Rithvik Arul Prakash</td>
+<td>Optimization Using Sequential Quadratic Programming</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Harish Kumaar S, Prabakar, Venkat D, Prithve K C</td>
+<td>Minimizing 2-D Lennard-Jones System via Broyden’s Good Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>V R Yasswant, S. Sri Raghav Vatsan, Selva Vignesh V, Madhan S</td>
+<td>Augmented Lagrangian Method for Constrained Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P. Manvith Sharma, P. Grishmanth, P. Naren, S. Manoj</td>
+<td>Broyden’s Bad Method for Energy Minimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P. Sri Harshini, K. Gayathri, M. Deekshitha, Meenakshi Bijoy</td>
+<td>Movie Recommendation System</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>S Jaswant, Revanth S, Elango Megabala G, G Kamalesh</td>
+<td>Steepest Descent Algorithm</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Rohith Meka, Naram Divya Akhil, B. Sai Srikar, Danush Mani Yerramsetti</td>
+<td>Movie Recommendation Using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>P.S. Sathwik, V.S. Amruth Chowdary, Kirithik B, Sankar Das K.K</td>
+<td>Computational Search for Glassy States using Conjugate Gradient</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>SV Pavan Kalyan, Neeraj M, C. Jasmitha, S. Akshaya, G. Rithika</td>
+<td>Audio Compression using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Sharmitha, H. Bala Sri Siva Sai Surya Tej, V. Mouli Sri, K. Bhanu Prakash</td>
+<td>Energy Minimization of 2D Particle System via L-BFGS</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Mortha Sathwik, Surya Charan Tej B, AryaNanda M, Neelanjana J Anil</td>
+<td>Computer Glassy States via Newton-Raphson Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>T.V.S.S Phanindra Guptha, M. Vittal, K. Nanda Kishore, Athul V.R</td>
+<td>Lennard-Jones Potential via Nelder-Mead</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Y. Pranavi Reddy, Neha Saravanan, T. Sai Varshitha Reddy, K.B Nikitha Krishna</td>
+<td>Optimization of Lennard-Jones via PSO</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Nethaaji S, Navaneet KV, Kavipranidan JT, Kanish Visyanth C</td>
+<td>Computer Glassy States through Simulated Annealing</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Prasad Reddy, Sai Praneeth, Mukesh Reddy, Yaswanth Reddy</td>
+<td>Adopted Basis Newton-Raphson Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Kode Karrthik, Kella Likhith, T. Yaswanth Sai Vedadri, U. Raghu Nandan</td>
+<td>Glassy States by Instantaneous Quench (FIRE Algorithm)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>H. Abinavkumaran, S. Sujitkumar, M. Hemanthkumar, P.V. RithikRaj</td>
+<td>Stable Particle Arrangement via Barzilai-Borwein Method</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Vishnu Prasad, N Sai Sushanth Reddy, Hari Sumanth, Gnana Amrutha</td>
+<td>Glassy States via Instant Quenching</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Lalith Hari Sainath Reddy, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+<td>Powell’s Method for Energy Minimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Moushika S, Iniyaa Muthuselvan, Alamuru Harsha Sree, Akshara Sree R</td>
+<td>Levenberg-Marquardt Algorithm for Glass Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Suthasrinitha K G, Mirudhunya V, Asmitha T, Ram Eswar P</td>
+<td>RMS Propagation Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Pavani B, Maha Sri N, Neha S, Varshini T</td>
+<td>Basin Hopping Algorithm</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Ala Shashank Royal, M. Dinesh Kumar, M. Sujan, K. Aravind Guptha</td>
+<td>Smart Diet Planner</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Lalith, N. Manoj Kumar, P. Krishna Prasad, K. Swamy</td>
+<td>Powell’s Method of Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>K. Charan Saatvikh Reddy, R. Gagan Chowdary, C. Sai Hardhik Reddy, M. Venkat Naidu</td>
+<td>Adagrad Optimization</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Dhruv Jayesh Kansagara, Nihal Reddy P, T. Sri Sai, Y. Sanmukha Sai</td>
+<td>BFGS with Trust Region</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>J. Harini, Prathibaa, Mahalakshmi</td>
+<td>Image Compression using SVD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Aadharsh, Anu R, Sidharth M, Vethavarsini A</td>
+<td>Glassy States via Instantaneous Quench (TNM)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>M. Dinesh Kumar, M. Sujan, K. Aravind Guptha, A. Sheshank Royal</td>
+<td>Smart Diet Planner (Revised)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Madhan Senthil Kumar, Selva Vignesh V, S. Sri Raghav Vatsan, V.R. Yasswant</td>
+<td>Augmented Lagrangian Method (ALM)</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>B. Sai Prasanna Anjaneyulu, M. Annudeep Reddy, R. Adithya</td>
+<td>Image Enhancement Using SGD</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Mukesh Reddy, D. Durga Prasad Reddy, Yaswanth Reddy, K. Sai Praneeth</td>
+<td>Lennard-Jones via Adopted Basis Newton-Raphson</td>
+</tr>
+<tr>
+<td>23MAT106</td>
+<td>Anirudh S Nair, Shashank Kannan, Vijayamurughan S, G. Venugopalan</td>
+<td>The Math Behind PageRank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+ DETAILED VIEW: PHILOSOPHY 
+<div class="teaching-detail-view" id="teaching-philosophy">
+<button class="back-btn" onclick="closeTeachingSection()">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+                    Back to Dashboard
+                </button>
+<div class="section">
+<h3>My Teaching Philosophy</h3>
+<p>My approach to teaching is grounded in the belief that the interface between Physics and Artificial Intelligence provides a unique playground for intuitive understanding. I emphasize:</p>
+<ul>
+<li><strong>Active Learning:</strong> Moving beyond lectures to include live coding sessions, simulation workshops, and "playground" style problem solving.</li>
+<li><strong>Interdisciplinary Thinking:</strong> Encouraging students to see the mathematical structures common to both quantum mechanics and machine learning.</li>
+<li><strong>Project-Based Assessment:</strong> Evaluating understanding through the creation of tangible models and tools (like our Lab Products) rather than just rote memorization.</li>
+</ul>
+<p><em>"Education is not the learning of facts, but the training of the mind to think." - Albert Einstein</em></p>
+</div>
+</div>
+
+</template>
+  <script>
+(() => {
+  'use strict';
+
+  const PAGE_META = {
+    highlight: 'LAB 360° / OVERVIEW',
+    research: 'RESEARCH / DIRECTIONS',
+    publication: 'SCHOLARSHIP / PUBLICATIONS',
+    about: 'PEOPLE / ABOUT THE LAB',
+    teaching: 'EDUCATION / TEACHING',
+    outreach: 'COMMUNITY / OUTREACH',
+    latest: 'UPDATES / LATEST',
+    classroom: 'LEARNING / LIVE CLASSROOM',
+    products: 'INNOVATION / LAB PRODUCTS',
+    misc: 'NETWORK / PEOPLE & AWARDS',
+    playground: 'EXPERIMENT / PLAYGROUND'
+  };
+  const host = document.getElementById('page-host');
+  const nav = [...document.querySelectorAll('.nav-link')];
+  const kicker = document.getElementById('page-kicker-label');
+  let currentPage = '';
+
+  function pageFromHash() {
+    const id = location.hash.replace('#', '').trim();
+    return PAGE_META[id] ? id : 'highlight';
+  }
+
+  function updateNavigation(id) {
+    nav.forEach(a => {
+      const active = a.getAttribute('href') === `#${id}`;
+      a.classList.toggle('active', active);
+      if (active) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    kicker.textContent = PAGE_META[id] || PAGE_META.highlight;
+    document.title = id === 'highlight' ? 'Lab 360° | Physics, Artificial Intelligence & Data Science Research' : `${id.charAt(0).toUpperCase()+id.slice(1)} — Lab 360° | Physics + AI`;
+  }
+
+  async function loadPage(id) {
+    if (!PAGE_META[id]) id = 'highlight';
+    if (id === currentPage) return;
+    currentPage = id;
+    stopAtelierCamera();
+    updateNavigation(id);
+    host.classList.add('is-loading');
+    try {
+      const template = document.getElementById(`section-template-${id}`);
+      if (!template) throw new Error(`Embedded section ${id} is missing`);
+      host.innerHTML = `<article class="page-content page-${id}">${template.innerHTML}</article>`;
+      host.classList.remove('is-loading');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      initialisePage(id);
+    } catch (error) {
+      host.innerHTML = `<section class="load-error"><h2>Page could not be loaded</h2><p>${error.message}</p><p>Check that the <code>sections/${id}.html</code> file is present in the repository.</p></section>`;
+      host.classList.remove('is-loading');
+    }
+  }
+
+  function initialisePage(id) {
+    if (id === 'classroom') initialiseClassroom();
+    if (id === 'teaching') initialiseTeaching();
+    if (id === 'highlight') initialiseVisionApplet();
+    if (id === 'playground') initialiseAtelier();
+    // Make original inline page scripts execute after their fragment is inserted.
+    host.querySelectorAll('script').forEach(oldScript => {
+      const script = document.createElement('script');
+      [...oldScript.attributes].forEach(a => script.setAttribute(a.name, a.value));
+      script.textContent = oldScript.textContent;
+      oldScript.replaceWith(script);
+    });
+  }
+
+  // Gesture Atelier: lightweight hand-gesture interaction and a mouse/touch fallback.
+  let atelierStream = null;
+  let atelierRecognizer = null;
+  let atelierRaf = null;
+  let atelierFacing = 'user';
+  let atelierLastGesture = '';
+  let atelierGestureAt = 0;
+  let atelierLastVideoTime = -1;
+  let atelierBusy = false;
+
+  function stopAtelierCamera() {
+    if (atelierRaf) cancelAnimationFrame(atelierRaf);
+    atelierRaf = null;
+    if (atelierStream) atelierStream.getTracks().forEach(track => track.stop());
+    atelierStream = null;
+    if (atelierRecognizer) {
+      try { atelierRecognizer.close(); } catch (_) {}
+      atelierRecognizer = null;
+    }
+    atelierBusy = false;
+    atelierLastGesture = '';
+    atelierLastVideoTime = -1;
+  }
+
+  function initialiseAtelier() {
+    const canvas = document.getElementById('atelier-canvas');
+    const video = document.getElementById('atelier-video');
+    const overlay = document.getElementById('atelier-camera-overlay');
+    if (!canvas || !video || !overlay) return;
+
+    const ctx = canvas.getContext('2d');
+    const octx = overlay.getContext('2d');
+    const hint = document.getElementById('atelier-canvas-hint');
+    const start = document.getElementById('atelier-start');
+    const flip = document.getElementById('atelier-switch');
+    const cameraState = document.getElementById('atelier-camera-state');
+    const cameraPlaceholder = document.getElementById('atelier-camera-placeholder');
+    const cameraNote = document.getElementById('atelier-camera-note');
+    const director = document.getElementById('atelier-director-text');
+    const scoreEl = document.getElementById('atelier-score');
+    const challengeEl = document.getElementById('atelier-challenge');
+    const newChallenge = document.getElementById('atelier-new-challenge');
+    const challenges = [
+      'Create a garden that could only grow in your imagination.',
+      'Invent a butterfly with wings made of stardust.',
+      'Draw a tiny universe where planets bloom like flowers.',
+      'Design a creature that might live beneath an alien ocean.',
+      'Make a colourful map of a place that does not exist.',
+      'Turn a simple wave into a joyful piece of abstract art.',
+      'Create a flower that has never existed in nature.',
+      'Imagine a city where buildings grow like trees.'
+    ];
+    const palette = ['#ff6b8a','#ffc857','#75e0c1','#8c9eff','#e6a8ff','#f7f2dc'];
+    let colourIndex = 0, tool = 'draw', score = 0, drawing = false, lastPoint = null;
+    let strokes = [], activeStroke = null, lastStampAt = 0, pointerDown = false;
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const old = document.createElement('canvas');
+      old.width = canvas.width || Math.round(rect.width * devicePixelRatio);
+      old.height = canvas.height || Math.round(rect.height * devicePixelRatio);
+      if (canvas.width && canvas.height) old.getContext('2d').drawImage(canvas,0,0);
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(rect.width * ratio);
+      canvas.height = Math.round(rect.height * ratio);
+      ctx.setTransform(ratio,0,0,ratio,0,0);
+      if (old.width && old.height) ctx.drawImage(old,0,0,rect.width,rect.height);
+      redraw();
+    }
+
+    function canvasPoint(clientX, clientY) {
+      const r = canvas.getBoundingClientRect();
+      return {x:clientX-r.left,y:clientY-r.top};
+    }
+
+    function drawStroke(stroke) {
+      if (!stroke || !stroke.points.length) return;
+      ctx.save();
+      ctx.globalCompositeOperation = stroke.tool === 'erase' ? 'destination-out' : 'source-over';
+      ctx.strokeStyle = stroke.colour;
+      ctx.fillStyle = stroke.colour;
+      ctx.lineWidth = stroke.tool === 'erase' ? 28 : stroke.width;
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      if (stroke.tool === 'stamp') {
+        const p = stroke.points[0];
+        drawMotif(p.x,p.y,stroke.colour,stroke.motif || 'flower');
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(stroke.points[0].x,stroke.points[0].y);
+        for (let i=1;i<stroke.points.length;i++) ctx.lineTo(stroke.points[i].x,stroke.points[i].y);
+        if (stroke.points.length === 1) ctx.lineTo(stroke.points[0].x+.1,stroke.points[0].y+.1);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    function drawMotif(x,y,colour,motif) {
+      ctx.save(); ctx.translate(x,y); ctx.fillStyle=colour; ctx.strokeStyle=colour;
+      ctx.shadowColor=colour; ctx.shadowBlur=15;
+      if (motif === 'spark') {
+        for(let i=0;i<8;i++){ctx.rotate(Math.PI/4);ctx.beginPath();ctx.ellipse(0,-13,3,10,0,0,Math.PI*2);ctx.fill();}
+        ctx.beginPath();ctx.arc(0,0,4,0,Math.PI*2);ctx.fill();
+      } else {
+        for(let i=0;i<6;i++){ctx.rotate(Math.PI/3);ctx.beginPath();ctx.ellipse(0,-12,7,13,0,0,Math.PI*2);ctx.fill();}
+        ctx.beginPath();ctx.arc(0,0,7,0,Math.PI*2);ctx.fillStyle='#fff0c9';ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    function redraw() {
+      const r = canvas.getBoundingClientRect();
+      ctx.clearRect(0,0,r.width,r.height);
+      strokes.forEach(drawStroke);
+      if (activeStroke) drawStroke(activeStroke);
+      hint.hidden = strokes.length > 0 || !!activeStroke;
+    }
+
+    function addPoint(point) {
+      if (tool === 'stamp') {
+        const now = performance.now();
+        if (now-lastStampAt < 650) return;
+        lastStampAt = now;
+        strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[point],motif:'flower'});
+        score += 1; scoreEl.textContent = score;
+        redraw(); return;
+      }
+      if (!activeStroke) activeStroke = {tool,colour:palette[colourIndex],width:tool==='erase'?28:5,points:[point]};
+      else activeStroke.points.push(point);
+      redraw();
+    }
+
+    function endStroke() {
+      if (activeStroke) {
+        strokes.push(activeStroke);
+        activeStroke = null;
+        score += 1; scoreEl.textContent = score;
+        redraw();
+      }
+      lastPoint = null;
+    }
+
+    function chooseTool(next) {
+      tool = next;
+      document.querySelectorAll('.atelier-tool').forEach(btn => {
+        const active = btn.dataset.tool === tool;
+        btn.classList.toggle('active',active);
+        btn.setAttribute('aria-pressed',String(active));
+      });
+      director.textContent = tool === 'draw' ? 'Lovely. Let your fingertip wander and leave a trail of colour.' :
+        tool === 'stamp' ? 'Tap or make a fist to add a little floral surprise.' :
+        'Every masterpiece needs a little editing. Smoothly erase and begin again.';
+    }
+
+    function nextColour() {
+      colourIndex = (colourIndex+1)%palette.length;
+      document.querySelectorAll('.atelier-swatch').forEach((b,i)=>{
+        b.classList.toggle('selected',i===colourIndex);
+        b.setAttribute('aria-pressed',String(i===colourIndex));
+      });
+      director.textContent = 'A fresh colour! Your canvas is taking on a life of its own.';
+    }
+
+    function handleGesture(name, landmarks) {
+      const now = performance.now();
+      const index = landmarks && landmarks[8];
+      const point = index ? {x:(atelierFacing === 'user' ? 1-index.x : index.x)*canvas.clientWidth,y:index.y*canvas.clientHeight} : null;
+      if (name === 'Pointing_Up' && point) {
+        if (!drawing) { drawing=true; lastPoint=null; }
+        addPoint(point);
+        lastPoint=point;
+        director.textContent = 'I see your creative line. Keep moving to sketch your idea.';
+      } else if (drawing) {
+        drawing=false; endStroke();
+      }
+      if (name && name !== atelierLastGesture && now-atelierGestureAt>550) {
+        atelierGestureAt=now;
+        if (name === 'Open_Palm') nextColour();
+        if (name === 'Closed_Fist') {
+          if (tool !== 'erase') {
+            strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[point || {x:canvas.clientWidth/2,y:canvas.clientHeight/2}],motif:'flower'});
+            score+=1;scoreEl.textContent=score;redraw();
+            director.textContent='A handmade bloom! Your artwork just grew a new detail.';
+          }
+        }
+        if (name === 'Victory') {
+          const p=point || {x:canvas.clientWidth/2,y:canvas.clientHeight/2};
+          strokes.push({tool:'stamp',colour:palette[colourIndex],width:5,points:[p],motif:'spark'});
+          score+=1;scoreEl.textContent=score;redraw();
+          director.textContent='Peace, love and a little sparkle. Beautifully done!';
+        }
+      }
+      atelierLastGesture=name || '';
+    }
+
+    async function startCamera() {
+      if (!navigator.mediaDevices?.getUserMedia) throw new Error('Camera access requires a secure HTTPS page and a supported browser.');
+      stopAtelierCamera();
+      atelierStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:atelierFacing},width:{ideal:640},height:{ideal:480}},audio:false});
+      video.srcObject=atelierStream;
+      video.style.transform=atelierFacing === 'user' ? 'scaleX(-1)' : 'none';
+      overlay.style.transform=atelierFacing === 'user' ? 'scaleX(-1)' : 'none';
+      await video.play();
+      cameraPlaceholder.hidden=true;
+      cameraState.textContent='CAMERA LIVE';
+      cameraNote.textContent='Your camera stays in this browser session. Nothing is uploaded.';
+      start.textContent='Stop camera'; flip.disabled=false;
+      director.textContent='Show me one hand. Point up to draw, open your palm to change colour.';
+      const vision = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14');
+      const fileset = await vision.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm');
+      atelierRecognizer = await vision.GestureRecognizer.createFromOptions(fileset,{
+        baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task',delegate:'GPU'},
+        runningMode:'VIDEO',numHands:1,
+        cannedGesturesClassifierOptions:{scoreThreshold:0.58},
+        minHandDetectionConfidence:0.58,minHandPresenceConfidence:0.58,minTrackingConfidence:0.55
+      }).catch(async()=>{
+        return await vision.GestureRecognizer.createFromOptions(fileset,{
+          baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task'},
+          runningMode:'VIDEO',numHands:1,
+          minHandDetectionConfidence:0.58,minHandPresenceConfidence:0.58,minTrackingConfidence:0.55
+        });
+      });
+      atelierLastVideoTime=-1;atelierLastGesture='';
+      const tick=(now)=>{
+        if(!atelierStream||!atelierRecognizer)return;
+        const vw=video.videoWidth||320,vh=video.videoHeight||240;
+        if(overlay.width!==vw||overlay.height!==vh){overlay.width=vw;overlay.height=vh;}
+        octx.clearRect(0,0,overlay.width,overlay.height);
+        if(video.readyState>=2&&video.currentTime!==atelierLastVideoTime&&!atelierBusy){
+          atelierLastVideoTime=video.currentTime;atelierBusy=true;
+          try{
+            const result=atelierRecognizer.recognizeForVideo(video,now);
+            const gesture=result.gestures?.[0]?.[0]?.categoryName||'';
+            const landmarks=result.landmarks?.[0];
+            if(landmarks?.[8]){
+              const tip=landmarks[8];
+              octx.beginPath();octx.arc(tip.x*overlay.width,tip.y*overlay.height,10,0,Math.PI*2);
+              octx.fillStyle='#ffc857';octx.shadowColor='#ffc857';octx.shadowBlur=16;octx.fill();
+            }
+            handleGesture(gesture,landmarks);
+          }catch(_){}
+          atelierBusy=false;
+        }
+        atelierRaf=requestAnimationFrame(tick);
+      };
+      atelierRaf=requestAnimationFrame(tick);
+    }
+
+    canvas.addEventListener('pointerdown',e=>{
+      pointerDown=true;canvas.setPointerCapture(e.pointerId);
+      const p=canvasPoint(e.clientX,e.clientY);
+      if(tool==='stamp')addPoint(p);
+      else{activeStroke={tool,colour:palette[colourIndex],width:tool==='erase'?28:5,points:[p]};redraw();}
+    });
+    canvas.addEventListener('pointermove',e=>{
+      if(!pointerDown||!activeStroke)return;
+      activeStroke.points.push(canvasPoint(e.clientX,e.clientY));redraw();
+    });
+    const finishPointer=()=>{if(pointerDown){pointerDown=false;endStroke();}};
+    canvas.addEventListener('pointerup',finishPointer);
+    canvas.addEventListener('pointercancel',finishPointer);
+    canvas.addEventListener('lostpointercapture',finishPointer);
+
+    document.querySelectorAll('.atelier-tool').forEach(btn=>btn.addEventListener('click',()=>chooseTool(btn.dataset.tool)));
+    document.querySelectorAll('.atelier-swatch').forEach((btn,i)=>btn.addEventListener('click',()=>{
+      colourIndex=i;
+      document.querySelectorAll('.atelier-swatch').forEach((b,j)=>{b.classList.toggle('selected',j===i);b.setAttribute('aria-pressed',String(j===i));});
+    }));
+    newChallenge.addEventListener('click',()=>{
+      let next;do{next=challenges[Math.floor(Math.random()*challenges.length)];}while(next===challengeEl.textContent&&challenges.length>1);
+      challengeEl.textContent=next;
+      director.textContent='A new creative spark! There is no wrong way to imagine it.';
+    });
+    document.getElementById('atelier-undo').addEventListener('click',()=>{
+      if(strokes.length){strokes.pop();redraw();director.textContent='One step back, more room to experiment.';}
+    });
+    document.getElementById('atelier-clear').addEventListener('click',()=>{
+      strokes=[];activeStroke=null;score=0;scoreEl.textContent='0';redraw();director.textContent='A fresh page. What will you make this time?';
+    });
+    document.getElementById('atelier-save').addEventListener('click',()=>{
+      const link=document.createElement('a');link.download='lab360-gesture-art.png';link.href=canvas.toDataURL('image/png');link.click();
+      director.textContent='Your creation is ready to travel. Keep making wonderful things!';
+    });
+    start.addEventListener('click',async()=>{
+      if(atelierStream){
+        stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;
+        cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;
+        director.textContent='Camera paused. Your artwork is safe on the canvas.';
+      }else{
+        start.disabled=true;cameraNote.textContent='Waking up your creative co-pilot…';
+        try{await startCamera();}
+        catch(error){stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;cameraNote.textContent=error.message||'Could not start camera. Please check permissions and try again.';director.textContent='No worries — you can still create with mouse or touch.';}
+        finally{start.disabled=false;}
+      }
+    });
+    flip.addEventListener('click',async()=>{
+      if(!atelierStream)return;
+      atelierFacing=atelierFacing==='user'?'environment':'user';
+      start.disabled=true;flip.disabled=true;
+      try{await startCamera();}
+      catch(error){stopAtelierCamera();video.srcObject=null;start.textContent='Start camera';flip.disabled=true;cameraState.textContent='CAMERA OFF';cameraPlaceholder.hidden=false;cameraNote.textContent=error.message||'Could not switch camera.';}
+      finally{start.disabled=false;flip.disabled=!atelierStream;}
+    });
+
+    const resizeObserver=new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(canvas.parentElement);
+    resizeCanvas();
+    window.addEventListener('pagehide',stopAtelierCamera,{once:true});
+  }
+
+  // Lab 360° rotating creative-intelligence spotlight for the Overview page.
+  function initialiseVisionApplet() {
+    const stage = document.getElementById('lab-ad-stage');
+    const headline = document.getElementById('lab-ad-headline');
+    const subtitle = document.getElementById('lab-ad-subtitle');
+    const category = document.getElementById('lab-ad-category');
+    const title = document.getElementById('lab-ad-title');
+    const description = document.getElementById('lab-ad-description');
+    const tags = document.getElementById('lab-ad-tags');
+    const link = document.getElementById('lab-ad-link');
+    const symbol = document.getElementById('lab-ad-symbol');
+    const count = document.getElementById('lab-ad-count');
+    const refresh = document.getElementById('lab-ad-refresh');
+    if (!stage || stage.dataset.ready === 'true') return;
+    stage.dataset.ready = 'true';
+
+    const campaigns = [
+      {headline:'What if your next big idea could change the world?',subtitle:'Where curious minds meet intelligent machines. Explore the unexpected, experiment boldly, and turn imagination into discovery.',category:'THE NEXT FRONTIER · AI + SCIENCE',title:'From questions to possibilities.',description:'We bring physics, data, computation and creative intelligence together to explore complex systems and build ideas that matter.',tags:['EXPLORE','EXPERIMENT','CREATE'],symbol:'✳',a:'#75e0c1',b:'#8c9eff',glow:'rgba(93,224,207,.28)',accent:'#75e0c1',accent2:'#ffc857',cta:'Explore the Lab',href:'#research'},
+      {headline:'Don’t just imagine the future. Model it.',subtitle:'A playground for techZies who think beyond the obvious and build beyond the expected.',category:'CREATIVE INTELLIGENCE · COMPUTE + CREATE',title:'Code meets curiosity.',description:'From data-driven discovery to intelligent systems, we turn computational thinking into tools for exploring the real world.',tags:['COMPUTE','QUESTION','INVENT'],symbol:'⌘',a:'#ffc857',b:'#ff8ca7',glow:'rgba(255,155,117,.25)',accent:'#ffc857',accent2:'#ff9caf',cta:'See what we explore',href:'#research'},
+      {headline:'The universe is full of data. What will you discover?',subtitle:'For curious minds who see patterns, ask better questions and love a beautiful challenge.',category:'DATA · PATTERNS · DISCOVERY',title:'Find the signal in the beautiful chaos.',description:'We use data science, machine learning and physics-inspired ideas to uncover patterns in complex natural and engineered systems.',tags:['DATA STORIES','HIDDEN PATTERNS','DISCOVERY'],symbol:'⌁',a:'#8c9eff',b:'#75e0c1',glow:'rgba(140,158,255,.25)',accent:'#8c9eff',accent2:'#75e0c1',cta:'Explore our research',href:'#research'},
+      {headline:'Think like a scientist. Create like an artist.',subtitle:'A home for experimentation, playful thinking and ideas that cross boundaries.',category:'THE ART OF THINKING · SCIENCE + AI',title:'Where imagination gets an algorithm.',description:'We connect scientific questions with computational creativity to make new ways of seeing, testing and understanding.',tags:['IMAGINE','PROTOTYPE','DISCOVER'],symbol:'✺',a:'#e6a8ff',b:'#ffc857',glow:'rgba(230,168,255,.25)',accent:'#e6a8ff',accent2:'#ffc857',cta:'Meet the Lab',href:'#about'},
+      {headline:'Complex problems deserve creative minds.',subtitle:'Explore a world where physics, AI and bold questions work together.',category:'COMPLEX SYSTEMS · NEW PERSPECTIVES',title:'Make complexity your playground.',description:'From fluids and materials to collective behaviour, we investigate how complex systems evolve, adapt and surprise us.',tags:['PHYSICS','COMPLEXITY','AI'],symbol:'◎',a:'#ff6b8a',b:'#8c9eff',glow:'rgba(255,107,138,.25)',accent:'#ff6b8a',accent2:'#8c9eff',cta:'Dive into research',href:'#research'},
+      {headline:'Curiosity is your most powerful technology.',subtitle:'Bring your questions. Bring your imagination. Let’s see what happens when they meet AI.',category:'FOR THE CURIOUS · FOR THE BOLD',title:'A lab for the beautifully curious.',description:'We make room for open-ended exploration, data-driven ideas and the joy of discovering something nobody expected.',tags:['ASK MORE','LEARN FAST','BUILD BOLD'],symbol:'✦',a:'#75e0c1',b:'#ffc857',glow:'rgba(117,224,193,.25)',accent:'#75e0c1',accent2:'#ffc857',cta:'Discover Lab 360°',href:'#about'},
+      {headline:'From a tiny observation to a giant possibility.',subtitle:'Big discoveries often begin with a small question. What’s yours?',category:'IDEAS TO IMPACT · LEARN + BUILD',title:'Small sparks. Expansive thinking.',description:'Explore projects, learning experiences and research that bring intelligent computation closer to meaningful scientific questions.',tags:['OBSERVE','CONNECT','TRANSFORM'],symbol:'✧',a:'#ffc857',b:'#e6a8ff',glow:'rgba(255,200,87,.25)',accent:'#ffc857',accent2:'#e6a8ff',cta:'Explore projects',href:'#products'},
+      {headline:'The next breakthrough might start with you.',subtitle:'Creative intelligence for techZies: think freely, experiment fearlessly, make something matter.',category:'LAB 360° · OPEN INVITATION',title:'Come curious. Leave inspired.',description:'Discover the people, ideas and experiments at the intersection of physics, artificial intelligence and complex systems.',tags:['PEOPLE','IDEAS','POSSIBILITIES'],symbol:'∞',a:'#ff8ca7',b:'#75e0c1',glow:'rgba(255,140,167,.25)',accent:'#ff8ca7',accent2:'#75e0c1',cta:'Step inside',href:'#about'}
+    ];
+
+    let current = -1;
+    let timer = null;
+    function showCampaign(index) {
+      if (index === current) index = (index + 1) % campaigns.length;
+      current = index;
+      const c = campaigns[current];
+      headline.textContent = c.headline;
+      subtitle.textContent = c.subtitle;
+      category.textContent = c.category;
+      title.textContent = c.title;
+      description.textContent = c.description;
+      symbol.textContent = c.symbol;
+      tags.replaceChildren(...c.tags.map(t => { const span=document.createElement('span'); span.textContent=t; return span; }));
+      link.textContent = c.cta + ' ↗';
+      link.href = c.href;
+      stage.style.setProperty('--ad-core-a',c.a);
+      stage.style.setProperty('--ad-core-b',c.b);
+      stage.style.setProperty('--ad-glow',c.glow);
+      stage.style.setProperty('--ad-accent',c.accent);
+      stage.style.setProperty('--ad-accent-2',c.accent2);
+      count.textContent = String(current+1).padStart(2,'0') + ' / ' + String(campaigns.length).padStart(2,'0');
+      stage.classList.remove('ad-enter');
+      void stage.offsetWidth;
+      stage.classList.add('ad-enter');
+    }
+    // Select a different campaign on each page visit/session, then rotate periodically.
+    const first = Math.floor(Math.random() * campaigns.length);
+    showCampaign(first);
+    refresh.addEventListener('click',() => {
+      showCampaign((current+1)%campaigns.length);
+      if (timer) { clearInterval(timer); timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000); }
+    });
+    timer = setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    document.addEventListener('visibilitychange',() => {
+      if (document.hidden && timer) { clearInterval(timer); timer=null; }
+      else if (!document.hidden && !timer) timer=setInterval(() => showCampaign((current+1)%campaigns.length),12000);
+    });
+  }
+
+  function initialiseClassroom() {
+    const prompt = document.getElementById('password-prompt-container');
+    const content = document.getElementById('classroom-content');
+    const form = document.getElementById('password-form');
+    const input = document.getElementById('passcode-input');
+    const error = document.getElementById('password-error-message');
+    if (!prompt || !content || !form) return;
+    const check = () => {
+      const granted = sessionStorage.getItem('classroomAccessGranted') === 'true';
+      prompt.hidden = granted;
+      content.classList.toggle('hidden', !granted);
+    };
+    check();
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (input.value.trim() === '23MAT106') {
+        sessionStorage.setItem('classroomAccessGranted', 'true');
+        error.textContent = '';
+        input.value = '';
+        check();
+      } else {
+        error.textContent = 'Incorrect passcode. Please try again.';
+        input.value = '';
+      }
+    });
+  }
+
+  function initialiseTeaching() {
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+  }
+
+  // Kept globally available because the original teaching/classroom cards call these.
+  window.openCourse = function(courseId) {
+    const dashboard = document.getElementById('classroom-dashboard');
+    if (dashboard) dashboard.style.display = 'none';
+    host.querySelectorAll('.course-detail-view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(courseId);
+    if (target) target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.closeCourse = function() {
+    host.querySelectorAll('.course-detail-view').forEach(v => v.classList.remove('active'));
+    const dashboard = document.getElementById('classroom-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+  };
+  window.openTeachingSection = function(sectionId) {
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'none';
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(sectionId);
+    if (target) target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.closeTeachingSection = function() {
+    host.querySelectorAll('.teaching-detail-view').forEach(v => v.classList.remove('active'));
+    const dashboard = document.getElementById('teaching-dashboard');
+    if (dashboard) dashboard.style.display = 'block';
+  };
+
+  nav.forEach(link => link.addEventListener('click', event => {
+    const id = link.getAttribute('href').slice(1);
+    if (!PAGE_META[id]) return;
+    event.preventDefault();
+    if (location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+    loadPage(id);
+    document.getElementById('secondary-nav').classList.remove('open');
+  }));
+  window.addEventListener('popstate', () => loadPage(pageFromHash()));
+  window.addEventListener('hashchange', () => loadPage(pageFromHash()));
+
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('secondary-nav');
+    const open = menu.classList.toggle('open');
+    document.getElementById('menu-toggle').setAttribute('aria-expanded', String(open));
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  loadPage(pageFromHash());
+
+  // PWA install flow.
+  const installButton = document.getElementById('install-app');
+  let deferredPrompt = null;
+  const status = document.createElement('span');
+  status.id = 'install-status';
+  status.setAttribute('role', 'status');
+  installButton.after(status);
+  const isStandalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const showStatus = message => { status.textContent = message; status.classList.add('show'); };
+  if (isStandalone()) installButton.hidden = true;
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault(); deferredPrompt = event;
+  });
+  installButton.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const choice = await deferredPrompt.userChoice;
+      showStatus(choice?.outcome === 'accepted' ? 'Installation started.' : 'Installation cancelled.');
+      deferredPrompt = null;
+    } else {
+      showStatus(/iphone|ipad|ipod/i.test(navigator.userAgent)
+        ? 'On iPhone/iPad: use Share → Add to Home Screen.'
+        : 'Use your browser menu → Install app / Add to Home screen.');
+    }
+  });
+  window.addEventListener('appinstalled', () => { installButton.hidden = true; showStatus('App installed.'); });
+  if ('serviceWorker' in navigator && isSecureContext) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(console.warn));
+  }
+})();
+
+  </script>
+
+<!-- Persistent Lab 360° voice guide: isolated from the existing page content -->
+<div id="lab360-guide-root">
+  <section id="lab360-guide-panel" role="dialog" aria-label="Lab 360 visitor voice guide" aria-hidden="true">
+    <header class="vg-head">
+      <div class="vg-brand"><div class="vg-brand-mark">360°</div><div><strong>Ask Lab 360°</strong><small>VOICE-POWERED SITE GUIDE</small></div></div>
+      <button class="vg-close" id="vg-close" aria-label="Close voice guide">×</button>
+    </header>
+    <div class="vg-intro"><strong id="vg-title">Find your way around</strong><p id="vg-subtitle">Ask a question about the research, people, publications, teaching or projects on this website.</p></div>
+    <div class="vg-suggestions">
+      <button data-vg-prompt="Give me a quick introduction to Lab 360° and its research focus.">About Lab 360°</button>
+      <button data-vg-prompt="Where can I learn about Suman Dutta's background and experience?">Suman Dutta</button>
+      <button data-vg-prompt="Guide me to the research areas and explain the main themes.">Research areas</button>
+      <button data-vg-prompt="Where can I find publications and collaborations?">Publications</button>
+    </div>
+    <div id="vg-transcript" aria-live="polite"><div class="vg-empty" id="vg-empty">Your conversation will appear here.<br>Start speaking and I’ll guide you to the right section.</div></div>
+    <div class="vg-status" id="vg-status"><i></i><span id="vg-status-text">Offline</span></div>
+    <div class="vg-controls">
+      <button class="vg-btn primary" id="vg-start">Start voice guide</button>
+      <button class="vg-btn" id="vg-mute" disabled>Mute</button>
+      <button class="vg-btn" id="vg-end" disabled>End</button>
+    </div>
+    <div id="vg-error" role="alert"></div>
+    <div class="vg-privacy">Microphone starts only when you choose Start. Audio is streamed to the configured AI service. Do not share passwords or sensitive personal information.</div>
+  </section>
+  <button id="lab360-guide-launch" aria-controls="lab360-guide-panel" aria-expanded="false"><span class="vg-launch-orb">✳</span><span>Ask Lab 360°</span></button>
+</div>
+<script>window.LAB360_VOICE_API_BASE = window.LAB360_VOICE_API_BASE || "";</script>
+<script src="/static/visitor-guide.js" defer></script>
+
+</body>
+</html>
