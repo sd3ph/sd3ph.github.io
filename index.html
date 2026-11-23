@@ -107,19 +107,14 @@ body.lock{overflow:hidden}
 #intro{gap:14px}.in-logo{width:min(56vw,340px)}
 @media(max-height:640px){.in-logo{width:min(44vw,240px)}}
 /* captcha + stats */
-.in-cap,.in-stats,.in-note{position:relative;z-index:2;visibility:hidden;opacity:0;animation:bti .9s 3.1s ease forwards}
-.in-stats,.in-note{animation-delay:3.9s}
-@media(prefers-reduced-motion:reduce){.in-cap,.in-stats,.in-note{opacity:1!important;visibility:visible!important;transform:none!important}}
+.in-cap{position:relative;z-index:2;visibility:hidden;opacity:0;animation:bti .9s 3.1s ease forwards}
+@media(prefers-reduced-motion:reduce){.in-cap{opacity:1!important;visibility:visible!important;transform:none!important}}
 .in-cap{display:grid;justify-items:center;gap:8px}.in-cap label{font:600 .78rem var(--bd);color:var(--mut)}
 .cap-row{display:flex;align-items:center;gap:8px}
 #capc{width:190px;height:56px;border:1px solid var(--line);border-radius:14px;background:var(--card);user-select:none;-webkit-user-select:none}
 .cap-r{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:1.1rem}
 #capi{width:190px;padding:11px 16px;border:1px solid var(--line);border-radius:50px;background:var(--bg);color:var(--ink);font:700 1.1rem var(--bd);text-align:center;letter-spacing:.35em}
 #cape{margin:0;min-height:1.3em;color:var(--c);font-size:.8rem;font-weight:600}
-.in-stats{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.in-stats div{padding:9px 16px;border:1px solid var(--line);border-radius:16px;background:var(--glass);text-align:center;min-width:92px}
-.in-stats strong{display:block;font:800 1.3rem var(--hd);letter-spacing:-.04em;color:var(--a)}.in-stats span{font-size:.7rem;color:var(--mut)}
-.in-note{margin:0;font-size:.7rem;color:var(--mut)}
 /* theme switcher */
 body{transition:background .4s,color .4s}
 .hero .lg{filter:drop-shadow(0 0 28px color-mix(in srgb,var(--a) 40%,transparent))}
@@ -144,12 +139,7 @@ body{transition:background .4s,color .4s}
   <p id="cape" role="alert"></p>
 </div>
 <button class="btn p in-btn" id="enter" type="button">Enter Lab 360° →</button>
-<div class="in-stats" aria-live="polite">
-  <div><strong id="sv-total">…</strong><span>Total visits</span></div>
-  <div><strong id="sv-uniq">…</strong><span>Unique visitors</span></div>
-  <div><strong id="sv-mine">…</strong><span>Your visits</span></div>
-</div>
-<p class="in-note" id="sv-note"></p>
+
 </div>
 <div class="aurora"><i></i><i></i><i></i></div>
 <nav aria-label="Primary">
@@ -505,25 +495,8 @@ $('#capr').addEventListener('click',()=>{newCode();cerr.textContent='';ci.focus(
 newCode();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
 setTimeout(()=>{if($('#capi'))$('#capi').focus({preventScroll:true})},3600);
 
-// ---------- visitor analytics ----------
-const AN_NS='lab360-avvcb-site'; // change to something unique to you
+// ---------- storage helper (used by themes) ----------
 const ls={get:k=>{try{return localStorage.getItem(k)}catch(_){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(_){}}};
-const nf=n=>Number(n).toLocaleString('en-IN');
-const hit=async(k,inc)=>{const r=await fetch('https://api.counterapi.dev/v1/'+AN_NS+'/'+k+(inc?'/up':''),{cache:'no-store'});if(!r.ok)throw 0;return (await r.json()).count};
-(async()=>{
- const first=!ls.get('l360seen'),newSess=!ss.get('l360s');
- let mine=+ls.get('l360mine')||0;
- if(newSess){mine++;ls.set('l360mine',mine);ss.set('l360s','1')}
- ls.set('l360seen','1');const canStore=ls.get('l360seen')==='1';
- $('#sv-mine').textContent=nf(mine);
- try{
-  const [t,u]=await Promise.all([hit('visits',newSess),hit('unique',first&&canStore)]);
-  $('#sv-total').textContent=nf(t);$('#sv-uniq').textContent=nf(u);
- }catch(_){
-  $('#sv-total').textContent=nf(mine);$('#sv-uniq').textContent='—';
-  $('#sv-note').textContent='Live counter unavailable; showing this browser only.';
- }
-})();
 
 // ---------- themes ----------
 // [id,name,dark,bg,card,ink,mut,line,a,b,c,d,glass]
