@@ -1195,8 +1195,25 @@ route();
       });
     }
 
+    function revealPage() {
+      // The main page script may have stopped on an unrelated runtime error.
+      // Always reveal a real content section after CAPTCHA success.
+      const ids = ['highlight','research','publication','about','teaching','outreach','latest','classroom','products','misc','lab360'];
+      let active = location.hash.replace(/^#/, '');
+      if (!ids.includes(active)) active = 'highlight';
+      ids.forEach(id => {
+        const section = document.getElementById('pg-' + id);
+        if (section) section.hidden = id !== active;
+      });
+      document.querySelectorAll('#links a').forEach(link => {
+        const selected = link.getAttribute('href') === '#' + active;
+        link.classList.toggle('on', selected);
+      });
+    }
+
     function submit() {
       if (field.value.trim() === answer && answer) {
+        revealPage();
         intro.classList.add('out'); document.body.classList.remove('lock');
         window.setTimeout(() => { if (intro.isConnected) intro.remove(); }, 1000);
         window.scrollTo(0, 0);
@@ -1211,6 +1228,7 @@ route();
     button.addEventListener('click', submit);
     refresh.addEventListener('click', () => { newAnswer(); if (error) error.textContent = ''; field.focus(); });
     newAnswer();
+    window.addEventListener('hashchange', revealPage);
     window.__l360CaptchaReady = true;
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw).catch(() => {});
     window.setTimeout(() => { try { field.focus({preventScroll:true}); } catch (_) { field.focus(); } }, 500);
