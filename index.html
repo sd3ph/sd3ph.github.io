@@ -904,7 +904,10 @@ mat214:{t:'Mathematics for Intelligent Systems – IV',code:'23MAT214',sem:'Spri
 
  sch:{A:['Tue 08:50–10:30','Wed 14:55–16:35 (Lab)'],B:['Thu 14:55–16:35 (Lab)','Fri 08:50–10:30']},
 
-syl:['Special Matrices: Fourier Transform, discrete and Continuous, Shift matrices and Circulant matrices, The Kronecker product, Toeplitz matrices and shift invariant filters, Hankel matrices, DMD and need of Hankelization  - Importance of Hankelization – DMD and its variants - Linear algebra for AI ','Matrix splitting and Proximal algorithms - Augmented Lagrangian- Introduction to ADMM, ADMM for LP and QP - Optimization methods for Neural Networks: Gradient Descent, Stochastic gradient descent- loss functions and learning functions','Basics of statistical estimation theory and testing of hypothesis.','Introduction to quantum computing- Bells’s circuit, Superdense coding, Quantum teleportation. Programming using Qiskit, Matlab. ']}};
+ syl:[`Special Matrices: Fourier Transform, discrete and Continuous, Shift matrices and Circulant matrices, The Kronecker product,
+Toeplitz matrices and shift invariant filters, Hankel matrices, DMD and need of Hankelization  - Importance of Hankelization – DMD
+and its variants - Linear algebra for AI `,`Matrix splitting and Proximal algorithms - Augmented Lagrangian- Introduction to ADMM, ADMM for LP and QP - Optimization
+methods for Neural Networks: Gradient Descent, Stochastic gradient descent- loss functions and learning functions`,'Basics of statistical estimation theory and testing of hypothesis.','Introduction to quantum computing- Bells’s circuit, Superdense coding, Quantum teleportation. Programming using Qiskit, Matlab. ']}};
 
 const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(_){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(_){}}};
 
@@ -1008,133 +1011,41 @@ addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/inner
 
 function enter(){intro.classList.add('out');document.body.classList.remove('lock');setTimeout(()=>intro.remove(),1000);scrollTo(0,0)}
 
-// ---------- captcha (isolated repair; page content unchanged) ----------
+// ---------- captcha ----------
 
-const cap = document.getElementById('capc');
-const ci = document.getElementById('capi');
-const cerr = document.getElementById('cape');
-const enterBtn = document.getElementById('enter');
-const refreshBtn = document.getElementById('capr');
-let code = '';
+const cap=$('#capc'),ci=$('#capi'),cerr=$('#cape');let code='';
 
-function drawCaptcha() {
-  if (!cap) return;
-  const g = cap.getContext && cap.getContext('2d');
-  if (!g) {
-    if (cerr) cerr.textContent = 'This browser could not display the security code. Please reload the page.';
-    return;
-  }
+function draw(){
 
-  const w = 190, h = 56, d = Math.min(window.devicePixelRatio || 1, 2);
-  cap.width = w * d;
-  cap.height = h * d;
-  g.setTransform(d, 0, 0, d, 0, 0);
-  g.clearRect(0, 0, w, h);
+ const g=cap.getContext('2d'),v=n=>({'--a':'#4de2ff','--b':'#9b7bff','--c':'#ff6fb5','--d':'#ffc857','--ink':'#eef4f7'})[n],w=190,h=56,d=2,ac=['--a','--b','--c','--d'];
 
-  const palette = ['#4de2ff', '#9b7bff', '#ff6fb5', '#ffc857'];
-  for (let i = 0; i < 7; i++) {
-    g.strokeStyle = palette[i % palette.length];
-    g.globalAlpha = 0.6;
-    g.lineWidth = 1.6;
-    g.beginPath();
-    g.moveTo(Math.random() * w, Math.random() * h);
-    g.bezierCurveTo(
-      Math.random() * w, Math.random() * h,
-      Math.random() * w, Math.random() * h,
-      Math.random() * w, Math.random() * h
-    );
-    g.stroke();
-  }
+ cap.width=w*d;cap.height=h*d;g.setTransform(d,0,0,d,0,0);
 
-  for (let i = 0; i < 40; i++) {
-    g.fillStyle = palette[i % palette.length];
-    g.globalAlpha = 0.5;
-    g.fillRect(Math.random() * w, Math.random() * h, 2, 2);
-  }
+ for(let i=0;i<7;i++){g.strokeStyle=v(ac[i%4]);g.globalAlpha=.6;g.lineWidth=1.6;g.beginPath();g.moveTo(Math.random()*w,Math.random()*h);g.bezierCurveTo(Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h);g.stroke()}
 
-  g.globalAlpha = 1;
-  g.fillStyle = '#eef4f7';
-  g.font = '800 32px "Bricolage Grotesque", sans-serif';
-  g.textBaseline = 'middle';
+ for(let i=0;i<40;i++){g.fillStyle=v(ac[i%4]);g.globalAlpha=.5;g.fillRect(Math.random()*w,Math.random()*h,2,2)}
 
-  [...code].forEach((ch, i) => {
-    g.save();
-    g.translate(22 + i * 34, h / 2 + (Math.random() * 8 - 4));
-    g.rotate((Math.random() - 0.5) * 0.6);
-    g.fillText(ch, -9, 0);
-    g.restore();
-  });
-}
+ g.globalAlpha=1;g.fillStyle=v('--ink');g.font='800 32px "Bricolage Grotesque",sans-serif';g.textBaseline='middle';
 
-function newCode() {
-  // Web Crypto is preferred; Math.random keeps the CAPTCHA functional
-  // in restricted/local preview environments where crypto is unavailable.
-  try {
-    if (window.crypto && typeof window.crypto.getRandomValues === 'function') {
-      const values = new Uint32Array(5);
-      window.crypto.getRandomValues(values);
-      code = Array.from(values, n => String(n % 10)).join('');
-    } else {
-      code = Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)).join('');
-    }
-  } catch (_) {
-    code = Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)).join('');
-  }
+ [...code].forEach((ch,i)=>{g.save();g.translate(22+i*34,h/2+(Math.random()*8-4));g.rotate((Math.random()-.5)*.6);g.fillText(ch,-9,0);g.restore()})}
 
-  if (ci) ci.value = '';
-  drawCaptcha();
-}
+function newCode(){const a=new Uint32Array(5);crypto.getRandomValues(a);code=[...a].map(n=>n%10).join('');ci.value='';draw()}
 
-function tryEnter() {
-  if (!ci || !code) {
-    if (cerr) cerr.textContent = 'Security code is unavailable. Please refresh it and try again.';
-    return;
-  }
+function tryEnter(){if(ci.value.trim()===code){enter()}else{cerr.textContent='Code does not match. A new code was generated.';newCode();ci.focus()}}
 
-  if (ci.value.trim() === code) {
-    enter();
-  } else {
-    if (cerr) cerr.textContent = 'Code does not match. A new code was generated.';
-    newCode();
-    ci.focus();
-  }
-}
+$('#enter').addEventListener('click',tryEnter);
 
-if (enterBtn) enterBtn.addEventListener('click', tryEnter);
+ci.addEventListener('input',()=>{ci.value=ci.value.replace(/\D/g,'');cerr.textContent=''});
 
-if (ci) {
-  ci.addEventListener('input', () => {
-    ci.value = ci.value.replace(/\D/g, '').slice(0, 5);
-    if (cerr) cerr.textContent = '';
-  });
+ci.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();tryEnter()}});
 
-  ci.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      tryEnter();
-    }
-  });
-}
+$('#capr').addEventListener('click',()=>{newCode();cerr.textContent='';ci.focus()});
 
-if (refreshBtn) {
-  refreshBtn.addEventListener('click', () => {
-    newCode();
-    if (cerr) cerr.textContent = '';
-    if (ci) ci.focus();
-  });
-}
+newCode();window.__l360CaptchaReady=true;if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
 
-newCode();
-if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(drawCaptcha).catch(() => {});
-}
-
-setTimeout(() => {
-  if (ci) ci.focus({ preventScroll: true });
-}, 1600);
+setTimeout(()=>{if($('#capi'))$('#capi').focus({preventScroll:true})},1600);
 
 
-// ---------- end captcha ----------
 
 // ---------- storage helper (used by themes) ----------
 
@@ -1228,6 +1139,85 @@ route();
 
 })();
 
+</script>
+
+<script>
+/* Independent CAPTCHA bootstrap: intentionally isolated from the main page script. */
+(function () {
+  function bootCaptcha() {
+    if (window.__l360CaptchaReady) return;
+    const canvas = document.getElementById('capc');
+    const input = document.getElementById('capi');
+    const error = document.getElementById('cape');
+    let button = document.getElementById('enter');
+    let refresh = document.getElementById('capr');
+    const intro = document.getElementById('intro');
+    if (!canvas || !input || !button || !refresh || !intro) return;
+
+    // Replace controls to discard any listeners left by a partially executed script.
+    button = button.cloneNode(true); document.getElementById('enter').replaceWith(button);
+    refresh = refresh.cloneNode(true); document.getElementById('capr').replaceWith(refresh);
+    const cleanInput = input.cloneNode(true); input.replaceWith(cleanInput);
+    const field = cleanInput;
+    let answer = '';
+
+    function newAnswer() {
+      try {
+        const bytes = new Uint32Array(5);
+        if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(bytes);
+        else for (let i = 0; i < bytes.length; i++) bytes[i] = Math.floor(Math.random() * 4294967296);
+        answer = Array.from(bytes, n => String(n % 10)).join('');
+      } catch (_) {
+        answer = Array.from({length: 5}, () => Math.floor(Math.random() * 10)).join('');
+      }
+      field.value = '';
+      draw();
+    }
+
+    function draw() {
+      const ctx = canvas.getContext && canvas.getContext('2d');
+      if (!ctx) { if (error) error.textContent = 'Unable to display the security code in this browser.'; return; }
+      const w = 190, h = 56, scale = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = w * scale; canvas.height = h * scale;
+      ctx.setTransform(scale, 0, 0, scale, 0, 0);
+      ctx.clearRect(0, 0, w, h);
+      const colors = ['#4de2ff', '#9b7bff', '#ff6fb5', '#ffc857'];
+      for (let i = 0; i < 8; i++) {
+        ctx.beginPath(); ctx.globalAlpha = .55; ctx.strokeStyle = colors[i % colors.length];
+        ctx.lineWidth = 1.5; ctx.moveTo(Math.random()*w, Math.random()*h);
+        ctx.bezierCurveTo(Math.random()*w, Math.random()*h, Math.random()*w, Math.random()*h, Math.random()*w, Math.random()*h); ctx.stroke();
+      }
+      ctx.globalAlpha = 1; ctx.fillStyle = '#eef4f7';
+      ctx.font = '800 32px sans-serif'; ctx.textBaseline = 'middle';
+      Array.from(answer).forEach((digit, i) => {
+        ctx.save(); ctx.translate(22 + i*34, h/2 + Math.random()*7 - 3.5);
+        ctx.rotate(Math.random()*.45 - .225); ctx.fillText(digit, -9, 0); ctx.restore();
+      });
+    }
+
+    function submit() {
+      if (field.value.trim() === answer && answer) {
+        intro.classList.add('out'); document.body.classList.remove('lock');
+        window.setTimeout(() => { if (intro.isConnected) intro.remove(); }, 1000);
+        window.scrollTo(0, 0);
+      } else {
+        if (error) error.textContent = 'Code does not match. A new code was generated.';
+        newAnswer(); field.focus();
+      }
+    }
+
+    field.addEventListener('input', () => { field.value = field.value.replace(/\D/g, '').slice(0, 5); if (error) error.textContent = ''; });
+    field.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
+    button.addEventListener('click', submit);
+    refresh.addEventListener('click', () => { newAnswer(); if (error) error.textContent = ''; field.focus(); });
+    newAnswer();
+    window.__l360CaptchaReady = true;
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw).catch(() => {});
+    window.setTimeout(() => { try { field.focus({preventScroll:true}); } catch (_) { field.focus(); } }, 500);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootCaptcha, {once:true});
+  else bootCaptcha();
+})();
 </script>
 
 </body>
