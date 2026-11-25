@@ -904,10 +904,7 @@ mat214:{t:'Mathematics for Intelligent Systems – IV',code:'23MAT214',sem:'Spri
 
  sch:{A:['Tue 08:50–10:30','Wed 14:55–16:35 (Lab)'],B:['Thu 14:55–16:35 (Lab)','Fri 08:50–10:30']},
 
- syl:['Special Matrices: Fourier Transform, discrete and Continuous, Shift matrices and Circulant matrices, The Kronecker product, 
-Toeplitz matrices and shift invariant filters, Hankel matrices, DMD and need of Hankelization  - Importance of Hankelization – DMD 
-and its variants - Linear algebra for AI ','Matrix splitting and Proximal algorithms - Augmented Lagrangian- Introduction to ADMM, ADMM for LP and QP - Optimization 
-methods for Neural Networks: Gradient Descent, Stochastic gradient descent- loss functions and learning functions','Basics of statistical estimation theory and testing of hypothesis.','Introduction to quantum computing- Bells’s circuit, Superdense coding, Quantum teleportation. Programming using Qiskit, Matlab. ']}};
+syl:['Special Matrices: Fourier Transform, discrete and Continuous, Shift matrices and Circulant matrices, The Kronecker product, Toeplitz matrices and shift invariant filters, Hankel matrices, DMD and need of Hankelization  - Importance of Hankelization – DMD and its variants - Linear algebra for AI ','Matrix splitting and Proximal algorithms - Augmented Lagrangian- Introduction to ADMM, ADMM for LP and QP - Optimization methods for Neural Networks: Gradient Descent, Stochastic gradient descent- loss functions and learning functions','Basics of statistical estimation theory and testing of hypothesis.','Introduction to quantum computing- Bells’s circuit, Superdense coding, Quantum teleportation. Programming using Qiskit, Matlab. ']}};
 
 const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(_){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(_){}}};
 
@@ -1011,41 +1008,133 @@ addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/inner
 
 function enter(){intro.classList.add('out');document.body.classList.remove('lock');setTimeout(()=>intro.remove(),1000);scrollTo(0,0)}
 
-// ---------- captcha ----------
+// ---------- captcha (isolated repair; page content unchanged) ----------
 
-const cap=$('#capc'),ci=$('#capi'),cerr=$('#cape');let code='';
+const cap = document.getElementById('capc');
+const ci = document.getElementById('capi');
+const cerr = document.getElementById('cape');
+const enterBtn = document.getElementById('enter');
+const refreshBtn = document.getElementById('capr');
+let code = '';
 
-function draw(){
+function drawCaptcha() {
+  if (!cap) return;
+  const g = cap.getContext && cap.getContext('2d');
+  if (!g) {
+    if (cerr) cerr.textContent = 'This browser could not display the security code. Please reload the page.';
+    return;
+  }
 
- const g=cap.getContext('2d'),v=n=>({'--a':'#4de2ff','--b':'#9b7bff','--c':'#ff6fb5','--d':'#ffc857','--ink':'#eef4f7'})[n],w=190,h=56,d=2,ac=['--a','--b','--c','--d'];
+  const w = 190, h = 56, d = Math.min(window.devicePixelRatio || 1, 2);
+  cap.width = w * d;
+  cap.height = h * d;
+  g.setTransform(d, 0, 0, d, 0, 0);
+  g.clearRect(0, 0, w, h);
 
- cap.width=w*d;cap.height=h*d;g.setTransform(d,0,0,d,0,0);
+  const palette = ['#4de2ff', '#9b7bff', '#ff6fb5', '#ffc857'];
+  for (let i = 0; i < 7; i++) {
+    g.strokeStyle = palette[i % palette.length];
+    g.globalAlpha = 0.6;
+    g.lineWidth = 1.6;
+    g.beginPath();
+    g.moveTo(Math.random() * w, Math.random() * h);
+    g.bezierCurveTo(
+      Math.random() * w, Math.random() * h,
+      Math.random() * w, Math.random() * h,
+      Math.random() * w, Math.random() * h
+    );
+    g.stroke();
+  }
 
- for(let i=0;i<7;i++){g.strokeStyle=v(ac[i%4]);g.globalAlpha=.6;g.lineWidth=1.6;g.beginPath();g.moveTo(Math.random()*w,Math.random()*h);g.bezierCurveTo(Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h);g.stroke()}
+  for (let i = 0; i < 40; i++) {
+    g.fillStyle = palette[i % palette.length];
+    g.globalAlpha = 0.5;
+    g.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+  }
 
- for(let i=0;i<40;i++){g.fillStyle=v(ac[i%4]);g.globalAlpha=.5;g.fillRect(Math.random()*w,Math.random()*h,2,2)}
+  g.globalAlpha = 1;
+  g.fillStyle = '#eef4f7';
+  g.font = '800 32px "Bricolage Grotesque", sans-serif';
+  g.textBaseline = 'middle';
 
- g.globalAlpha=1;g.fillStyle=v('--ink');g.font='800 32px "Bricolage Grotesque",sans-serif';g.textBaseline='middle';
+  [...code].forEach((ch, i) => {
+    g.save();
+    g.translate(22 + i * 34, h / 2 + (Math.random() * 8 - 4));
+    g.rotate((Math.random() - 0.5) * 0.6);
+    g.fillText(ch, -9, 0);
+    g.restore();
+  });
+}
 
- [...code].forEach((ch,i)=>{g.save();g.translate(22+i*34,h/2+(Math.random()*8-4));g.rotate((Math.random()-.5)*.6);g.fillText(ch,-9,0);g.restore()})}
+function newCode() {
+  // Web Crypto is preferred; Math.random keeps the CAPTCHA functional
+  // in restricted/local preview environments where crypto is unavailable.
+  try {
+    if (window.crypto && typeof window.crypto.getRandomValues === 'function') {
+      const values = new Uint32Array(5);
+      window.crypto.getRandomValues(values);
+      code = Array.from(values, n => String(n % 10)).join('');
+    } else {
+      code = Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)).join('');
+    }
+  } catch (_) {
+    code = Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)).join('');
+  }
 
-function newCode(){const a=new Uint32Array(5);crypto.getRandomValues(a);code=[...a].map(n=>n%10).join('');ci.value='';draw()}
+  if (ci) ci.value = '';
+  drawCaptcha();
+}
 
-function tryEnter(){if(ci.value.trim()===code){enter()}else{cerr.textContent='Code does not match. A new code was generated.';newCode();ci.focus()}}
+function tryEnter() {
+  if (!ci || !code) {
+    if (cerr) cerr.textContent = 'Security code is unavailable. Please refresh it and try again.';
+    return;
+  }
 
-$('#enter').addEventListener('click',tryEnter);
+  if (ci.value.trim() === code) {
+    enter();
+  } else {
+    if (cerr) cerr.textContent = 'Code does not match. A new code was generated.';
+    newCode();
+    ci.focus();
+  }
+}
 
-ci.addEventListener('input',()=>{ci.value=ci.value.replace(/\D/g,'');cerr.textContent=''});
+if (enterBtn) enterBtn.addEventListener('click', tryEnter);
 
-ci.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();tryEnter()}});
+if (ci) {
+  ci.addEventListener('input', () => {
+    ci.value = ci.value.replace(/\D/g, '').slice(0, 5);
+    if (cerr) cerr.textContent = '';
+  });
 
-$('#capr').addEventListener('click',()=>{newCode();cerr.textContent='';ci.focus()});
+  ci.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      tryEnter();
+    }
+  });
+}
 
-newCode();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+if (refreshBtn) {
+  refreshBtn.addEventListener('click', () => {
+    newCode();
+    if (cerr) cerr.textContent = '';
+    if (ci) ci.focus();
+  });
+}
 
-setTimeout(()=>{if($('#capi'))$('#capi').focus({preventScroll:true})},1600);
+newCode();
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(drawCaptcha).catch(() => {});
+}
+
+setTimeout(() => {
+  if (ci) ci.focus({ preventScroll: true });
+}, 1600);
 
 
+// ---------- end captcha ----------
 
 // ---------- storage helper (used by themes) ----------
 
